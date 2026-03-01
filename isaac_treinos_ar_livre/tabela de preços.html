@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Tabela de Preços - Personal Trainer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 12px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            margin: 25px 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .section-title:first-of-type {
+            margin-top: 10px;
+        }
+        
+        .online-tag {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1e293b;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .online-tag span {
+            background: #1e293b;
+            color: #fbbf24;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            margin-left: 5px;
+        }
+        
+        /* Versão mobile para o tag */
+        @media (max-width: 480px) {
+            .section-title {
+                gap: 10px;
+            }
+            .online-tag {
+                font-size: 0.85rem;
+                padding: 5px 12px;
+            }
+            .online-tag span {
+                font-size: 0.95rem;
+                padding: 2px 8px;
+            }
+        }
+        
+        /* Otimização para mobile - tabela com scroll horizontal */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 600px; /* Garante que a tabela não fique demasiado compacta */
+        }
+        
+        /* Versão para ecrãs muito pequenos - cards em vez de tabela */
+        @media (max-width: 480px) {
+            .table-wrapper {
+                display: none; /* Esconde a tabela tradicional em ecrãs muito pequenos */
+            }
+            
+            .mobile-cards {
+                display: block !important;
+            }
+        }
+        
+        /* Mostra tabela normal em ecrãs maiores */
+        @media (min-width: 481px) {
+            .mobile-cards {
+                display: none !important;
+            }
+        }
+        
+        /* Estilos da tabela (mantém-se para desktop) */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        .pricing-table thead tr {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .online-section thead tr {
+            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
+        }
+        
+        .pricing-table th {
+            padding: 15px 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        
+        .pricing-table th:first-child {
+            text-align: left;
+            font-size: 1.1rem;
+            background: rgba(0,0,0,0.2);
+            position: sticky;
+            left: 0;
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        }
+        
+        .online-section th:first-child {
+            background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
+        }
+        
+        .pricing-table td {
+            padding: 12px 8px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #e0e0e0;
+            white-space: nowrap;
+        }
+        
+        .pricing-table td:first-child {
+            font-weight: 600;
+            color: #333;
+            background-color: #f5f5f5;
+            border-right: 2px solid #e0e0e0;
+            position: sticky;
+            left: 0;
+            background-color: #f5f5f5;
+            z-index: 2;
+            white-space: normal;
+            word-break: break-word;
+            min-width: 110px;
+        }
+        
+        .pricing-table td:not(:first-child) {
+            text-align: center;
+        }
+        
+        /* Estilos para cards mobile */
+        .mobile-cards {
+            display: none;
+            margin-bottom: 30px;
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 15px 15px 0 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .online-category .category-badge {
+            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            color: white;
+            padding: 12px 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-body {
+            padding: 15px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        
+        .price-label {
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        
+        .price-value {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .price-value::before {
+            content: '€';
+            font-size: 0.8em;
+            margin-right: 2px;
+        }
+        
+        .card-badge {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
+        }
+        
+        .card-founders {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .card-domcilio-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        /* Badges existentes */
+        .founders-deal {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+        }
+        
+        .founders-badge {
+            background-color: #ff4757;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 5px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        
+        .discount-badge {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-left: 5px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        
+        .domicilio-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            margin-left: 5px;
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        
+        .support-info {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0 25px 0;
+            color: #0d47a1;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .support-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .support-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .support-text strong {
+            color: #1976d2;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .price::before {
+            content: '€';
+            font-size: 0.8em;
+            margin-right: 2px;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.75rem;
+            margin-right: 4px;
+        }
+        
+        .limited-offer {
+            background-color: #ff4757;
+            color: white;
+            text-align: center;
+            padding: 12px 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 10px;
+            margin: 20px 0 30px 0;
+            line-height: 1.4;
+        }
+        
+        .footnote {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 18px 15px;
+            margin-top: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .footnote p {
+            color: white;
+            margin: 8px 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .footnote p:before {
+            content: "✓";
+            color: #ffd700;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .highlight-text {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        
+        /* Ajustes para desktop */
+        @media (min-width: 769px) {
+            body {
+                padding: 20px;
+            }
+            
+            .pricing-table th {
+                padding: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .pricing-table td {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+            
+            .support-text {
+                font-size: 1.1rem;
+            }
+            
+            .support-text strong {
+                font-size: 1.2rem;
+                display: inline;
+                margin-bottom: 0;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .pricing-table {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .pricing-table:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tabela Presencial - Versão Desktop -->
+        <h1 class="section-title">🏋️ Presencial</h1>
+        
+        <!-- Informação de acompanhamento diário -->
+        <div class="support-info">
+            <div class="support-icon">💬</div>
+            <div class="support-text">
+                <strong>Acompanhamento diário personalizado!</strong>
+                Para mensalidades 3x/semana, tens acesso a suporte diário para dúvidas, questões sobre treinos e motivação via WhatsApp.
+            </div>
+        </div>
+		
+		<!-- Destaque para oferta limitada -->
+        <div class="limited-offer">
+            ⚡ OFERTA LIMITADA: 10% para Turma Fundadora (primeiras 8 pessoas) - Grupo Presencial 3x/semana ⚡
+        </div>
+        
+        <!-- Wrapper para scroll horizontal em tablets -->
+        <div class="table-wrapper">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Avulso</th>
+                        <th>1x / Semana</th>
+                        <th>2x / Semana</th>
+                        <th>3x / Semana</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grupo</td>
+                        <td class="price">15,00</td>
+                        <td class="price">30,00</td>
+                        <td class="price">45,00</td>
+                        <td class="founders-deal">
+                            <span class="original-price">€60,00</span>
+                            <span class="price">54,00</span>
+                            <span class="founders-badge">-10%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PT (Individual)</td>
+                        <td class="price">35,00</td>
+                        <td class="price">75,00</td>
+                        <td class="price">130,00</td>
+                        <td class="price">180,00</td>
+                    </tr>
+                    <tr>
+                        <td>Dupla <span class="discount-badge">-20%</span></td>
+                        <td class="price">28,00</td>
+                        <td class="price">60,00</td>
+                        <td class="price">104,00</td>
+                        <td class="price">144,00</td>
+                    </tr>
+                    <!-- Domicílio comentado para não aparecer
+                    <tr>
+                        <td>Domicílio <span class="domicilio-badge">+10€/sessão</span></td>
+                        <td class="price">45,00</td>
+                        <td class="price">115,00</td>
+                        <td class="price">210,00</td>
+                        <td class="price">300,00</td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Versão Mobile - Cards -->
+        <div class="mobile-cards">
+            <!-- Card Grupo -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>Grupo</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">15,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">30,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">45,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value" style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap; justify-content: flex-end;">
+                            <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">€60,00</span>
+                            <span style="color: #333;">€54,00</span>
+                            <span class="card-founders">-10% Fundador</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card PT Individual -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>PT (Individual)</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">35,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">75,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">130,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">180,00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Dupla -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>Dupla <span class="card-badge">-20%</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">28,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">60,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">104,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">144,00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Domicílio comentado para não aparecer
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>Domicílio <span class="card-domcilio-badge">+10€/sessão</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">45,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">115,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">210,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">300,00</span>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        
+        <!-- Tabela Online - Versão Desktop com tag no título -->
+        <h1 class="section-title">
+            💻 Online
+            <span class="online-tag">
+                ⚡ 20% OFF <span>vs Presencial</span>
+            </span>
+        </h1>
+        
+        <div class="table-wrapper">
+            <table class="pricing-table online-section">
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Avulso</th>
+                        <th>1x / Semana</th>
+                        <th>2x / Semana</th>
+                        <th>3x / Semana</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grupo</td>
+                        <td class="price">12,00</td>
+                        <td class="price">24,00</td>
+                        <td class="price">36,00</td>
+                        <td class="price">48,00</td>
+                    </tr>
+                    <tr>
+                        <td>PT (Individual)</td>
+                        <td class="price">28,00</td>
+                        <td class="price">60,00</td>
+                        <td class="price">104,00</td>
+                        <td class="price">144,00</td>
+                    </tr>
+                    <tr>
+                        <td>Dupla <span class="discount-badge">-20%</span></td>
+                        <td class="price">22,00</td>
+                        <td class="price">48,00</td>
+                        <td class="price">83,00</td>
+                        <td class="price">115,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Versão Mobile - Cards Online -->
+        <div class="mobile-cards online-category">            
+            <!-- Card Grupo Online -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>Grupo</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">12,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">24,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">36,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">48,00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card PT Online -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>PT (Individual)</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">28,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">60,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">104,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">144,00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Dupla Online -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <span>Dupla <span class="card-badge">-20%</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <span class="price-label">Avulso</span>
+                        <span class="price-value">22,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">1x / Semana</span>
+                        <span class="price-value">48,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">2x / Semana</span>
+                        <span class="price-value">83,00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">3x / Semana</span>
+                        <span class="price-value">115,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notas e informações adicionais -->
+        <div class="footnote">
+            <p><span class="highlight-text">Acompanhamento diário</span> incluído em todas as modalidades presenciais 3x/semana</p>
+            <p><span class="highlight-text">Turma Fundadora:</span> 10% vitalício - primeiras 8 pessoas (Grupo Presencial 3x/semana: €54,00)</p>
+            <!-- Domicílio comentado para não aparecer
+            <p><span class="highlight-text">Domicílio:</span> +10€/sessão (deslocação incluída na cidade de Lisboa, Loures, Odivelas e Amadora)</p>
+            -->
+			<p><span class="highlight-text">Nutrição:</span> Caso tenhas interesse posso recomendar-te profissionais</p>
+            <p>Preços 2026 • Descontos para pacotes trimestrais • Consulte condições</p>
+        </div>
+    </div>
+</body>
+</html>

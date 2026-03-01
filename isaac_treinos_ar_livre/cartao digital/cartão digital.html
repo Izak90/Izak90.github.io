@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Isaac Lopes · Urban Nature</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #121212;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Container principal - estilo polaroid */
+        .cartao-urban {
+            max-width: 440px;
+            width: 100%;
+            background: #f5f1e8;
+            border-radius: 0px 40px 40px 40px;
+            box-shadow: 
+                20px 20px 0px #2c5e2c,
+                0 0 0 2px #121212 inset,
+                0 0 0 5px white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .cartao-urban:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 
+                25px 25px 0px #1f451f,
+                0 0 0 2px #121212 inset,
+                0 0 0 5px white;
+        }
+
+        /* Fita adesiva (washi tape) */
+        .fita-adesiva {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            width: 80px;
+            height: 30px;
+            background: repeating-linear-gradient(
+                45deg,
+                #f7d44a,
+                #f7d44a 8px,
+                #e5c23a 8px,
+                #e5c23a 16px
+            );
+            transform: rotate(5deg);
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .conteudo {
+            padding: 40px 28px 40px 28px;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* Círculos coloridos (elemento pop) */
+        .circulo-pop {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            background: #f7b731;
+            border-radius: 50%;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .circulo-pop2 {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background: #2e8b57;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* ========== HEADER COM FOTO ========== */
+        .header-polaroid {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 6;
+        }
+
+        .foto-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2e5e2e, #8fbc8f);
+            border-radius: 30px 10px 30px 10px;
+            transform: rotate(-3deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 5px 5px 0 #1f3a1f;
+            border: 2px solid white;
+        }
+
+        .nome-tag {
+            transform: rotate(1deg);
+        }
+
+        .nome-tag h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1c3b1c;
+            line-height: 1;
+            letter-spacing: -1px;
+            background: white;
+            padding: 4px 12px 4px 4px;
+            display: inline-block;
+            box-shadow: 4px 4px 0 #2e5e2e;
+            margin-bottom: 4px;
+        }
+
+        .nome-tag p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #5f4a2e;
+            background: #ffe5b4;
+            padding: 4px 12px;
+            display: inline-block;
+            border-radius: 30px;
+            border: 2px solid #c9a34b;
+        }
+
+        /* ========== INFO COM ETIQUETAS ========== */
+        .etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0 20px;
+            position: relative;
+            z-index: 6;
+        }
+
+        .etiqueta {
+            background: white;
+            border: 2px solid #1e3a1e;
+            border-radius: 50px;
+            padding: 8px 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #1e3a1e;
+            box-shadow: 3px 3px 0 #1e3a1e;
+            transform: rotate(var(--rot, 0deg));
+        }
+
+        .etiqueta:nth-child(1) { --rot: -1deg; }
+        .etiqueta:nth-child(2) { --rot: 2deg; }
+        .etiqueta:nth-child(3) { --rot: -2deg; }
+
+        .etiqueta span {
+            font-size: 1.2rem;
+        }
+
+        .etiqueta.local {
+            background: #1e3a1e;
+            color: white;
+            border-color: #f7b731;
+            box-shadow: 3px 3px 0 #f7b731;
+        }
+
+        .etiqueta.local span {
+            color: #f7b731;
+        }
+
+        /* ========== QR CODE ESTILO POST-IT ========== */
+        .postit-qr {
+            background: #fff7cf;
+            padding: 18px 18px 12px 18px;
+            border-radius: 0px 30px 30px 30px;
+            transform: rotate(0.5deg);
+            box-shadow: 8px 8px 0 #b3a14b, 0 0 0 2px #e0c878 inset;
+            margin: 30px 0 25px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 2px solid #c9a34b;
+            position: relative;
+            z-index: 6;
+        }
+
+        .postit-qr::before {
+            content: "📌";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 1.5rem;
+            transform: rotate(-15deg);
+        }
+
+        .qr-postit {
+            background: white;
+            padding: 8px;
+            border-radius: 20px;
+            box-shadow: 0 4px 0 #b6a253;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-postit img {
+            width: 74px;
+            height: 74px;
+            display: block;
+        }
+
+        .postit-texto p {
+            font-weight: 700;
+            color: #3d522b;
+            font-size: 0.9rem;
+        }
+
+        .postit-texto .handle-grande {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #a57c2a;
+            background: white;
+            padding: 4px 12px;
+            border-radius: 40px;
+            border: 2px solid #d4a83a;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        /* ========== DIVISÓRIA CLIP ========== */
+        .clip-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 25px;
+            position: relative;
+            z-index: 6;
+        }
+
+        .clip {
+            background: #c0a65a;
+            color: white;
+            font-weight: 800;
+            padding: 8px 25px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border: 2px solid white;
+            box-shadow: 0 4px 0 #7d622d;
+            transform: rotate(-2deg);
+        }
+
+        /* ========== VERSO RETRÔ ========== */
+        .verso-retro {
+            background: #eae3cf;
+            border-radius: 30px 30px 0 0;
+            padding: 30px 20px 25px;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #1e3a1e inset, 8px 8px 0 #b3a14b;
+            margin-top: 15px;
+            position: relative;
+            z-index: 6;
+        }
+
+        .grid-retro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .retro-item {
+            background: white;
+            border: 3px solid #1e3a1e;
+            border-radius: 25px 10px 25px 10px;
+            padding: 16px 8px;
+            text-align: center;
+            box-shadow: 5px 5px 0 #b3a14b;
+        }
+
+        .retro-item .icone {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .retro-item .titulo {
+            font-weight: 800;
+            color: #1e3a1e;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .retro-item .desc {
+            font-size: 0.7rem;
+            color: #6d8b62;
+        }
+
+        .selo-gratis {
+            background: #f7b731;
+            color: #1e3a1e;
+            font-weight: 900;
+            font-size: 1.3rem;
+            padding: 15px 10px;
+            text-align: center;
+            border-radius: 60px;
+            border: 4px solid white;
+            box-shadow: 0 6px 0 #b37f20;
+            margin: 15px 0 10px;
+            transform: rotate(-1deg);
+            letter-spacing: 1px;
+        }
+
+        .contato-retro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            background: #1e3a1e;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 60px;
+            border: 3px solid #f7b731;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .contato-retro span {
+            font-size: 1.2rem;
+        }
+
+        .ponto-amarelo {
+            width: 8px;
+            height: 8px;
+            background: #f7b731;
+            border-radius: 50%;
+        }
+
+        /* Ajustes mobile */
+        @media (max-width: 380px) {
+            .postit-qr {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-polaroid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .grid-retro {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cartao-urban">
+        <!-- Elementos decorativos -->
+        <div class="fita-adesiva"></div>
+        <div class="circulo-pop"></div>
+        <div class="circulo-pop2"></div>
+
+        <div class="conteudo">
+            <!-- HEADER COM FOTO -->
+            <div class="header-polaroid">
+                <div class="foto-placeholder">
+                    🌳
+                </div>
+                <div class="nome-tag">
+                    <h1>ISAAC LOPES</h1>
+                    <p>⚡ treinos outdoor</p>
+                </div>
+            </div>
+
+            <!-- ETIQUETAS -->
+            <div class="etiquetas">
+                <div class="etiqueta">
+                    <span>🌳</span> Calistenia
+                </div>
+                <div class="etiqueta">
+                    <span>🔥</span> Funcional
+                </div>
+                <div class="etiqueta local">
+                    <span>📍</span> Parque Naide Gomes
+                </div>
+            </div>
+
+            <!-- QR CODE POST-IT -->
+            <div class="postit-qr">
+                <div class="qr-postit">
+                    <img src="qrcode.png" alt="QR Code Instagram">
+                </div>
+                <div class="postit-texto">
+                    <p>📸 segue no insta</p>
+                    <span class="handle-grande">@isaac_treinos_ar_livre</span>
+                    <p style="font-size:0.65rem; margin-top:6px;">→ aponta ou clica</p>
+                </div>
+            </div>
+
+            <!-- DIVISÓRIA CLIP -->
+            <div class="clip-divider">
+                <div class="clip">⛰️ outdoor training ⛰️</div>
+            </div>
+
+            <!-- VERSO RETRÔ -->
+            <div class="verso-retro">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="background: #1e3a1e; color: white; padding: 4px 20px; border-radius: 40px; font-size:0.8rem;">⚡ calistenia · funcional</span>
+                </div>
+
+                <div class="grid-retro">
+                    <div class="retro-item">
+                        <div class="icone">🌳🏡</div>
+                        <div class="titulo">presencial</div>
+                        <div class="desc">parque · domicílio</div>
+                    </div>
+                    <div class="retro-item">
+                        <div class="icone">💻</div>
+                        <div class="titulo">online</div>
+                        <div class="desc">aulas ao vivo</div>
+                    </div>
+                </div>
+
+                <div class="selo-gratis">
+                    🎁 1ª AULA GRATUITA 🎁
+                </div>
+
+                <div class="contato-retro">
+                    <span>📲</span>
+                    <strong>reserva por direct</strong>
+                    <span class="ponto-amarelo"></span>
+                    <span>🐶 pet friendly</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

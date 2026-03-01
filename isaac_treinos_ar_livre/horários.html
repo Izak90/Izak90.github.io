@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Turma Fundadora - Horários</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* Card principal */
+        .founders-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Cabeçalho com gradiente */
+        .header {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "⭐";
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            right: -20px;
+            bottom: -30px;
+            transform: rotate(15deg);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #334155;
+            font-weight: 600;
+            background: rgba(255,255,255,0.3);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Contador de vagas */
+        .counter-section {
+            padding: 25px 20px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            text-align: center;
+            border-bottom: 2px dashed #e0e0e0;
+        }
+        
+        .counter-title {
+            color: #4a5568;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .counter-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .counter-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        
+        .counter-number.filled {
+            color: #38a169;
+            text-shadow: 0 2px 10px rgba(56, 161, 105, 0.3);
+        }
+        
+        .counter-number.total {
+            color: #64748b;
+            position: relative;
+        }
+        
+        .counter-number.total::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            right: -10px;
+            height: 4px;
+			#background: linear-gradient(90deg, transparent, #cbd5e0, transparent);
+            transform: translateY(-50%);
+        }
+        
+        .counter-separator {
+            font-size: 3rem;
+            color: #cbd5e0;
+            font-weight: 300;
+        }
+        
+        .counter-label {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            margin: 15px 0 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            width: 25%; /* 2 de 8 = 25% */
+            background: linear-gradient(90deg, #38a169, #48bb78);
+            border-radius: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .vagas-info {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+        
+        .vagas-restantes {
+            color: #e53e3e;
+            font-weight: 700;
+            background: #fff5f5;
+            padding: 3px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        
+        /* Horários */
+        .schedule-section {
+            padding: 25px 20px;
+            background: white;
+        }
+        
+        .schedule-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .schedule-title span {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .days-grid {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .day-card {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-radius: 20px;
+            padding: 15px 5px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .day-card.active {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .day-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #4a5568;
+            margin-bottom: 5px;
+        }
+        
+        .day-name small {
+            font-size: 0.7rem;
+            color: #a0aec0;
+            font-weight: 400;
+        }
+        
+        .day-time {
+            background: white;
+            padding: 8px 5px;
+            border-radius: 15px;
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .time-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 20px 0 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .time-badge span {
+            font-size: 1.5rem;
+        }
+        
+        .info-text {
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        
+        .info-text strong {
+            color: #667eea;
+        }
+        
+        /* Botão de ação */
+        .action-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            width: calc(100% - 40px);
+            margin: 0 20px 25px 20px;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .action-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+        }
+        
+        /* Benefícios */
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        
+        .benefit-item {
+            background: #f7fafc;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .benefit-item:before {
+            content: "✓";
+            color: #38a169;
+            font-weight: bold;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 380px) {
+            .days-grid {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .counter-number {
+                font-size: 2.8rem;
+            }
+            
+            .time-badge {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="founders-card">
+            <!-- Cabeçalho -->
+            <div class="header">
+                <h1>⭐ Turma Fundadora</h1>
+                <p>Grupo Presencial • 3x/semana</p>
+            </div>
+            
+            <!-- Contador de vagas -->
+            <div class="counter-section">
+                <div class="counter-title">VAGAS PREENCHIDAS</div>
+                <div class="counter-box">
+                    <span class="counter-number filled">2</span>
+                    <span class="counter-separator">/</span>
+                    <span class="counter-number total">8</span>
+                </div>
+                <div class="counter-label">alunos confirmados</div>
+                
+                <!-- Barra de progresso -->
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                
+                <div class="vagas-info">
+                    <span>✅ 2 ocupadas</span>
+                    <span class="vagas-restantes">⚡ 6 vagas restantes</span>
+                </div>
+            </div>
+            
+            <!-- Horários -->
+            <div class="schedule-section">
+                <div class="schedule-title">
+                    📅 Horário Único
+                    <span>FIXO</span>
+                </div>
+                
+                <!-- Dias da semana em cards -->
+                <div class="days-grid">
+                    <div class="day-card active">
+                        <div class="day-name">SEG <small>2ª</small></div>
+                        <div class="day-time">6:15</div>
+                    </div>
+                    <div class="day-card active">
+                        <div class="day-name">QUA <small>4ª</small></div>
+                        <div class="day-time">6:15</div>
+                    </div>
+                    <div class="day-card active">
+                        <div class="day-name">SEX <small>6ª</small></div>
+                        <div class="day-time">6:15</div>
+                    </div>
+                </div>
+                
+                <!-- Badge do horário -->
+                <div class="time-badge">
+                    <span>⏰</span> 6:15 - 7:15 <span>⏰</span>
+                </div>
+                
+                <div class="info-text">
+                    <span>🏋️</span> <strong>60 minutos</strong> de treino intensivo <span>💪</span>
+                </div>
+                
+                <!-- Benefícios exclusivos -->
+                <div class="benefits">
+                    <div class="benefit-item">Desconto vitalício 10%</div>
+                    <div class="benefit-item">Acompanhamento diário</div>
+                    <div class="benefit-item">Turma reduzida</div>
+                    <div class="benefit-item">Preço 2026 fixo</div>
+                </div>
+            </div>
+            
+            <!-- Botão de ação -->
+            <!--button class="action-button" onclick="alert('Para reservar a tua vaga, envia mensagem para o meu WhatsApp! 📱')">
+                📱 Garantir vaga
+                <span style="font-size: 0.8rem; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 20px;">6 vagas</span>
+            </button-->
+        </div>
+        
+        <!-- Footer -->
+        <!--div class="footer">
+            <p>Primeiras 8 pessoas • <a href="#" onclick="alert('Contacta-me para mais informações!')">Saber mais</a></p>
+        </div-->
+    </div>
+    
+    <script>
+        // Opcional: Atualizar contador dinamicamente se necessário
+        // Podes alterar estes valores conforme as inscrições
+        const vagasOcupadas = 2;
+        const vagasTotais = 8;
+        const vagasRestantes = vagasTotais - vagasOcupadas;
+        
+        // Atualizar texto das vagas restantes
+        document.querySelector('.vagas-restantes').innerHTML = `⚡ ${vagasRestantes} vagas restantes`;
+        document.querySelector('.progress-fill').style.width = (vagasOcupadas / vagasTotais * 100) + '%';
+        document.querySelector('.action-button span').innerText = vagasRestantes + ' vagas';
+    </script>
+</body>
+</html>

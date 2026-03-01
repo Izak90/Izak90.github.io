@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Programa Indica um Amigo - Turma Fundadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* Card principal */
+        .referral-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Cabeçalho */
+        .header {
+            background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "🎁";
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            right: -20px;
+            bottom: -30px;
+            transform: rotate(15deg);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #334155;
+            font-weight: 600;
+            background: rgba(255,255,255,0.3);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .badge {
+            background: #38a169;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        /* Secção da oferta */
+        .offer-section {
+            padding: 25px 20px;
+            background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+            text-align: center;
+            border-bottom: 2px solid #fbbf24;
+        }
+        
+        .offer-title {
+            color: #92400e;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .offer-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        
+        .offer-highlight span {
+            background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        
+        .offer-subtitle {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Cards duplos */
+        .double-cards {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .double-card {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 20px 12px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 2px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .double-card.current {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+        }
+        
+        .double-card.new {
+            border-color: #38a169;
+            background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+        }
+        
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .card-label {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .card-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin: 10px 0;
+        }
+        
+        .card-price small {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: 400;
+        }
+        
+        .card-original {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+        
+        .card-discount {
+            background: #ffd700;
+            color: #1e293b;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        .card-discount.green {
+            background: #38a169;
+            color: white;
+        }
+        
+        .badge-position {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            background: #ff4757;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            transform: rotate(5deg);
+        }
+        
+        /* Total savings */
+        .total-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            padding: 18px;
+            margin: 25px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        
+        .total-label {
+            font-weight: 600;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .total-value {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+        
+        .total-value small {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        
+        /* Info boxes */
+        .info-box {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 18px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .info-box p {
+            color: #334155;
+            font-size: 0.95rem;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-box p:before {
+            content: "✓";
+            color: #38a169;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Link de indicação */
+        .referral-link {
+            background: #f7fafc;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px dashed #ffd700;
+        }
+        
+        .link-label {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .link-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .link-input {
+            flex: 1;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .copy-button {
+            background: #ffd700;
+            color: #1e293b;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-button:hover {
+            background: #fbbf24;
+            transform: scale(1.02);
+        }
+        
+        /* Botões de ação */
+        .action-button {
+            background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+            color: #1e293b;
+            border: none;
+            width: 100%;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(251, 191, 36, 0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            margin: 15px 0;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(251, 191, 36, 0.4);
+        }
+        
+        .action-button.secondary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Termos */
+        .terms {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+        
+        .terms p {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .terms p:before {
+            content: "📌";
+            font-size: 0.8rem;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+        }
+        
+        /* Contador de vagas */
+        .spots-left {
+            display: inline-block;
+            background: #ff4757;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        @media (max-width: 380px) {
+            .double-cards {
+                flex-direction: column;
+            }
+            
+            .link-box {
+                flex-direction: column;
+            }
+            
+            .offer-highlight {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="referral-card">
+            <!-- Cabeçalho -->
+            <div class="header">
+                <h1>🎁 Bónus Duplo</h1>
+                <p>Indica um Amigo • Turma Fundadora</p>
+                <div class="spots-left">⚡ 6 vagas restantes</div>
+            </div>
+            
+            <!-- Oferta principal -->
+            <div class="offer-section">
+                <div class="offer-title">OFERTA ESPECIAL POR TEMPO LIMITADO</div>
+                <div class="offer-highlight">
+                    <span>25% + 25%</span>
+                </div>
+                <div class="offer-subtitle">
+                    Desconto para ti e para o teu amigo
+                </div>
+                
+                <!-- Cards duplos -->
+                <div class="double-cards">
+                    <!-- Membro atual -->
+                    <div class="double-card current">
+                        <div class="badge-position">TU</div>
+                        <div class="card-icon">👤</div>
+                        <div class="card-label">Membro Atual</div>
+                        <div class="card-original">€54,00</div>
+                        <div class="card-price">€40,50 <small>/2ª mês</small></div>
+                        <div class="card-discount">-25%</div>
+                    </div>
+                    
+                    <!-- Novo membro -->
+                    <div class="double-card new">
+                        <div class="badge-position">AMIGO</div>
+                        <div class="card-icon">👥</div>
+                        <div class="card-label">Novo Membro</div>
+                        <div class="card-original">€60,00</div>
+                        <div class="card-price">€45,00 <small>/1ª mês</small></div>
+                        <div class="card-discount green">-25%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Link de indicação -->
+            <div style="padding: 0 20px 20px 20px;">
+                <!-- Comparação visual -->
+                <div style="background: #f1f5f9; border-radius: 20px; padding: 15px; margin: 20px 0;">
+                    <div style="display: flex; justify-content: space-between; color: #475569; font-size: 0.9rem; margin-bottom: 10px;">
+                        <span>💪 Sem indicação</span>
+                        <span>🎯 Com indicação</span>
+                    </div>
+                    
+                    <!-- Membro atual -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="background: #e2e8f0; padding: 3px 8px; border-radius: 20px; font-size: 0.7rem;">TU</span>
+                            <span style="color: #334155;">€54,00</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: #38a169; font-weight: 700;">→ €40,50</span>
+                            <span style="background: #ffd700; padding: 2px 6px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">-25%</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Novo membro -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="background: #e2e8f0; padding: 3px 8px; border-radius: 20px; font-size: 0.7rem;">AMIGO</span>
+                            <span style="color: #334155;">€60,00</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: #38a169; font-weight: 700;">→ €45,00</span>
+                            <span style="background: #38a169; color: white; padding: 2px 6px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">-25%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Termos e condições -->
+                <div class="terms">
+                    <p>Válido apenas para novas inscrições na Turma Fundadora (Grupo 3x/semana - 6:15)</p>
+                    <p>Desconto do membro atual (25%) aplicado na mensalidade seguinte à confirmação do novo membro</p>
+                    <p>Novo membro paga €45,00 na primeira mensalidade (25% sobre €60), depois €54,00/mês</p>
+                    <p>Limite de 3 indicações por membro • Vagas limitadas: 6 restantes</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>⭐ Turma Fundadora • Grupo Presencial 3x/semana • 6:15 às 7:15</p>
+        </div>
+    </div>
+    
+    <script>
+        function copyLink() {
+            const link = document.getElementById('referralLink');
+            link.select();
+            document.execCommand('copy');
+            
+            // Feedback visual
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copiado! ✓';
+            button.style.background = '#38a169';
+            button.style.color = 'white';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#ffd700';
+                button.style.color = '#1e293b';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
