@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Planos Treino · Calistenia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: #f2f7fc;
+            color: #1e3b4f;
+            padding: 18px 16px 32px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 560px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(150deg, #113946, #2d6a8c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .badge {
+            display: inline-block;
+            background: #d7e5f0;
+            color: #1d4d68;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 36px;
+            padding: 18px;
+            box-shadow: 0 12px 28px -12px rgba(0, 55, 80, 0.2);
+            border: 1px solid #ffffff;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 18px 22px;
+            background: #e8f1f8;
+            border-radius: 30px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #113e55;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 1px solid white;
+            box-shadow: 0 4px 10px rgba(0,45,70,0.08);
+            transition: 0.1s;
+        }
+        .menu-item:active {
+            background: #d0e2f2;
+            transform: scale(0.98);
+        }
+        .menu-icon {
+            font-size: 1.5rem;
+            margin-right: 16px;
+            min-width: 32px;
+        }
+        .footer {
+            margin-top: 32px;
+            text-align: center;
+            color: #577e9c;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 400px) {
+            .menu-item { font-size: 1rem; padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CALISTENIA<br>MACROCICLO 8 SEMANAS</h1>
+            <div class="badge">3x/semana · 1h · treino funcional</div>
+        </div>
+
+        <div class="menu-card">
+            <a href="filosofia.html" class="menu-item">
+                <span class="menu-icon">🌟</span> Filosofia do ciclo
+            </a>
+            <a href="semanas/semana1-2.html" class="menu-item">
+                <span class="menu-icon">📆</span> Semanas 1-2 · Adaptação
+            </a>
+            <a href="semanas/semana3-5.html" class="menu-item">
+                <span class="menu-icon">📊</span> Semanas 3-5 · Acumulação
+            </a>
+            <a href="semanas/semana6-7.html" class="menu-item">
+                <span class="menu-icon">⚡</span> Semanas 6-7 · Intensificação
+            </a>
+            <a href="semanas/semana8.html" class="menu-item">
+                <span class="menu-icon">🔁</span> Semana 8 · Descarga
+            </a>
+            <a href="recursos/aquecimento.html" class="menu-item">
+                <span class="menu-icon">🔥</span> Aquecimento padrão
+            </a>
+            <a href="recursos/alongamentos.html" class="menu-item">
+                <span class="menu-icon">🧘</span> Alongamentos finais
+            </a>
+        </div>
+
+        <div class="footer">
+            ⚡ planos personalizados · força na rua<br>
+            <span style="font-size:0.8rem; opacity:0.7;">github pages · atualizado março 2026</span>
+        </div>
+    </div>
+</body>
+</html>
