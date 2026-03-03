@@ -1,0 +1,84 @@
+/**
+ * Design Tokens
+ * Sistema de design do Isaac Treinos
+ */
+
+:root {
+  /* === COLORS === */
+  /* primary */
+  --color-primary-main: #113946;
+  --color-primary-light: #2d6a8c;
+  --color-primary-dark: #0a2530;
+
+  /* secondary */
+  --color-secondary-main: #4ecdc4;
+  --color-secondary-light: #96ceb4;
+  --color-secondary-dark: #2f759b;
+
+  /* background */
+  --color-background-primary: #f2f7fc;
+  --color-background-secondary: #ffffff;
+  --color-background-tertiary: #d7e5f0;
+
+  /* text */
+  --color-text-primary: #1e3b4f;
+  --color-text-secondary: #1d4d68;
+  --color-text-tertiary: #17445c;
+  --color-text-inverse: #ffffff;
+
+  /* accent */
+  --color-accent-blue: #45b7d1;
+  --color-accent-purple: #764ba2;
+  --color-accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* === TYPOGRAPHY === */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-secondary: system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.4rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* === SPACING === */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* === BORDER RADIUS === */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-2xl: 40px;
+  --radius-full: 9999px;
+
+  /* === SHADOWS === */
+  --shadow-sm: 0 4px 10px rgba(179, 208, 232, 1);
+  --shadow-md: 0 12px 28px -12px rgba(0, 55, 80, 0.19);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 55, 80, 0.3);
+  --shadow-card: 0 12px 28px -12px #00375030;
+
+  /* === BREAKPOINTS === */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1200px;
+}

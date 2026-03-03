@@ -1,0 +1,121 @@
+<!-- MENU STICKY COMPONENT -->
+<!-- Adicionar no início do <body>, logo após a tag de abertura -->
+
+<style>
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-primary, linear-gradient(135deg, #2A9D8F 0%, #264653 100%));
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sticky-menu__brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sticky-menu__nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sticky-menu__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+}
+
+.sticky-menu__link:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.sticky-menu__link--active {
+    background: rgba(255,255,255,0.2);
+}
+
+.sticky-menu__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+body {
+    padding-top: 70px; /* Compensar altura do menu fixo */
+}
+
+@media (max-width: 768px) {
+    .sticky-menu__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-primary-dark, #264653);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        display: none;
+    }
+    
+    .sticky-menu__nav.active {
+        display: flex;
+    }
+    
+    .sticky-menu__link {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0;
+    }
+    
+    .sticky-menu__toggle {
+        display: block;
+    }
+}
+</style>
+
+<nav class="sticky-menu">
+    <a href="index.html" class="sticky-menu__brand">
+        Isaac Treinos Ar Livre
+    </a>
+    
+    <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+        ☰
+    </button>
+    
+    <div class="sticky-menu__nav">
+        <a href="index.html" class="sticky-menu__link">Início</a>
+        <a href="horarios.html" class="sticky-menu__link">Horários</a>
+        <a href="tabela-precos.html" class="sticky-menu__link">Preços</a>
+        <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
+        <a href="treino-experimental.html" class="sticky-menu__link sticky-menu__link--active">Treino Grátis</a>
+    </div>
+</nav>
+
+<!-- INSTRUÇÕES:
+1. Copiar este bloco completo para cada página HTML
+2. Ajustar o link com classe "sticky-menu__link--active" conforme a página atual
+3. O menu aparece fixo no topo em todas as páginas
+4. Responsivo com menu hambúrguer em mobile
+-->

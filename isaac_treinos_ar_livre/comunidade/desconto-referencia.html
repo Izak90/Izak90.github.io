@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indica um amigo e ganhem 25% desconto cada um">
+    <title>Desconto Referência - Isaac Treinos Ar Livre</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #2A9D8F;
+            --color-primary-dark: #264653;
+            --color-accent: #E76F51;
+            --color-accent-light: #F4A261;
+            --color-white: #FFFFFF;
+            --color-gray-50: #F8F9FA;
+            --color-gray-100: #E9ECEF;
+            --color-gray-700: #495057;
+            --color-gray-900: #212529;
+            --font-family: 'DM Sans', sans-serif;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
+            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
+            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--color-gray-900);
+            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+            min-height: 100vh;
+            padding: var(--space-md);
+            padding-top: 90px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--color-white);
+            transform: translateX(-4px);
+        }
+        
+        .hero-card {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-card::before {
+            content: '🎁';
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.1;
+            right: -2rem;
+            bottom: -3rem;
+            transform: rotate(15deg);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            margin-bottom: var(--space-md);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .discount-badge {
+            background: var(--color-accent-light);
+            color: var(--color-primary-dark);
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .benefit-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 3px solid var(--color-gray-100);
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+        
+        .benefit-card.you {
+            border-color: var(--color-accent);
+            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
+        }
+        
+        .benefit-card.friend {
+            border-color: var(--color-primary);
+            background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+        }
+        
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-label {
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            font-size: 1.125rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-price-old {
+            color: var(--color-gray-700);
+            text-decoration: line-through;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .card-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-discount-badge {
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        .card-discount-badge.green {
+            background: var(--color-primary);
+        }
+        
+        .info-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        h2 {
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .steps-list {
+            list-style: none;
+            display: grid;
+            gap: var(--space-md);
+        }
+        
+        .steps-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: var(--color-gray-50);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .step-number {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .terms-box {
+            background: var(--color-gray-50);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-lg);
+            border-left: 4px solid var(--color-accent-light);
+        }
+        
+        .terms-box p {
+            color: var(--color-gray-700);
+            font-size: 0.875rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .terms-box p::before {
+            content: '📌';
+            flex-shrink: 0;
+        }
+        
+        .cta-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 3px dashed var(--color-primary);
+        }
+        
+        .cta-title {
+            font-size: 1.75rem;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+        }
+        
+        .cta-text {
+            color: var(--color-gray-700);
+            margin-bottom: var(--space-lg);
+            font-size: 1.125rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: var(--space-md) var(--space-xl);
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+            min-height: 48px;
+            font-size: 1.125rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .comparison-box {
+            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .comparison-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--color-gray-100);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-label {
+            color: var(--color-gray-700);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .comparison-value {
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 1.125rem;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+        }
+        
+        .whatsapp-float__btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7); }
+        }
+        
+        @media (max-width: 480px) {
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Sticky Menu */
+        .sticky-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .sticky-menu__brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sticky-menu__nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .sticky-menu__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+        }
+        
+        .sticky-menu__link:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .sticky-menu__link--active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .sticky-menu__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-menu__nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #264653;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none;
+            }
+            
+            .sticky-menu__nav.active {
+                display: flex;
+            }
+            
+            .sticky-menu__link {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 0;
+            }
+            
+            .sticky-menu__toggle {
+                display: block;
+            }
+        }
+        
+        /* PROTEÇÃO DE ACESSO */
+        .access-protection {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1.5rem;
+        }
+        
+        .access-protection.hidden {
+            display: none;
+        }
+        
+        .access-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            max-width: 400px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+        }
+        
+        .access-card__close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: var(--color-gray-700);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        
+        .access-card__close:hover {
+            background: var(--color-gray-100);
+            color: var(--color-primary-dark);
+        }
+        
+        .access-card__icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .access-card__title {
+            color: var(--color-primary-dark);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .access-card__subtitle {
+            color: var(--color-gray-700);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .access-card__input {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--color-gray-100);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: var(--space-sm);
+            font-family: inherit;
+        }
+        
+        .access-card__input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .access-card__button {
+            width: 100%;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .access-card__error {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        
+        .access-card__error.show {
+            display: block;
+        }
+        
+        .access-card__help {
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-gray-100);
+            font-size: 0.875rem;
+        }
+        
+        .access-card__help a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- PROTEÇÃO DE ACESSO -->
+    <div class="access-protection" id="accessProtection">
+        <div class="access-card">
+            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
+            <div class="access-card__icon">🔐</div>
+            <h2 class="access-card__title">Área de Membros</h2>
+            <p class="access-card__subtitle">Insere o código de acesso para visualizar os treinos</p>
+            
+            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
+            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
+            
+            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
+            
+            <div class="access-card__help">
+                <p>Não tens o código?</p>
+                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso" target="_blank">Solicitar no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="sticky-menu">
+        <a href="../comunidade.html" class="sticky-menu__brand">
+            Isaac Treinos Ar Livre
+        </a>
+        
+        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+            ☰
+        </button>
+        
+        <div class="sticky-menu__nav">
+            <a href="../index.html" class="sticky-menu__link">Início</a>
+            <a href="../horarios.html" class="sticky-menu__link">Horários</a>
+            <a href="../tabela-precos.html" class="sticky-menu__link">Preços</a>
+            <a href="../comunidade.html" class="sticky-menu__link">Comunidade</a>
+            <a href="../treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../comunidade.html" class="back-link">← Voltar à Comunidade</a>
+        
+        <div class="hero-card">
+            <h1>🎁 Programa Indica um Amigo</h1>
+            <p class="hero-subtitle">Ganhem os dois!</p>
+            <div class="discount-badge">25% + 25%</div>
+        </div>
+        
+        <div class="benefit-grid">
+            <div class="benefit-card you">
+                <div class="card-icon">👤</div>
+                <div class="card-label">TU</div>
+                <div class="card-price-old">54€/mês</div>
+                <div class="card-price">40,50€</div>
+                <div class="card-discount-badge">-25%</div>
+                <p style="margin-top: var(--space-sm); color: var(--color-gray-700); font-size: 0.875rem;">
+                    No próximo mês após confirmação
+                </p>
+            </div>
+            
+            <div class="benefit-card friend">
+                <div class="card-icon">👥</div>
+                <div class="card-label">AMIGO</div>
+                <div class="card-price-old">60€/mês</div>
+                <div class="card-price">45€</div>
+                <div class="card-discount-badge green">-25%</div>
+                <p style="margin-top: var(--space-sm); color: var(--color-gray-700); font-size: 0.875rem;">
+                    No primeiro mês de inscrição
+                </p>
+            </div>
+        </div>
+        
+        <div class="info-card">
+            <h2>📋 Como funciona</h2>
+            <ol class="steps-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <div>
+                        <strong>Fala com o teu amigo</strong><br>
+                        <span style="color: var(--color-gray-700);">Explica os benefícios e confirma o interesse dele</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <div>
+                        <strong>Envia mensagem WhatsApp</strong><br>
+                        <span style="color: var(--color-gray-700);">Diz que tens uma indicação e partilha o nome do amigo</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <div>
+                        <strong>Amigo contacta para inscrição</strong><br>
+                        <span style="color: var(--color-gray-700);">Ele menciona a tua indicação ao inscrever-se</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <div>
+                        <strong>Recebem os descontos</strong><br>
+                        <span style="color: var(--color-gray-700);">Tu no mês seguinte, ele no primeiro pagamento</span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="info-card">
+            <h2>✅ Benefícios para ambos</h2>
+            <ul style="list-style: none; display: grid; gap: var(--space-sm);">
+                <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
+                    <span>25% desconto aplicado automaticamente</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
+                    <span>Treinar com amigos aumenta motivação</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
+                    <span>Sem limite de indicações</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
+                    <span>Válido para mensalidade 3x/semana</span>
+                </li>
+            </ul>
+            
+            <div class="terms-box">
+                <p>Válido apenas para novas inscrições (nunca foram membros)</p>
+                <p>Desconto aplicado na mensalidade seguinte à confirmação do novo membro</p>
+                <p>Novo membro paga com 25% desconto no primeiro mês</p>
+                <p>Sem limite de indicações por membro ativo</p>
+                <p>Caso o teu amigo seja um dos primeiros 8 (turma fundadora), após o primeiro mês paga 54€ assim como tu.</p>
+            </div>
+        </div>
+        
+        <div class="cta-card">
+            <h3 class="cta-title">Tens amigos interessados?</h3>
+            <p class="cta-text">
+                Fala comigo no WhatsApp e ganha 25% de desconto para os dois!
+            </p>
+            <a href="https://wa.me/351939481840?text=Olá!%20Quero%20indicar%20um%20amigo%20para%20os%20treinos" 
+               target="_blank" 
+               rel="noopener" 
+               class="btn">
+                <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Indicar Amigo
+            </a>
+        </div>
+    </div>
+    
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20indicar%20um%20amigo" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+    </a>
+    
+    <script>
+        // Verificação de acesso
+        function checkAccess() {
+            const code = document.getElementById('accessCode').value;
+            const error = document.getElementById('accessError');
+            
+            if (code === 'TREINO2026') {
+                sessionStorage.setItem('hasAccess', 'true');
+                document.getElementById('accessProtection').classList.add('hidden');
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+            }
+        }
+        
+        function closeAccessCard() {
+            window.history.back();
+        }
+        
+        // Verificar se já tem acesso
+        window.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('hasAccess') === 'true') {
+                document.getElementById('accessProtection').classList.add('hidden');
+            }
+            
+            // Permitir Enter para submeter
+            document.getElementById('accessCode').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    checkAccess();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

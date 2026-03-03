@@ -2,487 +2,468 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Tabela de Preços - Personal Trainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabela de preços - Treinos presenciais e online">
+    <title>Preços - Isaac Treinos Ar Livre</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        * {
+        :root {
+            --color-primary: #2A9D8F;
+            --color-primary-dark: #264653;
+            --color-accent: #E76F51;
+            --color-accent-light: #F4A261;
+            --color-white: #FFFFFF;
+            --color-gray-50: #F8F9FA;
+            --color-gray-100: #E9ECEF;
+            --color-gray-700: #495057;
+            --color-gray-900: #212529;
+            --font-family: 'DM Sans', sans-serif;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
+            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
+            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--color-gray-900);
+            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
             min-height: 100vh;
-            padding: 12px;
+            padding: var(--space-md);
+            padding-top: 90px;
         }
         
         .container {
-            max-width: 1200px;
-            width: 100%;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        .section-title {
-            color: white;
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
-            margin: 25px 0 15px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            padding: 0 5px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .section-title:first-of-type {
-            margin-top: 10px;
-        }
-        
-        .online-tag {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #1e293b;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
+        .back-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            letter-spacing: 0.5px;
-        }
-        
-        .online-tag span {
-            background: #1e293b;
-            color: #fbbf24;
-            padding: 3px 10px;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            margin-left: 5px;
-        }
-        
-        /* Versão mobile para o tag */
-        @media (max-width: 480px) {
-            .section-title {
-                gap: 10px;
-            }
-            .online-tag {
-                font-size: 0.85rem;
-                padding: 5px 12px;
-            }
-            .online-tag span {
-                font-size: 0.95rem;
-                padding: 2px 8px;
-            }
-        }
-        
-        /* Otimização para mobile - tabela com scroll horizontal */
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin-bottom: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        .pricing-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            min-width: 600px; /* Garante que a tabela não fique demasiado compacta */
-        }
-        
-        /* Versão para ecrãs muito pequenos - cards em vez de tabela */
-        @media (max-width: 480px) {
-            .table-wrapper {
-                display: none; /* Esconde a tabela tradicional em ecrãs muito pequenos */
-            }
-            
-            .mobile-cards {
-                display: block !important;
-            }
-        }
-        
-        /* Mostra tabela normal em ecrãs maiores */
-        @media (min-width: 481px) {
-            .mobile-cards {
-                display: none !important;
-            }
-        }
-        
-        /* Estilos da tabela (mantém-se para desktop) */
-        .pricing-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        
-        .pricing-table thead tr {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .online-section thead tr {
-            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
-        }
-        
-        .pricing-table th {
-            padding: 15px 10px;
-            font-size: 0.95rem;
+            gap: 0.5rem;
+            color: var(--color-primary);
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
+            text-decoration: none;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
         }
         
-        .pricing-table th:first-child {
-            text-align: left;
-            font-size: 1.1rem;
-            background: rgba(0,0,0,0.2);
-            position: sticky;
-            left: 0;
-            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        .back-link:hover {
+            background: var(--color-white);
+            transform: translateX(-4px);
         }
         
-        .online-section th:first-child {
-            background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
-        }
-        
-        .pricing-table td {
-            padding: 12px 8px;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #e0e0e0;
-            white-space: nowrap;
-        }
-        
-        .pricing-table td:first-child {
-            font-weight: 600;
-            color: #333;
-            background-color: #f5f5f5;
-            border-right: 2px solid #e0e0e0;
-            position: sticky;
-            left: 0;
-            background-color: #f5f5f5;
-            z-index: 2;
-            white-space: normal;
-            word-break: break-word;
-            min-width: 110px;
-        }
-        
-        .pricing-table td:not(:first-child) {
+        .hero-card {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-xl);
             text-align: center;
+            box-shadow: var(--shadow-lg);
         }
         
-        /* Estilos para cards mobile */
-        .mobile-cards {
-            display: none;
-            margin-bottom: 30px;
-        }
-        
-        .category-badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 15px 15px 0 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .online-category .category-badge {
-            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        
-        .card-header {
-            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-            color: white;
-            padding: 12px 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .card-body {
-            padding: 15px;
-        }
-        
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .price-row:last-child {
-            border-bottom: none;
-        }
-        
-        .price-label {
-            font-weight: 600;
-            color: #4a5568;
-            font-size: 0.95rem;
-        }
-        
-        .price-value {
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: var(--space-md);
             font-weight: 700;
-            color: #2c3e50;
-            font-size: 1.1rem;
         }
         
-        .price-value::before {
-            content: '€';
-            font-size: 0.8em;
-            margin-right: 2px;
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
         }
         
-        .card-badge {
-            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 8px;
-            display: inline-block;
-        }
-        
-        .card-founders {
-            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
-            color: #333;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-        
-        .card-domcilio-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.6rem;
-            font-weight: 600;
-            margin-left: 5px;
-        }
-        
-        /* Badges existentes */
-        .founders-deal {
-            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
-        }
-        
-        .founders-badge {
-            background-color: #ff4757;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 20px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-left: 5px;
-            display: inline-block;
-            white-space: nowrap;
+        .section-title {
+            color: var(--color-primary-dark);
+            font-size: 2rem;
+            margin: var(--space-xl) 0 var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
         }
         
         .discount-badge {
-            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 20px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            margin-left: 5px;
-            display: inline-block;
-            white-space: nowrap;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 700;
         }
         
-        .domicilio-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 0.6rem;
-            font-weight: 600;
-            margin-left: 5px;
-            display: inline-block;
-            white-space: nowrap;
-            vertical-align: middle;
-        }
-        
-        .support-info {
-            background-color: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 15px;
-            border-radius: 12px;
-            margin: 15px 0 25px 0;
-            color: #0d47a1;
+        .alert-box {
+            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
+            border-left: 4px solid var(--color-accent);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-lg);
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            gap: var(--space-sm);
         }
         
-        .support-icon {
-            font-size: 1.8rem;
+        .alert-icon {
+            font-size: 1.5rem;
             flex-shrink: 0;
         }
         
-        .support-text {
-            font-size: 0.95rem;
-            font-weight: 500;
-            line-height: 1.4;
+        .alert-text {
+            color: var(--color-gray-700);
         }
         
-        .support-text strong {
-            color: #1976d2;
-            display: block;
-            margin-bottom: 5px;
+        .alert-text strong {
+            color: var(--color-accent);
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--color-white);
+            min-width: 600px;
+        }
+        
+        thead {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+        }
+        
+        thead.online-head {
+            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
+        }
+        
+        th {
+            padding: var(--space-md);
+            text-align: left;
+            font-weight: 700;
             font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        th:first-child {
+            background: rgba(0,0,0,0.1);
+            position: sticky;
+            left: 0;
+            z-index: 10;
+        }
+        
+        td {
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--color-gray-100);
+            white-space: nowrap;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            background: var(--color-gray-50);
+            border-right: 2px solid var(--color-gray-100);
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            white-space: normal;
+        }
+        
+        td:not(:first-child) {
+            text-align: center;
         }
         
         .price {
             font-weight: 700;
-            color: #2c3e50;
+            color: var(--color-primary-dark);
         }
         
         .price::before {
             content: '€';
-            font-size: 0.8em;
+            font-size: 0.875em;
             margin-right: 2px;
         }
         
-        .original-price {
+        .price-old {
             text-decoration: line-through;
-            color: #999;
+            color: var(--color-gray-700);
+            font-size: 0.875rem;
+            margin-right: 0.25rem;
+        }
+        
+        .founders-badge {
+            background: var(--color-accent-light);
+            color: var(--color-primary-dark);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-full);
             font-size: 0.75rem;
-            margin-right: 4px;
+            font-weight: 700;
+            margin-left: 0.25rem;
+            white-space: nowrap;
         }
         
-        .limited-offer {
-            background-color: #ff4757;
-            color: white;
-            text-align: center;
-            padding: 12px 10px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 10px;
-            margin: 20px 0 30px 0;
-            line-height: 1.4;
+        .saving-badge {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 0.25rem;
         }
         
-        .footnote {
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 18px 15px;
-            margin-top: 25px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+        .info-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
         }
         
-        .footnote p {
-            color: white;
-            margin: 8px 0;
-            font-size: 0.9rem;
-            line-height: 1.4;
+        .info-list {
+            list-style: none;
+            display: grid;
+            gap: var(--space-sm);
+        }
+        
+        .info-list li {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: var(--space-sm);
+            color: var(--color-gray-700);
         }
         
-        .footnote p:before {
-            content: "✓";
-            color: #ffd700;
-            font-weight: bold;
+        .info-list li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
             flex-shrink: 0;
         }
         
-        .highlight-text {
-            color: #ffd700;
+        .info-list li strong {
+            color: var(--color-primary-dark);
+        }
+        
+        .cta-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 3px dashed var(--color-primary);
+        }
+        
+        .cta-title {
+            font-size: 1.75rem;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: var(--space-md) var(--space-xl);
+            background: var(--gradient-primary);
+            color: var(--color-white);
             font-weight: 600;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+            font-size: 1.125rem;
         }
         
-        /* Ajustes para desktop */
-        @media (min-width: 769px) {
-            body {
-                padding: 20px;
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+        }
+        
+        .whatsapp-float__btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7); }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
             }
             
-            .pricing-table th {
-                padding: 20px;
-                font-size: 1.1rem;
-            }
-            
-            .pricing-table td {
-                padding: 18px 20px;
-                font-size: 1rem;
-            }
-            
-            .support-text {
-                font-size: 1.1rem;
-            }
-            
-            .support-text strong {
-                font-size: 1.2rem;
-                display: inline;
-                margin-bottom: 0;
+            th, td {
+                padding: var(--space-sm);
+                font-size: 0.875rem;
             }
         }
         
-        @media print {
-            body {
-                background: white;
-                padding: 0;
+        /* Sticky Menu */
+        .sticky-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .sticky-menu__brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sticky-menu__nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .sticky-menu__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+        }
+        
+        .sticky-menu__link:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .sticky-menu__link--active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .sticky-menu__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-menu__nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #264653;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none;
             }
             
-            .pricing-table {
-                box-shadow: none;
-                border: 1px solid #ddd;
+            .sticky-menu__nav.active {
+                display: flex;
             }
             
-            .pricing-table:hover {
-                transform: none;
+            .sticky-menu__link {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 0;
+            }
+            
+            .sticky-menu__toggle {
+                display: block;
             }
         }
     </style>
 </head>
 <body>
+    <nav class="sticky-menu">
+        <a href="index.html" class="sticky-menu__brand">
+            Isaac Treinos Ar Livre
+        </a>
+        
+        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+            ☰
+        </button>
+        
+        <div class="sticky-menu__nav">
+            <a href="index.html" class="sticky-menu__link">Início</a>
+            <a href="horarios.html" class="sticky-menu__link">Horários</a>
+            <a href="tabela-precos.html" class="sticky-menu__link sticky-menu__link--active">Preços</a>
+            <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
+            <a href="treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Tabela Presencial - Versão Desktop -->
-        <h1 class="section-title">🏋️ Presencial</h1>
+        <a href="index.html" class="back-link">← Voltar</a>
         
-        <!-- Informação de acompanhamento diário -->
-        <div class="support-info">
-            <div class="support-icon">💬</div>
-            <div class="support-text">
-                <strong>Acompanhamento diário personalizado!</strong>
-                Para mensalidades 3x/semana, tens acesso a suporte diário para dúvidas, questões sobre treinos e motivação via WhatsApp.
-            </div>
-        </div>
-		
-		<!-- Destaque para oferta limitada -->
-        <div class="limited-offer">
-            ⚡ OFERTA LIMITADA: 10% para Turma Fundadora (primeiras 8 pessoas) - Grupo Presencial 3x/semana ⚡
+        <div class="hero-card">
+            <h1>💰 Tabela de Preços</h1>
+            <p class="hero-subtitle">Investe no teu corpo e mente</p>
         </div>
         
-        <!-- Wrapper para scroll horizontal em tablets -->
+        <!-- Presencial -->
+        <h2 class="section-title">🌳 Presencial</h2>
         <div class="table-wrapper">
-            <table class="pricing-table">
+            <table>
                 <thead>
                     <tr>
                         <th>Modalidade</th>
@@ -498,8 +479,8 @@
                         <td class="price">15,00</td>
                         <td class="price">30,00</td>
                         <td class="price">45,00</td>
-                        <td class="founders-deal">
-                            <span class="original-price">€60,00</span>
+                        <td>
+                            <span class="price-old">€60,00</span>
                             <span class="price">54,00</span>
                             <span class="founders-badge">-10%</span>
                         </td>
@@ -512,144 +493,32 @@
                         <td class="price">180,00</td>
                     </tr>
                     <tr>
-                        <td>Dupla <span class="discount-badge">-20%</span></td>
+                        <td>Dupla <span class="saving-badge">-20%</span></td>
                         <td class="price">28,00</td>
                         <td class="price">60,00</td>
                         <td class="price">104,00</td>
                         <td class="price">144,00</td>
                     </tr>
-                    <!-- Domicílio comentado para não aparecer
-                    <tr>
-                        <td>Domicílio <span class="domicilio-badge">+10€/sessão</span></td>
-                        <td class="price">45,00</td>
-                        <td class="price">115,00</td>
-                        <td class="price">210,00</td>
-                        <td class="price">300,00</td>
-                    </tr>
-                    -->
                 </tbody>
             </table>
         </div>
-        
-        <!-- Versão Mobile - Cards -->
-        <div class="mobile-cards">
-            <!-- Card Grupo -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>Grupo</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">15,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">30,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">45,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value" style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap; justify-content: flex-end;">
-                            <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">€60,00</span>
-                            <span style="color: #333;">€54,00</span>
-                            <span class="card-founders">-10% Fundador</span>
-                        </span>
-                    </div>
-                </div>
+        <div class="alert-box">
+            <span class="alert-icon">⚡</span>
+            <div class="alert-text">
+                <strong>OFERTA LIMITADA:</strong> 10% desconto vitalício para a Turma Fundadora 
+                (primeiras 8 pessoas no Grupo Presencial 3x/semana)
             </div>
-            
-            <!-- Card PT Individual -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>PT (Individual)</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">35,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">75,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">130,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">180,00</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Card Dupla -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>Dupla <span class="card-badge">-20%</span></span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">28,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">60,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">104,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">144,00</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Card Domicílio comentado para não aparecer
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>Domicílio <span class="card-domcilio-badge">+10€/sessão</span></span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">45,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">115,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">210,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">300,00</span>
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
-        
-        <!-- Tabela Online - Versão Desktop com tag no título -->
-        <h1 class="section-title">
+
+        <!-- Online -->
+        <h2 class="section-title">
             💻 Online
-            <span class="online-tag">
-                ⚡ 20% OFF <span>vs Presencial</span>
-            </span>
-        </h1>
+            <span class="discount-badge">20% OFF vs Presencial</span>
+        </h2>
         
         <div class="table-wrapper">
-            <table class="pricing-table online-section">
-                <thead>
+            <table>
+                <thead class="online-head">
                     <tr>
                         <th>Modalidade</th>
                         <th>Avulso</th>
@@ -674,7 +543,7 @@
                         <td class="price">144,00</td>
                     </tr>
                     <tr>
-                        <td>Dupla <span class="discount-badge">-20%</span></td>
+                        <td>Dupla <span class="saving-badge">-20%</span></td>
                         <td class="price">22,00</td>
                         <td class="price">48,00</td>
                         <td class="price">83,00</td>
@@ -684,94 +553,55 @@
             </table>
         </div>
         
-        <!-- Versão Mobile - Cards Online -->
-        <div class="mobile-cards online-category">            
-            <!-- Card Grupo Online -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>Grupo</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">12,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">24,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">36,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">48,00</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Card PT Online -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>PT (Individual)</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">28,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">60,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">104,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">144,00</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Card Dupla Online -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <span>Dupla <span class="card-badge">-20%</span></span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <span class="price-label">Avulso</span>
-                        <span class="price-value">22,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">1x / Semana</span>
-                        <span class="price-value">48,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">2x / Semana</span>
-                        <span class="price-value">83,00</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-label">3x / Semana</span>
-                        <span class="price-value">115,00</span>
-                    </div>
-                </div>
-            </div>
+        <!-- Informações Adicionais -->
+        <div class="info-card">
+            <h2 style="color: var(--color-primary-dark); margin-bottom: var(--space-md);">
+                📋 Informações Importantes
+            </h2>
+            <ul class="info-list">
+                <li>
+                    <span><strong>Acompanhamento diário</strong> incluído em todas as modalidades presenciais 3x/semana</span>
+                </li>
+                <li>
+                    <span><strong>Turma Fundadora:</strong> 10% de desconto vitalício - primeiras 8 pessoas (Grupo Presencial 3x/semana: €54,00 em vez de €60,00)</span>
+                </li>
+                <li>
+                    <span><strong>Modalidade Dupla:</strong> 20% de desconto quando duas pessoas treinam juntas</span>
+                </li>
+                <li>
+                    <span><strong>Online:</strong> 20% mais económico que presencial, mantém qualidade e acompanhamento</span>
+                </li>
+                <li>
+                    <span><strong>Nutrição:</strong> Posso recomendar profissionais qualificados caso tenhas interesse</span>
+                </li>
+                <li>
+                    <span><strong>Preços 2026</strong> • Descontos disponíveis para pacotes trimestrais</span>
+                </li>
+            </ul>
         </div>
         
-        <!-- Notas e informações adicionais -->
-        <div class="footnote">
-            <p><span class="highlight-text">Acompanhamento diário</span> incluído em todas as modalidades presenciais 3x/semana</p>
-            <p><span class="highlight-text">Turma Fundadora:</span> 10% vitalício - primeiras 8 pessoas (Grupo Presencial 3x/semana: €54,00)</p>
-            <!-- Domicílio comentado para não aparecer
-            <p><span class="highlight-text">Domicílio:</span> +10€/sessão (deslocação incluída na cidade de Lisboa, Loures, Odivelas e Amadora)</p>
-            -->
-			<p><span class="highlight-text">Nutrição:</span> Caso tenhas interesse posso recomendar-te profissionais</p>
-            <p>Preços 2026 • Descontos para pacotes trimestrais • Consulte condições</p>
+        <!-- CTA -->
+        <div class="cta-card">
+            <h3 class="cta-title">Pronto para começar?</h3>
+            <p style="color: var(--color-gray-700); margin-bottom: var(--space-lg); font-size: 1.125rem;">
+                Fala comigo no WhatsApp e escolhe a melhor opção para ti!
+            </p>
+            <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20preços" 
+               target="_blank" 
+               rel="noopener" 
+               class="btn">
+                <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp
+            </a>
         </div>
     </div>
+    
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20informações%20sobre%20preços" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+    </a>
 </body>
 </html>

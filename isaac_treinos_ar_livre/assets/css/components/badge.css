@@ -1,0 +1,33 @@
+/**
+ * Badge Component
+ * Componente de badge/pill
+ */
+
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-2xl);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.badge--default {
+  background-color: var(--color-background-tertiary);
+  color: var(--color-text-secondary);
+}
+
+.badge--primary {
+  background-color: var(--color-primary-main);
+  color: var(--color-text-inverse);
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary-light);
+  color: var(--color-text-secondary);
+}
+
+/* Pill variant (larger padding) */
+.badge--pill {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+}

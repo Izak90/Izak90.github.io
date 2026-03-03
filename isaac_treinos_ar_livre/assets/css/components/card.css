@@ -1,0 +1,52 @@
+/**
+ * Card Component
+ * Componente de card reutilizável
+ */
+
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__header {
+  margin-bottom: var(--spacing-md);
+}
+
+.card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.card__content {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+.card__footer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-background-tertiary);
+}
+
+/* Card variants */
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--highlighted {
+  border: 2px solid var(--color-primary-main);
+}
+
+.card--compact {
+  padding: var(--spacing-md);
+}

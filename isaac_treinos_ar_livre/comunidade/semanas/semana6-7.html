@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semanas 6-7 - Fase de Intensificação">
+    <title>Semanas 6-7 · Intensificação | Isaac Treinos</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #2A9D8F;
+            --color-primary-dark: #264653;
+            --color-accent: #E76F51;
+            --color-accent-light: #F4A261;
+            --color-white: #FFFFFF;
+            --color-gray-50: #F8F9FA;
+            --color-gray-100: #E9ECEF;
+            --color-gray-700: #495057;
+            --color-gray-900: #212529;
+            --font-family: 'DM Sans', sans-serif;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
+            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
+            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            --gradient-accent: linear-gradient(135deg, #E76F51 0%, #F4A261 100%);
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--color-gray-900);
+            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+            min-height: 100vh;
+            padding: 90px var(--space-md) var(--space-md);
+        }
+        
+        /* MENU STICKY */
+        .sticky-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-primary);
+            padding: 1rem 1.5rem;
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .sticky-menu__brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sticky-menu__nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .sticky-menu__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+        }
+        
+        .sticky-menu__link:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .sticky-menu__link--active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .sticky-menu__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-menu__nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-primary-dark);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none;
+            }
+            
+            .sticky-menu__nav.active {
+                display: flex;
+            }
+            
+            .sticky-menu__link {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 0;
+            }
+            
+            .sticky-menu__toggle {
+                display: block;
+            }
+        }
+        
+        /* PROTEÇÃO DE ACESSO */
+        .access-protection {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1.5rem;
+        }
+        
+        .access-protection.hidden {
+            display: none;
+        }
+        
+        .access-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            max-width: 400px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+        }
+        
+        .access-card__close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: var(--color-gray-700);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        
+        .access-card__close:hover {
+            background: var(--color-gray-100);
+            color: var(--color-primary-dark);
+        }
+        
+        .access-card__icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .access-card__title {
+            color: var(--color-primary-dark);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .access-card__subtitle {
+            color: var(--color-gray-700);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .access-card__input {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--color-gray-100);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: var(--space-sm);
+            font-family: inherit;
+        }
+        
+        .access-card__input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .access-card__button {
+            width: 100%;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .access-card__error {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        
+        .access-card__error.show {
+            display: block;
+        }
+        
+        .access-card__help {
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-gray-100);
+            font-size: 0.875rem;
+        }
+        
+        .access-card__help a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: var(--space-md);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--color-white);
+            transform: translateX(-4px);
+        }
+        
+        .page-header {
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+        
+        .page-header__badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
+        }
+        
+        .skill-box {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border-left: 4px solid var(--color-accent-light);
+        }
+        
+        .skill-box strong {
+            color: var(--color-accent);
+            font-size: 1.125rem;
+        }
+        
+        .day-section {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .day-section__title {
+            color: var(--color-primary-dark);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 3px solid var(--color-primary);
+        }
+        
+        .exercise-box {
+            background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .exercise-box strong {
+            color: var(--color-primary-dark);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .exercise-box ul {
+            list-style: none;
+        }
+        
+        .exercise-box li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            border-bottom: 1px dashed var(--color-gray-100);
+        }
+        
+        .exercise-box li:last-child {
+            border-bottom: none;
+        }
+        
+        .exercise-box li::before {
+            content: "•";
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+        }
+        
+        .resources-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin: var(--space-lg) 0;
+        }
+        
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: white;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+        }
+        
+        .resource-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-back {
+            display: block;
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- PROTEÇÃO DE ACESSO -->
+    <div class="access-protection" id="accessProtection">
+        <div class="access-card">
+            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
+            <div class="access-card__icon">🔐</div>
+            <h2 class="access-card__title">Área de Membros</h2>
+            <p class="access-card__subtitle">Insere o código de acesso para visualizar os treinos</p>
+            
+            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
+            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
+            
+            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
+            
+            <div class="access-card__help">
+                <p>Não tens o código?</p>
+                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso" target="_blank">Solicitar no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MENU STICKY -->
+    <nav class="sticky-menu">
+        <a href="../../index.html" class="sticky-menu__brand">
+            Isaac Treinos Ar Livre
+        </a>
+        
+        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+            ☰
+        </button>
+        
+        <div class="sticky-menu__nav">
+            <a href="../../index.html" class="sticky-menu__link">Início</a>
+            <a href="../../horarios.html" class="sticky-menu__link">Horários</a>
+            <a href="../../tabela-precos.html" class="sticky-menu__link">Preços</a>
+            <a href="../../comunidade.html" class="sticky-menu__link">Comunidade</a>
+            <a href="../../treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../../comunidade.html" class="back-link">← Voltar à Comunidade</a>
+        
+        <div class="page-header">
+            <span class="page-header__badge">Semanas 6-7</span>
+            <h1>INTENSIFICAÇÃO</h1>
+        </div>
+        
+        <div class="skill-box">
+            <strong>🧘 SKILL (10 minutos):</strong> Handstand (afastar pés) · Pull-ups banda fina · Pistol assistido
+        </div>
+        
+        <!-- SEGUNDA -->
+        <div class="day-section">
+            <h2 class="day-section__title">SEGUNDA · Push</h2>
+            <div class="exercise-box">
+                <strong>4 séries</strong>
+                <ul>
+                    <li>Flexões declinadas 8-10</li>
+                    <li>Dips barra c/ banda 6-8</li>
+                    <li>Pike pés elevados 6-8</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- QUARTA -->
+        <div class="day-section">
+            <h2 class="day-section__title">QUARTA · Pull</h2>
+            <div class="exercise-box">
+                <strong>4 séries</strong>
+                <ul>
+                    <li>Ring rows inclinadas máx reps</li>
+                    <li>Pull-ups assistidas máx 5</li>
+                    <li>Remada halteres pesada 8-10</li>
+                    <li>Bíceps concentrado</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- SEXTA -->
+        <div class="day-section">
+            <h2 class="day-section__title">SEXTA · Pernas + Core</h2>
+            <div class="exercise-box">
+                <strong>4 séries</strong>
+                <ul>
+                    <li>Búlgaro c/ halteres 8 cada</li>
+                    <li>Afundos saltados (pliométricos)</li>
+                    <li>Prancha elevação pernas</li>
+                    <li>Stiff pesado 10</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="resources-links">
+            <a href="../recursos/aquecimento.html" class="resource-link">
+                🔥 Aquecimento
+            </a>
+            <a href="../recursos/alongamentos.html" class="resource-link">
+                🧘 Alongamentos
+            </a>
+        </div>
+        
+        <a href="../comunidade.html" class="btn-back">← Voltar à Comunidade</a>
+    </div>
+    
+    <script>
+        const ACCESS_CODE = 'TREINO2026';
+        
+        function closeAccessCard() {
+            window.history.back();
+        }
+        
+        function checkAccess() {
+            const input = document.getElementById('accessCode');
+            const error = document.getElementById('accessError');
+            const protection = document.getElementById('accessProtection');
+            
+            if (input.value.toUpperCase() === ACCESS_CODE) {
+                sessionStorage.setItem('hasAccess', 'true');
+                protection.classList.add('hidden');
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+            }
+        }
+        
+        document.getElementById('accessCode').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkAccess();
+        });
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('hasAccess') === 'true') {
+                document.getElementById('accessProtection').classList.add('hidden');
+            } else {
+                setTimeout(() => document.getElementById('accessCode').focus(), 300);
+            }
+        });
+    </script>
+</body>
+</html>

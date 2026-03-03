@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alongamentos finais - Rotina completa pós-treino">
+    <title>Alongamentos | Isaac Treinos Ar Livre</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #2A9D8F;
+            --color-primary-dark: #264653;
+            --color-accent: #E76F51;
+            --color-accent-light: #F4A261;
+            --color-white: #FFFFFF;
+            --color-gray-50: #F8F9FA;
+            --color-gray-100: #E9ECEF;
+            --color-gray-700: #495057;
+            --color-gray-900: #212529;
+            --font-family: 'DM Sans', sans-serif;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
+            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
+            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--color-gray-900);
+            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+            min-height: 100vh;
+            padding: 90px var(--space-md) var(--space-md);
+        }
+        
+        /* MENU STICKY */
+        .sticky-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-primary);
+            padding: 1rem 1.5rem;
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .sticky-menu__brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sticky-menu__nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .sticky-menu__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+        }
+        
+        .sticky-menu__link:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .sticky-menu__link--active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .sticky-menu__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-menu__nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-primary-dark);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none;
+            }
+            
+            .sticky-menu__nav.active {
+                display: flex;
+            }
+            
+            .sticky-menu__link {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 0;
+            }
+            
+            .sticky-menu__toggle {
+                display: block;
+            }
+        }
+        
+        /* PROTEÇÃO DE ACESSO */
+        .access-protection {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1.5rem;
+        }
+        
+        .access-protection.hidden {
+            display: none;
+        }
+        
+        .access-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            max-width: 400px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+        }
+        
+        .access-card__close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: var(--color-gray-700);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        
+        .access-card__close:hover {
+            background: var(--color-gray-100);
+            color: var(--color-primary-dark);
+        }
+        
+        .access-card__icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .access-card__title {
+            color: var(--color-primary-dark);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .access-card__subtitle {
+            color: var(--color-gray-700);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .access-card__input {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--color-gray-100);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: var(--space-sm);
+            font-family: inherit;
+        }
+        
+        .access-card__input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .access-card__button {
+            width: 100%;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .access-card__error {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        
+        .access-card__error.show {
+            display: block;
+        }
+        
+        .access-card__help {
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-gray-100);
+            font-size: 0.875rem;
+        }
+        
+        .access-card__help a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: var(--space-md);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--color-white);
+            transform: translateX(-4px);
+        }
+        
+        .page-header {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .page-header__subtitle {
+            font-size: 1.125rem;
+            opacity: 0.95;
+        }
+        
+        .content-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stretch-list {
+            display: grid;
+            gap: var(--space-md);
+        }
+        
+        .stretch-item {
+            background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            border-left: 4px solid var(--color-primary);
+            transition: all 0.3s;
+        }
+        
+        .stretch-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stretch-item__icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .stretch-item__content {
+            flex: 1;
+        }
+        
+        .stretch-item__title {
+            color: var(--color-primary-dark);
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stretch-item__description {
+            color: var(--color-gray-700);
+        }
+        
+        .btn-back {
+            display: block;
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: var(--space-lg);
+        }
+        
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- PROTEÇÃO DE ACESSO -->
+    <div class="access-protection" id="accessProtection">
+        <div class="access-card">
+            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
+            <div class="access-card__icon">🔐</div>
+            <h2 class="access-card__title">Área de Membros</h2>
+            <p class="access-card__subtitle">Insere o código de acesso para visualizar os treinos</p>
+            
+            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
+            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
+            
+            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
+            
+            <div class="access-card__help">
+                <p>Não tens o código?</p>
+                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso" target="_blank">Solicitar no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MENU STICKY -->
+    <nav class="sticky-menu">
+        <a href="../../index.html" class="sticky-menu__brand">
+            Isaac Treinos Ar Livre
+        </a>
+        
+        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+            ☰
+        </button>
+        
+        <div class="sticky-menu__nav">
+            <a href="../../index.html" class="sticky-menu__link">Início</a>
+            <a href="../../horarios.html" class="sticky-menu__link">Horários</a>
+            <a href="../../tabela-precos.html" class="sticky-menu__link">Preços</a>
+            <a href="../../comunidade.html" class="sticky-menu__link">Comunidade</a>
+            <a href="../../treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../../comunidade.html" class="back-link">← Voltar à Comunidade</a>
+        
+        <div class="page-header">
+            <h1>🧘 Alongamentos Finais</h1>
+            <p class="page-header__subtitle">5-7 minutos · Depois de cada treino</p>
+        </div>
+        
+        <div class="content-card">
+            <div class="stretch-list">
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">🫀</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Peitorais</h3>
+                        <p class="stretch-item__description">
+                            30 segundos cada lado — Braço contra a parede, roda o tronco para fora
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">⬇️</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Dorsais</h3>
+                        <p class="stretch-item__description">
+                            30 segundos cada lado — Agarra barra/argola e senta para trás
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">🦵</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Gémeos</h3>
+                        <p class="stretch-item__description">
+                            30 segundos cada perna — Passo à frente, calcanhar no chão
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">📏</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Isquiotibiais</h3>
+                        <p class="stretch-item__description">
+                            30 segundos cada lado — Pé à frente, mãos no chão
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">🦵</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Glúteos</h3>
+                        <p class="stretch-item__description">
+                            30 segundos cada lado — Deitado, puxa joelho ao peito
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">🐍</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Coluna</h3>
+                        <p class="stretch-item__description">
+                            Mãos no chão + desenrolar coluna — Subir vértebra a vértebra, olhar para o céu
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stretch-item">
+                    <div class="stretch-item__icon">🧘</div>
+                    <div class="stretch-item__content">
+                        <h3 class="stretch-item__title">Postura da Criança</h3>
+                        <p class="stretch-item__description">
+                            60 segundos — Joelhos afastados, testa no chão, relaxa completamente
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="../../index.html" class="btn-back">← Menu Principal</a>
+        </div>
+    </div>
+    
+    <script>
+        // Verificação de acesso
+        function checkAccess() {
+            const code = document.getElementById('accessCode').value;
+            const error = document.getElementById('accessError');
+            
+            if (code === 'TREINO2026') {
+                sessionStorage.setItem('hasAccess', 'true');
+                document.getElementById('accessProtection').classList.add('hidden');
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+            }
+        }
+        
+        function closeAccessCard() {
+            window.history.back();
+        }
+        
+        // Verificar se já tem acesso
+        window.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('hasAccess') === 'true') {
+                document.getElementById('accessProtection').classList.add('hidden');
+            }
+            
+            // Permitir Enter para submeter
+            document.getElementById('accessCode').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    checkAccess();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
