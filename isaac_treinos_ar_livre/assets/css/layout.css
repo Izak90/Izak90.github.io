@@ -1,0 +1,460 @@
+/**
+ * Layout Components - Header, Navigation, Footer
+ */
+
+/* =====================================================
+   HEADER (Design Verde)
+   ===================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-primary);
+    border-bottom: none;
+    padding: var(--space-md) 0;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
+    transition: var(--transition-fast);
+}
+
+.header__brand:hover {
+    opacity: 0.9;
+}
+
+.header__icon {
+    width: 20px;
+    height: 20px;
+    color: var(--color-white);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.header__link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.header__link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Badge Membros no Header */
+.header__badge-members {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+}
+
+.header__link:hover .header__badge-members {
+    opacity: 1;
+}
+
+/* Header CTA - Destaque especial para "1ª Aula Grátis" */
+.header__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 16px rgba(231, 111, 81, 0.4);
+    transition: all var(--transition-fast);
+    animation: pulse-glow 2s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.header__cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.header__cta:hover::before {
+    left: 100%;
+}
+
+.header__cta:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 24px rgba(231, 111, 81, 0.5);
+    animation: none;
+}
+
+.header__cta i {
+    width: 16px;
+    height: 16px;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 16px rgba(231, 111, 81, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 24px rgba(231, 111, 81, 0.6), 0 0 12px rgba(231, 111, 81, 0.3);
+    }
+}
+
+.header__toggle {
+    display: none;
+    min-width: 48px;
+    min-height: 48px;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.header__toggle:hover,
+.header__toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header__toggle:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .header__content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .header__nav {
+        position: fixed;
+        top: 73px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        background: var(--color-primary-dark);
+        flex-direction: column;
+        gap: 0;
+        padding: var(--space-lg) var(--space-md);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    
+    .header__nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .header__link {
+        width: 100%;
+        text-align: center;
+        padding: var(--space-md) var(--space-lg);
+        border-radius: 0;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    
+    .header__link:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .header__badge-members {
+        font-size: 0.5rem;
+        padding: 0.1rem 0.3rem;
+    }
+    
+    .header__toggle {
+        display: flex;
+    }
+}
+
+/* =====================================================
+   STICKY MENU / HEADER (Legacy - Manter para compatibilidade)
+   ===================================================== */
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.sticky-menu__brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sticky-menu__nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sticky-menu__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+}
+
+.sticky-menu__link:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.sticky-menu__link--active {
+    background: rgba(255,255,255,0.2);
+}
+
+.sticky-menu__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .sticky-menu__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #264653;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        display: none;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    
+    .sticky-menu__nav.active {
+        display: flex;
+    }
+    
+    .sticky-menu__link {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+    
+    .sticky-menu__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   BACK LINK
+   ===================================================== */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: var(--color-white);
+    transform: translateX(-4px);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.footer__grid {
+    display: grid;
+    gap: var(--space-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    margin-bottom: var(--space-xl);
+}
+
+.footer__brand h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.footer__brand p {
+    color: var(--color-gray-300);
+    line-height: var(--line-height-relaxed);
+}
+
+.footer__section h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-md);
+}
+
+.footer__links {
+    list-style: none;
+}
+
+.footer__link {
+    display: block;
+    padding: var(--space-xs) 0;
+    color: var(--color-gray-300);
+    transition: var(--transition-fast);
+}
+
+.footer__link:hover {
+    color: var(--color-primary-light);
+    padding-left: var(--space-xs);
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-gray-300);
+}
+
+/* =====================================================
+   ADDITIONAL MOBILE OPTIMIZATIONS
+   ===================================================== */
+@media (max-width: 480px) {
+    .header__content {
+        padding: 0 0.5rem;
+    }
+    
+    .header__brand {
+        font-size: var(--font-size-sm);
+    }
+    
+    .header__cta {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .header__cta i {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 360px) {
+    .header__brand span {
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .header__cta {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
+    }
+}

@@ -1,0 +1,85 @@
+/**
+ * Community Submenu Component
+ * Sub-navegação para páginas da comunidade
+ */
+
+.community-submenu {
+    background: var(--color-white);
+    border-bottom: 2px solid var(--color-gray-100);
+    position: sticky;
+    top: 64px; /* Altura do header */
+    z-index: 999; /* Menor que o header (1000) para não sobrepor */
+    box-shadow: var(--shadow-sm);
+}
+
+.community-submenu__nav {
+    display: flex;
+    gap: var(--space-xs);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.community-submenu__nav::-webkit-scrollbar {
+    display: none;
+}
+
+.community-submenu__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-gray-700);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.community-submenu__link:hover {
+    color: var(--color-primary);
+    background: var(--color-gray-50);
+}
+
+.community-submenu__link--active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    font-weight: 600;
+}
+
+.community-submenu__link--active:hover {
+    background: transparent;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .community-submenu {
+        top: 56px; /* Altura do header mobile */
+    }
+    
+    .community-submenu__link {
+        padding: var(--space-sm);
+        font-size: 0.8125rem;
+    }
+    
+    .community-submenu__link span {
+        display: none;
+    }
+    
+    .community-submenu__nav {
+        justify-content: space-around;
+        gap: var(--space-2xs);
+    }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .community-submenu__link {
+        gap: var(--space-2xs);
+        padding: var(--space-sm) var(--space-sm);
+        font-size: 0.8125rem;
+    }
+}

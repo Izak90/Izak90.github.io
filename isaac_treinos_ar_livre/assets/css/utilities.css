@@ -59,3 +59,118 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Backgrounds & Gradients */
+.bg-gradient-primary { background: var(--gradient-primary); }
+.bg-gradient-light { background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%); }
+.bg-gradient-accent { background: linear-gradient(135deg, #F4A261 0%, #E76F51 100%); }
+.bg-gradient-intense { background: linear-gradient(135deg, #E76F51 0%, #F4A261 100%); }
+.bg-gradient-card { background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%); }
+.bg-gradient-card-accent { background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%); }
+
+/* Icon Sizes */
+.icon-xs { width: 12px !important; height: 12px !important; }
+.icon-sm { width: 14px !important; height: 14px !important; }
+.icon-md { width: 16px !important; height: 16px !important; }
+.icon-lg { width: 20px !important; height: 20px !important; }
+.icon-xl { width: 24px !important; height: 24px !important; }
+.icon-2xl { width: 48px !important; height: 48px !important; }
+.icon-3xl { width: 64px !important; height: 64px !important; }
+
+/* Display helpers */
+.inline-block { display: inline-block !important; }
+.inline-flex { display: inline-flex !important; }
+.vertical-middle { vertical-align: middle !important; }
+
+/* Spacing helpers */
+.mr-xs { margin-right: var(--space-xs); }
+.mr-sm { margin-right: var(--space-sm); }
+.mr-md { margin-right: var(--space-md); }
+
+/* Border & Shadow helpers */
+.border-primary { border: 3px solid var(--color-primary); }
+.shadow-primary { box-shadow: 0 8px 32px rgba(42, 157, 143, 0.2); }
+.shadow-accent { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
+
+/* Opacity helpers */
+.opacity-90 { opacity: 0.9; }
+.opacity-70 { opacity: 0.7; }
+.opacity-60 { opacity: 0.6; }
+
+/* Animation helpers */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-6 { animation-delay: 0.6s; }
+
+/* Layout helpers */
+.max-w-600 { max-width: 600px; margin-left: auto; margin-right: auto; }
+.max-w-700 { max-width: 700px; margin-left: auto; margin-right: auto; }
+.text-left-force { text-align: left !important; }
+
+/* Header fixo - helpers */
+.first-section {
+    margin-top: 0;
+}
+
+@media (min-width: 769px) {
+    .first-section {
+        margin-top: var(--space-md);
+    }
+}
+
+/* Color helpers */
+.text-primary { color: var(--color-primary) !important; }
+.text-white { color: var(--color-white) !important; }
+.text-gray-700 { color: var(--color-gray-700) !important; }
+
+/* Star filled icon */
+.icon-filled { fill: currentColor !important; }
+
+/* No specific background */
+.bg-none { background: none !important; }
+
+/* Flexbox shrink */
+.flex-shrink-0 { flex-shrink: 0; }
+
+/* =====================================================
+   GARANTIA DE RESPONSIVIDADE GLOBAL
+   ===================================================== */
+
+/* Garantir que imagens nunca ultrapassem o container */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Garantir que elementos flex n�o ultrapassem */
+.flex, [class*="flex"] {
+    flex-wrap: wrap;
+}
+
+/* Tabelas responsivas - scroll horizontal quando necess�rio */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Textos longos sem quebra */
+.text-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Garantir que grids nunca quebrem a p�gina */
+[class*="grid"], .grid {
+    width: 100%;
+    max-width: 100%;
+}

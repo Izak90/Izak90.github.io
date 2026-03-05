@@ -1,607 +1,1411 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tabela de preços - Treinos presenciais e online">
-    <title>Preços - Isaac Treinos Ar Livre</title>
+    <meta name="description" content="Preços - Treino calistenia e funcional ao ar livre. Escolhe Presencial ou Online. Desconto Turma Fundadora!">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/tabela-precos.html">
+    <title>Preços • Isaac Treinos Ar Livre</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="assets/css/pages/pricing.css">
+    <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
+    
     <style>
-        :root {
-            --color-primary: #2A9D8F;
-            --color-primary-dark: #264653;
-            --color-accent: #E76F51;
-            --color-accent-light: #F4A261;
-            --color-white: #FFFFFF;
-            --color-gray-50: #F8F9FA;
-            --color-gray-100: #E9ECEF;
-            --color-gray-700: #495057;
-            --color-gray-900: #212529;
-            --font-family: 'DM Sans', sans-serif;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 9999px;
-            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
-            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
-            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+        /* Estilos específicos da página */
+        .hero__badge i,
+        .pricing-selector__label i {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 4px;
         }
         
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        .pricing-selector__label i {
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
         }
         
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--color-gray-900);
-            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-            min-height: 100vh;
-            padding: var(--space-md);
-            padding-top: 90px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: var(--space-lg);
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            transition: all 0.2s;
-        }
-        
-        .back-link:hover {
-            background: var(--color-white);
-            transform: translateX(-4px);
-        }
-        
-        .hero-card {
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-2xl);
-            margin-bottom: var(--space-xl);
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: var(--space-md);
-            font-weight: 700;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.95;
-        }
-        
-        .section-title {
-            color: var(--color-primary-dark);
-            font-size: 2rem;
-            margin: var(--space-xl) 0 var(--space-md);
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            flex-wrap: wrap;
-        }
-        
-        .discount-badge {
-            background: var(--color-accent);
-            color: var(--color-white);
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 700;
-        }
-        
-        .alert-box {
-            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
-            border-left: 4px solid var(--color-accent);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            margin-bottom: var(--space-lg);
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-        }
-        
-        .alert-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .alert-text {
+        .pricing-card__badge--avulso {
+            background: var(--color-gray-100);
             color: var(--color-gray-700);
         }
         
-        .alert-text strong {
-            color: var(--color-accent);
+        .pricing-card__badge--avulso i {
+            width: 14px;
+            height: 14px;
         }
         
-        .table-wrapper {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin-bottom: var(--space-xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--color-white);
-            min-width: 600px;
-        }
-        
-        thead {
-            background: var(--gradient-primary);
-            color: var(--color-white);
-        }
-        
-        thead.online-head {
-            background: linear-gradient(135deg, #38a169 0%, #2c7a4d 100%);
-        }
-        
-        th {
-            padding: var(--space-md);
-            text-align: left;
-            font-weight: 700;
-            font-size: 1rem;
-            white-space: nowrap;
-        }
-        
-        th:first-child {
-            background: rgba(0,0,0,0.1);
-            position: sticky;
-            left: 0;
-            z-index: 10;
-        }
-        
-        td {
-            padding: var(--space-md);
-            border-bottom: 1px solid var(--color-gray-100);
-            white-space: nowrap;
-        }
-        
-        td:first-child {
-            font-weight: 600;
-            background: var(--color-gray-50);
-            border-right: 2px solid var(--color-gray-100);
-            position: sticky;
-            left: 0;
-            z-index: 5;
-            white-space: normal;
-        }
-        
-        td:not(:first-child) {
-            text-align: center;
-        }
-        
-        .price {
-            font-weight: 700;
-            color: var(--color-primary-dark);
-        }
-        
-        .price::before {
-            content: '€';
-            font-size: 0.875em;
-            margin-right: 2px;
-        }
-        
-        .price-old {
-            text-decoration: line-through;
-            color: var(--color-gray-700);
-            font-size: 0.875rem;
-            margin-right: 0.25rem;
-        }
-        
-        .founders-badge {
-            background: var(--color-accent-light);
-            color: var(--color-primary-dark);
-            padding: 0.25rem 0.5rem;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-left: 0.25rem;
-            white-space: nowrap;
-        }
-        
-        .saving-badge {
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 0.25rem 0.5rem;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-left: 0.25rem;
-        }
-        
-        .info-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .info-list {
-            list-style: none;
-            display: grid;
-            gap: var(--space-sm);
-        }
-        
-        .info-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            color: var(--color-gray-700);
-        }
-        
-        .info-list li::before {
-            content: '✓';
-            color: var(--color-primary);
-            font-weight: 700;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-        
-        .info-list li strong {
-            color: var(--color-primary-dark);
-        }
-        
-        .cta-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-2xl);
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 3px dashed var(--color-primary);
-        }
-        
-        .cta-title {
-            font-size: 1.75rem;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: var(--space-md) var(--space-xl);
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            font-weight: 600;
-            border-radius: var(--radius-full);
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-md);
-            font-size: 1.125rem;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-        }
-        
-        .whatsapp-float__btn {
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
-            text-decoration: none;
-            font-size: 2rem;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7); }
-        }
-        
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 1.5rem;
-            }
-            
-            th, td {
-                padding: var(--space-sm);
-                font-size: 0.875rem;
-            }
-        }
-        
-        /* Sticky Menu */
-        .sticky-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        
-        .sticky-menu__brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .sticky-menu__nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        
-        .sticky-menu__link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: all 0.2s;
-        }
-        
-        .sticky-menu__link:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .sticky-menu__link--active {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .sticky-menu__toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
+        .pricing-selector__wrapper {
             cursor: pointer;
-            padding: 0.5rem;
+            position: relative;
+        }
+        
+        .pricing-selector__wrapper:hover .pricing-selector__select {
+            border-color: var(--color-primary);
+            background-color: var(--color-gray-50);
+        }
+        
+        /* Título dinâmico */
+        .pricing-dynamic-title {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .pricing-dynamic-title__text {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary-dark);
+            font-weight: var(--font-weight-bold);
+            margin: 0;
         }
         
         @media (max-width: 768px) {
-            .sticky-menu__nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #264653;
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                display: none;
-            }
-            
-            .sticky-menu__nav.active {
-                display: flex;
-            }
-            
-            .sticky-menu__link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
-                border-radius: 0;
-            }
-            
-            .sticky-menu__toggle {
-                display: block;
+            .pricing-dynamic-title__text {
+                font-size: var(--font-size-lg);
             }
         }
     </style>
 </head>
-<body>
-    <nav class="sticky-menu">
-        <a href="index.html" class="sticky-menu__brand">
-            Isaac Treinos Ar Livre
-        </a>
-        
-        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
-            ☰
-        </button>
-        
-        <div class="sticky-menu__nav">
-            <a href="index.html" class="sticky-menu__link">Início</a>
-            <a href="horarios.html" class="sticky-menu__link">Horários</a>
-            <a href="tabela-precos.html" class="sticky-menu__link sticky-menu__link--active">Preços</a>
-            <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
-            <a href="treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+<body class="has-fixed-header">
+    <!-- MENU STICKY -->
+    <header class="header">
+        <div class="header__content">
+            <a href="index.html" class="header__brand">
+                <i data-lucide="activity" class="header__icon"></i>
+                <span>Isaac Treinos Ar Livre</span>
+            </a>
+            
+            <button class="header__toggle" aria-label="Menu" aria-expanded="false">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <nav class="header__nav">
+                <a href="index.html" class="header__link">Início</a>
+                <a href="tabela-precos.html" class="header__link header__link--active">Preços</a>
+                <a href="horarios.html" class="header__link">Horários</a>
+                <a href="comunidade.html" class="header__link">Comunidade <span class="header__badge-members"><i data-lucide="lock" class="icon-sm"></i></span></a>
+                <a href="treino-experimental.html" class="header__cta">
+                    <i data-lucide="zap"></i>
+                    1ª Aula Grátis
+                </a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <div class="container">
-        <a href="index.html" class="back-link">← Voltar</a>
-        
-        <div class="hero-card">
-            <h1>💰 Tabela de Preços</h1>
-            <p class="hero-subtitle">Investe no teu corpo e mente</p>
-        </div>
-        
-        <!-- Presencial -->
-        <h2 class="section-title">🌳 Presencial</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Modalidade</th>
-                        <th>Avulso</th>
-                        <th>1x / Semana</th>
-                        <th>2x / Semana</th>
-                        <th>3x / Semana</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Grupo</td>
-                        <td class="price">15,00</td>
-                        <td class="price">30,00</td>
-                        <td class="price">45,00</td>
-                        <td>
-                            <span class="price-old">€60,00</span>
-                            <span class="price">54,00</span>
-                            <span class="founders-badge">-10%</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>PT (Individual)</td>
-                        <td class="price">35,00</td>
-                        <td class="price">75,00</td>
-                        <td class="price">130,00</td>
-                        <td class="price">180,00</td>
-                    </tr>
-                    <tr>
-                        <td>Dupla <span class="saving-badge">-20%</span></td>
-                        <td class="price">28,00</td>
-                        <td class="price">60,00</td>
-                        <td class="price">104,00</td>
-                        <td class="price">144,00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="alert-box">
-            <span class="alert-icon">⚡</span>
-            <div class="alert-text">
-                <strong>OFERTA LIMITADA:</strong> 10% desconto vitalício para a Turma Fundadora 
-                (primeiras 8 pessoas no Grupo Presencial 3x/semana)
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="tag"></i>
+                INVESTE NO TEU CORPO E MENTE
             </div>
-        </div>
-
-        <!-- Online -->
-        <h2 class="section-title">
-            💻 Online
-            <span class="discount-badge">20% OFF vs Presencial</span>
-        </h2>
-        
-        <div class="table-wrapper">
-            <table>
-                <thead class="online-head">
-                    <tr>
-                        <th>Modalidade</th>
-                        <th>Avulso</th>
-                        <th>1x / Semana</th>
-                        <th>2x / Semana</th>
-                        <th>3x / Semana</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Grupo</td>
-                        <td class="price">12,00</td>
-                        <td class="price">24,00</td>
-                        <td class="price">36,00</td>
-                        <td class="price">48,00</td>
-                    </tr>
-                    <tr>
-                        <td>PT (Individual)</td>
-                        <td class="price">28,00</td>
-                        <td class="price">60,00</td>
-                        <td class="price">104,00</td>
-                        <td class="price">144,00</td>
-                    </tr>
-                    <tr>
-                        <td>Dupla <span class="saving-badge">-20%</span></td>
-                        <td class="price">22,00</td>
-                        <td class="price">48,00</td>
-                        <td class="price">83,00</td>
-                        <td class="price">115,00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Informações Adicionais -->
-        <div class="info-card">
-            <h2 style="color: var(--color-primary-dark); margin-bottom: var(--space-md);">
-                📋 Informações Importantes
-            </h2>
-            <ul class="info-list">
-                <li>
-                    <span><strong>Acompanhamento diário</strong> incluído em todas as modalidades presenciais 3x/semana</span>
-                </li>
-                <li>
-                    <span><strong>Turma Fundadora:</strong> 10% de desconto vitalício - primeiras 8 pessoas (Grupo Presencial 3x/semana: €54,00 em vez de €60,00)</span>
-                </li>
-                <li>
-                    <span><strong>Modalidade Dupla:</strong> 20% de desconto quando duas pessoas treinam juntas</span>
-                </li>
-                <li>
-                    <span><strong>Online:</strong> 20% mais económico que presencial, mantém qualidade e acompanhamento</span>
-                </li>
-                <li>
-                    <span><strong>Nutrição:</strong> Posso recomendar profissionais qualificados caso tenhas interesse</span>
-                </li>
-                <li>
-                    <span><strong>Preços 2026</strong> • Descontos disponíveis para pacotes trimestrais</span>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- CTA -->
-        <div class="cta-card">
-            <h3 class="cta-title">Pronto para começar?</h3>
-            <p style="color: var(--color-gray-700); margin-bottom: var(--space-lg); font-size: 1.125rem;">
-                Fala comigo no WhatsApp e escolhe a melhor opção para ti!
+            <h1 class="hero__title">
+                Tabela de Preços
+            </h1>
+            <p class="hero__subtitle">
+                Escolhe o plano ideal para os teus objetivos
             </p>
-            <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20preços" 
-               target="_blank" 
-               rel="noopener" 
-               class="btn">
-                <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp
+        </div>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar
             </a>
         </div>
-    </div>
-    
+    </section>
+
+    <!-- SELETOR DE PREÇOS -->
+    <section class="section section--pricing">
+        <div class="container">
+
+            <!-- SELETORES -->
+            <div class="pricing-selector">
+                <!-- Modo: Presencial / Online -->
+                <div class="pricing-selector__group">
+                    <label class="pricing-selector__label">
+                        <i data-lucide="map-pin"></i>
+                        <span class="pricing-selector__label-text">Modo</span>
+                    </label>
+                    <div class="pricing-selector__wrapper" onclick="cycleOption('modo', event)">
+                        <button type="button" class="pricing-selector__button" id="btn-modo" data-current="0" data-value="presencial">
+                            <i id="icon-modo" data-lucide="tree-pine" class="pricing-selector__icon"></i>
+                            <span class="pricing-selector__button-text">Presencial (Ar Livre)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modalidade: Grupo / PT / Dupla -->
+                <div class="pricing-selector__group">
+                    <label class="pricing-selector__label">
+                        <i data-lucide="users"></i>
+                        <span class="pricing-selector__label-text">Modalidade</span>
+                    </label>
+                    <div class="pricing-selector__wrapper" onclick="cycleOption('modalidade', event)">
+                        <button type="button" class="pricing-selector__button" id="btn-modalidade" data-current="0" data-value="grupo">
+                            <i id="icon-modalidade" data-lucide="users" class="pricing-selector__icon"></i>
+                            <span class="pricing-selector__button-text">Treino em Grupo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Frequência -->
+                <div class="pricing-selector__group">
+                    <label class="pricing-selector__label">
+                        <i data-lucide="calendar"></i>
+                        <span class="pricing-selector__label-text">Frequência</span>
+                    </label>
+                    <div class="pricing-selector__wrapper" onclick="cycleOption('frequencia', event)">
+                        <button type="button" class="pricing-selector__button" id="btn-frequencia" data-current="0" data-value="3x">
+                            <i id="icon-frequencia" data-lucide="calendar-check" class="pricing-selector__icon"></i>
+                            <span class="pricing-selector__button-text">3x por semana</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TÍTULO DINÂMICO -->
+            <div class="pricing-dynamic-title" id="pricing-title">
+                <h2 class="pricing-dynamic-title__text"></h2>
+            </div>
+
+            <!-- GRID DE CARDS -->
+            <div class="pricing-cards-grid">
+                
+                <!-- PRESENCIAL - GRUPO - 3X -->
+                <div class="pricing-card pricing-card--featured elevated glow-hover" 
+                     data-modo="presencial" data-modalidade="grupo" data-frequencia="3x">
+                    <div class="pricing-card__ribbon">MELHOR OFERTA</div>
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div>
+                                <span class="pricing-card__price-old">€60</span>
+                                <span class="pricing-card__price">€54</span>
+                            </div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-10% VITALÍCIO</div>
+                            <div class="pricing-card__per-session pricing-card__per-session--margin">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €4,50 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="flame"></i>
+                            <span>Apenas 8 vagas disponíveis</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="shield-check"></i>
+                            <span>Desconto vitalício garantido</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users"></i>
+                            <span>Máximo <span data-config="limites.grupoPresencial">8</span> pessoas</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20garantir%20vaga%20Turma%20Fundadora%20(€54/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-cta-main btn-block">
+                        <i data-lucide="star"></i>
+                        Garantir Vaga
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - GRUPO - 2X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="grupo" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price">€45</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €5,62 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trees"></i>
+                            <span>Parque Multidesportivo Naide Gomes</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users"></i>
+                            <span>Máximo <span data-config="limites.grupoPresencial">8</span> pessoas</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20info%20sobre%202x/semana%20presencial" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - GRUPO - 1X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="grupo" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price">€30</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €7,50 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trees"></i>
+                            <span>Parque Multidesportivo Naide Gomes</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users"></i>
+                            <span>Máximo <span data-config="limites.grupoPresencial">8</span> pessoas</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20info%20sobre%201x/semana%20presencial" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT INDIVIDUAL - 3X -->
+                <div class="pricing-card pricing-card--premium" 
+                     data-modo="presencial" data-modalidade="pt" data-frequencia="3x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€180</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€16,25 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="message-square"></i>
+                            <span>Acompanhamento diário</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="zap"></i>
+                            <span>Resultados máximos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%203x/semana%20(€195/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-primary btn-block">
+                        <i data-lucide="rocket"></i>
+                        Começar PT
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT INDIVIDUAL - 2X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="pt" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€130</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€16,25 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="message-square"></i>
+                            <span>Acompanhamento diário</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trees"></i>
+                            <span>Parque Multidesportivo Naide Gomes</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%202x/semana%20(€130/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT INDIVIDUAL - 1X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="pt" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€75</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€18,75 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trees"></i>
+                            <span>Parque Multidesportivo Naide Gomes</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%201x/semana%20(€75/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT DUPLA - 3X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="dupla" data-frequencia="3x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€144</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€78 por pessoa<br>€13 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano adaptado a dupla</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="piggy-bank"></i>
+                            <span>Poupa €468/ano vs Individual</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%203x/semana%20(€156/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT DUPLA - 2X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="dupla" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€104</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€52 por pessoa<br>€13 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano adaptado a dupla</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="piggy-bank"></i>
+                            <span>Poupa €312/ano vs Individual</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%202x/semana%20(€104/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- PRESENCIAL - PT DUPLA - 1X -->
+                <div class="pricing-card" 
+                     data-modo="presencial" data-modalidade="dupla" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€60</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€30 por pessoa<br>€15 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trees"></i>
+                            <span>Parque Multidesportivo Naide Gomes</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%201x/semana%20(€60/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - GRUPO - 3X -->
+                <div class="pricing-card pricing-card--featured elevated glow-hover" 
+                     data-modo="online" data-modalidade="grupo" data-frequencia="3x">
+                    <div class="pricing-card__ribbon">MELHOR VALOR</div>
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price">€48</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €4 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="monitor"></i>
+                            <span>Via Zoom/Google Meet</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="globe"></i>
+                            <span>Flexibilidade total</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="zap"></i>
+                            <span>Máximo valor por €</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20começar%20online%203x/semana%20(€48/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-primary btn-block">
+                        <i data-lucide="star"></i>
+                        Começar Agora
+                    </a>
+                </div>
+
+                <!-- ONLINE - GRUPO - 2X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="grupo" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price">€36</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €4,50 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="home"></i>
+                            <span>Treina de qualquer lugar</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users"></i>
+                            <span>Máximo <span data-config="limites.grupoPresencial">8</span> pessoas</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20info%20sobre%202x/semana%20online" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - GRUPO - 1X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="grupo" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price">€24</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">
+                                <i data-lucide="calculator" class="pricing-card__icon"></i>
+                                €6 por treino
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="video"></i>
+                            <span>Via videochamada</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users"></i>
+                            <span>Máximo <span data-config="limites.grupoPresencial">8</span> pessoas</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20info%20sobre%201x/semana%20online" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT INDIVIDUAL - 3X -->
+                <div class="pricing-card pricing-card--premium" 
+                     data-modo="online" data-modalidade="pt" data-frequencia="3x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€144</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€12 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="video"></i>
+                            <span>Via videochamada</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="zap"></i>
+                            <span>Máxima flexibilidade</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%20Online%203x/semana%20(€144/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-primary btn-block">
+                        <i data-lucide="rocket"></i>
+                        Começar PT Online
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT INDIVIDUAL - 2X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="pt" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€104</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€13 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="video"></i>
+                            <span>Via videochamada</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="monitor"></i>
+                            <span>Via Zoom/Google Meet</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%20Online%202x/semana%20(€104/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT INDIVIDUAL - 1X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="pt" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€60</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__per-session">€15 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano 100% personalizado</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="monitor"></i>
+                            <span>Via Zoom/Google Meet</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20Individual%20Online%201x/semana%20(€60/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT DUPLA - 3X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="dupla" data-frequencia="3x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">3x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€115</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€9,58 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar-check"></i>
+                            <span>12 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="video"></i>
+                            <span>Via videochamada</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="piggy-bank"></i>
+                            <span>Poupa €348/ano vs Individual</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%20Online%203x/semana%20(€115/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT DUPLA - 2X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="dupla" data-frequencia="2x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">2x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€83</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€41,50 por pessoa<br>€10,37 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>8 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="trophy"></i>
+                            <span>Plano adaptado a dupla</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="piggy-bank"></i>
+                            <span>Poupa €252/ano vs Individual</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%20Online%202x/semana%20(€83/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- ONLINE - PT DUPLA - 1X -->
+                <div class="pricing-card" 
+                     data-modo="online" data-modalidade="dupla" data-frequencia="1x">
+                    <div class="pricing-card__header">
+                        <div class="pricing-card__title">1x / Semana</div>
+                        <div class="pricing-card__group">
+                            <div class="pricing-card__price pricing-card__price--xl">€48</div>
+                            <div class="pricing-card__frequency">por mês</div>
+                            <div class="pricing-card__badge">-20% vs Individual</div>
+                            <div class="pricing-card__per-session">€24 por pessoa<br>€12 por treino</div>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i data-lucide="calendar"></i>
+                            <span>4 treinos por mês</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="users-2"></i>
+                            <span>Partilhado com 1 amigo</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="clock"></i>
+                            <span>Duração: 60 minutos</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i data-lucide="monitor"></i>
+                            <span>Via Zoom/Google Meet</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20PT%20a%20Dupla%20Online%201x/semana%20(€48/mês)" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn btn-outline btn-block">
+                        <i data-lucide="message-circle"></i>
+                        Saber Mais
+                    </a>
+                </div>
+            </div>
+            
+            <!-- BARRA TREINOS AVULSO -->
+            <div class="pricing-avulso-bar">
+                <div class="pricing-avulso-bar__icon">
+                    <i data-lucide="ticket"></i>
+                </div>
+                <div class="pricing-avulso-bar__content">
+                    <strong>Treinos Avulso (sem mensalidade):</strong>
+                    <span class="pricing-avulso-bar__prices" id="avulso-prices">
+                        Grupo €15 • PT Individual €35 • PT a Dupla €28
+                    </span>
+                </div>
+                <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20treinos%20avulsos" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="pricing-avulso-bar__cta">
+                    <i data-lucide="message-circle"></i>
+                    <span>Saber Mais</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMAÇÕES GERAIS -->
+    <section class="section">
+        <div class="container">
+            <div class="comparison-box">
+                <h3 class="comparison-box__title">Incluído em Todos os Planos</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <i data-lucide="user-check" class="comparison-item__icon"></i>
+                        <div class="comparison-item__title">Treino Personalizado</div>
+                        <p class="comparison-item__text">Adaptado ao teu nível, do iniciante ao avançado</p>
+                    </div>
+                    <div class="comparison-item">
+                        <i data-lucide="heart-pulse" class="comparison-item__icon"></i>
+                        <div class="comparison-item__title">Planeamento Estruturado</div>
+                        <p class="comparison-item__text">Progressão científica com objetivos claros</p>
+                    </div>
+                    <div class="comparison-item">
+                        <i data-lucide="shield-check" class="comparison-item__icon"></i>
+                        <div class="comparison-item__title">Sem Fidelização</div>
+                        <p class="comparison-item__text">Cancela quando quiseres, sem penalizações</p>
+                    </div>
+                    <!--div class="comparison-item">
+                        <i data-lucide="award" class="comparison-item__icon"></i>
+                        <div class="comparison-item__title">Certificação</div>
+                        <p class="comparison-item__text">Personal Trainer com formação reconhecida</p>
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCONTOS E CONDIÇÕES -->
+    <section class="section bg-gradient-light">
+        <div class="container">
+            <div style="max-width: min(700px, 100%); margin: 0 auto; background: var(--color-white); padding: clamp(1rem, 3vw, var(--space-xl)); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
+                <h3 style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-primary-dark); margin-bottom: var(--space-lg); text-align: center;">
+                    <i data-lucide="tag" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                    Descontos Disponíveis
+                </h3>
+                <ul style="list-style: none; display: grid; gap: var(--space-md);">
+                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                        <i data-lucide="users" class="icon-lg text-primary flex-shrink-0"></i>
+                        <span><strong>Modalidade Dupla:</strong> 20% desconto quando duas pessoas treinam juntas (válido para presencial e online)</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                        <i data-lucide="user-plus" class="icon-lg text-primary flex-shrink-0"></i>
+                        <span><strong>Refere um Amigo:</strong> 25% desconto para ti + 25% desconto para o teu amigo no primeiro mês</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                        <i data-lucide="sparkles" class="icon-lg text-primary flex-shrink-0"></i>
+                        <span><strong>Turma Fundadora:</strong> 10% desconto vitalício - Primeiras 8 pessoas (Presencial 3x/semana)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-card">
+                <h3 style="font-size: var(--font-size-3xl); color: var(--color-primary-dark); margin-bottom: var(--space-md); font-weight: var(--font-weight-bold);">
+                    Tens Alguma Dúvida?
+                </h3>
+                <p style="color: var(--color-gray-700); margin-bottom: var(--space-xl); font-size: var(--font-size-lg);">
+                    Fala comigo no WhatsApp para esclarecer qualquer questão sobre preços, horários ou modalidades!
+                </p>
+                <a href="https://wa.me/351939481840?text=Olá!%20Tenho%20dúvidas%20sobre%20os%20preços" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="btn btn-primary btn-large">
+                    <i data-lucide="message-circle"></i>
+                    Falar no WhatsApp
+                </a>
+                <p style="margin-top: var(--space-lg); color: var(--color-gray-600); font-size: var(--font-size-sm);">
+                    Ou experimenta grátis: <a href="treino-experimental.html" class="text-primary font-semibold">Treino Experimental Gratuito →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
+                    <ul class="footer__links">
+                        <li><a href="treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
+                    <ul class="footer__links">
+                        <li><a href="comunidade/metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="comunidade/desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/351939481840?text=Olá!%20Quero%20informações%20sobre%20preços" 
        target="_blank" 
        rel="noopener" 
        class="whatsapp-float"
        aria-label="Contactar via WhatsApp">
-        <div class="whatsapp-float__btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
     </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Definir opções disponíveis para cada seletor
+        const selectorOptions = {
+            modo: [
+                { value: 'presencial', label: 'Presencial (Ar Livre)', icon: 'tree-pine' },
+                { value: 'online', label: 'Online (Remoto)', icon: 'monitor' }
+            ],
+            modalidade: [
+                { value: 'grupo', label: 'Treino em Grupo', icon: 'users' },
+                { value: 'pt', label: 'PT Individual', icon: 'target' },
+                { value: 'dupla', label: 'PT a Dupla', icon: 'user-plus' }
+            ],
+            frequencia: [
+                { value: '3x', label: '3x por semana', icon: 'calendar-check' },
+                { value: '2x', label: '2x por semana', icon: 'calendar' },
+                { value: '1x', label: '1x por semana', icon: 'calendar-days' }
+            ]
+        };
+
+        // Função para atualizar o título dinâmico
+        function updateDynamicTitle() {
+            const modoBtn = document.getElementById('btn-modo');
+            const modalidadeBtn = document.getElementById('btn-modalidade');
+            const frequenciaBtn = document.getElementById('btn-frequencia');
+            
+            if (!modoBtn || !modalidadeBtn || !frequenciaBtn) return;
+            
+            const modoIndex = parseInt(modoBtn.getAttribute('data-current')) || 0;
+            const modalidadeIndex = parseInt(modalidadeBtn.getAttribute('data-current')) || 0;
+            const frequenciaIndex = parseInt(frequenciaBtn.getAttribute('data-current')) || 0;
+            
+            const modoLabel = selectorOptions.modo[modoIndex].label;
+            const modalidadeLabel = selectorOptions.modalidade[modalidadeIndex].label;
+            const frequenciaLabel = selectorOptions.frequencia[frequenciaIndex].label;
+            
+            const isMobile = window.innerWidth <= 768;
+            const hash = window.location.hash.substring(1);
+            const isHashFilter = (hash === 'presencial' || hash === 'online');
+            
+            let titleText = '';
+            
+            // Modo simplificado (apenas primeira palavra)
+            const modoSimples = modoLabel.split(' ')[0]; // 'Presencial' ou 'Online'
+            
+            if (isHashFilter) {
+                // Quando vem de hash #presencial ou #online, mostrar formato completo
+                titleText = `${modoSimples} • ${modalidadeLabel} • ${frequenciaLabel}`;
+            } else if (isMobile) {
+                // Mobile: mostrar modo, modalidade e frequência
+                titleText = `${modoSimples} • ${modalidadeLabel} • ${frequenciaLabel}`;
+            } else {
+                // Desktop sem hash: mostrar modo completo e modalidade
+                titleText = `${modoLabel} • ${modalidadeLabel}`;
+            }
+            
+            const titleElement = document.querySelector('.pricing-dynamic-title__text');
+            if (titleElement) {
+                titleElement.textContent = titleText;
+            }
+        }
+        
+        // Função para atualizar botão com nova opção
+        function updateButton(type) {
+            const btn = document.getElementById(`btn-${type}`);
+            if (!btn) return;
+            
+            const currentIndex = parseInt(btn.getAttribute('data-current')) || 0;
+            const option = selectorOptions[type][currentIndex];
+            
+            // Atualizar data-value
+            btn.setAttribute('data-value', option.value);
+            
+            // Atualizar texto
+            const textElement = btn.querySelector('.pricing-selector__button-text');
+            if (textElement) {
+                textElement.textContent = option.label;
+            }
+            
+            // Atualizar ícone
+            const icon = document.getElementById(`icon-${type}`);
+            if (icon && option.icon) {
+                icon.setAttribute('data-lucide', option.icon);
+                // Re-renderizar o ícone
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+        }
+        
+        // Função para ciclar entre opções
+        function cycleOption(type, event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            
+            const btn = document.getElementById(`btn-${type}`);
+            if (!btn) return;
+            
+            const currentIndex = parseInt(btn.getAttribute('data-current')) || 0;
+            const totalOptions = selectorOptions[type].length;
+            
+            // Ir para próximo, ou voltar ao primeiro se for o último
+            const nextIndex = (currentIndex + 1) % totalOptions;
+            btn.setAttribute('data-current', nextIndex);
+            
+            // Atualizar botão
+            updateButton(type);
+            
+            // Atualizar título
+            updateDynamicTitle();
+            
+            // Trigger updatePricing
+            updatePricing();
+            
+            // Feedback visual
+            const wrapper = btn.closest('.pricing-selector__wrapper');
+            if (wrapper) {
+                wrapper.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    wrapper.style.transform = 'scale(1)';
+                }, 100);
+            }
+        }
+        
+        // Função para atualizar preços avulsos conforme modo
+        function updateAvulsoPrices(modo) {
+            const pricesElement = document.getElementById('avulso-prices');
+            if (!pricesElement) return;
+            
+            if (modo === 'presencial') {
+                pricesElement.textContent = 'Grupo €15 • PT Individual €35 • PT a Dupla €28';
+            } else if (modo === 'online') {
+                pricesElement.textContent = 'Grupo €12 • PT Individual €28 • PT a Dupla €22';
+            }
+        }
+        
+        // Função para atualizar URL hash conforme seleção
+        function updateUrlHash(modo, modalidade, frequencia) {
+            // Atualizar hash apenas para Grupo 3x/semana
+            if (modalidade === 'grupo' && frequencia === '3x') {
+                if (modo === 'presencial') {
+                    window.history.replaceState(null, '', '#presencial');
+                } else if (modo === 'online') {
+                    window.history.replaceState(null, '', '#online');
+                }
+            } else {
+                // Remover hash para outras combinações
+                window.history.replaceState(null, '', window.location.pathname);
+            }
+        }
+        
+        // Função para atualizar os cards visíveis baseado na seleção
+        function updatePricing() {
+            // Obter seleções atuais dos botões
+            const modoBtn = document.getElementById('btn-modo');
+            const modalidadeBtn = document.getElementById('btn-modalidade');
+            const frequenciaBtn = document.getElementById('btn-frequencia');
+            
+            const modo = modoBtn ? modoBtn.getAttribute('data-value') : 'presencial';
+            const modalidade = modalidadeBtn ? modalidadeBtn.getAttribute('data-value') : 'grupo';
+            const frequencia = frequenciaBtn ? frequenciaBtn.getAttribute('data-value') : '3x';
+            
+            // Atualizar preços avulsos
+            updateAvulsoPrices(modo);
+            
+            // Atualizar URL hash
+            updateUrlHash(modo, modalidade, frequencia);
+            
+            // Obter todos os cards
+            const cards = document.querySelectorAll('.pricing-card');
+            const isMobile = window.innerWidth <= 768;
+            
+            // Primeiro, fade out todos os cards
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.95)';
+            });
+            
+            // Após animação, mostrar/esconder e fazer fade in
+            setTimeout(() => {
+                cards.forEach((card, index) => {
+                    const cardModo = card.dataset.modo;
+                    const cardModalidade = card.dataset.modalidade;
+                    const cardFrequencia = card.dataset.frequencia;
+                    
+                    let shouldShow = false;
+                    
+                    // Mobile: mostrar apenas 1 card (modo + modalidade + frequencia)
+                    if (isMobile) {
+                        shouldShow = cardModo === modo && cardModalidade === modalidade && cardFrequencia === frequencia;
+                    }
+                    // Desktop: mostrar 4 cards da modalidade selecionada (todas as frequências)
+                    else {
+                        shouldShow = cardModo === modo && cardModalidade === modalidade;
+                    }
+                    
+                    if (shouldShow) {
+                        card.style.display = 'block';
+                        // Fade in escalonado para efeito visual
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, index * 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Atualizar título dinâmico
+                updateDynamicTitle();
+                
+                // Re-inicializar ícones Lucide
+                if (typeof lucide !== 'undefined') {
+                    setTimeout(() => lucide.createIcons(), 50);
+                }
+            }, 150);
+        }
+        
+        // Função para aplicar filtros baseado no hash da URL
+        function applyHashFilters() {
+            const hash = window.location.hash.substring(1); // Remove '#'
+            
+            if (hash === 'presencial' || hash === 'online') {
+                const modoBtn = document.getElementById('btn-modo');
+                const modalidadeBtn = document.getElementById('btn-modalidade');
+                const frequenciaBtn = document.getElementById('btn-frequencia');
+                
+                // Definir índices para Grupo 3x/semana
+                const grupoIndex = 0; // 'grupo' é o primeiro na lista
+                const freq3xIndex = 0; // '3x' é o primeiro na lista
+                const modoIndex = hash === 'presencial' ? 0 : 1; // presencial=0, online=1
+                
+                // Aplicar os índices
+                if (modoBtn) modoBtn.setAttribute('data-current', modoIndex);
+                if (modalidadeBtn) modalidadeBtn.setAttribute('data-current', grupoIndex);
+                if (frequenciaBtn) frequenciaBtn.setAttribute('data-current', freq3xIndex);
+                
+                // Atualizar botões
+                updateButton('modo');
+                updateButton('modalidade');
+                updateButton('frequencia');
+                
+                // Atualizar pricing e título
+                updatePricing();
+                updateDynamicTitle();
+                
+                // Scroll para a seção de filtros após animação
+                setTimeout(() => {
+                    const selectorSection = document.querySelector('.pricing-selector');
+                    if (selectorSection) {
+                        const offset = 100; // Offset para não ficar colado ao topo
+                        const elementPosition = selectorSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 300);
+                
+                return true;
+            }
+            return false;
+        }
+        
+        // Inicializar ao carregar página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar transição aos cards
+            const cards = document.querySelectorAll('.pricing-card');
+            cards.forEach(card => {
+                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            });
+            
+            // Adicionar transição aos wrappers dos botões
+            const wrappers = document.querySelectorAll('.pricing-selector__wrapper');
+            wrappers.forEach(wrapper => {
+                wrapper.style.transition = 'transform 0.1s ease';
+            });
+            
+            // Verificar se há hash na URL antes de inicializar padrão
+            const hasHashFilter = applyHashFilters();
+            
+            if (!hasHashFilter) {
+                // Inicializar botões com as opções padrão apenas se não houver hash
+                updateButton('modo');
+                updateButton('modalidade');
+                updateButton('frequencia');
+                
+                // Inicializar pricing e título
+                updatePricing();
+                updateDynamicTitle();
+            }
+            
+            // Atualizar ao redimensionar (mobile <-> desktop)
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    updatePricing();
+                    updateDynamicTitle();
+                }, 250);
+            });
+            
+            // Listener para mudanças no hash da URL
+            window.addEventListener('hashchange', function() {
+                applyHashFilters();
+            });
+        });
+    </script>
+    <script src="assets/js/bundle.optimized.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,59 @@
+<!-- 
+HEADER PADRÃO - Isaac Treinos Ar Livre
+Aplicar em TODAS as páginas principais (index, treino-experimental, tabela-precos, horarios, comunidade)
+
+VARIAÇÕES:
+- Páginas comunidade protegidas: menu simplificado com navegação interna
+- Páginas treino detalhado: menu contextual com navegação lateral
+- Cartões digitais: SEM menu
+-->
+
+<!-- STICKY MENU PADRÃO -->
+<nav class="sticky-menu">
+    <!-- BRAND -->
+    <a href="index.html" class="sticky-menu__brand">
+        <i data-lucide="dumbbell"></i>
+        Isaac Treinos Ar Livre
+    </a>
+    
+    <!-- TOGGLE MOBILE -->
+    <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
+        <i data-lucide="menu"></i>
+    </button>
+    
+    <!-- NAVEGAÇÃO -->
+    <div class="sticky-menu__nav">
+        <a href="index.html" class="sticky-menu__link">Início</a>
+        <a href="comunidade/metodo-treino.html" class="sticky-menu__link">Método</a>
+        <a href="tabela-precos.html" class="sticky-menu__link">Preços</a>
+        <a href="horarios.html" class="sticky-menu__link">Horários</a>
+        <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
+        
+        <!-- CTA PRINCIPAL -->
+        <a href="treino-experimental.html" class="sticky-menu__cta">
+            <i data-lucide="zap"></i>
+            1ª Aula Grátis
+        </a>
+    </div>
+</nav>
+
+<!-- 
+NOTAS DE IMPLEMENTAÇÃO:
+
+1. CLASSE ACTIVE:
+   Adicionar "sticky-menu__link--active" no link da página atual
+   Exemplo: <a href="index.html" class="sticky-menu__link sticky-menu__link--active">Início</a>
+
+2. CTA ACTIVE (página treino-experimental):
+   Adicionar "sticky-menu__cta--active" quando estiver na página de treino grátis
+   Exemplo: <a href="treino-experimental.html" class="sticky-menu__cta sticky-menu__cta--active">
+
+3. PATHS RELATIVOS:
+   - Páginas raiz (index, treino-experimental, tabela-precos, horarios, comunidade): usar paths como acima
+   - Páginas /comunidade/: ajustar paths (adicionar ../ onde necessário)
+   - Páginas /comunidade/semanas/: ajustar paths (../../)
+   - Páginas /comunidade/semanas/detalhe-semana1-2/: ajustar paths (../../../)
+
+4. LUCIDE ICONS:
+   Garantir que app.js inicializa os ícones: lucide.createIcons();
+-->

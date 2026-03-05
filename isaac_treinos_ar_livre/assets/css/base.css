@@ -10,6 +10,14 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
   padding: var(--spacing-md);
+  padding-top: 110px; /* Compensar header fixo em desktop */
+}
+
+/* Ajuste para mobile - manter valor original */
+@media (max-width: 768px) {
+  body {
+    padding-top: 73px !important;
+  }
 }
 
 .container {

@@ -1,483 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Semanas 3-5 - Fase de Acumulação">
-    <title>Semanas 3-5 · Acumulação | Isaac Treinos</title>
+    <meta name="description" content="Semanas 3-5 de calistenia outdoor - Fase de Acumulação de volume e força. Construa resistência muscular com treino funcional ao ar livre em Lisboa.">
+    <meta name="keywords" content="calistenia, treino funcional, ar livre, outdoor, Lisboa, acumulação, volume, hipertrofia, força, resistência muscular">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/semanas/semana3-5.html">    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Semanas 3-5: Acumulação • Isaac Treinos Ar Livre">
+    <meta property="og:description" content="Fase de acumulação (Semanas 3-5): aumenta volume e intensidade com exercícios progressivos de calistenia. Método estruturado Lisboa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/semanas/semana3-5.html">
+    <meta property="og:image" content="https://izak90.github.io/isaac_treinos_ar_livre/img/Foto%20Hero.jpg">
+        <title>Semanas 3-5 • Acumulação • Isaac Treinos Ar Livre</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --color-primary: #2A9D8F;
-            --color-primary-dark: #264653;
-            --color-accent: #E76F51;
-            --color-accent-light: #F4A261;
-            --color-white: #FFFFFF;
-            --color-gray-50: #F8F9FA;
-            --color-gray-100: #E9ECEF;
-            --color-gray-700: #495057;
-            --color-gray-900: #212529;
-            --font-family: 'DM Sans', sans-serif;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 9999px;
-            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
-            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
-            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-        }
-        
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--color-gray-900);
-            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-            min-height: 100vh;
-            padding: 90px var(--space-md) var(--space-md);
-        }
-        
-        /* MENU STICKY */
-        .sticky-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--gradient-primary);
-            padding: 1rem 1.5rem;
-            box-shadow: var(--shadow-md);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        
-        .sticky-menu__brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .sticky-menu__nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        
-        .sticky-menu__link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: all 0.2s;
-        }
-        
-        .sticky-menu__link:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .sticky-menu__link--active {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .sticky-menu__toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .sticky-menu__nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--color-primary-dark);
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                display: none;
-            }
-            
-            .sticky-menu__nav.active {
-                display: flex;
-            }
-            
-            .sticky-menu__link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
-                border-radius: 0;
-            }
-            
-            .sticky-menu__toggle {
-                display: block;
-            }
-        }
-        
-        /* PROTEÇÃO DE ACESSO */
-        .access-protection {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            padding: 1.5rem;
-        }
-        
-        .access-protection.hidden {
-            display: none;
-        }
-        
-        .access-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl) var(--space-lg);
-            max-width: 400px;
-            width: 100%;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            position: relative;
-        }
-        
-        .access-card__close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: transparent;
-            border: none;
-            color: var(--color-gray-700);
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.2s;
-        }
-        
-        .access-card__close:hover {
-            background: var(--color-gray-100);
-            color: var(--color-primary-dark);
-        }
-        
-        .access-card__icon {
-            font-size: 4rem;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .access-card__title {
-            color: var(--color-primary-dark);
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        .access-card__subtitle {
-            color: var(--color-gray-700);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .access-card__input {
-            width: 100%;
-            padding: var(--space-sm) var(--space-md);
-            border: 2px solid var(--color-gray-100);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            text-align: center;
-            margin-bottom: var(--space-sm);
-            font-family: inherit;
-        }
-        
-        .access-card__input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-        }
-        
-        .access-card__button {
-            width: 100%;
-            padding: var(--space-sm) var(--space-lg);
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius-full);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .access-card__error {
-            color: var(--color-accent);
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        
-        .access-card__error.show {
-            display: block;
-        }
-        
-        .access-card__help {
-            margin-top: var(--space-md);
-            padding-top: var(--space-md);
-            border-top: 1px solid var(--color-gray-100);
-            font-size: 0.875rem;
-        }
-        
-        .access-card__help a {
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: var(--space-md);
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            transition: all 0.2s;
-        }
-        
-        .back-link:hover {
-            background: var(--color-white);
-            transform: translateX(-4px);
-        }
-        
-        .page-header {
-            background: var(--gradient-primary);
-            color: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl) var(--space-lg);
-            margin-bottom: var(--space-lg);
-            text-align: center;
-        }
-        
-        .page-header__badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.25rem;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: var(--space-sm);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            font-weight: 700;
-        }
-        
-        .skill-box {
-            background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-lg);
-            border-left: 4px solid var(--color-accent-light);
-        }
-        
-        .skill-box strong {
-            color: var(--color-accent);
-            font-size: 1.125rem;
-        }
-        
-        .day-section {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .day-section__title {
-            color: var(--color-primary-dark);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            padding-bottom: var(--space-sm);
-            border-bottom: 3px solid var(--color-primary);
-        }
-        
-        .exercise-box {
-            background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            margin-bottom: var(--space-md);
-        }
-        
-        .exercise-box strong {
-            color: var(--color-primary-dark);
-            display: block;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .exercise-box ul {
-            list-style: none;
-        }
-        
-        .exercise-box li {
-            padding: 0.5rem 0 0.5rem 1.5rem;
-            position: relative;
-            border-bottom: 1px dashed var(--color-gray-100);
-        }
-        
-        .exercise-box li:last-child {
-            border-bottom: none;
-        }
-        
-        .exercise-box li::before {
-            content: "•";
-            color: var(--color-primary);
-            font-weight: 700;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: 0.25rem;
-        }
-        
-        .resources-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-            margin: var(--space-lg) 0;
-        }
-        
-        .resource-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.25rem;
-            background: white;
-            color: var(--color-primary);
-            text-decoration: none;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s;
-        }
-        
-        .resource-link:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-back {
-            display: block;
-            text-align: center;
-            padding: var(--space-md);
-            background: var(--gradient-primary);
-            color: white;
-            border-radius: var(--radius-full);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-back:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-    </style>
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/visual-enhancements.css">    <link rel="stylesheet" href="../../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../../assets/css/pages/week-plans.css">
+    <link rel="stylesheet" href="../../assets/css/mobile-optimizations.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
-<body>
+<body class="has-fixed-header">
+    <!-- Header -->
+    <app-header mode="comunidade" current="semanas" depth="2"></app-header>
+
     <!-- PROTEÇÃO DE ACESSO -->
-    <div class="access-protection" id="accessProtection">
-        <div class="access-card">
-            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
-            <div class="access-card__icon">🔐</div>
-            <h2 class="access-card__title">Área de Membros</h2>
-            <p class="access-card__subtitle">Insere o código de acesso para visualizar os treinos</p>
-            
-            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
-            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
-            
-            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
-            
-            <div class="access-card__help">
-                <p>Não tens o código?</p>
-                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso" target="_blank">Solicitar no WhatsApp</a>
+    <app-access-protection storage-key="communityAccess" password="TREINO2026" depth="2"></app-access-protection>
+    
+    <!-- Hero Section -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="zap"></i>
+                <span>SEMANAS 3-5</span>
             </div>
+            <h1 class="hero__title">
+                Progressão Gradual
+            </h1>
+            <p class="hero__subtitle">
+                Aumenta intensidade e complexidade
+            </p>
         </div>
-    </div>
-    
-    <!-- MENU STICKY -->
-    <nav class="sticky-menu">
-        <a href="../../index.html" class="sticky-menu__brand">
-            Isaac Treinos Ar Livre
-        </a>
-        
-        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
-            ☰
-        </button>
-        
-        <div class="sticky-menu__nav">
-            <a href="../../index.html" class="sticky-menu__link">Início</a>
-            <a href="../../horarios.html" class="sticky-menu__link">Horários</a>
-            <a href="../../tabela-precos.html" class="sticky-menu__link">Preços</a>
-            <a href="../../comunidade.html" class="sticky-menu__link">Comunidade</a>
-            <a href="../../treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+    </section>
+
+    <!-- Back Link -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="../metodo-treino.html" class="back-link">
+                <i data-lucide="arrow-left" aria-hidden="true"></i>
+                Voltar ao Método
+            </a>
         </div>
-    </nav>
-    
-    <div class="container">
-        <a href="../../comunidade.html" class="back-link">← Voltar à Comunidade</a>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <section class="section">
+        <div class="container">
         
-        <div class="page-header">
-            <span class="page-header__badge">Semanas 3-5</span>
-            <h1>ACUMULAÇÃO</h1>
-        </div>
-        
-        <div class="skill-box">
-            <strong>🧘 SKILL (10 minutos):</strong> Handstand 10" parede · Chin-ups banda · Pistol apoio
+        <div class="skill-box skill-box--accent">
+            <strong><i data-lucide="user-check" aria-hidden="true"></i> SKILL (10 minutos):</strong> Handstand 10" parede · Chin-ups banda · Pistol apoio
         </div>
         
         <!-- SEGUNDA -->
         <div class="day-section">
             <h2 class="day-section__title">SEGUNDA · Push</h2>
-            <div class="exercise-box">
+            <div class="exercise-box exercise-box--gradient">
                 <strong>4 séries</strong>
                 <ul>
                     <li>Flexões pés elevados 8-10</li>
@@ -490,7 +88,7 @@
         <!-- QUARTA -->
         <div class="day-section">
             <h2 class="day-section__title">QUARTA · Pull</h2>
-            <div class="exercise-box">
+            <div class="exercise-box exercise-box--gradient">
                 <strong>4 séries</strong>
                 <ul>
                     <li>Ring rows pés elevados 8-10</li>
@@ -504,7 +102,7 @@
         <!-- SEXTA -->
         <div class="day-section">
             <h2 class="day-section__title">SEXTA · Pernas + Core</h2>
-            <div class="exercise-box">
+            <div class="exercise-box exercise-box--gradient">
                 <strong>4 séries</strong>
                 <ul>
                     <li>Agachamento búlgaro 8 cada</li>
@@ -517,49 +115,105 @@
         
         <div class="resources-links">
             <a href="../recursos/aquecimento.html" class="resource-link">
-                🔥 Aquecimento
+                <i data-lucide="flame" aria-hidden="true"></i> Aquecimento
             </a>
             <a href="../recursos/alongamentos.html" class="resource-link">
-                🧘 Alongamentos
+                <i data-lucide="user-check" aria-hidden="true"></i> Alongamentos
             </a>
         </div>
         
-        <a href="../comunidade.html" class="btn-back">← Voltar à Comunidade</a>
-    </div>
-    
-    <script>
-        const ACCESS_CODE = 'TREINO2026';
-        
-        function closeAccessCard() {
-            window.history.back();
-        }
-        
-        function checkAccess() {
-            const input = document.getElementById('accessCode');
-            const error = document.getElementById('accessError');
-            const protection = document.getElementById('accessProtection');
-            
-            if (input.value.toUpperCase() === ACCESS_CODE) {
-                sessionStorage.setItem('hasAccess', 'true');
-                protection.classList.add('hidden');
-                error.classList.remove('show');
-            } else {
-                error.classList.add('show');
-                input.value = '';
-            }
-        }
-        
-        document.getElementById('accessCode').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') checkAccess();
-        });
-        
-        window.addEventListener('DOMContentLoaded', function() {
-            if (sessionStorage.getItem('hasAccess') === 'true') {
-                document.getElementById('accessProtection').classList.add('hidden');
-            } else {
-                setTimeout(() => document.getElementById('accessCode').focus(), 300);
-            }
-        });
-    </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="../../tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="../../horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
+                    <ul class="footer__links">
+                        <li><a href="../metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="../../comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="../desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20semanas%20de%20treino" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script src="../../assets/js/security.js"></script>
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/components.js" defer></script>
+    <script src="../../assets/js/bundle.optimized.js"></script>
 </body>
 </html>

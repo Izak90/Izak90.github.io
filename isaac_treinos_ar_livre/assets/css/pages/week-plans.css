@@ -1,0 +1,544 @@
+/**
+ * Week Plans Pages
+ * Styles specific to the 8-week training program detail pages
+ * Shared components: sticky menu, access protection, day sections, exercise cards
+ */
+
+/* ==========================================================================
+   LAYOUT - Body & Container
+   ========================================================================== */
+
+/* ==========================================================================
+   STICKY MENU
+   ========================================================================== */
+
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-primary);
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sticky-menu__brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sticky-menu__nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sticky-menu__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+}
+
+.sticky-menu__link:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.sticky-menu__link--active {
+    background: rgba(255,255,255,0.2);
+}
+
+.sticky-menu__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .sticky-menu__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-primary-dark);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        display: none;
+    }
+    
+    .sticky-menu__nav.active {
+        display: flex;
+    }
+    
+    .sticky-menu__link {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0;
+    }
+    
+    .sticky-menu__toggle {
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   ACCESS PROTECTION
+   ========================================================================== */
+
+.access-protection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1.5rem;
+}
+
+.access-protection.hidden {
+    display: none;
+}
+
+.access-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    max-width: 400px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    position: relative;
+}
+
+.access-card__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--color-gray-700);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.access-card__close:hover {
+    background: var(--color-gray-100);
+    color: var(--color-primary-dark);
+}
+
+.access-card__icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-sm);
+}
+
+.access-card__title {
+    color: var(--color-primary-dark);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.access-card__subtitle {
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-lg);
+}
+
+.access-card__input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-gray-100);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: var(--space-sm);
+    font-family: inherit;
+}
+
+.access-card__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.access-card__button {
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.access-card__error {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.access-card__error.show {
+    display: block;
+}
+
+.access-card__help {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-gray-100);
+    font-size: 0.875rem;
+}
+
+.access-card__help a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PAGE HEADER & NAVIGATION
+   ========================================================================== */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: var(--color-white);
+    transform: translateX(-4px);
+}
+
+.page-header {
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+/* Variation for intensity phase (weeks 6-7) */
+.page-header--intense {
+    background: linear-gradient(135deg, #E76F51 0%, #F4A261 100%);
+}
+
+.page-header__badge {
+    background: var(--color-accent-light);
+    color: var(--color-primary-dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+/* Alternative badge styling (weeks 3-8) */
+.page-header__badge--alt {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+h1 svg,
+h1 i {
+    width: 32px;
+    height: 32px;
+}
+
+/* ==========================================================================
+   CONTENT CARDS & INFO BOXES
+   ========================================================================== */
+
+/* Skill/objective boxes */
+.skill-box {
+    background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.skill-box svg,
+.skill-box i {
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* Variation for accumulation/intensity phases */
+.skill-box--accent {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+    border-left: 4px solid var(--color-accent-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.skill-box strong {
+    color: var(--color-primary-dark);
+}
+
+.skill-box--accent strong {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+}
+
+/* General content card (primarily weeks 1-2) */
+.content-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Note boxes (week 8) */
+.note-box {
+    background: linear-gradient(135deg, #EBF5FF 0%, #FFFFFF 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    border-left: 4px solid var(--color-primary);
+}
+
+.note-box strong {
+    color: var(--color-primary-dark);
+    font-size: 1.125rem;
+}
+
+/* ==========================================================================
+   DAY SECTIONS & WORKOUT STRUCTURE
+   ========================================================================== */
+
+/* Day section container (weeks 3-8) */
+.day-section {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.day-section__title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+/* Day title (weeks 1-2 style) */
+.day-title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    border-left: 6px solid var(--color-primary);
+    padding-left: var(--space-sm);
+}
+
+.day-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.day-title a:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   EXERCISE BOXES
+   ========================================================================== */
+
+.exercise-box {
+    background: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+/* Alternative style (weeks 3-8) */
+.exercise-box--gradient {
+    background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+}
+
+.exercise-box strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.exercise-box--gradient strong {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.exercise-box ul {
+    list-style: none;
+}
+
+.exercise-box li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px dashed var(--color-gray-100);
+}
+
+.exercise-box li:last-child {
+    border-bottom: none;
+}
+
+.exercise-box li::before {
+    content: '•';
+    color: var(--color-primary);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    font-size: 1.25rem;
+}
+
+.exercise-box--gradient li::before {
+    font-size: 1.5rem;
+    top: 0.25rem;
+}
+
+/* ==========================================================================
+   RESOURCE LINKS
+   ========================================================================== */
+
+/* Week 1-2 style */
+.resources-link {
+    background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.resources-link svg,
+.resources-link i {
+    width: 18px;
+    height: 18px;
+    color: var(--color-primary);
+}
+
+.resources-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 0.5rem;
+}
+
+.resources-link a:hover {
+    text-decoration: underline;
+}
+
+/* Weeks 3-8 style */
+.resources-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: var(--space-lg) 0;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s;
+}
+
+.resource-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   NAVIGATION BUTTONS
+   ========================================================================== */
+
+.btn-back {
+    display: block;
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}

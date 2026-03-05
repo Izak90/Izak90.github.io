@@ -1,483 +1,266 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Horários de treino funcional ao ar livre - Isaac Treinos">
+    <meta name="description" content="Horários de treino funcional ao ar livre - Isaac Treinos Ar Livre">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/horarios.html">
     <title>Horários - Isaac Treinos Ar Livre</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --color-primary: #2A9D8F;
-            --color-primary-dark: #264653;
-            --color-primary-light: #3DB5A5;
-            --color-accent: #E76F51;
-            --color-accent-light: #F4A261;
-            --color-white: #FFFFFF;
-            --color-gray-50: #F8F9FA;
-            --color-gray-100: #E9ECEF;
-            --color-gray-200: #DEE2E6;
-            --color-gray-700: #495057;
-            --color-gray-900: #212529;
-            --font-family: 'DM Sans', sans-serif;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 9999px;
-            --shadow-sm: 0 2px 8px rgba(42, 157, 143, 0.08);
-            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
-            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
-            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-        }
-        
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--color-gray-900);
-            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-            min-height: 100vh;
-            padding: var(--space-md);
-            padding-top: 90px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: var(--space-lg);
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            transition: all 0.2s;
-        }
-        
-        .back-link:hover {
-            background: var(--color-white);
-            transform: translateX(-4px);
-        }
-        
-        .page-header {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-xl);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-sm);
-            font-weight: 700;
-        }
-        
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--color-gray-700);
-        }
-        
-        .vagas-card {
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-xl);
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .vagas-title {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: var(--space-md);
-            opacity: 0.9;
-        }
-        
-        .vagas-counter {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-md);
-        }
-        
-        .vagas-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-        
-        .vagas-separator {
-            font-size: 2.5rem;
-            opacity: 0.5;
-        }
-        
-        .vagas-progress {
-            background: rgba(255, 255, 255, 0.2);
-            height: 12px;
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .vagas-fill {
-            background: var(--color-accent-light);
-            height: 100%;
-            width: 25%;
-            border-radius: var(--radius-full);
-        }
-        
-        .vagas-info {
-            font-size: 0.875rem;
-            opacity: 0.9;
-        }
-        
-        .schedule-grid {
-            display: grid;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-xl);
-        }
-        
-        .schedule-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .schedule-title {
-            font-size: 1.5rem;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-lg);
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .days-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .day-item {
-            background: var(--color-gray-50);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-        
-        .day-item.active {
-            border-color: var(--color-primary);
-            background: rgba(42, 157, 143, 0.05);
-        }
-        
-        .day-name {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--color-gray-900);
-            margin-bottom: 0.25rem;
-        }
-        
-        .day-time {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-        
-        .benefits-list {
-            list-style: none;
-            display: grid;
-            gap: var(--space-sm);
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            color: var(--color-gray-700);
-        }
-        
-        .benefit-item::before {
-            content: '✓';
-            color: var(--color-primary);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-        
-        .cta-section {
-            text-align: center;
-            background: var(--color-white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: var(--space-md) var(--space-xl);
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            font-weight: 600;
-            border-radius: var(--radius-full);
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-md);
-            min-height: 48px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-        }
-        
-        .whatsapp-float__btn {
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
-            text-decoration: none;
-            font-size: 2rem;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7); }
-        }
-        
-        @media (max-width: 768px) {
-            .days-list {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Sticky Menu */
-        .sticky-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        
-        .sticky-menu__brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .sticky-menu__nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        
-        .sticky-menu__link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: all 0.2s;
-        }
-        
-        .sticky-menu__link:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .sticky-menu__link--active {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .sticky-menu__toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .sticky-menu__nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #264653;
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                display: none;
-            }
-            
-            .sticky-menu__nav.active {
-                display: flex;
-            }
-            
-            .sticky-menu__link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
-                border-radius: 0;
-            }
-            
-            .sticky-menu__toggle {
-                display: block;
-            }
-        }
-    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="assets/css/pages/schedule.css">
+    <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
 </head>
-<body>
-    <nav class="sticky-menu">
-        <a href="index.html" class="sticky-menu__brand">
-            Isaac Treinos Ar Livre
-        </a>
-        
-        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
-            ☰
-        </button>
-        
-        <div class="sticky-menu__nav">
-            <a href="index.html" class="sticky-menu__link">Início</a>
-            <a href="horarios.html" class="sticky-menu__link sticky-menu__link--active">Horários</a>
-            <a href="tabela-precos.html" class="sticky-menu__link">Preços</a>
-            <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
-            <a href="treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <a href="index.html" class="back-link">← Voltar</a>
-        
-        <div class="page-header">
-            <h1>⭐ Turma Fundadora</h1>
-            <p class="subtitle">Grupo Presencial • Treino Ar LIVRE</p>
-        </div>
-        
-        <div class="vagas-card">
-            <div class="vagas-title">Vagas Preenchidas</div>
-            <div class="vagas-counter">
-                <span class="vagas-number">2</span>
-                <span class="vagas-separator">/</span>
-                <span class="vagas-number">8</span>
-            </div>
-            <div class="vagas-progress">
-                <div class="vagas-fill"></div>
-            </div>
-            <div class="vagas-info">⚡ 6 vagas restantes • Grupo exclusivo</div>
-        </div>
-        
-        <div class="schedule-grid">
-            <div class="schedule-card">
-                <h2 class="schedule-title">📅 Horário Fixo</h2>
-                <div class="days-list">
-                    <div class="day-item active">
-                        <div class="day-name">Segunda-feira</div>
-                        <div class="day-time">6:15</div>
-                    </div>
-                    <div class="day-item active">
-                        <div class="day-name">Quarta-feira</div>
-                        <div class="day-time">6:15</div>
-                    </div>
-                    <div class="day-item active">
-                        <div class="day-name">Sexta-feira</div>
-                        <div class="day-time">6:15</div>
-                    </div>
-                </div>
-                <div style="background: var(--color-gray-50); padding: var(--space-md); border-radius: var(--radius-md); text-align: center; font-weight: 600; color: var(--color-primary-dark);">
-                    ⏰ 6:15 - 7:15 • 60 minutos de treino intensivo
-                </div>
-            </div>
+<body class="has-fixed-header">
+    <!-- MENU STICKY -->
+    <header class="header">
+        <div class="header__content">
+            <a href="index.html" class="header__brand">
+                <i data-lucide="activity" class="header__icon"></i>
+                <span>Isaac Treinos Ar Livre</span>
+            </a>
             
-            <div class="schedule-card">
-                <h2 class="schedule-title">✨ Benefícios Exclusivos</h2>
-                <ul class="benefits-list">
-                    <li class="benefit-item"><strong>Desconto vitalício 10%</strong> - Preço fundador garantido</li>
-                    <li class="benefit-item"><strong>Acompanhamento diário</strong> - Suporte constante via WhatsApp</li>
-                    <li class="benefit-item"><strong>Turma reduzida</strong> - Máximo 8 pessoas para atenção personalizada</li>
-                    <li class="benefit-item"><strong>Preço 2026 fixo</strong> - Sem reajustes futuros</li>
-                    <li class="benefit-item"><strong>Treino ao ar livre</strong> - Parques de Lisboa</li>
-                    <li class="benefit-item"><strong>Comunidade motivada</strong> - Grupo exclusivo fundadores</li>
-                </ul>
-            </div>
+            <button class="header__toggle" aria-label="Menu" aria-expanded="false">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <nav class="header__nav">
+                <a href="index.html" class="header__link">Início</a>
+                <a href="tabela-precos.html" class="header__link">Preços</a>
+                <a href="horarios.html" class="header__link header__link--active">Horários</a>
+                <a href="comunidade.html" class="header__link">Comunidade <span class="header__badge-members"><i data-lucide="lock" class="icon-sm" aria-hidden="true"></i></span></a>
+                <a href="treino-experimental.html" class="header__cta">
+                    <i data-lucide="zap"></i>
+                    1ª Aula Grátis
+                </a>
+            </nav>
         </div>
-        
-        <div class="cta-section">
-            <h3 style="margin-bottom: var(--space-md); color: var(--color-primary-dark);">Pronto para fazer parte?</h3>
-            <p style="margin-bottom: var(--space-lg); color: var(--color-gray-700);">
-                Garante a tua vaga na turma fundadora. Apenas 6 lugares disponíveis!
+    </header>
+
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="star"></i>
+                <span>TURMA FUNDADORA</span>
+            </div>
+            <h1 class="hero__title">
+                Horários de Treino
+            </h1>
+            <p class="hero__subtitle">
+                Grupo Presencial • Treino ao Ar Livre
             </p>
-            <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Turma%20Fundadora" 
-               target="_blank" 
-               rel="noopener" 
-               class="btn">
-                <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                Garantir Vaga
+        </div>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar
             </a>
         </div>
-    </div>
+    </section>
+
+    <!-- SEÇÃO DE VAGAS -->
+    <section class="section">
+        <div class="container">
+            <div class="vagas-card">
+                <div class="vagas-title">
+                    <i data-lucide="users"></i>
+                    Vagas Preenchidas
+                </div>
+                <div class="vagas-counter">
+                    <span class="vagas-number" data-config="turma.alunosAtuais">2</span>
+                    <span class="vagas-separator">/</span>
+                    <span class="vagas-number" data-config="turma.totalVagas">8</span>
+                </div>
+                <div class="vagas-progress">
+                    <div class="vagas-fill" data-config-progress="turma"></div>
+                </div>
+                <div class="vagas-info">
+                    <i data-lucide="zap"></i>
+                    <span data-config="turma.vagasDisponiveis">6</span> vagas disponíveis • Grupo exclusivo
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- HORÁRIOS E BENEFÍCIOS -->
+    <section class="section">
+        <div class="container">
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <h2 class="schedule-title">
+                        <i data-lucide="calendar"></i>
+                        Horário Fixo
+                    </h2>
+                    <div class="days-list">
+                        <div class="day-item active">
+                            <i data-lucide="calendar-check"></i>
+                            <div class="day-name">Segunda-feira</div>
+                            <div class="day-time">6:15</div>
+                        </div>
+                        <div class="day-item active">
+                            <i data-lucide="calendar-check"></i>
+                            <div class="day-name">Quarta-feira</div>
+                            <div class="day-time">6:15</div>
+                        </div>
+                        <div class="day-item active">
+                            <i data-lucide="calendar-check"></i>
+                            <div class="day-name">Sexta-feira</div>
+                            <div class="day-time">6:15</div>
+                        </div>
+                    </div>
+                    <div class="time-box">
+                        <i data-lucide="clock"></i>
+                        6:15 - 7:15 • 60 minutos de treino intensivo
+                    </div>
+                </div>
+                
+                <div class="schedule-card">
+                    <h2 class="schedule-title">
+                        <i data-lucide="sparkles"></i>
+                        Benefícios Exclusivos
+                    </h2>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">
+                            <i data-lucide="percent"></i>
+                            <div><strong>Desconto vitalício 10%</strong> - Preço fundador garantido</div>
+                        </li>
+                        <li class="benefit-item">
+                            <i data-lucide="message-circle"></i>
+                            <div><strong>Acompanhamento diário</strong> - Suporte constante via WhatsApp</div>
+                        </li>
+                        <li class="benefit-item">
+                            <i data-lucide="users"></i>
+                            <div><strong>Turma reduzida</strong> - Máximo <span data-config="limites.grupoPresencial">8</span> pessoas para atenção personalizada</div>
+                        </li>
+                        <li class="benefit-item">
+                            <i data-lucide="lock"></i>
+                            <div><strong>Preço 2026 fixo</strong> - Sem reajustes futuros</div>
+                        </li>
+                        <li class="benefit-item">
+                            <i data-lucide="tree-pine"></i>
+                            <div><strong>Treino ao ar livre</strong> - Parque Multidesportivo Naide Gomes, Lisboa</div>
+                        </li>
+                        <li class="benefit-item">
+                            <i data-lucide="heart"></i>
+                            <div><strong>Comunidade motivada</strong> - Grupo exclusivo fundadores</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA FINAL -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <i data-lucide="star"></i>
+                <h3>Pronto para fazer parte?</h3>
+                <p>
+                    Garante a tua vaga na turma fundadora. Apenas <span data-config="turma.vagasDisponiveis">6</span> lugares disponíveis!
+                </p>
+                <a data-config-href="whatsapp" data-whatsapp-msg="Olá! Quero saber mais sobre a Turma Fundadora" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="btn btn-primary btn-large">
+                    <i data-lucide="message-circle"></i>
+                    Garantir Vaga via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
+                    <ul class="footer__links">
+                        <li><a href="treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
+                    <ul class="footer__links">
+                        <li><a href="comunidade/metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="comunidade/desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/351939481840?text=Olá!%20Vim%20da%20página%20de%20horários" 
        target="_blank" 
@@ -485,10 +268,15 @@
        class="whatsapp-float"
        aria-label="Contactar via WhatsApp">
         <div class="whatsapp-float__btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
         </div>
     </a>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/auto-populate.js"></script>
+    <script src="assets/js/bundle.optimized.js"></script>
 </body>
 </html>

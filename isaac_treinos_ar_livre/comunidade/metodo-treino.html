@@ -1,667 +1,324 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Método de Treino - Método estruturado em 8 semanas e 4 fases">
+    <meta name="description" content="Método estruturado de treino outdoor em 8 semanas e 4 fases progressivas. Calistenia e treino funcional ao ar livre em Lisboa com acompanhamento.">
+    <meta name="keywords" content="calistenia, treino funcional, ar livre, outdoor, Lisboa, método, 8 semanas, 4 fases, planeamento, progressão">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/metodo-treino.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Método de Treino • Isaac Treinos Ar Livre">
+    <meta property="og:description" content="Método estruturado em 8 semanas e 4 fases: adaptação, acumulação, intensificação e descarga. Calistenia progressiva em Lisboa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/metodo-treino.html">
+    <meta property="og:image" content="https://izak90.github.io/isaac_treinos_ar_livre/img/Foto%20Hero.jpg">
+    
     <title>Método de Treino - Isaac Treinos Ar Livre</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --color-primary: #2A9D8F;
-            --color-primary-dark: #264653;
-            --color-accent: #E76F51;
-            --color-accent-light: #F4A261;
-            --color-white: #FFFFFF;
-            --color-gray-50: #F8F9FA;
-            --color-gray-100: #E9ECEF;
-            --color-gray-700: #495057;
-            --color-gray-900: #212529;
-            --font-family: 'DM Sans', sans-serif;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 9999px;
-            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
-            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
-            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-        }
-        
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--color-gray-900);
-            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-            min-height: 100vh;
-            padding: var(--space-md);
-            padding-top: 90px;
-        }
-        
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: var(--space-lg);
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            transition: all 0.2s;
-        }
-        
-        .back-link:hover {
-            background: var(--color-white);
-            transform: translateX(-4px);
-        }
-        
-        .hero-card {
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-2xl);
-            margin-bottom: var(--space-xl);
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: var(--space-md);
-            font-weight: 700;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: var(--space-sm);
-            opacity: 0.95;
-        }
-        
-        .info-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        h2 {
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .phases-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-            margin: var(--space-lg) 0;
-        }
-        
-        .phase-pill {
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 0.75rem 1.25rem;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        
-        .phases-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-md);
-            margin: var(--space-lg) 0;
-        }
-        
-        .phase-card {
-            background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            text-align: center;
-            border-left: 6px solid var(--color-primary);
-            transition: all 0.3s;
-        }
-        
-        .phase-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .phase-number {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .phase-name {
-            font-weight: 700;
-            color: var(--color-primary-dark);
-            font-size: 1.125rem;
-        }
-        
-        .structure-box {
-            background: var(--color-gray-50);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            margin: var(--space-lg) 0;
-        }
-        
-        .structure-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: 0.75rem 0;
-            color: var(--color-gray-700);
-            border-bottom: 1px solid var(--color-gray-100);
-        }
-        
-        .structure-item:last-child {
-            border-bottom: none;
-        }
-        
-        .structure-icon {
-            font-size: 1.5rem;
-        }
-        
-        .materials-box {
-            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            border-left: 4px solid var(--color-accent);
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: var(--space-md) var(--space-xl);
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            font-weight: 600;
-            border-radius: var(--radius-full);
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-md);
-            width: 100%;
-            margin-top: var(--space-lg);
-            font-size: 1.125rem;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-        }
-        
-        .whatsapp-float__btn {
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
-            text-decoration: none;
-            font-size: 2rem;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7); }
-        }
-        
-        @media (max-width: 480px) {
-            .phases-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Sticky Menu */
-        .sticky-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        
-        .sticky-menu__brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .sticky-menu__nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        
-        .sticky-menu__link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: all 0.2s;
-        }
-        
-        .sticky-menu__link:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .sticky-menu__link--active {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .sticky-menu__toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .sticky-menu__nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #264653;
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                display: none;
-            }
-            
-            .sticky-menu__nav.active {
-                display: flex;
-            }
-            
-            .sticky-menu__link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
-                border-radius: 0;
-            }
-            
-            .sticky-menu__toggle {
-                display: block;
-            }
-        }
-        
-        /* PROTEÇÃO DE ACESSO */
-        .access-protection {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            padding: 1.5rem;
-        }
-        
-        .access-protection.hidden {
-            display: none;
-        }
-        
-        .access-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl) var(--space-lg);
-            max-width: 400px;
-            width: 100%;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            position: relative;
-        }
-        
-        .access-card__close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: transparent;
-            border: none;
-            color: var(--color-gray-700);
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.2s;
-        }
-        
-        .access-card__close:hover {
-            background: var(--color-gray-100);
-            color: var(--color-primary-dark);
-        }
-        
-        .access-card__icon {
-            font-size: 4rem;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .access-card__title {
-            color: var(--color-primary-dark);
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        .access-card__subtitle {
-            color: var(--color-gray-700);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .access-card__input {
-            width: 100%;
-            padding: var(--space-sm) var(--space-md);
-            border: 2px solid var(--color-gray-100);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            text-align: center;
-            margin-bottom: var(--space-sm);
-            font-family: inherit;
-        }
-        
-        .access-card__input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-        }
-        
-        .access-card__button {
-            width: 100%;
-            padding: var(--space-sm) var(--space-lg);
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius-full);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .access-card__error {
-            color: var(--color-accent);
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        
-        .access-card__error.show {
-            display: block;
-        }
-        
-        .access-card__help {
-            margin-top: var(--space-md);
-            padding-top: var(--space-md);
-            border-top: 1px solid var(--color-gray-100);
-            font-size: 0.875rem;
-        }
-        
-        .access-card__help a {
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-    </style>
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">    <link rel="stylesheet" href="../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="../assets/css/pages/community.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
-<body>
+<body class="has-fixed-header">
+    <!-- HEADER -->
+    <app-header mode="comunidade" current="metodo" depth="1"></app-header>
+    
     <!-- PROTEÇÃO DE ACESSO -->
-    <div class="access-protection" id="accessProtection">
-        <div class="access-card">
-            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
-            <div class="access-card__icon">🔐</div>
-            <h2 class="access-card__title">Área de Membros</h2>
-            <p class="access-card__subtitle">Insere o código de acesso para visualizar os treinos</p>
-            
-            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
-            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
-            
-            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
-            
-            <div class="access-card__help">
-                <p>Não tens o código?</p>
-                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso" target="_blank">Solicitar no WhatsApp</a>
-            </div>
-        </div>
-    </div>
-    
-    <nav class="sticky-menu">
-        <a href="../index.html" class="sticky-menu__brand">
-            Isaac Treinos Ar Livre
-        </a>
-        
-        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
-            ☰
-        </button>
-        
-        <div class="sticky-menu__nav">
-            <a href="../index.html" class="sticky-menu__link">Início</a>
-            <a href="../horarios.html" class="sticky-menu__link">Horários</a>
-            <a href="../tabela-precos.html" class="sticky-menu__link">Preços</a>
-            <a href="../comunidade.html" class="sticky-menu__link">Comunidade</a>
-            <a href="../treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
-        </div>
-    </nav>
+    <app-access-protection storage-key="communityAccess" password="TREINO2026" depth="1"></app-access-protection>
 
-    <div class="container">
-        <a href="../comunidade.html" class="back-link">← Voltar à Comunidade</a>
-        
-        <div class="hero-card">
-            <div style="font-size: 4rem; margin-bottom: var(--space-sm);">⚛️</div>
-            <h1>Método de Treino</h1>
-            <p class="hero-subtitle">Método estruturado em 8 semanas</p>
-        </div>
-        
-        <div class="info-card">
-            <h2>🎯 Princípio</h2>
-            <p style="color: var(--color-gray-700); font-size: 1.125rem;">
-                <strong>Progressão sustentável</strong>, respeitando a adaptação do corpo. 
-                Cada fase prepara a seguinte num ciclo de 8 semanas dividido em 4 fases distintas.
-            </p>
-            
-            <div class="phases-container">
-                <span class="phase-pill">adaptação</span>
-                <span class="phase-pill">acumulação</span>
-                <span class="phase-pill">intensificação</span>
-                <span class="phase-pill">descarga</span>
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="activity"></i>
+                <span>MÉTODO</span>
             </div>
-        </div>
-        
-        <div class="info-card">
-            <h2>📊 As 4 Fases</h2>
-            <div class="phases-grid">
-                <div class="phase-card">
-                    <div class="phase-number">📆</div>
-                    <div style="color: var(--color-gray-700); font-size: 0.875rem; margin-bottom: 0.25rem;">Semanas 1-2</div>
-                    <div class="phase-name">Adaptação</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-number">📊</div>
-                    <div style="color: var(--color-gray-700); font-size: 0.875rem; margin-bottom: 0.25rem;">Semanas 3-5</div>
-                    <div class="phase-name">Acumulação</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-number">⚡</div>
-                    <div style="color: var(--color-gray-700); font-size: 0.875rem; margin-bottom: 0.25rem;">Semanas 6-7</div>
-                    <div class="phase-name">Intensificação</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-number">🔁</div>
-                    <div style="color: var(--color-gray-700); font-size: 0.875rem; margin-bottom: 0.25rem;">Semana 8</div>
-                    <div class="phase-name">Descarga</div>
-                </div>
-            </div>
-            
-            <p style="color: var(--color-gray-700); margin-top: var(--space-md);">
-                Esta estrutura garante desenvolvimento consistente, previne lesões e permite ao corpo 
-                adaptar-se progressivamente às exigências crescentes do treino.
+            <h1 class="hero__title">
+                Método de Treino
+            </h1>
+            <p class="hero__subtitle">
+                Método estruturado em 8 semanas
             </p>
         </div>
-        
-        <div class="info-card">
-            <h2>⏱️ Estrutura de cada sessão (1h)</h2>
-            <div class="structure-box">
-                <div class="structure-item">
-                    <span class="structure-icon">🔥</span>
-                    <div>
-                        <strong>Aquecimento</strong>
-                        <div style="font-size: 0.875rem; color: var(--color-gray-700);">8-10 minutos</div>
-                    </div>
-                </div>
-                
-                <div class="structure-item">
-                    <span class="structure-icon">🧘</span>
-                    <div>
-                        <strong>Mobilidade</strong>
-                        <div style="font-size: 0.875rem; color: var(--color-gray-700);">5 minutos</div>
-                    </div>
-                </div>
-                
-                <div class="structure-item">
-                    <span class="structure-icon">⚙️</span>
-                    <div>
-                        <strong>Skill</strong>
-                        <div style="font-size: 0.875rem; color: var(--color-gray-700);">10 minutos</div>
-                    </div>
-                </div>
-                
-                <div class="structure-item">
-                    <span class="structure-icon">💪</span>
-                    <div>
-                        <strong>Treino de Força</strong>
-                        <div style="font-size: 0.875rem; color: var(--color-gray-700);">25-30 minutos</div>
-                    </div>
-                </div>
-                
-                <div class="structure-item">
-                    <span class="structure-icon">🧘</span>
-                    <div>
-                        <strong>Retorno à calma</strong>
-                        <div style="font-size: 0.875rem; color: var(--color-gray-700);">5-7 minutos</div>
-                    </div>
-                </div>
-            </div>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="../comunidade.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar à Comunidade
+            </a>
         </div>
-        
-        <div class="info-card">
-            <h2>🛠️ Material Utilizado</h2>
-            <div class="materials-box">
-                <p style="color: var(--color-gray-700); margin: 0.5rem 0;">
-                    ✅ <strong>Argolas</strong> - Exercícios de puxar e estabilização
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section class="section">
+        <div class="container">
+            <div class="info-card">
+                <h2>
+                    <i data-lucide="target"></i>
+                    Princípio
+                </h2>
+                <p class="info-card__text">
+                    <strong>Progressão sustentável</strong>, respeitando a adaptação do corpo. 
+                    Cada fase prepara a seguinte num ciclo de 8 semanas dividido em 4 fases distintas.
                 </p>
-                <p style="color: var(--color-gray-700); margin: 0.5rem 0;">
-                    ✅ <strong>Elásticos</strong> - Resistência progressiva
-                </p>
-                <p style="color: var(--color-gray-700); margin: 0.5rem 0;">
-                    ✅ <strong>Halteres</strong> - Ocasionalmente para variações
-                </p>
-            </div>
             
-            <a href="../index.html" class="btn">← Menu Principal</a>
+                <div class="phases-container">
+                    <span class="phase-pill">adaptação</span>
+                    <span class="phase-pill">acumulação</span>
+                    <span class="phase-pill">intensificação</span>
+                    <span class="phase-pill">descarga</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     
+    <section class="section">
+        <div class="container">
+            <div class="info-card">
+                <h2>
+                    <i data-lucide="bar-chart"></i>
+                    As 4 Fases
+                </h2>
+                <div class="phases-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <div class="phase-weeks">Semanas 1-2</div>
+                        <div class="phase-name">Adaptação</div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="phase-weeks">Semanas 3-5</div>
+                        <div class="phase-name">Acumulação</div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="phase-weeks">Semanas 6-7</div>
+                        <div class="phase-name">Intensificação</div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">
+                            <i data-lucide="refresh-cw"></i>
+                        </div>
+                        <div class="phase-weeks">Semana 8</div>
+                        <div class="phase-name">Descarga</div>
+                    </div>
+                </div>
+            
+                <p class="info-card__note">
+                    Esta estrutura garante desenvolvimento consistente, previne lesões e permite ao corpo 
+                    adaptar-se progressivamente às exigências crescentes do treino.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="info-card">
+                <h2>
+                    <i data-lucide="clock"></i>
+                    Estrutura de cada sessão (1h)
+                </h2>
+                <div class="structure-box">
+                    <div class="structure-item">
+                        <span class="structure-icon">
+                            <i data-lucide="flame" class="structure-icon--accent"></i>
+                        </span>
+                        <div>
+                            <strong>Aquecimento</strong>
+                            <div class="structure-time">8-10 minutos</div>
+                        </div>
+                    </div>
+                
+                    <div class="structure-item">
+                        <span class="structure-icon">
+                            <i data-lucide="move"></i>
+                        </span>
+                        <div>
+                            <strong>Mobilidade</strong>
+                            <div class="structure-time">5 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <span class="structure-icon">
+                            <i data-lucide="settings"></i>
+                        </span>
+                        <div>
+                            <strong>Skill</strong>
+                            <div class="structure-time">10 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <span class="structure-icon">
+                            <i data-lucide="dumbbell"></i>
+                        </span>
+                        <div>
+                            <strong>Treino de Força</strong>
+                            <div class="structure-time">25-30 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <span class="structure-icon">
+                            <i data-lucide="wind"></i>
+                        </span>
+                        <div>
+                            <strong>Retorno à calma</strong>
+                            <div class="structure-time">5-7 minutos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="info-card">
+                <h2>
+                    <i data-lucide="wrench"></i>
+                    Material Utilizado
+                </h2>
+                <div class="materials-box">
+                    <p class="materials-item">
+                        <i data-lucide="check-circle"></i>
+                        <span><strong>Argolas</strong> - Exercícios de puxar e estabilização</span>
+                    </p>
+                    <p class="materials-item">
+                        <i data-lucide="check-circle"></i>
+                        <span><strong>Elásticos</strong> - Resistência progressiva</span>
+                    </p>
+                    <p class="materials-item">
+                        <i data-lucide="check-circle"></i>
+                        <span><strong>Halteres</strong> - Ocasionalmente para variações</span>
+                    </p>
+                </div>
+                
+                <a href="../index.html" class="btn btn-primary">
+                    <i data-lucide="arrow-left"></i>
+                    Menu Principal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
+                    <ul class="footer__links">
+                        <li><a href="../treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="../tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="../horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
+                    <ul class="footer__links">
+                        <li><a href="metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="../comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20metodologia" 
+    <a href="https://wa.me/351939481840?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Método%20de%20Treino" 
        target="_blank" 
        rel="noopener" 
        class="whatsapp-float"
        aria-label="Contactar via WhatsApp">
-        <div class="whatsapp-float__btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
     </a>
-    
-    <script>
-        // Verificação de acesso
-        function checkAccess() {
-            const code = document.getElementById('accessCode').value;
-            const error = document.getElementById('accessError');
-            
-            if (code === 'TREINO2026') {
-                sessionStorage.setItem('hasAccess', 'true');
-                document.getElementById('accessProtection').classList.add('hidden');
-                error.classList.remove('show');
-            } else {
-                error.classList.add('show');
-            }
-        }
-        
-        function closeAccessCard() {
-            window.history.back();
-        }
-        
-        // Verificar se já tem acesso
-        window.addEventListener('DOMContentLoaded', () => {
-            if (sessionStorage.getItem('hasAccess') === 'true') {
-                document.getElementById('accessProtection').classList.add('hidden');
-            }
-            
-            // Permitir Enter para submeter
-            document.getElementById('accessCode').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    checkAccess();
-                }
-            });
-        });
-    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="../assets/js/security.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/bundle.optimized.js"></script>
 </body>
 </html>

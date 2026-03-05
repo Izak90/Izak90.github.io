@@ -1,0 +1,165 @@
+/**
+ * Access Protection Component
+ * Modal de proteção de acesso para área de membros
+ */
+
+.access-protection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: var(--space-md);
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.access-protection.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in, visibility 0s 0.15s;
+    visibility: hidden;
+}
+
+.access-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    max-width: 400px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    position: relative;
+}
+
+.access-card__close {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: transparent;
+    border: none;
+    color: var(--color-gray-700);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    transition: all 0.2s;
+}
+
+.access-card__close:hover {
+    background: var(--color-gray-100);
+    color: var(--color-primary-dark);
+}
+
+.access-card__icon {
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.access-card__icon svg {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 1.5;
+}
+
+.access-card__title {
+    color: var(--color-primary-dark);
+    font-size: 1.75rem;
+    margin-bottom: var(--space-2xs);
+    font-weight: 700;
+}
+
+.access-card__subtitle {
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-lg);
+}
+
+.access-card__input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-gray-100);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: var(--space-sm);
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.access-card__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.access-card__button {
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.access-card__button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.access-card__button:active {
+    transform: translateY(0);
+}
+
+.access-card__error {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    margin-top: var(--space-sm);
+    display: none;
+    gap: var(--space-2xs);
+    align-items: center;
+    justify-content: center;
+}
+
+.access-card__error.show {
+    display: flex;
+}
+
+.access-card__help {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-gray-100);
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+}
+
+.access-card__help p {
+    margin-bottom: var(--space-2xs);
+}
+
+.access-card__help a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.access-card__help a:hover {
+    color: var(--color-primary-dark);
+}

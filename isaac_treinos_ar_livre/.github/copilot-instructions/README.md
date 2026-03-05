@@ -1,6 +1,6 @@
 # 🤖 Sistema de Agentes Copilot para Redesign
 
-**Sistema de 5 agentes especializados** para redesignar completamente o site Isaac Treinos com design moderno, apelativo e organizado.
+**Sistema de 6 agentes especializados** para redesignar completamente o site Isaac Treinos com design moderno, apelativo e organizado.
 
 ---
 
@@ -23,7 +23,31 @@
 
 ---
 
-### 2. 🎨 [@arquiteto-design](arquiteto-design.md)
+### 2. 📊 [@marketing-manager](marketing-manager.md)
+**Papel:** Estrategista de conteúdo e conversão  
+**Quando usar:** Definir que conteúdo deve aparecer nas páginas  
+**Responsabilidades:**
+- Definir estrutura de conteúdo
+- Criar copy persuasivo (headlines, CTAs)
+- Otimizar para conversão
+- Responder objeções dos clientes
+- Priorizar informação por impacto
+
+**Como ativar:**
+```
+@marketing-manager Define a estratégia de conteúdo 
+da homepage para maximizar conversões
+```
+
+**Exemplo de delegação:**
+```
+@orquestrador: @marketing-manager, preciso que definas
+que secções devem aparecer na página de preços
+```
+
+---
+
+### 3. 🎨 [@arquiteto-design](arquiteto-design.md)
 **Papel:** Especialista em identidade visual  
 **Quando usar:** Definição de cores, tipografia, estilo visual  
 **Responsabilidades:**
@@ -47,7 +71,7 @@ design system moderno e energético
 
 ---
 
-### 3. 🎯 [@ux-designer](ux-designer.md)
+### 4. 🎯 [@ux-designer](ux-designer.md)
 **Papel:** Especialista em experiência do usuário  
 **Quando usar:** Mapear fluxos, melhorar usabilidade  
 **Responsabilidades:**
@@ -71,7 +95,7 @@ para a landing page focados em conversão
 
 ---
 
-### 4. 💻 [@developer-frontend](developer-frontend.md)
+### 5. 💻 [@developer-frontend](developer-frontend.md)
 **Papel:** Especialista em implementação web  
 **Quando usar:** Transformar design em código  
 **Responsabilidades:**
@@ -95,7 +119,7 @@ o design system definido pelo @arquiteto-design
 
 ---
 
-### 5. ✅ [@revisor-qualidade](revisor-qualidade.md)
+### 6. ✅ [@revisor-qualidade](revisor-qualidade.md)
 **Papel:** Especialista em testes e validação  
 **Quando usar:** Validar implementação, encontrar bugs  
 **Responsabilidades:**

@@ -1,6 +1,6 @@
 # 🤖 Sistema de Agentes Copilot - Isaac Treinos
 
-✅ **5 Agentes Copilot especializados** criados para redesign completo do site!
+✅ **6 Agentes Copilot especializados** criados para redesign completo do site!
 
 ---
 
@@ -25,7 +25,17 @@ Todos os agentes estão em:
 
 ---
 
-### 2. [@arquiteto-design](.github/copilot-instructions/arquiteto-design.md)
+### 2. [@marketing-manager](.github/copilot-instructions/marketing-manager.md)
+**Especialista em conteúdo e conversão** - Define copy, CTAs, estrutura de informação
+
+**Como usar:**
+```
+@marketing-manager Define a estrutura de conteúdo da homepage para maximizar conversões
+```
+
+---
+
+### 3. [@arquiteto-design](.github/copilot-instructions/arquiteto-design.md)
 **Especialista em identidade visual** - Cria paletas, tipografia, design system
 
 **Como usar:**
@@ -35,7 +45,7 @@ Todos os agentes estão em:
 
 ---
 
-### 3. [@ux-designer](.github/copilot-instructions/ux-designer.md)
+### 4. [@ux-designer](.github/copilot-instructions/ux-designer.md)
 **Especialista em experiência do usuário** - Wireframes, fluxos, interações
 
 **Como usar:**
@@ -45,7 +55,7 @@ Todos os agentes estão em:
 
 ---
 
-### 4. [@developer-frontend](.github/copilot-instructions/developer-frontend.md)
+### 5. [@developer-frontend](.github/copilot-instructions/developer-frontend.md)
 **Especialista em implementação** - HTML/CSS/JS moderno e performático
 
 **Como usar:**
@@ -55,7 +65,7 @@ Todos os agentes estão em:
 
 ---
 
-### 5. [@revisor-qualidade](.github/copilot-instructions/revisor-qualidade.md)
+### 6. [@revisor-qualidade](.github/copilot-instructions/revisor-qualidade.md)
 **Especialista em testes** - Acessibilidade, responsividade, performance
 
 **Como usar:**
@@ -75,6 +85,7 @@ design moderno, energético e apelativo
 
 ### Passo 2: Segue o Fluxo
 O orquestrador vai guiar você através de:
+0. 📊 **Conteúdo** - Estratégia e copy (com @marketing-manager)
 1. ✨ **Descoberta** - Análise e propostas visuais
 2. 🎨 **Design** - Paletas, tipografia, componentes
 3. 🎯 **UX** - Wireframes, fluxos, interações
@@ -146,13 +157,15 @@ Redesignar **17 páginas HTML** com:
 - Scripts automatizados
 - Apenas aplicava design tokens
 - Sem redesign visual
-- Automatizado mas limitado
+- **Sem estratégia de conteúdo**
 
 ### ✅ Sistema Novo (Copilot Agents)
 - **Agentes conversacionais** inteligentes
 - **Redesign completo** do zero
 - **Design moderno** e personalizado
 - **Interativo** - você participa das decisões
+- **Flexível** - usa agentes individualmente
+- **Marketing-driven** - foco em conversãoes
 - **Flexível** - usa agentes individualmente
 
 ---

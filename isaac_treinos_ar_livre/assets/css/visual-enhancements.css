@@ -1,0 +1,487 @@
+/**
+ * VISUAL ENHANCEMENTS 2026
+ * Efeitos visuais modernos: Glassmorphism, 3D effects, Micro-animações
+ * @arquiteto-design
+ */
+
+/* =====================================================
+   GLASSMORPHISM EFFECTS
+   ===================================================== */
+
+/* Glass Card - Efeito vidro fosco moderno */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(42, 157, 143, 0.12);
+    transition: all var(--transition-normal);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px rgba(42, 157, 143, 0.2);
+}
+
+/* Glass Badge - Badge com efeito vidro */
+.glass-badge {
+    background: rgba(42, 157, 143, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(42, 157, 143, 0.3);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-dark);
+}
+
+/* Glass Header - Header com efeito glassmorphism */
+.glass-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(42, 157, 143, 0.1);
+}
+
+/* =====================================================
+   3D EFFECTS
+   ===================================================== */
+
+/* Card com efeito 3D ao hover */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform var(--transition-normal);
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-10px);
+}
+
+/* Button com profundidade 3D */
+.btn-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all var(--transition-normal);
+}
+
+.btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    transform: translateZ(-8px);
+    filter: brightness(0.85);
+    opacity: 0.6;
+}
+
+.btn-3d:hover {
+    transform: translateY(-4px) translateZ(0);
+}
+
+.btn-3d:active {
+    transform: translateY(-2px) translateZ(0);
+}
+
+/* Badge flutuante com sombra 3D */
+.floating-badge {
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(42, 157, 143, 0.25));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* =====================================================
+   GRADIENTES DINÂMICOS
+   ===================================================== */
+
+/* Gradiente animado */
+.gradient-animated {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-accent) 50%,
+        var(--color-primary-dark) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Gradiente holográfico */
+.gradient-holo {
+    background: linear-gradient(
+        135deg,
+        #2A9D8F,
+        #48B5A7,
+        #E76F51,
+        #F4A261,
+        #2A9D8F
+    );
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Texto com gradiente animado */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
+}
+
+/* =====================================================
+   MICRO-ANIMAÇÕES
+   ===================================================== */
+
+/* Pulse suave para chamar atenção */
+.pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(42, 157, 143, 0.15);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 8px 24px rgba(42, 157, 143, 0.25);
+    }
+}
+
+/* Shake para urgência */
+.shake-urgency {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Glow effect ao hover */
+.glow-hover {
+    transition: all var(--transition-normal);
+}
+
+.glow-hover:hover {
+    box-shadow: 
+        0 0 20px rgba(42, 157, 143, 0.4),
+        0 0 40px rgba(42, 157, 143, 0.2),
+        0 8px 32px rgba(42, 157, 143, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Bouncing animation */
+.bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(0);
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade in com movimento */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rotate delicado ao hover */
+.rotate-hover {
+    transition: transform var(--transition-normal);
+}
+
+.rotate-hover:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+/* =====================================================
+   EFEITOS DE PROFUNDIDADE
+   ===================================================== */
+
+/* Sombra elevada moderna */
+.elevated {
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        0 4px 12px rgba(42, 157, 143, 0.1),
+        0 12px 40px rgba(42, 157, 143, 0.08);
+}
+
+.elevated:hover {
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(42, 157, 143, 0.15),
+        0 20px 60px rgba(42, 157, 143, 0.12);
+    transform: translateY(-8px);
+}
+
+/* Neumorphism suave */
+.neumorphic {
+    background: var(--color-gray-50);
+    box-shadow: 
+        8px 8px 16px rgba(42, 157, 143, 0.1),
+        -8px -8px 16px rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.neumorphic:hover {
+    box-shadow: 
+        4px 4px 8px rgba(42, 157, 143, 0.12),
+        -4px -4px 8px rgba(255, 255, 255, 1);
+}
+
+/* Pressed effect */
+.neumorphic:active {
+    box-shadow: 
+        inset 4px 4px 8px rgba(42, 157, 143, 0.15),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.95);
+}
+
+/* =====================================================
+   EFEITOS ESPECIAIS
+   ===================================================== */
+
+/* Shimmer loading effect */
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Aurora background effect */
+.aurora-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: aurora 15s ease-in-out infinite;
+}
+
+.aurora-bg::before {
+    width: 400px;
+    height: 400px;
+    background: var(--color-primary);
+    top: -200px;
+    left: -200px;
+}
+
+.aurora-bg::after {
+    width: 500px;
+    height: 500px;
+    background: var(--color-accent);
+    bottom: -250px;
+    right: -250px;
+    animation-delay: 7.5s;
+}
+
+@keyframes aurora {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(100px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-50px, 100px) scale(0.9);
+    }
+}
+
+/* Particulas flutuantes */
+.floating-particles {
+    position: relative;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle 10s ease-in-out infinite;
+}
+
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(100px, -100vh);
+        opacity: 0;
+    }
+}
+
+/* =====================================================
+   HOVER EFFECTS AVANÇADOS
+   ===================================================== */
+
+/* Hover com brilho lateral */
+.hover-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.hover-shine:hover::before {
+    left: 100%;
+}
+
+/* Hover com expansão de borda */
+.hover-border-expand {
+    position: relative;
+}
+
+.hover-border-expand::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--color-primary);
+    border-radius: inherit;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all var(--transition-normal);
+}
+
+.hover-border-expand:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Hover com lift e shadow */
+.hover-lift {
+    transition: all var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(42, 157, 143, 0.2),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   BACKGROUNDS MODERNOS
+   ===================================================== */
+
+/* Mesh gradient background */
+.bg-mesh {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(42, 157, 143, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(231, 111, 81, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(244, 162, 97, 0.08) 0%, transparent 50%);
+}
+
+/* Dotted pattern background */
+.bg-dots {
+    background-image: 
+        radial-gradient(circle, rgba(42, 157, 143, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Grid pattern background */
+.bg-grid {
+    background-image: 
+        linear-gradient(rgba(42, 157, 143, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42, 157, 143, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+/* Adiciona transição suave a qualquer elemento */
+.smooth {
+    transition: all var(--transition-normal);
+}
+
+/* Remove animações quando usuário preferir movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

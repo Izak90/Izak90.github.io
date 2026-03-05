@@ -1,0 +1,221 @@
+/**
+ * Workout Detail Pages
+ * Páginas de detalhe de treinos (push, pull, legs-core)
+ */
+
+/* Page Layout */
+body.workout-detail {
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+    min-height: 100vh;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: var(--color-white);
+    transform: translateX(-4px);
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.page-header__badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.page-header h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Workout Card */
+.workout-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.workout-card__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.workout-card__icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workout-card__name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+/* Section Box */
+.section-box {
+    background: linear-gradient(135deg, #F0FDF9 0%, #FFFFFF 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-left: 4px solid var(--color-primary);
+}
+
+.section-box--warmup {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+    border-left-color: var(--color-accent-light);
+}
+
+.section-box--skill {
+    background: linear-gradient(135deg, #EBF5FF 0%, #FFFFFF 100%);
+    border-left-color: #3B82F6;
+}
+
+.section-box__title {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+/* Exercise List */
+.exercise-list {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.exercise-item {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(42, 157, 143, 0.08);
+}
+
+.exercise-item__name {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    min-width: 140px;
+    flex: 1;
+}
+
+.exercise-item__reps {
+    background: linear-gradient(135deg, #E6F7F5 0%, #FFFFFF 100%);
+    color: var(--color-primary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.exercise-item__note {
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+    width: 100%;
+    padding-left: 0;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    padding: var(--space-xs) 0;
+    color: var(--color-gray-900);
+}
+
+.skill-item__reps {
+    font-weight: 700;
+    color: #3B82F6;
+    min-width: 80px;
+}
+
+/* Back Button */
+.btn-back {
+    display: block;
+    text-align: center;
+    padding: var(--space-md);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: var(--space-xl);
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Footer Note */
+.footer-note {
+    text-align: center;
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+    border-top: 2px solid var(--color-gray-100);
+    color: var(--color-gray-700);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .exercise-item__name {
+        min-width: 100%;
+    }
+    
+    .workout-card {
+        padding: var(--space-md);
+    }
+    
+    .page-header {
+        padding: var(--space-lg) var(--space-md);
+    }
+}

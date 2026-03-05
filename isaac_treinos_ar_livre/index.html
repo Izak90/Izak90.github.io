@@ -1,1477 +1,467 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calistenia & Treino Funcional">
-    <meta name="keywords" content="calistenia, treino funcional, ar livre, outdoor, fitness, Lisboa, personal trainer">
-    <title>Isaac Treinos Ar Livre • Calistenia & Treino Funcional</title>
+    <meta name="description" content="Transforma o teu corpo ao ar livre com calistenia & treino funcional em Lisboa. Planeamento estruturado. Treino experimental grátis!">
+    <meta name="keywords" content="calistenia, treino funcional, ar livre, outdoor, fitness, Lisboa, personal trainer, muscle-up, treino grupo">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/index.html">
+    <title>Isaac Treinos Ar Livre • Calistenia & Treino Funcional Lisboa</title>
     
-    <!-- Fonts -->
+    <!-- Fonts - Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
     
-    <style>
-        /* =====================================================
-           DESIGN SYSTEM - Natural & Outdoor
-           ===================================================== */
-        :root {
-            /* Cores Primárias */
-            --color-primary: #2A9D8F;
-            --color-primary-dark: #264653;
-            --color-primary-light: #3DB5A5;
-            
-            /* Cores Accent */
-            --color-accent: #E76F51;
-            --color-accent-dark: #D55E44;
-            --color-accent-light: #F4A261;
-            
-            /* Neutrals */
-            --color-white: #FFFFFF;
-            --color-gray-50: #F8F9FA;
-            --color-gray-100: #E9ECEF;
-            --color-gray-200: #DEE2E6;
-            --color-gray-300: #CED4DA;
-            --color-gray-700: #495057;
-            --color-gray-900: #212529;
-            
-            /* Typography */
-            --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --font-size-base: 16px;
-            --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-            --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-            --font-size-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-            --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
-            --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-            --font-size-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
-            --font-size-3xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
-            --font-size-4xl: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
-            
-            --font-weight-normal: 400;
-            --font-weight-medium: 500;
-            --font-weight-bold: 700;
-            
-            --line-height-tight: 1.2;
-            --line-height-normal: 1.5;
-            --line-height-relaxed: 1.75;
-            
-            /* Spacing */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --space-3xl: 6rem;
-            --space-4xl: 8rem;
-            
-            /* Layout */
-            --container-max-width: 1200px;
-            --container-padding: var(--space-md);
-            
-            /* Border Radius */
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-            --radius-full: 9999px;
-            
-            /* Shadows */
-            --shadow-sm: 0 2px 8px rgba(42, 157, 143, 0.08);
-            --shadow-md: 0 4px 16px rgba(42, 157, 143, 0.12);
-            --shadow-lg: 0 8px 32px rgba(42, 157, 143, 0.16);
-            
-            /* Transitions */
-            --transition-fast: 150ms ease-in-out;
-            --transition-normal: 300ms ease-in-out;
-            
-            /* Gradients */
-            --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            --gradient-accent: linear-gradient(135deg, #E76F51 0%, #F4A261 100%);
-        }
-        
-        /* =====================================================
-           RESET & BASE
-           ===================================================== */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-            font-size: var(--font-size-base);
-        }
-        
-        body {
-            font-family: var(--font-family);
-            line-height: var(--line-height-normal);
-            color: var(--color-gray-900);
-            background: var(--color-white);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            padding-top: 90px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        button {
-            font-family: inherit;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-        
-        /* =====================================================
-           UTILITIES
-           ===================================================== */
-        .container {
-            max-width: var(--container-max-width);
-            margin: 0 auto;
-            padding: 0 var(--container-padding);
-        }
-        
-        .section {
-            padding: var(--space-3xl) 0;
-        }
-        
-        .section-title {
-            font-size: var(--font-size-3xl);
-            font-weight: var(--font-weight-bold);
-            line-height: var(--line-height-tight);
-            text-align: center;
-            margin-bottom: var(--space-2xl);
-            color: var(--color-primary-dark);
-        }
-        
-        .section-subtitle {
-            font-size: var(--font-size-lg);
-            text-align: center;
-            color: var(--color-gray-700);
-            max-width: 600px;
-            margin: 0 auto var(--space-2xl);
-        }
-        
-        /* =====================================================
-           HEADER
-           ===================================================== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-normal);
-        }
-        
-        .header__container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: var(--space-md) var(--container-padding);
-        }
-        
-        .header__logo {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary);
-        }
-        
-        .header__nav {
-            display: flex;
-            gap: var(--space-lg);
-            align-items: center;
-        }
-        
-        .header__link {
-            font-weight: var(--font-weight-medium);
-            color: var(--color-gray-700);
-            transition: var(--transition-fast);
-            padding: var(--space-xs) 0;
-        }
-        
-        .header__link:hover {
-            color: var(--color-primary);
-        }
-        
-        .header__cta {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            padding: var(--space-xs) var(--space-md);
-            background: var(--color-primary);
-            color: var(--color-white);
-            border-radius: var(--radius-full);
-            font-weight: var(--font-weight-medium);
-            transition: var(--transition-fast);
-        }
-        
-        .header__cta:hover {
-            background: var(--color-primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        /* =====================================================
-           HERO SECTION
-           ===================================================== */
-        .hero {
-            margin-top: 80px;
-            padding: var(--space-4xl) 0;
-            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -10%;
-            width: 50%;
-            height: 100%;
-            background: var(--gradient-primary);
-            opacity: 0.05;
-            border-radius: 50%;
-            filter: blur(100px);
-        }
-        
-        .hero__container {
-            display: grid;
-            gap: var(--space-2xl);
-            align-items: center;
-        }
-        
-        .hero__content {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero__title {
-            font-size: var(--font-size-4xl);
-            font-weight: var(--font-weight-bold);
-            line-height: var(--line-height-tight);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-        }
-        
-        .hero__title span {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero__subtitle {
-            font-size: var(--font-size-xl);
-            color: var(--color-gray-700);
-            margin-bottom: var(--space-xl);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        .hero__ctas {
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* =====================================================
-           BUTTONS
-           ===================================================== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-xs);
-            padding: var(--space-md) var(--space-xl);
-            font-size: var(--font-size-md);
-            font-weight: var(--font-weight-medium);
-            border-radius: var(--radius-full);
-            transition: all var(--transition-normal);
-            white-space: nowrap;
-            min-height: 48px;
-        }
-        
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-secondary {
-            background: var(--color-white);
-            color: var(--color-primary);
-            border: 2px solid var(--color-primary);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--color-primary);
-            color: var(--color-white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn-accent {
-            background: var(--gradient-accent);
-            color: var(--color-white);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn-accent:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        /* =====================================================
-           BENEFÍCIOS
-           ===================================================== */
-        .beneficios {
-            background: var(--color-white);
-        }
-        
-        .beneficios__grid {
-            display: grid;
-            gap: var(--space-xl);
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-        
-        .beneficio-card {
-            text-align: center;
-            padding: var(--space-xl);
-            background: var(--color-gray-50);
-            border-radius: var(--radius-lg);
-            transition: var(--transition-normal);
-        }
-        
-        .beneficio-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            background: var(--color-white);
-        }
-        
-        .beneficio-card__icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .beneficio-card__title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .beneficio-card__text {
-            color: var(--color-gray-700);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        /* =====================================================
-           COMO FUNCIONA
-           ===================================================== */
-        .como-funciona {
-            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
-        }
-        
-        .passos {
-            display: grid;
-            gap: var(--space-xl);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .passo {
-            display: flex;
-            gap: var(--space-lg);
-            align-items: flex-start;
-        }
-        
-        .passo__numero {
-            flex-shrink: 0;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            font-size: var(--font-size-2xl);
-            font-weight: var(--font-weight-bold);
-            border-radius: var(--radius-full);
-        }
-        
-        .passo__content h3 {
-            font-size: var(--font-size-xl);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .passo__content p {
-            color: var(--color-gray-700);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        /* =====================================================
-           MODALIDADES
-           ===================================================== */
-        .modalidades {
-            background: var(--color-white);
-        }
-        
-        .modalidades__grid {
-            display: grid;
-            gap: var(--space-xl);
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-        
-        .modalidade-card {
-            background: var(--color-white);
-            border: 2px solid var(--color-gray-200);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            text-align: center;
-            transition: var(--transition-normal);
-        }
-        
-        .modalidade-card:hover {
-            border-color: var(--color-primary);
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .modalidade-card__icon {
-            font-size: 3.5rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .modalidade-card__title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-        }
-        
-        .modalidade-card__text {
-            color: var(--color-gray-700);
-            margin-bottom: var(--space-lg);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        /* =====================================================
-           DEPOIMENTOS
-           ===================================================== */
-        .depoimentos {
-            background: var(--color-gray-50);
-        }
-        
-        .depoimentos__grid {
-            display: grid;
-            gap: var(--space-lg);
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        }
-        
-        .depoimento-card {
-            background: var(--color-white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-normal);
-        }
-        
-        .depoimento-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .depoimento-card__stars {
-            color: var(--color-accent-light);
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--space-md);
-        }
-        
-        .depoimento-card__text {
-            font-size: var(--font-size-md);
-            font-style: italic;
-            color: var(--color-gray-700);
-            line-height: var(--line-height-relaxed);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .depoimento-card__author {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-        
-        .depoimento-card__avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: var(--radius-full);
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-        }
-        
-        .depoimento-card__name {
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary-dark);
-        }
-        
-        .depoimento-card__role {
-            font-size: var(--font-size-sm);
-            color: var(--color-gray-700);
-        }
-        
-        /* =====================================================
-           GALERIA
-           ===================================================== */
-        .galeria {
-            background: var(--color-white);
-        }
-        
-        .galeria__grid {
-            display: grid;
-            gap: var(--space-md);
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            margin-bottom: var(--space-xl);
-        }
-        
-        .galeria__item {
-            position: relative;
-            aspect-ratio: 4/3;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            background: var(--color-gray-200);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: var(--font-size-2xl);
-            color: var(--color-gray-700);
-            transition: var(--transition-normal);
-        }
-        
-        .galeria__item:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .galeria__cta {
-            text-align: center;
-        }
-        
-        /* =====================================================
-           PREÇOS
-           ===================================================== */
-        .precos {
-            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
-        }
-        
-        .precos__grid {
-            display: grid;
-            gap: var(--space-xl);
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            max-width: 1000px;
-            margin: 0 auto var(--space-xl);
-        }
-        
-        .preco-card {
-            background: var(--color-white);
-            border: 2px solid var(--color-gray-200);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            text-align: center;
-            transition: var(--transition-normal);
-            position: relative;
-        }
-        
-        .preco-card--popular {
-            border-color: var(--color-primary);
-            transform: scale(1.05);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .preco-card--popular::before {
-            content: '⭐ POPULAR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-primary);
-            color: var(--color-white);
-            padding: var(--space-xs) var(--space-md);
-            border-radius: var(--radius-full);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-bold);
-        }
-        
-        .preco-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .preco-card__title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-        }
-        
-        .preco-card__price {
-            font-size: var(--font-size-3xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-primary);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .preco-card__price span {
-            font-size: var(--font-size-md);
-            color: var(--color-gray-700);
-            font-weight: var(--font-weight-normal);
-        }
-        
-        .preco-card__features {
-            list-style: none;
-            margin-bottom: var(--space-xl);
-            text-align: left;
-        }
-        
-        .preco-card__feature {
-            padding: var(--space-sm) 0;
-            color: var(--color-gray-700);
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-        }
-        
-        .preco-card__feature::before {
-            content: '✓';
-            color: var(--color-primary);
-            font-weight: var(--font-weight-bold);
-            flex-shrink: 0;
-        }
-        
-        .desconto-referencia {
-            background: var(--gradient-accent);
-            color: var(--color-white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .desconto-referencia h3 {
-            font-size: var(--font-size-2xl);
-            margin-bottom: var(--space-md);
-        }
-        
-        .desconto-referencia p {
-            font-size: var(--font-size-md);
-            line-height: var(--line-height-relaxed);
-            margin-bottom: var(--space-md);
-        }
-        
-        /* =====================================================
-           FAQ
-           ===================================================== */
-        .faq {
-            background: var(--color-white);
-        }
-        
-        .faq__list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq__item {
-            border-bottom: 1px solid var(--color-gray-200);
-        }
-        
-        .faq__question {
-            width: 100%;
-            padding: var(--space-lg);
-            text-align: left;
-            font-size: var(--font-size-lg);
-            font-weight: var(--font-weight-medium);
-            color: var(--color-primary-dark);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--space-md);
-            transition: var(--transition-fast);
-        }
-        
-        .faq__question:hover {
-            background: var(--color-gray-50);
-        }
-        
-        .faq__question::after {
-            content: '▼';
-            font-size: var(--font-size-sm);
-            color: var(--color-primary);
-            transition: var(--transition-fast);
-        }
-        
-        .faq__question.active::after {
-            transform: rotate(180deg);
-        }
-        
-        .faq__answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height var(--transition-normal);
-        }
-        
-        .faq__answer.active {
-            max-height: 500px;
-        }
-        
-        .faq__answer-content {
-            padding: 0 var(--space-lg) var(--space-lg);
-            color: var(--color-gray-700);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        /* =====================================================
-           CONTACTO
-           ===================================================== */
-        .contacto {
-            background: linear-gradient(135deg, #264653 0%, #2A9D8F 100%);
-            color: var(--color-white);
-            text-align: center;
-        }
-        
-        .contacto .section-title {
-            color: var(--color-white);
-        }
-        
-        .contacto__ctas {
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: var(--space-xl);
-        }
-        
-        .contacto__info {
-            font-size: var(--font-size-lg);
-        }
-        
-        /* =====================================================
-           FOOTER
-           ===================================================== */
-        .footer {
-            background: var(--color-primary-dark);
-            color: var(--color-white);
-            padding: var(--space-2xl) 0 var(--space-lg);
-        }
-        
-        .footer__grid {
-            display: grid;
-            gap: var(--space-2xl);
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            margin-bottom: var(--space-xl);
-        }
-        
-        .footer__brand h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .footer__brand p {
-            color: var(--color-gray-300);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        .footer__section h4 {
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer__links {
-            list-style: none;
-        }
-        
-        .footer__link {
-            display: block;
-            padding: var(--space-xs) 0;
-            color: var(--color-gray-300);
-            transition: var(--transition-fast);
-        }
-        
-        .footer__link:hover {
-            color: var(--color-primary-light);
-            padding-left: var(--space-xs);
-        }
-        
-        .footer__bottom {
-            text-align: center;
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--color-gray-300);
-        }
-        
-        /* =====================================================
-           WHATSAPP FLOAT BUTTON
-           ===================================================== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-        }
-        
-        .whatsapp-float__btn {
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            transition: var(--transition-normal);
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float__btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
-        }
-        
-        .whatsapp-float__icon {
-            font-size: 2rem;
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 24px rgba(37, 211, 102, 0.7);
-            }
-        }
-        
-        /* =====================================================
-           RESPONSIVE
-           ===================================================== */
-        @media (min-width: 768px) {
-            .hero__container {
-                grid-template-columns: 1fr 1fr;
-                text-align: left;
-            }
-            
-            .hero__content {
-                text-align: left;
-            }
-            
-            .hero__ctas {
-                justify-content: flex-start;
-            }
-            
-            .passos {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header__nav {
-                display: none;
-            }
-            
-            .preco-card--popular {
-                transform: scale(1);
-            }
-        }
-        
-        /* Sticky Menu */
-        .sticky-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 4px 16px rgba(42, 157, 143, 0.16);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        
-        .sticky-menu__brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .sticky-menu__nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        
-        .sticky-menu__link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: all 0.2s;
-        }
-        
-        .sticky-menu__link:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .sticky-menu__link--active {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .sticky-menu__toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .sticky-menu__nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #264653;
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                display: none;
-            }
-            
-            .sticky-menu__nav.active {
-                display: flex;
-            }
-            
-            .sticky-menu__link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
-                border-radius: 0;
-            }
-            
-            .sticky-menu__toggle {
-                display: block;
-            }
-        }
-        
-        /* Challenges Section */
-        .challenges-section {
-            padding: var(--space-2xl, 4rem) var(--space-md, 1.5rem);
-        }
-        
-        .challenges__container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .challenges__header {
-            text-align: center;
-            margin-bottom: var(--space-xl, 3rem);
-        }
-        
-        .challenges__title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: var(--color-primary-dark, #264653);
-            margin-bottom: var(--space-sm, 1rem);
-            font-weight: 700;
-        }
-        
-        .challenges__subtitle {
-            color: var(--color-gray-700, #495057);
-            font-size: 1.125rem;
-        }
-        
-        .challenges__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg, 2rem);
-            margin-bottom: var(--space-xl, 3rem);
-        }
-        
-        .challenge-card {
-            background: var(--color-white, white);
-            border-radius: var(--radius-lg, 16px);
-            padding: var(--space-xl, 3rem) var(--space-lg, 2rem);
-            box-shadow: var(--shadow-md, 0 4px 16px rgba(42, 157, 143, 0.12));
-            text-align: center;
-            transition: all 0.3s;
-            border: 3px solid transparent;
-        }
-        
-        .challenge-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg, 0 8px 32px rgba(42, 157, 143, 0.16));
-            border-color: var(--color-primary, #2A9D8F);
-        }
-        
-        .challenge-card.active {
-            border-color: var(--color-accent, #E76F51);
-            background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
-        }
-        
-        .challenge-card__week {
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            color: white;
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            font-size: 0.875rem;
-            margin-bottom: var(--space-md, 1.5rem);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .challenge-card.active .challenge-card__week {
-            background: var(--color-accent, #E76F51);
-        }
-        
-        .challenge-card__icon {
-            font-size: 4rem;
-            margin-bottom: var(--space-md, 1.5rem);
-            display: block;
-        }
-        
-        .challenge-card__title {
-            color: var(--color-primary-dark, #264653);
-            font-size: 1.5rem;
-            margin-bottom: var(--space-sm, 1rem);
-            font-weight: 700;
-        }
-        
-        .challenge-card__description {
-            color: var(--color-gray-700, #495057);
-            margin-bottom: var(--space-md, 1.5rem);
-            line-height: 1.6;
-        }
-        
-        .challenge-card__goal {
-            background: var(--color-gray-50, #F8F9FA);
-            border-radius: 12px;
-            padding: var(--space-md, 1.5rem);
-            margin-bottom: var(--space-md, 1.5rem);
-        }
-        
-        .challenge-card__goal-label {
-            color: var(--color-primary, #2A9D8F);
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .challenge-card__goal-value {
-            color: var(--color-primary-dark, #264653);
-            font-size: 2rem;
-            font-weight: 800;
-        }
-        
-        .challenge-card__status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.25rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-        
-        .challenge-card__status.ongoing {
-            background: var(--color-accent-light, #F4A261);
-            color: var(--color-primary-dark, #264653);
-        }
-        
-        .challenge-card__status.completed {
-            background: var(--color-primary, #2A9D8F);
-            color: white;
-        }
-        
-        .challenge-card__status.upcoming {
-            background: var(--color-gray-100, #E9ECEF);
-            color: var(--color-gray-700, #495057);
-        }
-        
-        .challenges__cta {
-            text-align: center;
-            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
-            color: white;
-            border-radius: 16px;
-            padding: var(--space-2xl, 4rem) var(--space-lg, 2rem);
-        }
-        
-        .challenges__cta-title {
-            font-size: 2rem;
-            margin-bottom: var(--space-md, 1.5rem);
-            font-weight: 700;
-        }
-        
-        .challenges__cta-text {
-            font-size: 1.125rem;
-            opacity: 0.95;
-            margin-bottom: var(--space-lg, 2rem);
-        }
-        
-        .challenges__cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: var(--space-md, 1.5rem) var(--space-xl, 3rem);
-            background: white;
-            color: var(--color-primary-dark, #264653);
-            font-weight: 600;
-            border-radius: 9999px;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            font-size: 1.125rem;
-        }
-        
-        .challenges__cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-        
-        @media (max-width: 768px) {
-            .challenges__grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Lucide Icons - Optimized with specific version -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
+    
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="assets/css/pages/homepage.css">
+    <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Isaac Treinos Ar Livre",
+      "description": "Treino de calistenia e funcional ao ar livre em Lisboa. Planeamento estruturado em 8 semanas. Treino experimental grátis.",
+      "url": "https://izak90.github.io/isaac_treinos_ar_livre/",
+      "telephone": "+351939481840",
+      "priceRange": "€€",
+      "image": "https://izak90.github.io/isaac_treinos_ar_livre/img/Foto%20Hero.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lisboa",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.7223",
+        "longitude": "-9.1393"
+      },
+      "areaServed": "Lisboa",
+      "offers": {
+        "@type": "Offer",
+        "name": "Treino Experimental Grátis",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
 </head>
-<body>
-    <nav class="sticky-menu">
-        <a href="index.html" class="sticky-menu__brand">
-            Isaac Treinos Ar Livre
-        </a>
-        
-        <button class="sticky-menu__toggle" aria-label="Toggle menu" onclick="document.querySelector('.sticky-menu__nav').classList.toggle('active')">
-            ☰
-        </button>
-        
-        <div class="sticky-menu__nav">
-            <a href="index.html" class="sticky-menu__link sticky-menu__link--active">Início</a>
-            <a href="horarios.html" class="sticky-menu__link">Horários</a>
-            <a href="tabela-precos.html" class="sticky-menu__link">Preços</a>
-            <a href="comunidade.html" class="sticky-menu__link">Comunidade</a>
-            <a href="treino-experimental.html" class="sticky-menu__link">Treino Grátis</a>
+<body class="has-fixed-header">
+    <header class="header">
+        <div class="header__content">
+            <a href="index.html" class="header__brand">
+                <i data-lucide="activity" class="header__icon" aria-hidden="true"></i>
+                <span>Isaac Treinos Ar Livre</span>
+            </a>
+            
+            <button class="header__toggle" aria-label="Menu" aria-expanded="false">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <nav class="header__nav">
+                <a href="index.html" class="header__link header__link--active">Início</a>
+                <a href="tabela-precos.html" class="header__link">Preços</a>
+                <a href="horarios.html" class="header__link">Horários</a>
+                <a href="comunidade.html" class="header__link">Comunidade <span class="header__badge-members"><i data-lucide="lock" class="icon-sm" aria-hidden="true"></i></span></a>
+                <a href="treino-experimental.html" class="header__cta">
+                    <i data-lucide="zap" aria-hidden="true"></i>
+                    1ª Aula Grátis
+                </a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero__container container">
             <div class="hero__content">
+                <!-- Badge Urgência -->
+                <div class="badge badge-accent mb-md">
+                    <i data-lucide="flame"></i>
+                    <span>Turma Fundadora: <span data-config="turma.vagasDisponiveis">6</span> vagas disponíveis</span>
+                </div>
+                
                 <h1 class="hero__title">
-                    <span>Do zero ao próximo nível!</span><br>
-                    Calistenia & Treino Funcional
+                    Transforma o Teu Corpo <br>
+                    <span>Ao Ar Livre</span>
                 </h1>
                 <p class="hero__subtitle">
-                    Transforma o teu corpo e mente com treinos outdoor personalizados. Ganha força, resistência e confiança.
+                    Calistenia & Treino Funcional em Lisboa. Planeamento estruturado. 
+                    Ganha força, resistência e confiança com treinos outdoor.
                 </p>
                 <div class="hero__ctas">
-                    <a href="https://wa.me/351939481840?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20treinos" 
-                       target="_blank" 
-                       rel="noopener" 
-                       class="btn btn-primary">
-                        <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        Começar Agora
+                    <a href="treino-experimental.html" class="btn btn-primary btn-large">
+                        <i data-lucide="gift" aria-hidden="true"></i>
+                        Treino Experimental Grátis
+                    </a>
+                    <a href="tabela-precos.html" class="btn btn-secondary btn-large">
+                        <i data-lucide="eye" aria-hidden="true"></i>
+                        Ver Preços
                     </a>
                 </div>
             </div>
             <div class="hero__image">
+                <!-- Optimized image with responsive srcset -->
                 <img src="img/Foto Hero.jpg" 
-                     alt="Isaac Treinos Ar Livre - Calistenia e treino funcional ao ar livre" 
-                     style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                     alt="Isaac Treinos Ar Livre - Calistenia e treino funcional ao ar livre em Lisboa"
+                     width="1200"
+                     height="800"
+                     loading="eager"
+                     fetchpriority="high">
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__container">
+                <!--div class="trust-bar__item">
+                    <i data-lucide="users" class="trust-bar__icon"></i>
+                    <span><strong>20+</strong> membros ativos</span>
+                </div>
+                <div class="trust-bar__item">
+                    <i data-lucide="star" class="trust-bar__icon"></i>
+                    <span><strong>4.9★</strong> avaliação</span>
+                </div-->
+                <div class="trust-bar__item">
+                    <i data-lucide="map-pin" class="trust-bar__icon" aria-hidden="true"></i>
+                    <span>Parque Multidesportivo Naide Gomes, <strong>Lisboa</strong></span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- BENEFÍCIOS -->
-    <section class="beneficios section">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Por que treinar com Isaac?</h2>
-            <div class="beneficios__grid">
-                <div class="beneficio-card">
-                    <div class="beneficio-card__icon">🌳</div>
-                    <h3 class="beneficio-card__title">Treino Ar LIVRE</h3>
-                    <p class="beneficio-card__text">
-                        Aproveita a natureza, vitamina D e um ambiente motivador. Treino em parques e jardins de Lisboa.
-                    </p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-card__icon">💪</div>
-                    <h3 class="beneficio-card__title">Força Funcional</h3>
-                    <p class="beneficio-card__text">
-                        Ganho de força real, resistência muscular e mobilidade para o dia a dia e desporto.
-                    </p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-card__icon">📊</div>
-                    <h3 class="beneficio-card__title">Plano Estruturado</h3>
-                    <p class="beneficio-card__text">
-                        Progressão estruturada. Do básico aos movimentos avançados de calistenia.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMO FUNCIONA -->
-    <section class="como-funciona section">
-        <div class="container">
-            <h2 class="section-title">Como funciona o programa</h2>
-            <div class="passos">
-                <div class="passo">
-                    <div class="passo__numero">1</div>
-                    <div class="passo__content">
-                        <h3>Contacto Inicial</h3>
-                        <p>Fala comigo via WhatsApp. Conto-te tudo sobre o programa e esclareço dúvidas.</p>
-                    </div>
-                </div>
-                <div class="passo">
-                    <div class="passo__numero">2</div>
-                    <div class="passo__content">
-                        <h3>Treino Experimental</h3>
-                        <p>Vem experimentar sem compromisso! Conhece o método, o ambiente e vê se é para ti.</p>
-                    </div>
-                </div>
-                <div class="passo">
-                    <div class="passo__numero">3</div>
-                    <div class="passo__content">
-                        <h3>Escolhe o Plano</h3>
-                        <p>Horários e preços que se adequam ao teu ritmo de vida e objetivos.</p>
-                    </div>
-                </div>
-                <div class="passo">
-                    <div class="passo__numero">4</div>
-                    <div class="passo__content">
-                        <h3>Começa a Transformação</h3>
-                        <p>Macro ciclos de evolução contínua. Vais surpreender-te com os resultados!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MODALIDADES -->
-    <section class="modalidades section">
-        <div class="container">
-            <h2 class="section-title">Escolhe o teu formato</h2>
-            <div class="modalidades__grid">
-                <div class="modalidade-card">
-                    <div class="modalidade-card__icon">🌳</div>
-                    <h3 class="modalidade-card__title">Ar LIVRE</h3>
-                    <p class="modalidade-card__text">
-                        Treino em parques e jardins. Energia da natureza, grupo motivado, resultados reais.
-                    </p>
-                    <!--a href="tabela-precos.html#" class="btn btn-secondary">Saber Mais</a-->
-                </div>
-                <div class="modalidade-card">
-                    <div class="modalidade-card__icon">💻</div>
-                    <h3 class="modalidade-card__title">ONLINE</h3>
-                    <p class="modalidade-card__text">
-                        Treino via videochamada ao vivo. Acompanhamento personalizado onde quer que estejas.
-                    </p>
-                    <!--a href="tabela-precos.html" class="btn btn-secondary">Saber Mais</a-->
-                </div>
-                <!--div class="modalidade-card">
-                    <div class="modalidade-card__icon">🏠</div>
-                    <h3 class="modalidade-card__title">EM CASA</h3>
-                    <p class="modalidade-card__text">
-                        Treino adaptado para fazer em casa ou hotel. Sem equipamento necessário.
-                    </p>
-                    <a href="tabela-precos.html" class="btn btn-secondary">Saber Mais</a>
-                </div-->
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERIA -->
-    <section class="galeria section">
-        <div class="container">
-            <h2 class="section-title">Vem treinar connosco</h2>
+            <h2 class="section-title">Porquê Escolher Isaac Treinos Ar Livre?</h2>
             <p class="section-subtitle">
-                Fotos dos nossos treinos ao ar livre. Vê a energia, a comunidade e os resultados!
+                Treino estruturado, comunidade motivadora e resultados garantidos
             </p>
-            <div class="galeria__grid">
-                <div class="galeria__item">📸</div>
-                <div class="galeria__item">🏋️</div>
-                <div class="galeria__item">💪</div>
-                <div class="galeria__item">🌳</div>
-                <div class="galeria__item">👥</div>
-                <div class="galeria__item">🎯</div>
-            </div>
-            <div class="galeria__cta">
-                <a href="https://www.instagram.com/isaac_treinos_ar_livre/" 
-                   target="_blank" 
-                   rel="noopener" 
-                   class="btn btn-primary">
-                    <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                    Ver Mais no Instagram
-                </a>
+            <div class="benefit-grid">
+                <div class="benefit-card glass-card fade-in-up">
+                    <i data-lucide="calendar" class="benefit-card__icon" aria-hidden="true"></i>
+                    <h3 class="benefit-card__title">Planeamento Estruturado</h3>
+                    <p class="benefit-card__text">
+                        Progressão científica do básico aos movimentos avançados de calistenia. 
+                        Objetivos claros e ajustados ao teu nível.
+                    </p>
+                </div>
+                <div class="benefit-card glass-card fade-in-up delay-1">
+                    <i data-lucide="users" class="benefit-card__icon" aria-hidden="true"></i>
+                    <h3 class="benefit-card__title">Comunidade Ativa</h3>
+                    <p class="benefit-card__text">
+                        Treina com grupo motivado. Apoio mútuo, amizades reais e energia positiva 
+                        em cada sessão.
+                    </p>
+                </div>
+                <div class="benefit-card glass-card fade-in-up delay-2">
+                    <i data-lucide="trophy" class="benefit-card__icon" aria-hidden="true"></i>
+                    <h3 class="benefit-card__title">Resultados Garantidos</h3>
+                    <p class="benefit-card__text">
+                        80% dos membros vêem resultados visíveis em 4 semanas. Força, resistência 
+                        e transformação real.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="depoimentos section">
+    <!-- MÉTODO -->
+    <section class="section bg-gradient-light">
         <div class="container">
-            <h2 class="section-title">O que dizem os alunos</h2>
-            <div class="depoimentos__grid">
-                <div class="depoimento-card">
-                    <div class="depoimento-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="depoimento-card__text">
-                        "Em 8 semanas consegui fazer o meu primeiro muscle-up! O Isaac é um excelente treinador e o treino ao ar livre é incrível."
-                    </p>
-                    <div class="depoimento-card__author">
-                        <div class="depoimento-card__avatar">M</div>
-                        <div>
-                            <div class="depoimento-card__name">Maria Silva</div>
-                            <div class="depoimento-card__role">28 anos, Aluna desde 2025</div>
-                        </div>
+            <h2 class="section-title">Como Funciona o Método</h2>
+            <p class="section-subtitle">
+                Planeamento estruturado com progressão científica
+            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-item__number">1</div>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            <i data-lucide="message-circle" class="icon-lg inline-block vertical-middle mr-sm"></i>
+                            Contacto Inicial
+                        </h3>
+                        <p class="timeline-item__text">
+                            Fala comigo via WhatsApp. Explico o programa, horários e esclareço todas as dúvidas.
+                        </p>
                     </div>
                 </div>
-                <div class="depoimento-card">
-                    <div class="depoimento-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="depoimento-card__text">
-                        "Treino ao ar livre mudou a minha vida. Perdi 12kg, ganhei muita força e sinto-me incrível!"
-                    </p>
-                    <div class="depoimento-card__author">
-                        <div class="depoimento-card__avatar">J</div>
-                        <div>
-                            <div class="depoimento-card__name">João Costa</div>
-                            <div class="depoimento-card__role">35 anos, Aluno desde 2024</div>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-item__number">2</div>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            <i data-lucide="gift" class="icon-lg inline-block vertical-middle mr-sm"></i>
+                            Treino Experimental Grátis
+                        </h3>
+                        <p class="timeline-item__text">
+                            Vem experimentar sem compromisso! Conhece o método, o ambiente e vê se é para ti.
+                        </p>
                     </div>
                 </div>
-                <div class="depoimento-card">
-                    <div class="depoimento-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="depoimento-card__text">
-                        "Nunca pensei que treinar pudesse ser tão divertido! O grupo é ótimo e o Isaac motiva-nos sempre."
-                    </p>
-                    <div class="depoimento-card__author">
-                        <div class="depoimento-card__avatar">A</div>
-                        <div>
-                            <div class="depoimento-card__name">Ana Rodrigues</div>
-                            <div class="depoimento-card__role">42 anos, Aluna desde 2025</div>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-item__number">3</div>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            <i data-lucide="check-circle" class="icon-lg inline-block vertical-middle mr-sm"></i>
+                            Escolhe o Teu Plano
+                        </h3>
+                        <p class="timeline-item__text">
+                            Grupo, Individual ou Online. Frequência 1x, 2x ou 3x por semana. Tu decides!
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item__number">4</div>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            <i data-lucide="trending-up" class="icon-lg inline-block vertical-middle mr-sm"></i>
+                            Começa a Transformação
+                        </h3>
+                        <p class="timeline-item__text">
+                            Planeamento estruturado com progressão científica. Resultados visíveis desde as primeiras semanas!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- MODALIDADES PREVIEW -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Escolhe o Teu Formato</h2>
+            <p class="section-subtitle">
+                Presencial, Online ou Combinado - tu decides como treinas
+            </p>
+            <div class="modalidade-preview">
+                <div class="card card-3d hover-lift border-primary shadow-primary">
+                    <div class="badge badge--primary mb-md">
+                        <i data-lucide="star" class="icon-sm" aria-hidden="true"></i>
+                        <span>RECOMENDADO</span>
+                    </div>
+                    <div class="card__icon">
+                        <i data-lucide="trees" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card__title">Presencial</h3>
+                    <p class="card__text">
+                        Treino em grupo no Parque Multidesportivo Naide Gomes. Energia da natureza, 
+                        vitamina D e comunidade real.
+                    </p>
+                    <p style="color: var(--color-primary); font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); font-size: var(--font-size-lg);">
+                        desde €15/sessão
+                    </p>
+                    <a href="tabela-precos.html#presencial" class="btn btn-primary">
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        Ver Preços
+                    </a>
+                </div>
+                <div class="card card-3d hover-lift opacity-90">
+                    <div class="card__icon card__icon--accent">
+                        <i data-lucide="monitor" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card__title">Online</h3>
+                    <p class="card__text">
+                        Treino via videochamada ao vivo. Acompanhamento personalizado 
+                        onde quer que estejas.
+                    </p>
+                    <div class="badge badge--neutral mb-md">
+                        <span>-20% vs Presencial</span>
+                    </div>
+                    <a href="tabela-precos.html#online" class="btn btn-secondary">
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        Ver Preços
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGÊNCIA - OFERTA FUNDADORA -->
+    <section class="section bg-gradient-light">
+        <div class="container">
+            <div class="urgency-banner pulse-soft aurora-bg">
+                <div class="urgency-banner__tag glass-badge">
+                    <i data-lucide="flame" class="icon-md inline-block vertical-middle mr-xs"></i>
+                    OFERTA LIMITADA
+                </div>
+                <h2 class="urgency-banner__title">Turma Fundadora: Apenas <span data-config="turma.vagasDisponiveis">6</span> Vagas!</h2>
+                <div class="urgency-banner__price">
+                    <span class="urgency-banner__price-old"><span data-config="turma.precoNormal" data-format="price">€60</span>/mês</span>
+                    <span style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold);"><span data-config="turma.precoFundador" data-format="price">€54</span>/mês</span>
+                </div>
+                <p class="urgency-banner__text">
+                    <strong>-<span data-config="turma.descontoPercentual">10</span>% VITALÍCIO</strong> para os primeiros <span data-config="turma.totalVagas">8</span> membros do Grupo Presencial 3x/semana
+                </p>
+                <a href="treino-experimental.html" class="btn btn-cta-main">
+                    <i data-lucide="zap"></i>
+                    Garantir Vaga
+                </a>
+                <p style="margin-top: var(--space-md); font-size: var(--font-size-sm); opacity: 0.9;">
+                    Esta oferta termina quando as <span data-config="turma.totalVagas">8</span> vagas lotarem
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS / TESTEMUNHOS -->
+    <!--section class="section">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem os Membros</h2>
+            <p class="section-subtitle">
+                Resultados reais de pessoas reais
+            </p>
+            <div class="results-preview">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Em 8 semanas consegui fazer o meu primeiro muscle-up! O Isaac é um excelente 
+                        treinador e o treino ao ar livre é incrível."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">M</div>
+                        <div>
+                            <div class="testimonial-card__name">Maria Silva</div>
+                            <div class="testimonial-card__role">28 anos • Membro desde 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Treino ao ar livre mudou a minha vida. Perdi 12kg, ganhei muita força 
+                        e sinto-me incrível!"
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">J</div>
+                        <div>
+                            <div class="testimonial-card__name">João Costa</div>
+                            <div class="testimonial-card__role">35 anos • Membro desde 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                        <i data-lucide="star" style="fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Nunca pensei que treinar pudesse ser tão divertido! O grupo é ótimo e o 
+                        Isaac motiva-nos sempre."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">A</div>
+                        <div>
+                            <div class="testimonial-card__name">Ana Rodrigues</div>
+                            <div class="testimonial-card__role">42 anos • Membro desde 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section-->
 
     <!-- FAQ -->
-    <section class="faq section">
+    <section class="section bg-gradient-light">
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
             <div class="faq__list">
                 <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        Preciso de equipamento?
+                    <button class="faq__question">
+                        <span>Preciso de equipamento?</span>
+                        <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq__answer">
                         <div class="faq__answer-content">
-                            Não! Usamos principalmente o peso corporal. Alguns treinos usam barra de pull-ups e argolas, que estão disponíveis nos parques onde treinamos.
+                            <p>
+                                Não! Usamos principalmente o peso corporal. Alguns treinos usam barra de pull-ups 
+                                e argolas, que estão disponíveis nos parques onde treinamos.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        É adequado para iniciantes?
+                    <button class="faq__question">
+                        <span>É adequado para iniciantes?</span>
+                        <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq__answer">
                         <div class="faq__answer-content">
-                            Absolutamente! O programa de 8 semanas começa do zero e progride gradualmente. Cada exercício tem variações para diferentes níveis.
+                            <p>
+                                Absolutamente! O planeamento estruturado começa do zero e progride gradualmente. 
+                                Cada exercício tem variações para diferentes níveis.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        Onde são os treinos ao ar livre?
+                    <button class="faq__question">
+                        <span>Onde são os treinos ao ar livre?</span>
+                        <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq__answer">
                         <div class="faq__answer-content">
-                            Principalmente em parques de Lisboa com barras de calistenia (Parque Eduardo VII, Parque das Nações). O local exato é confirmado semanalmente no grupo.
+                            <p>
+                                Parque Multidesportivo Naide Gomes, Lisboa. Local com barras de calistenia e espaço amplo. 
+                                <a href="horarios.html" class="text-primary">Ver localização exata</a>.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        E se chover?
+                    <button class="faq__question">
+                        <span>E se chover?</span>
+                        <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq__answer">
                         <div class="faq__answer-content">
-                            Em caso de chuva forte, o treino passa para formato online ao vivo ou é remarcado, conforme preferência do grupo.
+                            <p>
+                                Em caso de chuva forte, o treino passa para formato online ao vivo ou é remarcado, 
+                                conforme preferência do grupo.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        Quanto tempo duram os treinos?
+                    <button class="faq__question">
+                        <span>Posso fazer treino experimental antes?</span>
+                        <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq__answer">
                         <div class="faq__answer-content">
-                            Cada sessão dura 60 minutos: 10min aquecimento, 40min treino principal, 10min alongamentos e cool-down.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq__item">
-                    <button class="faq__question" aria-expanded="false">
-                        Posso fazer treino experimental antes?
-                    </button>
-                    <div class="faq__answer">
-                        <div class="faq__answer-content">
-                            Sim! Ofereço sempre um treino experimental grátis para conheceres o método, o ambiente e veres se é para ti. <a href="treino-experimental.html" style="color: var(--color-primary);">Marca aqui</a>.
+                            <p>
+                                Sim! Oferecemos sempre um treino experimental <strong>100% grátis</strong> para conheceres 
+                                o método, o ambiente e veres se é para ti. 
+                                <a href="treino-experimental.html" class="text-primary">Marca aqui</a>.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1479,32 +469,26 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contacto section">
+    <!-- CTA FINAL -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Pronto para a transformação?</h2>
-            <p class="section-subtitle" style="color: var(--color-white); margin-bottom: var(--space-xl);">
-                Fala comigo e vem experimentar! Respondo rapidamente.
-            </p>
-            <div class="contacto__ctas">
-                <a href="https://wa.me/351939481840?text=Olá!%20Quero%20começar%20a%20treinar" 
+            <div class="cta-final">
+                <h2 class="cta-final__title">Pronto Para Transformar?</h2>
+                <p class="cta-final__text">
+                    Experimenta o teu primeiro treino <strong>GRÁTIS</strong> - sem compromisso.
+                </p>
+                <a href="https://wa.me/351939481840?text=Olá!%20Quero%20marcar%20o%20treino%20experimental%20grátis" 
                    target="_blank" 
                    rel="noopener" 
-                   class="btn btn-accent">
-                    <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Enviar WhatsApp
+                   class="btn btn-large" 
+                   style="background: var(--color-white); color: var(--color-primary-dark);">
+                    <i data-lucide="message-circle" aria-hidden="true"></i>
+                    Marcar Treino Experimental
                 </a>
-                <a href="https://www.instagram.com/isaac_treinos_ar_livre/" 
-                   target="_blank" 
-                   rel="noopener" 
-                   class="btn btn-secondary">
-                    <svg style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                    Seguir Instagram
-                </a>
+                <!--div class="cta-final__trust">
+                    <i data-lucide="shield-check"></i>
+                    <span>Já ajudámos 20+ pessoas a transformarem os seus corpos</span>
+                </div-->
             </div>
         </div>
     </section>
@@ -1513,29 +497,70 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
-                <div class="footer__brand">
-                    <h3>Isaac Treinos Ar Livre</h3>
-                    <p>Calistenia & Treino Funcional<br>Ar livre · Online · Em casa</p>
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
                 </div>
                 <div class="footer__section">
-                    <h4>Navegação</h4>
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
                     <ul class="footer__links">
-                        <li><a href="horarios.html" class="footer__link">Horários</a></li>
-                        <li><a href="tabela-precos.html" class="footer__link">Preços</a></li>
-                        <li><a href="metodo-treino.html" class="footer__link">Filosofia</a></li>
-                        <li><a href="treino-experimental.html" class="footer__link">Treino Experimental</a></li>
+                        <li><a href="treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
                     </ul>
                 </div>
                 <div class="footer__section">
-                    <h4>Contacto</h4>
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
                     <ul class="footer__links">
-                        <li><a href="https://wa.me/351939481840" target="_blank" rel="noopener" class="footer__link">WhatsApp</a></li>
-                        <li><a href="mailto:isaac@treinos.pt" class="footer__link">Email</a></li>
+                        <li><a href="comunidade/metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="comunidade/desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>© 2026 Isaac Treinos Ar Livre · Todos os direitos reservados</p>
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
@@ -1554,61 +579,8 @@
     </a>
 
     <!-- JAVASCRIPT -->
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq__question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const isActive = button.classList.contains('active');
-                
-                // Fecha todas as outras
-                document.querySelectorAll('.faq__question').forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.nextElementSibling.classList.remove('active');
-                });
-                
-                // Toggle atual
-                if (!isActive) {
-                    button.classList.add('active');
-                    button.setAttribute('aria-expanded', 'true');
-                    answer.classList.add('active');
-                }
-            });
-        });
-
-        // Header scroll effect
-        let lastScroll = 0;
-        const header = document.querySelector('.header');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                header.style.boxShadow = 'var(--shadow-md)';
-            } else {
-                header.style.boxShadow = 'var(--shadow-sm)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/auto-populate.js"></script>
+    <script src="assets/js/bundle.optimized.js"></script>
 </body>
 </html>

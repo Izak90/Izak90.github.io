@@ -1,0 +1,171 @@
+/* =========================================
+   EXPERIMENTAL PAGE STYLES
+   Page: treino-experimental.html
+   ========================================= */
+
+/* Guarantee Badges */
+.guarantee-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.guarantee-badge {
+    background: rgba(255,255,255,0.15);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+}
+
+.guarantee-badge i {
+    width: 20px;
+    height: 20px;
+}
+
+/* Checklist Component */
+.checklist {
+    list-style: none;
+    display: grid;
+    gap: var(--space-md);
+}
+
+.checklist__item {
+    background: var(--color-gray-50);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    transition: var(--transition-normal);
+}
+
+.checklist__item:hover {
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.checklist__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.checklist__content strong {
+    color: var(--color-primary-dark);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* Timeline Simple */
+.timeline-simple {
+    display: grid;
+    gap: var(--space-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.timeline-step__number {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+.timeline-step__content h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-step__content p {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+}
+
+/* FAQ Mini Section */
+.faq-mini {
+    margin-top: var(--space-xl);
+}
+
+.faq-mini__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.faq-mini__item {
+    background: var(--color-gray-50);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+}
+
+.faq-mini__question {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.faq-mini__answer {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+}
+
+/* CTA Experimental */
+.cta-experimental {
+    background: linear-gradient(135deg, #F4A261 0%, #E76F51 100%);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--space-4xl) var(--space-lg);
+    border-radius: var(--radius-xl);
+    margin: var(--space-4xl) 0;
+}
+
+.cta-experimental__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-md);
+}
+
+.cta-experimental__text {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xl);
+    opacity: 0.95;
+}
+
+.cta-experimental__trust {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    margin-top: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+}
+
+.cta-experimental__trust i {
+    width: 16px;
+    height: 16px;
+}
