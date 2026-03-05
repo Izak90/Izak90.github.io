@@ -61,22 +61,24 @@
             background-color: var(--color-gray-50);
         }
         
-        /* Título dinâmico */
+        /* Título dinâmico - OCULTO */
         .pricing-dynamic-title {
-            text-align: center;
-            margin-bottom: var(--space-2xl);
+            display: none;
         }
         
-        .pricing-dynamic-title__text {
-            font-size: var(--font-size-xl);
-            color: var(--color-primary-dark);
-            font-weight: var(--font-weight-bold);
-            margin: 0;
+        /* Texto abreviado abaixo dos botões (mobile apenas) */
+        .pricing-selector__abbrev {
+            display: none;
+            text-align: center;
+            font-size: var(--font-size-xs);
+            color: var(--color-gray-600);
+            margin-top: var(--space-xs);
+            line-height: 1.2;
         }
         
         @media (max-width: 768px) {
-            .pricing-dynamic-title__text {
-                font-size: var(--font-size-lg);
+            .pricing-selector__abbrev {
+                display: block;
             }
         }
     </style>
@@ -151,6 +153,7 @@
                             <span class="pricing-selector__button-text">Presencial (Ar Livre)</span>
                         </button>
                     </div>
+                    <div class="pricing-selector__abbrev" id="abbrev-modo">Presencial</div>
                 </div>
 
                 <!-- Modalidade: Grupo / PT / Dupla -->
@@ -165,6 +168,7 @@
                             <span class="pricing-selector__button-text">Treino em Grupo</span>
                         </button>
                     </div>
+                    <div class="pricing-selector__abbrev" id="abbrev-modalidade">Grupo</div>
                 </div>
 
                 <!-- Frequência -->
@@ -179,6 +183,7 @@
                             <span class="pricing-selector__button-text">3x por semana</span>
                         </button>
                     </div>
+                    <div class="pricing-selector__abbrev" id="abbrev-frequencia">3x/sem.</div>
                 </div>
             </div>
 
@@ -1095,21 +1100,27 @@
 
     <!-- JAVASCRIPT -->
     <script>
+        // Flag para controlar se é a primeira inicialização
+        let isFirstLoad = true;
+        
+        // Rastrear cards visíveis atualmente (usando IDs únicos)
+        const visibleCardKeys = new Set();
+        
         // Definir opções disponíveis para cada seletor
         const selectorOptions = {
             modo: [
-                { value: 'presencial', label: 'Presencial (Ar Livre)', icon: 'trees' },
-                { value: 'online', label: 'Online (Remoto)', icon: 'monitor' }
+                { value: 'presencial', label: 'Presencial (Ar Livre)', icon: 'trees', abbrev: 'Presencial' },
+                { value: 'online', label: 'Online (Remoto)', icon: 'monitor', abbrev: 'Online' }
             ],
             modalidade: [
-                { value: 'grupo', label: 'Treino em Grupo', icon: 'users' },
-                { value: 'pt', label: 'PT Individual', icon: 'user' },
-                { value: 'dupla', label: 'PT Dupla', icon: 'user-plus' }
+                { value: 'grupo', label: 'Treino em Grupo', icon: 'users', abbrev: 'Grupo' },
+                { value: 'pt', label: 'PT Individual', icon: 'user', abbrev: 'PT' },
+                { value: 'dupla', label: 'PT Dupla', icon: 'user-plus', abbrev: 'PT Dupla' }
             ],
             frequencia: [
-                { value: '3x', label: '3x por semana', icon: 'calendar-days' },
-                { value: '2x', label: '2x por semana', icon: 'calendar-plus-2' },
-                { value: '1x', label: '1x por semana', icon: 'calendar-1' }
+                { value: '3x', label: '3x por semana', icon: 'calendar-days', abbrev: '3x/sem.' },
+                { value: '2x', label: '2x por semana', icon: 'calendar-plus-2', abbrev: '2x/sem.' },
+                { value: '1x', label: '1x por semana', icon: 'calendar-1', abbrev: '1x/sem.' }
             ]
         };
 
@@ -1172,13 +1183,22 @@
                 textElement.textContent = option.label;
             }
             
+            // Atualizar texto abreviado (mobile)
+            const abbrevElement = document.getElementById(`abbrev-${type}`);
+            if (abbrevElement && option.abbrev) {
+                abbrevElement.textContent = option.abbrev;
+            }
+            
             // Atualizar ícone
             const icon = document.getElementById(`icon-${type}`);
             if (icon && option.icon) {
                 icon.setAttribute('data-lucide', option.icon);
-                // Re-renderizar o ícone
+                // Re-renderizar apenas os ícones dentro do botão específico
                 if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
+                    const btn = document.getElementById(`btn-${type}`);
+                    if (btn) {
+                        lucide.createIcons({ icons: lucide.icons, root: btn });
+                    }
                 }
             }
         }
@@ -1247,7 +1267,7 @@
         }
         
         // Função para atualizar os cards visíveis baseado na seleção
-        function updatePricing() {
+        function updatePricing(animate = true) {
             // Obter seleções atuais dos botões
             const modoBtn = document.getElementById('btn-modo');
             const modalidadeBtn = document.getElementById('btn-modalidade');
@@ -1267,50 +1287,99 @@
             const cards = document.querySelectorAll('.pricing-card');
             const isMobile = window.innerWidth <= 768;
             
-            // Primeiro, fade out todos os cards
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.95)';
-            });
+            // Desabilitar animação se for o primeiro carregamento
+            const shouldAnimate = animate && !isFirstLoad;
             
-            // Após animação, mostrar/esconder e fazer fade in
-            setTimeout(() => {
-                cards.forEach((card, index) => {
-                    const cardModo = card.dataset.modo;
-                    const cardModalidade = card.dataset.modalidade;
-                    const cardFrequencia = card.dataset.frequencia;
+            // Novo conjunto de cards que devem estar visíveis
+            const newVisibleKeys = new Set();
+            
+            // Processar cada card
+            cards.forEach((card, index) => {
+                const cardModo = card.dataset.modo;
+                const cardModalidade = card.dataset.modalidade;
+                const cardFrequencia = card.dataset.frequencia;
+                
+                // Criar chave única para este card
+                const cardKey = `${cardModo}-${cardModalidade}-${cardFrequencia}`;
+                
+                let shouldShow = false;
+                
+                // Mobile: mostrar apenas 1 card (modo + modalidade + frequencia)
+                if (isMobile) {
+                    shouldShow = cardModo === modo && cardModalidade === modalidade && cardFrequencia === frequencia;
+                }
+                // Desktop: mostrar 4 cards da modalidade selecionada (todas as frequências)
+                else {
+                    shouldShow = cardModo === modo && cardModalidade === modalidade;
+                }
+                
+                if (shouldShow) {
+                    newVisibleKeys.add(cardKey);
+                    const wasVisible = visibleCardKeys.has(cardKey);
                     
-                    let shouldShow = false;
+                    console.log(`[SHOW] ${cardKey} | wasVisible: ${wasVisible} | shouldAnimate: ${shouldAnimate}`);
                     
-                    // Mobile: mostrar apenas 1 card (modo + modalidade + frequencia)
-                    if (isMobile) {
-                        shouldShow = cardModo === modo && cardModalidade === modalidade && cardFrequencia === frequencia;
-                    }
-                    // Desktop: mostrar 4 cards da modalidade selecionada (todas as frequências)
-                    else {
-                        shouldShow = cardModo === modo && cardModalidade === modalidade;
-                    }
-                    
-                    if (shouldShow) {
+                    // Card deve ser mostrado
+                    if (shouldAnimate && !wasVisible) {
+                        // Com animação - card estava escondido, agora vai aparecer
                         card.style.display = 'block';
-                        // Fade in escalonado para efeito visual
-                        setTimeout(() => {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        
+                        // Transição uniforme de 0.3s
+                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        
+                        console.log(`[ANIMATING] ${cardKey} - Applying fade-in animation`);
+                        
+                        requestAnimationFrame(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'scale(1)';
-                        }, index * 50);
+                        });
                     } else {
-                        card.style.display = 'none';
+                        // Sem animação OU card já estava visível
+                        card.style.transition = 'none';
+                        card.style.display = 'block';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                        console.log(`[NO ANIMATION] ${cardKey} - Already visible or first load`);
                     }
-                });
-                
-                // Atualizar título dinâmico
-                updateDynamicTitle();
-                
-                // Re-inicializar ícones Lucide
-                if (typeof lucide !== 'undefined') {
-                    setTimeout(() => lucide.createIcons(), 50);
+                } else {
+                    const wasVisible = visibleCardKeys.has(cardKey);
+                    
+                    console.log(`[HIDE] ${cardKey} | wasVisible: ${wasVisible} | shouldAnimate: ${shouldAnimate}`);
+                    
+                    // Card deve ser escondido
+                    if (shouldAnimate && wasVisible) {
+                        // Com animação - card estava visível, agora vai desaparecer
+                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        console.log(`[ANIMATING OUT] ${cardKey} - Applying fade-out animation`);
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                            card.style.transition = 'none';
+                        }, 300);
+                    } else {
+                        // Sem animação OU card já estava escondido
+                        card.style.transition = 'none';
+                        card.style.display = 'none';
+                        card.style.opacity = '0';
+                        console.log(`[NO ANIMATION] ${cardKey} - Already hidden or first load`);
+                    }
                 }
-            }, 150);
+            });
+            
+            // Atualizar o conjunto de cards visíveis
+            visibleCardKeys.clear();
+            newVisibleKeys.forEach(key => visibleCardKeys.add(key));
+            
+            // Atualizar título dinâmico
+            updateDynamicTitle();
+            
+            // Marcar que não é mais o primeiro carregamento
+            if (isFirstLoad) {
+                isFirstLoad = false;
+            }
         }
         
         // Função para aplicar filtros baseado no hash da URL
@@ -1337,8 +1406,8 @@
                 updateButton('modalidade');
                 updateButton('frequencia');
                 
-                // Atualizar pricing e título
-                updatePricing();
+                // Atualizar pricing e título SEM animação (é inicialização)
+                updatePricing(false);
                 updateDynamicTitle();
                 
                 // Scroll para a seção de filtros após animação
@@ -1363,11 +1432,8 @@
         
         // Inicializar ao carregar página
         document.addEventListener('DOMContentLoaded', function() {
-            // Adicionar transição aos cards
-            const cards = document.querySelectorAll('.pricing-card');
-            cards.forEach(card => {
-                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            });
+            // NÃO adicionar transições inline - elas conflitam com animações JavaScript
+            // As transições CSS específicas (box-shadow, border) são suficientes
             
             // Adicionar transição aos wrappers dos botões
             const wrappers = document.querySelectorAll('.pricing-selector__wrapper');
@@ -1384,8 +1450,8 @@
                 updateButton('modalidade');
                 updateButton('frequencia');
                 
-                // Inicializar pricing e título
-                updatePricing();
+                // Inicializar pricing e título SEM animação (primeiro carregamento)
+                updatePricing(false);
                 updateDynamicTitle();
             }
             
@@ -1394,7 +1460,7 @@
             window.addEventListener('resize', function() {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
-                    updatePricing();
+                    updatePricing(false); // Sem animação no resize
                     updateDynamicTitle();
                 }, 250);
             });
@@ -1403,7 +1469,17 @@
             window.addEventListener('hashchange', function() {
                 applyHashFilters();
             });
+            
+            // Inicializar ícones Lucide UMA VEZ
+            if (typeof lucide !== 'undefined') {
+                setTimeout(() => {
+                    lucide.createIcons();
+                }, 100);
+            }
         });
+        
+        // Prevenir re-renderização global de ícones pelo bundle
+        window.LUCIDE_ICONS_INITIALIZED = true;
     </script>
     <script src="assets/js/bundle.optimized.js"></script>
 </body>

@@ -27,6 +27,12 @@
          * Initialize Lucide Icons
          */
         initIcons() {
+            // Verificar se já foi inicializado na página
+            if (window.LUCIDE_ICONS_INITIALIZED) {
+                console.log('⚠️ Lucide icons already initialized by page, skipping...');
+                return;
+            }
+            
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
                 console.log('✅ Lucide icons initialized');

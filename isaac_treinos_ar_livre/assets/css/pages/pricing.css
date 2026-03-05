@@ -148,28 +148,20 @@
     padding: var(--space-xl);
     box-shadow: var(--shadow-sm);
     border: 2px solid var(--color-gray-100);
-    transition: all var(--transition-normal);
+    /* Sem transições - controladas via JavaScript quando necessário */
+    transition: none;
     position: relative;
     opacity: 1;
     transform: scale(1);
-    animation: cardFadeIn 0.3s ease-out;
+    /* Animação removida - controlada via JavaScript */
 }
 
-@keyframes cardFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Transições apenas para hover */
 .pricing-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--color-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .pricing-card--featured {
@@ -687,19 +679,9 @@
         gap: var(--space-xs);
     }
     
-    /* Esconder texto dos labels, mostrar apenas ícones */
-    .pricing-selector__label-text {
-        display: none;
-    }
-    
+    /* Esconder labels completamente em mobile */
     .pricing-selector__label {
-        justify-content: center;
-        font-size: var(--font-size-xs);
-    }
-    
-    .pricing-selector__label i {
-        width: 20px;
-        height: 20px;
+        display: none;
     }
     
     /* Ajustar wrapper e select para mobile */
