@@ -42,7 +42,6 @@
             width: 324px;        /* 85,6mm */
             height: 204px;       /* 54mm */
             background: var(--color-background-secondary);
-            border-radius: var(--radius-md);
             box-shadow: var(--shadow-lg);
             position: relative;
             overflow: hidden;
@@ -106,7 +105,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 6px 0 4px;
         }
 
         /* Coluna esquerda - info */
@@ -161,7 +159,6 @@
 
         .qr-simples {
             background: var(--color-background-secondary);
-            padding: var(--spacing-sm);
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-sm);
             border: 1px solid rgba(17, 57, 70, 0.1);
@@ -223,6 +220,10 @@
                         <i data-lucide="map-pin" class="marcador"></i>
                         <span class="texto-info"><strong>Parque Naide Gomes Odivelas</strong></span>
                     </div>
+                    <div class="linha-info">
+                        <i data-lucide="phone" class="marcador"></i>
+                        <span class="texto-info"><strong>+351 939 481 840</strong></span>
+                    </div>
                 </div>
 
                 <!-- Coluna direita: QR code -->
@@ -231,7 +232,6 @@
                         <img src="qrcode.png" alt="QR Code Instagram">
                     </div>
                     <div class="qr-label">Segue-me no Instagram</div>
-                    <div class="handle-mini">@isaac_treinos_ar_livre</div>
                 </div>
             </div>
         </div>
