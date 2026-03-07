@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartão Isaac Lopes - Final</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @page { size: 91mm 61mm; margin: 0; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f0f0; }
+        
+        .cartao {
+            width: 85mm; height: 55mm;
+            padding: 3mm; background: white;
+            position: relative; overflow: hidden;
+            display: flex; page-break-after: always;
+            box-sizing: content-box;
+        }
+
+        .sidebar {
+            position: absolute; left: 0; top: 0; bottom: 0; width: 4mm;
+            /*background: linear-gradient(to bottom, #77b1b1, #2c3e50);*/
+            background: linear-gradient(180deg, #4ecdc4, #2d6a8c);
+        }
+
+        .conteudo { margin-left: 8mm; width: 100%; display: flex; flex-direction: column; justify-content: center; }
+        
+        h1 { color: #113946; font-size: 28pt; margin: 0; font-weight: 700; text-transform: uppercase; }
+        .subtitle { color: #1d4d68; font-size: 12pt; font-weight: 600; margin-bottom: 5px; }
+        .divider { width: 14mm; height: 3px; background: #4ecdc4; margin-bottom: 15px; }
+
+        .info-item { display: flex; align-items: center; margin-bottom: 6px; color: #113946; font-size: 10pt; font-weight: 700; }
+        .lucide { width: 20px; height: 20px; margin-right: 8px; color: #2d6a8c; }
+
+        /* Ajuste do QR Code */
+        .qr-container {
+            position: absolute; right: 8mm; bottom: 5mm;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .qr-code { width: 22mm; height: 22mm; border-radius: 8px; }
+        .qr-text { font-size: 7pt; color: #2c3e50; margin-top: 4px; }
+
+        /* Estilos do Verso Corrigidos */
+        .verso { justify-content: center; align-items: center; text-align: left; }
+        .verso-content { width: 80%; }
+        .verso-title { font-size: 14pt; color: #2c3e50; font-weight: 700; }
+        .verso-tagline { border-left: 3px solid #4ecdc4; padding-left: 8px; font-size: 10pt; font-weight: 500; color: #1d4d68; margin: 10px 0 20px 0; }
+        
+        .promo-box {
+            background: #f0f8f8; border: 1px solid #77b1b1; border-radius: 35px;
+            padding: 10px; display: flex; align-items: center; width: fit-content;
+        }
+        .promo-text b { font-size: 12pt; color: #113946; display: block; }
+        .promo-text span { font-size: 10pt; color: #1d4d68; }
+    </style>
+</head>
+<body>
+
+    <div class="cartao">
+        <div class="sidebar"></div>
+        <div class="conteudo">
+            <h1>ISAAC LOPES</h1>
+            <div class="subtitle">PERSONAL TRAINER & COACH</div>
+            <div class="divider"></div>
+            
+            <div class="info-item"><i data-lucide="trees"></i> Treinos Ar livre</div>
+            <div class="info-item"><i data-lucide="map-pin"></i> Parque Naide Gomes<br>Odivelas</div>
+            <div class="info-item"><i data-lucide="phone"></i> +351 939 481 840</div>
+        </div>
+        <div class="qr-container">
+            <img src="qrcode.png" alt="QR Code" class="qr-code">
+            <div class="qr-text">Segue-me no Instagram</div>
+        </div>
+    </div>
+
+    <div class="cartao verso">
+        <div class="sidebar"></div>
+        <div class="verso-content">
+            <div class="verso-title">CALISTENIA & FUNCIONAL</div>
+            <div class="verso-tagline">treinos ao ar livre • presencial e online</div>
+            
+
+            <div class="info-item" style="margin-bottom: 20px;">
+                <i data-lucide="link"></i> 
+                <span><b>WEBSITE</b><br>izak90.github.io/isaac_treinos_ar_livre</span>
+            </div>
+
+            <div class="promo-box">
+                <i data-lucide="gift" style="width: 30px; height: 30px; margin-right: 12px;"></i>
+                <div class="promo-text">
+                    <b>1ª AULA GRATUITA</b>
+                    <span>experimenta sem compromisso &nbsp </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
