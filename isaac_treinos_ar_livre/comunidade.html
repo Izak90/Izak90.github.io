@@ -20,59 +20,14 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components/access-protection.css">
     <link rel="stylesheet" href="assets/css/visual-enhancements.css">
     <link rel="stylesheet" href="assets/css/pages/community.css">
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Comunidade Isaac Treinos Ar Livre",
-      "description": "Área exclusiva da comunidade com planeamentos de treino, método estruturado em 8 semanas, recursos e benefícios para membros.",
-      "url": "https://izak90.github.io/isaac_treinos_ar_livre/comunidade.html",
-      "image": "https://izak90.github.io/isaac_treinos_ar_livre/img/Foto%20Hero.jpg",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Isaac Treinos Ar Livre",
-        "url": "https://izak90.github.io/isaac_treinos_ar_livre/"
-      },
-      "about": {
-        "@type": "SportsActivityLocation",
-        "name": "Isaac Treinos Ar Livre",
-        "description": "Treino de calistenia e funcional ao ar livre em Lisboa"
-      }
-    }
-    </script>
 </head>
 <body class="has-fixed-header">
     <!-- PROTEÇÃO DE ACESSO -->
-    <div class="access-protection" id="accessProtection" style="display: none;">
-        <div class="access-card">
-            <button class="access-card__close" onclick="closeAccessCard()" aria-label="Fechar">×</button>
-            <div class="access-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-            </div>
-            <h2 class="access-card__title">Turma Fundadora</h2>
-            <p class="access-card__subtitle">Área exclusiva para membros da comunidade</p>
-            
-            <input type="password" class="access-card__input" id="accessCode" placeholder="Código de Acesso">
-            <button class="access-card__button" onclick="checkAccess()">Acessar</button>
-            
-            <p class="access-card__error" id="accessError">❌ Código incorreto</p>
-            
-            <div class="access-card__help">
-                <p>Não tens o código?</p>
-                <a href="https://wa.me/351939481840?text=Olá!%20Preciso%20do%20código%20de%20acesso%20à%20Turma%20Fundadora" target="_blank">Solicitar no WhatsApp</a>
-            </div>
-        </div>
-    </div>
+    <app-access-protection storage-key="communityAccess" password="" depth="2"></app-access-protection>
     
     <!-- Header -->
     <app-header mode="comunidade" current="comunidade"></app-header>
@@ -145,7 +100,7 @@
                     </div>
                 </a>
                 
-                <div class="menu-item menu-item--locked">
+                <a href="comunidade/semanas/semana3-5.html" class="menu-item">
                     <div class="menu-item__icon">
                         <i data-lucide="bar-chart"></i>
                     </div>
@@ -154,9 +109,9 @@
                         <div class="menu-item__subtitle">Fase de Acumulação • Volume progressivo</div>
                     </div>
                     <div class="menu-item__arrow">
-                        <i data-lucide="lock"></i>
+                        <i data-lucide="arrow-right"></i>
                     </div>
-                </div>
+                </a>
                 
                 <div class="menu-item menu-item--locked">
                     <div class="menu-item__icon">
@@ -356,63 +311,7 @@
     
     <!-- JAVASCRIPT -->
     <script src="assets/js/security.js"></script>
-    <script>
-        // PROTEÇÃO DE ACESSO
-        const PASSWORD_HASH = 'bf117f5c251424269357a6a402c5c8daac6600f14324b311ead1be4ff59411e2'; // SHA-256 de "TREINO2026"
-        const STORAGE_KEY = 'communityAccess';
-        const EXPIRATION_TIME = 24 * 60 * 60 * 1000; // 24 horas em milissegundos
-        
-        function closeAccessCard() {
-            window.history.back();
-        }
-        
-        async function checkAccess() {
-            const input = document.getElementById('accessCode');
-            const error = document.getElementById('accessError');
-            const protection = document.getElementById('accessProtection');
-            
-            // Validar usando hash SHA-256
-            const isValid = await window.Security.validatePassword(
-                input.value.toUpperCase(), 
-                PASSWORD_HASH
-            );
-            
-            if (isValid) {
-                sessionStorage.setItem(STORAGE_KEY, 'true');
-                sessionStorage.setItem(`${STORAGE_KEY}_timestamp`, Date.now().toString());
-                protection.style.display = 'none';
-                error.classList.remove('show');
-            } else {
-                error.classList.add('show');
-                input.value = '';
-            }
-        }
-        
-        document.getElementById('accessCode').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') checkAccess();
-        });
-        
-        window.addEventListener('DOMContentLoaded', function() {
-            const protection = document.getElementById('accessProtection');
-            
-            // Verificar se tem acesso válido (não expirado)
-            const accessTimestamp = sessionStorage.getItem(`${STORAGE_KEY}_timestamp`);
-            const hasValidAccess = sessionStorage.getItem(STORAGE_KEY) === 'true' && 
-                                   accessTimestamp && 
-                                   (Date.now() - parseInt(accessTimestamp)) < EXPIRATION_TIME;
-            
-            if (hasValidAccess) {
-                // Manter escondido
-                protection.style.display = 'none';
-            } else {
-                // Limpar acesso expirado e mostrar modal
-                sessionStorage.removeItem(STORAGE_KEY);
-                sessionStorage.removeItem(`${STORAGE_KEY}_timestamp`);
-                protection.style.display = 'flex';
-                setTimeout(() => document.getElementById('accessCode').focus(), 300);
-            }
-        });
-    </script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/components.js" defer></script>
     <script src="assets/js/bundle.optimized.js"></script>
 </body>

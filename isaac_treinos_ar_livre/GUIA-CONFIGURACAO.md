@@ -47,7 +47,7 @@ No ficheiro [`config.js`](assets/js/config.js), a password está armazenada como
 
 ```javascript
 acesso: {
-    passwordHash: 'bf117f5c251424269357a6a402c5c8daac6600f14324b311ead1be4ff59411e2',  // Hash de "TREINO2026"
+    passwordHash: 'bf117f5c251424269357a6a402c5c8daac6600f14324b311ead1be4ff59411e2',  // Hash de password
     expiracaoHoras: 24
 }
 ```

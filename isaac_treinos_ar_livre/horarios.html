@@ -25,30 +25,8 @@
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
 </head>
 <body class="has-fixed-header">
-    <!-- MENU STICKY -->
-    <header class="header">
-        <div class="header__content">
-            <a href="index.html" class="header__brand">
-                <i data-lucide="activity" class="header__icon"></i>
-                <span>Isaac Treinos Ar Livre</span>
-            </a>
-            
-            <button class="header__toggle" aria-label="Menu" aria-expanded="false">
-                <i data-lucide="menu"></i>
-            </button>
-            
-            <nav class="header__nav">
-                <a href="index.html" class="header__link">Início</a>
-                <a href="tabela-precos.html" class="header__link">Preços</a>
-                <a href="horarios.html" class="header__link header__link--active">Horários</a>
-                <a href="comunidade.html" class="header__link">Comunidade <span class="header__badge-members"><i data-lucide="lock" class="icon-sm" aria-hidden="true"></i></span></a>
-                <a href="treino-experimental.html" class="header__cta">
-                    <i data-lucide="zap"></i>
-                    1ª Aula Grátis
-                </a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header -->
+    <app-header mode="horarios" current="horarios"></app-header>
 
     <!-- HERO -->
     <section class="hero hero--gradient">
@@ -276,6 +254,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="assets/js/config.js"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/auto-populate.js"></script>
     <script src="assets/js/bundle.optimized.js"></script>
 </body>

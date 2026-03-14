@@ -84,30 +84,8 @@
     </style>
 </head>
 <body class="has-fixed-header">
-    <!-- MENU STICKY -->
-    <header class="header">
-        <div class="header__content">
-            <a href="index.html" class="header__brand">
-                <i data-lucide="activity" class="header__icon"></i>
-                <span>Isaac Treinos Ar Livre</span>
-            </a>
-            
-            <button class="header__toggle" aria-label="Menu" aria-expanded="false">
-                <i data-lucide="menu"></i>
-            </button>
-            
-            <nav class="header__nav">
-                <a href="index.html" class="header__link">Início</a>
-                <a href="tabela-precos.html" class="header__link header__link--active">Preços</a>
-                <a href="horarios.html" class="header__link">Horários</a>
-                <a href="comunidade.html" class="header__link">Comunidade <span class="header__badge-members"><i data-lucide="lock" class="icon-sm"></i></span></a>
-                <a href="treino-experimental.html" class="header__cta">
-                    <i data-lucide="zap"></i>
-                    1ª Aula Grátis
-                </a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header -->
+    <app-header mode="tabela-precos" current="tabela-precos"></app-header>
 
     <!-- HERO -->
     <section class="hero hero--gradient">
@@ -1481,6 +1459,7 @@
         // Prevenir re-renderização global de ícones pelo bundle
         window.LUCIDE_ICONS_INITIALIZED = true;
     </script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/bundle.optimized.js"></script>
 </body>
 </html>
