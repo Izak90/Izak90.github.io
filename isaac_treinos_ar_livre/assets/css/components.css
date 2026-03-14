@@ -607,6 +607,82 @@
     color: var(--color-gray-700);
     line-height: var(--line-height-relaxed);
 }
+/* =====================================================
+   TABLES
+   ===================================================== */
+.table-responsive {
+    overflow-x: auto;
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 600px;
+}
+
+.progress-table th {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.progress-table th:first-child {
+    text-align: left;
+    border-top-left-radius: var(--radius-md);
+}
+
+.progress-table th:last-child {
+    border-top-right-radius: var(--radius-md);
+}
+
+.progress-table td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+    background: white;
+}
+
+.progress-table td:first-child {
+    font-weight: 600;
+    text-align: left;
+    background-color: var(--color-bg-light);
+    border-right: 1px solid var(--color-border-light);
+}
+
+.progress-table tr:last-child td {
+    border-bottom: none;
+}
+
+.progress-table td i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    color: var(--color-primary);
+}
+
+.progress-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+    background: var(--color-bg-light);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.progress-note i {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
 
 /* =====================================================
    MOBILE OPTIMIZATIONS
