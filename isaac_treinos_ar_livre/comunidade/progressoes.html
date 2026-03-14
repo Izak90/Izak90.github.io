@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabela de progressão de exercícios - Calistenia outdoor em Lisboa. Descubra o seu nível atual e o próximo passo em cada movimento.">
+    <meta name="keywords" content="calistenia, progressão, níveis, exercícios, flexões, dips, pull-ups, agachamentos, outdoor, Lisboa">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/progressao.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tabela de Progressão • Isaac Treinos Ar Livre">
+    <meta property="og:description" content="Consulte o seu nível atual em cada exercício e saiba qual o próximo passo na sua evolução na calistenia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/progressao.html">
+    <meta property="og:image" content="https://izak90.github.io/isaac_treinos_ar_livre/img/Foto%20Hero.jpg">
+    
+    <title>Níveis de Progressão • Isaac Treinos Ar Livre</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">    
+    <link rel="stylesheet" href="../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <style>
+        /* Estilo para a página de progressão */
+        .progressao-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .progressao-header h1 {
+            font-size: 2.2rem;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .progressao-header p {
+            color: var(--color-text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .nivel-badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-right: var(--space-xs);
+        }
+        
+        .nivel-1 { background: #2ecc71; }  /* Verde - Iniciante */
+        .nivel-2 { background: #f39c12; }  /* Laranja - Intermédio */
+        .nivel-3 { background: #e67e22; }  /* Laranja escuro */
+        .nivel-4 { background: #e74c3c; }  /* Vermelho - Avançado */
+        .nivel-5 { background: #9b59b6; }  /* Roxo - Expert */
+        
+        .exercicio-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border-light);
+        }
+        
+        .exercicio-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--color-bg-card);
+        }
+        
+        .exercicio-title i {
+            color: var(--color-primary);
+            width: 28px;
+            height: 28px;
+        }
+        
+        .niveis-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        
+        .nivel-row {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px dashed var(--color-border-light);
+        }
+        
+        .nivel-row:last-child {
+            border-bottom: none;
+        }
+        
+        .nivel-indicator {
+            min-width: 80px;
+            text-align: center;
+            font-weight: 700;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-md);
+            color: white;
+        }
+        
+        .nivel-desc {
+            flex: 1;
+        }
+        
+        .nivel-desc strong {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--color-primary-dark);
+        }
+        
+        .nivel-desc p {
+            margin: 0;
+            color: var(--color-text-medium);
+            font-size: 0.95rem;
+        }
+        
+        .nivel-tags {
+            display: flex;
+            gap: var(--space-xs);
+            margin-top: var(--space-xs);
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: var(--color-bg-light);
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--color-text-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .tag i {
+            width: 14px;
+            height: 14px;
+            color: var(--color-primary);
+        }
+        
+        .legenda {
+            background: var(--color-bg-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            margin: var(--space-xl) 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            justify-content: center;
+        }
+        
+        .legenda-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .legenda-cor {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border-left: 6px solid var(--color-primary);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .info-box i {
+            color: var(--color-primary);
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            .nivel-row {
+                flex-direction: column;
+                gap: var(--space-xs);
+            }
+            
+            .nivel-indicator {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="has-fixed-header">
+    <!-- Header -->
+    <app-header mode="comunidade" current="progressao" depth="1"></app-header>
+
+    <!-- PROTEÇÃO DE ACESSO -->
+    <app-access-protection storage-key="communityAccess" password="TREINO2026" depth="1"></app-access-protection>
+    
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="trending-up"></i>
+                <span>PROGRESSÃO</span>
+            </div>
+            <h1 class="hero__title">
+                Níveis de Progressão
+            </h1>
+            <p class="hero__subtitle">
+                Descobre em que nível estás e qual o próximo passo
+            </p>
+        </div>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="../comunidade.html" class="back-link">
+                <i data-lucide="arrow-left" aria-hidden="true"></i>
+                Voltar à Comunidade
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section">
+        <div class="container">
+            
+            <!-- Legenda de Níveis -->
+            <div class="legenda">
+                <div class="legenda-item">
+                    <div class="legenda-cor" style="background: #2ecc71;"></div>
+                    <span>Nível 1 · Iniciante</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-cor" style="background: #f39c12;"></div>
+                    <span>Nível 2 · Básico</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-cor" style="background: #e67e22;"></div>
+                    <span>Nível 3 · Intermédio</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-cor" style="background: #e74c3c;"></div>
+                    <span>Nível 4 · Avançado</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-cor" style="background: #9b59b6;"></div>
+                    <span>Nível 5 · Expert</span>
+                </div>
+            </div>
+            
+            <!-- PUSH · FLEXÕES -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PUSH · Flexões</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Flexões de joelhos ou inclinadas</strong>
+                            <p>Mãos num banco ou joelhos no chão. Foco na técnica e amplitude.<br>
+                                Mãos à largura dos ombros. Formar uma linha reta dos joelhos à cabeça.<br>
+                                Descer até bater com o peito no chão.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Flexões negativas</strong>
+                            <p>Posição standard, corpo em linha reta, peito quase no chão.
+                                    Descer lentamente (3-5 segundos) e subir com apoio de joelhos.<br>
+                                    Mater cotovelos próximos ao corpo para maior ativação de tríceps.
+                            </p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Flexões normais</strong>
+                            <p>Posição standard, corpo em linha reta, peito quase no chão.<br>
+                            Manter o core, gluteos e pernas ativos.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 10 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Flexões archer</strong>
+                            <p>Mãos afastadas, corpo em linha reta. Fletir um braço enquanto o outro permanece estendido.<br>
+                            Tocar com o peito no chão, subir e repetir para o outro braço.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 4 repetições para cada braço</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Flexões com um braço</strong>
+                            <p>Flexão com um só braço. Requer força máxima e equilíbrio.<br>
+                            Abrir pernas para estabilizar o corpo. Colocar uma das mãos ao lado do tronco e fletir apenas com um braço.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 4 repetições para cada braço</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PUSH · DIPS -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PUSH · Dips / Fundos</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Dips no banco (pés no chão)</strong>
+                            <p>Mãos num banco atrás, pés no chão. Versão mais acessível.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 12 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Dips no banco com pés elevados</strong>
+                            <p>Pés noutro banco à frente, maior amplitude e dificuldade.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 12 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Dips negativas nas paralelas</strong>
+                            <p>Transição para dips verticais. Descida controlada de 3-5 segundos.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Dips nas paralelas</strong>
+                            <p>Dips completos com peso corporal. Maior carga sobre os membros superiores.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Dips nas argolas</strong>
+                            <p>Dips com introdução de instabilidade que tem de ser controlada.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PUSH · PIKE / OMBROS -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PUSH · Pike / Ombros</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Pike com mãos elevadas</strong>
+                            <p>Mãos num banco, pés no chão. Posição de V invertido.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 10 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Pike no chão</strong>
+                            <p>Mãos e pés no chão, ancas elevadas.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 10 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Pike com pés elevados</strong>
+                            <p>Pés num banco, maior inclinação e mais peso nos ombros.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Handstand hold contra parede</strong>
+                            <p>Equilíbrio em posição invertida, preparação para handstand push-up.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 45"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Handstand push-up</strong>
+                            <p>Flexão em posição invertida. Força máxima de ombros.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 5 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PULL · REMADAS -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PULL · Remadas (Horizontal)</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Ring rows (pés no chão, corpo inclinado)</strong>
+                            <p>Posição mais vertical, menor dificuldade.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 12 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Ring rows com pés mais elevados</strong>
+                            <p>Corpo mais horizontal, maior dificuldade.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 10 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Ring rows inclinadas (pés muito elevados)</strong>
+                            <p>Quase paralelo ao chão, máxima ativação.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Front lever rows com elástico</strong>
+                            <p>Maior carga, menos repetições.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Front lever rows (elevado)</strong>
+                            <p>Remada em posição horizontal com corpo paralelo ao chão.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PULL · ELEVAÇÕES -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PULL · Elevações (Vertical)</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Pendurado ativo / Escapulares</strong>
+                            <p>Agarrar barra, ativar escápulas, sem dobrar braços.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 30"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Negativas com salto</strong>
+                            <p>Subir com salto, descer controlado (4-5 segundos).</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Band assisted pull-ups</strong>
+                            <p>Com banda elástica a ajudar na subida.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Pull-ups (primeiras repetições)</strong>
+                            <p>Conseguir fazer 1-3 pull-ups completas.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 3 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Pull-ups (séries completas)</strong>
+                            <p>Múltiplas repetições com boa técnica.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PERNAS · AGACHAMENTOS -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>PERNAS · Agachamentos</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Agachamento corporal</strong>
+                            <p>Peso corporal, focar na técnica.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 20 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Agachamento com tempo (3010)</strong>
+                            <p>Controlo na descida e subida.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 20 repetições</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Agachamento búlgaro</strong>
+                            <p>Unilateral, pé de trás elevado.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 12 repetições cada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Pistol squat assistido</strong>
+                            <p>Agachamento numa perna com apoio.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 8 repetições cada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Pistol squat</strong>
+                            <p>Agachamento numa perna sem apoio.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 6 repetições cada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CORE · PRANCHA -->
+            <div class="exercicio-section">
+                <div class="exercicio-title">
+                    <i data-lucide="activity"></i>
+                    <span>CORE · Prancha</span>
+                </div>
+                
+                <div class="niveis-grid">
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-desc">
+                            <strong>Prancha 30"</strong>
+                            <p>Posição básica, corpo em linha reta.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: 3 séries</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-desc">
+                            <strong>Prancha 45"</strong>
+                            <p>Aumento gradual do tempo.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: conseguir aguentar com boa forma</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-desc">
+                            <strong>Prancha 60"</strong>
+                            <p>Manter 1 minuto com boa forma.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: conseguir aguentar com boa forma</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-desc">
+                            <strong>Prancha com elevação de perna 60"</strong>
+                            <p>Adicionar movimento para aumentar dificuldade.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: conseguir aguentar com boa forma</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nivel-row">
+                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-desc">
+                            <strong>Prancha com elevação de perna e braço contrário 60"</strong>
+                            <p>Adicionar movimento para aumentar dificuldade.</p>
+                            <div class="nivel-tags">
+                                <span class="tag"><i data-lucide="check-circle"></i> Objetivo: conseguir aguentar com boa forma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Informação adicional -->
+            <div class="info-box">
+                <i data-lucide="info" width="20" height="20"></i>
+                <strong>Como usar esta tabela:</strong>
+                <p>Identifica o exercício e o nível onde consegues cumprir as repetições indicadas com boa técnica. Esse é o teu nível atual. O nível seguinte é o teu próximo objetivo. Não avances sem dominar o nível anterior.</p>
+                <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm); flex-wrap: wrap;">
+                    <span class="tag"><i data-lucide="check-circle"></i> Técnica > Carga</span>
+                    <span class="tag"><i data-lucide="check-circle"></i> 3-4 séries por exercício</span>
+                    <span class="tag"><i data-lucide="check-circle"></i> Descanso 75-90"</span>
+                </div>
+            </div>
+            
+            <a href="../comunidade.html" class="btn-back" style="margin-top: var(--space-xl);">← Voltar à Comunidade</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">
+                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
+                        Isaac Treinos Ar Livre
+                    </h3>
+                    <p class="footer__text">
+                        Resultados reais a treinar ao ar livre<br>
+                        Lisboa
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Comece Hoje</h4>
+                    <ul class="footer__links">
+                        <li><a href="../treino-experimental.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Treino Experimental
+                        </a></li>
+                        <li><a href="../tabela-precos.html" class="footer__link">
+                            <i data-lucide="tag"></i>
+                            Preços
+                        </a></li>
+                        <li><a href="../horarios.html" class="footer__link">
+                            <i data-lucide="calendar"></i>
+                            Horários
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Porquê Nós</h4>
+                    <ul class="footer__links">
+                        <li><a href="metodo-treino.html" class="footer__link">
+                            <i data-lucide="book-open"></i>
+                            Método
+                        </a></li>
+                        <li><a href="../comunidade.html" class="footer__link">
+                            <i data-lucide="users"></i>
+                            Comunidade
+                        </a></li>
+                        <li><a href="desconto-referencia.html" class="footer__link">
+                            <i data-lucide="gift"></i>
+                            Desconto Referência
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
+                        </a></li>
+                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
+                            <i data-lucide="instagram"></i>
+                            Instagram
+                        </a></li>
+                        <li><a data-config-href="email" class="footer__link">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20níveis%20de%20progressão" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </a>
+
+    <!-- Inicializar ícones Lucide -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="../assets/js/security.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/bundle.optimized.js"></script>
+</body>
+</html>

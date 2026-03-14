@@ -43,10 +43,10 @@ const SiteConfig = {
      * 2. Executa: await Security.sha256('TUA_NOVA_PASSWORD')
      * 3. Copia o hash e substitui abaixo
      * 
-     * Password atual: COMUNIDADE35
+     * Password atual: ACUMULA35
      */
     acesso: {
-        passwordHash: 'b72677053c00ca847ca22d069fa20f4d6c1216f93be1cfad3390798d3347228b',
+        passwordHash: 'ce103316dc6ef446734f9cf422808c3fc9d195088e27f0e5ba53e4529be11535',
         expiracaoHoras: 24       // Horas até expirar o acesso
     },
 

@@ -79,6 +79,8 @@ class AppHeader extends HTMLElement {
                     <nav class="header__nav">
                         <a href="${this.getBasePath()}comunidade.html" class="header__link ${currentPage === 'comunidade' ? 'header__link--active' : ''}">Início</a>
                         <a href="${this.getBasePath()}comunidade/metodo-treino.html" class="header__link ${currentPage === 'metodo' ? 'header__link--active' : ''}">Método</a>
+                        <a href="${this.getBasePath()}comunidade/progressoes.html" class="header__link ${currentPage === 'progressoes' ? 'header__link--active' : ''}">Progressões</a>
+                        <a href="${this.getBasePath()}comunidade/desafio-semanal.html" class="header__link ${currentPage === 'desafio' ? 'header__link--active' : ''}">Desafio Semanal</a>
                         <a href="${this.getBasePath()}comunidade/desconto-referencia.html" class="header__cta ${currentPage === 'referencia' ? 'header__link--active' : ''}">Desconto Referência</a>
                     </nav>
                 </div>
