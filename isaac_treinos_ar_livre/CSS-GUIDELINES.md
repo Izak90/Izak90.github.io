@@ -205,7 +205,7 @@ Localização: `assets/js/components.js`
     <app-footer depth="0"></app-footer>
     
     <!-- WhatsApp float -->
-    <app-whatsapp phone="351913502673" message="Olá! Estou interessado nos treinos."></app-whatsapp>
+    <app-whatsapp phone="351939481840" message="Olá! Estou interessado nos treinos."></app-whatsapp>
     
     <!-- Antes do </body> -->
     <script src="https://unpkg.com/lucide@latest"></script>

@@ -6,6 +6,7 @@
     <meta name="description" content="Página não encontrada - Isaac Treinos Ar Livre">
     <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/404.html">
     <title>404 - Página não encontrada</title>
+    <link rel="icon" type="image/png" href="img/logo-favicon.png" sizes="32x32">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
     
     <!-- CSS Consolidado -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -90,77 +91,8 @@
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <!-- Seção 1: Branding -->
-                <div class="footer__section">
-                    <div class="footer__brand">
-                        <i data-lucide="activity" class="footer__icon"></i>
-                        <span>Isaac Treinos Ar Livre</span>
-                    </div>
-                    <p class="footer__tagline">Resultados reais a treinar ao ar livre</p>
-                    <p class="footer__location">
-                        <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
-                        Lisboa
-                    </p>
-                </div>
-
-                <!-- Seção 2: Comece Hoje -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Comece Hoje</h3>
-                    <nav class="footer__links">
-                        <a href="treino-experimental.html" class="footer__link">
-                            <i data-lucide="gift" style="width: 16px; height: 16px;"></i>
-                            Treino Experimental
-                        </a>
-                        <a href="tabela-precos.html" class="footer__link">
-                            <i data-lucide="tag" style="width: 16px; height: 16px;"></i>
-                            Preços
-                        </a>
-                        <a href="horarios.html" class="footer__link">
-                            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
-                            Horários
-                        </a>
-                    </nav>
-                </div>
-
-                <!-- Seção 3: Porquê Nós -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Porquê Nós</h3>
-                    <nav class="footer__links">
-                        <a href="comunidade/metodo-treino.html" class="footer__link">Método</a>
-                        <a href="comunidade.html" class="footer__link">Comunidade</a>
-                        <a href="comunidade/desconto-referencia.html" class="footer__link">Desconto Referência</a>
-                    </nav>
-                </div>
-
-                <!-- Seção 4: Contacto -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Contacto</h3>
-                    <nav class="footer__links">
-                        <a data-config-href="whatsapp" class="footer__link" target="_blank" rel="noopener">
-                            <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
-                            WhatsApp
-                        </a>
-                        <a data-config-href="instagram" class="footer__link" target="_blank" rel="noopener">
-                            <i data-lucide="instagram" style="width: 16px; height: 16px;"></i>
-                            Instagram
-                        </a>
-                        <a data-config-href="email" class="footer__link">
-                            <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-                            Email
-                        </a>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p>&copy; 2026 Isaac Treinos Ar Livre. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- FOOTER (Web Component) -->
+    <app-footer depth="0"></app-footer>
 
     <!-- WhatsApp Float -->
     <a data-config-href="whatsapp" 

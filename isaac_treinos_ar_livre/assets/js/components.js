@@ -37,7 +37,7 @@ class AppHeader extends HTMLElement {
             <header class="header">
                 <div class="header__content">
                     <a href="${this.getBasePath()}index.html" class="header__brand">
-                        <i data-lucide="activity" class="header__icon"></i>
+                        <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
                         <span>Isaac Treinos Ar Livre</span>
                     </a>
                     
@@ -68,7 +68,7 @@ class AppHeader extends HTMLElement {
             <header class="header">
                 <div class="header__content">
                     <a href="${this.getBasePath()}index.html" class="header__brand">
-                        <i data-lucide="activity" class="header__icon"></i>
+                        <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
                         <span>Isaac Treinos Ar Livre</span>
                     </a>
                     
@@ -163,45 +163,52 @@ class AppFooter extends HTMLElement {
         this.innerHTML = `
             <footer class="footer">
                 <div class="footer__container container">
-                    <div class="footer__content">
+                    <!-- LEFT COLUMN: BRAND -->
+                    <div class="footer__left">
                         <div class="footer__brand">
-                            <i data-lucide="activity" class="footer__icon"></i>
-                            <span>Isaac Treinos Ar Livre</span>
+                            <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="footer__logo"/>
+                            <h3 class="footer__brand-title">Isaac<br>Treinos<br>Ar Livre</h3>
                         </div>
-                        <p class="footer__tagline">Treino funcional & calistenia personalizado ao ar livre</p>
+                        <p class="footer__tagline">
+                            Treino funcional & calistenia personalizado ao ar livre
+                        </p>
+                        <div class="footer__social">
+                            <a href="https://wa.me/351939481840" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer__social-link">
+                                <i data-lucide="message-circle"></i>
+                            </a>
+                            <a href="https://www.instagram.com/isaac_treinos_ar_livre/" target="_blank" rel="noopener" aria-label="Instagram" class="footer__social-link">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="footer__links">
+                    <!-- RIGHT COLUMN: LINKS (4 SUBCOLS) -->
+                    <div class="footer__right">
                         <div class="footer__column">
-                            <h3 class="footer__title">Navegação</h3>
+                            <h4 class="footer__column-title">Navegação</h4>
                             <a href="${this.getBasePath()}index.html" class="footer__link">Início</a>
                             <a href="${this.getBasePath()}tabela-precos.html" class="footer__link">Preços</a>
                             <a href="${this.getBasePath()}horarios.html" class="footer__link">Horários</a>
+                            <a href="${this.getBasePath()}comunidade.html" class="footer__link">Comunidade</a>
                             <a href="${this.getBasePath()}treino-experimental.html" class="footer__link">1ª Aula Grátis</a>
                         </div>
                         
                         <div class="footer__column">
-                            <h3 class="footer__title">Comunidade</h3>
-                            <a href="${this.getBasePath()}comunidade.html" class="footer__link">Área de Membros</a>
-                            <a href="${this.getBasePath()}comunidade/metodo-treino.html" class="footer__link">Método de Treino</a>
-                        </div>
-                        
-                        <div class="footer__column">
-                            <h3 class="footer__title">Contacto</h3>
-                            <a href="https://wa.me/351913502673" target="_blank" rel="noopener" class="footer__link">
-                                <i data-lucide="phone"></i>
-                                +351 913 502 673
+                            <h4 class="footer__column-title">Contactos</h4>
+                            <a href="https://wa.me/351939481840" target="_blank" rel="noopener" class="footer__link">
+                                <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                                <span>+351 939 481 840</span>
                             </a>
-                            <a href="mailto:isaac.treinos@example.com" class="footer__link">
-                                <i data-lucide="mail"></i>
-                                isaac.treinos@example.com
+                            <a href="mailto:isaaclopes90@gmail.com" class="footer__link">
+                                <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                                <span>isaaclopes90@gmail.com</span>
                             </a>
                         </div>
                     </div>
+                </div>
                     
-                    <div class="footer__bottom">
-                        <p class="footer__copyright">&copy; ${new Date().getFullYear()} Isaac Treinos Ar Livre. Todos os direitos reservados.</p>
-                    </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">&copy; ${new Date().getFullYear()} Isaac Treinos Ar Livre. Todos os direitos reservados.</p>
                 </div>
             </footer>
         `;
@@ -224,7 +231,7 @@ class AppFooter extends HTMLElement {
  */
 class AppWhatsapp extends HTMLElement {
     connectedCallback() {
-        const phoneNumber = this.getAttribute('phone') || '351913502673';
+        const phoneNumber = this.getAttribute('phone') || '351939481840';
         const message = this.getAttribute('message') || 'Olá! Estou interessado nos treinos ao ar livre.';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         

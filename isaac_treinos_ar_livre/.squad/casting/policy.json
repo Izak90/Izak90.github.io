@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "universes_allowed": [
+    "lethal-weapon"
+  ],
+  "current_assignment": {
+    "universe": "lethal-weapon",
+    "allocated_names": ["Riggs", "Murtaugh", "Lorna"],
+    "reserved_names": ["Scribe", "Ralph"],
+    "assigned_at": "2026-04-01T00:00:00Z"
+  },
+  "overflow_strategy": "diegetic_expansion",
+  "max_agents_per_universe": 15
+}

@@ -1,0 +1,36 @@
+{
+  "agents": [
+    {
+      "persistent_name": "Riggs",
+      "role": "Lead / Architect",
+      "universe": "lethal-weapon",
+      "created_at": "2026-04-01T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Murtaugh",
+      "role": "Frontend Dev",
+      "universe": "lethal-weapon",
+      "created_at": "2026-04-01T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Lorna",
+      "role": "Tester / QA",
+      "universe": "lethal-weapon",
+      "created_at": "2026-04-01T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Scribe",
+      "role": "Session Logger",
+      "universe": "reserved",
+      "created_at": "2026-04-01T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  ]
+}

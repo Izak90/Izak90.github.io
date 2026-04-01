@@ -1,8 +1,26 @@
 <!-- 
-FOOTER PADRÃO - Isaac Treinos Ar Livre
-Aplicar em TODAS as páginas principais (index, treino-experimental, tabela-precos, horarios, comunidade)
+FOOTER PADRÃO - Isaac Treinos Ar Livre (v2: Web Component)
+================================================================================
+IMPORTANTE: Footer agora é um componente web reutilizável!
+- Usar <app-footer depth="X"></app-footer> em vez de duplicar HTML
+- depth="0" para páginas na raiz (index.html, tabela-precos.html, etc)
+- depth="1" para páginas em comunidade/
+- depth="2" para páginas em comunidade/recursos/ ou comunidade/semanas/
+- depth="3" para páginas em comunidade/semanas/detalhe-*/
+
+O componente está definido em assets/js/components.js (classe AppFooter)
+Benefícios: Manutenção centralizada, mudanças aplicadas globalmente
+
+LEGACY HTML (Mantido apenas como referência - NÃO USAR EM PRODUÇÃO):
+================================================================================
 -->
 
+<!-- FOOTER WEB COMPONENT (Usar isto em produção) -->
+<app-footer depth="0"></app-footer>
+
+<!-- LEGACY HTML REFERENCE (Arquivo completo abaixo para referência histórica) -->
+
+<!--
 <footer class="footer">
     <div class="container">
         <div class="footer__grid">
@@ -80,6 +98,7 @@ Aplicar em TODAS as páginas principais (index, treino-experimental, tabela-prec
         </div>
     </div>
 </footer>
+-->
 
 <!-- WHATSAPP FLOAT (Aparece em todas as páginas) -->
 <a href="https://wa.me/351939481840?text=Olá!%20Vim%20do%20site" 

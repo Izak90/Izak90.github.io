@@ -6,7 +6,8 @@
     <meta name="description" content="Plano de treino experimental de calistenia - Circuito completo para iniciantes ao ar livre em Lisboa/Odivelas. Treino funcional com barras, argolas e bandas elásticas.">
     <meta name="keywords" content="calistenia, treino funcional, aula experimental, circuito, ar livre, Odivelas, pet friendly">
     <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/treino-experimental.html">
-    
+    <link rel="icon" type="image/png" href="img/logo-favicon.png" sizes="32x32">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Aula Experimental • Isaac Treinos Ar Livre">
     <meta property="og:description" content="Circuito completo de calistenia para iniciantes. Experimenta o treino ao ar livre em Odivelas.">
@@ -27,11 +28,12 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
     <link rel="stylesheet" href="assets/css/pages/workout-detail.css">
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body class="has-fixed-header workout-detail">
     <app-header mode="site" current="treino-experimental"></app-header>
@@ -213,76 +215,8 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__section">
-                    <h3 class="footer__title">
-                        <i data-lucide="dumbbell" class="icon-xl inline-block vertical-middle mr-sm"></i>
-                        Isaac Treinos Ar Livre
-                    </h3>
-                    <p class="footer__text">
-                        Resultados reais a treinar ao ar livre<br>
-                        Lisboa / Odivelas
-                    </p>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Comece Hoje</h4>
-                    <ul class="footer__links">
-                        <li><a href="treino-experimental.html" class="footer__link">
-                            <i data-lucide="gift"></i>
-                            Treino Experimental
-                        </a></li>
-                        <li><a href="tabela-precos.html" class="footer__link">
-                            <i data-lucide="tag"></i>
-                            Preços
-                        </a></li>
-                        <li><a href="horarios.html" class="footer__link">
-                            <i data-lucide="calendar"></i>
-                            Horários
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Porquê Nós</h4>
-                    <ul class="footer__links">
-                        <li><a href="comunidade/metodo-treino.html" class="footer__link">
-                            <i data-lucide="book-open"></i>
-                            Método
-                        </a></li>
-                        <li><a href="comunidade.html" class="footer__link">
-                            <i data-lucide="users"></i>
-                            Comunidade
-                        </a></li>
-                        <li><a href="comunidade/desconto-referencia.html" class="footer__link">
-                            <i data-lucide="gift"></i>
-                            Desconto Referência
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Contacto</h4>
-                    <ul class="footer__links">
-                        <li><a data-config-href="whatsapp" target="_blank" rel="noopener" class="footer__link">
-                            <i data-lucide="message-circle"></i>
-                            WhatsApp
-                        </a></li>
-                        <li><a data-config-href="instagram" target="_blank" rel="noopener" class="footer__link">
-                            <i data-lucide="instagram"></i>
-                            Instagram
-                        </a></li>
-                        <li><a data-config-href="email" class="footer__link">
-                            <i data-lucide="mail"></i>
-                            Email
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>© 2026 Isaac Treinos Ar Livre • Todos os direitos reservados</p>
-            </div>
-        </div>
-    </footer>
+    <!-- FOOTER (Web Component) -->
+    <app-footer depth="0"></app-footer>
 
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/351939481840?text=Olá!%20Gostaria%20de%20agendar%20a%20aula%20experimental" 
