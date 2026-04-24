@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resultados semana de testes — Comunidade">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/resultados-semana-teste.html">
+    <link rel="icon" type="image/png" href="img/logo-favicon.png" sizes="512x512">
+    <title>Resultados - Semana de Testes</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- CSS Consolidado (igual à página comunidade) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="assets/css/pages/community.css">
+    <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
+    <style>
+      /* ajustes locais para a tabela mantendo a identidade visual */
+      .results-wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+      .results{width:100%;border-collapse:collapse;background:#fff;margin-top:8px}
+      .results th,.results td{border:1px solid #e9e9e9;padding:10px;text-align:left;font-size:0.95rem}
+      .results th{background:var(--surface-2,#f7f7f7);font-weight:600}
+      @media (max-width:800px){
+        .results thead{display:none}
+        .results tr{display:block;margin-bottom:12px;border:1px solid #eee}
+        .results td{display:flex;justify-content:space-between;padding:8px}
+        .results td::before{content:attr(data-label);font-weight:600;color:#333}
+      }
+    </style>
+</head>
+<body class="has-fixed-header">
+    <!-- PROTEÇÃO DE ACESSO -->
+    <app-access-protection storage-key="communityAccess" password="" depth="2"></app-access-protection>
+
+    <!-- Header (com mesmo modo que comunidade) -->
+    <app-header mode="comunidade" current="comunidade"></app-header>
+
+    <!-- HERO (mantém estilização do site) -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="users"></i>
+                <span>ÁREA EXCLUSIVA</span>
+            </div>
+            <h1 class="hero__title">Resultados — Semana de Testes</h1>
+            <p class="hero__subtitle">Resultados individuais reportados pelos alunos</p>
+        </div>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="comunidade.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i data-lucide="file-text"></i>
+                Resultados da Semana
+            </h2>
+
+            <div class="results-wrap">
+                <p class="intro">A tabela abaixo apresenta os resultados registados pelos alunos na semana de testes. Valores em falta significam que o teste não foi executado ou não foi reportado.</p>
+
+                <table class="results" aria-describedby="desc">
+                  <thead>
+                    <tr>
+                      <th>Aluno</th>
+                      <th>Pino com apoio (s)</th>
+                      <th>Afundos nas paralelas</th>
+                      <th>Flexões</th>
+                      <th>Suspenso na barra (s)</th>
+                      <th>Supinated hang (s)</th>
+                      <th>Ring rows</th>
+                      <th>Elevações</th>
+                      <th>Afundos (pernas)</th>
+                      <th>Hollow rock (s)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Aluno">Sofia Costa</td>
+                      <td data-label="Pino com apoio (s)">47</td>
+                      <td data-label="Afundos nas paralelas">1x sem elástico</td>
+                      <td data-label="Flexões">8</td>
+                      <td data-label="Suspenso na barra (s)">68</td>
+                      <td data-label="Supinated hang (s)">20</td>
+                      <td data-label="Ring rows">6</td>
+                      <td data-label="Elevações">105Kg elástico</td>
+                      <td data-label="Afundos (pernas)">50</td>
+                      <td data-label="Hollow rock (s)">67</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aluno">Diana Simões</td>
+                      <td data-label="Pino com apoio (s)">25</td>
+                      <td data-label="Afundos nas paralelas">1x com elástico 15kg</td>
+                      <td data-label="Flexões">4x inclinada</td>
+                      <td data-label="Suspenso na barra (s)">26</td>
+                      <td data-label="Supinated hang (s)">28</td>
+                      <td data-label="Ring rows">5</td>
+                      <td data-label="Elevações">90Kg elástico</td>
+                      <td data-label="Afundos (pernas)">81</td>
+                      <td data-label="Hollow rock (s)">57</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aluno">David Pereira</td>
+                      <td data-label="Pino com apoio (s)"></td>
+                      <td data-label="Afundos nas paralelas"></td>
+                      <td data-label="Flexões">15</td>
+                      <td data-label="Suspenso na barra (s)">63</td>
+                      <td data-label="Supinated hang (s)">39</td>
+                      <td data-label="Ring rows">11</td>
+                      <td data-label="Elevações">1x assistida com 15Kg</td>
+                      <td data-label="Afundos (pernas)">40</td>
+                      <td data-label="Hollow rock (s)">61</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aluno">Daniela Reis</td>
+                      <td data-label="Pino com apoio (s)"></td>
+                      <td data-label="Afundos nas paralelas"></td>
+                      <td data-label="Flexões">10 com joelhos na subida</td>
+                      <td data-label="Suspenso na barra (s)">32</td>
+                      <td data-label="Supinated hang (s)">13</td>
+                      <td data-label="Ring rows">6</td>
+                      <td data-label="Elevações">85Kg elástico</td>
+                      <td data-label="Afundos (pernas)">24</td>
+                      <td data-label="Hollow rock (s)">54</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Aluno">Angela Guedes</td>
+                      <td data-label="Pino com apoio (s)"></td>
+                      <td data-label="Afundos nas paralelas"></td>
+                      <td data-label="Flexões"></td>
+                      <td data-label="Suspenso na barra (s)"></td>
+                      <td data-label="Supinated hang (s)"></td>
+                      <td data-label="Ring rows"></td>
+                      <td data-label="Elevações"></td>
+                      <td data-label="Afundos (pernas)"></td>
+                      <td data-label="Hollow rock (s)"></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <app-footer depth="0"></app-footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Vim%20da%20Turma%20Fundadora" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </a>
+    
+    <!-- JAVASCRIPT (igual à página comunidade) -->
+    <script src="assets/js/security.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/bundle.optimized.js"></script>
+</body>
+</html>
