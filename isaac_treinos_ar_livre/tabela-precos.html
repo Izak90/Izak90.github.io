@@ -660,7 +660,7 @@
             </div>
             
             <!-- BARRA TREINOS AVULSO -->
-            <div class="pricing-avulso-bar">
+            <div class="pricing-avulso-bar" id="avulso-bar">
                 <div class="pricing-avulso-bar__icon">
                     <i data-lucide="ticket"></i>
                 </div>
@@ -723,11 +723,11 @@
                 <ul style="list-style: none; display: grid; gap: var(--space-md);">
                     <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
                         <i data-lucide="sparkles" class="icon-lg text-primary flex-shrink-0"></i>
-                        <span><strong>Planeamento e Acompanhamento Online:</strong> Novo plano com análise de vídeos, feedback e ajustes personalizados no planeamento</span>
+                        <span><strong>Planeamento e Acompanhamento Online:</strong> 10% de desconto no plano Semestral.</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
                         <i data-lucide="user-plus" class="icon-lg text-primary flex-shrink-0"></i>
-                        <span><strong>Modalidade Dupla:</strong> 20% desconto quando duas pessoas treinam juntas (válido para presencial e online)</span>
+                        <span><strong>Modalidade Dupla:</strong> 20% desconto quando duas pessoas treinam juntas (válido para presencial)</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
                         <i data-lucide="user-plus" class="icon-lg text-primary flex-shrink-0"></i>
@@ -811,15 +811,23 @@
             const modoBtn = document.getElementById('btn-modo');
             const modo = modoBtn ? modoBtn.getAttribute('data-value') : 'presencial';
             const frequenciaSelectorGroup = document.getElementById('frequencia-selector-group');
+            const isDesktop = window.innerWidth > 768;
             
             if (frequenciaSelectorGroup) {
-                if (modo === 'online') {
-                    // Esconder frequência para online
+                // Esconde frequência em desktop (independente do modo) ou no modo online
+                if (isDesktop || modo === 'online') {
                     frequenciaSelectorGroup.style.display = 'none';
                 } else {
-                    // Mostrar frequência para presencial
                     frequenciaSelectorGroup.style.display = 'block';
                 }
+            }
+        }
+        
+        // Função para atualizar visibilidade da barra de treinos avulso
+        function updateAvulsoBarVisibility(modo) {
+            const avulsoBar = document.getElementById('avulso-bar');
+            if (avulsoBar) {
+                avulsoBar.style.display = (modo === 'online') ? 'none' : 'flex';
             }
         }
         
@@ -846,20 +854,15 @@
             
             let titleText = '';
             
-            // Modo simplificado (apenas primeira palavra)
-            const modoSimples = modoLabel.split(' ')[0]; // 'Presencial' ou 'Online'
+            const modoSimples = modoLabel.split(' ')[0];
             
             if (modo === 'online') {
-                // Para online, não mostrar frequência (que não existe)
                 titleText = `${modoSimples} • ${modalidadeLabel}`;
             } else if (isHashFilter) {
-                // Quando vem de hash #presencial ou #online, mostrar formato completo
                 titleText = `${modoSimples} • ${modalidadeLabel} • ${frequenciaLabel}`;
             } else if (isMobile) {
-                // Mobile: mostrar modo, modalidade e frequência
                 titleText = `${modoSimples} • ${modalidadeLabel} • ${frequenciaLabel}`;
             } else {
-                // Desktop sem hash: mostrar modo completo e modalidade
                 titleText = `${modoLabel} • ${modalidadeLabel}`;
             }
             
@@ -877,26 +880,21 @@
             const currentIndex = parseInt(btn.getAttribute('data-current')) || 0;
             const option = selectorOptions[type][currentIndex];
             
-            // Atualizar data-value
             btn.setAttribute('data-value', option.value);
             
-            // Atualizar texto
             const textElement = btn.querySelector('.pricing-selector__button-text');
             if (textElement) {
                 textElement.textContent = option.label;
             }
             
-            // Atualizar texto abreviado (mobile)
             const abbrevElement = document.getElementById(`abbrev-${type}`);
             if (abbrevElement && option.abbrev) {
                 abbrevElement.textContent = option.abbrev;
             }
             
-            // Atualizar ícone
             const icon = document.getElementById(`icon-${type}`);
             if (icon && option.icon) {
                 icon.setAttribute('data-lucide', option.icon);
-                // Re-renderizar apenas os ícones dentro do botão específico
                 if (typeof lucide !== 'undefined') {
                     const btn = document.getElementById(`btn-${type}`);
                     if (btn) {
@@ -916,30 +914,25 @@
             const btn = document.getElementById(`btn-${type}`);
             if (!btn) return;
             
-            // Se é modalidade, aplicar lógica especial
             if (type === 'modalidade') {
                 const modoBtn = document.getElementById('btn-modo');
                 const modo = modoBtn ? modoBtn.getAttribute('data-value') : 'presencial';
                 
-                // Filtrar modalidades válidas para este modo
                 const validModalidades = selectorOptions.modalidade.filter(m => m.modo === modo);
                 const currentValue = btn.getAttribute('data-value');
                 const currentIndex = validModalidades.findIndex(m => m.value === currentValue);
                 const nextIndex = (currentIndex + 1) % validModalidades.length;
                 
-                // Encontrar o índice global no array completo
                 const nextModalidade = validModalidades[nextIndex];
                 const globalIndex = selectorOptions.modalidade.findIndex(m => m.value === nextModalidade.value);
                 
                 btn.setAttribute('data-current', globalIndex);
             } else {
-                // Para modo e frequência, usar lógica padrão
                 const currentIndex = parseInt(btn.getAttribute('data-current')) || 0;
                 const totalOptions = selectorOptions[type].length;
                 const nextIndex = (currentIndex + 1) % totalOptions;
                 btn.setAttribute('data-current', nextIndex);
                 
-                // Se mudou de modo, atualizar modalidade para a primeira válida desse modo
                 if (type === 'modo') {
                     const nextModo = selectorOptions.modo[nextIndex].value;
                     const modalidadeBtn = document.getElementById('btn-modalidade');
@@ -951,20 +944,15 @@
                 }
             }
             
-            // Atualizar botões
             updateButton(type);
             if (type === 'modo') {
                 updateButton('modalidade');
-                updateFrequenciaVisibility(); // Esconder/mostrar frequência conforme modo
+                updateFrequenciaVisibility();
             }
             
-            // Atualizar título
             updateDynamicTitle();
-            
-            // Trigger updatePricing
             updatePricing();
             
-            // Feedback visual
             const wrapper = btn.closest('.pricing-selector__wrapper');
             if (wrapper) {
                 wrapper.style.transform = 'scale(0.95)';
@@ -988,7 +976,6 @@
         
         // Função para atualizar URL hash conforme seleção
         function updateUrlHash(modo, modalidade, frequencia) {
-            // Apenas presencial grupo 3x tem hash (ou online planeamento 3x now)
             if ((modalidade === 'grupo' && frequencia === '3x') || (modalidade === 'planeamento' && frequencia === '3x')) {
                 if (modo === 'presencial') {
                     window.history.replaceState(null, '', '#presencial');
@@ -996,14 +983,12 @@
                     window.history.replaceState(null, '', '#online');
                 }
             } else {
-                // Remover hash para outras combinações
                 window.history.replaceState(null, '', window.location.pathname);
             }
         }
         
         // Função para atualizar os cards visíveis baseado na seleção
         function updatePricing(animate = true) {
-            // Obter seleções atuais dos botões
             const modoBtn = document.getElementById('btn-modo');
             const modalidadeBtn = document.getElementById('btn-modalidade');
             const frequenciaBtn = document.getElementById('btn-frequencia');
@@ -1012,45 +997,33 @@
             const modalidade = modalidadeBtn ? modalidadeBtn.getAttribute('data-value') : 'grupo';
             const frequencia = frequenciaBtn ? frequenciaBtn.getAttribute('data-value') : '3x';
             
-            // Atualizar preços avulsos
             updateAvulsoPrices(modo);
-            
-            // Atualizar URL hash
+            updateAvulsoBarVisibility(modo);   // Mostra/esconde barra de treinos avulso
             updateUrlHash(modo, modalidade, frequencia);
             
-            // Obter todos os cards
             const cards = document.querySelectorAll('.pricing-card');
             const isMobile = window.innerWidth <= 768;
             
-            // Desabilitar animação se for o primeiro carregamento
             const shouldAnimate = animate && !isFirstLoad;
             
-            // Novo conjunto de cards que devem estar visíveis
             const newVisibleKeys = new Set();
             
-            // Processar cada card
             cards.forEach((card, index) => {
                 const cardModo = card.dataset.modo;
                 const cardModalidade = card.dataset.modalidade;
                 const cardFrequencia = card.dataset.frequencia;
                 
-                // Criar chave única para este card
                 const cardKey = `${cardModo}-${cardModalidade}-${cardFrequencia}`;
                 
                 let shouldShow = false;
                 
-                // Mobile: mostrar apenas 1 card (modo + modalidade + frequencia)
                 if (isMobile) {
-                    // NOVO: se o modo for online, ignorar a frequência (seletor escondido)
                     if (modo === 'online') {
                         shouldShow = cardModo === modo && cardModalidade === modalidade;
                     } else {
-                        // Modo presencial em mobile: mostrar só a combinação exata
                         shouldShow = cardModo === modo && cardModalidade === modalidade && cardFrequencia === frequencia;
                     }
-                }
-                // Desktop: mostrar 4 cards da modalidade selecionada (todas as frequências)
-                else {
+                } else {
                     shouldShow = cardModo === modo && cardModalidade === modalidade;
                 }
                 
@@ -1058,66 +1031,46 @@
                     newVisibleKeys.add(cardKey);
                     const wasVisible = visibleCardKeys.has(cardKey);
                     
-                    console.log(`[SHOW] ${cardKey} | wasVisible: ${wasVisible} | shouldAnimate: ${shouldAnimate}`);
-                    
-                    // Card deve ser mostrado
                     if (shouldAnimate && !wasVisible) {
-                        // Com animação - card estava escondido, agora vai aparecer
                         card.style.display = 'block';
                         card.style.opacity = '0';
                         card.style.transform = 'scale(0.95)';
-                        
-                        // Transição uniforme de 0.3s
                         card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        
-                        console.log(`[ANIMATING] ${cardKey} - Applying fade-in animation`);
                         
                         requestAnimationFrame(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'scale(1)';
                         });
                     } else {
-                        // Sem animação OU card já estava visível
                         card.style.transition = 'none';
                         card.style.display = 'block';
                         card.style.opacity = '1';
                         card.style.transform = 'scale(1)';
-                        console.log(`[NO ANIMATION] ${cardKey} - Already visible or first load`);
                     }
                 } else {
                     const wasVisible = visibleCardKeys.has(cardKey);
                     
-                    console.log(`[HIDE] ${cardKey} | wasVisible: ${wasVisible} | shouldAnimate: ${shouldAnimate}`);
-                    
-                    // Card deve ser escondido
                     if (shouldAnimate && wasVisible) {
-                        // Com animação - card estava visível, agora vai desaparecer
                         card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                         card.style.opacity = '0';
                         card.style.transform = 'scale(0.95)';
-                        console.log(`[ANIMATING OUT] ${cardKey} - Applying fade-out animation`);
                         setTimeout(() => {
                             card.style.display = 'none';
                             card.style.transition = 'none';
                         }, 300);
                     } else {
-                        // Sem animação OU card já estava escondido
                         card.style.transition = 'none';
                         card.style.display = 'none';
                         card.style.opacity = '0';
-                        console.log(`[NO ANIMATION] ${cardKey} - Already hidden or first load`);
                     }
                 }
             });
             
-            // Atualizar o conjunto de cards visíveis
             visibleCardKeys.clear();
             newVisibleKeys.forEach(key => visibleCardKeys.add(key));
             
-            // Atualizar título dinâmico
             updateDynamicTitle();
             
-            // Marcar que não é mais o primeiro carregamento
             if (isFirstLoad) {
                 isFirstLoad = false;
             }
@@ -1125,38 +1078,32 @@
         
         // Função para aplicar filtros baseado no hash da URL
         function applyHashFilters() {
-            const hash = window.location.hash.substring(1); // Remove '#'
+            const hash = window.location.hash.substring(1);
             
             if (hash === 'presencial' || hash === 'online') {
                 const modoBtn = document.getElementById('btn-modo');
                 const modalidadeBtn = document.getElementById('btn-modalidade');
                 const frequenciaBtn = document.getElementById('btn-frequencia');
                 
-                const modoIndex = hash === 'presencial' ? 0 : 1; // presencial=0, online=1
-                const freq3xIndex = 0; // '3x' é o primeiro na lista
-                
-                // Para presencial, usar grupo (índice 0); para online, usar planeamento (índice 3)
+                const modoIndex = hash === 'presencial' ? 0 : 1;
+                const freq3xIndex = 0;
                 const modalidadeIndex = hash === 'presencial' ? 0 : 3;
                 
-                // Aplicar os índices
                 if (modoBtn) modoBtn.setAttribute('data-current', modoIndex);
                 if (modalidadeBtn) modalidadeBtn.setAttribute('data-current', modalidadeIndex);
                 if (frequenciaBtn) frequenciaBtn.setAttribute('data-current', freq3xIndex);
                 
-                // Atualizar botões
                 updateButton('modo');
                 updateButton('modalidade');
                 updateButton('frequencia');
                 
-                // Atualizar pricing e título SEM animação (é inicialização)
                 updatePricing(false);
                 updateDynamicTitle();
                 
-                // Scroll para a seção de filtros após animação
                 setTimeout(() => {
                     const selectorSection = document.querySelector('.pricing-selector');
                     if (selectorSection) {
-                        const offset = 100; // Offset para não ficar colado ao topo
+                        const offset = 100;
                         const elementPosition = selectorSection.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - offset;
                         
@@ -1174,46 +1121,37 @@
         
         // Inicializar ao carregar página
         document.addEventListener('DOMContentLoaded', function() {
-            // NÃO adicionar transições inline - elas conflitam com animações JavaScript
-            // As transições CSS específicas (box-shadow, border) são suficientes
-            
-            // Adicionar transição aos wrappers dos botões
             const wrappers = document.querySelectorAll('.pricing-selector__wrapper');
             wrappers.forEach(wrapper => {
                 wrapper.style.transition = 'transform 0.1s ease';
             });
             
-            // Verificar se há hash na URL antes de inicializar padrão
             const hasHashFilter = applyHashFilters();
             
             if (!hasHashFilter) {
-                // Inicializar botões com as opções padrão apenas se não houver hash
                 updateButton('modo');
                 updateButton('modalidade');
                 updateButton('frequencia');
-                updateFrequenciaVisibility(); // Inicializar visibilidade de frequência
+                updateFrequenciaVisibility();
                 
-                // Inicializar pricing e título SEM animação (primeiro carregamento)
                 updatePricing(false);
                 updateDynamicTitle();
             }
             
-            // Atualizar ao redimensionar (mobile <-> desktop)
             let resizeTimer;
             window.addEventListener('resize', function() {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
-                    updatePricing(false); // Sem animação no resize
+                    updateFrequenciaVisibility();  // Reavalia visibilidade da frequência
+                    updatePricing(false);
                     updateDynamicTitle();
                 }, 250);
             });
             
-            // Listener para mudanças no hash da URL
             window.addEventListener('hashchange', function() {
                 applyHashFilters();
             });
             
-            // Inicializar ícones Lucide UMA VEZ
             if (typeof lucide !== 'undefined') {
                 setTimeout(() => {
                     lucide.createIcons();
@@ -1221,11 +1159,9 @@
             }
         });
         
-        // Prevenir re-renderização global de ícones pelo bundle
         window.LUCIDE_ICONS_INITIALIZED = true;
     </script>
     <script src="assets/js/components.js" defer></script>
     <script src="assets/js/bundle.optimized.js"></script>
 </body>
 </html>
-
