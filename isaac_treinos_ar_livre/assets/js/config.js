@@ -14,7 +14,7 @@ const SiteConfig = {
      */
     turma: {
         totalVagas: 8,           // Total de vagas disponíveis
-        alunosAtuais: 7,         // Alunos já inscritos
+        alunosAtuais: 6,         // Alunos já inscritos
         get vagasDisponiveis() { // Cálculo automático
             return this.totalVagas - this.alunosAtuais;
         },
