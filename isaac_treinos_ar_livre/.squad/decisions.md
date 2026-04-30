@@ -49,4 +49,55 @@ Single source of truth for architecture, process, and scope decisions.
 
 ---
 
+## 2026-04-30: HTML/CSS/JS Pattern Consistency (Directive)
+
+**By:** Izak90  
+**What:** All pages must follow identical design patterns, color palette, structure, and use Lucide icons consistently  
+**Why:** Maintain visual and structural coherence across website. Users experience a unified brand and navigation.  
+**Rule:** 
+- Every page uses `assets/css/main.css` + shared component CSS
+- Every page includes Lucide icons via `https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js`
+- Color palette defined in `assets/css/design-tokens.css` — no hardcoded colors
+- Structure: header (app-header), main content, footer (app-footer) on every page
+- No page-specific color variations without Lead approval
+
+**Owner:** Riggs (Architecture Lead)  
+**Status:** ACTIVE (enforce on every page)
+
+---
+
+## 2026-04-30: Shared CSS & JS Libraries (Directive)
+
+**By:** Izak90  
+**What:** All CSS and JavaScript definitions must live in shared, centralized files — never duplicated or page-specific  
+**Why:** Reduce code duplication, enable bulk updates, simplify maintenance.  
+**Rule:**
+- Global CSS: `assets/css/main.css`, `assets/css/components.css`, `assets/css/design-tokens.css`, `assets/css/layout.css`, `assets/css/utilities.css`
+- Page-specific CSS: `assets/css/pages/{page-name}.css` (one per page, imported only by that page)
+- Global JS: `assets/js/app.js`, `assets/js/config.js`, `assets/js/components.js`, `assets/js/security.js`
+- Page utilities: small shared functions in `assets/js/` (no inline scripts in HTML except config)
+- **No CSS or JS code directly in HTML files** (except minimal config or event listeners if absolutely necessary)
+
+**Owner:** Murtaugh (Frontend Dev) + Riggs (Architecture Lead)  
+**Status:** ACTIVE (audit on every change)
+
+---
+
+## 2026-04-30: CSS/JS Deduplication Check (Directive)
+
+**By:** Izak90  
+**What:** Before creating any new `.css` or `.js`, verify that the style or function does not already exist in shared files  
+**Why:** Prevent duplication, maintain DRY principle, reduce bundle size.  
+**Rule:**
+- **CSS check:** Search `assets/css/` (especially tokens, components, pages) using grep or visual scan
+- **JS check:** Search `assets/js/` for matching function names, object keys, or module names
+- **Existing match found?** Reuse, extend, or document the existing code instead of creating new
+- **Add to existing?** If extending, update the related `.css` or `.js` file and notify Scribe (document in history)
+- **Tool:** When in doubt, ask Riggs to verify before creating new files
+
+**Owner:** Murtaugh (Frontend Dev) + Lorna (QA validation)  
+**Status:** ACTIVE (verify before every new file)
+
+---
+
 *New decisions and scope updates recorded here as work progresses.*
