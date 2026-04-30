@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Exercícios - Isaac Treinos Ar Livre</title>
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: var(--line-height-normal);
+            color: var(--color-text-primary);
+            background-color: var(--color-background-primary);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--color-primary-main) 0%, var(--color-primary-light) 100%);
+            color: var(--color-text-inverse);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header h1 {
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--spacing-sm);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .header p {
+            font-size: var(--font-size-lg);
+            opacity: 0.95;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: var(--color-background-secondary);
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav button {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: none;
+            background-color: transparent;
+            color: var(--color-primary-main);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav button:hover,
+        .nav button.active {
+            color: var(--color-secondary-main);
+            border-bottom-color: var(--color-secondary-main);
+            background-color: rgba(78, 205, 196, 0.05);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-primary-main);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 40px;
+            background: var(--color-secondary-main);
+            border-radius: var(--radius-sm);
+        }
+
+        /* Grid de Exercícios */
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .exercise-card {
+            background: var(--color-background-secondary);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-card);
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .section:nth-child(1) .exercise-card {
+            border-left-color: var(--color-accent-blue);
+        }
+
+        .section:nth-child(2) .exercise-card {
+            border-left-color: var(--color-secondary-main);
+        }
+
+        .section:nth-child(3) .exercise-card {
+            border-left-color: var(--color-accent-purple);
+        }
+
+        .exercise-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .exercise-card h3 {
+            color: var(--color-primary-main);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+
+        .exercise-card p {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* Search */
+        .search-box {
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--color-background-tertiary);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-base);
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--color-secondary-main);
+            background-color: var(--color-background-secondary);
+        }
+
+        .search-box button {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--color-primary-main);
+            color: var(--color-text-inverse);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background: var(--color-primary-light);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary-main);
+            color: var(--color-text-inverse);
+            text-align: center;
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .footer p {
+            margin: var(--spacing-xs) 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            .exercises-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: var(--spacing-md);
+            }
+
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+        }
+
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(69, 183, 209, 0.1) 100%);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-secondary-main);
+        }
+
+        .stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-top: var(--spacing-xs);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🏋️ Banco de Exercícios</h1>
+        <p>Isaac Treinos Ar Livre - Seu Guia Completo de Movimento</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <button class="nav-btn active" data-section="aquecimento">
+            🔥 Aquecimento
+        </button>
+        <button class="nav-btn" data-section="forca">
+            💪 Força
+        </button>
+        <button class="nav-btn" data-section="alongamentos">
+            🧘 Alongamentos
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Procurar exercício...">
+            <button onclick="buscarExercicio()">Pesquisar</button>
+        </div>
+
+        <!-- AQUECIMENTO -->
+        <section class="section active" id="aquecimento">
+            <h2 class="section-title">Aquecimento</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="count-aquecimento">0</div>
+                    <div class="stat-label">Exercícios</div>
+                </div>
+            </div>
+            <div class="exercises-grid" id="grid-aquecimento"></div>
+        </section>
+
+        <!-- FORÇA -->
+        <section class="section" id="forca">
+            <h2 class="section-title">Força</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="count-forca">0</div>
+                    <div class="stat-label">Exercícios</div>
+                </div>
+            </div>
+            <div class="exercises-grid" id="grid-forca"></div>
+        </section>
+
+        <!-- ALONGAMENTOS -->
+        <section class="section" id="alongamentos">
+            <h2 class="section-title">Alongamentos</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="count-alongamentos">0</div>
+                    <div class="stat-label">Exercícios</div>
+                </div>
+            </div>
+            <div class="exercises-grid" id="grid-alongamentos"></div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 Isaac Treinos Ar Livre. Todos os direitos reservados.</p>
+        <p>Consulte um profissional antes de iniciar qualquer programa de treino.</p>
+    </div>
+
+    <script>
+        // Base de Dados de Exercícios
+        const exercicios = {
+            aquecimento: [
+                {
+                    nome: "A Skips",
+                    descricao: "Saltite no lugar elevando alternadamente os joelhos à frente, com o pé a 'bater' no chão de forma rápida, simulando o movimento de skipping atlético."
+                },
+                {
+                    nome: "B Skips",
+                    descricao: "Semelhante ao 'A Skip', mas ao elevar o joelho, a perna estende-se rapidamente à frente antes de pousar, num movimento mais balístico."
+                },
+                {
+                    nome: "High Knees",
+                    descricao: "Corra no lugar elevando os joelhos o mais alto que conseguir, mantendo um ritmo acelerado."
+                },
+                {
+                    nome: "Jumping Jacks",
+                    descricao: "Em pé, salte afastando as pernas e elevando os braços lateralmente acima da cabeça, e regresse à posição inicial."
+                },
+                {
+                    nome: "Shoulder Warmup",
+                    descricao: "Faça círculos com os braços estendidos, para a frente e para trás, aquecendo as articulações dos ombros."
+                },
+                {
+                    nome: "Hip Circles",
+                    descricao: "Em pé, faça círculos amplos com as ancas, rodando nos dois sentidos."
+                },
+                {
+                    nome: "Leg Swings",
+                    descricao: "Balance a perna para a frente e para trás, soltando a articulação da anca."
+                },
+                {
+                    nome: "Lateral Leg Swings",
+                    descricao: "Em pé, balance a perna de um lado para o outro à frente do corpo, mantendo o tronco estável."
+                },
+                {
+                    nome: "Cat-Cow",
+                    descricao: "Em quatro apoios, arredonde as costas (como um gato) e depois arqueie-a suavemente, deixando a barriga cair, sincronizando com a respiração."
+                },
+                {
+                    nome: "Downward Facing Dog",
+                    descricao: "Em quatro apoios, eleve as ancas formando um V invertido, com as mãos e os pés no chão, alongando as costas e pernas."
+                },
+                {
+                    nome: "Jumping Jacks",
+                    descricao: "Em pé, salte afastando as pernas e elevando os braços lateralmente acima da cabeça, e regresse à posição inicial."
+                },
+                {
+                    nome: "Running Man",
+                    descricao: "No lugar, simule a corrida elevando bem os joelhos e movendo os braços ritmadamente."
+                },
+                {
+                    nome: "Boxer Skips with Jump Rope",
+                    descricao: "Salte à corda imitando o footwork de um pugilista: pés alternados, joelhos elevados e ritmo rápido."
+                },
+                {
+                    nome: "Alternating Legs with Jump Rope",
+                    descricao: "Salte à corda alternando os pés, como se estivesse a correr no lugar, mantendo um ritmo contínuo."
+                },
+                {
+                    nome: "Double Hops with Jump Rope",
+                    descricao: "Salte à corda dando dois saltos por cada volta da corda (passada dupla)."
+                },
+                {
+                    nome: "Single Unders with Jump Rope",
+                    descricao: "Salte à corda dando um salto por cada volta da corda (passada simples)."
+                }
+            ],
+            forca: [
+                {
+                    nome: "Pushups",
+                    descricao: "Apoie as mãos e os pés no chão, corpo reto. Baixe o peito até próximo do chão e empurre para cima."
+                },
+                {
+                    nome: "Pullups",
+                    descricao: "Pendure-se na barra com as palmas viradas para a frente e puxe-se até o queixo ultrapassar a barra."
+                },
+                {
+                    nome: "Squats",
+                    descricao: "Com os pés à largura dos ombros, baixe as ancas como se fosse sentar-se, mantendo as costas retas e os joelhos alinhados com os pés."
+                },
+                {
+                    nome: "Lunges",
+                    descricao: "Em pé, dê um passo à frente e desça até ambos os joelhos formarem 90 graus, depois regresse à posição inicial e alterne."
+                },
+                {
+                    nome: "Dumbbell Bench Presses",
+                    descricao: "Deite-se num banco com um haltere em cada mão. Empurre-os para cima até os braços esticarem e baixe-os lentamente."
+                },
+                {
+                    nome: "Chest Dips",
+                    descricao: "Nas paralelas, baixe o corpo dobrando os cotovelos até os ombros descerem ligeiramente abaixo dos cotovelos, e empurre para cima."
+                },
+                {
+                    nome: "Mountain Climbers",
+                    descricao: "Em prancha alta, leve alternadamente os joelhos em direção ao peito num ritmo rápido."
+                },
+                {
+                    nome: "Burpees",
+                    descricao: "Em pé, agache, coloque as mãos no chão, salte os pés para trás em prancha, faça uma flexão (opcional), salte os pés para a frente e salte explosivamente."
+                },
+                {
+                    nome: "Plank Hold",
+                    descricao: "Mantenha o corpo em linha reta, apoiado nos antebraços e pontas dos pés, contraindo bem o core."
+                },
+                {
+                    nome: "Hip Raises",
+                    descricao: "Deite-se de costas, joelhos fletidos. Eleve as ancas contraindo glúteos e lombar (ponte de glúteos) e baixe."
+                },
+                {
+                    nome: "Deadlifts",
+                    descricao: "Com os pés afastados à largura dos ombros, agarre o peso com as costas retas e eleve estendendo as ancas."
+                },
+                {
+                    nome: "Bench Press",
+                    descricao: "Deite-se num banco com halteres ou barra. Baixe o peso até ao peito e empurre-o para cima, estendendo os braços."
+                },
+                {
+                    nome: "Squat Jumps",
+                    descricao: "Agache-se e, ao subir, salte explosivamente, caindo de volta em agachamento."
+                },
+                {
+                    nome: "Box Jumps",
+                    descricao: "Salte a partir do chão para cima de uma caixa, caindo suavemente em posição de meio agachamento."
+                },
+                {
+                    nome: "Calf Raises",
+                    descricao: "Em pé, eleve-se nos dedos dos pés, contraindo os gémeos, e desça lentamente até ao chão."
+                },
+                {
+                    nome: "Chin Ups",
+                    descricao: "Segure a barra com as palmas viradas para si (largura dos ombros) e puxe-se até o queixo ultrapassar a barra."
+                },
+                {
+                    nome: "Muscle-ups",
+                    descricao: "Pendure-se na barra e, com um movimento potente, puxe-se e transite para cima da barra, terminando com os braços estendidos."
+                },
+                {
+                    nome: "Diamond Pushups",
+                    descricao: "Junte as mãos por baixo do peito, formando um diamante com polegares e indicadores. Faça flexões assim."
+                },
+                {
+                    nome: "Decline Pushups",
+                    descricao: "Apoie os pés numa superfície elevada e as mãos no chão. Faça flexões, com o corpo inclinado."
+                },
+                {
+                    nome: "Incline Pushups",
+                    descricao: "Apoie as mãos num banco, cadeira ou step. Faça flexões com o corpo inclinado, facilitando o movimento."
+                },
+                {
+                    nome: "Clapping Pushups",
+                    descricao: "Faça uma flexão explosiva, de modo que as mãos saiam do chão, bata uma palma e aterrisse novamente em posição de apoio."
+                },
+                {
+                    nome: "Dumbbell Curls",
+                    descricao: "De pé, com halteres nas mãos. Mantenha os cotovelos fixos ao lado do corpo e faça uma rosca bíceps."
+                },
+                {
+                    nome: "Triceps Extensions",
+                    descricao: "Com haltere ou faixa, braços estendidos acima da cabeça. Baixe o peso atrás da cabeça dobrando os cotovelos e estenda-os novamente."
+                },
+                {
+                    nome: "Rows",
+                    descricao: "Incline o tronco para a frente com as costas retas e puxe o peso em direção ao abdómen, contraindo as costas."
+                },
+                {
+                    nome: "Assisted Pullups",
+                    descricao: "Use uma faixa elástica presa à barra e apoiada nos pés/joelhos para auxiliar na elevação durante as barras fixas."
+                },
+                {
+                    nome: "Assisted Squats",
+                    descricao: "Segure-se a um apoio à frente e agache, mantendo o tronco mais vertical graças ao suporte."
+                },
+                {
+                    nome: "Kettlebell Goblet Split Squats",
+                    descricao: "Segure um kettlebell junto ao peito. Faça o agachamento unilateral (split squat)."
+                },
+                {
+                    nome: "Handstand Hold",
+                    descricao: "Apoie as mãos no chão, chute para cima e mantenha o corpo invertido e alinhado, equilibrando-se em posição de pino."
+                },
+                {
+                    nome: "L-Sits",
+                    descricao: "Sente-se no chão com as pernas estendidas, mãos ao lado das coxas. Eleve o corpo e mantenha as pernas paralelas ao chão."
+                },
+                {
+                    nome: "Pistol Squats",
+                    descricao: "Equilibre-se numa perna, estenda a outra à frente e agache-se profundamente, mantendo o calcanhar de apoio no chão."
+                }
+            ],
+            alongamentos: [
+                {
+                    nome: "Advanced Quad Stretch Left",
+                    descricao: "Em pé, agarre o pé esquerdo atrás do corpo com a mão esquerda, puxando o calcanhar em direção aos glúteos."
+                },
+                {
+                    nome: "Advanced Quad Stretch Right",
+                    descricao: "Igual ao anterior, mas alongando a perna direita."
+                },
+                {
+                    nome: "Calf Stretch Left",
+                    descricao: "Dê um passo à frente com a perna direita, mantenha a esquerda esticada atrás e pressione o calcanhar esquerdo contra o chão."
+                },
+                {
+                    nome: "Calf Stretch Right",
+                    descricao: "Igual, mas alongando a perna direita (perna esquerda à frente)."
+                },
+                {
+                    nome: "Chest Stretch Left",
+                    descricao: "Coloque a mão esquerda numa parede ou poste e rode o corpo para o lado oposto, sentindo o alongamento no peito e ombro."
+                },
+                {
+                    nome: "Chest Stretch Right",
+                    descricao: "Igual, mas com a mão direita apoiada."
+                },
+                {
+                    nome: "Forearms Stretch",
+                    descricao: "Estenda um braço à frente com a palma para cima. Com a outra mão, puxe suavemente os dedos para baixo, alongando o antebraço."
+                },
+                {
+                    nome: "Forward Fold",
+                    descricao: "Em pé, incline o tronco para a frente, deixando a cabeça pendente e as mãos em direção ao chão, relaxando as costas."
+                },
+                {
+                    nome: "Glutes Stretch Left",
+                    descricao: "Deite-se de costas, cruze o tornozelo esquerdo sobre o joelho direito e puxe a perna direita em direção ao peito."
+                },
+                {
+                    nome: "Glutes Stretch Right",
+                    descricao: "Igual, mas cruzando o tornozelo direito sobre o joelho esquerdo."
+                },
+                {
+                    nome: "Good Morning Stretch",
+                    descricao: "Em pé, mãos na cabeça ou atrás, incline o tronco para a frente com as costas retas, como se fosse cumprimentar."
+                },
+                {
+                    nome: "Hamstring Stretch Left",
+                    descricao: "Sente-se com a perna esquerda estendida e a direita dobrada. Incline-se para a frente em direção ao pé esquerdo."
+                },
+                {
+                    nome: "Hamstring Stretch Right",
+                    descricao: "Igual, mas alongando a perna direita."
+                },
+                {
+                    nome: "Hip Stretch Left",
+                    descricao: "Sente-se com a perna esquerda dobrada à frente e a direita estendida atrás. Incline o tronco para a frente."
+                },
+                {
+                    nome: "Hip Stretch Right",
+                    descricao: "Igual, mas com a perna direita à frente."
+                },
+                {
+                    nome: "Kneeling Hip Flexor Stretch Left",
+                    descricao: "Ajoelhe-se com a perna direita à frente formando 90 graus. Contraia os glúteos e empurre a anca para a frente."
+                },
+                {
+                    nome: "Lat Stretch Left",
+                    descricao: "Em pé, eleve o braço esquerdo e incline o tronco para a direita, alongando o grande dorsal."
+                },
+                {
+                    nome: "Lat Stretch Right",
+                    descricao: "Igual, mas alongando o lado direito."
+                },
+                {
+                    nome: "Lat Stretch on Box",
+                    descricao: "Apoie os cotovelos numa caixa e sente-se sobre os calcanhares, deixando as costas alongarem."
+                },
+                {
+                    nome: "Lunge Stretch Left",
+                    descricao: "Dê um passo à frente com a perna direita, mantenha a esquerda esticada atrás e baixe a anca, alongando o flexor da anca."
+                },
+                {
+                    nome: "Lunge Stretch Right",
+                    descricao: "Igual, mas com a perna direita atrás e a esquerda à frente."
+                },
+                {
+                    nome: "Overhead Shoulder Stretch",
+                    descricao: "Passe um braço por cima da cabeça, dobre o cotovelo e, com a outra mão, puxe-o suavemente para o lado contrário."
+                },
+                {
+                    nome: "Pancake Stretch",
+                    descricao: "Sente-se com as pernas bem afastadas, incline o tronco para a frente e tente deitar o peito no chão."
+                },
+                {
+                    nome: "Shoulder Stretch Left",
+                    descricao: "Passe o braço esquerdo à frente do peito e puxe-o suavemente com o braço direito, alongando o ombro."
+                },
+                {
+                    nome: "Shoulder Stretch Right",
+                    descricao: "Igual, mas puxando o braço direito."
+                },
+                {
+                    nome: "Side Stretch Left",
+                    descricao: "Em pé, incline o tronco para a esquerda, alongando o lado direito, com o braço esquerdo ao lado da perna."
+                },
+                {
+                    nome: "Side Stretch Right",
+                    descricao: "Incline para a direita, alongando o lado esquerdo."
+                },
+                {
+                    nome: "Toe Reaches",
+                    descricao: "Sente-se com as pernas estendidas e incline-se para a frente, tentando tocar os dedos dos pés."
+                },
+                {
+                    nome: "Triceps Stretch Left",
+                    descricao: "Passe o braço esquerdo por cima da cabeça, dobre o cotovelo e puxe-o suavemente com a mão direita."
+                },
+                {
+                    nome: "Triceps Stretch Right",
+                    descricao: "Igual, mas puxando o cotovelo direito."
+                },
+                {
+                    nome: "Child's Pose",
+                    descricao: "Ajoelhe-se e sente-se sobre os calcanhares, incline o tronco para a frente com os braços estendidos, relaxando as costas."
+                },
+                {
+                    nome: "Couch Stretch Left",
+                    descricao: "Ajoelhe-se de frente para um sofá/parede. Apoie o pé esquerdo no sofá atrás de si e empurre a anca para a frente."
+                },
+                {
+                    nome: "Couch Stretch Right",
+                    descricao: "Igual, mas com o pé direito apoiado atrás."
+                },
+                {
+                    nome: "Deep Squat Hold",
+                    descricao: "Agache-se profundamente, mantendo os calcanhares no chão e as costas direitas. Permaneça na posição."
+                },
+                {
+                    nome: "Pigeon Left",
+                    descricao: "Partindo da prancha, traga o joelho esquerdo para a frente, apoiando a perna dobrada no chão, e incline-se para a frente."
+                },
+                {
+                    nome: "Pigeon Right",
+                    descricao: "Igual, mas com a perna direita dobrada à frente."
+                },
+                {
+                    nome: "Relaxation Pose",
+                    descricao: "Deite-se de costas com os braços e pernas ligeiramente afastados, relaxando completamente o corpo."
+                }
+            ]
+        };
+
+        // Renderizar Exercícios
+        function renderizarExercicios() {
+            Object.keys(exercicios).forEach(categoria => {
+                const grid = document.getElementById(`grid-${categoria}`);
+                const count = document.getElementById(`count-${categoria}`);
+                
+                grid.innerHTML = '';
+                exercicios[categoria].forEach(exercicio => {
+                    const card = document.createElement('div');
+                    card.className = 'exercise-card';
+                    card.innerHTML = `
+                        <h3>${exercicio.nome}</h3>
+                        <p>${exercicio.descricao}</p>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                count.textContent = exercicios[categoria].length;
+            });
+        }
+
+        // Navegação de Abas
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const section = this.getAttribute('data-section');
+                
+                // Remove active de todos
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                
+                // Adiciona active ao clicado
+                this.classList.add('active');
+                document.getElementById(section).classList.add('active');
+            });
+        });
+
+        // Buscar Exercício
+        function buscarExercicio() {
+            const termo = document.getElementById('searchInput').value.toLowerCase();
+            
+            if (!termo) {
+                renderizarExercicios();
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.querySelector('.nav-btn').classList.add('active');
+                document.querySelector('.section').classList.add('active');
+                return;
+            }
+
+            Object.keys(exercicios).forEach(categoria => {
+                const grid = document.getElementById(`grid-${categoria}`);
+                grid.innerHTML = '';
+
+                const exerciciosFiltrados = exercicios[categoria].filter(ex => 
+                    ex.nome.toLowerCase().includes(termo) || 
+                    ex.descricao.toLowerCase().includes(termo)
+                );
+
+                exerciciosFiltrados.forEach(exercicio => {
+                    const card = document.createElement('div');
+                    card.className = 'exercise-card';
+                    card.innerHTML = `
+                        <h3>${exercicio.nome}</h3>
+                        <p>${exercicio.descricao}</p>
+                    `;
+                    grid.appendChild(card);
+                });
+            });
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', renderizarExercicios);
+        document.getElementById('searchInput').addEventListener('keyup', buscarExercicio);
+    </script>
+</body>
+</html>
