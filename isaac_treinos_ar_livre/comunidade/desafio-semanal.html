@@ -31,301 +31,11 @@
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/components.css">    
     <link rel="stylesheet" href="../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../assets/css/pages/challenges.css">
     <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
-    
-    <style>
-        .desafio-header {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-        
-        .desafio-header h1 {
-            font-size: 2.2rem;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .desafio-header p {
-            color: var(--color-text-medium);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .desafio-semana {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-xl);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--color-border-light);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .desafio-semana::before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 8rem;
-            opacity: 0.03;
-            transform: rotate(15deg);
-            pointer-events: none;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%231e4f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 150px;
-            height: 150px;
-        }
-        
-        .semana-badge {
-            display: inline-block;
-            background: var(--color-primary);
-            color: white;
-            font-weight: 700;
-            padding: 4px 16px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .desafio-titulo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-        }
-        
-        .desafio-titulo i {
-            color: var(--color-primary);
-            width: 32px;
-            height: 32px;
-        }
-        
-        .desafio-meta {
-            display: flex;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-            flex-wrap: wrap;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            background: var(--color-bg-light);
-            padding: var(--space-xs) var(--space-md);
-            border-radius: var(--radius-md);
-            font-weight: 500;
-        }
-        
-        .meta-item i {
-            color: var(--color-primary);
-        }
-        
-        .exercicio-destaque {
-            background: linear-gradient(135deg, var(--color-bg-light), white);
-            border-left: 6px solid var(--color-primary);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            margin: var(--space-lg) 0;
-        }
-        
-        .exercicio-destaque h3 {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .progressao-dias {
-            display: flex;
-            justify-content: space-between;
-            margin: var(--space-lg) 0;
-            gap: var(--space-sm);
-            flex-wrap: wrap;
-        }
-        
-        .dia-card {
-            flex: 1;
-            min-width: 100px;
-            background: var(--color-bg-light);
-            border-radius: var(--radius-md);
-            padding: var(--space-sm);
-            text-align: center;
-            transition: transform var(--transition-fast);
-        }
-        
-        .dia-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .dia-nome {
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .dia-reps {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-primary-dark);
-        }
-        
-        .dia-nota {
-            font-size: 0.8rem;
-            color: var(--color-text-medium);
-        }
-        
-        .dicas-box {
-            background: #e8f4fd;
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            margin-top: var(--space-lg);
-        }
-        
-        .dicas-box h4 {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .proximos-desafios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-md);
-            margin-top: var(--space-xl);
-        }
-        
-        .proximo-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-md);
-            border: 1px dashed var(--color-primary-light);
-            opacity: 0.8;
-            transition: opacity var(--transition-fast);
-        }
-        
-        .proximo-card:hover {
-            opacity: 1;
-        }
-        
-        .proximo-titulo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            font-weight: 700;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .proximo-data {
-            font-size: 0.9rem;
-            color: var(--color-text-medium);
-        }
-        
-        .btn-desafio {
-            display: inline-block;
-            background: var(--color-primary);
-            color: white;
-            text-decoration: none;
-            padding: var(--space-sm) var(--space-lg);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            margin-top: var(--space-md);
-            transition: background var(--transition-fast);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-desafio:hover {
-            background: var(--color-primary-dark);
-        }
-        
-        .btn-desafio i {
-            vertical-align: middle;
-        }
-        
-        .frase-motivacional {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-sm);
-            text-align: center;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--color-primary);
-            margin: var(--space-xl) 0;
-            padding: var(--space-md);
-            border-top: 2px solid var(--color-bg-card);
-            border-bottom: 2px solid var(--color-bg-card);
-        }
-        
-        .desafio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-md);
-            margin-top: var(--space-lg);
-        }
-        
-        .desafio-card {
-            background: var(--color-bg-light);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            transition: transform var(--transition-fast);
-        }
-        
-        .desafio-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .desafio-card i {
-            color: var(--color-primary);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .alongamentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-md);
-            margin-top: var(--space-md);
-        }
-        
-        .alongamento-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            background: white;
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            border-left: 4px solid var(--color-primary);
-        }
-        
-        .alongamento-item i {
-            color: var(--color-primary);
-            flex-shrink: 0;
-        }
-        
-        @media (max-width: 768px) {
-            .desafio-titulo {
-                font-size: 1.5rem;
-            }
-            
-            .progressao-dias {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body class="has-fixed-header">
     <!-- Header -->
@@ -373,7 +83,7 @@
             <!-- DESAFIO DA SEMANA ATUAL -->
             <div class="desafio-semana">
                 <div class="semana-badge">
-                    <i data-lucide="flame" width="14" height="14" style="vertical-align: middle;"></i>
+                    <i data-lucide="flame" width="14" height="14" ></i>
                     DESAFIO DA SEMANA
                 </div>
                 
@@ -405,7 +115,7 @@
                     <p>Completar <strong>100 agachamentos</strong> ao longo do dia, ou de uma só vez, com boa técnica. Podes dividir como preferires, mas o objetivo é acumular 100 repetições com qualidade.</p>
                 </div>
                 
-                <h3 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                <h3 >
                     <i data-lucide="calendar"></i>
                     Sugestão de Progressão Diária
                 </h3>
@@ -455,25 +165,25 @@
                         <i data-lucide="info"></i>
                         Dicas para o desafio
                     </h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="display: flex; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-xs);">
-                            <i data-lucide="check-circle" width="16" height="16" style="color: var(--color-primary);"></i>
+                    <ul >
+                        <li >
+                            <i data-lucide="check-circle" width="16" height="16" ></i>
                             <span>Mantém as costas retas e o peito erguido</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-xs);">
-                            <i data-lucide="check-circle" width="16" height="16" style="color: var(--color-primary);"></i>
+                        <li >
+                            <i data-lucide="check-circle" width="16" height="16" ></i>
                             <span>Desce como se fosses sentar numa cadeira</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-xs);">
-                            <i data-lucide="check-circle" width="16" height="16" style="color: var(--color-primary);"></i>
+                        <li >
+                            <i data-lucide="check-circle" width="16" height="16" ></i>
                             <span>Se sentires dores nos joelhos, reduz amplitude</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-xs);">
-                            <i data-lucide="check-circle" width="16" height="16" style="color: var(--color-primary);"></i>
+                        <li >
+                            <i data-lucide="check-circle" width="16" height="16" ></i>
                             <span>Podes dividir ao longo do dia (ex: 10 séries de 10)</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-xs);">
-                            <i data-lucide="check-circle" width="16" height="16" style="color: var(--color-primary);"></i>
+                        <li >
+                            <i data-lucide="check-circle" width="16" height="16" ></i>
                             <span>Partilha o teu progresso no grupo!</span>
                         </li>
                     </ul>
@@ -486,7 +196,7 @@
             </div>
             
             <!-- PRÓXIMOS DESAFIOS -->
-            <h2 style="display: flex; align-items: center; gap: var(--space-sm); margin: var(--space-xl) 0 var(--space-md);">
+            <h2 >
                 <i data-lucide="calendar"></i>
                 Próximos Desafios
             </h2>
@@ -497,8 +207,8 @@
                         <i data-lucide="calendar"></i>
                         <span>Semana 21-27 Março</span>
                     </div>
-                    <h3 style="margin: var(--space-xs) 0;">300 Prancha (total)</h3>
-                    <p style="font-size: 0.9rem;">Acumular 300 segundos de prancha ao longo do dia.</p>
+                    <h3 >300 Prancha (total)</h3>
+                    <p >Acumular 300 segundos de prancha ao longo do dia.</p>
                     <div class="proximo-data">Séries de 20-30 segundos</div>
                 </div>
                 
@@ -507,8 +217,8 @@
                         <i data-lucide="calendar"></i>
                         <span>Semana 28 Mar-3 Abr</span>
                     </div>
-                    <h3 style="margin: var(--space-xs) 0;">50 Flexões</h3>
-                    <p style="font-size: 0.9rem;">Acumular 50 flexões (joelhos ou normais).</p>
+                    <h3 >50 Flexões</h3>
+                    <p >Acumular 50 flexões (joelhos ou normais).</p>
                     <div class="proximo-data">Séries de 5-10 repetições</div>
                 </div>
                 
@@ -517,15 +227,15 @@
                         <i data-lucide="calendar"></i>
                         <span>Semana 4-10 Abril</span>
                     </div>
-                    <h3 style="margin: var(--space-xs) 0;">75 Lombares</h3>
-                    <p style="font-size: 0.9rem;">Acumular 75 repetições de lombares.</p>
+                    <h3 >75 Lombares</h3>
+                    <p >Acumular 75 repetições de lombares.</p>
                     <div class="proximo-data">Séries de 15-25 repetições</div>
                 </div>
             </div>
             
             <!-- SUGESTÕES DE DESAFIOS RÁPIDOS -->
-            <div style="margin-top: var(--space-xl);">
-                <h2 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+            <div >
+                <h2 >
                     <i data-lucide="zap"></i>
                     Desafios Rápidos (10 minutos)
                 </h2>
@@ -533,45 +243,45 @@
                 <div class="desafio-grid">
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">100 Squats</h3>
-                        <p style="font-size: 0.9rem;">100 agachamentos em 10 minutos</p>
+                        <h3 >100 Squats</h3>
+                        <p >100 agachamentos em 10 minutos</p>
                     </div>
                     
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">5' Prancha</h3>
-                        <p style="font-size: 0.9rem;">Acumular 5 minutos de prancha</p>
+                        <h3 >5' Prancha</h3>
+                        <p >Acumular 5 minutos de prancha</p>
                     </div>
                     
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">50 Push-ups</h3>
-                        <p style="font-size: 0.9rem;">50 flexões em 10 minutos</p>
+                        <h3 >50 Push-ups</h3>
+                        <p >50 flexões em 10 minutos</p>
                     </div>
                     
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">60" Ponte</h3>
-                        <p style="font-size: 0.9rem;">Acumular 60 segundos de ponte</p>
+                        <h3 >60" Ponte</h3>
+                        <p >Acumular 60 segundos de ponte</p>
                     </div>
                     
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">40 Dips banco</h3>
-                        <p style="font-size: 0.9rem;">40 fundos no banco</p>
+                        <h3 >40 Dips banco</h3>
+                        <p >40 fundos no banco</p>
                     </div>
                     
                     <div class="desafio-card">
                         <i data-lucide="activity" width="24" height="24"></i>
-                        <h3 style="margin: var(--space-xs) 0;">20 Lunges perna</h3>
-                        <p style="font-size: 0.9rem;">20 afundos cada perna</p>
+                        <h3 >20 Lunges perna</h3>
+                        <p >20 afundos cada perna</p>
                     </div>
                 </div>
             </div>
             
             <!-- ALONGAMENTOS -->
-            <div style="background: var(--color-bg-light); border-radius: var(--radius-lg); padding: var(--space-lg); margin-top: var(--space-xl);">
-                <h2 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+            <div >
+                <h2 >
                     <i data-lucide="heart"></i>
                     Desafio de Alongamentos
                 </h2>
@@ -639,3 +349,4 @@
     <script src="../assets/js/bundle.optimized.js"></script>
 </body>
 </html>
+
