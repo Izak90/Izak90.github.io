@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Micro Ciclo de Treino — Força, Volume e Condicionamento">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/microciclo.html">
+    <link rel="icon" type="image/png" href="../../img/logo-favicon.png" sizes="512x512">
+    <title>Micro Ciclo — Isaac Treinos Ar Livre</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- CSS Consolidado -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../../assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="../../assets/css/pages/community.css">
+    <link rel="stylesheet" href="../../assets/css/mobile-optimizations.css">
+    
+    <style>
+        .workout-day {
+            margin-bottom: 40px;
+        }
+        .workout-day__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        .workout-phase {
+            background: var(--surface-2, #f7f7f7);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .workout-phase h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .workout-phase ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .workout-phase li {
+            font-size: 0.9rem;
+            padding: 4px 0;
+            border-bottom: 1px dashed var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+        }
+        .workout-phase li:last-child {
+            border-bottom: none;
+        }
+        .workout-table-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            margin-top: 12px;
+        }
+        .workout-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .workout-table th {
+            background: var(--surface-2);
+            font-weight: 600;
+            padding: 10px 8px;
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .workout-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+        .workout-table tbody tr:hover td {
+            background-color: var(--surface-hover);
+        }
+        .workout-table .exercise-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        @media (max-width: 600px) {
+            .workout-table th,
+            .workout-table td {
+                padding: 8px 6px;
+                font-size: 0.78rem;
+            }
+        }
+    </style>
+</head>
+<body class="has-fixed-header">
+    <app-access-protection storage-key="communityAccess" password="" depth="2"></app-access-protection>
+    <app-header mode="comunidade" current="comunidade" depth="2"></app-header>
+
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="dumbbell"></i>
+                <span>PLANO DE TREINO</span>
+            </div>
+            <h1 class="hero__title">Micro Ciclo</h1>
+            <p class="hero__subtitle">Força e Isometria · Volume e Técnica · Condicionamento</p>
+        </div>
+    </section>
+
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="../../comunidade.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar para Comunidade
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Dia 1 -->
+            <div class="workout-day">
+                <h2 class="workout-day__title">
+                    <i data-lucide="circle-dot"></i> Dia 1 – Força e Isometria
+                </h2>
+
+                <div class="workout-phase">
+                    <h4>⏱️ 0:00 – 3:00 | Mobilidade</h4>
+                    <ul>
+                        <li>Rotações de pulsos <span>30s cada direção</span></li>
+                        <li>Círculos de braços <span>frente e trás, 30s cada</span></li>
+                        <li>Rotação de tronco em pé <span>30s</span></li>
+                        <li>Balanços de perna <span>frente/trás e lateral, 30s cada</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>🏃 3:00 – 7:00 | Técnica de Corrida (Drills)</h4>
+                    <ul>
+                        <li>Marcha com extensão de anca <span>45''</span></li>
+                        <li>Skipping baixo (A-Skip) <span>45''</span></li>
+                        <li>Calcanhares ao rabo (Butt kicks) <span>45''</span></li>
+                        <li>Skipping alto (B-Skip) <span>45''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>⚡ 7:00 – 10:00 | Ativação Específica</h4>
+                    <ul>
+                        <li>Scaoular Plank <span>1× 10''</span></li>
+                        <li>Dead Hang <span>1× 15''</span></li>
+                        <li>Squat <span>1× 10 reps</span></li>
+                        <li>Headstand <span>2× 10'' - 12''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-table-wrapper">
+                    <table class="workout-table">
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Rep Range</th>
+                                <th>RPE</th>
+                                <th>External Load</th>
+                                <th>Cadence</th>
+                                <th>Rest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="exercise-name">A1. Tuck Hang</td>
+                                <td>3</td>
+                                <td>25'' - 35''</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">A2. Handstand</td>
+                                <td>3</td>
+                                <td>15'' - 20''</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">B1. Rows</td>
+                                <td>3</td>
+                                <td>6 - 8 reps</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>x-3-1-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">B2. Push ups</td>
+                                <td>3</td>
+                                <td>6 - 8 reps</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>3-0-x-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">C1. Bulgarian Squat</td>
+                                <td>3</td>
+                                <td>2× 10 - 12 reps</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>1-0-x-0</td>
+                                <td>60''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">C2. Unilateral Glute Bridge</td>
+                                <td>3</td>
+                                <td>2× 10 - 12 reps</td>
+                                <td>n/a</td>
+                                <td>body weight</td>
+                                <td>x-0-1-0</td>
+                                <td>60''</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 24px; padding: 16px; background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-hover) 100%); border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <i data-lucide="wind" style="width: 20px; height: 20px; color: var(--primary);"></i>
+                        <h4 style="margin: 0; font-weight: 600; color: var(--text-primary);">Não esqueças os Alongamentos</h4>
+                    </div>
+                    <p style="margin: 0 0 12px 0; color: var(--text-secondary); font-size: 0.9rem;">Completa a tua sessão com 5-7 minutos de alongamentos essenciais para recuperação.</p>
+                    <a href="../recursos/alongamentos.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--primary); color: var(--text-primary); border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s;">
+                        <span>Ver Alongamentos</span>
+                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Dia 2 -->
+            <div class="workout-day">
+                <h2 class="workout-day__title">
+                    <i data-lucide="circle-dot"></i> Dia 2 – Volume e Técnica
+                </h2>
+
+                <div class="workout-phase">
+                    <h4>⏱️ 0:00 – 3:00 | Mobilidade</h4>
+                    <ul>
+                        <li>Mobilidade de pulsos em quatro apoios <span>balanços suaves, 1 min</span></li>
+                        <li>Rotação de ombros com bastão ou elástico <span>1 min</span></li>
+                        <li>Afundo com torção <span>30s cada lado</span></li>
+                        <li>Mobilidade de tornozelos <span>pés afastados, balançar joelhos à frente, 30s</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>🏃 3:00 – 7:00 | Técnica de Corrida (Drills)</h4>
+                    <ul>
+                        <li>Skipping alto coordenativo <span>45''</span></li>
+                        <li>skipping tibial <span>45''</span></li>
+                        <li>giroflé giroflá <span>45''</span></li>
+                        <li>mini steps <span>45''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>⚡ 7:00 – 10:00 | Ativação Específica</h4>
+                    <ul>
+                        <li>Pike Holds <span>1× 10''</span></li>
+                        <li>Scap Pull-Ups <span>1× 8 reps</span></li>
+                        <li>Supinated Hold <span>1× 10''</span></li>
+                        <li>Hollow Body Hold <span>1× 15''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-table-wrapper">
+                    <table class="workout-table">
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Rep Range</th>
+                                <th>RPE</th>
+                                <th>External Load</th>
+                                <th>Cadence</th>
+                                <th>Rest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="exercise-name">A1. Pike Push-up</td>
+                                <td>3</td>
+                                <td>6 - 8 reps</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>2-0-x-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">A2. Pull ups</td>
+                                <td>3</td>
+                                <td>6 - 8 reps</td>
+                                <td></td>
+                                <td>assisted with band</td>
+                                <td>x-3-1-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">B1. Face Pulls</td>
+                                <td>3</td>
+                                <td>8 - 10 reps</td>
+                                <td></td>
+                                <td>assisted with band</td>
+                                <td>x-1-2-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">B2. Tricep Extension</td>
+                                <td>3</td>
+                                <td>8 - 10 reps</td>
+                                <td></td>
+                                <td>assisted with band</td>
+                                <td>x-0-3-0</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">C1. Nordic Curl</td>
+                                <td>3</td>
+                                <td>6 - 8 reps</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>3-0-0-0</td>
+                                <td>60''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">C2. Leg Raises</td>
+                                <td>3</td>
+                                <td>10 - 12 reps</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>x-1-2-0</td>
+                                <td>60''</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 24px; padding: 16px; background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-hover) 100%); border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <i data-lucide="wind" style="width: 20px; height: 20px; color: var(--primary);"></i>
+                        <h4 style="margin: 0; font-weight: 600; color: var(--text-primary);">Não esqueças os Alongamentos</h4>
+                    </div>
+                    <p style="margin: 0 0 12px 0; color: var(--text-secondary); font-size: 0.9rem;">Completa a tua sessão com 5-7 minutos de alongamentos essenciais para recuperação.</p>
+                    <a href="../recursos/alongamentos.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--primary); color: var(--text-primary); border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s;">
+                        <span>Ver Alongamentos</span>
+                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Dia 3 -->
+            <div class="workout-day">
+                <h2 class="workout-day__title">
+                    <i data-lucide="circle-dot"></i> Dia 3 – Condicionamento e Resistência
+                </h2>
+
+                <div class="workout-phase">
+                    <h4>⏱️ 0:00 – 3:00 | Mobilidade (Dinâmica)</h4>
+                    <ul>
+                        <li>Rolamentos de pulsos em pé <span>30s</span></li>
+                        <li>Círculos de anca amplos <span>30s cada lado</span></li>
+                        <li>Agachamento profundo com alcance alternado <span>1 min</span></li>
+                        <li>"Inchworm" <span>3 repetições</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>🏃 3:00 – 7:00 | Técnica de Corrida (Drills com coordenação)</h4>
+                    <ul>
+                        <li>A Marches <span>45''</span></li>
+                        <li>B Marches <span>45''</span></li>
+                        <li>Skipping Troca em cima <span>45''</span></li>
+                        <li>Skipping circular <span>45''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-phase">
+                    <h4>⚡ 7:00 – 10:00 | Ativação Específica</h4>
+                    <ul>
+                        <li>Mini Squat Jumps <span>1× 5 reps</span></li>
+                        <li>Scapular Rows <span>1× 8 reps</span></li>
+                        <li>Bear crawl <span>1× 10''</span></li>
+                        <li>Dead hang <span>1× 10''</span></li>
+                    </ul>
+                </div>
+
+                <div class="workout-table-wrapper">
+                    <table class="workout-table">
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Rep Range</th>
+                                <th>RPE</th>
+                                <th>External Load</th>
+                                <th>Cadence</th>
+                                <th>Rest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="exercise-name">
+                                    1. Squat Jump<br>
+                                    2. Rows<br>
+                                    3. Push Ups<br>
+                                    4. Dead Hang
+                                </td>
+                                <td>EMOM 12'</td>
+                                <td>
+                                    8 reps<br>
+                                    8 reps<br>
+                                    8 reps<br>
+                                    20''
+                                </td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">Bear Crawl</td>
+                                <td>3</td>
+                                <td>35''</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">Crab Walk</td>
+                                <td>3</td>
+                                <td>35''</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">Pistol Squat</td>
+                                <td>3</td>
+                                <td>2× 8 - 10 reps</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                            <tr>
+                                <td class="exercise-name">Lateral Plank</td>
+                                <td>3</td>
+                                <td>2× 25''</td>
+                                <td></td>
+                                <td>body weight</td>
+                                <td>n/a</td>
+                                <td>1'30''</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 24px; padding: 16px; background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-hover) 100%); border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <i data-lucide="wind" style="width: 20px; height: 20px; color: var(--primary);"></i>
+                        <h4 style="margin: 0; font-weight: 600; color: var(--text-primary);">Não esqueças os Alongamentos</h4>
+                    </div>
+                    <p style="margin: 0 0 12px 0; color: var(--text-secondary); font-size: 0.9rem;">Completa a tua sessão com 5-7 minutos de alongamentos essenciais para recuperação.</p>
+                    <a href="../recursos/alongamentos.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--primary); color: var(--text-primary); border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s;">
+                        <span>Ver Alongamentos</span>
+                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-info" style="margin-top: 32px;">
+                <i data-lucide="info"></i>
+                <strong>Execução</strong><br>
+                <span>Respeita os tempos de descanso e a cadência indicada. Adapta as progressões conforme necessário.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <app-footer depth="2"></app-footer>
+
+    <a href="https://wa.me/351939481840?text=Olá!%20Vim%20da%20Turma%20Fundadora" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float"
+       aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </a>
+
+    <script src="../../assets/js/security.js"></script>
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/components.js" defer></script>
+    <script src="../../assets/js/bundle.optimized.js"></script>
+</body>
+</html>
