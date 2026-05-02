@@ -31,188 +31,11 @@
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/components.css">    
     <link rel="stylesheet" href="../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../assets/css/pages/progressions.css">
     <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
-    
-    <style>
-        /* Estilo para a página de progressão */
-        .progressao-header {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-        
-        .progressao-header h1 {
-            font-size: 2.2rem;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .progressao-header p {
-            color: var(--color-text-medium);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .nivel-badge {
-            display: inline-block;
-            background: var(--color-primary);
-            color: white;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            margin-right: var(--space-xs);
-        }
-        
-        .nivel-1 { background: #2ecc71; }  /* Verde - Iniciante */
-        .nivel-2 { background: #f39c12; }  /* Laranja - Intermédio */
-        .nivel-3 { background: #e67e22; }  /* Laranja escuro */
-        .nivel-4 { background: #e74c3c; }  /* Vermelho - Avançado */
-        .nivel-5 { background: #9b59b6; }  /* Roxo - Expert */
-        
-        .exercicio-section {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-lg);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--color-border-light);
-        }
-        
-        .exercicio-title {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-primary-dark);
-            margin-bottom: var(--space-md);
-            padding-bottom: var(--space-sm);
-            border-bottom: 2px solid var(--color-bg-card);
-        }
-        
-        .exercicio-title i {
-            color: var(--color-primary);
-            width: 28px;
-            height: 28px;
-        }
-        
-        .niveis-grid {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
-        
-        .nivel-row {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-md);
-            padding: var(--space-sm) 0;
-            border-bottom: 1px dashed var(--color-border-light);
-        }
-        
-        .nivel-row:last-child {
-            border-bottom: none;
-        }
-        
-        .nivel-indicator {
-            min-width: 80px;
-            text-align: center;
-            font-weight: 700;
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: var(--radius-md);
-            color: white;
-        }
-        
-        .nivel-desc {
-            flex: 1;
-        }
-        
-        .nivel-desc strong {
-            display: block;
-            margin-bottom: var(--space-xs);
-            color: var(--color-primary-dark);
-        }
-        
-        .nivel-desc p {
-            margin: 0;
-            color: var(--color-text-medium);
-            font-size: 0.95rem;
-        }
-        
-        .nivel-tags {
-            display: flex;
-            gap: var(--space-xs);
-            margin-top: var(--space-xs);
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background: var(--color-bg-light);
-            padding: 4px 10px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            color: var(--color-text-medium);
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .tag i {
-            width: 14px;
-            height: 14px;
-            color: var(--color-primary);
-        }
-        
-        .legenda {
-            background: var(--color-bg-light);
-            border-radius: var(--radius-lg);
-            padding: var(--space-md);
-            margin: var(--space-xl) 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-md);
-            justify-content: center;
-        }
-        
-        .legenda-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-        }
-        
-        .legenda-cor {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-        }
-        
-        .info-box {
-            background: #e8f4fd;
-            border-left: 6px solid var(--color-primary);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            margin-top: var(--space-lg);
-        }
-        
-        .info-box i {
-            color: var(--color-primary);
-            vertical-align: middle;
-        }
-        
-        @media (max-width: 768px) {
-            .nivel-row {
-                flex-direction: column;
-                gap: var(--space-xs);
-            }
-            
-            .nivel-indicator {
-                min-width: 100%;
-            }
-        }
-    </style>
 </head>
 <body class="has-fixed-header">
     <!-- Header -->
@@ -254,23 +77,23 @@
             <!-- Legenda de Níveis -->
             <div class="legenda">
                 <div class="legenda-item">
-                    <div class="legenda-cor" style="background: #2ecc71;"></div>
+                    <div class="legenda-cor nivel-1"></div>
                     <span>Nível 1 · Iniciante</span>
                 </div>
                 <div class="legenda-item">
-                    <div class="legenda-cor" style="background: #f39c12;"></div>
+                    <div class="legenda-cor nivel-2"></div>
                     <span>Nível 2 · Básico</span>
                 </div>
                 <div class="legenda-item">
-                    <div class="legenda-cor" style="background: #e67e22;"></div>
+                    <div class="legenda-cor nivel-3"></div>
                     <span>Nível 3 · Intermédio</span>
                 </div>
                 <div class="legenda-item">
-                    <div class="legenda-cor" style="background: #e74c3c;"></div>
+                    <div class="legenda-cor nivel-4"></div>
                     <span>Nível 4 · Avançado</span>
                 </div>
                 <div class="legenda-item">
-                    <div class="legenda-cor" style="background: #9b59b6;"></div>
+                    <div class="legenda-cor nivel-5"></div>
                     <span>Nível 5 · Expert</span>
                 </div>
             </div>
@@ -284,7 +107,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Flexões de joelhos ou inclinadas</strong>
                             <p>Mãos num banco ou joelhos no chão. Foco na técnica e amplitude.<br>
@@ -297,7 +120,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Flexões negativas</strong>
                             <p>Posição standard, corpo em linha reta, peito quase no chão.
@@ -311,7 +134,7 @@
                     </div>
 
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Flexões normais</strong>
                             <p>Posição standard, corpo em linha reta, peito quase no chão.<br>
@@ -323,7 +146,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Flexões archer</strong>
                             <p>Mãos afastadas, corpo em linha reta. Fletir um braço enquanto o outro permanece estendido.<br>
@@ -335,7 +158,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Flexões com um braço</strong>
                             <p>Flexão com um só braço. Requer força máxima e equilíbrio.<br>
@@ -357,7 +180,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Dips no banco (pés no chão)</strong>
                             <p>Mãos num banco atrás, pés no chão. Versão mais acessível.</p>
@@ -368,7 +191,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Dips no banco com pés elevados</strong>
                             <p>Pés noutro banco à frente, maior amplitude e dificuldade.</p>
@@ -379,7 +202,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Dips negativas nas paralelas</strong>
                             <p>Transição para dips verticais. Descida controlada de 3-5 segundos.</p>
@@ -390,7 +213,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Dips nas paralelas</strong>
                             <p>Dips completos com peso corporal. Maior carga sobre os membros superiores.</p>
@@ -401,7 +224,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Dips nas argolas</strong>
                             <p>Dips com introdução de instabilidade que tem de ser controlada.</p>
@@ -422,7 +245,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Pike com mãos elevadas</strong>
                             <p>Mãos num banco, pés no chão. Posição de V invertido.</p>
@@ -433,7 +256,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Pike no chão</strong>
                             <p>Mãos e pés no chão, ancas elevadas.</p>
@@ -444,7 +267,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Pike com pés elevados</strong>
                             <p>Pés num banco, maior inclinação e mais peso nos ombros.</p>
@@ -455,7 +278,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Handstand hold contra parede</strong>
                             <p>Equilíbrio em posição invertida, preparação para handstand push-up.</p>
@@ -466,7 +289,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Handstand push-up</strong>
                             <p>Flexão em posição invertida. Força máxima de ombros.</p>
@@ -487,7 +310,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Ring rows (pés no chão, corpo inclinado)</strong>
                             <p>Posição mais vertical, menor dificuldade.</p>
@@ -498,7 +321,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Ring rows com pés mais elevados</strong>
                             <p>Corpo mais horizontal, maior dificuldade.</p>
@@ -509,7 +332,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Ring rows inclinadas (pés muito elevados)</strong>
                             <p>Quase paralelo ao chão, máxima ativação.</p>
@@ -520,7 +343,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Front lever rows com elástico</strong>
                             <p>Maior carga, menos repetições.</p>
@@ -531,7 +354,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Front lever rows (elevado)</strong>
                             <p>Remada em posição horizontal com corpo paralelo ao chão.</p>
@@ -552,7 +375,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Pendurado ativo / Escapulares</strong>
                             <p>Agarrar barra, ativar escápulas, sem dobrar braços.</p>
@@ -563,7 +386,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Negativas com salto</strong>
                             <p>Subir com salto, descer controlado (4-5 segundos).</p>
@@ -574,7 +397,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Band assisted pull-ups</strong>
                             <p>Com banda elástica a ajudar na subida.</p>
@@ -585,7 +408,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Pull-ups (primeiras repetições)</strong>
                             <p>Conseguir fazer 1-3 pull-ups completas.</p>
@@ -596,7 +419,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Pull-ups (séries completas)</strong>
                             <p>Múltiplas repetições com boa técnica.</p>
@@ -617,7 +440,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Agachamento corporal</strong>
                             <p>Peso corporal, focar na técnica.</p>
@@ -628,7 +451,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Agachamento com tempo (3010)</strong>
                             <p>Controlo na descida e subida.</p>
@@ -639,7 +462,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Agachamento búlgaro</strong>
                             <p>Unilateral, pé de trás elevado.</p>
@@ -650,7 +473,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Pistol squat assistido</strong>
                             <p>Agachamento numa perna com apoio.</p>
@@ -661,7 +484,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Pistol squat</strong>
                             <p>Agachamento numa perna sem apoio.</p>
@@ -682,7 +505,7 @@
                 
                 <div class="niveis-grid">
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #2ecc71;">NÍVEL 1</div>
+                        <div class="nivel-indicator" class="nivel-1">NÍVEL 1</div>
                         <div class="nivel-desc">
                             <strong>Prancha 30"</strong>
                             <p>Posição básica, corpo em linha reta.</p>
@@ -693,7 +516,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #f39c12;">NÍVEL 2</div>
+                        <div class="nivel-indicator" class="nivel-2">NÍVEL 2</div>
                         <div class="nivel-desc">
                             <strong>Prancha 45"</strong>
                             <p>Aumento gradual do tempo.</p>
@@ -704,7 +527,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e67e22;">NÍVEL 3</div>
+                        <div class="nivel-indicator" class="nivel-3">NÍVEL 3</div>
                         <div class="nivel-desc">
                             <strong>Prancha 60"</strong>
                             <p>Manter 1 minuto com boa forma.</p>
@@ -715,7 +538,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #e74c3c;">NÍVEL 4</div>
+                        <div class="nivel-indicator" class="nivel-4">NÍVEL 4</div>
                         <div class="nivel-desc">
                             <strong>Prancha com elevação de perna 60"</strong>
                             <p>Adicionar movimento para aumentar dificuldade.</p>
@@ -726,7 +549,7 @@
                     </div>
                     
                     <div class="nivel-row">
-                        <div class="nivel-indicator" style="background: #9b59b6;">NÍVEL 5</div>
+                        <div class="nivel-indicator" class="nivel-5">NÍVEL 5</div>
                         <div class="nivel-desc">
                             <strong>Prancha com elevação de perna e braço contrário 60"</strong>
                             <p>Adicionar movimento para aumentar dificuldade.</p>

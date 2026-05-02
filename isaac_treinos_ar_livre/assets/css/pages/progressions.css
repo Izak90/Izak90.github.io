@@ -1,0 +1,185 @@
+/* === PROGRESSÕES PAGE STYLES === */
+
+/* Estilo para a página de progressão */
+.progressao-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.progressao-header h1 {
+    font-size: 2.2rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.progressao-header p {
+    color: var(--color-text-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nivel-badge {
+    display: inline-block;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin-right: var(--space-xs);
+}
+
+.nivel-1 { background: #2ecc71; }  /* Verde - Iniciante */
+.nivel-2 { background: #f39c12; }  /* Laranja - Intermédio */
+.nivel-3 { background: #e67e22; }  /* Laranja escuro */
+.nivel-4 { background: #e74c3c; }  /* Vermelho - Avançado */
+.nivel-5 { background: #9b59b6; }  /* Roxo - Expert */
+
+.exercicio-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.exercicio-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-bg-card);
+}
+
+.exercicio-title i {
+    color: var(--color-primary);
+    width: 28px;
+    height: 28px;
+}
+
+.niveis-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.nivel-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px dashed var(--color-border-light);
+}
+
+.nivel-row:last-child {
+    border-bottom: none;
+}
+
+.nivel-indicator {
+    min-width: 80px;
+    text-align: center;
+    font-weight: 700;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-md);
+    color: white;
+}
+
+/* Color variants for level indicators */
+.nivel-indicator.nivel-1 { background: #2ecc71; }
+.nivel-indicator.nivel-2 { background: #f39c12; }
+.nivel-indicator.nivel-3 { background: #e67e22; }
+.nivel-indicator.nivel-4 { background: #e74c3c; }
+.nivel-indicator.nivel-5 { background: #9b59b6; }
+
+.nivel-desc {
+    flex: 1;
+}
+
+.nivel-desc strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary-dark);
+}
+
+.nivel-desc p {
+    margin: 0;
+    color: var(--color-text-medium);
+    font-size: 0.95rem;
+}
+
+.nivel-tags {
+    display: flex;
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--color-bg-light);
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: var(--color-text-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tag i {
+    width: 14px;
+    height: 14px;
+    color: var(--color-primary);
+}
+
+.legenda {
+    background: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    margin: var(--space-xl) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.legenda-cor {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.info-box {
+    background: #e8f4fd;
+    border-left: 6px solid var(--color-primary);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-lg);
+}
+
+.info-box i {
+    color: var(--color-primary);
+    vertical-align: middle;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .nivel-row {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .nivel-indicator {
+        min-width: 100%;
+    }
+}

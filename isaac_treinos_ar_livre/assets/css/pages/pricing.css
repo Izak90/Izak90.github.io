@@ -867,3 +867,143 @@
         justify-content: center;
     }
 }
+
+/* ===== INLINE CSS CONSOLIDATION (extracted from <style> tag) ===== */
+
+/* Estilos de badges e seletores */
+.hero__badge i,
+.pricing-selector__label i {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.pricing-card__badge--avulso {
+    background: var(--color-gray-200);
+    color: var(--color-text-medium);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.pricing-selector__wrapper:hover .pricing-selector__select {
+    border-color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.02);
+}
+
+.pricing-dynamic-title {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pricing-selector__abbrev {
+        display: block;
+    }
+}
+
+/* === PRICING SECTION INLINE STYLES === */
+
+/* Descontos section container */
+.pricing__discounts-container {
+    max-width: min(700px, 100%);
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: clamp(1rem, 3vw, var(--space-xl));
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.pricing__discounts-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.pricing__discount-list {
+    list-style: none;
+    display: grid;
+    gap: var(--space-md);
+}
+
+.pricing__discount-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--color-gray-50);
+    border-radius: var(--radius-md);
+}
+
+/* CTA Final section */
+.pricing__cta-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+    font-weight: var(--font-weight-bold);
+}
+
+.pricing__cta-subtitle {
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-lg);
+}
+
+.pricing__cta-note {
+    margin-top: var(--space-lg);
+    color: var(--color-gray-600);
+    font-size: var(--font-size-sm);
+}
+    margin-right: 4px;
+}
+
+.pricing-selector__label i {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+.pricing-card__badge--avulso {
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+}
+
+.pricing-card__badge--avulso i {
+    width: 14px;
+    height: 14px;
+}
+
+.pricing-selector__wrapper {
+    cursor: pointer;
+    position: relative;
+}
+
+.pricing-selector__wrapper:hover .pricing-selector__select {
+    border-color: var(--color-primary);
+    background-color: var(--color-gray-50);
+}
+
+/* Título dinâmico - OCULTO */
+.pricing-dynamic-title {
+    display: none;
+}
+
+/* Texto abreviado abaixo dos botões (mobile apenas) */
+.pricing-selector__abbrev {
+    display: none;
+    text-align: center;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-600);
+    margin-top: var(--space-xs);
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .pricing-selector__abbrev {
+        display: block;
+    }
+}
+

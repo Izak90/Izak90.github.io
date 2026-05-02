@@ -24,65 +24,6 @@
     <link rel="stylesheet" href="assets/css/visual-enhancements.css">
     <link rel="stylesheet" href="assets/css/pages/pricing.css">
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
-    
-    <style>
-        /* Estilos específicos da página */
-        .hero__badge i,
-        .pricing-selector__label i {
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 4px;
-        }
-        
-        .pricing-selector__label i {
-            width: 18px;
-            height: 18px;
-            margin-right: 6px;
-        }
-        
-        .pricing-card__badge--avulso {
-            background: var(--color-gray-100);
-            color: var(--color-gray-700);
-        }
-        
-        .pricing-card__badge--avulso i {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .pricing-selector__wrapper {
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .pricing-selector__wrapper:hover .pricing-selector__select {
-            border-color: var(--color-primary);
-            background-color: var(--color-gray-50);
-        }
-        
-        /* Título dinâmico - OCULTO */
-        .pricing-dynamic-title {
-            display: none;
-        }
-        
-        /* Texto abreviado abaixo dos botões (mobile apenas) */
-        .pricing-selector__abbrev {
-            display: none;
-            text-align: center;
-            font-size: var(--font-size-xs);
-            color: var(--color-gray-600);
-            margin-top: var(--space-xs);
-            line-height: 1.2;
-        }
-        
-        @media (max-width: 768px) {
-            .pricing-selector__abbrev {
-                display: block;
-            }
-        }
-    </style>
 </head>
 <body class="has-fixed-header">
     <!-- Header -->
@@ -715,21 +656,21 @@
     <!-- DESCONTOS E CONDIÇÕES -->
     <section class="section bg-gradient-light">
         <div class="container">
-            <div style="max-width: min(700px, 100%); margin: 0 auto; background: var(--color-white); padding: clamp(1rem, 3vw, var(--space-xl)); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-                <h3 style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-primary-dark); margin-bottom: var(--space-lg); text-align: center;">
+            <div class="pricing__discounts-container">
+                <h3 class="pricing__discounts-title">
                     <i data-lucide="tag" class="icon-xl inline-block vertical-middle mr-sm"></i>
                     Descontos Disponíveis
                 </h3>
-                <ul style="list-style: none; display: grid; gap: var(--space-md);">
-                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                <ul class="pricing__discount-list">
+                    <li class="pricing__discount-item">
                         <i data-lucide="sparkles" class="icon-lg text-primary flex-shrink-0"></i>
                         <span><strong>Planeamento e Acompanhamento Online:</strong> 10% de desconto no plano Semestral.</span>
                     </li>
-                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                    <li class="pricing__discount-item">
                         <i data-lucide="user-plus" class="icon-lg text-primary flex-shrink-0"></i>
                         <span><strong>Modalidade Dupla:</strong> 20% desconto quando duas pessoas treinam juntas (válido para presencial)</span>
                     </li>
-                    <li style="display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-gray-50); border-radius: var(--radius-md);">
+                    <li class="pricing__discount-item">
                         <i data-lucide="user-plus" class="icon-lg text-primary flex-shrink-0"></i>
                         <span><strong>Refere um Amigo:</strong> 25% desconto para ti + 25% desconto para o teu amigo no primeiro mês</span>
                     </li>
@@ -742,10 +683,10 @@
     <section class="section">
         <div class="container">
             <div class="cta-card">
-                <h3 style="font-size: var(--font-size-3xl); color: var(--color-primary-dark); margin-bottom: var(--space-md); font-weight: var(--font-weight-bold);">
+                <h3 class="pricing__cta-title">
                     Tens Alguma Dúvida?
                 </h3>
-                <p style="color: var(--color-gray-700); margin-bottom: var(--space-xl); font-size: var(--font-size-lg);">
+                <p class="pricing__cta-subtitle">
                     Fala comigo no WhatsApp para esclarecer qualquer questão sobre preços, horários ou modalidades!
                 </p>
                 <a href="https://wa.me/351939481840?text=Olá!%20Tenho%20dúvidas%20sobre%20os%20preços" 
@@ -755,7 +696,7 @@
                     <i data-lucide="message-circle"></i>
                     Falar no WhatsApp
                 </a>
-                <p style="margin-top: var(--space-lg); color: var(--color-gray-600); font-size: var(--font-size-sm);">
+                <p class="pricing__cta-note">
                     Ou experimenta grátis: <a href="treino-experimental.html" class="text-primary font-semibold">Treino Experimental Gratuito →</a>
                 </p>
             </div>
