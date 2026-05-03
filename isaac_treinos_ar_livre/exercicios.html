@@ -24,81 +24,234 @@
     <link rel="stylesheet" href="assets/css/visual-enhancements.css">
     <link rel="stylesheet" href="assets/css/pages/exercicios.css">
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
+    
+    <style>
+        /* Container das abas + pesquisa */
+        .exercises-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            max-width: 520px;
+            margin: 0 auto 2rem;
+        }
+        .exercises-controls .exercises-nav-wrapper,
+        .exercises-controls .search-box {
+            width: 100%;
+        }
+        /* Estilos das abas */
+        .exercises-nav {
+            background: var(--bg-secondary, #f8f9fa);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            padding: 0.4rem;
+            gap: 0.3rem;
+            box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.04));
+        }
+        .exercises-nav__btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary, #6b7280);
+            font-weight: 500;
+            font-size: 0.95rem;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.4rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .exercises-nav__btn i {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        .exercises-nav__btn:hover {
+            color: var(--text-primary, #1f2937);
+            background: rgba(0,0,0,0.04);
+        }
+        .exercises-nav__btn.active {
+            background: #ffffff;
+            color: var(--color-primary, #4f46e5);
+            box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.06));
+            font-weight: 600;
+        }
+        .exercises-nav__btn.active i {
+            color: var(--color-primary, #4f46e5);
+        }
+        /* Caixa de pesquisa */
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border-light, #e5e7eb);
+            border-radius: 0.75rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        .search-box button {
+            background: var(--color-primary, #4f46e5);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 0 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-box button:hover {
+            background: var(--color-primary-dark, #4338ca);
+        }
+        /* Estatísticas */
+        .exercises-stats {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .exercises-stat {
+            background: var(--bg-secondary, #f8f9fa);
+            border-radius: 2rem;
+            padding: 0.3rem 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary, #4b5563);
+        }
+        .exercises-stat__number {
+            font-weight: 700;
+            color: var(--text-primary, #111827);
+            font-size: 1.2rem;
+        }
+        /* Seções de exercícios */
+        .section--exercises {
+            display: none;
+        }
+        .section--exercises.active {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .exercises-controls {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+            .exercises-nav__btn {
+                padding: 0.55rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body class="has-fixed-header">
-    <!-- Header -->
     <app-header mode="exercicios" current="exercicios"></app-header>
 
-    <!-- Navigation -->
-    <div class="nav">
-        <button class="nav-btn active" data-section="aquecimento">
-            <i data-lucide="flame"></i>
-            Aquecimento
-        </button>
-        <button class="nav-btn" data-section="forca">
-            <i data-lucide="zap"></i>
-            Força
-        </button>
-        <button class="nav-btn" data-section="alongamentos">
-            <i data-lucide="wind"></i>
-            Alongamentos
-        </button>
-    </div>
+    <!-- HERO -->
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge">
+                <i data-lucide="dumbbell"></i>
+                <span>BANCO DE EXERCÍCIOS</span>
+            </div>
+            <h1 class="hero__title">Exercícios</h1>
+            <p class="hero__subtitle">Aquecimento, força e alongamentos ao ar livre</p>
+        </div>
+    </section>
 
-    <!-- Main Content -->
+    <!-- BACK LINK -->
+    <section class="section section--back-link active">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Voltar
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTROLES (ABAS + PESQUISA) -->
     <div class="container">
-        <!-- Search -->
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Procurar exercício...">
-            <button onclick="buscarExercicio()"><i data-lucide="search"></i> Pesquisar</button>
+        <div class="exercises-controls">
+            <!-- Abas -->
+            <div class="exercises-nav-wrapper">
+                <div class="exercises-nav" role="tablist">
+                    <button class="exercises-nav__btn active" data-section="aquecimento" role="tab">
+                        <i data-lucide="flame"></i> Aquecimento
+                    </button>
+                    <button class="exercises-nav__btn" data-section="forca" role="tab">
+                        <i data-lucide="zap"></i> Força
+                    </button>
+                    <button class="exercises-nav__btn" data-section="alongamentos" role="tab">
+                        <i data-lucide="wind"></i> Alongamentos
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pesquisa -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Procurar exercício..." aria-label="Procurar exercício">
+                <button onclick="buscarExercicio()"><i data-lucide="search"></i> Pesquisar</button>
+            </div>
         </div>
 
-        <!-- AQUECIMENTO -->
-        <section class="section active" id="aquecimento">
-            <h2 class="section-title"><i data-lucide="flame"></i> Aquecimento</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number" id="count-aquecimento">0</div>
-                    <div class="stat-label">Exercícios</div>
-                </div>
+        <!-- Contador -->
+        <div class="exercises-stats">
+            <div class="exercises-stat">
+                <i data-lucide="list"></i>
+                <span class="exercises-stat__number" id="count-active">0</span>
+                <span>exercícios encontrados</span>
             </div>
-            <div class="exercises-grid" id="grid-aquecimento"></div>
-        </section>
-
-        <!-- FORÇA -->
-        <section class="section" id="forca">
-            <h2 class="section-title">Força</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number" id="count-forca">0</div>
-                    <div class="stat-label">Exercícios</div>
-                </div>
-            </div>
-            <div class="exercises-grid" id="grid-forca"></div>
-        </section>
-
-        <!-- ALONGAMENTOS -->
-        <section class="section" id="alongamentos">
-            <h2 class="section-title">Alongamentos</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number" id="count-alongamentos">0</div>
-                    <div class="stat-label">Exercícios</div>
-                </div>
-            </div>
-            <div class="exercises-grid" id="grid-alongamentos"></div>
-        </section>
+        </div>
     </div>
 
-    <!-- Footer -->
+    <!-- AQUECIMENTO -->
+    <section class="section section--exercises active" id="aquecimento">
+        <div class="container">
+            <h2 class="section-title"><i data-lucide="flame"></i> Aquecimento</h2>
+            <div class="exercises-grid" id="grid-aquecimento"></div>
+        </div>
+    </section>
+
+    <!-- FORÇA -->
+    <section class="section section--exercises" id="forca">
+        <div class="container">
+            <h2 class="section-title"><i data-lucide="zap"></i> Força</h2>
+            <div class="exercises-grid" id="grid-forca"></div>
+        </div>
+    </section>
+
+    <!-- ALONGAMENTOS -->
+    <section class="section section--exercises" id="alongamentos">
+        <div class="container">
+            <h2 class="section-title"><i data-lucide="wind"></i> Alongamentos</h2>
+            <div class="exercises-grid" id="grid-alongamentos"></div>
+        </div>
+    </section>
+
     <app-footer depth="0"></app-footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/351939481840?text=Olá!%20Vim%20da%20Turma%20Fundadora" 
+       target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </a>
+    
     <script src="assets/js/config.js"></script>
     <script src="assets/js/components.js" defer></script>
     <script>
         // Base de Dados Completa de Exercícios
-        const exercicios = {
+       const exercicios = {
             aquecimento: [
                 { nome: "90 to 90", descricao: "Sente-se com as pernas estendidas à frente. Rode o tronco e as pernas para um lado, apoiando as mãos no chão, e depois para o outro, mantendo um ângulo de 90 graus nas articulações." },
                 { nome: "A Skips", descricao: "Saltite no lugar elevando alternadamente os joelhos à frente, com o pé a 'bater' no chão de forma rápida, simulando o movimento de skipping atlético." },
@@ -108,18 +261,18 @@
                 { nome: "Ankle Circles Left", descricao: "Sente-se ou fique de pé e faça círculos com o tornozelo esquerdo, rodando o pé em ambas as direções para mobilizar a articulação." },
                 { nome: "Ankle Circles Right", descricao: "Igual ao anterior, mas com o tornozelo direito." },
                 { nome: "Archer Pullups", descricao: "Com uma pegada larga na barra, puxe o corpo para um lado (como se fosse um arqueiro), mantendo o outro braço estendido. Alterne os lados." },
-                { nome: "Archer Pushups", descricao: "Na posição de flexão, com os braços bem abertos, incline o corpo para um lado dobrando apenas o cotovelo desse lado e mantendo o outro braço esticado." },
+                { nome: "Archer Pushups", descricao: "Na posição de flexão, com os braços bem abertos, incline o corpo para um lado dobrando apenas o cotovelo desse lado e mantendo o outro braço esticado. Alterne." },
                 { nome: "Arm & Leg Lifts Left", descricao: "Deite-se de barriga para baixo. Eleve simultaneamente o braço esquerdo e a perna direita, contraindo as costas e os glúteos. Baixe com controlo e repita." },
                 { nome: "Arm & Leg Lifts Right", descricao: "Igual, mas elevando o braço direito e a perna esquerda." },
                 { nome: "Assisted Lunges", descricao: "Segure-se a uma estrutura (parede, barra, TRX) para apoio. Execute um lunge (afundo) para a frente, mantendo o equilíbrio e a postura." },
                 { nome: "Assisted Muscleups", descricao: "Com uma faixa elástica presa à barra e sob os pés (ou com um parceiro), execute um muscle-up, usando a ajuda para reduzir a carga." },
                 { nome: "Assisted Pistol Squats", descricao: "Segure-se a um suporte (barra, argolas) e realize um agachamento unilateral (pistol), descendo a perna livre à frente." },
+                { nome: "Assisted Pullups", descricao: "Use uma faixa elástica presa à barra e apoiada nos pés/joelhos para auxiliar na elevação durante as barras fixas." },
                 { nome: "Assisted Squats", descricao: "Segure-se a um apoio à frente e agache, mantendo o tronco mais vertical graças ao suporte." },
                 { nome: "Assisted Standups", descricao: "Com o auxílio de um bastão, parede ou parceiro, execute o movimento de levantar-se a partir da posição sentada (ou agachada)." },
                 { nome: "B Skips", descricao: "Semelhante ao 'A Skip', mas ao elevar o joelho, a perna estende-se rapidamente à frente antes de pousar, num movimento mais balístico." },
                 { nome: "Bench Toe Taps", descricao: "Em pé, à frente de um banco ou step, toque alternadamente com a ponta dos pés no banco, num ritmo rápido." },
                 { nome: "Blocks", descricao: "Execute um apoio isométrico sobre as mãos e os dedos dos pés, com o corpo em linha reta, mas apoiado em 'blocos' que elevam as mãos." },
-                { nome: "Bodyweight Leg Extensions", descricao: "Sente-se com as pernas penduradas ou apoiadas. Estenda os joelhos até as pernas ficarem retas, contraindo os quadríceps, e regresse controladamente." },
                 { nome: "Box Jump Overs", descricao: "Salte para cima de uma caixa, aterrisse com os dois pés e, de imediato, salte (ou desça) para o outro lado da caixa." },
                 { nome: "Box Jumps", descricao: "Salte a partir do chão para cima de uma caixa, caindo suavemente em posição de meio agachamento." },
                 { nome: "Box Pikes", descricao: "Com os pés sobre uma caixa e as mãos no chão (formando um V invertido), eleve as ancas e flexione o tronco, aproximando a cabeça dos pés." },
@@ -163,8 +316,9 @@
                 { nome: "Double Dumbbells Bulgarian Split Squats Right", descricao: "Igual, mas com a perna direita à frente." },
                 { nome: "Double Hops with Jump Rope", descricao: "Salte à corda dando dois saltos por cada volta da corda (passada dupla)." },
                 { nome: "Down Dog to Cobra", descricao: "Comece na posição de cão olhando para baixo (Downward Dog). Lentamente, desloque o tronco para a frente e estenda os braços, terminando em cobra." },
-                { nome: "Dragonflags", descricao: "Deite-se num banco e agarre-o atrás da cabeça. Eleve o corpo, mantendo-o rígido como uma tábua, e desça controladamente sem tocar no banco." },
                 { nome: "Downward Facing Dog", descricao: "Em quatro apoios, eleve as ancas formando um V invertido, com as mãos e os pés no chão, alongando as costas e pernas." },
+                { nome: "Dragonflags", descricao: "Deite-se num banco e agarre-o atrás da cabeça. Eleve o corpo, mantendo-o rígido como uma tábua, e desça controladamente sem tocar no banco." },
+                { nome: "Froggers", descricao: "Em posição de prancha, salte com os pés para a frente, colocando-os ao lado das mãos (como um sapo), e regresse à prancha." },
                 { nome: "High Knees", descricao: "Corra no lugar elevando os joelhos o mais alto que conseguir, mantendo um ritmo acelerado." },
                 { nome: "Hip Circles", descricao: "Em pé, faça círculos amplos com as ancas, rodando nos dois sentidos." },
                 { nome: "Jumping Jacks", descricao: "Em pé, salte afastando as pernas e elevando os braços lateralmente acima da cabeça, e regresse à posição inicial." },
@@ -195,19 +349,33 @@
                 { nome: "Banded Reverse Crunches", descricao: "Deite-se de costas, prenda a faixa nos pés (ou num ponto fixo atrás) e faça o crunch reverso, levando os joelhos ao peito contra a resistência." },
                 { nome: "Banded Reverse Flies", descricao: "Prenda a faixa à frente, segure-a e, com os braços estendidos, abra-os para trás (como se abrisse um livro), contraindo os deltoides posteriores." },
                 { nome: "Banded Seated Rows", descricao: "Sente-se com as pernas estendidas, prenda a faixa nos pés e puxe-a em direção ao abdómen, realizando uma remada com as costas ativadas." },
+                { nome: "Banded Seated Shoulder Press", descricao: "Sente-se sobre uma faixa ou fixe-a sob o assento. Segure as pontas e empurre-as para cima, executando um desenvolvimento de ombros." },
                 { nome: "Banded Shoulder Presses", descricao: "Em pé, pise a faixa e segure-a ao nível dos ombros. Empurre as mãos para cima até estender os braços completamente." },
                 { nome: "Banded Side Crunches Left", descricao: "Deite-se de lado sobre uma faixa presa, mãos atrás da cabeça, e faça uma flexão lateral do tronco, aproximando o cotovelo da anca contra a resistência." },
                 { nome: "Banded Side Crunches Right", descricao: "Igual, mas para o lado direito." },
                 { nome: "Banded Single Arm Tricep Extensions Left", descricao: "Prenda a faixa num ponto alto, segure-a com a mão esquerda atrás da cabeça e estenda o cotovelo, isolando o tríceps." },
                 { nome: "Banded Single Arm Tricep Extensions Right", descricao: "Igual, mas com o braço direito." },
                 { nome: "Banded Skis", descricao: "Prenda a faixa nos pés ou num ponto baixo. Em pé, simule o movimento de ski (flexão e extensão de ancas e joelhos) contra a resistência da banda." },
+                { nome: "Banded Squat to Presses", descricao: "Pise uma faixa elástica, segure as pontas ao nível dos ombros, agache e, ao subir, empurre as mãos para cima num movimento de desenvolvimento de ombros." },
                 { nome: "Banded Squats", descricao: "Pise a faixa e segure-a na altura dos ombros. Agache normalmente, sentindo a faixa a puxar-te para cima e a oferecer resistência extra na subida." },
                 { nome: "Banded Standing Rows", descricao: "Prenda a faixa num ponto fixo à frente, segure-a com as duas mãos e, de pé, puxe-a em direção ao peito." },
                 { nome: "Banded Superman Presses", descricao: "Deite-se de barriga para baixo, segurando a faixa à frente. Eleve o peito e as pernas ligeiramente e, ao mesmo tempo, faça um movimento de puxar a faixa para baixo (como um press)." },
                 { nome: "Banded Triceps Extensions", descricao: "Prenda a faixa no alto, segure-a com as mãos atrás da cabeça e estenda os cotovelos até os braços ficarem retos, isolando os tríceps." },
+                { nome: "Bear Walk", descricao: "Caminhe em quatro apoios (mãos e pés), mantendo as costas retas e as ancas elevadas, deslocando-se para a frente e para trás." },
                 { nome: "Bench Press", descricao: "Deite-se num banco com halteres ou barra. Baixe o peso até ao peito e empurre-o para cima, estendendo os braços." },
                 { nome: "Bicycle Crunches", descricao: "Deite-se de costas, mãos na cabeça. Leve o cotovelo direito ao joelho esquerdo enquanto estende a perna direita, e vice-versa, pedalando no ar." },
+                { nome: "Body Shifts", descricao: "Em posição de prancha alta, mova o corpo ligeiramente para a frente e para trás, mantendo a tensão no core, como se estivesse a 'deslocar' o peso." },
+                { nome: "Bodyweight Bent Over Cuban Press", descricao: "Incline o tronco para a frente, braços ao lado do corpo com os cotovelos dobrados a 90 graus. Rode os braços para fora (rotação externa) e depois estenda-os acima da cabeça, regressando em seguida." },
+                { nome: "Bodyweight Leg Extensions", descricao: "Sente-se com as pernas penduradas ou apoiadas. Estenda os joelhos até as pernas ficarem retas, contraindo os quadríceps, e regresse controladamente." },
+                { nome: "Burpee Box Jumps", descricao: "Faça um burpee normal, mas ao finalizar o salto, salte para cima de uma caixa, aterrissando suavemente." },
+                { nome: "Burpee Frogs", descricao: "Execute um burpee, mas ao saltar os pés para a frente, coloque-os largos (como um sapo) e depois salte para cima." },
+                { nome: "Burpee Muscleups", descricao: "Combine um burpee com um muscle-up: após o salto, agarre a barra e complete um muscle-up." },
+                { nome: "Burpee Squat Jumps", descricao: "No final de um burpee, em vez de um salto simples, faça um salto com agachamento (squat jump) explosivo." },
                 { nome: "Burpees", descricao: "Em pé, agache, coloque as mãos no chão, salte os pés para trás em prancha, faça uma flexão (opcional), salte os pés para a frente e salte explosivamente." },
+                { nome: "Crab Walk", descricao: "Sente-se com as mãos atrás de si e eleve as ancas. 'Caminhe' para a frente e para trás usando mãos e pés." },
+                { nome: "Criss Crosses with Jump Rope", descricao: "Salte à corda cruzando e descruzando os braços alternadamente à frente do corpo." },
+                { nome: "Double Unders with Jump Rope", descricao: "Salte à corda fazendo com que a corda passe duas vezes sob os pés num único salto." },
+                { nome: "Ducks", descricao: "Agache-se ligeiramente e mova a cabeça de um lado para o outro (como se esquivasse), mantendo as mãos em guarda." },
                 { nome: "Dumbbell Bench Presses", descricao: "Deite-se num banco com um haltere em cada mão. Empurre-os para cima até os braços esticarem e baixe-os lentamente." },
                 { nome: "Dumbbell Bent Rows Left", descricao: "Apoie o joelho e a mão direita num banco. Com a mão esquerda, puxe o haltere em direção ao tronco, remando." },
                 { nome: "Dumbbell Box Step Ups", descricao: "Segure um haltere em cada mão (ou apenas um) e suba para uma caixa, alternando as pernas." },
@@ -220,6 +388,7 @@
                 { nome: "Elevated Split Squats Left", descricao: "Com o pé de trás apoiado num banco (ou step), agache com a perna esquerda à frente." },
                 { nome: "Elevated Split Squats Right", descricao: "Igual, mas com a perna direita à frente." },
                 { nome: "Face Pulls", descricao: "Prenda uma faixa à altura do rosto. Puxe-a em direção à testa, abrindo os cotovelos para os lados e apertando as omoplatas." },
+                { nome: "Feints to Punch", descricao: "Simule um movimento de esquiva (finta) com o tronco e, de imediato, execute um soco direto." },
                 { nome: "Figure 4 Windshield Wipers Left", descricao: "Deite-se de costas, cruze o tornozelo esquerdo sobre o joelho direito (formando um '4'). Rode as pernas para a esquerda, como um limpa-para-brisas, e volte." },
                 { nome: "Figure 4 Windshield Wipers Right", descricao: "Igual, mas com o tornozelo direito cruzado sobre o joelho esquerdo e rotação para a direita." },
                 { nome: "Full Hanging Leg Wipers", descricao: "Pendure-se na barra e, com as pernas estendidas, rode-as de um lado para o outro, como um limpa-para-brisas, mantendo o controlo." },
@@ -254,9 +423,10 @@
                 { nome: "Incline Pushups", descricao: "Apoie as mãos num banco, cadeira ou step. Faça flexões com o corpo inclinado, facilitando o movimento." },
                 { nome: "Incline Rows", descricao: "Deite-se debaixo de uma barra baixa ou mesa, segure-a e puxe o peito em direção à barra." },
                 { nome: "Inchworm Pushups", descricao: "Comece em pé, caminhe com as mãos até à prancha, faça uma flexão e 'caminhe' de volta com as mãos até aos pés." },
-                { nome: "Inchworms", descricao: "Igual ao anterior, mas sem a flexão - apenas caminhe com as mãos para a frente e para trás." },
+                { nome: "Inchworms", descricao: "Igual ao anterior, mas sem a flexão – apenas caminhe com as mãos para a frente e para trás." },
                 { nome: "Inverted Rows", descricao: "Deite-se debaixo de uma barra baixa, segure-a e puxe o peito para cima, mantendo o corpo reto." },
                 { nome: "Jackknives", descricao: "Deite-se de costas, pernas e braços estendidos. Eleve o tronco e as pernas simultaneamente, tocando as mãos nos pés no ar." },
+                { nome: "Jabs", descricao: "Em posição de guarda, execute socos rápidos com a mão da frente, estendendo e recolhendo o braço rapidamente." },
                 { nome: "Jumps", descricao: "Salte verticalmente a partir de uma posição de agachamento ligeiro, repetindo de forma explosiva." },
                 { nome: "Jumping Pullups", descricao: "Use um pequeno salto para ajudar a iniciar a barra fixa, puxando-se em seguida." },
                 { nome: "Kettlebell Goblet Split Squats Left", descricao: "Segure um kettlebell junto ao peito. Faça o agachamento unilateral (split squat) com a perna esquerda à frente." },
@@ -271,6 +441,9 @@
                 { nome: "Knee Wipers", descricao: "Deite-se de costas, joelhos dobrados e elevados. Rode-os para um lado e para o outro, controlando o movimento." },
                 { nome: "L-Sits", descricao: "Sente-se no chão com as pernas estendidas, mãos ao lado das coxas. Eleve o corpo e mantenha as pernas paralelas ao chão, formando um 'L'." },
                 { nome: "Lateral Shuffles Left", descricao: "Desloque-se lateralmente para a esquerda em passadas largas, mantendo-se baixo (posição de agachamento)." },
+                { nome: "Lead Hooks", descricao: "Em guarda, execute um golpe curvo (gancho) com a mão da frente, mantendo o cotovelo elevado." },
+                { nome: "Lead Uppercuts", descricao: "Em guarda, lance um golpe ascendente (uppercut) com a mão da frente, de baixo para cima." },
+                { nome: "Lean and Counter", descricao: "Incline o tronco para trás (lean) e responda rapidamente com um soco ou movimento de contra-ataque." },
                 { nome: "Left Leg Jumps with Jump Rope", descricao: "Salte à corda apenas sobre a perna esquerda, mantendo o equilíbrio." },
                 { nome: "Leg Raises", descricao: "Deite-se de costas, pernas estendidas. Eleve-as até ficarem perpendiculares ao chão e baixe-as controladamente." },
                 { nome: "Leg Wipers", descricao: "Pendure-se na barra e, com as pernas estendidas, rode-as de um lado ao outro." },
@@ -296,10 +469,12 @@
                 { nome: "One-Handed Pushups", descricao: "Afaste as pernas e coloque uma mão atrás das costas. Baixe o corpo usando apenas o outro braço, mantendo o equilíbrio." },
                 { nome: "One-Legged Jumps Left", descricao: "Salte para a frente (ou no lugar) apenas com a perna esquerda, mantendo o equilíbrio e aterrissando de forma controlada." },
                 { nome: "One-Legged Jumps Right", descricao: "Igual, mas com a perna direita." },
+                { nome: "Overhands", descricao: "Lance um soco em arco por cima (overhand), como se fosse um martelo, com a mão de trás." },
                 { nome: "Parallel Bar Dips", descricao: "Nas paralelas, baixe o corpo dobrando os cotovelos até os ombros descerem bem e empurre para cima." },
                 { nome: "Passive Hang", descricao: "Pendure-se na barra completamente relaxado, apenas com a pegada, alongando a coluna." },
                 { nome: "Pikes", descricao: "Comece numa prancha alta e eleve as ancas em direção ao teto, formando um V invertido, depois regresse à prancha." },
                 { nome: "Pistol Squats", descricao: "Equilibre-se numa perna, estenda a outra à frente e agache-se profundamente, mantendo o calcanhar de apoio no chão." },
+                { nome: "Pivots", descricao: "Em guarda, rode rapidamente sobre os pés (pivot) para mudar de direção." },
                 { nome: "Plank Hold", descricao: "Mantenha o corpo em linha reta, apoiado nos antebraços e pontas dos pés, contraindo bem o core." },
                 { nome: "Plank Knees-to-Chest", descricao: "Em prancha alta, leve um joelho de cada vez até ao peito, alternando ou simultaneamente." },
                 { nome: "Plank Knees-to-Elbows", descricao: "Igual, mas tentando tocar o joelho no cotovelo do mesmo lado (ou cruzado)." },
@@ -311,6 +486,8 @@
                 { nome: "Pull Overs", descricao: "Deite-se num banco, segurando um haltere com as duas mãos acima do peito. Baixe-o para trás da cabeça e regresse." },
                 { nome: "Pullup Hold", descricao: "Puxe-se até o queixo estar acima da barra e mantenha essa posição isometricamente." },
                 { nome: "Pullups", descricao: "Pendure-se na barra com as palmas viradas para a frente e puxe-se até o queixo ultrapassar a barra." },
+                { nome: "Pulls & Rear Hooks", descricao: "Simule puxar o adversário (pulls) e, em seguida, execute um gancho com a mão de trás (rear hook)." },
+                { nome: "Pushup Bars Cross Body Pushups", descricao: "Com as mãos em barras de flexão, faça uma flexão e, ao subir, cruze um braço por baixo do corpo em direção ao lado oposto, alternando." },
                 { nome: "Pushup Bars Decline Pushups", descricao: "Coloque os pés elevados e as mãos em barras de flexão. Faça o pushup normal, com maior ênfase na parte superior do peito." },
                 { nome: "Pushup Bars Diamond Pushups", descricao: "Com as mãos nas barras, junte-as formando um diamante. Faça a flexão focando os tríceps." },
                 { nome: "Pushup Bars Hold", descricao: "Segure as barras e mantenha a posição de prancha com os braços estendidos, contraindo o core." },
@@ -318,12 +495,12 @@
                 { nome: "Pushup Bars Plank Shoulder", descricao: "Em prancha com as mãos nas barras, toque com uma mão no ombro oposto, mantendo a estabilidade." },
                 { nome: "Pushup Bars Walkover", descricao: "Em posição de flexão nas barras, 'caminhe' com as mãos para um lado e depois para o outro, mantendo a prancha." },
                 { nome: "Pushups", descricao: "Apoie as mãos e os pés no chão, corpo reto. Baixe o peito até próximo do chão e empurre para cima." },
-                { nome: "Quad Stretch Left", descricao: "Em pé, agarre o pé esquerdo atrás do corpo e puxe o calcanhar em direção ao glúteo. Mantenha os joelhos juntos." },
-                { nome: "Quad Stretch Right", descricao: "Igual, mas puxando o pé direito." },
+                { nome: "Rear Uppercuts & Rolls", descricao: "Lance um uppercut com a mão de trás e, de seguida, faça um movimento de rotação (roll) para esquivar ou reposicionar." },
                 { nome: "Reverse Chops Left", descricao: "Em pé, simule um 'lenhador' ao contrário: comece com as mãos juntas no baixo e à esquerda, eleve-as na diagonal para a direita acima da cabeça." },
                 { nome: "Reverse Chops Right", descricao: "Igual, mas começando no baixo à direita e subindo para a esquerda." },
                 { nome: "Reverse Crunches", descricao: "Deite-se de costas, pernas elevadas e joelhos dobrados. Enrole as ancas, trazendo os joelhos em direção à cabeça e tirando a lombar do chão." },
                 { nome: "Reverse Lunges", descricao: "Em pé, dê um passo para trás e desça até os dois joelhos formarem 90 graus, depois regresse e alterne." },
+                { nome: "Reverse Table", descricao: "Sente-se com as pernas estendidas, mãos atrás de si. Eleve as ancas formando uma mesa invertida, mantendo o corpo alinhado." },
                 { nome: "Right Leg Jumps with Jump Rope", descricao: "Salte à corda apenas com a perna direita." },
                 { nome: "Scissor Kicks", descricao: "Deite-se de costas, pernas estendidas. Cruze-as alternadamente, como uma tesoura, mantendo-as elevadas." },
                 { nome: "Scorpions", descricao: "Deite-se de barriga para baixo e leve um pé em direção ao ombro oposto, rodando o tronco e alongando." },
@@ -333,6 +510,7 @@
                 { nome: "Shoulder Pullups", descricao: "Puxe-se na barra com as palmas para a frente, mas focando em manter os ombros ativos (escápulas juntas) durante todo o movimento." },
                 { nome: "Shoulder Taps", descricao: "Em prancha alta, toque com a mão direita no ombro esquerdo e vice-versa, evitando balançar as ancas." },
                 { nome: "Shrimp Squats", descricao: "Agache-se numa perna, com a outra perna dobrada e o joelho a tocar o chão atrás do pé de apoio, numa posição muito profunda." },
+                { nome: "Shuffles", descricao: "Desloque-se lateralmente com passos rápidos e curtos, mantendo a posição baixa (como um atleta em defesa)." },
                 { nome: "Side Dips Left", descricao: "Sente-se de lado, apoiado numa mão, e baixe e eleve as ancas, trabalhando o tríceps e o deltoide." },
                 { nome: "Side Dips Right", descricao: "Igual, mas apoiado na mão direita." },
                 { nome: "Side Lunges", descricao: "Dê um passo lateral e agache-se sobre essa perna, mantendo a outra esticada, alternando os lados." },
@@ -342,21 +520,28 @@
                 { nome: "Side Plank Hold Right", descricao: "Igual, mas apoiada no antebraço direito." },
                 { nome: "Side Plank Twists Left", descricao: "Na prancha lateral esquerda, passe o braço direito por baixo do corpo, rodando o tronco, e volte." },
                 { nome: "Side Plank Twists Right", descricao: "Igual, mas do lado direito." },
+                { nome: "Side Swipes with Jump Rope", descricao: "Salte à corda e, durante o salto, cruze os braços para um lado e para o outro alternadamente." },
                 { nome: "Single Leg Hip Raises Left", descricao: "Deite-se de costas, joelho direito fletido e pé no chão, perna esquerda estendida para cima. Eleve as ancas mantendo a perna esquerda elevada." },
                 { nome: "Single Leg Hip Raises Right", descricao: "Igual, mas com a perna direita elevada e o pé esquerdo apoiado." },
                 { nome: "Situps", descricao: "Deite-se de costas, joelhos fletidos. Eleve o tronco até sentar-se completamente, mantendo os pés no chão." },
                 { nome: "Skater Steps", descricao: "Salte lateralmente, aterrissando numa perna e levando a outra para trás, como um patinador de velocidade." },
                 { nome: "Skipping Jumps", descricao: "Faça um pequeno salto e, enquanto estiver no ar, passe a corda e aterrisse suavemente." },
+                { nome: "Slips", descricao: "Em guarda, faça pequenos movimentos laterais com o tronco para esquivar golpes." },
                 { nome: "Speed Skaters", descricao: "Igual ao Skater Steps, mas realizado rapidamente, com maior amplitude lateral." },
                 { nome: "Sphinx Pushups", descricao: "De barriga para baixo, antebraços apoiados no chão. Eleve o tronco e as ancas num movimento de flexão de tríceps (ou mantenha a posição)." },
                 { nome: "Spiderman Pushups", descricao: "Durante a flexão, traga o joelho em direção ao cotovelo do mesmo lado, alternando." },
                 { nome: "Split Lunges", descricao: "Com os pés afastados (um à frente, outro atrás), desça até os dois joelhos formarem 90 graus, mantendo o tronco reto." },
+                { nome: "Sprawl Frogs", descricao: "Execute um sprawl (deitar-se rapidamente de barriga para baixo), mas ao levantar, salte os pés largos para a frente (como um sapo) e repita." },
+                { nome: "Sprawls", descricao: "A partir da posição de pé, deite-se rapidamente de barriga para baixo e volte a levantar-se, simulando uma defesa de wrestling." },
                 { nome: "Squat Jumps", descricao: "Agache-se e, ao subir, salte explosivamente, caindo de volta em agachamento." },
                 { nome: "Squat Reverse Lunges", descricao: "Combine um agachamento com um lunge para trás: agache, depois leve uma perna atrás num lunge reverso, e repita." },
                 { nome: "Squats", descricao: "Com os pés à largura dos ombros, baixe as ancas como se fosse sentar-se, mantendo as costas retas e os joelhos alinhados com os pés." },
                 { nome: "Standing Bicycle Crunches", descricao: "Em pé, mãos na cabeça. Leve o cotovelo direito ao joelho esquerdo elevado, alternando os lados." },
                 { nome: "Standing Scales", descricao: "Equilibre-se numa perna e incline o tronco para a frente enquanto eleva a outra perna para trás, mantendo o corpo alinhado." },
+                { nome: "Standing Side Stretch Left", descricao: "Em pé, incline o tronco para a esquerda, alongando o lado direito do corpo." },
+                { nome: "Standing Side Stretch Right", descricao: "Em pé, incline o tronco para a direita, alongando o lado esquerdo do corpo." },
                 { nome: "Standups", descricao: "Comece deitado ou sentado e levante-se sem usar as mãos (ou com o mínimo de apoio), trabalhando o core e o equilíbrio." },
+                { nome: "Step-Ins & Step-Outs", descricao: "Em posição de prancha, dê um passo com um pé para a frente e para fora (ao lado da mão), depois regresse, alternando as pernas." },
                 { nome: "Straight Bar Dips", descricao: "Na barra reta, posicione as mãos à largura dos ombros. Baixe o corpo até os ombros descerem e empurre para cima." },
                 { nome: "Strict Handstand Pushups", descricao: "Em pino apoiado numa parede, baixe a cabeça até ao chão e empurre-se para cima sem usar balanço." },
                 { nome: "Strict Muscleups", descricao: "Muscle-up executado sem kipping (balanço), usando apenas a força estrita." },
@@ -373,14 +558,23 @@
                 { nome: "Suspension Lunges Left", descricao: "Com um pé na alça do TRX atrás de si, faça um lunge para a frente com a perna esquerda." },
                 { nome: "Suspension Lunges Right", descricao: "Igual, mas com o pé esquerdo na alça e a perna direita à frente." },
                 { nome: "Suspension Mountain Climbers", descricao: "Com os pés nas alças do TRX, em prancha, leve os joelhos alternadamente ao peito." },
+                { nome: "Suspension Pikes", descricao: "Com os pés nas alças, em prancha, eleve as ancas formando um V invertido e regresse à prancha." },
                 { nome: "Suspension Pistol Squats", descricao: "Segure-se nas alças para apoio e faça o agachamento unilateral (pistol)." },
-                { nome: "Suspension Power Pulls", descricao: "De frente para a ancoragem, incline-se para trás e puxe o corpo com força, usando as costas." },
+                { nome: "Suspension Plank", descricao: "Coloque os pés nas alças do TRX e mantenha a prancha (sobre os antebraços ou mãos), contraindo o core." },
+                { nome: "Suspension Power Pulls", descricao: "De frente para a ancoragem do TRX, incline-se para trás e puxe o corpo com força, usando as costas e os braços." },
                 { nome: "Suspension Pushups", descricao: "Com as mãos nas alças, afaste-se e faça flexões, o que aumenta a instabilidade." },
+                { nome: "Suspension Reverse Flies", descricao: "De costas para a ancoragem, incline-se para a frente e abra os braços para trás como num voo invertido, apertando as omoplatas." },
                 { nome: "Suspension Rows", descricao: "Deite-se debaixo do ponto de ancoragem, segure as alças e puxe o peito para cima, mantendo o corpo reto." },
+                { nome: "Suspension Squat & Rows", descricao: "Segure as alças, incline-se ligeiramente para trás, agache e, ao subir, puxe o corpo como numa remada." },
                 { nome: "Suspension Squat Jumps", descricao: "Com as alças para apoio, agache e salte explosivamente, usando o TRX para estabilizar." },
                 { nome: "Suspension Squats", descricao: "Segure as alças e agache, mantendo a tensão no TRX e boa forma." },
                 { nome: "Suspension Swimmer Pulls", descricao: "Simule o movimento de natação: com as alças, faça o movimento de braçada (puxada para trás) com um braço de cada vez." },
                 { nome: "Suspension Triceps", descricao: "De costas para a ancoragem, incline o corpo para a frente e estenda os braços atrás da cabeça." },
+                { nome: "Switch Stances", descricao: "Alterne rapidamente a posição dos pés (guarda esquerda para direita) com um pequeno salto, mantendo o equilíbrio." },
+                { nome: "T-Spine Rotations Left", descricao: "Em quatro apoios ou deitado de lado, rode a parte superior das costas (torácica) para a esquerda, mantendo a lombar estável." },
+                { nome: "T-Spine Rotations Right", descricao: "Igual, mas rodando para a direita." },
+                { nome: "Table Twists", descricao: "Na posição de Reverse Table, rode o tronco e toque com uma mão no pé oposto, alternando os lados." },
+                { nome: "Toe-Touch Crunches", descricao: "Deite-se de costas, pernas estendidas para cima. Eleve os ombros e tente tocar as pontas dos pés com as mãos." },
                 { nome: "Toes-to-Bar", descricao: "Pendure-se na barra e leve as pontas dos pés até à barra, com as pernas estendidas." },
                 { nome: "Triangle Pose Left", descricao: "Em pé, afaste as pernas e incline-se para a esquerda, colocando a mão esquerda no chão (ou tornozelo) e estendendo o braço direito para cima." },
                 { nome: "Triangle Pose Right", descricao: "Igual, mas inclinando-se para a direita." },
@@ -409,58 +603,21 @@
                 { nome: "Windmill Backward", descricao: "Em pé, incline o tronco para trás e rode os braços simulando um moinho de vento para trás." },
                 { nome: "Windmill Forward", descricao: "Em pé, rode os braços para a frente como um moinho de vento." },
                 { nome: "Windshield Wipers", descricao: "Deite-se de costas, braços abertos no chão. Com as pernas estendidas e elevadas, rode-as de um lado ao outro, controlando o movimento." },
-                { nome: "Banded Squat to Presses", descricao: "Pise uma faixa elástica, segure as pontas ao nível dos ombros, agache e, ao subir, empurre as mãos para cima num movimento de desenvolvimento de ombros." },
-                { nome: "Bear Walk", descricao: "Caminhe em quatro apoios (mãos e pés), mantendo as costas retas e as ancas elevadas, deslocando-se para a frente e para trás." },
-                { nome: "Body Shifts", descricao: "Em posição de prancha alta, mova o corpo ligeiramente para a frente e para trás, mantendo a tensão no core, como se estivesse a 'deslocar' o peso." },
-                { nome: "Bodyweight Bent Over Cuban Press", descricao: "Incline o tronco para a frente, braços ao lado do corpo com os cotovelos dobrados a 90 graus. Rode os braços para fora (rotação externa) e depois estenda-os acima da cabeça, regressando em seguida." },
-                { nome: "Burpee Box Jumps", descricao: "Faça um burpee normal, mas ao finalizar o salto, salte para cima de uma caixa, aterrissando suavemente." },
-                { nome: "Burpee Frogs", descricao: "Execute um burpee, mas ao saltar os pés para a frente, coloque-os largos (como um sapo) e depois salte para cima." },
-                { nome: "Burpee Muscleups", descricao: "Combine um burpee com um muscle-up: após o salto, agarre a barra e complete um muscle-up." },
-                { nome: "Burpee Squat Jumps", descricao: "No final de um burpee, em vez de um salto simples, faça um salto com agachamento (squat jump) explosivo." },
-                { nome: "Crab Walk", descricao: "Sente-se com as mãos atrás de si e eleve as ancas. 'Caminhe' para a frente e para trás usando mãos e pés." },
-                { nome: "Criss Crosses with Jump Rope", descricao: "Salte à corda cruzando e descruzando os braços alternadamente à frente do corpo." },
-                { nome: "Double Unders with Jump Rope", descricao: "Salte à corda fazendo com que a corda passe duas vezes sob os pés num único salto." },
-                { nome: "Ducks", descricao: "Agache-se ligeiramente e mova a cabeça de um lado para o outro (como se esquivasse), mantendo as mãos em guarda." },
-                { nome: "Feints to Punch", descricao: "Simule um movimento de esquiva (finta) com o tronco e, de imediato, execute um soco direto." },
-                { nome: "Jabs", descricao: "Em posição de guarda, execute socos rápidos com a mão da frente, estendendo e recolhendo o braço rapidamente." },
-                { nome: "Lead Hooks", descricao: "Em guarda, execute um golpe curvo (gancho) com a mão da frente, mantendo o cotovelo elevado." },
-                { nome: "Lead Uppercuts", descricao: "Em guarda, lance um golpe ascendente (uppercut) com a mão da frente, de baixo para cima." },
-                { nome: "Lean and Counter", descricao: "Incline o tronco para trás (lean) e responda rapidamente com um soco ou movimento de contra-ataque." },
-                { nome: "Overhands", descricao: "Lance um soco em arco por cima (overhand), como se fosse um martelo, com a mão de trás." },
-                { nome: "Pivots", descricao: "Em guarda, rode rapidamente sobre os pés (pivot) para mudar de direção." },
-                { nome: "Pulls & Rear Hooks", descricao: "Simule puxar o adversário (pulls) e, em seguida, execute um gancho com a mão de trás (rear hook)." },
-                { nome: "Pushup Bars Cross Body Pushups", descricao: "Com as mãos em barras de flexão, faça uma flexão e, ao subir, cruze um braço por baixo do corpo em direção ao lado oposto, alternando." },
-                { nome: "Rear Uppercuts & Rolls", descricao: "Lance um uppercut com a mão de trás e, de seguida, faça um movimento de rotação (roll) para esquivar ou reposicionar." },
-                { nome: "Reverse Table", descricao: "Sente-se com as pernas estendidas, mãos atrás de si. Eleve as ancas formando uma mesa invertida, mantendo o corpo alinhado." },
-                { nome: "Shuffles", descricao: "Desloque-se lateralmente com passos rápidos e curtos, mantendo a posição baixa (como um atleta em defesa)." },
-                { nome: "Side Swipes with Jump Rope", descricao: "Salte à corda e, durante o salto, cruze os braços para um lado e para o outro alternadamente." },
-                { nome: "Slips", descricao: "Em guarda, faça pequenos movimentos laterais com o tronco para esquivar golpes." },
-                { nome: "Sprawl Frogs", descricao: "Execute um sprawl (deitar-se rapidamente de barriga para baixo), mas ao levantar, salte os pés largos para a frente (como um sapo) e repita." },
-                { nome: "Sprawls", descricao: "A partir da posição de pé, deite-se rapidamente de barriga para baixo e volte a levantar-se, simulando uma defesa de wrestling." },
-                { nome: "Standing Side Stretch Left", descricao: "Em pé, incline o tronco para a esquerda, alongando o lado direito do corpo." },
-                { nome: "Standing Side Stretch Right", descricao: "Em pé, incline o tronco para a direita, alongando o lado esquerdo do corpo." },
-                { nome: "Step-Ins & Step-Outs", descricao: "Em posição de prancha, dê um passo com um pé para a frente e para fora (ao lado da mão), depois regresse, alternando as pernas." },
-                { nome: "Suspension Mountain", descricao: "Em prancha com os pés nas alças, leve os joelhos ao peito alternadamente." },
-                { nome: "Suspension Pikes", descricao: "Com os pés nas alças, em prancha, eleve as ancas formando um V invertido e regresse à prancha." },
-                { nome: "Suspension Plank", descricao: "Coloque os pés nas alças do TRX e mantenha a prancha (sobre os antebraços ou mãos), contraindo o core." },
-                { nome: "Suspension Power Pulls", descricao: "De frente para a ancoragem do TRX, incline-se para trás e puxe o corpo com força, usando as costas e os braços." },
-                { nome: "Suspension Reverse Flies", descricao: "De costas para a ancoragem, incline-se para a frente e abra os braços para trás como num voo invertido, apertando as omoplatas." },
-                { nome: "Suspension Squat & Rows", descricao: "Segure as alças, incline-se ligeiramente para trás, agache e, ao subir, puxe o corpo como numa remada." },
-                { nome: "Switch Stances", descricao: "Alterne rapidamente a posição dos pés (guarda esquerda para direita) com um pequeno salto, mantendo o equilíbrio." },
-                { nome: "T-Spine Rotations Left", descricao: "Em quatro apoios ou deitado de lado, rode a parte superior das costas (torácica) para a esquerda, mantendo a lombar estável." },
-                { nome: "T-Spine Rotations Right", descricao: "Igual, mas rodando para a direita." },
-                { nome: "Table Twists", descricao: "Na posição de Reverse Table, rode o tronco e toque com uma mão no pé oposto, alternando os lados." },
-                { nome: "Toe-Touch Crunches", descricao: "Deite-se de costas, pernas estendidas para cima. Eleve os ombros e tente tocar as pontas dos pés com as mãos." },
                 { nome: "World's Greatest Stretch Left", descricao: "Num lunge para a frente com a perna esquerda, coloque a mão esquerda no chão e rode o tronco para a esquerda, alongando a virilha e as costas." },
                 { nome: "World's Greatest Stretch Right", descricao: "Igual, mas com a perna direita à frente e rotação para a direita." }
             ],
             alongamentos: [
                 { nome: "Advanced Quad Stretch Left", descricao: "Em pé, agarre o pé esquerdo atrás do corpo com a mão esquerda, puxando o calcanhar em direção aos glúteos para alongar profundamente o quadríceps." },
                 { nome: "Advanced Quad Stretch Right", descricao: "Igual ao anterior, mas alongando a perna direita." },
+                { nome: "Camel Hold", descricao: "Sente-se sobre os calcanhares e arqueie as costas para trás, apoiando as mãos nos pés, alongando toda a parte anterior do corpo." },
                 { nome: "Calf Stretch Left", descricao: "Dê um passo à frente com a perna direita, mantenha a esquerda esticada atrás e pressione o calcanhar esquerdo contra o chão." },
                 { nome: "Calf Stretch Right", descricao: "Igual, mas alongando a perna direita (perna esquerda à frente)." },
                 { nome: "Chest Stretch Left", descricao: "Coloque a mão esquerda numa parede ou poste e rode o corpo para o lado oposto, sentindo o alongamento no peito e ombro." },
                 { nome: "Chest Stretch Right", descricao: "Igual, mas com a mão direita apoiada." },
+                { nome: "Child's Pose", descricao: "Ajoelhe-se e sente-se sobre os calcanhares, incline o tronco para a frente com os braços estendidos, relaxando as costas." },
+                { nome: "Couch Stretch Left", descricao: "Ajoelhe-se de frente para um sofá/parede. Apoie o pé esquerdo no sofá atrás de si e empurre a anca para a frente, alongando o quadríceps." },
+                { nome: "Couch Stretch Right", descricao: "Igual, mas com o pé direito apoiado atrás." },
+                { nome: "Deep Squat Hold", descricao: "Agache-se profundamente, mantendo os calcanhares no chão e as costas direitas. Permaneça na posição sem pressa." },
                 { nome: "Forearms Stretch", descricao: "Estenda um braço à frente com a palma para cima. Com a outra mão, puxe suavemente os dedos para baixo, alongando o antebraço." },
                 { nome: "Forward Fold", descricao: "Em pé, incline o tronco para a frente, deixando a cabeça pendente e as mãos em direção ao chão, relaxando as costas." },
                 { nome: "Glutes Stretch Left", descricao: "Deite-se de costas, cruze o tornozelo esquerdo sobre o joelho direito e puxe a perna direita em direção ao peito." },
@@ -478,32 +635,42 @@
                 { nome: "Lunge Stretch Right", descricao: "Igual, mas com a perna direita atrás e a esquerda à frente." },
                 { nome: "Overhead Shoulder Stretch", descricao: "Passe um braço por cima da cabeça, dobre o cotovelo e, com a outra mão, puxe-o suavemente para o lado contrário." },
                 { nome: "Pancake Stretch", descricao: "Sente-se com as pernas bem afastadas, incline o tronco para a frente e tente deitar o peito no chão." },
+                { nome: "Pigeon Left", descricao: "Partindo da prancha, traga o joelho esquerdo para a frente, apoiando a perna dobrada no chão, e estenda a perna direita atrás. Incline-se para a frente." },
+                { nome: "Pigeon Right", descricao: "Igual, mas com a perna direita dobrada à frente." },
+                { nome: "Quad Stretch Left", descricao: "Em pé, agarre o pé esquerdo atrás do corpo e puxe o calcanhar em direção ao glúteo. Mantenha os joelhos juntos." },
+                { nome: "Quad Stretch Right", descricao: "Igual, mas puxando o pé direito." },
+                { nome: "Relaxation Pose", descricao: "Deite-se de costas com os braços e pernas ligeiramente afastados, relaxando completamente o corpo, como no final de uma aula de yoga." },
                 { nome: "Shoulder Stretch Left", descricao: "Passe o braço esquerdo à frente do peito e puxe-o suavemente com o braço direito, alongando o ombro." },
                 { nome: "Shoulder Stretch Right", descricao: "Igual, mas puxando o braço direito." },
                 { nome: "Side Stretch Left", descricao: "Em pé, incline o tronco para a esquerda, alongando o lado direito, com o braço esquerdo ao lado da perna." },
                 { nome: "Side Stretch Right", descricao: "Incline para a direita, alongando o lado esquerdo." },
                 { nome: "Toe Reaches", descricao: "Sente-se com as pernas estendidas e incline-se para a frente, tentando tocar os dedos dos pés." },
                 { nome: "Triceps Stretch Left", descricao: "Passe o braço esquerdo por cima da cabeça, dobre o cotovelo e puxe-o suavemente com a mão direita." },
-                { nome: "Triceps Stretch Right", descricao: "Igual, mas puxando o cotovelo direito." },
-                { nome: "Child's Pose", descricao: "Ajoelhe-se e sente-se sobre os calcanhares, incline o tronco para a frente com os braços estendidos, relaxando as costas." },
-                { nome: "Couch Stretch Left", descricao: "Ajoelhe-se de frente para um sofá/parede. Apoie o pé esquerdo no sofá atrás de si e empurre a anca para a frente, alongando o quadríceps." },
-                { nome: "Couch Stretch Right", descricao: "Igual, mas com o pé direito apoiado atrás." },
-                { nome: "Deep Squat Hold", descricao: "Agache-se profundamente, mantendo os calcanhares no chão e as costas direitas. Permaneça na posição sem pressa." },
-                { nome: "Pigeon Left", descricao: "Partindo da prancha, traga o joelho esquerdo para a frente, apoiando a perna dobrada no chão, e estenda a perna direita atrás. Incline-se para a frente." },
-                { nome: "Pigeon Right", descricao: "Igual, mas com a perna direita dobrada à frente." },
-                { nome: "Relaxation Pose", descricao: "Deite-se de costas com os braços e pernas ligeiramente afastados, relaxando completamente o corpo, como no final de uma aula de yoga." },
-                { nome: "Camel Hold", descricao: "Sente-se sobre os calcanhares e arqueie as costas para trás, apoiando as mãos nos pés, alongando toda a parte anterior do corpo." }
+                { nome: "Triceps Stretch Right", descricao: "Igual, mas puxando o cotovelo direito." }
             ]
         };
 
-        // Renderizar Exercícios
-        function renderizarExercicios() {
-            Object.keys(exercicios).forEach(categoria => {
-                const grid = document.getElementById(`grid-${categoria}`);
-                const count = document.getElementById(`count-${categoria}`);
-                
-                grid.innerHTML = '';
-                exercicios[categoria].forEach(exercicio => {
+        let categoriaAtiva = 'aquecimento';
+
+        // Renderiza a categoria ativa com filtro de pesquisa
+        function renderizarCategoriaAtiva(termo = '') {
+            const grid = document.getElementById(`grid-${categoriaAtiva}`);
+            const countSpan = document.getElementById('count-active');
+            
+            if (!grid) return;
+            
+            const lista = termo 
+                ? exercicios[categoriaAtiva].filter(ex => 
+                    ex.nome.toLowerCase().includes(termo) || 
+                    ex.descricao.toLowerCase().includes(termo)
+                  )
+                : exercicios[categoriaAtiva];
+
+            grid.innerHTML = '';
+            if (lista.length === 0) {
+                grid.innerHTML = `<p style="text-align:center;color:var(--text-secondary);padding:2rem;">Nenhum exercício encontrado.</p>`;
+            } else {
+                lista.forEach(exercicio => {
                     const card = document.createElement('div');
                     card.className = 'exercise-card';
                     card.innerHTML = `
@@ -512,62 +679,46 @@
                     `;
                     grid.appendChild(card);
                 });
-
-                count.textContent = exercicios[categoria].length;
-            });
+            }
+            
+            if (countSpan) {
+                countSpan.textContent = lista.length;
+            }
         }
 
-        // Navegação de Abas
-        document.querySelectorAll('.nav-btn').forEach(btn => {
+        // Atualiza toda a interface (abas + pesquisa + render)
+        function atualizarTela() {
+            const termo = document.getElementById('searchInput').value.trim().toLowerCase();
+            renderizarCategoriaAtiva(termo);
+        }
+
+        // Navegação entre abas
+        document.querySelectorAll('.exercises-nav__btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const section = this.getAttribute('data-section');
+                const novaSecao = this.getAttribute('data-section');
                 
-                // Remove active de todos
-                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-                
-                // Adiciona active ao clicado
+                // Atualiza botões ativos
+                document.querySelectorAll('.exercises-nav__btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                document.getElementById(section).classList.add('active');
+                
+                // Atualiza seções visíveis
+                document.querySelectorAll('.section--exercises').forEach(s => s.classList.remove('active'));
+                const secao = document.getElementById(novaSecao);
+                if (secao) secao.classList.add('active');
+                
+                categoriaAtiva = novaSecao;
+                atualizarTela();
             });
         });
 
-        // Buscar Exercício
         function buscarExercicio() {
-            const termo = document.getElementById('searchInput').value.toLowerCase();
-            
-            if (!termo) {
-                renderizarExercicios();
-                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-                document.querySelector('.nav-btn').classList.add('active');
-                document.querySelector('.section').classList.add('active');
-                return;
-            }
-
-            Object.keys(exercicios).forEach(categoria => {
-                const grid = document.getElementById(`grid-${categoria}`);
-                grid.innerHTML = '';
-
-                const exerciciosFiltrados = exercicios[categoria].filter(ex => 
-                    ex.nome.toLowerCase().includes(termo) || 
-                    ex.descricao.toLowerCase().includes(termo)
-                );
-
-                exerciciosFiltrados.forEach(exercicio => {
-                    const card = document.createElement('div');
-                    card.className = 'exercise-card';
-                    card.innerHTML = `
-                        <h3>${exercicio.nome}</h3>
-                        <p>${exercicio.descricao}</p>
-                    `;
-                    grid.appendChild(card);
-                });
-            });
+            atualizarTela();
         }
 
-        // Inicializar
-        document.addEventListener('DOMContentLoaded', renderizarExercicios);
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarTela();
+        });
+
         document.getElementById('searchInput').addEventListener('keyup', buscarExercicio);
     </script>
 </body>
