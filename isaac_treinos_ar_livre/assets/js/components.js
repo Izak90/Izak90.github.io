@@ -57,6 +57,10 @@ class AppHeader extends HTMLElement {
                             <i data-lucide="zap"></i>
                             1ª Aula Grátis
                         </a>
+                        <a href="${this.getBasePath()}comecar.html" class="header__link ${currentPage === 'comecar' ? 'header__link--active' : ''}">
+                            <span class="header__badge-members"><i data-lucide="download" style="width: 14px; height: 14px;"></i></span>    
+                            Plano Treino
+                        </a>
                     </nav>
                 </div>
             </header>
