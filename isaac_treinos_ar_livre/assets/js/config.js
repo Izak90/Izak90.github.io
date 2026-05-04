@@ -57,7 +57,7 @@ const SiteConfig = {
     contacto: {
         whatsapp: '351939481840',
         instagram: '@isaac_treinos_ar_livre',
-        email: 'isaaclopes90@gmail.com'
+        email: 'isaac.treinos.ar.livre@gmail.com'
     },
 
     /**

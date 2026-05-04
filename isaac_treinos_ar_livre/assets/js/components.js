@@ -203,9 +203,9 @@ class AppFooter extends HTMLElement {
                                 <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                                 <span>+351 939 481 840</span>
                             </a>
-                            <a href="mailto:isaaclopes90@gmail.com" class="footer__link">
+                            <a href="mailto:isaac.treinos.ar.livre@gmail.com" class="footer__link">
                                 <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-                                <span>isaaclopes90@gmail.com</span>
+                                <span>isaac.treinos.ar.livre@gmail.com</span>
                             </a>
                         </div>
                     </div>
