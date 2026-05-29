@@ -108,10 +108,10 @@ html, body {
 **Mudanças na imagem hero:**
 ```html
 <!-- ANTES -->
-<img src="img/Foto Hero.jpg" alt="...">
+<img src="img/Foto-Hero.jpg" alt="...">
 
 <!-- DEPOIS -->
-<img src="img/Foto Hero.jpg" 
+<img src="img/Foto-Hero.jpg" 
      alt="Isaac Treinos Ar Livre - Calistenia e treino funcional ao ar livre em Lisboa"
      width="1200"
      height="800"
@@ -128,16 +128,16 @@ html, body {
 Gerar versões otimizadas da imagem:
 ```bash
 # Mobile (480px)
-convert "img/Foto Hero.jpg" -resize 480x -quality 85 "img/hero-mobile.jpg"
-convert "img/Foto Hero.jpg" -resize 480x -quality 85 "img/hero-mobile.webp"
+convert "img/Foto-Hero.jpg" -resize 480x -quality 85 "img/hero-mobile.jpg"
+convert "img/Foto-Hero.jpg" -resize 480x -quality 85 "img/hero-mobile.webp"
 
 # Tablet (768px)
-convert "img/Foto Hero.jpg" -resize 768x -quality 85 "img/hero-tablet.jpg"
-convert "img/Foto Hero.jpg" -resize 768x -quality 85 "img/hero-tablet.webp"
+convert "img/Foto-Hero.jpg" -resize 768x -quality 85 "img/hero-tablet.jpg"
+convert "img/Foto-Hero.jpg" -resize 768x -quality 85 "img/hero-tablet.webp"
 
 # Desktop (1200px)
-convert "img/Foto Hero.jpg" -resize 1200x -quality 85 "img/hero-desktop.jpg"
-convert "img/Foto Hero.jpg" -resize 1200x -quality 85 "img/hero-desktop.webp"
+convert "img/Foto-Hero.jpg" -resize 1200x -quality 85 "img/hero-desktop.jpg"
+convert "img/Foto-Hero.jpg" -resize 1200x -quality 85 "img/hero-desktop.webp"
 ```
 
 #### 2.2 Font Loading Otimizado ✅
@@ -244,7 +244,7 @@ Após gerar as imagens, atualizar `index.html`:
                (max-width: 768px) 100vw,
                1200px">
     <img 
-        src="img/Foto Hero.jpg" 
+        src="img/Foto-Hero.jpg" 
         alt="Isaac Treinos Ar Livre - Calistenia e treino funcional ao ar livre em Lisboa"
         loading="eager"
         fetchpriority="high"

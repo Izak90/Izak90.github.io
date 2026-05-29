@@ -2,7 +2,7 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Treino Experimental - Isaac Lopes</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,8 @@
             width: 100%;
             max-width: 480px;
             aspect-ratio: 3 / 4;
-            background: linear-gradient(135deg, rgba(17, 57, 70, 0.82) 0%, rgba(10, 37, 48, 0.85) 100%),
-                        url('./img/Foto Hero.png') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(17, 57, 70, 0.42) 0%, rgba(10, 37, 48, 0.45) 100%),
+                        url('./img/Foto-Hero-IG.jpg') center/cover no-repeat;
             background-size: cover;
             overflow: hidden;
             display: flex;
@@ -73,24 +73,33 @@
             margin-bottom: 40px;
         }
 
+        /* --- LOGO CORRIGIDO: alinhamento vertical perfeito entre ícone e texto --- */
         .logo {
-            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
             font-weight: 700;
             color: var(--color-secondary-main);
             letter-spacing: 1.5px;
             margin-bottom: 12px;
             text-transform: uppercase;
+            gap: 0;
+            flex-wrap: nowrap;
         }
 
         .logo-icon {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            margin-right: 8px;
+            display: block;           /* Melhor controle no flex */
+            width: 56px;
+            height: 56px;
+            margin-right: 15px;
             background: url('./img/logo-black.png') center/contain no-repeat;
-            vertical-align: middle;
+            flex-shrink: 0;          /* Evita que o ícone encolha */
         }
 
+        /* O texto "ISAAC LOPES" mantém-se como conteúdo textual dentro do flex,
+           garantindo centralização vertical perfeita devido ao align-items: center */
+        
         .title {
             font-size: 26px;
             font-weight: 700;
@@ -167,36 +176,7 @@
             transform: translateY(0);
         }
 
-        /* Indicadores de slides */
-        .indicators {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 6px;
-            z-index: 2;
-        }
-
-        .indicator {
-            width: 8px;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: var(--color-secondary-main);
-            width: 24px;
-        }
-
-        .nav-arrow:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Responsividade */
+        /* Responsividade ajustada para manter legibilidade */
         @media (max-width: 600px) {
             .container {
                 padding: 30px 20px;
@@ -204,6 +184,16 @@
 
             .title {
                 font-size: 22px;
+            }
+            
+            .logo {
+                font-size: 22px;       /* texto ligeiramente menor em mobile */
+            }
+            
+            .logo-icon {
+                width: 48px;
+                height: 48px;
+                margin-right: 12px;
             }
 
             .event-title {
@@ -219,14 +209,29 @@
                 font-size: 11px;
             }
         }
+        
+        /* Pequeno ajuste para telas muito estreitas (ex: 380px) evitar quebra feia */
+        @media (max-width: 450px) {
+            .logo {
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+            .logo-icon {
+                width: 44px;
+                height: 44px;
+                margin-right: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="content">
             <div class="header">
+                <!-- Logo com flex + centralização vertical correta -->
                 <div class="logo">
-                    <span class="logo-icon"></span>ISAAC LOPES
+                    <span class="logo-icon" aria-label="Logótipo Isaac Lopes"></span>
+                    ISAAC LOPES
                 </div>
                 <div class="title">Calistenia & Treino Funcional</div>
                 <div class="subtitle">Domina o teu corpo. Supera os teus limites.</div>
@@ -241,9 +246,7 @@
                 <button class="cta-button">GRATUITO • VAGAS LIMITADAS • INSCREVE-TE JÁ!</button>
             </div>
         </div>
-
-        <div class="nav-arrow">›</div>
-
+        <!-- Nota: elemento extra 'nav-arrow' removido para não interferir no layout -->
     </div>
 </body>
 </html>
