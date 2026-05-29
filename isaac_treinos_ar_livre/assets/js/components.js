@@ -37,7 +37,7 @@ class AppHeader extends HTMLElement {
             <header class="header">
                 <div class="header__content">
                     <a href="${this.getBasePath()}index.html" class="header__brand">
-                        <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
+                        <img src="${this.getBasePath()}img/logo-white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
                         <span>Isaac Treinos Ar Livre</span>
                     </a>
                     
@@ -72,7 +72,7 @@ class AppHeader extends HTMLElement {
             <header class="header">
                 <div class="header__content">
                     <a href="${this.getBasePath()}index.html" class="header__brand">
-                        <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
+                        <img src="${this.getBasePath()}img/logo-white.png" alt="Isaac Treinos Ar Livre" class="header__logo"/>
                         <span>Isaac Treinos Ar Livre</span>
                     </a>
                     
@@ -170,7 +170,7 @@ class AppFooter extends HTMLElement {
                     <!-- LEFT COLUMN: BRAND -->
                     <div class="footer__left">
                         <div class="footer__brand">
-                            <img src="${this.getBasePath()}img/logo white.png" alt="Isaac Treinos Ar Livre" class="footer__logo"/>
+                            <img src="${this.getBasePath()}img/logo-white.png" alt="Isaac Treinos Ar Livre" class="footer__logo"/>
                             <h3 class="footer__brand-title">Isaac<br>Treinos<br>Ar Livre</h3>
                         </div>
                         <p class="footer__tagline">
