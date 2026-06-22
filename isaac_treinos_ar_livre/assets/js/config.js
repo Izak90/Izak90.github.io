@@ -43,10 +43,10 @@ const SiteConfig = {
      * 2. Executa: await Security.sha256('TUA_NOVA_PASSWORD')
      * 3. Copia o hash e substitui abaixo
      * 
-     * Password atual: CYCLE2
+     * Password atual: PULL UPS
      */
     acesso: {
-        passwordHash: 'e69f33fb86e00d67d2cc03afb2e476c0800de79c4444ede23eb16c0fd813e854',
+        passwordHash: '8e74a7bb539e209f183bddd03420e9394f98d87bdf9f97e5c1f0b710d41a269a',
         expiracaoHoras: 24       // Horas até expirar o acesso
     },
 
