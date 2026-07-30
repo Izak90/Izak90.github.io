@@ -10,12 +10,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/isaac_treinos_ar_livre/img/logo-black.png",
+      "src": "/isaac_treinos_ar_livre/img/logo-white.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/isaac_treinos_ar_livre/img/logo-black.png",
+      "src": "/isaac_treinos_ar_livre/img/logo-white.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

@@ -11,6 +11,7 @@ const CACHE_ASSETS = [
   '/isaac_treinos_ar_livre/404.html',
   '/isaac_treinos_ar_livre/manifest.webmanifest',
   '/isaac_treinos_ar_livre/img/logo-black.png',
+  '/isaac_treinos_ar_livre/img/logo-white.png',
   '/isaac_treinos_ar_livre/img/logo-favicon.png',
   '/isaac_treinos_ar_livre/assets/css/main.css',
   '/isaac_treinos_ar_livre/assets/css/layout.css',
