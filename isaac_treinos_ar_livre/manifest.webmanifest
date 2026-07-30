@@ -5,20 +5,14 @@
   "start_url": "/isaac_treinos_ar_livre/index.html",
   "scope": "/isaac_treinos_ar_livre/",
   "display": "standalone",
-  "theme_color": "#2A9D8F",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "orientation": "portrait",
   "icons": [
     {
       "src": "/isaac_treinos_ar_livre/img/logo-white.png",
-      "sizes": "192x192",
+      "sizes": "2167x2167",
       "type": "image/png"
-    },
-    {
-      "src": "/isaac_treinos_ar_livre/img/logo-white.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
     }
   ]
 }
