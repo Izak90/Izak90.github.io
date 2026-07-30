@@ -272,3 +272,16 @@
     window.IsaacApp = IsaacApp;
     
 })();
+
+// Register PWA Service Worker if available
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/isaac_treinos_ar_livre/sw.js')
+            .then(registration => {
+                console.log('✅ Service worker registered:', registration.scope);
+            })
+            .catch(error => {
+                console.warn('❌ Service worker registration failed:', error);
+            });
+    });
+}
