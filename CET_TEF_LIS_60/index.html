@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Horário CET_TEF_LIS_60 | Técnico Especialista em Exercício Físico</title>
+    
+    <!-- PWA & Mobile Meta Tags -->
+    <meta id="theme-color-meta" name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CET TEF 60">
+    <meta name="description" content="Horário interativo e PWA para a turma CET_TEF_LIS_60 em Técnico Especialista em Exercício Físico.">
+
+    <!-- TailWind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#090d16',
+                        darkcard: '#111827',
+                        accent: '#3b82f6',
+                        gold: '#f59e0b',
+                        criap: '#2563eb',
+                        online: '#10b981',
+                        vivagym: '#f97316'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome Icons & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon com a imagem do logótipo -->
+    <link id="favicon" rel="icon" type="image/png" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
+    <link rel="apple-touch-icon" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
+
+    <!-- Manifest Web App generated via Blob -->
+    <script>
+        (function setupPWA() {
+            const manifestObj = {
+                name: "Horário CET_TEF_LIS_60",
+                short_name: "CET TEF 60",
+                description: "Horário oficial e acompanhamento da turma CET_TEF_LIS_60",
+                start_url: "./",
+                display: "standalone",
+                background_color: "#090d16",
+                theme_color: "#090d16",
+                icons: [
+                    {
+                        src: "https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png",
+                        sizes: "192x192 512x512",
+                        type: "image/png",
+                        purpose: "any maskable"
+                    }
+                ]
+            };
+            const manifestStr = JSON.stringify(manifestObj);
+            const blob = new Blob([manifestStr], { type: 'application/json' });
+            const manifestURL = URL.createObjectURL(blob);
+            const link = document.createElement('link');
+            link.rel = 'manifest';
+            link.href = manifestURL;
+            document.head.appendChild(link);
+
+            // Inline Service Worker Blob
+            const swCode = `
+                const CACHE_NAME = 'cet-tef-v3';
+                self.addEventListener('install', (e) => {
+                    self.skipWaiting();
+                });
+                self.addEventListener('activate', (e) => {
+                    e.waitUntil(clients.claim());
+                });
+                self.addEventListener('fetch', (e) => {
+                    e.respondWith(
+                        fetch(e.request).catch(() => caches.match(e.request))
+                    );
+                });
+            `;
+            const swBlob = new Blob([swCode], { type: 'text/javascript' });
+            const swUrl = URL.createObjectURL(swBlob);
+
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register(swUrl).catch(err => console.log('SW reg failed', err));
+                });
+            }
+        })();
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .touch-active:active {
+            transform: scale(0.97);
+            transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Custom glow effects */
+        .dark .today-glow {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25);
+        }
+        .today-glow {
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-24 selection:bg-blue-500 selection:text-white">
+
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+        <div class="max-w-2xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Brand & Logo -->
+                <div class="flex items-center gap-3" onclick="resetFilters()">
+                    <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative group cursor-pointer touch-active">
+                        <!-- Imagem do Logótipo Oficial -->
+                        <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" alt="Logo Grupo Academy" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none">CET_TEF_LIS_60</h1>
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium truncate mt-0.5">Técnico Especialista em Exercício Físico</p>
+                    </div>
+                </div>
+
+                <!-- Action Controls (Theme Toggle, Search, Date Sim, PWA Install) -->
+                <div class="flex items-center gap-2">
+                    <button id="pwa-install-btn" onclick="triggerPwaInstall()" class="hidden px-2.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md shadow-blue-500/20 touch-active">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Instalar</span>
+                    </button>
+
+                    <!-- Theme Switcher Button -->
+                    <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Alternar Modo Escuro/Claro">
+                        <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                    </button>
+
+                    <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </button>
+                    
+                    <button onclick="toggleDateSimulator()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Simular Data">
+                        <i class="fa-solid fa-sliders text-xs text-blue-500 dark:text-blue-400"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Field Dropdown -->
+            <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+                <div class="relative">
+                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Pesquisar exames, módulos, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
+                    <button onclick="clearSearch()" id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white">
+                        <i class="fa-solid fa-xmark text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Date Simulation Panel (Format: dd/mm/yyyy) -->
+            <div id="date-sim-panel" class="hidden mt-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/90 border border-blue-500/30 text-xs">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-flask"></i> Consulta um data específica
+                    </span>
+                    <button onclick="resetSimulatedDate()" class="text-[10px] text-slate-500 dark:text-slate-400 underline hover:text-slate-900 dark:hover:text-white">Resetar Hoje Real</button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="text" id="sim-date-input" placeholder="dd/mm/yyyy" value="18/09/2026" class="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-2.5 py-1.5 rounded-lg text-xs flex-1 focus:outline-none focus:border-blue-500">
+                    <button onclick="applySimulatedDate()" class="px-3 py-1.5 bg-blue-600 font-bold rounded-lg text-white hover:bg-blue-500">Aplicar</button>
+                </div>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1.5">Digite no formato <strong class="text-slate-700 dark:text-slate-300">dd/mm/yyyy</strong> (Ex: 18/09/2026 ou 12/12/2026).</p>
+            </div>
+
+            <!-- Navigation Mode Tabs -->
+            <div class="flex space-x-1.5 mt-3 pt-1 overflow-x-auto hide-scrollbar text-xs font-bold">
+                <button onclick="setViewTab('proximas')" id="tab-btn-proximas" class="view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 transition">
+                    <i class="fa-solid fa-clock text-[10px]"></i> Próximas
+                </button>
+                <button onclick="setViewTab('todos')" id="tab-btn-todos" class="view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-calendar-days text-[10px]"></i> Completo
+                </button>
+                <button onclick="setViewTab('exames')" id="tab-btn-exames" class="view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-graduation-cap text-[10px] text-rose-500 dark:text-rose-400"></i> Exames
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 pt-4">
+
+        <!-- TODAY'S EVENTS HIGHLIGHT BANNER -->
+        <section id="today-hero" class="mb-5 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 today-glow relative overflow-hidden transition-all duration-300">
+            
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse"></span>
+                        Acontecimentos de Hoje
+                    </span>
+                    <span id="today-formatted-date" class="text-xs font-semibold text-slate-500 dark:text-slate-400">18/09/2026</span>
+                </div>
+                <span id="today-status-tag" class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    --
+                </span>
+            </div>
+
+            <!-- Dynamic Content for Today -->
+            <div id="today-content-area">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- Quick Filters -->
+        <section class="mb-4">
+            <div class="flex items-center justify-between mb-2">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-filter text-slate-400 dark:text-slate-500"></i>
+                    <span>Filtrar Agenda</span>
+                </div>
+                <span id="events-count" class="text-xs text-slate-500 font-medium">0 eventos</span>
+            </div>
+
+            <!-- Months Bar -->
+            <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-xs">
+                <button onclick="setMonthFilter('ALL')" id="mfilter-ALL" class="mfilter-chip px-3 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition">Todos</button>
+                <button onclick="setMonthFilter('SEP')" id="mfilter-SEP" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Setembro</button>
+                <button onclick="setMonthFilter('OCT')" id="mfilter-OCT" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Outubro</button>
+                <button onclick="setMonthFilter('NOV')" id="mfilter-NOV" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Novembro</button>
+                <button onclick="setMonthFilter('DEC')" id="mfilter-DEC" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Dezembro</button>
+                <button onclick="setMonthFilter('JAN')" id="mfilter-JAN" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Janeiro</button>
+            </div>
+
+            <!-- Location Chips -->
+            <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar text-xs">
+                <button onclick="setLocationFilter('ALL')" id="locfilter-ALL" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition">Locais: Todos</button>
+                <button onclick="setLocationFilter('CRIAP')" id="locfilter-CRIAP" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> CRIAP
+                </button>
+                <button onclick="setLocationFilter('Online')" id="locfilter-Online" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Online
+                </button>
+                <button onclick="setLocationFilter('VivaGym')" id="locfilter-VivaGym" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-orange-500"></span> VivaGym
+                </button>
+            </div>
+        </section>
+
+        <!-- Main List Container -->
+        <section id="schedule-list" class="space-y-2.5">
+            <!-- Dynamic Event Cards Injected Here -->
+        </section>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16 px-4 bg-white dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800/80 my-4">
+            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-400 dark:text-slate-500 text-xl">
+                <i class="fa-solid fa-calendar-xmark"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Sem sessões encontradas</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-xs mx-auto">Não existem eventos correspondentes aos filtros ativos.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition touch-active">
+                Limpar Filtros
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Bottom Mobile App Bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 py-2 transition-colors">
+        <div class="max-w-md mx-auto flex items-center justify-around text-center">
+            <button onclick="setViewTab('proximas'); scrollToTop()" class="flex flex-col items-center gap-1 text-blue-600 dark:text-blue-500 transition touch-active">
+                <i class="fa-solid fa-list-ul text-base"></i>
+                <span class="text-[10px] font-medium">Próximas</span>
+            </button>
+            <button onclick="setViewTab('exames'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition touch-active">
+                <i class="fa-solid fa-award text-base"></i>
+                <span class="text-[10px] font-medium">Exames</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Modal Event Detail & Export -->
+    <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity">
+        <div class="w-full sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl max-h-[85vh] overflow-y-auto">
+            <div class="w-10 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-4 sm:hidden"></div>
+            
+            <div class="flex items-start justify-between gap-3 mb-3">
+                <span id="modal-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                    Sessão Letiva
+                </span>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <h3 id="modal-title" class="text-lg font-black text-slate-900 dark:text-white leading-snug">
+                Nome do Módulo
+            </h3>
+
+            <div class="mt-4 space-y-3 border-y border-slate-200 dark:border-slate-800 py-4 text-xs">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Data e Dia</div>
+                        <div id="modal-date" class="font-bold text-slate-800 dark:text-white text-xs">16/09/2026 (Quarta-feira)</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 border border-indigo-500/20">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Horário</div>
+                        <div id="modal-time" class="font-bold text-slate-800 dark:text-white text-xs">18:30 - 20:30</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div id="modal-loc-icon" class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Local da Formação</div>
+                        <div id="modal-location" class="font-bold text-slate-800 dark:text-white text-xs">CRIAP</div>
+                    </div>
+                </div>
+
+                <div id="modal-obs-box" class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Notas / Detalhes</div>
+                        <div id="modal-obs" class="font-medium text-slate-600 dark:text-slate-300 text-xs">Apresentação da turma</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons: .ics download & share -->
+            <div class="mt-4 flex gap-2">
+                <button onclick="downloadIcsFile()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 touch-active">
+                    <i class="fa-solid fa-calendar-plus text-blue-500 dark:text-blue-400"></i>
+                    <span>Adicionar à Agenda (.ics)</span>
+                </button>
+                <button onclick="shareActiveEvent()" class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 touch-active">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Master Dataset for CET_TEF_LIS_60 (ISO date used internally, displayed as dd/mm/yyyy)
+        const rawSchedule = [
+            // SETEMBRO 2026
+            { id: 1, month: 'SEP', date: '2026-09-16', dateStr: '16/09/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Reunião de início do CET em Técnico Especialista em Exercício Físico', exam: '', reunion: 'Reunião de Inicio CET', obs: 'Apresentação oficial', location: 'CRIAP', type: 'reuniao' },
+            { id: 2, month: 'SEP', date: '2026-09-17', dateStr: '17/09/2026', dayWeek: 'qui', timeStart: '19:00', timeEnd: '23:00', module: 'Promoção de Estilos de Vida Saudável', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 3, month: 'SEP', date: '2026-09-18', dateStr: '18/09/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Coaching no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 4, month: 'SEP', date: '2026-09-19', dateStr: '19/09/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: 'Sem atividade letiva', location: 'N/A', type: 'furo' },
+            { id: 5, month: 'SEP', date: '2026-09-19', dateStr: '19/09/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Pedagogia do Exercício', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 6, month: 'SEP', date: '2026-09-23', dateStr: '23/09/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Pedagogia do Exercício', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 7, month: 'SEP', date: '2026-09-24', dateStr: '24/09/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Coaching no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 8, month: 'SEP', date: '2026-09-25', dateStr: '25/09/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Promoção de Estilos de Vida Saudável', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 9, month: 'SEP', date: '2026-09-26', dateStr: '26/09/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Coaching no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 10, month: 'SEP', date: '2026-09-26', dateStr: '26/09/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Pedagogia do Exercício', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 11, month: 'SEP', date: '2026-09-30', dateStr: '30/09/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Promoção de Estilos de Vida Saudável', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+
+            // OUTUBRO 2026
+            { id: 12, month: 'OCT', date: '2026-10-01', dateStr: '01/10/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Pedagogia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 13, month: 'OCT', date: '2026-10-02', dateStr: '02/10/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Promoção de Estilos de Vida Saudável', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 14, month: 'OCT', date: '2026-10-03', dateStr: '03/10/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Coaching no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 15, month: 'OCT', date: '2026-10-03', dateStr: '03/10/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 16, month: 'OCT', date: '2026-10-07', dateStr: '07/10/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Promoção de Estilos de Vida Saudável', exam: 'Exame Teórico', reunion: '', obs: 'Avaliação Final do Módulo', location: 'Online', type: 'exame' },
+            { id: 17, month: 'OCT', date: '2026-10-08', dateStr: '08/10/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 18, month: 'OCT', date: '2026-10-09', dateStr: '09/10/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Psicologia do Exercício', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 19, month: 'OCT', date: '2026-10-10', dateStr: '10/10/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 20, month: 'OCT', date: '2026-10-10', dateStr: '10/10/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 21, month: 'OCT', date: '2026-10-14', dateStr: '14/10/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Coaching no Fitness', exam: 'Exame Teórico', reunion: '', obs: 'Avaliação Final', location: 'Online', type: 'exame' },
+            { id: 22, month: 'OCT', date: '2026-10-15', dateStr: '15/10/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '21:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 23, month: 'OCT', date: '2026-10-16', dateStr: '16/10/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Psicologia do Exercício', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 24, month: 'OCT', date: '2026-10-17', dateStr: '17/10/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '12:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 25, month: 'OCT', date: '2026-10-17', dateStr: '17/10/2026', dayWeek: 'sáb', timeStart: '12:00', timeEnd: '14:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 26, month: 'OCT', date: '2026-10-17', dateStr: '17/10/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 27, month: 'OCT', date: '2026-10-21', dateStr: '21/10/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Pedagogia do Exercício', exam: 'Exame Teórico', reunion: '', obs: 'Avaliação Final', location: 'Online', type: 'exame' },
+            { id: 28, month: 'OCT', date: '2026-10-22', dateStr: '22/10/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Psicologia do Exercício', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 29, month: 'OCT', date: '2026-10-23', dateStr: '23/10/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Psicologia do Exercício', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 30, month: 'OCT', date: '2026-10-24', dateStr: '24/10/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 31, month: 'OCT', date: '2026-10-24', dateStr: '24/10/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 32, month: 'OCT', date: '2026-10-28', dateStr: '28/10/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 33, month: 'OCT', date: '2026-10-28', dateStr: '28/10/2026', dayWeek: 'qua', timeStart: '20:30', timeEnd: '22:30', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 34, month: 'OCT', date: '2026-10-29', dateStr: '29/10/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '20:30', module: 'Psicologia do Exercício', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
+            { id: 35, month: 'OCT', date: '2026-10-30', dateStr: '30/10/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 36, month: 'OCT', date: '2026-10-31', dateStr: '31/10/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 37, month: 'OCT', date: '2026-10-31', dateStr: '31/10/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+
+            // NOVEMBRO 2026
+            { id: 38, month: 'NOV', date: '2026-11-04', dateStr: '04/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 39, month: 'NOV', date: '2026-11-04', dateStr: '04/11/2026', dayWeek: 'qua', timeStart: '20:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 40, month: 'NOV', date: '2026-11-05', dateStr: '05/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 41, month: 'NOV', date: '2026-11-06', dateStr: '06/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:30', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 42, month: 'NOV', date: '2026-11-06', dateStr: '06/11/2026', dayWeek: 'sex', timeStart: '20:30', timeEnd: '22:30', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 43, month: 'NOV', date: '2026-11-07', dateStr: '07/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 44, month: 'NOV', date: '2026-11-07', dateStr: '07/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 45, month: 'NOV', date: '2026-11-11', dateStr: '11/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 46, month: 'NOV', date: '2026-11-12', dateStr: '12/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 47, month: 'NOV', date: '2026-11-13', dateStr: '13/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 48, month: 'NOV', date: '2026-11-14', dateStr: '14/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 49, month: 'NOV', date: '2026-11-14', dateStr: '14/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 50, month: 'NOV', date: '2026-11-18', dateStr: '18/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 51, month: 'NOV', date: '2026-11-19', dateStr: '19/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 52, month: 'NOV', date: '2026-11-20', dateStr: '20/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 53, month: 'NOV', date: '2026-11-21', dateStr: '21/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 54, month: 'NOV', date: '2026-11-21', dateStr: '21/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
+            { id: 55, month: 'NOV', date: '2026-11-25', dateStr: '25/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 56, month: 'NOV', date: '2026-11-26', dateStr: '26/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Marketing no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 57, month: 'NOV', date: '2026-11-27', dateStr: '27/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Aulas de Grupo', exam: 'Exame Prático', reunion: '', obs: 'Exame Prático no CRIAP', location: 'CRIAP', type: 'exame' },
+            { id: 58, month: 'NOV', date: '2026-11-28', dateStr: '28/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 59, month: 'NOV', date: '2026-11-28', dateStr: '28/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+
+            // DEZEMBRO 2026
+            { id: 60, month: 'DEC', date: '2026-12-02', dateStr: '02/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Ética e Deontologia no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
+            { id: 61, month: 'DEC', date: '2026-12-03', dateStr: '03/12/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 62, month: 'DEC', date: '2026-12-04', dateStr: '04/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 63, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 64, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 65, month: 'DEC', date: '2026-12-07', dateStr: '07/12/2026', dayWeek: 'seg', timeStart: '23:59', timeEnd: '', module: 'Data Limite Inscrição - Exames 2ª Época', exam: 'Prazo Limite', reunion: '', obs: 'Prazo oficial máximo', location: 'Online', type: 'exame' },
+            { id: 66, month: 'DEC', date: '2026-12-09', dateStr: '09/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
+            { id: 67, month: 'DEC', date: '2026-12-10', dateStr: '10/12/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 68, month: 'DEC', date: '2026-12-11', dateStr: '11/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
+            { id: 69, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '13:00', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: 'Grupo A', location: 'CRIAP', type: 'exame' },
+            { id: 70, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '13:30', timeEnd: '16:30', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: 'Grupo B', location: 'CRIAP', type: 'exame' },
+            { id: 71, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '16:30', timeEnd: '17:30', module: 'Reunião de Acompanhamento / Estágio', exam: '', reunion: 'Reunião CET', obs: 'Orientações estágio', location: 'CRIAP', type: 'reuniao' },
+            { id: 72, month: 'DEC', date: '2026-12-16', dateStr: '16/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Marketing no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
+            { id: 73, month: 'DEC', date: '2026-12-19', dateStr: '19/12/2026', dayWeek: 'sáb', timeStart: '00:00', timeEnd: '23:59', module: 'Pausa Letiva de Natal / Festas', exam: '', reunion: '', obs: 'Até 05/01/2027', location: 'N/A', type: 'furo' },
+
+            // JANEIRO 2027
+            { id: 74, month: 'JAN', date: '2027-01-08', dateStr: '08/01/2027', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Coaching no Fitness', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
+            { id: 75, month: 'JAN', date: '2027-01-11', dateStr: '11/01/2027', dayWeek: 'seg', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Pedagogia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
+            { id: 76, month: 'JAN', date: '2027-01-13', dateStr: '13/01/2027', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Promoção Estilos Vida Saudável', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
+            { id: 77, month: 'JAN', date: '2027-01-15', dateStr: '15/01/2027', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Psicologia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
+            { id: 78, month: 'JAN', date: '2027-01-20', dateStr: '20/01/2027', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Recomeço das Aulas - Novo Módulo', exam: '', reunion: '', obs: 'Retoma do plano letivo', location: 'CRIAP', type: 'inicio' }
+        ];
+
+        // State variables
+        let simulatedDateISO = '2026-09-18'; // YYYY-MM-DD
+        let currentViewTab = 'proximas'; // 'hoje', 'proximas', 'todos', 'exames'
+        let currentMonthFilter = 'ALL';
+        let currentLocationFilter = 'ALL';
+        let searchQuery = '';
+        let activeModalEvent = null;
+        let deferredPwaPrompt = null;
+
+        /* ----------------------------------------------------
+           DARK MODE / LIGHT MODE TOGGLE LOGIC
+        ----------------------------------------------------- */
+        function initTheme() {
+            const savedTheme = localStorage.getItem('cet_theme');
+            if (savedTheme === 'light') {
+                setLightMode();
+            } else {
+                setDarkMode();
+            }
+        }
+
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                setLightMode();
+            } else {
+                setDarkMode();
+            }
+        }
+
+        function setDarkMode() {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('cet_theme', 'dark');
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = 'fa-solid fa-sun text-amber-400 text-xs';
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#090d16');
+        }
+
+        function setLightMode() {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('cet_theme', 'light');
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = 'fa-solid fa-moon text-slate-700 text-xs';
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#ffffff');
+        }
+
+        /* ----------------------------------------------------
+           DATE HELPERS (FORMAT: dd/mm/yyyy)
+        ----------------------------------------------------- */
+        // Convert YYYY-MM-DD to DD/MM/YYYY
+        function formatIsoToDMY(isoStr) {
+            if (!isoStr || !isoStr.includes('-')) return isoStr;
+            const parts = isoStr.split('-');
+            return `${parts[2]}/${parts[1]}/${parts[0]}`;
+        }
+
+        // Convert DD/MM/YYYY to YYYY-MM-DD
+        function formatDMYToIso(dmyStr) {
+            if (!dmyStr || !dmyStr.includes('/')) return null;
+            const parts = dmyStr.trim().split('/');
+            if (parts.length !== 3) return null;
+            const day = parts[0].padStart(2, '0');
+            const month = parts[1].padStart(2, '0');
+            const year = parts[2];
+            return `${year}-${month}-${day}`;
+        }
+
+        // PWA Install Prompt Listener
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPwaPrompt = e;
+            const installBtn = document.getElementById('pwa-install-btn');
+            if (installBtn) installBtn.classList.remove('hidden');
+        });
+
+        function triggerPwaInstall() {
+            if (deferredPwaPrompt) {
+                deferredPwaPrompt.prompt();
+                deferredPwaPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        document.getElementById('pwa-install-btn').classList.add('hidden');
+                    }
+                    deferredPwaPrompt = null;
+                });
+            }
+        }
+
+        // Initialize App on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+
+            // Check real current date vs schedule range
+            const realTodayISO = new Date().toISOString().split('T')[0];
+            if (realTodayISO >= '2026-09-16' && realTodayISO <= '2027-01-20') {
+                simulatedDateISO = realTodayISO;
+            }
+            document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
+
+            renderApp();
+        });
+
+        function renderApp() {
+            renderTodayHero();
+            renderScheduleList();
+        }
+
+        /* ----------------------------------------------------
+           HIGHLIGHT: TODAY'S EVENTS (ACONTECIMENTOS DE HOJE)
+        ----------------------------------------------------- */
+        function renderTodayHero() {
+            const todayISO = simulatedDateISO;
+            const dateObj = new Date(todayISO + 'T00:00:00');
+            
+            // Format Portugue date with dd/mm/yyyy
+            const dmyDate = formatIsoToDMY(todayISO);
+            document.getElementById('today-formatted-date').innerText = dmyDate;
+
+            // Find events for today
+            const todayEvents = rawSchedule.filter(e => e.date === todayISO);
+            const container = document.getElementById('today-content-area');
+            const statusTag = document.getElementById('today-status-tag');
+
+            if (todayEvents.length === 0) {
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700';
+                statusTag.innerText = 'Sem Aulas Hoje';
+
+                container.innerHTML = `
+                    <div class="py-2 flex items-center justify-between">
+                        <div>
+                            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Dia Livre / Sem Atividade Letiva</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Aproveite para consolidar estudos ou consultar sessões próximas.</p>
+                        </div>
+                        <button onclick="setViewTab('proximas')" class="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shrink-0 touch-active">
+                            Ver Próximas <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            // If events exist for today
+            const hasExam = todayEvents.some(e => e.type === 'exame');
+            if (hasExam) {
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
+                statusTag.innerText = '⚠️ DIA DE EXAME';
+            } else {
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40';
+                statusTag.innerText = `${todayEvents.length} Sessão(ões) Agendada(s)`;
+            }
+
+            let html = '<div class="space-y-3 mt-2">';
+            todayEvents.forEach(item => {
+                html += `
+                    <div onclick="openModal(${item.id})" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border ${item.type === 'exame' ? 'border-rose-500/50 bg-rose-50 dark:bg-rose-950/20' : 'border-slate-200 dark:border-slate-800'} flex items-center justify-between gap-3 hover:border-blue-500/50 transition cursor-pointer touch-active">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xs font-black text-blue-600 dark:text-blue-400 flex items-center gap-1">
+                                    <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}
+                                </span>
+                                ${getLocationBadge(item.location)}
+                                ${getTypeBadge(item)}
+                            </div>
+                            <h4 class="font-extrabold text-sm text-slate-900 dark:text-white truncate">${item.module}</h4>
+                            ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">${item.obs}</p>` : ''}
+                        </div>
+                        <div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs shrink-0">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        function renderScheduleList() {
+            const container = document.getElementById('schedule-list');
+            const emptyState = document.getElementById('empty-state');
+
+            let filtered = rawSchedule.filter(item => {
+                // View Tab Filters
+                if (currentViewTab === 'hoje') {
+                    if (item.date !== simulatedDateISO) return false;
+                } else if (currentViewTab === 'proximas') {
+                    if (item.date < simulatedDateISO) return false;
+                } else if (currentViewTab === 'exames') {
+                    if (item.type !== 'exame') return false;
+                }
+
+                // Month filter
+                if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
+
+                // Location filter
+                if (currentLocationFilter !== 'ALL') {
+                    if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
+                    if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
+                    if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
+                }
+
+                // Search query
+                if (searchQuery.trim().length > 0) {
+                    const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
+                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                }
+
+                return true;
+            });
+
+            document.getElementById('events-count').innerText = `${filtered.length} eventos`;
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            let html = '';
+            let lastMonthGroup = '';
+
+            filtered.forEach(item => {
+                // Month divider if showing all/upcoming
+                if ((currentViewTab === 'todos' || currentViewTab === 'proximas') && item.month !== lastMonthGroup) {
+                    lastMonthGroup = item.month;
+                    const monthNames = { SEP: 'Setembro 2026', OCT: 'Outubro 2026', NOV: 'Novembro 2026', DEC: 'Dezembro 2026', JAN: 'Janeiro 2027' };
+                    html += `
+                        <div class="pt-3 pb-1 sticky top-[105px] z-10 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">${monthNames[item.month] || item.month}</span>
+                                <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                const isToday = item.date === simulatedDateISO;
+                const isExame = item.type === 'exame';
+
+                html += `
+                    <div onclick="openModal(${item.id})" class="p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${isToday ? 'border-blue-500/60 bg-blue-50/50 dark:bg-blue-950/20' : isExame ? 'border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' : 'border-slate-200 dark:border-slate-800'} hover:border-slate-300 dark:hover:border-slate-700 transition cursor-pointer touch-active relative overflow-hidden shadow-sm">
+                        
+                        ${isToday ? '<span class="absolute top-0 right-0 px-2 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase">Hoje</span>' : ''}
+
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-xs">
+                                    ${item.dateStr} <span class="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-semibold">${item.dayWeek}</span>
+                                </span>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                                    <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart}
+                                </span>
+                            </div>
+                            
+                            <div class="flex items-center gap-1 flex-wrap justify-end">
+                                ${getTypeBadge(item)}
+                                ${getLocationBadge(item.location)}
+                            </div>
+                        </div>
+
+                        <h4 class="font-extrabold text-sm text-slate-900 dark:text-white leading-snug">
+                            ${item.module}
+                        </h4>
+
+                        ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-1 font-medium">${item.obs}</p>` : ''}
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Helper Badge Renderers
+        function getLocationBadge(location) {
+            if (location.includes('CRIAP')) {
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                    <i class="fa-solid fa-building text-[9px]"></i> CRIAP
+                </span>`;
+            } else if (location.includes('Online')) {
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                    <i class="fa-solid fa-laptop text-[9px]"></i> Online
+                </span>`;
+            } else if (location.includes('VivaGym')) {
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20">
+                    <i class="fa-solid fa-dumbbell text-[9px]"></i> VivaGym
+                </span>`;
+            }
+            return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700">
+                ${location}
+            </span>`;
+        }
+
+        function getTypeBadge(item) {
+            if (item.type === 'exame') {
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-300 border border-rose-500/30">
+                    <i class="fa-solid fa-graduation-cap mr-0.5 text-[9px]"></i> Exame
+                </span>`;
+            } else if (item.type === 'inicio') {
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-sky-500/10 text-sky-600 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-500/30">
+                    Início
+                </span>`;
+            } else if (item.type === 'reuniao') {
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-300 border border-purple-500/30">
+                    Reunião
+                </span>`;
+            } else if (item.type === 'furo') {
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-500">
+                    Sem Aula
+                </span>`;
+            }
+            return '';
+        }
+
+        // View Tabs Handler
+        function setViewTab(tab) {
+            currentViewTab = tab;
+            document.querySelectorAll('.view-tab').forEach(btn => {
+                btn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition';
+            });
+            const activeBtn = document.getElementById(`tab-btn-${tab}`);
+            if (activeBtn) {
+                activeBtn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 font-bold transition';
+            }
+            renderScheduleList();
+        }
+
+        // Month Filter
+        function setMonthFilter(month) {
+            currentMonthFilter = month;
+            document.querySelectorAll('.mfilter-chip').forEach(btn => {
+                btn.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition';
+            });
+            const active = document.getElementById(`mfilter-${month}`);
+            if (active) active.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition';
+            renderScheduleList();
+        }
+
+        // Location Filter
+        function setLocationFilter(loc) {
+            currentLocationFilter = loc;
+            document.querySelectorAll('.locfilter-chip').forEach(btn => {
+                btn.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1';
+            });
+            const active = document.getElementById(`locfilter-${loc}`);
+            if (active) active.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition flex items-center gap-1';
+            renderScheduleList();
+        }
+
+        // Search Handlers
+        function toggleSearch() {
+            const box = document.getElementById('search-box');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                document.getElementById('search-input').focus();
+            } else {
+                box.classList.add('hidden');
+                clearSearch();
+            }
+        }
+
+        function handleSearch() {
+            const val = document.getElementById('search-input').value;
+            searchQuery = val;
+            const clearBtn = document.getElementById('clear-search');
+            if (val.length > 0) clearBtn.classList.remove('hidden');
+            else clearBtn.classList.add('hidden');
+            renderScheduleList();
+        }
+
+        function clearSearch() {
+            document.getElementById('search-input').value = '';
+            searchQuery = '';
+            document.getElementById('clear-search').classList.add('hidden');
+            renderScheduleList();
+        }
+
+        // Date Simulator Panel Toggle with dd/mm/yyyy support
+        function toggleDateSimulator() {
+            const panel = document.getElementById('date-sim-panel');
+            panel.classList.toggle('hidden');
+        }
+
+        function applySimulatedDate() {
+            const val = document.getElementById('sim-date-input').value;
+            const isoParsed = formatDMYToIso(val);
+            if (isoParsed) {
+                simulatedDateISO = isoParsed;
+                renderApp();
+            } else {
+                alert('Por favor introduza uma data válida no formato dd/mm/yyyy.');
+            }
+        }
+
+        function resetSimulatedDate() {
+            simulatedDateISO = '2026-09-18';
+            document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
+            renderApp();
+        }
+
+        function resetFilters() {
+            currentViewTab = 'proximas';
+            currentMonthFilter = 'ALL';
+            currentLocationFilter = 'ALL';
+            searchQuery = '';
+            document.getElementById('search-input').value = '';
+            setViewTab('proximas');
+            setMonthFilter('ALL');
+            setLocationFilter('ALL');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Modal Handler
+        function openModal(eventId) {
+            const item = rawSchedule.find(e => e.id === eventId);
+            if (!item) return;
+            activeModalEvent = item;
+
+            document.getElementById('modal-title').innerText = item.module;
+            document.getElementById('modal-date').innerText = `${item.dateStr} (${getDayFullName(item.dayWeek)})`;
+            document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
+            document.getElementById('modal-location').innerText = item.location;
+
+            const obsBox = document.getElementById('modal-obs-box');
+            if (item.obs || item.exam || item.reunion) {
+                document.getElementById('modal-obs').innerText = [item.obs, item.exam, item.reunion].filter(Boolean).join(' | ');
+                obsBox.classList.remove('hidden');
+            } else {
+                obsBox.classList.add('hidden');
+            }
+
+            document.getElementById('event-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('event-modal').classList.add('hidden');
+            activeModalEvent = null;
+        }
+
+        function getDayFullName(shortDay) {
+            const days = { 'qua': 'Quarta-feira', 'qui': 'Quinta-feira', 'sex': 'Sexta-feira', 'sáb': 'Sábado', 'seg': 'Segunda-feira' };
+            return days[shortDay] || shortDay;
+        }
+
+        // Calendar .ICS File Generator
+        function downloadIcsFile() {
+            if (!activeModalEvent) return;
+            const ev = activeModalEvent;
+
+            const dateClean = ev.date.replace(/-/g, '');
+            const startTimeClean = ev.timeStart.replace(':', '') + '00';
+            const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
+
+            const icsContent = 
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CET TEF LIS 60//Horario PWA//PT
+BEGIN:VEVENT
+SUMMARY:${ev.module}
+DESCRIPTION:${ev.obs || 'Aula CET TEF 60'}
+LOCATION:${ev.location}
+DTSTART:${dateClean}T${startTimeClean}
+DTEND:${dateClean}T${endTimeClean}
+END:VEVENT
+END:VCALENDAR`;
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${ev.module.substring(0, 20)}_${dateClean}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Web Share API or Clipboard Fallback
+        function shareActiveEvent() {
+            if (!activeModalEvent) return;
+            const ev = activeModalEvent;
+            const text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
+
+            if (navigator.share) {
+                navigator.share({ title: ev.module, text: text });
+            } else {
+                copyTextToClipboard(text);
+            }
+        }
+
+        function shareApp() {
+            const text = `Acompanha o horário e exames da turma CET_TEF_LIS_60 no PWA oficial!`;
+            if (navigator.share) {
+                navigator.share({ title: 'CET TEF 60 PWA', text: text, url: window.location.href });
+            } else {
+                copyTextToClipboard(window.location.href);
+            }
+        }
+
+        function copyTextToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Texto copiado para a área de transferência!');
+        }
+    </script>
+</body>
+</html>
