@@ -42,11 +42,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Favicon com a imagem do logótipo -->
+    <!-- Favicon -->
     <link id="favicon" rel="icon" type="image/png" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
     <link rel="apple-touch-icon" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
 
-    <!-- Manifest Web App generated via Blob -->
+    <!-- Manifest Web App -->
     <script>
         (function setupPWA() {
             const manifestObj = {
@@ -74,15 +74,11 @@
             link.href = manifestURL;
             document.head.appendChild(link);
 
-            // Inline Service Worker Blob
+            // Inline Service Worker
             const swCode = `
-                const CACHE_NAME = 'cet-tef-v3';
-                self.addEventListener('install', (e) => {
-                    self.skipWaiting();
-                });
-                self.addEventListener('activate', (e) => {
-                    e.waitUntil(clients.claim());
-                });
+                const CACHE_NAME = 'cet-tef-v4';
+                self.addEventListener('install', (e) => self.skipWaiting());
+                self.addEventListener('activate', (e) => e.waitUntil(clients.claim()));
                 self.addEventListener('fetch', (e) => {
                     e.respondWith(
                         fetch(e.request).catch(() => caches.match(e.request))
@@ -113,13 +109,21 @@
             transform: scale(0.97);
             transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        /* Custom glow effects */
+        button:focus-visible, input:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
         .dark .today-glow {
             box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25);
         }
         .today-glow {
             box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
         }
+        /* Indicator stripe styles */
+        .loc-stripe-criap { border-left: 4px solid #3b82f6 !important; }
+        .loc-stripe-online { border-left: 4px solid #10b981 !important; }
+        .loc-stripe-vivagym { border-left: 4px solid #f97316 !important; }
+        .loc-stripe-exame { border-left: 4px solid #f43f5e !important; }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-24 selection:bg-blue-500 selection:text-white">
@@ -128,9 +132,8 @@
         <div class="max-w-2xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <!-- Brand & Logo -->
-                <div class="flex items-center gap-3" onclick="resetFilters()">
+                <div class="flex items-center gap-3" onclick="resetFilters()" role="button" tabindex="0" aria-label="Repor filtros e ir para o início">
                     <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative group cursor-pointer touch-active">
-                        <!-- Imagem do Logótipo Oficial -->
                         <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" alt="Logo Grupo Academy" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
                     </div>
                     <div>
@@ -140,49 +143,60 @@
                     </div>
                 </div>
 
-                <!-- Action Controls (Theme Toggle, Search, Date Sim, PWA Install) -->
+                <!-- Action Controls -->
                 <div class="flex items-center gap-2">
-                    <button id="pwa-install-btn" onclick="triggerPwaInstall()" class="hidden px-2.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md shadow-blue-500/20 touch-active">
+                    <!-- Global Calendar Export Button -->
+                    <button onclick="exportFullCalendarIcs()" class="px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white text-xs font-bold transition flex items-center gap-1.5 touch-active" aria-label="Exportar todos os eventos para .ics" title="Exportar Todo o Calendário (.ics)">
+                        <i class="fa-solid fa-download text-blue-500"></i>
+                        <span class="hidden sm:inline">Exportar .ics</span>
+                    </button>
+
+                    <button id="pwa-install-btn" onclick="triggerPwaInstall()" class="hidden px-2.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md shadow-blue-500/20 touch-active" aria-label="Instalar Aplicação">
                         <i class="fa-solid fa-download"></i>
                         <span>Instalar</span>
                     </button>
 
                     <!-- Theme Switcher Button -->
-                    <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Alternar Modo Escuro/Claro">
+                    <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Alternar Modo Escuro/Claro" aria-label="Alternar modo escuro ou claro">
                         <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
                     </button>
 
-                    <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active">
+                    <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
                         <i class="fa-solid fa-magnifying-glass text-xs"></i>
                     </button>
-                    
-                    <button onclick="toggleDateSimulator()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Simular Data">
-                        <i class="fa-solid fa-sliders text-xs text-blue-500 dark:text-blue-400"></i>
-                    </button>
                 </div>
+            </div>
+
+            <!-- Countdown Banner for Next Exam -->
+            <div id="next-exam-banner" class="mt-2.5 p-2 px-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-between text-xs cursor-pointer hover:bg-rose-500/20 transition" onclick="setViewTab('exames')">
+                <div class="flex items-center gap-2 min-w-0">
+                    <span class="px-1.5 py-0.5 rounded bg-rose-600 text-white text-[9px] font-black uppercase shrink-0">Próximo Exame</span>
+                    <span id="next-exam-title" class="font-bold text-rose-700 dark:text-rose-300 truncate">A carregar...</span>
+                </div>
+                <span id="next-exam-countdown" class="font-black text-rose-600 dark:text-rose-400 text-xs shrink-0 ml-2">--</span>
             </div>
 
             <!-- Search Field Dropdown -->
             <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
                 <div class="relative">
                     <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
-                    <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Pesquisar exames, módulos, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
-                    <button onclick="clearSearch()" id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white">
+                    <input type="text" id="search-input" onkeyup="handleSearchDebounced()" placeholder="Pesquisar exames, módulos, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition" aria-label="Campo de pesquisa">
+                    <button onclick="clearSearch()" id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white" aria-label="Limpar pesquisa">
                         <i class="fa-solid fa-xmark text-xs"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Date Simulation Panel (Format: dd/mm/yyyy) -->
+            <!-- Date Simulation Panel -->
             <div id="date-sim-panel" class="hidden mt-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/90 border border-blue-500/30 text-xs">
                 <div class="flex items-center justify-between mb-2">
                     <span class="font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
-                        <i class="fa-solid fa-flask"></i> Consulta um data específica
+                        <i class="fa-solid fa-flask"></i> Consultar data específica
                     </span>
                     <button onclick="resetSimulatedDate()" class="text-[10px] text-slate-500 dark:text-slate-400 underline hover:text-slate-900 dark:hover:text-white">Resetar Hoje Real</button>
                 </div>
                 <div class="flex items-center gap-2">
-                    <input type="text" id="sim-date-input" placeholder="dd/mm/yyyy" value="18/09/2026" class="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-2.5 py-1.5 rounded-lg text-xs flex-1 focus:outline-none focus:border-blue-500">
+                    <input type="text" id="sim-date-input" placeholder="dd/mm/yyyy" value="18/09/2026" class="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-2.5 py-1.5 rounded-lg text-xs flex-1 focus:outline-none focus:border-blue-500" aria-label="Data simulada no formato dia mês ano">
                     <button onclick="applySimulatedDate()" class="px-3 py-1.5 bg-blue-600 font-bold rounded-lg text-white hover:bg-blue-500">Aplicar</button>
                 </div>
                 <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1.5">Digite no formato <strong class="text-slate-700 dark:text-slate-300">dd/mm/yyyy</strong> (Ex: 18/09/2026 ou 12/12/2026).</p>
@@ -284,11 +298,11 @@
     <!-- Bottom Mobile App Bar -->
     <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 py-2 transition-colors">
         <div class="max-w-md mx-auto flex items-center justify-around text-center">
-            <button onclick="setViewTab('proximas'); scrollToTop()" class="flex flex-col items-center gap-1 text-blue-600 dark:text-blue-500 transition touch-active">
+            <button onclick="setViewTab('proximas'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition touch-active" aria-label="Navegar para próximas sessões">
                 <i class="fa-solid fa-list-ul text-base"></i>
                 <span class="text-[10px] font-medium">Próximas</span>
             </button>
-            <button onclick="setViewTab('exames'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition touch-active">
+            <button onclick="setViewTab('exames'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition touch-active" aria-label="Navegar para lista de exames">
                 <i class="fa-solid fa-award text-base"></i>
                 <span class="text-[10px] font-medium">Exames</span>
             </button>
@@ -296,7 +310,7 @@
     </nav>
 
     <!-- Modal Event Detail & Export -->
-    <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity">
+    <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="w-full sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl max-h-[85vh] overflow-y-auto">
             <div class="w-10 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-4 sm:hidden"></div>
             
@@ -304,7 +318,7 @@
                 <span id="modal-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
                     Sessão Letiva
                 </span>
-                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition">
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Fechar janela">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -355,13 +369,13 @@
                 </div>
             </div>
 
-            <!-- Action buttons: .ics download & share -->
+            <!-- Action buttons -->
             <div class="mt-4 flex gap-2">
                 <button onclick="downloadIcsFile()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 touch-active">
                     <i class="fa-solid fa-calendar-plus text-blue-500 dark:text-blue-400"></i>
                     <span>Adicionar à Agenda (.ics)</span>
                 </button>
-                <button onclick="shareActiveEvent()" class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 touch-active">
+                <button onclick="shareActiveEvent()" class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 touch-active" aria-label="Partilhar evento">
                     <i class="fa-solid fa-share-nodes"></i>
                 </button>
             </div>
@@ -369,7 +383,7 @@
     </div>
 
     <script>
-        // Master Dataset for CET_TEF_LIS_60 (ISO date used internally, displayed as dd/mm/yyyy)
+        // Master Dataset for CET_TEF_LIS_60
         const rawSchedule = [
             // SETEMBRO 2026
             { id: 1, month: 'SEP', date: '2026-09-16', dateStr: '16/09/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Reunião de início do CET em Técnico Especialista em Exercício Físico', exam: '', reunion: 'Reunião de Inicio CET', obs: 'Apresentação oficial', location: 'CRIAP', type: 'reuniao' },
@@ -460,17 +474,18 @@
             { id: 78, month: 'JAN', date: '2027-01-20', dateStr: '20/01/2027', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Recomeço das Aulas - Novo Módulo', exam: '', reunion: '', obs: 'Retoma do plano letivo', location: 'CRIAP', type: 'inicio' }
         ];
 
-        // State variables
-        let simulatedDateISO = '2026-09-18'; // YYYY-MM-DD
-        let currentViewTab = 'proximas'; // 'hoje', 'proximas', 'todos', 'exames'
-        let currentMonthFilter = 'ALL';
-        let currentLocationFilter = 'ALL';
+        // State variables (with localStorage persistence)
+        let simulatedDateISO = '2026-09-18';
+        let currentViewTab = localStorage.getItem('cet_tab') || 'proximas';
+        let currentMonthFilter = localStorage.getItem('cet_mfilter') || 'ALL';
+        let currentLocationFilter = localStorage.getItem('cet_locfilter') || 'ALL';
         let searchQuery = '';
         let activeModalEvent = null;
         let deferredPwaPrompt = null;
+        let searchDebounceTimeout = null;
 
         /* ----------------------------------------------------
-           DARK MODE / LIGHT MODE TOGGLE LOGIC
+           THEME LOGIC
         ----------------------------------------------------- */
         function initTheme() {
             const savedTheme = localStorage.getItem('cet_theme');
@@ -508,16 +523,14 @@
         }
 
         /* ----------------------------------------------------
-           DATE HELPERS (FORMAT: dd/mm/yyyy)
+           DATE HELPERS
         ----------------------------------------------------- */
-        // Convert YYYY-MM-DD to DD/MM/YYYY
         function formatIsoToDMY(isoStr) {
             if (!isoStr || !isoStr.includes('-')) return isoStr;
             const parts = isoStr.split('-');
             return `${parts[2]}/${parts[1]}/${parts[0]}`;
         }
 
-        // Convert DD/MM/YYYY to YYYY-MM-DD
         function formatDMYToIso(dmyStr) {
             if (!dmyStr || !dmyStr.includes('/')) return null;
             const parts = dmyStr.trim().split('/');
@@ -528,7 +541,7 @@
             return `${year}-${month}-${day}`;
         }
 
-        // PWA Install Prompt Listener
+        // PWA Install
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPwaPrompt = e;
@@ -548,37 +561,67 @@
             }
         }
 
-        // Initialize App on DOM Ready
+        // Initialize App
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
 
-            // Check real current date vs schedule range
             const realTodayISO = new Date().toISOString().split('T')[0];
             if (realTodayISO >= '2026-09-16' && realTodayISO <= '2027-01-20') {
                 simulatedDateISO = realTodayISO;
             }
             document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
 
+            // Restore saved filter styles
+            setViewTab(currentViewTab, false);
+            setMonthFilter(currentMonthFilter, false);
+            setLocationFilter(currentLocationFilter, false);
+
             renderApp();
         });
 
         function renderApp() {
             renderTodayHero();
+            renderNextExamBanner();
             renderScheduleList();
         }
 
         /* ----------------------------------------------------
-           HIGHLIGHT: TODAY'S EVENTS (HOJE)
+           NEXT EXAM COUNTDOWN BANNER
+        ----------------------------------------------------- */
+        function renderNextExamBanner() {
+            const nextExam = rawSchedule.find(e => e.type === 'exame' && e.date >= simulatedDateISO);
+            const titleEl = document.getElementById('next-exam-title');
+            const cdEl = document.getElementById('next-exam-countdown');
+
+            if (!nextExam) {
+                titleEl.innerText = "Sem exames pendentes";
+                cdEl.innerText = "";
+                return;
+            }
+
+            titleEl.innerText = `${nextExam.module} (${nextExam.dateStr})`;
+
+            const dCurrent = new Date(simulatedDateISO + 'T00:00:00');
+            const dExam = new Date(nextExam.date + 'T00:00:00');
+            const diffDays = Math.ceil((dExam - dCurrent) / (1000 * 60 * 60 * 24));
+
+            if (diffDays === 0) {
+                cdEl.innerText = "É HOJE!";
+            } else if (diffDays === 1) {
+                cdEl.innerText = "É AMANHÃ!";
+            } else {
+                cdEl.innerText = `Faltam ${diffDays} dias`;
+            }
+        }
+
+        /* ----------------------------------------------------
+           HIGHLIGHT: TODAY'S EVENTS
         ----------------------------------------------------- */
         function renderTodayHero() {
             const todayISO = simulatedDateISO;
-            const dateObj = new Date(todayISO + 'T00:00:00');
-            
-            // Format Portugue date with dd/mm/yyyy
             const dmyDate = formatIsoToDMY(todayISO);
             document.getElementById('today-formatted-date').innerText = dmyDate;
 
-            // Find events for today
             const todayEvents = rawSchedule.filter(e => e.date === todayISO);
             const container = document.getElementById('today-content-area');
             const statusTag = document.getElementById('today-status-tag');
@@ -601,7 +644,6 @@
                 return;
             }
 
-            // If events exist for today
             const hasExam = todayEvents.some(e => e.type === 'exame');
             if (hasExam) {
                 statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
@@ -613,8 +655,9 @@
 
             let html = '<div class="space-y-3 mt-2">';
             todayEvents.forEach(item => {
+                const stripeClass = getStripeClass(item);
                 html += `
-                    <div onclick="openModal(${item.id})" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border ${item.type === 'exame' ? 'border-rose-500/50 bg-rose-50 dark:bg-rose-950/20' : 'border-slate-200 dark:border-slate-800'} flex items-center justify-between gap-3 hover:border-blue-500/50 transition cursor-pointer touch-active">
+                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border ${item.type === 'exame' ? 'border-rose-500/50 bg-rose-50 dark:bg-rose-950/20' : 'border-slate-200 dark:border-slate-800'} flex items-center justify-between gap-3 hover:border-blue-500/50 transition cursor-pointer touch-active">
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
                                 <span class="text-xs font-black text-blue-600 dark:text-blue-400 flex items-center gap-1">
@@ -637,12 +680,19 @@
             container.innerHTML = html;
         }
 
+        function getStripeClass(item) {
+            if (item.type === 'exame') return 'loc-stripe-exame';
+            if (item.location.includes('CRIAP')) return 'loc-stripe-criap';
+            if (item.location.includes('Online')) return 'loc-stripe-online';
+            if (item.location.includes('VivaGym')) return 'loc-stripe-vivagym';
+            return '';
+        }
+
         function renderScheduleList() {
             const container = document.getElementById('schedule-list');
             const emptyState = document.getElementById('empty-state');
 
             let filtered = rawSchedule.filter(item => {
-                // View Tab Filters
                 if (currentViewTab === 'hoje') {
                     if (item.date !== simulatedDateISO) return false;
                 } else if (currentViewTab === 'proximas') {
@@ -651,17 +701,14 @@
                     if (item.type !== 'exame') return false;
                 }
 
-                // Month filter
                 if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
 
-                // Location filter
                 if (currentLocationFilter !== 'ALL') {
                     if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
                     if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
                     if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
                 }
 
-                // Search query
                 if (searchQuery.trim().length > 0) {
                     const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
                     if (!fullText.includes(searchQuery.toLowerCase())) return false;
@@ -684,7 +731,6 @@
             let lastMonthGroup = '';
 
             filtered.forEach(item => {
-                // Month divider if showing all/upcoming
                 if ((currentViewTab === 'todos' || currentViewTab === 'proximas') && item.month !== lastMonthGroup) {
                     lastMonthGroup = item.month;
                     const monthNames = { SEP: 'Setembro 2026', OCT: 'Outubro 2026', NOV: 'Novembro 2026', DEC: 'Dezembro 2026', JAN: 'Janeiro 2027' };
@@ -700,9 +746,10 @@
 
                 const isToday = item.date === simulatedDateISO;
                 const isExame = item.type === 'exame';
+                const stripeClass = getStripeClass(item);
 
                 html += `
-                    <div onclick="openModal(${item.id})" class="p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${isToday ? 'border-blue-500/60 bg-blue-50/50 dark:bg-blue-950/20' : isExame ? 'border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' : 'border-slate-200 dark:border-slate-800'} hover:border-slate-300 dark:hover:border-slate-700 transition cursor-pointer touch-active relative overflow-hidden shadow-sm">
+                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${isToday ? 'border-blue-500/60 bg-blue-50/50 dark:bg-blue-950/20' : isExame ? 'border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' : 'border-slate-200 dark:border-slate-800'} hover:border-slate-300 dark:hover:border-slate-700 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
                         
                         ${isToday ? '<span class="absolute top-0 right-0 px-2 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase">Hoje</span>' : ''}
 
@@ -734,7 +781,7 @@
             container.innerHTML = html;
         }
 
-        // Helper Badge Renderers
+        // Badges
         function getLocationBadge(location) {
             if (location.includes('CRIAP')) {
                 return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
@@ -775,9 +822,11 @@
             return '';
         }
 
-        // View Tabs Handler
-        function setViewTab(tab) {
+        // View Tabs
+        function setViewTab(tab, updateRender = true) {
             currentViewTab = tab;
+            localStorage.setItem('cet_tab', tab);
+
             document.querySelectorAll('.view-tab').forEach(btn => {
                 btn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition';
             });
@@ -785,32 +834,36 @@
             if (activeBtn) {
                 activeBtn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 font-bold transition';
             }
-            renderScheduleList();
+            if (updateRender) renderScheduleList();
         }
 
         // Month Filter
-        function setMonthFilter(month) {
+        function setMonthFilter(month, updateRender = true) {
             currentMonthFilter = month;
+            localStorage.setItem('cet_mfilter', month);
+
             document.querySelectorAll('.mfilter-chip').forEach(btn => {
                 btn.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition';
             });
             const active = document.getElementById(`mfilter-${month}`);
             if (active) active.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition';
-            renderScheduleList();
+            if (updateRender) renderScheduleList();
         }
 
         // Location Filter
-        function setLocationFilter(loc) {
+        function setLocationFilter(loc, updateRender = true) {
             currentLocationFilter = loc;
+            localStorage.setItem('cet_locfilter', loc);
+
             document.querySelectorAll('.locfilter-chip').forEach(btn => {
                 btn.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1';
             });
             const active = document.getElementById(`locfilter-${loc}`);
             if (active) active.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition flex items-center gap-1';
-            renderScheduleList();
+            if (updateRender) renderScheduleList();
         }
 
-        // Search Handlers
+        // Search Handlers with Debounce
         function toggleSearch() {
             const box = document.getElementById('search-box');
             if (box.classList.contains('hidden')) {
@@ -822,13 +875,16 @@
             }
         }
 
-        function handleSearch() {
-            const val = document.getElementById('search-input').value;
-            searchQuery = val;
-            const clearBtn = document.getElementById('clear-search');
-            if (val.length > 0) clearBtn.classList.remove('hidden');
-            else clearBtn.classList.add('hidden');
-            renderScheduleList();
+        function handleSearchDebounced() {
+            clearTimeout(searchDebounceTimeout);
+            searchDebounceTimeout = setTimeout(() => {
+                const val = document.getElementById('search-input').value;
+                searchQuery = val;
+                const clearBtn = document.getElementById('clear-search');
+                if (val.length > 0) clearBtn.classList.remove('hidden');
+                else clearBtn.classList.add('hidden');
+                renderScheduleList();
+            }, 250);
         }
 
         function clearSearch() {
@@ -836,12 +892,6 @@
             searchQuery = '';
             document.getElementById('clear-search').classList.add('hidden');
             renderScheduleList();
-        }
-
-        // Date Simulator Panel Toggle with dd/mm/yyyy support
-        function toggleDateSimulator() {
-            const panel = document.getElementById('date-sim-panel');
-            panel.classList.toggle('hidden');
         }
 
         function applySimulatedDate() {
@@ -866,10 +916,14 @@
             currentMonthFilter = 'ALL';
             currentLocationFilter = 'ALL';
             searchQuery = '';
+            localStorage.removeItem('cet_tab');
+            localStorage.removeItem('cet_mfilter');
+            localStorage.removeItem('cet_locfilter');
             document.getElementById('search-input').value = '';
-            setViewTab('proximas');
-            setMonthFilter('ALL');
-            setLocationFilter('ALL');
+            setViewTab('proximas', false);
+            setMonthFilter('ALL', false);
+            setLocationFilter('ALL', false);
+            renderScheduleList();
         }
 
         function scrollToTop() {
@@ -908,38 +962,81 @@
             return days[shortDay] || shortDay;
         }
 
-        // Calendar .ICS File Generator
-        function downloadIcsFile() {
-            if (!activeModalEvent) return;
-            const ev = activeModalEvent;
-
+        /* ----------------------------------------------------
+           ICS EXPORT WITH TIMEZONE (Europe/Lisbon)
+        ----------------------------------------------------- */
+        function generateIcsEventBlock(ev) {
             const dateClean = ev.date.replace(/-/g, '');
             const startTimeClean = ev.timeStart.replace(':', '') + '00';
             const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
 
-            const icsContent = 
-`BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CET TEF LIS 60//Horario PWA//PT
-BEGIN:VEVENT
+            return `BEGIN:VEVENT
 SUMMARY:${ev.module}
 DESCRIPTION:${ev.obs || 'Aula CET TEF 60'}
 LOCATION:${ev.location}
-DTSTART:${dateClean}T${startTimeClean}
-DTEND:${dateClean}T${endTimeClean}
-END:VEVENT
-END:VCALENDAR`;
+DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
+DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
+END:VEVENT`;
+        }
 
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        function getIcsHeader() {
+            return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CET TEF LIS 60//Horario PWA//PT
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Lisbon
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:WET
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:WEST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+END:VTIMEZONE
+`;
+        }
+
+        function downloadIcsFile() {
+            if (!activeModalEvent) return;
+            const ev = activeModalEvent;
+            const content = `${getIcsHeader()}${generateIcsEventBlock(ev)}\nEND:VCALENDAR`;
+
+            const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
             const link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', `${ev.module.substring(0, 20)}_${dateClean}.ics`);
+            link.setAttribute('download', `${ev.module.substring(0, 20)}_${ev.date.replace(/-/g, '')}.ics`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
 
-        // Web Share API or Clipboard Fallback
+        // Export ALL schedule events to single .ics
+        function exportFullCalendarIcs() {
+            let fullIcs = getIcsHeader();
+            const validEvents = rawSchedule.filter(e => e.type !== 'furo');
+            
+            validEvents.forEach(ev => {
+                fullIcs += generateIcsEventBlock(ev) + '\n';
+            });
+            fullIcs += 'END:VCALENDAR';
+
+            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', 'CET_TEF_LIS_60_Horario_Completo.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         function shareActiveEvent() {
             if (!activeModalEvent) return;
             const ev = activeModalEvent;
@@ -949,15 +1046,6 @@ END:VCALENDAR`;
                 navigator.share({ title: ev.module, text: text });
             } else {
                 copyTextToClipboard(text);
-            }
-        }
-
-        function shareApp() {
-            const text = `Acompanha o horário e exames da turma CET_TEF_LIS_60 no PWA oficial!`;
-            if (navigator.share) {
-                navigator.share({ title: 'CET TEF 60 PWA', text: text, url: window.location.href });
-            } else {
-                copyTextToClipboard(window.location.href);
             }
         }
 
