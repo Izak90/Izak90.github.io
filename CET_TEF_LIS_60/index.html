@@ -145,12 +145,6 @@
 
                 <!-- Action Controls -->
                 <div class="flex items-center gap-2">
-                    <!-- Global Calendar Export Button -->
-                    <button onclick="exportFullCalendarIcs()" class="px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white text-xs font-bold transition flex items-center gap-1.5 touch-active" aria-label="Exportar todos os eventos para .ics" title="Exportar Todo o Calendário (.ics)">
-                        <i class="fa-solid fa-download text-blue-500"></i>
-                        <span class="hidden sm:inline">Exportar .ics</span>
-                    </button>
-
                     <button id="pwa-install-btn" onclick="triggerPwaInstall()" class="hidden px-2.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md shadow-blue-500/20 touch-active" aria-label="Instalar Aplicação">
                         <i class="fa-solid fa-download"></i>
                         <span>Instalar</span>
@@ -249,6 +243,11 @@
                     <span>Filtrar Agenda</span>
                 </div>
                 <span id="events-count" class="text-xs text-slate-500 font-medium">0 eventos</span>
+                <!-- Botão de Download Dinâmico -->
+                <button onclick="exportFilteredCalendarIcs()" class="px-2 py-1 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[11px] font-bold transition flex items-center gap-1 touch-active" title="Descarregar ficheiro .ics dos eventos filtrados">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Descarregar (.ics)</span>
+                </button>
             </div>
 
             <!-- Months Bar -->
@@ -522,6 +521,61 @@
             if (meta) meta.setAttribute('content', '#ffffff');
         }
 
+        function exportFilteredCalendarIcs() {
+            // Obtém exatamente os eventos filtrados com base no separador, mês, local e pesquisa
+            const filteredEvents = rawSchedule.filter(item => {
+                if (item.type === 'furo') return false; // Exclui furos/sem aula
+
+                if (currentViewTab === 'hoje') {
+                    if (item.date !== simulatedDateISO) return false;
+                } else if (currentViewTab === 'proximas') {
+                    if (item.date <= simulatedDateISO) return false;
+                } else if (currentViewTab === 'exames') {
+                    if (item.type !== 'exame') return false;
+                }
+
+                if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
+
+                if (currentLocationFilter !== 'ALL') {
+                    if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
+                    if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
+                    if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
+                }
+
+                if (searchQuery.trim().length > 0) {
+                    const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
+                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                }
+
+                return true;
+            });
+
+            if (filteredEvents.length === 0) {
+                alert('Não existem sessões visíveis para exportar.');
+                return;
+            }
+
+            let fullIcs = getIcsHeader();
+            filteredEvents.forEach(ev => {
+                fullIcs += generateIcsEventBlock(ev) + '\n';
+            });
+            fullIcs += 'END:VCALENDAR';
+
+            // Cria um nome descritivo para o ficheiro dependendo do filtro
+            let fileName = 'CET_TEF_60_Agenda';
+            if (currentMonthFilter !== 'ALL') fileName += `_${currentMonthFilter}`;
+            if (currentLocationFilter !== 'ALL') fileName += `_${currentLocationFilter}`;
+            if (currentViewTab === 'exames') fileName += '_Exames';
+
+            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${fileName}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         /* ----------------------------------------------------
            DATE HELPERS
         ----------------------------------------------------- */
@@ -561,13 +615,33 @@
             }
         }
 
+        // Obtém a data atual formatada rigorosamente no fuso horário de Lisboa (YYYY-MM-DD)
+        function getTodayLisbonISO() {
+            const formatter = new Intl.DateTimeFormat('pt-PT', {
+                timeZone: 'Europe/Lisbon',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            });
+            
+            // Formato retornado em pt-PT: "DD/MM/YYYY"
+            const parts = formatter.formatToParts(new Date());
+            const day = parts.find(p => p.type === 'day').value;
+            const month = parts.find(p => p.type === 'month').value;
+            const year = parts.find(p => p.type === 'year').value;
+
+            return `${year}-${month}-${day}`;
+        }
+
         // Initialize App
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
 
-            const realTodayISO = new Date().toISOString().split('T')[0];
-            if (realTodayISO >= '2026-09-16' && realTodayISO <= '2027-01-20') {
-                simulatedDateISO = realTodayISO;
+            // Obtém o dia atual no fuso horário Europe/Lisbon
+            const todayLisbonISO = getTodayLisbonISO();
+
+            if (todayLisbonISO >= '2026-09-16' && todayLisbonISO <= '2027-01-20') {
+                simulatedDateISO = todayLisbonISO;
             }
             document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
 
@@ -645,12 +719,14 @@
             }
 
             const hasExam = todayEvents.some(e => e.type === 'exame');
+            const count = todayEvents.length;
+            const sessionLabel = count === 1 ? '1 Sessão Agendada' : `${count} Sessões Agendadas`;
             if (hasExam) {
                 statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
                 statusTag.innerText = '⚠️ DIA DE EXAME';
             } else {
                 statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40';
-                statusTag.innerText = `${todayEvents.length} Sessão(ões) Agendada(s)`;
+                statusTag.innerText = sessionLabel;
             }
 
             let html = '<div class="space-y-3 mt-2">';
@@ -693,22 +769,27 @@
             const emptyState = document.getElementById('empty-state');
 
             let filtered = rawSchedule.filter(item => {
+                // View Tab Filters
                 if (currentViewTab === 'hoje') {
                     if (item.date !== simulatedDateISO) return false;
                 } else if (currentViewTab === 'proximas') {
-                    if (item.date < simulatedDateISO) return false;
+                    // AJUSTE: Apenas datas estritamente futuras (exclui o dia de hoje para evitar redundância com o banner superior)
+                    if (item.date <= simulatedDateISO) return false;
                 } else if (currentViewTab === 'exames') {
                     if (item.type !== 'exame') return false;
                 }
 
+                // Month filter
                 if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
 
+                // Location filter
                 if (currentLocationFilter !== 'ALL') {
                     if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
                     if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
                     if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
                 }
 
+                // Search query
                 if (searchQuery.trim().length > 0) {
                     const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
                     if (!fullText.includes(searchQuery.toLowerCase())) return false;
@@ -748,15 +829,22 @@
                 const isExame = item.type === 'exame';
                 const stripeClass = getStripeClass(item);
 
+                // AJUSTE: Estilização com cor de fundo destacada (efeito selecionado) para o dia de Hoje
+                const todayStyleClasses = isToday 
+                    ? 'border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-r from-blue-500/15 via-blue-500/5 to-transparent shadow-md shadow-blue-500/10' 
+                    : isExame 
+                        ? 'border border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' 
+                        : 'border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60';
+
                 html += `
-                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${isToday ? 'border-blue-500/60 bg-blue-50/50 dark:bg-blue-950/20' : isExame ? 'border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' : 'border-slate-200 dark:border-slate-800'} hover:border-slate-300 dark:hover:border-slate-700 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
+                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
                         
-                        ${isToday ? '<span class="absolute top-0 right-0 px-2 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase">Hoje</span>' : ''}
+                        ${isToday ? '<span class="absolute top-0 right-0 px-2.5 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider shadow-sm">Hoje</span>' : ''}
 
                         <div class="flex items-start justify-between gap-2 mb-2">
                             <div class="flex items-center gap-2">
-                                <span class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-xs">
-                                    ${item.dateStr} <span class="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-semibold">${item.dayWeek}</span>
+                                <span class="px-2 py-0.5 rounded-lg ${isToday ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200'} font-bold text-xs">
+                                    ${item.dateStr} <span class="${isToday ? 'text-blue-100' : 'text-slate-400 dark:text-slate-500'} text-[10px] uppercase font-semibold">${item.dayWeek}</span>
                                 </span>
                                 <span class="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
                                     <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart}
@@ -1013,25 +1101,6 @@ END:VTIMEZONE
             const link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
             link.setAttribute('download', `${ev.module.substring(0, 20)}_${ev.date.replace(/-/g, '')}.ics`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        // Export ALL schedule events to single .ics
-        function exportFullCalendarIcs() {
-            let fullIcs = getIcsHeader();
-            const validEvents = rawSchedule.filter(e => e.type !== 'furo');
-            
-            validEvents.forEach(ev => {
-                fullIcs += generateIcsEventBlock(ev) + '\n';
-            });
-            fullIcs += 'END:VCALENDAR';
-
-            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', 'CET_TEF_LIS_60_Horario_Completo.ics');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
