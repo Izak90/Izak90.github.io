@@ -1,0 +1,17 @@
+{
+  "name": "Horário CET_TEF_LIS_60",
+  "short_name": "CET TEF 60",
+  "description": "Horário oficial e acompanhamento da turma CET_TEF_LIS_60",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "icons": [
+    {
+      "src": "https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
