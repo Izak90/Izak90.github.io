@@ -46,7 +46,7 @@
     <link id="favicon" rel="icon" type="image/png" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
     <link rel="apple-touch-icon" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
 
-    <!-- Ficheiro Manifest Físico -->
+    <!-- Ficheiro Manifest Físico para PWA Oficial -->
     <link rel="manifest" href="./manifest.json">
 
     <!-- Registo do Service Worker Físico -->
@@ -73,7 +73,7 @@
             transform: scale(0.97);
             transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        button:focus-visible, input:focus-visible {
+        button:focus-visible, input:focus-visible, a:focus-visible {
             outline: 2px solid #3b82f6;
             outline-offset: 2px;
         }
@@ -282,17 +282,21 @@
 
     </main>
 
-    <!-- Bottom Mobile App Bar (iOS Safe Padding) -->
-    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pt-2 pb-safe transition-colors">
+    <!-- Bottom Mobile App Bar (Recursos Rápidos Fixo) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pt-2.5 pb-safe transition-colors">
         <div class="max-w-md mx-auto flex items-center justify-around text-center">
-            <button onclick="setViewTab('proximas'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition touch-active" aria-label="Navegar para próximas sessões">
-                <i class="fa-solid fa-list-ul text-base"></i>
-                <span class="text-[10px] font-medium">Próximas</span>
-            </button>
-            <button onclick="setViewTab('exames'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition touch-active" aria-label="Navegar para lista de exames">
-                <i class="fa-solid fa-award text-base"></i>
-                <span class="text-[10px] font-medium">Exames</span>
-            </button>
+            <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition touch-active">
+                <i class="fa-solid fa-video text-lg"></i>
+                <span class="font-bold text-[10px] leading-tight">Google Meet<br><span class="font-normal opacity-75">Aulas/Testes</span></span>
+            </a>
+            <a href="https://drive.google.com/file/d/1MakGp02TimaVtoD2KbaE9yg_s4j1Odx5/view" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition touch-active">
+                <i class="fa-solid fa-book-open text-lg"></i>
+                <span class="font-bold text-[10px] leading-tight">Workbook<br><span class="font-normal opacity-75">Exercícios</span></span>
+            </a>
+            <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition touch-active">
+                <i class="fa-solid fa-vial-circle-check text-lg"></i>
+                <span class="font-bold text-[10px] leading-tight">Simulador<br><span class="font-normal opacity-75">Exames</span></span>
+            </a>
         </div>
     </nav>
 
@@ -366,10 +370,19 @@
                     </div>
                 </div>
 
+                <!-- Botão de Acesso Direto ao Google Meet (Se for Online ou Exame) -->
+                <div id="modal-meet-box" class="pt-1 hidden">
+                    <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
+                        <i class="fa-solid fa-video text-base"></i>
+                        <span>Entrar na Sala Virtual (Google Meet)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
+                    </a>
+                </div>
+
                 <!-- Botão de Acesso ao Drive do Módulo -->
                 <div id="modal-drive-box" class="pt-1">
-                    <a id="modal-drive-link" href="#" target="_blank" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
-                        <i class="fa-brands fa-google-drive text-base"></i>
+                    <a id="modal-drive-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700">
+                        <i class="fa-brands fa-google-drive text-base text-emerald-500"></i>
                         <span>Abrir Repositório de Materiais</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
                     </a>
@@ -377,9 +390,18 @@
                 
                 <!-- Botão de Acesso à Aula Assíncrona -->
                 <div id="modal-async-box" class="pt-1 hidden">
-                    <a id="modal-async-link" href="#" target="_blank" class="w-full py-2.5 px-3 bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-blue-500/30">
+                    <a id="modal-async-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-blue-500/30">
                         <i class="fa-solid fa-laptop text-base"></i>
                         <span>Abrir Aula Assíncrona</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
+                    </a>
+                </div>
+
+                <!-- Botão do Simulador de Exames (Exibido se for Exame) -->
+                <div id="modal-quilgo-box" class="pt-1 hidden">
+                    <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-rose-600/10 hover:bg-rose-600/20 text-rose-600 dark:text-rose-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-rose-500/30">
+                        <i class="fa-solid fa-vial-circle-check text-base"></i>
+                        <span>Abrir Simulador de Exame</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
                     </a>
                 </div>
@@ -417,34 +439,22 @@
                 asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-7-2-4/'
             },
             'Fisiologia do Exercício': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             },
             'Psicologia do Exercício': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             },
             'Aulas de Grupo': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/1koNxUo0LOSevh5yoFJeVwA1Qnggx_MKN'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             },
             'Comunicação no Fitness': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             },
             'Ética e Deontologia no Fitness': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             },
             'Marketing no Fitness': {
-                //trainer: 'Desconhecido',
                 driveUrl: 'https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE'
-                //asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
             }
         };
 
@@ -1073,6 +1083,14 @@
                 trainerBox.classList.add('hidden');
             }
 
+            // Google Meet Box (Apenas se for Online ou Exame)
+            const meetBox = document.getElementById('modal-meet-box');
+            if (item.location.includes('Online') || item.type === 'exame') {
+                meetBox.classList.remove('hidden');
+            } else {
+                meetBox.classList.add('hidden');
+            }
+
             // Google Drive Repository link
             const driveBox = document.getElementById('modal-drive-box');
             if (modInfo.driveUrl) {
@@ -1089,6 +1107,14 @@
                 asyncBox.classList.remove('hidden');
             } else {
                 asyncBox.classList.add('hidden');
+            }
+
+            // Simulador Quilgo (Visível nos Exames)
+            const quilgoBox = document.getElementById('modal-quilgo-box');
+            if (item.type === 'exame') {
+                quilgoBox.classList.remove('hidden');
+            } else {
+                quilgoBox.classList.add('hidden');
             }
 
             const obsBox = document.getElementById('modal-obs-box');
@@ -1153,6 +1179,7 @@ END:VTIMEZONE
             if (modInfo.trainer) description += ` | Formador: ${modInfo.trainer}`;
             if (modInfo.driveUrl) description += ` | Repositório: ${modInfo.driveUrl}`;
             if (modInfo.asynchronousClass) description += ` | Aula Assíncrona: ${modInfo.asynchronousClass}`;
+            if (ev.location.includes('Online')) description += ` | Google Meet: https://meet.google.com/rei-odsd-hpq`;
 
             return `BEGIN:VEVENT
 SUMMARY:${ev.module}
@@ -1239,8 +1266,10 @@ END:VEVENT`;
             const modInfo = moduleConfig[ev.module] || {};
             let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
             if (modInfo.trainer) text += `\n👤 Formador(a): ${modInfo.trainer}`;
+            if (ev.location.includes('Online')) text += `\n🎥 Google Meet: https://meet.google.com/rei-odsd-hpq`;
             if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
             if (modInfo.asynchronousClass) text += `\n💻 Aula Assíncrona: ${modInfo.asynchronousClass}`;
+            if (ev.type === 'exame') text += `\n📝 Simulador de Exame: https://quilgo.com/t/bIk0EVK8QHVzOgwJ`;
             
             if (navigator.share) {
                 navigator.share({ title: ev.module, text: text });
