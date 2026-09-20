@@ -76,7 +76,7 @@
 
             // Inline Service Worker
             const swCode = `
-                const CACHE_NAME = 'cet-tef-v4';
+                const CACHE_NAME = 'cet-tef-v6';
                 self.addEventListener('install', (e) => self.skipWaiting());
                 self.addEventListener('activate', (e) => e.waitUntil(clients.claim()));
                 self.addEventListener('fetch', (e) => {
@@ -119,7 +119,6 @@
         .today-glow {
             box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
         }
-        /* Indicator stripe styles */
         .loc-stripe-criap { border-left: 4px solid #3b82f6 !important; }
         .loc-stripe-online { border-left: 4px solid #10b981 !important; }
         .loc-stripe-vivagym { border-left: 4px solid #f97316 !important; }
@@ -174,7 +173,7 @@
             <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
                 <div class="relative">
                     <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
-                    <input type="text" id="search-input" onkeyup="handleSearchDebounced()" placeholder="Pesquisar exames, módulos, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition" aria-label="Campo de pesquisa">
+                    <input type="text" id="search-input" onkeyup="handleSearchDebounced()" placeholder="Pesquisar exames, módulos, formadores, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition" aria-label="Campo de pesquisa">
                     <button onclick="clearSearch()" id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white" aria-label="Limpar pesquisa">
                         <i class="fa-solid fa-xmark text-xs"></i>
                     </button>
@@ -242,6 +241,7 @@
                     <i class="fa-solid fa-filter text-slate-400 dark:text-slate-500"></i>
                     <span>Filtrar Agenda</span>
                 </div>
+
                 <span id="events-count" class="text-xs text-slate-500 font-medium">0 eventos</span>
                 <!-- Botão de Download Dinâmico -->
                 <button onclick="exportFilteredCalendarIcs()" class="px-2 py-1 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[11px] font-bold transition flex items-center gap-1 touch-active" title="Descarregar ficheiro .ics dos eventos filtrados">
@@ -327,6 +327,17 @@
             </h3>
 
             <div class="mt-4 space-y-3 border-y border-slate-200 dark:border-slate-800 py-4 text-xs">
+                <!-- Formador -->
+                <div id="modal-trainer-box" class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Formador(a)</div>
+                        <div id="modal-trainer" class="font-bold text-slate-800 dark:text-white text-xs">--</div>
+                    </div>
+                </div>
+
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20">
                         <i class="fa-regular fa-calendar"></i>
@@ -366,6 +377,15 @@
                         <div id="modal-obs" class="font-medium text-slate-600 dark:text-slate-300 text-xs">Apresentação da turma</div>
                     </div>
                 </div>
+
+                <!-- Botão de Acesso ao Drive do Módulo -->
+                <div id="modal-drive-box" class="pt-1">
+                    <a id="modal-drive-link" href="#" target="_blank" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
+                        <i class="fa-brands fa-google-drive text-base"></i>
+                        <span>Abrir Repositório de Materiais</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
+                    </a>
+                </div>
             </div>
 
             <!-- Action buttons -->
@@ -382,6 +402,46 @@
     </div>
 
     <script>
+        // Module Repositories and Trainers Master Config
+        const moduleConfig = {
+            'Promoção de Estilos de Vida Saudável': {
+                trainer: 'Inês Nobre',
+                driveUrl: 'https://drive.google.com/drive/folders/1-s7tqNJBE_OCEZB0HLnrL8f-BhesHY2M'
+            },
+            'Coaching no Fitness': {
+                trainer: 'Ricardo Costa',
+                driveUrl: 'https://drive.google.com/drive/folders/1wGJjtKQaki0lBI_GjmGjSovVq5i_QDrq'
+            },
+            'Pedagogia do Exercício': {
+                trainer: 'Miguel Leitão',
+                driveUrl: 'https://drive.google.com/drive/folders/1HXe8U5CjuvrZRTXPH5TdEO-Cec8RRE5f'
+            },
+            'Fisiologia do Exercício': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO'
+            },
+            'Psicologia do Exercício': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB'
+            },
+            'Aulas de Grupo': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/1koNxUo0LOSevh5yoFJeVwA1Qnggx_MKN'
+            },
+            'Comunicação no Fitness': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa'
+            },
+            'Ética e Deontologia no Fitness': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c'
+            },
+            'Marketing no Fitness': {
+                //trainer: 'Desconhecido',
+                driveUrl: 'https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE'
+            }
+        };
+
         // Master Dataset for CET_TEF_LIS_60
         const rawSchedule = [
             // SETEMBRO 2026
@@ -484,6 +544,39 @@
         let searchDebounceTimeout = null;
 
         /* ----------------------------------------------------
+           DATE HELPERS (FORCED Europe/Lisbon TIMEZONE)
+        ----------------------------------------------------- */
+        function getTodayLisbonISO() {
+            const formatter = new Intl.DateTimeFormat('pt-PT', {
+                timeZone: 'Europe/Lisbon',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            });
+            const parts = formatter.formatToParts(new Date());
+            const day = parts.find(p => p.type === 'day').value;
+            const month = parts.find(p => p.type === 'month').value;
+            const year = parts.find(p => p.type === 'year').value;
+            return `${year}-${month}-${day}`;
+        }
+
+        function formatIsoToDMY(isoStr) {
+            if (!isoStr || !isoStr.includes('-')) return isoStr;
+            const parts = isoStr.split('-');
+            return `${parts[2]}/${parts[1]}/${parts[0]}`;
+        }
+
+        function formatDMYToIso(dmyStr) {
+            if (!dmyStr || !dmyStr.includes('/')) return null;
+            const parts = dmyStr.trim().split('/');
+            if (parts.length !== 3) return null;
+            const day = parts[0].padStart(2, '0');
+            const month = parts[1].padStart(2, '0');
+            const year = parts[2];
+            return `${year}-${month}-${day}`;
+        }
+
+        /* ----------------------------------------------------
            THEME LOGIC
         ----------------------------------------------------- */
         function initTheme() {
@@ -521,80 +614,6 @@
             if (meta) meta.setAttribute('content', '#ffffff');
         }
 
-        function exportFilteredCalendarIcs() {
-            // Obtém exatamente os eventos filtrados com base no separador, mês, local e pesquisa
-            const filteredEvents = rawSchedule.filter(item => {
-                if (item.type === 'furo') return false; // Exclui furos/sem aula
-
-                if (currentViewTab === 'hoje') {
-                    if (item.date !== simulatedDateISO) return false;
-                } else if (currentViewTab === 'proximas') {
-                    if (item.date <= simulatedDateISO) return false;
-                } else if (currentViewTab === 'exames') {
-                    if (item.type !== 'exame') return false;
-                }
-
-                if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
-
-                if (currentLocationFilter !== 'ALL') {
-                    if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
-                    if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
-                    if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
-                }
-
-                if (searchQuery.trim().length > 0) {
-                    const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
-                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
-                }
-
-                return true;
-            });
-
-            if (filteredEvents.length === 0) {
-                alert('Não existem sessões visíveis para exportar.');
-                return;
-            }
-
-            let fullIcs = getIcsHeader();
-            filteredEvents.forEach(ev => {
-                fullIcs += generateIcsEventBlock(ev) + '\n';
-            });
-            fullIcs += 'END:VCALENDAR';
-
-            // Cria um nome descritivo para o ficheiro dependendo do filtro
-            let fileName = 'CET_TEF_60_Agenda';
-            if (currentMonthFilter !== 'ALL') fileName += `_${currentMonthFilter}`;
-            if (currentLocationFilter !== 'ALL') fileName += `_${currentLocationFilter}`;
-            if (currentViewTab === 'exames') fileName += '_Exames';
-
-            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', `${fileName}.ics`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        /* ----------------------------------------------------
-           DATE HELPERS
-        ----------------------------------------------------- */
-        function formatIsoToDMY(isoStr) {
-            if (!isoStr || !isoStr.includes('-')) return isoStr;
-            const parts = isoStr.split('-');
-            return `${parts[2]}/${parts[1]}/${parts[0]}`;
-        }
-
-        function formatDMYToIso(dmyStr) {
-            if (!dmyStr || !dmyStr.includes('/')) return null;
-            const parts = dmyStr.trim().split('/');
-            if (parts.length !== 3) return null;
-            const day = parts[0].padStart(2, '0');
-            const month = parts[1].padStart(2, '0');
-            const year = parts[2];
-            return `${year}-${month}-${day}`;
-        }
-
         // PWA Install
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
@@ -615,37 +634,16 @@
             }
         }
 
-        // Obtém a data atual formatada rigorosamente no fuso horário de Lisboa (YYYY-MM-DD)
-        function getTodayLisbonISO() {
-            const formatter = new Intl.DateTimeFormat('pt-PT', {
-                timeZone: 'Europe/Lisbon',
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit'
-            });
-            
-            // Formato retornado em pt-PT: "DD/MM/YYYY"
-            const parts = formatter.formatToParts(new Date());
-            const day = parts.find(p => p.type === 'day').value;
-            const month = parts.find(p => p.type === 'month').value;
-            const year = parts.find(p => p.type === 'year').value;
-
-            return `${year}-${month}-${day}`;
-        }
-
         // Initialize App
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
 
-            // Obtém o dia atual no fuso horário Europe/Lisbon
-            const todayLisbonISO = getTodayLisbonISO();
-
-            if (todayLisbonISO >= '2026-09-16' && todayLisbonISO <= '2027-01-20') {
-                simulatedDateISO = todayLisbonISO;
+            const todayLisbon = getTodayLisbonISO();
+            if (todayLisbon >= '2026-09-16' && todayLisbon <= '2027-01-20') {
+                simulatedDateISO = todayLisbon;
             }
             document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
 
-            // Restore saved filter styles
             setViewTab(currentViewTab, false);
             setMonthFilter(currentMonthFilter, false);
             setLocationFilter(currentLocationFilter, false);
@@ -689,7 +687,7 @@
         }
 
         /* ----------------------------------------------------
-           HIGHLIGHT: TODAY'S EVENTS
+           HIGHLIGHT: TODAY'S EVENTS (DYNAMIC SINGULAR/PLURAL)
         ----------------------------------------------------- */
         function renderTodayHero() {
             const todayISO = simulatedDateISO;
@@ -718,9 +716,10 @@
                 return;
             }
 
-            const hasExam = todayEvents.some(e => e.type === 'exame');
             const count = todayEvents.length;
             const sessionLabel = count === 1 ? '1 Sessão Agendada' : `${count} Sessões Agendadas`;
+
+            const hasExam = todayEvents.some(e => e.type === 'exame');
             if (hasExam) {
                 statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
                 statusTag.innerText = '⚠️ DIA DE EXAME';
@@ -732,6 +731,9 @@
             let html = '<div class="space-y-3 mt-2">';
             todayEvents.forEach(item => {
                 const stripeClass = getStripeClass(item);
+                const modInfo = moduleConfig[item.module] || {};
+                const trainerText = modInfo.trainer ? ` • <i class="fa-solid fa-user-tie text-[9px] ml-1"></i> ${modInfo.trainer}` : '';
+
                 html += `
                     <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border ${item.type === 'exame' ? 'border-rose-500/50 bg-rose-50 dark:bg-rose-950/20' : 'border-slate-200 dark:border-slate-800'} flex items-center justify-between gap-3 hover:border-blue-500/50 transition cursor-pointer touch-active">
                         <div class="flex-1 min-w-0">
@@ -743,7 +745,9 @@
                                 ${getTypeBadge(item)}
                             </div>
                             <h4 class="font-extrabold text-sm text-slate-900 dark:text-white truncate">${item.module}</h4>
-                            ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">${item.obs}</p>` : ''}
+                            <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                                ${item.obs ? item.obs : ''} ${trainerText}
+                            </p>
                         </div>
                         <div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs shrink-0">
                             <i class="fa-solid fa-chevron-right"></i>
@@ -764,6 +768,9 @@
             return '';
         }
 
+        /* ----------------------------------------------------
+           SCHEDULE LIST (CORRECTED 'todos' TAB FILTERING)
+        ----------------------------------------------------- */
         function renderScheduleList() {
             const container = document.getElementById('schedule-list');
             const emptyState = document.getElementById('empty-state');
@@ -773,7 +780,6 @@
                 if (currentViewTab === 'hoje') {
                     if (item.date !== simulatedDateISO) return false;
                 } else if (currentViewTab === 'proximas') {
-                    // AJUSTE: Apenas datas estritamente futuras (exclui o dia de hoje para evitar redundância com o banner superior)
                     if (item.date <= simulatedDateISO) return false;
                 } else if (currentViewTab === 'exames') {
                     if (item.type !== 'exame') return false;
@@ -791,7 +797,9 @@
 
                 // Search query
                 if (searchQuery.trim().length > 0) {
-                    const fullText = `${item.module} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
+                    const modInfo = moduleConfig[item.module] || {};
+                    const trainer = modInfo.trainer || '';
+                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
                     if (!fullText.includes(searchQuery.toLowerCase())) return false;
                 }
 
@@ -828,8 +836,8 @@
                 const isToday = item.date === simulatedDateISO;
                 const isExame = item.type === 'exame';
                 const stripeClass = getStripeClass(item);
+                const modInfo = moduleConfig[item.module] || {};
 
-                // AJUSTE: Estilização com cor de fundo destacada (efeito selecionado) para o dia de Hoje
                 const todayStyleClasses = isToday 
                     ? 'border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-r from-blue-500/15 via-blue-500/5 to-transparent shadow-md shadow-blue-500/10' 
                     : isExame 
@@ -837,7 +845,7 @@
                         : 'border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60';
 
                 html += `
-                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
+                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
                         
                         ${isToday ? '<span class="absolute top-0 right-0 px-2.5 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider shadow-sm">Hoje</span>' : ''}
 
@@ -861,7 +869,10 @@
                             ${item.module}
                         </h4>
 
-                        ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-1 font-medium">${item.obs}</p>` : ''}
+                        <div class="flex items-center justify-between gap-2 mt-1">
+                            ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 font-medium">${item.obs}</p>` : '<span></span>'}
+                            ${modInfo.trainer ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-500/20 shrink-0"><i class="fa-solid fa-user-tie text-[9px] mr-1"></i>${modInfo.trainer}</span>` : ''}
+                        </div>
                     </div>
                 `;
             });
@@ -951,7 +962,7 @@
             if (updateRender) renderScheduleList();
         }
 
-        // Search Handlers with Debounce
+        // Search Handlers
         function toggleSearch() {
             const box = document.getElementById('search-box');
             if (box.classList.contains('hidden')) {
@@ -1018,16 +1029,36 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Modal Handler
+        // Modal Handler (with Trainer and Drive Repository Link)
         function openModal(eventId) {
             const item = rawSchedule.find(e => e.id === eventId);
             if (!item) return;
             activeModalEvent = item;
 
+            const modInfo = moduleConfig[item.module] || {};
+
             document.getElementById('modal-title').innerText = item.module;
             document.getElementById('modal-date').innerText = `${item.dateStr} (${getDayFullName(item.dayWeek)})`;
             document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
             document.getElementById('modal-location').innerText = item.location;
+
+            // Trainer info
+            const trainerBox = document.getElementById('modal-trainer-box');
+            if (modInfo.trainer) {
+                document.getElementById('modal-trainer').innerText = modInfo.trainer;
+                trainerBox.classList.remove('hidden');
+            } else {
+                trainerBox.classList.add('hidden');
+            }
+
+            // Google Drive Repository link
+            const driveBox = document.getElementById('modal-drive-box');
+            if (modInfo.driveUrl) {
+                document.getElementById('modal-drive-link').setAttribute('href', modInfo.driveUrl);
+                driveBox.classList.remove('hidden');
+            } else {
+                driveBox.classList.add('hidden');
+            }
 
             const obsBox = document.getElementById('modal-obs-box');
             if (item.obs || item.exam || item.reunion) {
@@ -1051,29 +1082,18 @@
         }
 
         /* ----------------------------------------------------
-           ICS EXPORT WITH TIMEZONE (Europe/Lisbon)
+           DYNAMIC ICS EXPORT (RESPECTS ACTIVE FILTERS & TRAINER INFO)
         ----------------------------------------------------- */
-        function generateIcsEventBlock(ev) {
-            const dateClean = ev.date.replace(/-/g, '');
-            const startTimeClean = ev.timeStart.replace(':', '') + '00';
-            const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
-
-            return `BEGIN:VEVENT
-SUMMARY:${ev.module}
-DESCRIPTION:${ev.obs || 'Aula CET TEF 60'}
-LOCATION:${ev.location}
-DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
-DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
-END:VEVENT`;
-        }
-
         function getIcsHeader() {
             return `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//CET TEF LIS 60//Horario PWA//PT
 CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VTIMEZONE
 TZID:Europe/Lisbon
+X-LIC-LOCATION:Europe/Lisbon
 BEGIN:STANDARD
 TZOFFSETFROM:+0100
 TZOFFSETTO:+0000
@@ -1092,6 +1112,26 @@ END:VTIMEZONE
 `;
         }
 
+        function generateIcsEventBlock(ev) {
+            const dateClean = ev.date.replace(/-/g, '');
+            const startTimeClean = ev.timeStart.replace(':', '') + '00';
+            const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
+            const modInfo = moduleConfig[ev.module] || {};
+            
+            let description = ev.obs || 'Aula CET TEF 60';
+            if (modInfo.trainer) description += ` | Formador: ${modInfo.trainer}`;
+            if (modInfo.driveUrl) description += ` | Repositório: ${modInfo.driveUrl}`;
+
+            return `BEGIN:VEVENT
+SUMMARY:${ev.module}
+DESCRIPTION:${description}
+LOCATION:${ev.location}
+DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
+DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
+STATUS:CONFIRMED
+END:VEVENT`;
+        }
+
         function downloadIcsFile() {
             if (!activeModalEvent) return;
             const ev = activeModalEvent;
@@ -1106,10 +1146,68 @@ END:VTIMEZONE
             document.body.removeChild(link);
         }
 
+        function exportFilteredCalendarIcs() {
+            const filteredEvents = rawSchedule.filter(item => {
+                if (item.type === 'furo') return false;
+
+                if (currentViewTab === 'hoje') {
+                    if (item.date !== simulatedDateISO) return false;
+                } else if (currentViewTab === 'proximas') {
+                    if (item.date <= simulatedDateISO) return false;
+                } else if (currentViewTab === 'exames') {
+                    if (item.type !== 'exame') return false;
+                }
+
+                if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
+
+                if (currentLocationFilter !== 'ALL') {
+                    if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
+                    if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
+                    if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
+                }
+
+                if (searchQuery.trim().length > 0) {
+                    const modInfo = moduleConfig[item.module] || {};
+                    const trainer = modInfo.trainer || '';
+                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
+                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                }
+
+                return true;
+            });
+
+            if (filteredEvents.length === 0) {
+                alert('Não existem sessões visíveis para exportar.');
+                return;
+            }
+
+            let fullIcs = getIcsHeader();
+            filteredEvents.forEach(ev => {
+                fullIcs += generateIcsEventBlock(ev) + '\n';
+            });
+            fullIcs += 'END:VCALENDAR';
+
+            let fileName = 'CET_TEF_60_Agenda';
+            if (currentMonthFilter !== 'ALL') fileName += `_${currentMonthFilter}`;
+            if (currentLocationFilter !== 'ALL') fileName += `_${currentLocationFilter}`;
+            if (currentViewTab === 'exames') fileName += '_Exames';
+
+            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${fileName}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         function shareActiveEvent() {
             if (!activeModalEvent) return;
             const ev = activeModalEvent;
-            const text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
+            const modInfo = moduleConfig[ev.module] || {};
+            let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
+            if (modInfo.trainer) text += `\n👤 Formador(a): ${modInfo.trainer}`;
+            if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
 
             if (navigator.share) {
                 navigator.share({ title: ev.module, text: text });
