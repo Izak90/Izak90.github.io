@@ -2,10 +2,10 @@
 <html lang="pt" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Horário CET_TEF_LIS_60</title>
     
-    <!-- PWA & Mobile Meta Tags -->
+    <!-- PWA & Mobile Meta Tags (iOS Safari Prepared) -->
     <meta id="theme-color-meta" name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -42,58 +42,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
+    <!-- Favicon & Apple Touch Icons -->
     <link id="favicon" rel="icon" type="image/png" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
     <link rel="apple-touch-icon" href="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png">
 
-    <!-- Manifest Web App -->
+    <!-- Ficheiro Manifest Físico -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Registo do Service Worker Físico -->
     <script>
-        (function setupPWA() {
-            const manifestObj = {
-                name: "Horário CET_TEF_LIS_60",
-                short_name: "CET TEF 60",
-                description: "Horário oficial e acompanhamento da turma CET_TEF_LIS_60",
-                start_url: "./",
-                display: "standalone",
-                background_color: "#090d16",
-                theme_color: "#090d16",
-                icons: [
-                    {
-                        src: "https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png",
-                        sizes: "192x192 512x512",
-                        type: "image/png",
-                        purpose: "any maskable"
-                    }
-                ]
-            };
-            const manifestStr = JSON.stringify(manifestObj);
-            const blob = new Blob([manifestStr], { type: 'application/json' });
-            const manifestURL = URL.createObjectURL(blob);
-            const link = document.createElement('link');
-            link.rel = 'manifest';
-            link.href = manifestURL;
-            document.head.appendChild(link);
-
-            // Inline Service Worker
-            const swCode = `
-                const CACHE_NAME = 'cet-tef-v6';
-                self.addEventListener('install', (e) => self.skipWaiting());
-                self.addEventListener('activate', (e) => e.waitUntil(clients.claim()));
-                self.addEventListener('fetch', (e) => {
-                    e.respondWith(
-                        fetch(e.request).catch(() => caches.match(e.request))
-                    );
-                });
-            `;
-            const swBlob = new Blob([swCode], { type: 'text/javascript' });
-            const swUrl = URL.createObjectURL(swBlob);
-
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register(swUrl).catch(err => console.log('SW reg failed', err));
-                });
-            }
-        })();
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW registado com sucesso!'))
+                    .catch(err => console.log('Erro ao registar SW:', err));
+            });
+        }
     </script>
 
     <style>
@@ -123,11 +87,15 @@
         .loc-stripe-online { border-left: 4px solid #10b981 !important; }
         .loc-stripe-vivagym { border-left: 4px solid #f97316 !important; }
         .loc-stripe-exame { border-left: 4px solid #f43f5e !important; }
+
+        /* Safe Area Padding for iOS Devices */
+        .pb-safe { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+        .pt-safe { padding-top: env(safe-area-inset-top); }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-24 selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
 
-    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
         <div class="max-w-2xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <!-- Brand & Logo -->
@@ -212,6 +180,26 @@
 
     <main class="max-w-2xl mx-auto px-4 pt-4">
 
+        <!-- Banner com instruções para iOS Safari -->
+        <div id="ios-install-banner" class="hidden mb-4 p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-xs shadow-sm">
+            <div class="flex items-start justify-between gap-2">
+                <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-xs">Instalar Aplicação no iOS</h4>
+                        <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-snug">
+                            Para adicionar ao ecrã principal, toca no botão <strong class="text-blue-600 dark:text-blue-400">Partilhar</strong> <i class="fa-solid fa-arrow-up-from-bracket mx-0.5"></i> no Safari e escolhe <strong class="text-blue-600 dark:text-blue-400">"Adicionar ao Ecrã Principal"</strong>.
+                        </p>
+                    </div>
+                </div>
+                <button onclick="dismissIosBanner()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white p-1" aria-label="Fechar instrução">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+        </div>
+
         <!-- TODAY'S EVENTS HIGHLIGHT BANNER -->
         <section id="today-hero" class="mb-5 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 today-glow relative overflow-hidden transition-all duration-300">
             
@@ -294,8 +282,8 @@
 
     </main>
 
-    <!-- Bottom Mobile App Bar -->
-    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 py-2 transition-colors">
+    <!-- Bottom Mobile App Bar (iOS Safe Padding) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pt-2 pb-safe transition-colors">
         <div class="max-w-md mx-auto flex items-center justify-around text-center">
             <button onclick="setViewTab('proximas'); scrollToTop()" class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition touch-active" aria-label="Navegar para próximas sessões">
                 <i class="fa-solid fa-list-ul text-base"></i>
@@ -310,7 +298,7 @@
 
     <!-- Modal Event Detail & Export -->
     <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="w-full sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl max-h-[85vh] overflow-y-auto">
+        <div class="w-full sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl max-h-[85vh] overflow-y-auto pb-safe">
             <div class="w-10 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-4 sm:hidden"></div>
             
             <div class="flex items-start justify-between gap-3 mb-3">
@@ -562,6 +550,25 @@
         let searchDebounceTimeout = null;
 
         /* ----------------------------------------------------
+           iOS DETECTION & BANNER LOGIC
+        ----------------------------------------------------- */
+        function checkIosInstallation() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+
+            if (isIOS && !isStandalone) {
+                if (!localStorage.getItem('cet_ios_banner_dismissed')) {
+                    document.getElementById('ios-install-banner').classList.remove('hidden');
+                }
+            }
+        }
+
+        function dismissIosBanner() {
+            document.getElementById('ios-install-banner').classList.add('hidden');
+            localStorage.setItem('cet_ios_banner_dismissed', 'true');
+        }
+
+        /* ----------------------------------------------------
            DATE HELPERS (FORCED Europe/Lisbon TIMEZONE)
         ----------------------------------------------------- */
         function getTodayLisbonISO() {
@@ -632,7 +639,7 @@
             if (meta) meta.setAttribute('content', '#ffffff');
         }
 
-        // PWA Install
+        // Android / Desktop PWA Install Event
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPwaPrompt = e;
@@ -652,9 +659,10 @@
             }
         }
 
-        // Initialize App
+        // App Initialization
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
+            checkIosInstallation();
 
             const todayLisbon = getTodayLisbonISO();
             if (todayLisbon >= '2026-09-16' && todayLisbon <= '2027-01-20') {
@@ -787,14 +795,13 @@
         }
 
         /* ----------------------------------------------------
-           SCHEDULE LIST (CORRECTED 'todos' TAB FILTERING)
+           SCHEDULE LIST
         ----------------------------------------------------- */
         function renderScheduleList() {
             const container = document.getElementById('schedule-list');
             const emptyState = document.getElementById('empty-state');
 
             let filtered = rawSchedule.filter(item => {
-                // View Tab Filters
                 if (currentViewTab === 'hoje') {
                     if (item.date !== simulatedDateISO) return false;
                 } else if (currentViewTab === 'proximas') {
@@ -803,17 +810,14 @@
                     if (item.type !== 'exame') return false;
                 }
 
-                // Month filter
                 if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
 
-                // Location filter
                 if (currentLocationFilter !== 'ALL') {
                     if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
                     if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
                     if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
                 }
 
-                // Search query
                 if (searchQuery.trim().length > 0) {
                     const modInfo = moduleConfig[item.module] || {};
                     const trainer = modInfo.trainer || '';
@@ -1047,7 +1051,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Modal Handler (with Trainer and Drive Repository Link)
+        // Modal Handler
         function openModal(eventId) {
             const item = rawSchedule.find(e => e.id === eventId);
             if (!item) return;
@@ -1109,7 +1113,7 @@
         }
 
         /* ----------------------------------------------------
-           DYNAMIC ICS EXPORT (RESPECTS ACTIVE FILTERS & TRAINER INFO)
+           DYNAMIC ICS EXPORT (RESPECTS FILTERS & Europe/Lisbon)
         ----------------------------------------------------- */
         function getIcsHeader() {
             return `BEGIN:VCALENDAR
@@ -1238,7 +1242,6 @@ END:VEVENT`;
             if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
             if (modInfo.asynchronousClass) text += `\n💻 Aula Assíncrona: ${modInfo.asynchronousClass}`;
             
-
             if (navigator.share) {
                 navigator.share({ title: ev.module, text: text });
             } else {
