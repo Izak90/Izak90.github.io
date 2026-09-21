@@ -89,26 +89,8 @@
         .loc-stripe-exame { border-left: 4px solid #f43f5e !important; }
 
         /* Safe Area Padding for iOS Devices */
-        .pb-safe { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+        .pb-safe { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
         .pt-safe { padding-top: env(safe-area-inset-top); }
-
-        /* Scroll Gradient Hints */
-        .scroll-container {
-            position: relative;
-        }
-        .scroll-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 24px;
-            pointer-events: none;
-            background: linear-gradient(to right, rgba(255,255,255,0), rgba(248,250,252,0.9));
-        }
-        .dark .scroll-container::after {
-            background: linear-gradient(to right, rgba(9,13,22,0), rgba(9,13,22,0.9));
-        }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
@@ -136,70 +118,18 @@
                     </button>
 
                     <!-- Theme Switcher Button -->
-                    <button onclick="toggleDarkMode()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Alternar Modo Escuro/Claro" aria-label="Alternar modo escuro ou claro">
-                        <i id="theme-icon" class="fa-solid fa-moon text-sm"></i>
+                    <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" title="Alternar Modo Escuro/Claro" aria-label="Alternar modo escuro ou claro">
+                        <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
                     </button>
 
-                    <button onclick="toggleSearch()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
-                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                    <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
                     </button>
-                </div>
-            </div>
-
-            <!-- PAINEL DE STATUS DAS UNIDADES DE COMPETÊNCIA (UC) INTERATIVO E COLAPSÁVEL -->
-            <div id="uc-status-panel" class="mt-3 rounded-2xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-xs overflow-hidden transition-all duration-300">
-                <button onclick="toggleUcAccordion()" class="w-full p-3 flex items-center justify-between hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition text-left focus:outline-none" aria-expanded="false" aria-controls="uc-accordion-content">
-                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 text-xs">
-                        <i class="fa-solid fa-graduation-cap text-blue-500"></i> Progresso do Curso (27 UC)
-                    </span>
-                    <div class="flex items-center gap-2">
-                        <span id="uc-progress-percent" class="font-black text-blue-600 dark:text-blue-400 text-xs">0%</span>
-                        <i id="uc-accordion-chevron" class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-300"></i>
-                    </div>
-                </button>
-
-                <div id="uc-accordion-content" class="hidden px-3 pb-3 pt-1 border-t border-slate-200/60 dark:border-slate-800/60">
-                    <!-- Barra Visual de Progresso -->
-                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden flex my-2">
-                        <div id="bar-uc-completed" class="h-full bg-emerald-500 transition-all duration-500" style="width: 0%"></div>
-                        <div id="bar-uc-progress" class="h-full bg-blue-500 transition-all duration-500" style="width: 0%"></div>
-                    </div>
-
-                    <!-- Botões Clicáveis para Filtrar UC -->
-                    <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-bold">
-                        <button onclick="toggleUcList('completed')" id="uc-btn-completed" class="p-2 min-h-[44px] rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 transition touch-active flex flex-col items-center justify-center">
-                            <div id="uc-count-completed" class="text-xs font-black">0</div>
-                            <div class="font-semibold text-[9px] opacity-90">Concluídas</div>
-                        </button>
-                        <button onclick="toggleUcList('progress')" id="uc-btn-progress" class="p-2 min-h-[44px] rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 hover:bg-blue-500/20 transition touch-active flex flex-col items-center justify-center">
-                            <div id="uc-count-progress" class="text-xs font-black">0</div>
-                            <div class="font-semibold text-[9px] opacity-90">Em Progresso</div>
-                        </button>
-                        <button onclick="toggleUcList('pending')" id="uc-btn-pending" class="p-2 min-h-[44px] rounded-xl bg-slate-200/60 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-300/60 dark:hover:bg-slate-700/60 transition touch-active flex flex-col items-center justify-center">
-                            <div id="uc-count-pending" class="text-xs font-black">27</div>
-                            <div class="font-semibold text-[9px] opacity-90">Não Iniciadas</div>
-                        </button>
-                    </div>
-
-                    <!-- Lista Desdobrável de UC -->
-                    <div id="uc-details-container" class="hidden mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800">
-                        <div class="flex items-center justify-between mb-2">
-                            <span id="uc-list-title" class="font-black text-[11px] text-slate-800 dark:text-slate-200">
-                                Lista de UC
-                            </span>
-                            <button onclick="hideUcList()" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                        <ul id="uc-items-list" class="space-y-1.5 max-h-48 overflow-y-auto hide-scrollbar pr-1">
-                            <!-- Injetado dinamicamente via JS -->
-                        </ul>
-                    </div>
                 </div>
             </div>
 
             <!-- Countdown Banner for Next Exam -->
-            <div id="next-exam-banner" class="mt-2.5 p-2 px-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-between text-xs cursor-pointer hover:bg-rose-500/20 transition min-h-[44px]" onclick="setViewTab('exames')">
+            <div id="next-exam-banner" class="mt-2.5 p-2 px-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-between text-xs cursor-pointer hover:bg-rose-500/20 transition" onclick="switchMainTab('agenda'); setViewTab('exames');">
                 <div class="flex items-center gap-2 min-w-0">
                     <span class="px-1.5 py-0.5 rounded bg-rose-600 text-white text-[9px] font-black uppercase shrink-0">Próximo Exame</span>
                     <span id="next-exam-title" class="font-bold text-rose-700 dark:text-rose-300 truncate">A carregar...</span>
@@ -207,24 +137,13 @@
                 <span id="next-exam-countdown" class="font-black text-rose-600 dark:text-rose-400 text-xs shrink-0 ml-2">--</span>
             </div>
 
-            <!-- BARRA DE FILTROS ATIVOS E BOTÃO LIMPAR TUDO -->
-            <div id="active-filters-bar" class="hidden mt-2 p-2 px-3 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-between text-xs transition-all">
-                <div class="flex items-center gap-2 min-w-0 truncate">
-                    <i class="fa-solid fa-filter text-blue-500 text-xs"></i>
-                    <span id="active-filters-summary" class="font-semibold text-blue-700 dark:text-blue-300 truncate text-[11px]"></span>
-                </div>
-                <button onclick="resetFilters()" class="min-w-[44px] min-h-[36px] px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-[10px] font-bold transition shrink-0 ml-2 flex items-center justify-center gap-1 touch-active">
-                    <i class="fa-solid fa-xmark"></i> Limpar Tudo
-                </button>
-            </div>
-
-            <!-- Search Field Dropdown -->
+            <!-- Search Field Dropdown com Botão X na Extrema Direita para Limpar e Fechar -->
             <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
                 <div class="relative">
-                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400 text-xs"></i>
-                    <input type="text" id="search-input" onkeyup="handleSearchDebounced()" placeholder="Pesquisar exames, módulos, formadores, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-10 py-2.5 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition min-h-[44px]" aria-label="Campo de pesquisa">
-                    <button onclick="clearSearch()" id="clear-search" class="hidden absolute right-1 top-1/2 -translate-y-1/2 w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white" aria-label="Limpar pesquisa">
-                        <i class="fa-solid fa-xmark text-sm"></i>
+                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearchDebounced()" placeholder="Pesquisar exames, módulos, formadores, locais..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition" aria-label="Campo de pesquisa">
+                    <button onclick="clearSearch()" id="clear-search" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1" aria-label="Limpar e fechar pesquisa">
+                        <i class="fa-solid fa-xmark text-xs"></i>
                     </button>
                 </div>
             </div>
@@ -235,166 +154,234 @@
                     <span class="font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
                         <i class="fa-solid fa-flask"></i> Consultar data específica
                     </span>
-                    <button onclick="resetSimulatedDate()" class="text-[10px] text-slate-600 dark:text-slate-400 underline hover:text-slate-900 dark:hover:text-white min-h-[36px] flex items-center">Resetar Hoje Real</button>
+                    <button onclick="resetSimulatedDate()" class="text-[10px] text-slate-500 dark:text-slate-400 underline hover:text-slate-900 dark:hover:text-white">Resetar Hoje Real</button>
                 </div>
                 <div class="flex items-center gap-2">
-                    <input type="text" id="sim-date-input" placeholder="dd/mm/yyyy" value="18/09/2026" class="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-2.5 py-2 rounded-lg text-xs flex-1 focus:outline-none focus:border-blue-500 min-h-[44px]" aria-label="Data simulada no formato dia mês ano">
-                    <button onclick="applySimulatedDate()" class="px-3.5 py-2 bg-blue-600 font-bold rounded-lg text-white hover:bg-blue-500 min-h-[44px]">Aplicar</button>
+                    <input type="text" id="sim-date-input" placeholder="dd/mm/yyyy" value="18/09/2026" class="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-2.5 py-1.5 rounded-lg text-xs flex-1 focus:outline-none focus:border-blue-500" aria-label="Data simulada no formato dia mês ano">
+                    <button onclick="applySimulatedDate()" class="px-3 py-1.5 bg-blue-600 font-bold rounded-lg text-white hover:bg-blue-500">Aplicar</button>
                 </div>
-                <p class="text-[10px] text-slate-600 dark:text-slate-400 mt-1.5">Digite no formato <strong class="text-slate-700 dark:text-slate-300">dd/mm/yyyy</strong> (Ex: 18/09/2026 ou 12/12/2026).</p>
-            </div>
-
-            <!-- Navigation Mode Tabs -->
-            <div class="flex space-x-1.5 mt-3 pt-1 overflow-x-auto hide-scrollbar text-xs font-bold">
-                <button onclick="setViewTab('proximas')" id="tab-btn-proximas" class="view-tab px-3.5 py-2.5 min-h-[44px] rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 transition">
-                    <i class="fa-solid fa-clock text-[10px]"></i> Próximas
-                </button>
-                <button onclick="setViewTab('todos')" id="tab-btn-todos" class="view-tab px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
-                    <i class="fa-solid fa-calendar-days text-[10px]"></i> Completo
-                </button>
-                <button onclick="setViewTab('exames')" id="tab-btn-exames" class="view-tab px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
-                    <i class="fa-solid fa-graduation-cap text-[10px] text-rose-500 dark:text-rose-400"></i> Exames
-                </button>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1.5">Digite no formato <strong class="text-slate-700 dark:text-slate-300">dd/mm/yyyy</strong> (Ex: 18/09/2026 ou 12/12/2026).</p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-2xl mx-auto px-4 pt-4">
+    <!-- Swipe Container para as Abas Principais -->
+    <main id="swipe-container" class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
 
-        <!-- Banner com instruções para iOS Safari -->
-        <div id="ios-install-banner" class="hidden mb-4 p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-xs shadow-sm">
-            <div class="flex items-start justify-between gap-2">
-                <div class="flex items-start gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
-                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        <!-- ABA 1: AGENDA -->
+        <div id="tab-content-agenda" class="tab-pane">
+            <!-- Banner com instruções para iOS Safari -->
+            <div id="ios-install-banner" class="hidden mb-4 p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-xs shadow-sm">
+                <div class="flex items-start justify-between gap-2">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-xs">Instalar Aplicação no iOS</h4>
+                            <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-snug">
+                                Para adicionar ao ecrã principal, toca no botão <strong class="text-blue-600 dark:text-blue-400">Partilhar</strong> <i class="fa-solid fa-arrow-up-from-bracket mx-0.5"></i> no Safari e escolhe <strong class="text-blue-600 dark:text-blue-400">"Adicionar ao Ecrã Principal"</strong>.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900 dark:text-white text-xs">Instalar Aplicação no iOS</h4>
-                        <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-snug">
-                            Para adicionar ao ecrã principal, toca no botão <strong class="text-blue-600 dark:text-blue-400">Partilhar</strong> <i class="fa-solid fa-arrow-up-from-bracket mx-0.5"></i> no Safari e escolhe <strong class="text-blue-600 dark:text-blue-400">"Adicionar ao Ecrã Principal"</strong>.
-                        </p>
-                    </div>
+                    <button onclick="dismissIosBanner()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white p-1" aria-label="Fechar instrução">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
                 </div>
-                <button onclick="dismissIosBanner()" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white" aria-label="Fechar instrução">
-                    <i class="fa-solid fa-xmark text-sm"></i>
-                </button>
             </div>
-        </div>
 
-        <!-- TODAY'S EVENTS HIGHLIGHT BANNER -->
-        <section id="today-hero" class="mb-5 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 today-glow relative overflow-hidden transition-all duration-300">
-            <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
-                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse"></span>
-                        Hoje
+            <!-- TODAY'S EVENTS HIGHLIGHT BANNER -->
+            <section id="today-hero" class="mb-5 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 today-glow relative overflow-hidden transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse"></span>
+                            Hoje
+                        </span>
+                        <span id="today-formatted-date" class="text-xs font-semibold text-slate-500 dark:text-slate-400">18/09/2026</span>
+                    </div>
+                    <span id="today-status-tag" class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        --
                     </span>
-                    <span id="today-formatted-date" class="text-xs font-semibold text-slate-600 dark:text-slate-400">18/09/2026</span>
-                </div>
-                <span id="today-status-tag" class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                    --
-                </span>
-            </div>
-
-            <!-- Dynamic Content for Today -->
-            <div id="today-content-area">
-                <!-- Rendered dynamically via JS -->
-            </div>
-        </section>
-
-        <!-- Quick Filters -->
-        <section class="mb-4">
-            <div class="flex items-center justify-between mb-2">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
-                    <i class="fa-solid fa-filter text-slate-500 dark:text-slate-400"></i>
-                    <span>Filtrar Agenda</span>
                 </div>
 
-                <span id="events-count" class="text-xs text-slate-600 dark:text-slate-400 font-medium">0 eventos</span>
-                <!-- Botão de Download Dinâmico -->
-                <button onclick="exportFilteredCalendarIcs()" class="px-2.5 py-2 min-h-[44px] rounded-lg bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[11px] font-bold transition flex items-center gap-1 touch-active" title="Descarregar ficheiro .ics dos eventos filtrados">
-                    <i class="fa-solid fa-download"></i>
-                    <span>Descarregar (.ics)</span>
+                <div id="today-content-area"></div>
+            </section>
+
+            <!-- Quick Filters -->
+            <section class="mb-4">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-filter text-slate-400 dark:text-slate-500"></i>
+                        <span>Filtrar Agenda</span>
+                    </div>
+
+                    <span id="events-count" class="text-xs text-slate-500 font-medium">0 eventos</span>
+                    <button onclick="exportFilteredCalendarIcs()" class="px-2 py-1 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[11px] font-bold transition flex items-center gap-1 touch-active" title="Descarregar ficheiro .ics dos eventos filtrados">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Descarregar (.ics)</span>
+                    </button>
+                </div>
+
+                <!-- Navigation Mode Tabs -->
+                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-xs">
+                    <button onclick="setViewTab('proximas')" id="tab-btn-proximas" class="view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 transition">
+                        <i class="fa-solid fa-clock text-[10px]"></i> Próximas
+                    </button>
+                    <button onclick="setViewTab('todos')" id="tab-btn-todos" class="view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
+                        <i class="fa-solid fa-calendar-days text-[10px]"></i> Completo
+                    </button>
+                    <button onclick="setViewTab('exames')" id="tab-btn-exames" class="view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition">
+                        <i class="fa-solid fa-graduation-cap text-[10px] text-rose-500 dark:text-rose-400"></i> Exames
+                    </button>
+                </div>
+
+                <!-- Months Bar -->
+                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-xs">
+                    <button onclick="setMonthFilter('ALL')" id="mfilter-ALL" class="mfilter-chip px-3 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition">Todos</button>
+                    <button onclick="setMonthFilter('SEP')" id="mfilter-SEP" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Setembro</button>
+                    <button onclick="setMonthFilter('OCT')" id="mfilter-OCT" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Outubro</button>
+                    <button onclick="setMonthFilter('NOV')" id="mfilter-NOV" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Novembro</button>
+                    <button onclick="setMonthFilter('DEC')" id="mfilter-DEC" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Dezembro</button>
+                    <button onclick="setMonthFilter('JAN')" id="mfilter-JAN" class="mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition">Janeiro</button>
+                </div>
+
+                <!-- Location Chips -->
+                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-xs">
+                    <button onclick="setLocationFilter('ALL')" id="locfilter-ALL" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition">Locais: Todos</button>
+                    <button onclick="setLocationFilter('CRIAP')" id="locfilter-CRIAP" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span> CRIAP
+                    </button>
+                    <button onclick="setLocationFilter('Online')" id="locfilter-Online" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Online
+                    </button>
+                    <button onclick="setLocationFilter('VivaGym')" id="locfilter-VivaGym" class="locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-orange-500"></span> VivaGym
+                    </button>
+                </div>
+            </section>
+
+            <!-- Main List Container -->
+            <section id="schedule-list" class="space-y-2.5"></section>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="hidden text-center py-16 px-4 bg-white dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800/80 my-4">
+                <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-400 dark:text-slate-500 text-xl">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Sem sessões encontradas</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-xs mx-auto">Não existem eventos correspondentes aos filtros ativos.</p>
+                <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition touch-active">
+                    Limpar Filtros
                 </button>
             </div>
-
-            <!-- Months Bar com Sinalizador de Scroll -->
-            <div class="scroll-container mb-2">
-                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-1 text-xs">
-                    <button onclick="setMonthFilter('ALL')" id="mfilter-ALL" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-blue-600 text-white font-bold transition shrink-0">Todos</button>
-                    <button onclick="setMonthFilter('SEP')" id="mfilter-SEP" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0">Setembro</button>
-                    <button onclick="setMonthFilter('OCT')" id="mfilter-OCT" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0">Outubro</button>
-                    <button onclick="setMonthFilter('NOV')" id="mfilter-NOV" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0">Novembro</button>
-                    <button onclick="setMonthFilter('DEC')" id="mfilter-DEC" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0">Dezembro</button>
-                    <button onclick="setMonthFilter('JAN')" id="mfilter-JAN" class="mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0">Janeiro</button>
-                </div>
-            </div>
-
-            <!-- Location Chips com Sinalizador de Scroll -->
-            <div class="scroll-container">
-                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar text-xs">
-                    <button onclick="setLocationFilter('ALL')" id="locfilter-ALL" class="locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition shrink-0">Locais: Todos</button>
-                    <button onclick="setLocationFilter('CRIAP')" id="locfilter-CRIAP" class="locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition shrink-0 flex items-center gap-1.5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> CRIAP
-                    </button>
-                    <button onclick="setLocationFilter('Online')" id="locfilter-Online" class="locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition shrink-0 flex items-center gap-1.5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Online
-                    </button>
-                    <button onclick="setLocationFilter('VivaGym')" id="locfilter-VivaGym" class="locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition shrink-0 flex items-center gap-1.5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span> VivaGym
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main List Container -->
-        <section id="schedule-list" class="space-y-2.5">
-            <!-- Dynamic Event Cards Injected Here -->
-        </section>
-
-        <!-- Empty State -->
-        <div id="empty-state" class="hidden text-center py-16 px-4 bg-white dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800/80 my-4">
-            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-400 dark:text-slate-500 text-xl">
-                <i class="fa-solid fa-calendar-xmark"></i>
-            </div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-base">Sem sessões encontradas</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 max-w-xs mx-auto">Não existem eventos correspondentes aos filtros ativos.</p>
-            <button onclick="resetFilters()" class="mt-4 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition touch-active min-h-[44px]">
-                Limpar Filtros
-            </button>
         </div>
 
+        <!-- ABA 2: RECURSOS (Com os botões na mesma linha + Painel de Progresso das 27 UC) -->
+        <div id="tab-content-recursos" class="tab-pane hidden space-y-4">
+            <!-- Recursos Rápidos na Mesma Linha -->
+            <div class="grid grid-cols-3 gap-2">
+                <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center hover:border-emerald-500/50 transition touch-active">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-base shrink-0 border border-emerald-500/20 mb-2">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h4 class="font-bold text-xs text-slate-900 dark:text-white leading-tight">Google Meet</h4>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Aulas Online</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1MakGp02TimaVtoD2KbaE9yg_s4j1Odx5/view" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center hover:border-blue-500/50 transition touch-active">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-base shrink-0 border border-blue-500/20 mb-2">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h4 class="font-bold text-xs text-slate-900 dark:text-white leading-tight">Workbook</h4>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Exercícios</span>
+                </a>
+
+                <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center hover:border-purple-500/50 transition touch-active">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-base shrink-0 border border-purple-500/20 mb-2">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                    </div>
+                    <h4 class="font-bold text-xs text-slate-900 dark:text-white leading-tight">Simulador</h4>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Exames</span>
+                </a>
+            </div>
+
+            <!-- Painel de Progresso do Curso (27 UC) -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="font-black text-base text-slate-900 dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-blue-500"></i> Progresso do Curso (27 UC)
+                        </h2>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Acompanhamento detalhado das Unidades de Competência.</p>
+                    </div>
+                    <span id="uc-progress-percent-main" class="font-black text-blue-600 dark:text-blue-400 text-base">0%</span>
+                </div>
+
+                <!-- Barra Visual de Progresso -->
+                <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden flex my-3">
+                    <div id="bar-uc-completed-main" class="h-full bg-emerald-500 transition-all duration-500" style="width: 0%"></div>
+                    <div id="bar-uc-progress-main" class="h-full bg-blue-500 transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <!-- Botões Clicáveis para Filtrar UC -->
+                <div class="grid grid-cols-3 gap-2 text-center text-xs font-bold mt-4">
+                    <button onclick="toggleUcList('completed')" id="uc-btn-completed-main" class="p-3 min-h-[44px] rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 transition touch-active flex flex-col items-center justify-center">
+                        <div id="uc-count-completed-main" class="text-sm font-black">0</div>
+                        <div class="font-semibold text-[10px] opacity-90 mt-0.5">Concluídas</div>
+                    </button>
+                    <button onclick="toggleUcList('progress')" id="uc-btn-progress-main" class="p-3 min-h-[44px] rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 hover:bg-blue-500/20 transition touch-active flex flex-col items-center justify-center">
+                        <div id="uc-count-progress-main" class="text-sm font-black">0</div>
+                        <div class="font-semibold text-[10px] opacity-90 mt-0.5">Em Progresso</div>
+                    </button>
+                    <button onclick="toggleUcList('pending')" id="uc-btn-pending-main" class="p-3 min-h-[44px] rounded-2xl bg-slate-200/60 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-300/60 dark:hover:bg-slate-700/60 transition touch-active flex flex-col items-center justify-center">
+                        <div id="uc-count-pending-main" class="text-sm font-black">27</div>
+                        <div class="font-semibold text-[10px] opacity-90 mt-0.5">Não Iniciadas</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lista Desdobrável de UC (Visível por defeito com todas as UC por ordem de iniciação) -->
+            <div id="uc-details-container" class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                    <span id="uc-list-title" class="font-black text-xs text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+                        Lista de UC
+                    </span>
+                    <button onclick="hideUcList()" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white" title="Mostrar todas por ordem de iniciação">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+                <ul id="uc-items-list" class="space-y-2 max-h-[50vh] overflow-y-auto hide-scrollbar pr-1"></ul>
+            </div>
+        </div>
     </main>
 
-    <!-- Bottom Mobile App Bar (Recursos Rápidos Fixo) -->
-    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pt-2.5 pb-safe transition-colors">
-        <div class="max-w-md mx-auto flex items-center justify-around text-center">
-            <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition touch-active">
-                <i class="fa-solid fa-video text-lg"></i>
-                <span class="font-bold text-[10px] leading-tight">Google Meet<br><span class="font-normal opacity-75">Aulas/Testes</span></span>
-            </a>
-            <a href="https://drive.google.com/file/d/1MakGp02TimaVtoD2KbaE9yg_s4j1Odx5/view" target="_blank" rel="noopener noreferrer" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition touch-active">
-                <i class="fa-solid fa-book-open text-lg"></i>
-                <span class="font-bold text-[10px] leading-tight">Workbook<br><span class="font-normal opacity-75">Exercícios</span></span>
-            </a>
-            <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition touch-active">
-                <i class="fa-solid fa-vial-circle-check text-lg"></i>
-                <span class="font-bold text-[10px] leading-tight">Simulador<br><span class="font-normal opacity-75">Exames</span></span>
-            </a>
+    <!-- Barra Fixa Fina no Rodapé (56px) - Navegação por Abas -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors" style="height: calc(56px + env(safe-area-inset-bottom));">
+        <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+            <button onclick="switchMainTab('agenda')" id="nav-tab-agenda" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+                <i class="fa-solid fa-calendar-days text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Agenda</span>
+            </button>
+            <button onclick="switchMainTab('recursos')" id="nav-tab-recursos" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+                <i class="fa-solid fa-folder-open text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Recursos</span>
+            </button>
         </div>
     </nav>
 
-    <!-- Modal Event Detail & Export com Suporte a Gestos Swipe -->
-    <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <!-- Modal Event Detail & Export (Com Bottom Sheet Swipe to Dismiss) -->
+    <div id="event-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm transition-opacity" onclick="if(event.target === this) closeModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div id="modal-card" class="w-full sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl max-h-[85vh] overflow-y-auto pb-safe transition-transform duration-200">
+            <!-- Pega Visual para Swipe to Dismiss -->
             <div id="modal-swipe-handle" class="w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-4 cursor-grab sm:hidden"></div>
             
             <div class="flex items-start justify-between gap-3 mb-3">
                 <span id="modal-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
                     Sessão Letiva
                 </span>
-                <button onclick="closeModal()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Fechar janela">
-                    <i class="fa-solid fa-xmark text-base"></i>
+                <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Fechar janela">
+                    <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
@@ -409,7 +396,7 @@
                         <i class="fa-solid fa-user-tie"></i>
                     </div>
                     <div>
-                        <div class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">Formador(a)</div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Formador(a)</div>
                         <div id="modal-trainer" class="font-bold text-slate-800 dark:text-white text-xs">--</div>
                     </div>
                 </div>
@@ -419,7 +406,7 @@
                         <i class="fa-regular fa-calendar"></i>
                     </div>
                     <div>
-                        <div class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">Data e Dia</div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Data e Dia</div>
                         <div id="modal-date" class="font-bold text-slate-800 dark:text-white text-xs">16/09/2026 (Quarta-feira)</div>
                     </div>
                 </div>
@@ -429,7 +416,7 @@
                         <i class="fa-regular fa-clock"></i>
                     </div>
                     <div>
-                        <div class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">Horário</div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Horário</div>
                         <div id="modal-time" class="font-bold text-slate-800 dark:text-white text-xs">18:30 - 20:30</div>
                     </div>
                 </div>
@@ -439,7 +426,7 @@
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div>
-                        <div class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">Local da Formação</div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Local da Formação</div>
                         <div id="modal-location" class="font-bold text-slate-800 dark:text-white text-xs">CRIAP</div>
                     </div>
                 </div>
@@ -449,14 +436,14 @@
                         <i class="fa-solid fa-circle-info"></i>
                     </div>
                     <div>
-                        <div class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">Notas / Detalhes</div>
+                        <div class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Notas / Detalhes</div>
                         <div id="modal-obs" class="font-medium text-slate-600 dark:text-slate-300 text-xs">Apresentação da turma</div>
                     </div>
                 </div>
 
                 <!-- Botão de Acesso Direto ao Google Meet -->
                 <div id="modal-meet-box" class="pt-1 hidden">
-                    <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30 min-h-[44px]">
+                    <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
                         <i class="fa-solid fa-video text-base"></i>
                         <span>Entrar na Sala Virtual (Google Meet)</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
@@ -465,7 +452,7 @@
 
                 <!-- Botão de Acesso ao Drive do Módulo -->
                 <div id="modal-drive-box" class="pt-1">
-                    <a id="modal-drive-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 min-h-[44px]">
+                    <a id="modal-drive-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700">
                         <i class="fa-brands fa-google-drive text-base text-emerald-500"></i>
                         <span>Abrir Repositório de Materiais</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
@@ -474,7 +461,7 @@
                 
                 <!-- Botão de Acesso à Aula Assíncrona -->
                 <div id="modal-async-box" class="pt-1 hidden">
-                    <a id="modal-async-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-blue-500/30 min-h-[44px]">
+                    <a id="modal-async-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-blue-500/30">
                         <i class="fa-solid fa-laptop text-base"></i>
                         <span>Abrir Aula Assíncrona</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
@@ -483,7 +470,7 @@
 
                 <!-- Botão do Simulador de Exames -->
                 <div id="modal-quilgo-box" class="pt-1 hidden">
-                    <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-rose-600/10 hover:bg-rose-600/20 text-rose-600 dark:text-rose-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-rose-500/30 min-h-[44px]">
+                    <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-rose-600/10 hover:bg-rose-600/20 text-rose-600 dark:text-rose-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-rose-500/30">
                         <i class="fa-solid fa-vial-circle-check text-base"></i>
                         <span>Abrir Simulador de Exame</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto"></i>
@@ -493,11 +480,11 @@
 
             <!-- Action buttons -->
             <div class="mt-4 flex gap-2">
-                <button onclick="downloadIcsFile()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 touch-active min-h-[44px]">
+                <button onclick="downloadIcsFile()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 touch-active">
                     <i class="fa-solid fa-calendar-plus text-blue-500 dark:text-blue-400"></i>
                     <span>Adicionar à Agenda (.ics)</span>
                 </button>
-                <button onclick="shareActiveEvent()" class="w-11 h-11 min-w-[44px] min-h-[44px] bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 touch-active" aria-label="Partilhar evento">
+                <button onclick="shareActiveEvent()" class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 touch-active" aria-label="Partilhar evento">
                     <i class="fa-solid fa-share-nodes"></i>
                 </button>
             </div>
@@ -505,35 +492,17 @@
     </div>
 
     <script>
-        // LISTA MASTER DAS 27 UNIDADES DE COMPETÊNCIA (UC)
+        // Lista Master das 27 Unidades de Competência (UC)
         const all27UC = [
-            'Promoção de Estilos de Vida Saudável',
-            'Coaching no Fitness',
-            'Pedagogia do Exercício',
-            'Fisiologia do Exercício',
-            'Psicologia do Exercício',
-            'Aulas de Grupo',
-            'Comunicação no Fitness',
-            'Ética e Deontologia no Fitness',
-            'Marketing no Fitness',
-            'Aplicações Digitais',
-            'Avaliação e Prescrição de Exercício',
-            'Treino de Fitness Online',
-            'Inglês no Fitness',
-            'Satisfação de Clientes no Fitness',
-            'Treino para Populações Especiais',
-            'Treino Outdoor',
-            'Hidroginástica',
-            'Body & Mind',
-            'Empreendedorismo no Fitness',
-            'Treino personalizado',
-            'Colaborar em equipa',
-            'Nutrição e Suplementação',
-            'Primeiros Socorros no Exercício',
-            'Biomecânica do Exercício',
-            'Gestão de clientes no Fitness',
-            'Anatomia do movimento',
-            'Gestão no Fitness'
+            'Promoção de Estilos de Vida Saudável', 'Coaching no Fitness', 'Pedagogia do Exercício',
+            'Fisiologia do Exercício', 'Psicologia do Exercício', 'Aulas de Grupo',
+            'Comunicação no Fitness', 'Ética e Deontologia no Fitness', 'Marketing no Fitness',
+            'Aplicações Digitais', 'Avaliação e Prescrição de Exercício', 'Treino de Fitness Online',
+            'Inglês no Fitness', 'Satisfação de Clientes no Fitness', 'Treino para Populações Especiais',
+            'Treino Outdoor', 'Hidroginástica', 'Body & Mind', 'Empreendedorismo no Fitness',
+            'Treino personalizado', 'Colaborar em equipa', 'Nutrição e Suplementação',
+            'Primeiros Socorros no Exercício', 'Biomecânica do Exercício', 'Gestão de clientes no Fitness',
+            'Anatomia do movimento', 'Gestão no Fitness'
         ];
 
         // Module Repositories and Trainers Master Config
@@ -720,6 +689,7 @@
 
         // State variables (with localStorage persistence)
         let simulatedDateISO = '2026-09-18';
+        let currentMainTab = 'agenda'; // 'agenda' ou 'recursos'
         let currentViewTab = localStorage.getItem('cet_tab') || 'proximas';
         let currentMonthFilter = localStorage.getItem('cet_mfilter') || 'ALL';
         let currentLocationFilter = localStorage.getItem('cet_locfilter') || 'ALL';
@@ -727,37 +697,80 @@
         let activeModalEvent = null;
         let deferredPwaPrompt = null;
         let searchDebounceTimeout = null;
-        let activeUcFilter = null; // 'completed', 'progress', 'pending' ou null
+        let activeUcFilter = null;
 
-        /* ----------------------------------------------------
-           ACCORDION & SWIPE GESTURE LOGIC
-        ----------------------------------------------------- */
-        function toggleUcAccordion() {
-            const content = document.getElementById('uc-accordion-content');
-            const chevron = document.getElementById('uc-accordion-chevron');
-            const button = document.querySelector('#uc-status-panel > button');
-            const isHidden = content.classList.contains('hidden');
+        const mainTabsList = ['agenda', 'recursos'];
 
-            if (isHidden) {
-                content.classList.remove('hidden');
-                chevron.classList.add('rotate-180');
-                button.setAttribute('aria-expanded', 'true');
-            } else {
-                content.classList.add('hidden');
-                chevron.classList.remove('rotate-180');
-                button.setAttribute('aria-expanded', 'false');
+        // Atualizar altura dinâmica do cabeçalho para fixar os meses corretamente
+        function updateHeaderHeightVar() {
+            const header = document.querySelector('header');
+            if (header) {
+                const h = header.offsetHeight;
+                document.documentElement.style.setProperty('--header-height', h + 'px');
             }
         }
 
+        // Gestão de Abas Principais e Swipe Gestures
+        function switchMainTab(tabName) {
+            currentMainTab = tabName;
+            mainTabsList.forEach(t => {
+                const pane = document.getElementById(`tab-content-${t}`);
+                const navBtn = document.getElementById(`nav-tab-${t}`);
+                if (t === tabName) {
+                    if (pane) pane.classList.remove('hidden');
+                    if (navBtn) {
+                        navBtn.className = 'flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active';
+                    }
+                } else {
+                    if (pane) pane.classList.add('hidden');
+                    if (navBtn) {
+                        navBtn.className = 'flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active';
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            renderApp();
+            updateHeaderHeightVar();
+        }
+
+        function initSwipeNavigation() {
+            const container = document.getElementById('swipe-container');
+            if (!container) return;
+            let startX = 0;
+            let startY = 0;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            }, { passive: true });
+
+            container.addEventListener('touchend', (e) => {
+                const deltaX = e.changedTouches[0].clientX - startX;
+                const deltaY = e.changedTouches[0].clientY - startY;
+
+                if (Math.abs(deltaY) > Math.abs(deltaX)) return;
+
+                if (Math.abs(deltaX) > 75) {
+                    const currentIndex = mainTabsList.indexOf(currentMainTab);
+                    if (deltaX < 0 && currentIndex < mainTabsList.length - 1) {
+                        switchMainTab(mainTabsList[currentIndex + 1]);
+                    } else if (deltaX > 0 && currentIndex > 0) {
+                        switchMainTab(mainTabsList[currentIndex - 1]);
+                    }
+                }
+            }, { passive: true });
+        }
+
+        // Swipe to Dismiss para Modal (Bottom Sheet)
         function initSwipeToDismiss() {
-            const modal = document.getElementById('event-modal');
             const card = document.getElementById('modal-card');
+            if (!card) return;
             let startY = 0;
             let currentY = 0;
             let isDragging = false;
 
             card.addEventListener('touchstart', (e) => {
-                if (card.scrollTop > 0) return; // Só ativa no topo do modal
+                if (card.scrollTop > 0) return;
                 startY = e.touches[0].clientY;
                 isDragging = true;
                 card.style.transition = 'none';
@@ -767,7 +780,6 @@
                 if (!isDragging) return;
                 currentY = e.touches[0].clientY;
                 const deltaY = currentY - startY;
-
                 if (deltaY > 0) {
                     card.style.transform = `translateY(${deltaY}px)`;
                 }
@@ -777,7 +789,6 @@
                 if (!isDragging) return;
                 isDragging = false;
                 card.style.transition = 'transform 0.2s ease-out';
-
                 const deltaY = currentY - startY;
                 if (deltaY > 100) {
                     closeModal();
@@ -806,6 +817,7 @@
         function dismissIosBanner() {
             document.getElementById('ios-install-banner').classList.add('hidden');
             localStorage.setItem('cet_ios_banner_dismissed', 'true');
+            updateHeaderHeightVar();
         }
 
         /* ----------------------------------------------------
@@ -865,28 +877,28 @@
             document.documentElement.classList.add('dark');
             localStorage.setItem('cet_theme', 'dark');
             const icon = document.getElementById('theme-icon');
-            if (icon) icon.className = 'fa-solid fa-sun text-amber-400 text-sm';
+            if (icon) icon.className = 'fa-solid fa-sun text-amber-400 text-xs';
             const meta = document.getElementById('theme-color-meta');
             if (meta) meta.setAttribute('content', '#090d16');
-            updateActiveFiltersBar();
         }
 
         function setLightMode() {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('cet_theme', 'light');
             const icon = document.getElementById('theme-icon');
-            if (icon) icon.className = 'fa-solid fa-moon text-slate-700 text-sm';
+            if (icon) icon.className = 'fa-solid fa-moon text-slate-700 text-xs';
             const meta = document.getElementById('theme-color-meta');
             if (meta) meta.setAttribute('content', '#ffffff');
-            updateActiveFiltersBar();
         }
 
-        // Android / Desktop PWA Install Event
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPwaPrompt = e;
             const installBtn = document.getElementById('pwa-install-btn');
-            if (installBtn) installBtn.classList.remove('hidden');
+            if (installBtn) {
+                installBtn.classList.remove('hidden');
+                updateHeaderHeightVar();
+            }
         });
 
         function triggerPwaInstall() {
@@ -895,6 +907,7 @@
                 deferredPwaPrompt.userChoice.then((choiceResult) => {
                     if (choiceResult.outcome === 'accepted') {
                         document.getElementById('pwa-install-btn').classList.add('hidden');
+                        updateHeaderHeightVar();
                     }
                     deferredPwaPrompt = null;
                 });
@@ -906,6 +919,9 @@
             initTheme();
             checkIosInstallation();
             initSwipeToDismiss();
+            initSwipeNavigation();
+            updateHeaderHeightVar();
+            window.addEventListener('resize', updateHeaderHeightVar);
 
             const todayLisbon = getTodayLisbonISO();
             if (todayLisbon >= '2026-09-16' && todayLisbon <= '2027-01-20') {
@@ -918,6 +934,7 @@
             setLocationFilter(currentLocationFilter, false);
 
             renderApp();
+            updateHeaderHeightVar();
         });
 
         function renderApp() {
@@ -925,41 +942,38 @@
             renderTodayHero();
             renderNextExamBanner();
             renderScheduleList();
-            updateActiveFiltersBar();
+            setTimeout(updateHeaderHeightVar, 50);
         }
 
         /* ----------------------------------------------------
-           CÁLCULO, LISTAGEM E FILTRO INTERATIVO DAS 27 UC
+           PROGRESSO DAS 27 UC (Ordenadas por Data de Iniciação)
         ----------------------------------------------------- */
         function getCategorizedUCs() {
-            const completed = [];
-            const inProgress = [];
-            const pending = [];
-
+            const completed = [], inProgress = [], pending = [];
             all27UC.forEach(ucName => {
                 const modEvents = rawSchedule.filter(e => e.module === ucName);
-
                 if (modEvents.length === 0) {
-                    pending.push({ name: ucName, status: 'pending', note: 'Aguarda agendamento' });
+                    pending.push({ name: ucName, status: 'pending', sortDate: '9999-99-99', note: 'Aguarda agendamento' });
                 } else {
                     const firstEvent = modEvents.reduce((min, e) => e.date < min.date ? e : min, modEvents[0]);
                     const examEvents = modEvents.filter(e => e.type === 'exame' && !e.module.includes('2ª Época'));
-                    const lastExam = examEvents.length > 0 
-                        ? examEvents.reduce((max, e) => e.date > max.date ? e : max, examEvents[0])
-                        : null;
-
+                    const lastExam = examEvents.length > 0 ? examEvents.reduce((max, e) => e.date > max.date ? e : max, examEvents[0]) : null;
                     const hasStarted = firstEvent && firstEvent.date <= simulatedDateISO;
                     const hasFinished = lastExam && lastExam.date < simulatedDateISO;
 
                     if (hasFinished) {
-                        completed.push({ name: ucName, status: 'completed', endDate: lastExam.dateStr });
+                        completed.push({ name: ucName, status: 'completed', sortDate: firstEvent.date, startDate: firstEvent.dateStr, endDate: lastExam.dateStr });
                     } else if (hasStarted) {
-                        inProgress.push({ name: ucName, status: 'progress', startDate: firstEvent.dateStr });
+                        inProgress.push({ name: ucName, status: 'progress', sortDate: firstEvent.date, startDate: firstEvent.dateStr });
                     } else {
-                        pending.push({ name: ucName, status: 'pending', startDate: firstEvent.dateStr });
+                        pending.push({ name: ucName, status: 'pending', sortDate: firstEvent.date, startDate: firstEvent.dateStr });
                     }
                 }
             });
+
+            completed.sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+            inProgress.sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+            pending.sort((a, b) => a.sortDate.localeCompare(b.sortDate));
 
             return { completed, inProgress, pending };
         }
@@ -967,27 +981,69 @@
         function renderUcStatus() {
             const { completed, inProgress, pending } = getCategorizedUCs();
             const TOTAL_UC = 27;
+            const compCount = completed.length, progCount = inProgress.length, pendCount = pending.length;
+            const compPct = Math.round((compCount / TOTAL_UC) * 100);
+            const progPct = Math.round((progCount / TOTAL_UC) * 100);
 
-            const completedCount = completed.length;
-            const inProgressCount = inProgress.length;
-            const pendingCount = pending.length;
+            const elComp = document.getElementById('uc-count-completed-main');
+            const elProg = document.getElementById('uc-count-progress-main');
+            const elPend = document.getElementById('uc-count-pending-main');
+            const elPct = document.getElementById('uc-progress-percent-main');
+            const barComp = document.getElementById('bar-uc-completed-main');
+            const barProg = document.getElementById('bar-uc-progress-main');
 
-            const completedPercent = Math.round((completedCount / TOTAL_UC) * 100);
-            const inProgressPercent = Math.round((inProgressCount / TOTAL_UC) * 100);
-
-            // Atualização dos números e da barra visual
-            document.getElementById('uc-count-completed').innerText = completedCount;
-            document.getElementById('uc-count-progress').innerText = inProgressCount;
-            document.getElementById('uc-count-pending').innerText = pendingCount;
-            
-            document.getElementById('uc-progress-percent').innerText = `${completedPercent + inProgressPercent}%`;
-
-            document.getElementById('bar-uc-completed').style.width = `${completedPercent}%`;
-            document.getElementById('bar-uc-progress').style.width = `${inProgressPercent}%`;
+            if (elComp) elComp.innerText = compCount;
+            if (elProg) elProg.innerText = progCount;
+            if (elPend) elPend.innerText = pendCount;
+            if (elPct) elPct.innerText = `${compPct + progPct}%`;
+            if (barComp) barComp.style.width = `${compPct}%`;
+            if (barProg) barProg.style.width = `${progPct}%`;
 
             if (activeUcFilter) {
                 showUcListItems(activeUcFilter);
+            } else {
+                showAllUcListDefault();
             }
+        }
+
+        // Mostrar por defeito todas as 27 UC ordenadas por data de iniciação
+        function showAllUcListDefault() {
+            const container = document.getElementById('uc-details-container');
+            const titleEl = document.getElementById('uc-list-title');
+            const listEl = document.getElementById('uc-items-list');
+            const { completed, inProgress, pending } = getCategorizedUCs();
+            const allSorted = [...completed, ...inProgress, ...pending].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+            
+            if (titleEl) titleEl.innerText = `Todas as Unidades de Competência (${allSorted.length})`;
+
+            let html = '';
+            allSorted.forEach(item => {
+                const cfg = moduleConfig[item.name] || {};
+                let linksHtml = '';
+                if (cfg.driveUrl || cfg.asynchronousClass) {
+                    linksHtml = '<div class="flex items-center gap-1.5 mt-2">';
+                    if (cfg.driveUrl) linksHtml += `<a href="${cfg.driveUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-[10px] font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1"><i class="fa-brands fa-google-drive text-emerald-500"></i> Drive</a>`;
+                    if (cfg.asynchronousClass) linksHtml += `<a href="${cfg.asynchronousClass}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg bg-blue-500/10 text-[10px] font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1"><i class="fa-solid fa-laptop text-blue-500"></i> Aula Assíncrona</a>`;
+                    linksHtml += '</div>';
+                }
+                let badgeStatus = item.status === 'completed' ? 'Concluído' : (item.status === 'progress' ? 'Em Curso' : 'Brevemente');
+                let badgeClass = item.status === 'completed' ? 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20' : (item.status === 'progress' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' : 'bg-slate-200 dark:bg-slate-800 text-slate-500 border-slate-300 dark:border-slate-700');
+
+                html += `
+                    <li class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white">${item.name}</div>
+                                <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">${item.startDate ? 'Iniciada em ' + item.startDate : (item.endDate ? 'Concluído em ' + item.endDate : item.note || '')}</div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded text-[9px] font-black border ${badgeClass} shrink-0">${badgeStatus}</span>
+                        </div>
+                        ${linksHtml}
+                    </li>
+                `;
+            });
+            if (listEl) listEl.innerHTML = html;
+            if (container) container.classList.remove('hidden');
         }
 
         function toggleUcList(type) {
@@ -1003,73 +1059,35 @@
             const container = document.getElementById('uc-details-container');
             const titleEl = document.getElementById('uc-list-title');
             const listEl = document.getElementById('uc-items-list');
-
             const { completed, inProgress, pending } = getCategorizedUCs();
-            let items = [];
-            let titleText = '';
-
-            if (type === 'completed') {
-                items = completed;
-                titleText = `UC Concluídas (${items.length})`;
-            } else if (type === 'progress') {
-                items = inProgress;
-                titleText = `UC Em Progresso (${items.length})`;
-            } else if (type === 'pending') {
-                items = pending;
-                titleText = `UC Não Iniciadas (${items.length})`;
-            }
-
-            titleEl.innerText = titleText;
+            let items = type === 'completed' ? completed : (type === 'progress' ? inProgress : pending);
+            
+            titleEl.innerText = `${type === 'completed' ? 'Concluídas' : (type === 'progress' ? 'Em Progresso' : 'Não Iniciadas')} (${items.length})`;
 
             if (items.length === 0) {
-                listEl.innerHTML = `<li class="text-[11px] text-slate-500 dark:text-slate-400 italic py-1">Nenhuma UC nesta categoria.</li>`;
+                listEl.innerHTML = `<li class="text-xs text-slate-500 italic py-2">Nenhuma UC nesta categoria.</li>`;
             } else {
                 let html = '';
                 items.forEach(item => {
-                    let badgeHtml = '';
-                    let detailsText = '';
-
-                    if (item.status === 'completed') {
-                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">Concluída</span>`;
-                        detailsText = item.endDate ? `Concluído em ${item.endDate}` : '';
-                    } else if (item.status === 'progress') {
-                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30">Em Curso</span>`;
-                        detailsText = item.startDate ? `Iniciado em ${item.startDate}` : '';
-                    } else {
-                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 border border-slate-300 dark:border-slate-700">Pendente</span>`;
-                        detailsText = item.startDate ? `Início em ${item.startDate}` : (item.note || 'Pendente');
-                    }
-
                     const cfg = moduleConfig[item.name] || {};
                     let linksHtml = '';
-
                     if (cfg.driveUrl || cfg.asynchronousClass) {
-                        linksHtml = '<div class="flex items-center gap-1.5 mt-1.5">';
-                        if (cfg.driveUrl) {
-                            linksHtml += `
-                                <a href="${cfg.driveUrl}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 min-h-[36px] rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-[9px] font-bold border border-slate-200 dark:border-slate-700 flex items-center gap-1 transition">
-                                    <i class="fa-brands fa-google-drive text-emerald-500"></i> Drive
-                                </a>
-                            `;
-                        }
-                        if (cfg.asynchronousClass) {
-                            linksHtml += `
-                                <a href="${cfg.asynchronousClass}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 min-h-[36px] rounded bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-[9px] font-bold border border-blue-500/20 flex items-center gap-1 transition">
-                                    <i class="fa-solid fa-laptop text-blue-500"></i> Aula Assíncrona
-                                </a>
-                            `;
-                        }
+                        linksHtml = '<div class="flex items-center gap-1.5 mt-2">';
+                        if (cfg.driveUrl) linksHtml += `<a href="${cfg.driveUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-[10px] font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1"><i class="fa-brands fa-google-drive text-emerald-500"></i> Drive</a>`;
+                        if (cfg.asynchronousClass) linksHtml += `<a href="${cfg.asynchronousClass}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg bg-blue-500/10 text-[10px] font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1"><i class="fa-solid fa-laptop text-blue-500"></i> Aula Assíncrona</a>`;
                         linksHtml += '</div>';
                     }
+                    let badgeStatus = type === 'completed' ? 'Concluído' : (type === 'progress' ? 'Em Curso' : 'Brevemente');
+                    let badgeClass = type === 'completed' ? 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20' : (type === 'progress' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' : 'bg-slate-200 dark:bg-slate-800 text-slate-500 border-slate-300 dark:border-slate-700');
 
                     html += `
-                        <li class="p-2 rounded-xl bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800">
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="min-w-0 flex-1">
-                                    <div class="font-bold text-[11px] text-slate-900 dark:text-white truncate">${item.name}</div>
-                                    ${detailsText ? `<div class="text-[9px] text-slate-600 dark:text-slate-400">${detailsText}</div>` : ''}
+                        <li class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <div class="font-bold text-xs text-slate-900 dark:text-white">${item.name}</div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">${item.startDate ? 'Iniciada em ' + item.startDate : (item.endDate ? 'Concluído em ' + item.endDate : item.note || '')}</div>
                                 </div>
-                                <div class="shrink-0">${badgeHtml}</div>
+                                <span class="px-2 py-0.5 rounded text-[9px] font-black border ${badgeClass} shrink-0">${badgeStatus}</span>
                             </div>
                             ${linksHtml}
                         </li>
@@ -1077,13 +1095,12 @@
                 });
                 listEl.innerHTML = html;
             }
-
             container.classList.remove('hidden');
         }
 
         function hideUcList() {
             activeUcFilter = null;
-            document.getElementById('uc-details-container').classList.add('hidden');
+            showAllUcListDefault();
         }
 
         /* ----------------------------------------------------
@@ -1116,35 +1133,7 @@
         }
 
         /* ----------------------------------------------------
-           BARRA DE STATUS DE FILTROS ATIVOS
-        ----------------------------------------------------- */
-        function updateActiveFiltersBar() {
-            const activeFilters = [];
-            
-            if (currentMonthFilter !== 'ALL') {
-                const monthLabels = { SEP: 'Setembro', OCT: 'Outubro', NOV: 'Novembro', DEC: 'Dezembro', JAN: 'Janeiro' };
-                activeFilters.push(`Mês: ${monthLabels[currentMonthFilter] || currentMonthFilter}`);
-            }
-            if (currentLocationFilter !== 'ALL') {
-                activeFilters.push(`Local: ${currentLocationFilter}`);
-            }
-            if (searchQuery.trim().length > 0) {
-                activeFilters.push(`Pesquisa: "${searchQuery}"`);
-            }
-
-            const bar = document.getElementById('active-filters-bar');
-            const summary = document.getElementById('active-filters-summary');
-
-            if (activeFilters.length > 0) {
-                summary.innerText = activeFilters.join(' | ');
-                bar.classList.remove('hidden');
-            } else {
-                bar.classList.add('hidden');
-            }
-        }
-
-        /* ----------------------------------------------------
-           HIGHLIGHT: TODAY'S EVENTS (DESTAQUE VISUAL EXAMES E MEETS)
+           HIGHLIGHT: TODAY'S EVENTS
         ----------------------------------------------------- */
         function renderTodayHero() {
             const todayISO = simulatedDateISO;
@@ -1156,17 +1145,17 @@
             const statusTag = document.getElementById('today-status-tag');
 
             if (todayEvents.length === 0) {
-                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700';
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700';
                 statusTag.innerText = 'Sem Aulas Hoje';
 
                 container.innerHTML = `
                     <div class="py-2 flex items-center justify-between">
                         <div>
                             <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Dia Livre / Sem Atividade Letiva</h3>
-                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Aproveite para consolidar estudos ou consultar sessões próximas.</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Aproveite para consolidar estudos ou consultar sessões próximas.</p>
                         </div>
-                        <button onclick="setViewTab('proximas')" class="px-3.5 py-2 min-h-[44px] rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shrink-0 touch-active flex items-center">
-                            Ver Próximas <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
+                        <button onclick="setViewTab('proximas')" class="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shrink-0 touch-active">
+                            Ver Próximas <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
                         </button>
                     </div>
                 `;
@@ -1178,10 +1167,10 @@
 
             const hasExam = todayEvents.some(e => e.type === 'exame');
             if (hasExam) {
-                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/40 animate-pulse';
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
                 statusTag.innerText = '⚠️ DIA DE EXAME';
             } else {
-                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-500/40';
+                statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40';
                 statusTag.innerText = sessionLabel;
             }
 
@@ -1191,42 +1180,23 @@
                 const modInfo = moduleConfig[item.module] || {};
                 const trainerText = modInfo.trainer ? ` • <i class="fa-solid fa-user-tie text-[9px] ml-1"></i> ${modInfo.trainer}` : '';
 
-                // Esquema de cores e botões de destaque para Exames e Aulas em Direto
-                let cardStyleClass = item.type === 'exame'
-                    ? 'border-2 border-rose-500 bg-rose-100/80 dark:bg-rose-950/40 shadow-lg shadow-rose-500/10'
-                    : 'border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/70';
-
-                let liveActionBtn = '';
-                if (item.location.includes('Online')) {
-                    liveActionBtn = `
-                        <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="mt-2.5 inline-flex items-center justify-center gap-1.5 px-3 py-2 min-h-[44px] rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition touch-active w-full sm:w-auto">
-                            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                            <i class="fa-solid fa-video"></i>
-                            <span>Entrar Direto (Meet)</span>
-                        </a>
-                    `;
-                }
-
                 html += `
-                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${cardStyleClass} hover:border-blue-500/50 transition cursor-pointer touch-active relative overflow-hidden">
-                        <div class="flex items-start justify-between gap-3">
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center gap-2 mb-1 flex-wrap">
-                                    <span class="text-xs font-black text-blue-600 dark:text-blue-400 flex items-center gap-1">
-                                        <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}
-                                    </span>
-                                    ${getLocationBadge(item.location)}
-                                    ${getTypeBadge(item)}
-                                </div>
-                                <h4 class="font-extrabold text-sm text-slate-900 dark:text-white truncate">${item.module}</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 truncate mt-0.5">
-                                    ${item.obs ? item.obs : ''} ${trainerText}
-                                </p>
-                                ${liveActionBtn}
+                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border ${item.type === 'exame' ? 'border-rose-500/50 bg-rose-50 dark:bg-rose-950/20' : 'border-slate-200 dark:border-slate-800'} flex items-center justify-between gap-3 hover:border-blue-500/50 transition cursor-pointer touch-active">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xs font-black text-blue-600 dark:text-blue-400 flex items-center gap-1">
+                                    <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}
+                                </span>
+                                ${getLocationBadge(item.location)}
+                                ${getTypeBadge(item)}
                             </div>
-                            <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center text-xs shrink-0">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
+                            <h4 class="font-extrabold text-sm text-slate-900 dark:text-white truncate">${item.module}</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                                ${item.obs ? item.obs : ''} ${trainerText}
+                            </p>
+                        </div>
+                        <div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs shrink-0">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
                 `;
@@ -1245,7 +1215,7 @@
         }
 
         /* ----------------------------------------------------
-           SCHEDULE LIST (COM ATALHOS RÁPIDOS DRIVE E MEET)
+           SCHEDULE LIST
         ----------------------------------------------------- */
         function renderScheduleList() {
             const container = document.getElementById('schedule-list');
@@ -1283,6 +1253,7 @@
             if (filtered.length === 0) {
                 container.innerHTML = '';
                 emptyState.classList.remove('hidden');
+                updateHeaderHeightVar();
                 return;
             } else {
                 emptyState.classList.add('hidden');
@@ -1296,7 +1267,7 @@
                     lastMonthGroup = item.month;
                     const monthNames = { SEP: 'Setembro 2026', OCT: 'Outubro 2026', NOV: 'Novembro 2026', DEC: 'Dezembro 2026', JAN: 'Janeiro 2027' };
                     html += `
-                        <div class="pt-3 pb-1 sticky top-[105px] z-10 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md">
+                        <div class="pt-3 pb-1 sticky z-10 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md" style="top: var(--header-height);">
                             <div class="flex items-center gap-2">
                                 <span class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">${monthNames[item.month] || item.month}</span>
                                 <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
@@ -1313,32 +1284,8 @@
                 const todayStyleClasses = isToday 
                     ? 'border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-r from-blue-500/15 via-blue-500/5 to-transparent shadow-md shadow-blue-500/10' 
                     : isExame 
-                        ? 'border-2 border-rose-500/80 bg-rose-50/50 dark:bg-rose-950/20' 
+                        ? 'border border-rose-400/40 bg-rose-50/30 dark:bg-rose-950/10' 
                         : 'border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60';
-
-                // Atalhos de 1 clique nos cartões
-                let quickActionsHtml = '<div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100 dark:border-slate-800/60" onclick="event.stopPropagation()">';
-                let hasQuickActions = false;
-
-                if (modInfo.driveUrl) {
-                    hasQuickActions = true;
-                    quickActionsHtml += `
-                        <a href="${modInfo.driveUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 min-h-[36px] rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-[10px] font-bold transition flex items-center gap-1.5 border border-slate-200 dark:border-slate-700">
-                            <i class="fa-brands fa-google-drive text-emerald-500 text-xs"></i> Drive
-                        </a>
-                    `;
-                }
-
-                if (item.location.includes('Online')) {
-                    hasQuickActions = true;
-                    quickActionsHtml += `
-                        <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 min-h-[36px] rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold transition flex items-center gap-1.5 border border-emerald-500/20">
-                            <i class="fa-solid fa-video text-xs"></i> Meet
-                        </a>
-                    `;
-                }
-
-                quickActionsHtml += '</div>';
 
                 html += `
                     <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
@@ -1346,11 +1293,11 @@
                         ${isToday ? '<span class="absolute top-0 right-0 px-2.5 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider shadow-sm">Hoje</span>' : ''}
 
                         <div class="flex items-start justify-between gap-2 mb-2">
-                            <div class="flex items-center gap-2 flex-wrap">
+                            <div class="flex items-center gap-2">
                                 <span class="px-2 py-0.5 rounded-lg ${isToday ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200'} font-bold text-xs">
-                                    ${item.dateStr} <span class="${isToday ? 'text-blue-100' : 'text-slate-500 dark:text-slate-400'} text-[10px] uppercase font-semibold">${item.dayWeek}</span>
+                                    ${item.dateStr} <span class="${isToday ? 'text-blue-100' : 'text-slate-400 dark:text-slate-500'} text-[10px] uppercase font-semibold">${item.dayWeek}</span>
                                 </span>
-                                <span class="text-xs font-medium text-slate-600 dark:text-slate-400 flex items-center gap-1">
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
                                     <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart}
                                 </span>
                             </div>
@@ -1366,211 +1313,181 @@
                         </h4>
 
                         <div class="flex items-center justify-between gap-2 mt-1">
-                            ${item.obs ? `<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-1 font-medium">${item.obs}</p>` : '<span></span>'}
-                            ${modInfo.trainer ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20 shrink-0"><i class="fa-solid fa-user-tie text-[9px] mr-1"></i>${modInfo.trainer}</span>` : ''}
+                            ${item.obs ? `<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 font-medium">${item.obs}</p>` : '<span></span>'}
+                            ${modInfo.trainer ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-500/20 shrink-0"><i class="fa-solid fa-user-tie text-[9px] mr-1"></i>${modInfo.trainer}</span>` : ''}
                         </div>
-
-                        ${hasQuickActions ? quickActionsHtml : ''}
                     </div>
                 `;
             });
 
             container.innerHTML = html;
+            setTimeout(updateHeaderHeightVar, 20);
         }
 
         // Badges
         function getLocationBadge(location) {
             if (location.includes('CRIAP')) {
-                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20">
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
                     <i class="fa-solid fa-building text-[9px]"></i> CRIAP
                 </span>`;
             } else if (location.includes('Online')) {
-                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                     <i class="fa-solid fa-laptop text-[9px]"></i> Online
                 </span>`;
             } else if (location.includes('VivaGym')) {
-                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-orange-500/10 text-orange-700 dark:text-orange-400 border border-orange-500/20">
+                return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20">
                     <i class="fa-solid fa-dumbbell text-[9px]"></i> VivaGym
                 </span>`;
             }
-            return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+            return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700">
                 ${location}
             </span>`;
         }
 
         function getTypeBadge(item) {
             if (item.type === 'exame') {
-                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase bg-rose-600 text-white shadow-sm">
-                    <i class="fa-solid fa-graduation-cap text-[9px] mr-1"></i> ${item.exam || 'Exame'}
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-300 border border-rose-500/30">
+                    <i class="fa-solid fa-graduation-cap mr-0.5 text-[9px]"></i> Exame
                 </span>`;
             } else if (item.type === 'inicio') {
-                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">
-                    Início Módulo
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-sky-500/10 text-sky-600 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-500/30">
+                    Início
                 </span>`;
             } else if (item.type === 'reuniao') {
-                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-300 border border-purple-500/30">
                     Reunião
+                </span>`;
+            } else if (item.type === 'furo') {
+                return `<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-500">
+                    Sem Aula
                 </span>`;
             }
             return '';
         }
 
-        /* ----------------------------------------------------
-           FILTERS & TAB CONTROL
-        ----------------------------------------------------- */
-        function setViewTab(tab, render = true) {
+        // View Tabs
+        function setViewTab(tab, updateRender = true) {
             currentViewTab = tab;
             localStorage.setItem('cet_tab', tab);
 
             document.querySelectorAll('.view-tab').forEach(btn => {
-                btn.className = 'view-tab px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition';
+                btn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition';
             });
-
             const activeBtn = document.getElementById(`tab-btn-${tab}`);
             if (activeBtn) {
-                activeBtn.className = 'view-tab px-3.5 py-2.5 min-h-[44px] rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 transition';
+                activeBtn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 font-bold transition';
             }
-
-            if (render) renderApp();
+            if (updateRender) renderScheduleList();
+            setTimeout(updateHeaderHeightVar, 20);
         }
 
-        function setMonthFilter(month, render = true) {
+        // Month Filter
+        function setMonthFilter(month, updateRender = true) {
             currentMonthFilter = month;
             localStorage.setItem('cet_mfilter', month);
 
             document.querySelectorAll('.mfilter-chip').forEach(btn => {
-                btn.className = 'mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white transition shrink-0';
+                btn.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition';
             });
-
-            const activeBtn = document.getElementById(`mfilter-${month}`);
-            if (activeBtn) {
-                activeBtn.className = 'mfilter-chip px-3.5 py-2.5 min-h-[44px] rounded-xl bg-blue-600 text-white font-bold transition shrink-0';
-            }
-
-            if (render) renderApp();
+            const active = document.getElementById(`mfilter-${month}`);
+            if (active) active.className = 'mfilter-chip px-3 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition';
+            if (updateRender) renderScheduleList();
+            setTimeout(updateHeaderHeightVar, 20);
         }
 
-        function setLocationFilter(loc, render = true) {
+        // Location Filter
+        function setLocationFilter(loc, updateRender = true) {
             currentLocationFilter = loc;
             localStorage.setItem('cet_locfilter', loc);
 
             document.querySelectorAll('.locfilter-chip').forEach(btn => {
-                btn.className = 'locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition shrink-0 flex items-center gap-1.5';
+                btn.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1';
             });
-
-            const activeBtn = document.getElementById(`locfilter-${loc}`);
-            if (activeBtn) {
-                activeBtn.className = 'locfilter-chip px-3 py-2 min-h-[44px] rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition shrink-0 flex items-center gap-1.5';
-            }
-
-            if (render) renderApp();
+            const active = document.getElementById(`locfilter-${loc}`);
+            if (active) active.className = 'locfilter-chip px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold transition flex items-center gap-1';
+            if (updateRender) renderScheduleList();
+            setTimeout(updateHeaderHeightVar, 20);
         }
 
-        function resetFilters() {
-            currentMonthFilter = 'ALL';
-            currentLocationFilter = 'ALL';
-            searchQuery = '';
-            
-            localStorage.setItem('cet_mfilter', 'ALL');
-            localStorage.setItem('cet_locfilter', 'ALL');
-
-            const searchInput = document.getElementById('search-input');
-            if (searchInput) searchInput.value = '';
-
-            const clearSearchBtn = document.getElementById('clear-search');
-            if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
-
-            setMonthFilter('ALL', false);
-            setLocationFilter('ALL', false);
-            renderApp();
-        }
-
-        /* ----------------------------------------------------
-           SEARCH BAR CONTROLS
-        ----------------------------------------------------- */
+        // Search Handlers (Floating Search Box)
         function toggleSearch() {
             const box = document.getElementById('search-box');
-            const input = document.getElementById('search-input');
             if (box.classList.contains('hidden')) {
                 box.classList.remove('hidden');
-                input.focus();
+                document.getElementById('search-input').focus();
             } else {
                 box.classList.add('hidden');
                 clearSearch();
             }
+            updateHeaderHeightVar();
         }
 
         function handleSearchDebounced() {
             clearTimeout(searchDebounceTimeout);
             searchDebounceTimeout = setTimeout(() => {
-                const input = document.getElementById('search-input');
-                const clearBtn = document.getElementById('clear-search');
-                searchQuery = input.value;
-
-                if (searchQuery.length > 0) {
-                    clearBtn.classList.remove('hidden');
-                } else {
-                    clearBtn.classList.add('hidden');
-                }
-
-                renderApp();
-            }, 150);
+                const val = document.getElementById('search-input').value;
+                searchQuery = val;
+                renderScheduleList();
+                updateHeaderHeightVar();
+            }, 250);
         }
 
         function clearSearch() {
-            const input = document.getElementById('search-input');
-            input.value = '';
+            document.getElementById('search-input').value = '';
             searchQuery = '';
-            document.getElementById('clear-search').classList.add('hidden');
-            renderApp();
+            document.getElementById('search-box').classList.add('hidden');
+            renderScheduleList();
+            updateHeaderHeightVar();
         }
 
-        /* ----------------------------------------------------
-           SIMULATED DATE CONTROLS
-        ----------------------------------------------------- */
         function applySimulatedDate() {
             const val = document.getElementById('sim-date-input').value;
-            const converted = formatDMYToIso(val);
-            if (converted) {
-                simulatedDateISO = converted;
+            const isoParsed = formatDMYToIso(val);
+            if (isoParsed) {
+                simulatedDateISO = isoParsed;
                 renderApp();
             } else {
                 alert('Por favor introduza uma data válida no formato dd/mm/yyyy.');
             }
+            updateHeaderHeightVar();
         }
 
         function resetSimulatedDate() {
-            simulatedDateISO = getTodayLisbonISO();
+            simulatedDateISO = '2026-09-18';
             document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
             renderApp();
+            updateHeaderHeightVar();
         }
 
-        /* ----------------------------------------------------
-           MODAL EVENT DETAILS
-        ----------------------------------------------------- */
-        function openModal(id) {
-            const item = rawSchedule.find(e => e.id === id);
-            if (!item) return;
+        function resetFilters() {
+            currentViewTab = 'proximas';
+            currentMonthFilter = 'ALL';
+            currentLocationFilter = 'ALL';
+            searchQuery = '';
+            localStorage.removeItem('cet_tab');
+            localStorage.removeItem('cet_mfilter');
+            localStorage.removeItem('cet_locfilter');
+            document.getElementById('search-input').value = '';
+            setViewTab('proximas', false);
+            setMonthFilter('ALL', false);
+            setLocationFilter('ALL', false);
+            renderScheduleList();
+            updateHeaderHeightVar();
+        }
 
+        // Modal Handler
+        function openModal(eventId) {
+            const item = rawSchedule.find(e => e.id === eventId);
+            if (!item) return;
             activeModalEvent = item;
+
             const modInfo = moduleConfig[item.module] || {};
 
-            // Badge
-            const badgeEl = document.getElementById('modal-badge');
-            if (item.type === 'exame') {
-                badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase bg-rose-600 text-white';
-                badgeEl.innerText = item.exam || 'Exame';
-            } else if (item.type === 'inicio') {
-                badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/30';
-                badgeEl.innerText = 'Início de Módulo';
-            } else {
-                badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/30';
-                badgeEl.innerText = 'Sessão Letiva';
-            }
-
             document.getElementById('modal-title').innerText = item.module;
-            
-            // Trainer Box
+            document.getElementById('modal-date').innerText = `${item.dateStr} (${getDayFullName(item.dayWeek)})`;
+            document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
+            document.getElementById('modal-location').innerText = item.location;
+
             const trainerBox = document.getElementById('modal-trainer-box');
             if (modInfo.trainer) {
                 document.getElementById('modal-trainer').innerText = modInfo.trainer;
@@ -1579,48 +1496,29 @@
                 trainerBox.classList.add('hidden');
             }
 
-            document.getElementById('modal-date').innerText = `${item.dateStr} (${item.dayWeek})`;
-            document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
-            document.getElementById('modal-location').innerText = item.location;
-            
-            // Obs Box
-            const obsBox = document.getElementById('modal-obs-box');
-            if (item.obs) {
-                document.getElementById('modal-obs').innerText = item.obs;
-                obsBox.classList.remove('hidden');
-            } else {
-                obsBox.classList.add('hidden');
-            }
-
-            // Google Meet Box
             const meetBox = document.getElementById('modal-meet-box');
-            if (item.location.includes('Online')) {
+            if (item.location.includes('Online') || item.type === 'exame') {
                 meetBox.classList.remove('hidden');
             } else {
                 meetBox.classList.add('hidden');
             }
 
-            // Drive Box
             const driveBox = document.getElementById('modal-drive-box');
-            const driveLink = document.getElementById('modal-drive-link');
             if (modInfo.driveUrl) {
-                driveLink.href = modInfo.driveUrl;
+                document.getElementById('modal-drive-link').setAttribute('href', modInfo.driveUrl);
                 driveBox.classList.remove('hidden');
             } else {
                 driveBox.classList.add('hidden');
             }
 
-            // Aula Assíncrona Box
             const asyncBox = document.getElementById('modal-async-box');
-            const asyncLink = document.getElementById('modal-async-link');
             if (modInfo.asynchronousClass) {
-                asyncLink.href = modInfo.asynchronousClass;
+                document.getElementById('modal-async-link').setAttribute('href', modInfo.asynchronousClass);
                 asyncBox.classList.remove('hidden');
             } else {
                 asyncBox.classList.add('hidden');
             }
 
-            // Quilgo Exam Simulator Box
             const quilgoBox = document.getElementById('modal-quilgo-box');
             if (item.type === 'exame') {
                 quilgoBox.classList.remove('hidden');
@@ -1628,70 +1526,98 @@
                 quilgoBox.classList.add('hidden');
             }
 
-            const modal = document.getElementById('event-modal');
-            const card = document.getElementById('modal-card');
-            modal.classList.remove('hidden');
-            card.style.transform = 'translateY(0)';
+            const obsBox = document.getElementById('modal-obs-box');
+            if (item.obs || item.exam || item.reunion) {
+                document.getElementById('modal-obs').innerText = [item.obs, item.exam, item.reunion].filter(Boolean).join(' | ');
+                obsBox.classList.remove('hidden');
+            } else {
+                obsBox.classList.add('hidden');
+            }
+
+            document.getElementById('event-modal').classList.remove('hidden');
         }
 
         function closeModal() {
-            const modal = document.getElementById('event-modal');
-            const card = document.getElementById('modal-card');
-            card.style.transform = 'translateY(100%)';
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 200);
+            document.getElementById('event-modal').classList.add('hidden');
+            activeModalEvent = null;
+        }
+
+        function getDayFullName(shortDay) {
+            const days = { 'qua': 'Quarta-feira', 'qui': 'Quinta-feira', 'sex': 'Sexta-feira', 'sáb': 'Sábado', 'seg': 'Segunda-feira' };
+            return days[shortDay] || shortDay;
         }
 
         /* ----------------------------------------------------
-           ICS CALENDAR EXPORT
+           DYNAMIC ICS EXPORT
         ----------------------------------------------------- */
-        function generateIcsContent(events) {
-            let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//CET TEF LIS 60//PT\nCALSCALE:GREGORIAN\n";
+        function getIcsHeader() {
+            return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CET TEF LIS 60//Horario PWA//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VTIMEZONE
+TZID:Europe/Lisbon
+X-LIC-LOCATION:Europe/Lisbon
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:WET
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:WEST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+END:VTIMEZONE
+`;
+        }
 
-            events.forEach(item => {
-                if (!item.date || item.location === 'N/A') return;
-                
-                const dateClean = item.date.replace(/-/g, '');
-                const startHour = item.timeStart ? item.timeStart.replace(':', '') : '1830';
-                const endHour = item.timeEnd ? item.timeEnd.replace(':', '') : '2230';
+        function generateIcsEventBlock(ev) {
+            const dateClean = ev.date.replace(/-/g, '');
+            const startTimeClean = ev.timeStart.replace(':', '') + '00';
+            const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
+            const modInfo = moduleConfig[ev.module] || {};
+            
+            let description = ev.obs || 'Aula CET TEF 60';
+            if (modInfo.trainer) description += ` | Formador: ${modInfo.trainer}`;
+            if (modInfo.driveUrl) description += ` | Repositório: ${modInfo.driveUrl}`;
+            if (modInfo.asynchronousClass) description += ` | Aula Assíncrona: ${modInfo.asynchronousClass}`;
+            if (ev.location.includes('Online')) description += ` | Google Meet: https://meet.google.com/rei-odsd-hpq`;
 
-                const dtStart = `${dateClean}T${startHour}00`;
-                const dtEnd = `${dateClean}T${endHour}00`;
-
-                const modInfo = moduleConfig[item.module] || {};
-                const trainer = modInfo.trainer ? `\\nFormador: ${modInfo.trainer}` : '';
-                const description = `${item.obs || ''}${trainer}\\n CET TEF LIS 60`;
-
-                ics += "BEGIN:VEVENT\n";
-                ics += `SUMMARY:${item.module}\n`;
-                ics += `DTSTART;TZID=Europe/Lisbon:${dtStart}\n`;
-                ics += `DTEND;TZID=Europe/Lisbon:${dtEnd}\n`;
-                ics += `LOCATION:${item.location}\n`;
-                ics += `DESCRIPTION:${description}\n`;
-                ics += "STATUS:CONFIRMED\n";
-                ics += "END:VEVENT\n";
-            });
-
-            ics += "END:VCALENDAR";
-            return ics;
+            return `BEGIN:VEVENT
+SUMMARY:${ev.module}
+DESCRIPTION:${description}
+LOCATION:${ev.location}
+DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
+DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
+STATUS:CONFIRMED
+END:VEVENT`;
         }
 
         function downloadIcsFile() {
             if (!activeModalEvent) return;
-            const content = generateIcsContent([activeModalEvent]);
+            const ev = activeModalEvent;
+            const content = `${getIcsHeader()}${generateIcsEventBlock(ev)}\nEND:VCALENDAR`;
+
             const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `CET_TEF_${activeModalEvent.date}_${activeModalEvent.module.slice(0, 15)}.ics`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${ev.module.substring(0, 20)}_${ev.date.replace(/-/g, '')}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function exportFilteredCalendarIcs() {
-            let filtered = rawSchedule.filter(item => {
+            const filteredEvents = rawSchedule.filter(item => {
+                if (item.type === 'furo') return false;
+
                 if (currentViewTab === 'hoje') {
                     if (item.date !== simulatedDateISO) return false;
                 } else if (currentViewTab === 'proximas') {
@@ -1708,36 +1634,67 @@
                     if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
                 }
 
+                if (searchQuery.trim().length > 0) {
+                    const modInfo = moduleConfig[item.module] || {};
+                    const trainer = modInfo.trainer || '';
+                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
+                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                }
+
                 return true;
             });
 
-            if (filtered.length === 0) {
-                alert('Nenhum evento para exportar.');
+            if (filteredEvents.length === 0) {
+                alert('Não existem sessões visíveis para exportar.');
                 return;
             }
 
-            const content = generateIcsContent(filtered);
-            const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `CET_TEF_60_Agenda_Filtrada.ics`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            let fullIcs = getIcsHeader();
+            filteredEvents.forEach(ev => {
+                fullIcs += generateIcsEventBlock(ev) + '\n';
+            });
+            fullIcs += 'END:VCALENDAR';
+
+            let fileName = 'CET_TEF_60_Agenda';
+            if (currentMonthFilter !== 'ALL') fileName += `_${currentMonthFilter}`;
+            if (currentLocationFilter !== 'ALL') fileName += `_${currentLocationFilter}`;
+            if (currentViewTab === 'exames') fileName += '_Exames';
+
+            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${fileName}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function shareActiveEvent() {
             if (!activeModalEvent) return;
+            const ev = activeModalEvent;
+            const modInfo = moduleConfig[ev.module] || {};
+            let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
+            if (modInfo.trainer) text += `\n👤 Formador(a): ${modInfo.trainer}`;
+            if (ev.location.includes('Online')) text += `\n🎥 Google Meet: https://meet.google.com/rei-odsd-hpq`;
+            if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
+            if (modInfo.asynchronousClass) text += `\n💻 Aula Assíncrona: ${modInfo.asynchronousClass}`;
+            if (ev.type === 'exame') text += `\n📝 Simulador de Exame: https://quilgo.com/t/bIk0EVK8QHVzOgwJ`;
+            
             if (navigator.share) {
-                navigator.share({
-                    title: activeModalEvent.module,
-                    text: `Sessão de ${activeModalEvent.module} em ${activeModalEvent.dateStr} às ${activeModalEvent.timeStart} (${activeModalEvent.location}).`,
-                    url: window.location.href
-                }).catch(() => {});
+                navigator.share({ title: ev.module, text: text });
             } else {
-                alert(`Sessão: ${activeModalEvent.module}\nData: ${activeModalEvent.dateStr} - ${activeModalEvent.timeStart}\nLocal: ${activeModalEvent.location}`);
+                copyTextToClipboard(text);
             }
+        }
+
+        function copyTextToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Texto copiado para a área de transferência!');
         }
     </script>
 </body>
