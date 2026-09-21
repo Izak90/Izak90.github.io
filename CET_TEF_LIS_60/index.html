@@ -342,7 +342,7 @@
             </div>
 
             <!-- Lista de UC (Integrada diretamente no fluxo natural da página, sem caixa fixa/scroll interno) -->
-            <div id="uc-details-container" class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div id="uc-details-container" >
                 <div class="flex items-center justify-between mb-3">
                     <span id="uc-list-title" class="font-black text-xs text-slate-800 dark:text-slate-200 uppercase tracking-wider">
                         Lista de UC
@@ -1014,7 +1014,7 @@
             const { completed, inProgress, pending } = getCategorizedUCs();
             const allSorted = [...completed, ...inProgress, ...pending].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
             
-            if (titleEl) titleEl.innerText = `Todas as Unidades de Competência (${allSorted.length})`;
+            if (titleEl) titleEl.innerText = `Todas as UC (${allSorted.length})`;
 
             let html = '';
             allSorted.forEach(item => {
