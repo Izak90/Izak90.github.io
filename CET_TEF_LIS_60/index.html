@@ -128,6 +128,53 @@
                 </div>
             </div>
 
+            <!-- PAINEL DE STATUS DAS UNIDADES DE COMPETÊNCIA (UC) INTERATIVO -->
+            <div id="uc-status-panel" class="mt-3 p-3 rounded-2xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 text-[11px]">
+                        <i class="fa-solid fa-graduation-cap text-blue-500"></i> Progresso do Curso (27 UC)
+                    </span>
+                    <span id="uc-progress-percent" class="font-black text-blue-600 dark:text-blue-400 text-[11px]">0%</span>
+                </div>
+                
+                <!-- Barra Visual de Progresso -->
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden flex mb-2">
+                    <div id="bar-uc-completed" class="h-full bg-emerald-500 transition-all duration-500" style="width: 0%"></div>
+                    <div id="bar-uc-progress" class="h-full bg-blue-500 transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <!-- Botões Clicáveis para Filtrar UC -->
+                <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-bold">
+                    <button onclick="toggleUcList('completed')" id="uc-btn-completed" class="p-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 transition touch-active">
+                        <div id="uc-count-completed" class="text-xs font-black">0</div>
+                        <div class="font-semibold text-[9px] opacity-90">Concluídas</div>
+                    </button>
+                    <button onclick="toggleUcList('progress')" id="uc-btn-progress" class="p-1.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 hover:bg-blue-500/20 transition touch-active">
+                        <div id="uc-count-progress" class="text-xs font-black">0</div>
+                        <div class="font-semibold text-[9px] opacity-90">Em Progresso</div>
+                    </button>
+                    <button onclick="toggleUcList('pending')" id="uc-btn-pending" class="p-1.5 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-300/60 dark:hover:bg-slate-700/60 transition touch-active">
+                        <div id="uc-count-pending" class="text-xs font-black">27</div>
+                        <div class="font-semibold text-[9px] opacity-90">Não Iniciadas</div>
+                    </button>
+                </div>
+
+                <!-- Lista Desdobrável de UC ao Clicar num dos Botões -->
+                <div id="uc-details-container" class="hidden mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center justify-between mb-2">
+                        <span id="uc-list-title" class="font-black text-[11px] text-slate-800 dark:text-slate-200">
+                            Lista de UC
+                        </span>
+                        <button onclick="hideUcList()" class="text-[10px] text-slate-400 hover:text-slate-600 dark:hover:text-white p-0.5">
+                            <i class="fa-solid fa-xmark"></i> Fechar
+                        </button>
+                    </div>
+                    <ul id="uc-items-list" class="space-y-1.5 max-h-48 overflow-y-auto hide-scrollbar pr-1">
+                        <!-- Injetado dinamicamente via JS com suporte aos links do Drive e Aula Assíncrona -->
+                    </ul>
+                </div>
+            </div>
+
             <!-- Countdown Banner for Next Exam -->
             <div id="next-exam-banner" class="mt-2.5 p-2 px-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-between text-xs cursor-pointer hover:bg-rose-500/20 transition" onclick="setViewTab('exames')">
                 <div class="flex items-center gap-2 min-w-0">
@@ -370,7 +417,7 @@
                     </div>
                 </div>
 
-                <!-- Botão de Acesso Direto ao Google Meet (Se for Online ou Exame) -->
+                <!-- Botão de Acesso Direto ao Google Meet -->
                 <div id="modal-meet-box" class="pt-1 hidden">
                     <a href="https://meet.google.com/rei-odsd-hpq" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
                         <i class="fa-solid fa-video text-base"></i>
@@ -397,7 +444,7 @@
                     </a>
                 </div>
 
-                <!-- Botão do Simulador de Exames (Exibido se for Exame) -->
+                <!-- Botão do Simulador de Exames -->
                 <div id="modal-quilgo-box" class="pt-1 hidden">
                     <a href="https://quilgo.com/t/bIk0EVK8QHVzOgwJ" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 bg-rose-600/10 hover:bg-rose-600/20 text-rose-600 dark:text-rose-400 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-rose-500/30">
                         <i class="fa-solid fa-vial-circle-check text-base"></i>
@@ -421,6 +468,37 @@
     </div>
 
     <script>
+        // LISTA MASTER DAS 27 UNIDADES DE COMPETÊNCIA (UC)
+        const all27UC = [
+            'Promoção de Estilos de Vida Saudável',
+            'Coaching no Fitness',
+            'Pedagogia do Exercício',
+            'Fisiologia do Exercício',
+            'Psicologia do Exercício',
+            'Aulas de Grupo',
+            'Comunicação no Fitness',
+            'Ética e Deontologia no Fitness',
+            'Marketing no Fitness',
+            'Aplicações Digitais',
+            'Avaliação e Prescrição de Exercício',
+            'Treino de Fitness Online',
+            'Inglês no Fitness',
+            'Satisfação de Clientes no Fitness',
+            'Treino para Populações Especiais',
+            'Treino Outdoor',
+            'Hidroginástica',
+            'Body & Mind',
+            'Empreendedorismo no Fitness',
+            'Treino personalizado',
+            'Colaborar em equipa',
+            'Nutrição e Suplementação',
+            'Primeiros Socorros no Exercício',
+            'Biomecânica do Exercício',
+            'Gestão de clientes no Fitness',
+            'Anatomia do movimento',
+            'Gestão no Fitness'
+        ];
+
         // Module Repositories and Trainers Master Config
         const moduleConfig = {
             'Promoção de Estilos de Vida Saudável': {
@@ -455,6 +533,60 @@
             },
             'Marketing no Fitness': {
                 driveUrl: 'https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE'
+            },
+            'Aplicações Digitais': {
+                driveUrl: 'https://drive.google.com/drive/folders/19HIntsUWz6nIi_UXf9u5T8dxxelw4Nsa'
+            },
+            'Avaliação e Prescrição de Exercício': {
+                driveUrl: 'https://drive.google.com/drive/folders/1STB8DlSCWoexUqjZCLcNRrLor8mJKltz'
+            },
+            'Treino de Fitness Online': {
+                driveUrl: 'https://drive.google.com/drive/folders/1aO6NZIhWlpDsf0Mfj1SK4YSR4HumXL1Y'
+            },
+            'Inglês no Fitness': {
+                driveUrl: 'https://drive.google.com/drive/folders/1WAntr141CDbdlYTeYqy_HDcDTzzTAQ0I'
+            },
+            'Satisfação de Clientes no Fitness': {
+                driveUrl: 'https://drive.google.com/drive/folders/1JnqT343qguHvMltZ2avt7iQXbH7cySx0'
+            },
+            'Treino para Populações Especiais': {
+                driveUrl: 'https://drive.google.com/drive/folders/1oWf0EgGwClFFoLcsx6ZLrDzmTny7HRDb'
+            },
+            'Treino Outdoor': {
+                driveUrl: 'https://drive.google.com/drive/folders/1IFS9MQB80AKBs9yacOdIiVoJ0cWnLhOo'
+            },
+            'Hidroginástica': {
+                driveUrl: 'https://drive.google.com/drive/folders/1UWVEQ1ka7FR2Kz_Sa_guw0_x5_xru1L2'
+            },
+            'Body & Mind': {
+                driveUrl: 'https://drive.google.com/drive/folders/1nDYudGDNsyqBNhv3Zk2NgHl47ITchuYU'
+            },
+            'Empreendedorismo no Fitness': {
+                driveUrl: 'https://drive.google.com/drive/folders/1eejDdjB81Ucqui9RNXLiu3dvHMwKPR-Q'
+            },
+            'Treino personalizado': {
+                driveUrl: 'https://drive.google.com/drive/folders/1MfS0FaLqt8Mz_ByMS7aDI9gETolgRZsL'
+            },
+            'Colaborar em equipa': {
+                driveUrl: 'https://drive.google.com/drive/folders/1qjZohG48ioeB1BGJTt-rwGyQUD0KBn_C'
+            },
+            'Nutrição e Suplementação': {
+                driveUrl: 'https://drive.google.com/drive/folders/10jymW79m4k41FhwukS6bVBSpd-qrBabV'
+            },
+            'Primeiros Socorros no Exercício': {
+                driveUrl: 'https://drive.google.com/drive/folders/1LFLqdf_OopIIsvecJ7yyUi9F16y_ii12'
+            },
+            'Biomecânica do Exercício': {
+                driveUrl: 'https://drive.google.com/drive/folders/1QJoLZ1g4qQA6H7ofjocnquB8uu3vqzgX'
+            },
+            'Gestão de clientes no Fitness': {
+                driveUrl: 'https://drive.google.com/drive/folders/1bXaywTML2ptFiMdw2FH3zpnXhXguy9cd'
+            },
+            'Anatomia do movimento': {
+                driveUrl: 'https://drive.google.com/drive/folders/1jQAF4Rl-xTGR-OIBODnj0i74SW1_38cf'
+            },
+            'Gestão no Fitness': {
+                driveUrl: 'https://drive.google.com/drive/folders/1IQVKz-y0_zF2aRJyo-CzSPmUqdfGPxL9'
             }
         };
 
@@ -558,6 +690,7 @@
         let activeModalEvent = null;
         let deferredPwaPrompt = null;
         let searchDebounceTimeout = null;
+        let activeUcFilter = null; // 'completed', 'progress', 'pending' ou null
 
         /* ----------------------------------------------------
            iOS DETECTION & BANNER LOGIC
@@ -688,9 +821,170 @@
         });
 
         function renderApp() {
+            renderUcStatus();
             renderTodayHero();
             renderNextExamBanner();
             renderScheduleList();
+        }
+
+        /* ----------------------------------------------------
+           CÁLCULO, LISTAGEM E FILTRO INTERATIVO DAS 27 UC
+        ----------------------------------------------------- */
+        function getCategorizedUCs() {
+            const completed = [];
+            const inProgress = [];
+            const pending = [];
+
+            all27UC.forEach(ucName => {
+                const modEvents = rawSchedule.filter(e => e.module === ucName);
+
+                if (modEvents.length === 0) {
+                    pending.push({ name: ucName, status: 'pending', note: 'Aguarda agendamento' });
+                } else {
+                    const firstEvent = modEvents.reduce((min, e) => e.date < min.date ? e : min, modEvents[0]);
+                    const examEvents = modEvents.filter(e => e.type === 'exame' && !e.module.includes('2ª Época'));
+                    const lastExam = examEvents.length > 0 
+                        ? examEvents.reduce((max, e) => e.date > max.date ? e : max, examEvents[0])
+                        : null;
+
+                    const hasStarted = firstEvent && firstEvent.date <= simulatedDateISO;
+                    const hasFinished = lastExam && lastExam.date < simulatedDateISO;
+
+                    if (hasFinished) {
+                        completed.push({ name: ucName, status: 'completed', endDate: lastExam.dateStr });
+                    } else if (hasStarted) {
+                        inProgress.push({ name: ucName, status: 'progress', startDate: firstEvent.dateStr });
+                    } else {
+                        pending.push({ name: ucName, status: 'pending', startDate: firstEvent.dateStr });
+                    }
+                }
+            });
+
+            return { completed, inProgress, pending };
+        }
+
+        function renderUcStatus() {
+            const { completed, inProgress, pending } = getCategorizedUCs();
+            const TOTAL_UC = 27;
+
+            const completedCount = completed.length;
+            const inProgressCount = inProgress.length;
+            const pendingCount = pending.length;
+
+            const completedPercent = Math.round((completedCount / TOTAL_UC) * 100);
+            const inProgressPercent = Math.round((inProgressCount / TOTAL_UC) * 100);
+
+            // Atualização dos números e da barra visual
+            document.getElementById('uc-count-completed').innerText = completedCount;
+            document.getElementById('uc-count-progress').innerText = inProgressCount;
+            document.getElementById('uc-count-pending').innerText = pendingCount;
+            
+            document.getElementById('uc-progress-percent').innerText = `${completedPercent + inProgressPercent}%`;
+
+            document.getElementById('bar-uc-completed').style.width = `${completedPercent}%`;
+            document.getElementById('bar-uc-progress').style.width = `${inProgressPercent}%`;
+
+            // Se a lista interativa estiver aberta, recarrega o conteúdo
+            if (activeUcFilter) {
+                showUcListItems(activeUcFilter);
+            }
+        }
+
+        function toggleUcList(type) {
+            if (activeUcFilter === type) {
+                hideUcList();
+            } else {
+                activeUcFilter = type;
+                showUcListItems(type);
+            }
+        }
+
+        function showUcListItems(type) {
+            const container = document.getElementById('uc-details-container');
+            const titleEl = document.getElementById('uc-list-title');
+            const listEl = document.getElementById('uc-items-list');
+
+            const { completed, inProgress, pending } = getCategorizedUCs();
+            let items = [];
+            let titleText = '';
+
+            if (type === 'completed') {
+                items = completed;
+                titleText = `UC Concluídas (${items.length})`;
+            } else if (type === 'progress') {
+                items = inProgress;
+                titleText = `UC Em Progresso (${items.length})`;
+            } else if (type === 'pending') {
+                items = pending;
+                titleText = `UC Não Iniciadas (${items.length})`;
+            }
+
+            titleEl.innerText = titleText;
+
+            if (items.length === 0) {
+                listEl.innerHTML = `<li class="text-[11px] text-slate-400 italic py-1">Nenhuma UC nesta categoria.</li>`;
+            } else {
+                let html = '';
+                items.forEach(item => {
+                    let badgeHtml = '';
+                    let detailsText = '';
+
+                    if (item.status === 'completed') {
+                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">Concluída</span>`;
+                        detailsText = item.endDate ? `Concluído em ${item.endDate}` : '';
+                    } else if (item.status === 'progress') {
+                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30">Em Curso</span>`;
+                        detailsText = item.startDate ? `Iniciado em ${item.startDate}` : '';
+                    } else {
+                        badgeHtml = `<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700">Pendente</span>`;
+                        detailsText = item.startDate ? `Início em ${item.startDate}` : (item.note || 'Pendente');
+                    }
+
+                    // Acesso aos links da UC no moduleConfig
+                    const cfg = moduleConfig[item.name] || {};
+                    let linksHtml = '';
+
+                    if (cfg.driveUrl || cfg.asynchronousClass) {
+                        linksHtml = '<div class="flex items-center gap-1.5 mt-1.5">';
+                        if (cfg.driveUrl) {
+                            linksHtml += `
+                                <a href="${cfg.driveUrl}" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-[9px] font-bold border border-slate-200 dark:border-slate-700 flex items-center gap-1 transition">
+                                    <i class="fa-brands fa-google-drive text-emerald-500"></i> Drive
+                                </a>
+                            `;
+                        }
+                        if (cfg.asynchronousClass) {
+                            linksHtml += `
+                                <a href="${cfg.asynchronousClass}" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 rounded bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-[9px] font-bold border border-blue-500/20 flex items-center gap-1 transition">
+                                    <i class="fa-solid fa-laptop text-blue-500"></i> Aula Assíncrona
+                                </a>
+                            `;
+                        }
+                        linksHtml += '</div>';
+                    }
+
+                    html += `
+                        <li class="p-2 rounded-xl bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="min-w-0 flex-1">
+                                    <div class="font-bold text-[11px] text-slate-900 dark:text-white truncate">${item.name}</div>
+                                    ${detailsText ? `<div class="text-[9px] text-slate-500 dark:text-slate-400">${detailsText}</div>` : ''}
+                                </div>
+                                <div class="shrink-0">${badgeHtml}</div>
+                            </div>
+                            ${linksHtml}
+                        </li>
+                    `;
+                });
+                listEl.innerHTML = html;
+            }
+
+            container.classList.remove('hidden');
+        }
+
+        function hideUcList() {
+            activeUcFilter = null;
+            document.getElementById('uc-details-container').classList.add('hidden');
         }
 
         /* ----------------------------------------------------
@@ -1020,109 +1314,98 @@
 
         function clearSearch() {
             document.getElementById('search-input').value = '';
-            searchQuery = '';
             document.getElementById('clear-search').classList.add('hidden');
+            searchQuery = '';
             renderScheduleList();
+        }
+
+        function resetFilters() {
+            currentMonthFilter = 'ALL';
+            currentLocationFilter = 'ALL';
+            searchQuery = '';
+            hideUcList();
+            document.getElementById('search-input').value = '';
+            document.getElementById('search-box').classList.add('hidden');
+            document.getElementById('clear-search').classList.add('hidden');
+
+            setMonthFilter('ALL', false);
+            setLocationFilter('ALL', false);
+            setViewTab('proximas', true);
+        }
+
+        /* ----------------------------------------------------
+           DATE SIMULATION FUNCTIONS
+        ----------------------------------------------------- */
+        function toggleDateSimPanel() {
+            const panel = document.getElementById('date-sim-panel');
+            panel.classList.toggle('hidden');
         }
 
         function applySimulatedDate() {
             const val = document.getElementById('sim-date-input').value;
-            const isoParsed = formatDMYToIso(val);
-            if (isoParsed) {
-                simulatedDateISO = isoParsed;
-                renderApp();
-            } else {
-                alert('Por favor introduza uma data válida no formato dd/mm/yyyy.');
+            const iso = formatDMYToIso(val);
+            if (!iso) {
+                alert('Por favor introduza uma data válida no formato dd/mm/yyyy');
+                return;
             }
+            simulatedDateISO = iso;
+            renderApp();
         }
 
         function resetSimulatedDate() {
-            simulatedDateISO = '2026-09-18';
+            simulatedDateISO = getTodayLisbonISO();
             document.getElementById('sim-date-input').value = formatIsoToDMY(simulatedDateISO);
             renderApp();
         }
 
-        function resetFilters() {
-            currentViewTab = 'proximas';
-            currentMonthFilter = 'ALL';
-            currentLocationFilter = 'ALL';
-            searchQuery = '';
-            localStorage.removeItem('cet_tab');
-            localStorage.removeItem('cet_mfilter');
-            localStorage.removeItem('cet_locfilter');
-            document.getElementById('search-input').value = '';
-            setViewTab('proximas', false);
-            setMonthFilter('ALL', false);
-            setLocationFilter('ALL', false);
-            renderScheduleList();
-        }
+        /* ----------------------------------------------------
+           MODAL FUNCTIONS
+        ----------------------------------------------------- */
+        function openModal(id) {
+            const eventItem = rawSchedule.find(e => e.id === id);
+            if (!eventItem) return;
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+            activeModalEvent = eventItem;
+            const modInfo = moduleConfig[eventItem.module] || {};
 
-        // Modal Handler
-        function openModal(eventId) {
-            const item = rawSchedule.find(e => e.id === eventId);
-            if (!item) return;
-            activeModalEvent = item;
+            document.getElementById('modal-title').innerText = eventItem.module;
+            document.getElementById('modal-trainer').innerText = modInfo.trainer || 'Por atribuir';
+            document.getElementById('modal-date').innerText = `${eventItem.dateStr} (${eventItem.dayWeek.toUpperCase()})`;
+            document.getElementById('modal-time').innerText = `${eventItem.timeStart} ${eventItem.timeEnd ? '- ' + eventItem.timeEnd : ''}`;
+            document.getElementById('modal-location').innerText = eventItem.location;
+            document.getElementById('modal-obs').innerText = eventItem.obs || 'Sem observações adicionais.';
 
-            const modInfo = moduleConfig[item.module] || {};
-
-            document.getElementById('modal-title').innerText = item.module;
-            document.getElementById('modal-date').innerText = `${item.dateStr} (${getDayFullName(item.dayWeek)})`;
-            document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
-            document.getElementById('modal-location').innerText = item.location;
-
-            // Trainer info
-            const trainerBox = document.getElementById('modal-trainer-box');
-            if (modInfo.trainer) {
-                document.getElementById('modal-trainer').innerText = modInfo.trainer;
-                trainerBox.classList.remove('hidden');
-            } else {
-                trainerBox.classList.add('hidden');
-            }
-
-            // Google Meet Box (Apenas se for Online ou Exame)
-            const meetBox = document.getElementById('modal-meet-box');
-            if (item.location.includes('Online') || item.type === 'exame') {
-                meetBox.classList.remove('hidden');
-            } else {
-                meetBox.classList.add('hidden');
-            }
-
-            // Google Drive Repository link
+            // Exibir/Ocultar caixas com base na disponibilidade de links
             const driveBox = document.getElementById('modal-drive-box');
+            const driveLink = document.getElementById('modal-drive-link');
             if (modInfo.driveUrl) {
-                document.getElementById('modal-drive-link').setAttribute('href', modInfo.driveUrl);
+                driveLink.href = modInfo.driveUrl;
                 driveBox.classList.remove('hidden');
             } else {
                 driveBox.classList.add('hidden');
             }
 
-            // Asynchronous Class link
             const asyncBox = document.getElementById('modal-async-box');
+            const asyncLink = document.getElementById('modal-async-link');
             if (modInfo.asynchronousClass) {
-                document.getElementById('modal-async-link').setAttribute('href', modInfo.asynchronousClass);
+                asyncLink.href = modInfo.asynchronousClass;
                 asyncBox.classList.remove('hidden');
             } else {
                 asyncBox.classList.add('hidden');
             }
 
-            // Simulador Quilgo (Visível nos Exames)
+            const meetBox = document.getElementById('modal-meet-box');
+            if (eventItem.location.includes('Online') || eventItem.type === 'exame') {
+                meetBox.classList.remove('hidden');
+            } else {
+                meetBox.classList.add('hidden');
+            }
+
             const quilgoBox = document.getElementById('modal-quilgo-box');
-            if (item.type === 'exame') {
+            if (eventItem.type === 'exame') {
                 quilgoBox.classList.remove('hidden');
             } else {
                 quilgoBox.classList.add('hidden');
-            }
-
-            const obsBox = document.getElementById('modal-obs-box');
-            if (item.obs || item.exam || item.reunion) {
-                document.getElementById('modal-obs').innerText = [item.obs, item.exam, item.reunion].filter(Boolean).join(' | ');
-                obsBox.classList.remove('hidden');
-            } else {
-                obsBox.classList.add('hidden');
             }
 
             document.getElementById('event-modal').classList.remove('hidden');
@@ -1133,159 +1416,101 @@
             activeModalEvent = null;
         }
 
-        function getDayFullName(shortDay) {
-            const days = { 'qua': 'Quarta-feira', 'qui': 'Quinta-feira', 'sex': 'Sexta-feira', 'sáb': 'Sábado', 'seg': 'Segunda-feira' };
-            return days[shortDay] || shortDay;
-        }
-
         /* ----------------------------------------------------
-           DYNAMIC ICS EXPORT (RESPECTS FILTERS & Europe/Lisbon)
+           ICS CALENDAR EXPORT FUNCTIONS
         ----------------------------------------------------- */
-        function getIcsHeader() {
-            return `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CET TEF LIS 60//Horario PWA//PT
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-TIMEZONE:Europe/Lisbon
-BEGIN:VTIMEZONE
-TZID:Europe/Lisbon
-X-LIC-LOCATION:Europe/Lisbon
-BEGIN:STANDARD
-TZOFFSETFROM:+0100
-TZOFFSETTO:+0000
-TZNAME:WET
-DTSTART:19701025T020000
-RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:+0000
-TZOFFSETTO:+0100
-TZNAME:WEST
-DTSTART:19700329T010000
-RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
-END:DAYLIGHT
-END:VTIMEZONE
-`;
-        }
+        function createIcsContent(events) {
+            let ics = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//CET TEF LIS 60//Horario CET//PT',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH'
+            ];
 
-        function generateIcsEventBlock(ev) {
-            const dateClean = ev.date.replace(/-/g, '');
-            const startTimeClean = ev.timeStart.replace(':', '') + '00';
-            const endTimeClean = ev.timeEnd ? ev.timeEnd.replace(':', '') + '00' : '220000';
-            const modInfo = moduleConfig[ev.module] || {};
-            
-            let description = ev.obs || 'Aula CET TEF 60';
-            if (modInfo.trainer) description += ` | Formador: ${modInfo.trainer}`;
-            if (modInfo.driveUrl) description += ` | Repositório: ${modInfo.driveUrl}`;
-            if (modInfo.asynchronousClass) description += ` | Aula Assíncrona: ${modInfo.asynchronousClass}`;
-            if (ev.location.includes('Online')) description += ` | Google Meet: https://meet.google.com/rei-odsd-hpq`;
+            events.forEach(e => {
+                if (e.type === 'furo') return;
 
-            return `BEGIN:VEVENT
-SUMMARY:${ev.module}
-DESCRIPTION:${description}
-LOCATION:${ev.location}
-DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
-DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
-STATUS:CONFIRMED
-END:VEVENT`;
+                const startIso = e.date.replace(/-/g, '') + 'T' + e.timeStart.replace(':', '') + '00';
+                let endIso = startIso;
+                if (e.timeEnd) {
+                    endIso = e.date.replace(/-/g, '') + 'T' + e.timeEnd.replace(':', '') + '00';
+                }
+
+                const summary = e.exam ? `[EXAME] ${e.module}` : e.module;
+                const description = `Modulo: ${e.module}\\nLocal: ${e.location}\\nNotas: ${e.obs || 'N/A'}`;
+
+                ics.push(
+                    'BEGIN:VEVENT',
+                    `UID:cet60-${e.id}-${e.date}@academy.pt`,
+                    `DTSTAMP:${startIso}Z`,
+                    `DTSTART:${startIso}`,
+                    `DTEND:${endIso}`,
+                    `SUMMARY:${summary}`,
+                    `DESCRIPTION:${description}`,
+                    `LOCATION:${e.location}`,
+                    'END:VEVENT'
+                );
+            });
+
+            ics.push('END:VCALENDAR');
+            return ics.join('\r\n');
         }
 
         function downloadIcsFile() {
             if (!activeModalEvent) return;
-            const ev = activeModalEvent;
-            const content = `${getIcsHeader()}${generateIcsEventBlock(ev)}\nEND:VCALENDAR`;
-
+            const content = createIcsContent([activeModalEvent]);
             const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', `${ev.module.substring(0, 20)}_${ev.date.replace(/-/g, '')}.ics`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `CET_TEF_${activeModalEvent.date}_${activeModalEvent.module.replace(/[^a-zA-Z0-9]/g, '_')}.ics`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
 
         function exportFilteredCalendarIcs() {
-            const filteredEvents = rawSchedule.filter(item => {
-                if (item.type === 'furo') return false;
-
-                if (currentViewTab === 'hoje') {
-                    if (item.date !== simulatedDateISO) return false;
-                } else if (currentViewTab === 'proximas') {
-                    if (item.date <= simulatedDateISO) return false;
-                } else if (currentViewTab === 'exames') {
-                    if (item.type !== 'exame') return false;
-                }
-
+            const filtered = rawSchedule.filter(item => {
                 if (currentMonthFilter !== 'ALL' && item.month !== currentMonthFilter) return false;
-
                 if (currentLocationFilter !== 'ALL') {
                     if (currentLocationFilter === 'CRIAP' && !item.location.includes('CRIAP')) return false;
                     if (currentLocationFilter === 'Online' && !item.location.includes('Online')) return false;
                     if (currentLocationFilter === 'VivaGym' && !item.location.includes('VivaGym')) return false;
                 }
-
-                if (searchQuery.trim().length > 0) {
-                    const modInfo = moduleConfig[item.module] || {};
-                    const trainer = modInfo.trainer || '';
-                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
-                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
-                }
-
-                return true;
+                return item.type !== 'furo';
             });
 
-            if (filteredEvents.length === 0) {
-                alert('Não existem sessões visíveis para exportar.');
+            if (filtered.length === 0) {
+                alert('Não existem eventos para exportar com os filtros atuais.');
                 return;
             }
 
-            let fullIcs = getIcsHeader();
-            filteredEvents.forEach(ev => {
-                fullIcs += generateIcsEventBlock(ev) + '\n';
-            });
-            fullIcs += 'END:VCALENDAR';
-
-            let fileName = 'CET_TEF_60_Agenda';
-            if (currentMonthFilter !== 'ALL') fileName += `_${currentMonthFilter}`;
-            if (currentLocationFilter !== 'ALL') fileName += `_${currentLocationFilter}`;
-            if (currentViewTab === 'exames') fileName += '_Exames';
-
-            const blob = new Blob([fullIcs], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', `${fileName}.ics`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const content = createIcsContent(filtered);
+            const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Horario_CET_TEF_LIS_60.ics`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
 
         function shareActiveEvent() {
             if (!activeModalEvent) return;
-            const ev = activeModalEvent;
-            const modInfo = moduleConfig[ev.module] || {};
-            let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
-            if (modInfo.trainer) text += `\n👤 Formador(a): ${modInfo.trainer}`;
-            if (ev.location.includes('Online')) text += `\n🎥 Google Meet: https://meet.google.com/rei-odsd-hpq`;
-            if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
-            if (modInfo.asynchronousClass) text += `\n💻 Aula Assíncrona: ${modInfo.asynchronousClass}`;
-            if (ev.type === 'exame') text += `\n📝 Simulador de Exame: https://quilgo.com/t/bIk0EVK8QHVzOgwJ`;
-            
+            const text = `Sessão CET TEF 60: ${activeModalEvent.module}\nData: ${activeModalEvent.dateStr} às ${activeModalEvent.timeStart}\nLocal: ${activeModalEvent.location}`;
             if (navigator.share) {
-                navigator.share({ title: ev.module, text: text });
+                navigator.share({
+                    title: activeModalEvent.module,
+                    text: text,
+                    url: window.location.href
+                }).catch(() => {});
             } else {
-                copyTextToClipboard(text);
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('Detalhes da sessão copiados para a área de transferência!');
+                });
             }
-        }
-
-        function copyTextToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            alert('Texto copiado para a área de transferência!');
         }
     </script>
 </body>
