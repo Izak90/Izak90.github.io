@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de Treino: 4 Semanas</title>
+  <style>
+    :root{
+      --bg:#f4f6f2;
+      --card:#ffffff;
+      --text:#172019;
+      --muted:#677068;
+      --line:#dde4dd;
+      --green:#24513d;
+      --green2:#327054;
+      --soft:#e9f1ec;
+      --warm:#f7f3e8;
+      --radius:18px;
+      --shadow:0 8px 24px rgba(28,42,33,.07);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    button{font:inherit}
+
+    .page{
+      width:min(920px,calc(100% - 24px));
+      margin:auto;
+      padding:18px 0 56px;
+    }
+
+    .hero{
+      padding:28px;
+      border-radius:24px;
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      color:white;
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:800;
+      opacity:.76;
+      margin-bottom:8px;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:clamp(2rem,7vw,3.2rem);
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .hero p{
+      margin:0;
+      max-width:680px;
+      opacity:.92;
+    }
+
+    .quick-note{
+      margin-top:16px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .pill{
+      padding:7px 10px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      font-size:.85rem;
+      font-weight:700;
+    }
+
+    .selector{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(244,246,242,.93);
+      backdrop-filter:blur(10px);
+      padding:14px 0;
+    }
+
+    .week-tabs,.session-tabs{
+      display:grid;
+      gap:8px;
+    }
+
+    .week-tabs{grid-template-columns:repeat(4,1fr)}
+    .session-tabs{grid-template-columns:repeat(2,1fr); margin-top:8px}
+
+    .tab{
+      border:1px solid var(--line);
+      background:white;
+      color:var(--text);
+      border-radius:12px;
+      padding:11px 10px;
+      cursor:pointer;
+      font-weight:750;
+    }
+
+    .tab.active{
+      background:var(--green);
+      color:white;
+      border-color:var(--green);
+    }
+
+    .session{
+      display:none;
+      margin-top:4px;
+    }
+
+    .session.active{display:block}
+
+    .session-head{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+      margin-bottom:14px;
+    }
+
+    .session-head h2{
+      margin:0 0 5px;
+      font-size:1.55rem;
+      letter-spacing:-.03em;
+    }
+
+    .session-head p{margin:0;color:var(--muted)}
+
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+      margin-bottom:14px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .num{
+      width:32px;height:32px;
+      display:grid;place-items:center;
+      flex:0 0 auto;
+      border-radius:9px;
+      background:var(--green);
+      color:white;
+      font-weight:850;
+    }
+
+    h3{margin:0;font-size:1.15rem}
+
+    .exercise{
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .exercise:last-child{border-bottom:0;padding-bottom:0}
+    .exercise:first-child{padding-top:0}
+
+    .exercise-top{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .exercise-name{
+      font-weight:800;
+      font-size:1.02rem;
+    }
+
+    .dose{
+      color:var(--green);
+      font-weight:850;
+      white-space:nowrap;
+      text-align:right;
+    }
+
+    .meta{
+      margin-top:5px;
+      color:var(--muted);
+      font-size:.91rem;
+    }
+
+    .note{
+      margin-top:12px;
+      padding:13px 14px;
+      background:var(--soft);
+      border-radius:12px;
+      font-size:.92rem;
+    }
+
+    .note.warm{background:var(--warm)}
+
+    .checklist{
+      display:grid;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .check{
+      display:flex;
+      gap:9px;
+      align-items:flex-start;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .check::before{
+      content:"✓";
+      color:var(--green);
+      font-weight:900;
+    }
+
+    .footer{
+      color:var(--muted);
+      text-align:center;
+      font-size:.82rem;
+      margin-top:22px;
+    }
+
+    @media (max-width:560px){
+      .page{width:min(100% - 16px,920px);padding-top:8px}
+      .hero{padding:22px 18px;border-radius:18px}
+      .selector{padding:10px 0}
+      .tab{padding:10px 5px;font-size:.88rem}
+      .section,.session-head{padding:17px}
+      .exercise-top{display:block}
+      .dose{margin-top:3px;text-align:left;white-space:normal}
+    }
+
+    @media print{
+      .selector{display:none}
+      .session{display:block !important;break-before:page}
+      .session:first-of-type{break-before:auto}
+      body{background:white}
+      .page{width:100%;padding:0}
+      .hero,.section,.session-head{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+<main class="page">
+
+  <section class="hero">
+    <div class="eyebrow">Plano individual · 4 semanas</div>
+    <h1>Deadlift + Barra Fixa</h1>
+    <p>Seleciona a semana e o treino. Segue a sessão pela ordem apresentada e regista as cargas utilizadas.</p>
+    <div class="quick-note">
+      <span class="pill">2 treinos / semana</span>
+      <span class="pill">48–72 h entre sessões</span>
+      <span class="pill">Foco: força</span>
+    </div>
+  </section>
+
+  <div class="selector">
+    <div class="week-tabs">
+      <button class="tab active" data-week="1">Semana 1</button>
+      <button class="tab" data-week="2">Semana 2</button>
+      <button class="tab" data-week="3">Semana 3</button>
+      <button class="tab" data-week="4">Semana 4</button>
+    </div>
+    <div class="session-tabs">
+      <button class="tab active" data-workout="1">Treino 1</button>
+      <button class="tab" data-workout="2">Treino 2</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><div class="num">!</div><h3>Antes de começar</h3></div>
+    <div class="checklist">
+      <div class="check">Se tiveste um turno particularmente exigente, dormiste mal ou fizeste Krav Maga/trail intenso, reduz a carga 5–10% ou retira uma série aos exercícios principais.</div>
+      <div class="check">Se sentires tonturas, falta de ar fora do habitual, palpitações, fadiga anormal ou uma quebra marcada de desempenho, não forces o treino pesado.</div>
+      <div class="check">Regista as cargas das elevações, a sensação de esforço e qualquer alteração relevante na recuperação.</div>
+      <div class="check"><strong>RIR</strong> (repetitions in reserve, ou repetições em reserva) deve ser considerado ao ajustar a carga.</div>
+      <div class="check"><strong>RPE</strong> (rate of perceived exertion, ou taxa de esforço percebido) deve ser considerado ao ajustar a carga.</div>
+    </div>
+  </div>
+
+  <!-- SEMANA 1 TREINO 1 -->
+  <section class="session active" data-session="1-1">
+    <div class="session-head">
+      <h2>Semana 1 · Treino 1</h2>
+      <p>Prioridade: deadlift + volume técnico de elevações.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div>
+        <div class="meta">Bicicleta, remo ou caminhada inclinada. Intensidade confortável.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift: séries de aproximação</div><div class="dose">4 séries</div></div>
+        <div class="meta">20 kg × 8 · 40 kg × 5 · 55 kg × 3 · 65 kg × 2</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">90/90 de anca</div><div class="dose">6 / lado</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div>
+        <div class="meta">Movimento curto e controlado, sem dobrar os cotovelos.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift convencional</div><div class="dose">4 × 4 @ 72,5 kg</div></div>
+        <div class="meta">Descanso 3–4 min. Repetições fortes e tecnicamente consistentes.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Elevações pronadas estritas</div><div class="dose">4 × 5</div></div>
+        <div class="meta">Descanso 2–3 min. Sem balanço e com extensão completa em baixo.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Bulgarian Split Squat</div><div class="dose">3 × 6–8 / perna</div></div>
+        <div class="meta">RIR 2–3 · descanso 90–120 s.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Supino com halteres</div><div class="dose">3 × 6–8</div></div>
+        <div class="meta">RIR 2 · descanso 90–120 s.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Farmer Carry</div><div class="dose">3 × 30–40 m</div></div>
+        <div class="meta">Carga exigente, mas sem perder postura ou velocidade.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Flexor da anca</div><div class="dose">2 × 30 s / lado</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Latíssimo na barra ou banco</div><div class="dose">2 × 30 s / lado</div></div>
+      </div>
+      <div class="note warm">Opcional. Não é necessário alongar intensamente no fim da sessão.</div>
+    </div>
+  </section>
+
+  <!-- SEMANA 1 TREINO 2 -->
+  <section class="session" data-session="1-2">
+    <div class="session-head">
+      <h2>Semana 1 · Treino 2</h2>
+      <p>Prioridade: força na barra + deadlift com pausa.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Elevações: preparação</div><div class="dose">2 × 3</div></div>
+        <div class="meta">Peso corporal, fácil.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift: aproximação</div><div class="dose">3 séries</div></div>
+        <div class="meta">20 kg × 8 · 40 kg × 5 · 50 kg × 3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Adductor rock-back</div><div class="dose">6 / lado</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Elevações com carga</div><div class="dose">5 × 3 @ RPE ~7</div></div>
+        <div class="meta">Escolhe uma carga que deixe cerca de 3 repetições em reserva. Regista o peso utilizado.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift com pausa</div><div class="dose">3 × 5 @ 60 kg</div></div>
+        <div class="meta">Pausa de 1 s logo após a barra sair do chão. Descanso 2–3 min.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Step-up</div><div class="dose">3 × 6–8 / perna</div></div>
+        <div class="meta">RIR 2.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Overhead Press</div><div class="dose">3 × 6–8</div></div>
+        <div class="meta">RIR 2.</div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Remada apoiada</div><div class="dose">2 × 8–10</div></div>
+        <div class="meta">RIR 2.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Peitoral</div><div class="dose">2 × 30 s / lado</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Glúteo / piriforme</div><div class="dose">2 × 30 s / lado</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMANA 2 TREINO 1 -->
+  <section class="session" data-session="2-1">
+    <div class="session-head">
+      <h2>Semana 2 · Treino 1</h2>
+      <p>Prioridade: progressão do deadlift e mais volume de elevações.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift: séries de aproximação</div><div class="dose">4 séries</div></div>
+        <div class="meta">20 kg × 8 · 40 kg × 5 · 55 kg × 3 · 67,5 kg × 2</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">90/90 de anca</div><div class="dose">6 / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift convencional</div><div class="dose">5 × 3 @ 77,5 kg</div></div><div class="meta">Descanso 3–4 min.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações pronadas estritas</div><div class="dose">5 × 5</div></div><div class="meta">Descanso 2–3 min.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Bulgarian Split Squat</div><div class="dose">3 × 6–8 / perna</div></div><div class="meta">RIR 2–3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Supino com halteres</div><div class="dose">3 × 6–8</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Farmer Carry</div><div class="dose">3 × 30–40 m</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Flexor da anca</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Latíssimo</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEMANA 2 TREINO 2 -->
+  <section class="session" data-session="2-2">
+    <div class="session-head">
+      <h2>Semana 2 · Treino 2</h2>
+      <p>Prioridade: progressão da carga na barra + controlo no deadlift.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações fáceis</div><div class="dose">2 × 3</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift: aproximação</div><div class="dose">3 séries</div></div><div class="meta">20 kg × 8 · 40 kg × 5 · 52,5 kg × 3</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Adductor rock-back</div><div class="dose">6 / lado</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Elevações com carga</div><div class="dose">5 × 3</div></div>
+        <div class="meta">Se a semana 1 foi confortável e tecnicamente sólida: +1 a 2,5 kg. Caso contrário, mantém a carga.</div>
+      </div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift com pausa</div><div class="dose">3 × 5 @ 62,5 kg</div></div><div class="meta">Pausa 1 s junto ao chão.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Step-up</div><div class="dose">3 × 6–8 / perna</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Overhead Press</div><div class="dose">3 × 6–8</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Remada apoiada</div><div class="dose">2 × 8–10</div></div><div class="meta">RIR 2.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Peitoral</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Glúteo / piriforme</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEMANA 3 TREINO 1 -->
+  <section class="session" data-session="3-1">
+    <div class="session-head">
+      <h2>Semana 3 · Treino 1</h2>
+      <p>Semana mais exigente do bloco para o deadlift.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift: séries de aproximação</div><div class="dose">4 séries</div></div><div class="meta">20 kg × 8 · 40 kg × 5 · 55 kg × 3 · 70 kg × 2</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">90/90 de anca</div><div class="dose">6 / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift convencional</div><div class="dose">4 × 3 @ 82,5 kg</div></div><div class="meta">Descanso 3–4 min. Não forçar repetições lentas.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações pronadas estritas</div><div class="dose">5 × 5</div></div><div class="meta">Se estiver claramente fácil: 4 × 6.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Bulgarian Split Squat</div><div class="dose">3 × 6 / perna</div></div><div class="meta">RIR 2–3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Supino com halteres</div><div class="dose">3 × 6</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Farmer Carry</div><div class="dose">3 × 30 m</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Flexor da anca</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Latíssimo</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEMANA 3 TREINO 2 -->
+  <section class="session" data-session="3-2">
+    <div class="session-head">
+      <h2>Semana 3 · Treino 2</h2>
+      <p>Elevações pesadas e trabalho técnico de deadlift.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações fáceis</div><div class="dose">2 × 3</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift: aproximação</div><div class="dose">3 séries</div></div><div class="meta">20 kg × 8 · 40 kg × 5 · 55 kg × 3</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 6</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Adductor rock-back</div><div class="dose">6 / lado</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações com carga</div><div class="dose">6 × 2 @ RPE 7,5–8</div></div><div class="meta">Carga ligeiramente superior à usada nas séries de 3, mantendo técnica limpa.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift com pausa</div><div class="dose">4 × 4 @ 65 kg</div></div><div class="meta">Pausa 1 s junto ao chão.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Step-up</div><div class="dose">3 × 6 / perna</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Overhead Press</div><div class="dose">3 × 6</div></div><div class="meta">RIR 2.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Remada apoiada</div><div class="dose">2 × 8</div></div><div class="meta">RIR 2.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Peitoral</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Glúteo / piriforme</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEMANA 4 TREINO 1 -->
+  <section class="session" data-session="4-1">
+    <div class="session-head">
+      <h2>Semana 4 · Treino 1</h2>
+      <p>Avaliação controlada do deadlift, sem testar um máximo real.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift: séries de aproximação</div><div class="dose">5 séries</div></div>
+        <div class="meta">20 kg × 8 · 40 kg × 5 · 60 kg × 3 · 72,5 kg × 2 · 82,5 kg × 1</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">90/90 de anca</div><div class="dose">6 / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 5</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Deadlift: single de avaliação</div><div class="dose">1 × 1 @ 87,5 kg</div></div>
+        <div class="meta">Se subir rápido e com RPE ≤7,5: fazer 1 × 1 @ 90 kg. Não ultrapassar RPE 8.</div>
+      </div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift: back-off</div><div class="dose">3 × 2 @ 80 kg</div></div><div class="meta">Descanso 3 min.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações pronadas estritas</div><div class="dose">3 × 4</div></div><div class="meta">Fácil. Deixar várias repetições em reserva.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Bulgarian Split Squat</div><div class="dose">2 × 6 / perna</div></div><div class="meta">RIR 3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Supino com halteres</div><div class="dose">2 × 6</div></div><div class="meta">RIR 3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Farmer Carry</div><div class="dose">2 × 30 m</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Flexor da anca</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Latíssimo</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEMANA 4 TREINO 2 -->
+  <section class="session" data-session="4-2">
+    <div class="session-head">
+      <h2>Semana 4 · Treino 2</h2>
+      <p>Teste técnico de elevações e sessão de descarga.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">1</div><h3>Aquecimento</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Cardio leve</div><div class="dose">5 min</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Scapular pull-up</div><div class="dose">2 × 5</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações fáceis</div><div class="dose">2 × 2</div></div><div class="meta">Descansar 2–3 min antes do teste.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">2</div><h3>Mobilidade / preparação</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Rotação torácica em quatro apoios</div><div class="dose">6 / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Adductor rock-back</div><div class="dose">6 / lado</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">3</div><h3>Força</h3></div>
+      <div class="exercise">
+        <div class="exercise-top"><div class="exercise-name">Teste de elevações estritas</div><div class="dose">1 série máxima técnica</div></div>
+        <div class="meta">Parar quando já não for possível cumprir amplitude completa, controlo e ausência de balanço.</div>
+      </div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Elevações com carga</div><div class="dose">3 × 3 leve</div></div><div class="meta">Carga claramente inferior à semana 3. RPE ~6.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Deadlift com pausa</div><div class="dose">2 × 4 @ 55–60 kg</div></div><div class="meta">Técnico e confortável.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Step-up</div><div class="dose">2 × 6 / perna</div></div><div class="meta">RIR 3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Overhead Press</div><div class="dose">2 × 6</div></div><div class="meta">RIR 3.</div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Remada apoiada</div><div class="dose">2 × 8</div></div><div class="meta">RIR 3.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="num">4</div><h3>Elasticidade / retorno à calma</h3></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Peitoral</div><div class="dose">2 × 30 s / lado</div></div></div>
+      <div class="exercise"><div class="exercise-top"><div class="exercise-name">Glúteo / piriforme</div><div class="dose">2 × 30 s / lado</div></div></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    Plano de treino · 4 semanas · 2 sessões semanais
+  </div>
+
+</main>
+
+<script>
+  const weekButtons = document.querySelectorAll('[data-week]');
+  const workoutButtons = document.querySelectorAll('[data-workout]');
+  const sessions = document.querySelectorAll('.session');
+
+  let currentWeek = localStorage.getItem('trainingWeek') || '1';
+  let currentWorkout = localStorage.getItem('trainingWorkout') || '1';
+
+  function showSession(){
+    sessions.forEach(s => s.classList.toggle('active', s.dataset.session === `${currentWeek}-${currentWorkout}`));
+    weekButtons.forEach(b => b.classList.toggle('active', b.dataset.week === currentWeek));
+    workoutButtons.forEach(b => b.classList.toggle('active', b.dataset.workout === currentWorkout));
+    localStorage.setItem('trainingWeek', currentWeek);
+    localStorage.setItem('trainingWorkout', currentWorkout);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  weekButtons.forEach(btn => btn.addEventListener('click', () => {
+    currentWeek = btn.dataset.week;
+    showSession();
+  }));
+
+  workoutButtons.forEach(btn => btn.addEventListener('click', () => {
+    currentWorkout = btn.dataset.workout;
+    showSession();
+  }));
+
+  showSession();
+</script>
+</body>
+</html>
