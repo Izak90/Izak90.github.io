@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula Experimental — 20 minutos</title>
+  <style>
+    :root{
+      --bg:#0f1713;
+      --panel:#16231c;
+      --panel-2:#1c2d23;
+      --line:#2c4335;
+      --text:#f3f7f4;
+      --muted:#aebdb3;
+      --accent:#8ecf9b;
+      --accent-dark:#284d32;
+      --warn:#f1c46c;
+      --danger:#e68a8a;
+      --shadow:0 16px 40px rgba(0,0,0,.22);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(142,207,155,.08), transparent 30%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    .container{
+      width:min(1100px, calc(100% - 28px));
+      margin:0 auto;
+      padding:32px 0 56px;
+    }
+
+    header{
+      margin-bottom:24px;
+      padding:26px;
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,var(--panel),#111c16);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:rgba(142,207,155,.12);
+      color:var(--accent);
+      font-weight:700;
+      font-size:.78rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.05;margin-bottom:12px}
+    h2{font-size:1.35rem;margin-bottom:14px}
+    h3{font-size:1.05rem;margin-bottom:8px}
+    .subtitle{color:var(--muted);max-width:780px;margin-bottom:0}
+
+    .top-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:22px;
+    }
+    .stat{
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+    }
+    .stat strong{display:block;font-size:1.15rem;margin-bottom:2px}
+    .stat span{color:var(--muted);font-size:.86rem}
+
+    .section{
+      margin-top:18px;
+      padding:22px;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+    }
+    .time-card{
+      min-height:110px;
+      padding:14px;
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+    .time-card .time{
+      color:var(--accent);
+      font-weight:800;
+      font-size:.9rem;
+      margin-bottom:6px;
+    }
+    .time-card p{color:var(--muted);margin-bottom:0;font-size:.92rem}
+
+    .exercise-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .exercise{
+      padding:18px;
+      border-radius:16px;
+      background:var(--panel-2);
+      border:1px solid var(--line);
+    }
+    .exercise-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-bottom:14px;
+    }
+    .dose{
+      flex:0 0 auto;
+      color:var(--bg);
+      background:var(--accent);
+      font-weight:800;
+      border-radius:999px;
+      padding:5px 9px;
+      font-size:.8rem;
+    }
+    .oqpc{
+      display:grid;
+      gap:10px;
+    }
+    .oqpc div{
+      background:rgba(255,255,255,.035);
+      border-radius:12px;
+      padding:11px 12px;
+    }
+    .oqpc strong{
+      display:block;
+      color:var(--accent);
+      margin-bottom:3px;
+      font-size:.86rem;
+    }
+    .oqpc span{font-size:.9rem;color:#dbe5de}
+
+    .mini{
+      margin-top:12px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+    }
+    .mini p{
+      margin-bottom:7px;
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .mini b{color:var(--text)}
+
+    .tabs{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .tab-btn{
+      border:1px solid var(--line);
+      background:#132019;
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:12px;
+      font:inherit;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .tab-btn.active{
+      background:var(--accent);
+      color:#0c1610;
+      border-color:var(--accent);
+    }
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
+
+    .workout-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:14px;
+    }
+    .workout-card,.coach-card{
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:12px;
+    }
+    th,td{
+      text-align:left;
+      padding:12px 10px;
+      border-bottom:1px solid var(--line);
+      font-size:.92rem;
+    }
+    th{
+      color:var(--accent);
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+    tr:last-child td{border-bottom:none}
+
+    ul{margin:8px 0 0;padding-left:20px}
+    li{margin:6px 0;color:#d7e1da}
+    .note{
+      margin-top:14px;
+      padding:12px 14px;
+      border-left:4px solid var(--warn);
+      background:rgba(241,196,108,.08);
+      border-radius:10px;
+      color:#eadfc7;
+      font-size:.9rem;
+    }
+
+    .tabata-layout{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:16px;
+      align-items:start;
+    }
+    .rounds{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+    .round{
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:12px;
+    }
+    .round strong{display:block;color:var(--accent);font-size:.86rem;margin-bottom:2px}
+    .round span{font-size:.92rem}
+
+    .timer{
+      position:sticky;
+      top:16px;
+      background:#101b15;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+    }
+    .timer-label{
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      font-size:.78rem;
+      font-weight:700;
+    }
+    .timer-time{
+      font-size:4rem;
+      line-height:1;
+      margin:12px 0 8px;
+      font-weight:900;
+      font-variant-numeric:tabular-nums;
+    }
+    .timer-round{
+      color:var(--accent);
+      margin-bottom:14px;
+      font-weight:700;
+    }
+    .timer-controls{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+    .timer-controls button{
+      padding:11px;
+      border:0;
+      border-radius:11px;
+      font:inherit;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .start{background:var(--accent);color:#0d1611}
+    .reset{background:#28382f;color:var(--text)}
+
+    .checklist{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+    .check{
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px;
+      font-size:.9rem;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:.82rem;
+      margin-top:22px;
+    }
+
+    @media (max-width:850px){
+      .top-grid,.timeline,.exercise-grid{grid-template-columns:1fr 1fr}
+      .workout-grid,.tabata-layout{grid-template-columns:1fr}
+      .timer{position:static}
+    }
+    @media (max-width:560px){
+      .container{width:min(100% - 18px,1100px);padding-top:14px}
+      header,.section{padding:16px}
+      .top-grid,.timeline,.exercise-grid,.rounds,.checklist{grid-template-columns:1fr}
+      h1{font-size:2rem}
+      .timer-time{font-size:3.25rem}
+      th,td{padding:10px 8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span class="eyebrow">Preparação do instrutor</span>
+      <h1>Aula Experimental · 20 minutos</h1>
+      <p class="subtitle">
+        Sessão curta, simples e fácil de memorizar. Objetivo: ensinar três padrões básicos,
+        observar o praticante e criar uma experiência controlada e positiva.
+      </p>
+
+      <div class="top-grid">
+        <div class="stat"><strong>20 min</strong><span>Duração total</span></div>
+        <div class="stat"><strong>3 exercícios</strong><span>Push · Squat · Core</span></div>
+        <div class="stat"><strong>10 · 20 · 40</strong><span>Regra de memória</span></div>
+        <div class="stat"><strong>RPE 6–7</strong><span>Esforço-alvo aproximado</span></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Estrutura temporal sugerida</h2>
+      <div class="timeline">
+        <div class="time-card">
+          <div class="time">0:00–1:30</div>
+          <h3>Enquadramento</h3>
+          <p>Explicar objetivo da aula, confirmar limitações e apresentar a lógica 10–20–40.</p>
+        </div>
+        <div class="time-card">
+          <div class="time">1:30–6:00</div>
+          <h3>Instrução</h3>
+          <p>Demonstrar os três exercícios usando “O quê, Porquê, Como?” e testar regressões.</p>
+        </div>
+        <div class="time-card">
+          <div class="time">6:00–17:00</div>
+          <h3>Parte principal</h3>
+          <p>Executar circuito clássico ou versão Tabata, ajustando o nível ao praticante.</p>
+        </div>
+        <div class="time-card">
+          <div class="time">17:00–20:00</div>
+          <h3>Margem técnica</h3>
+          <p>Usar para descanso adicional, correções, uma volta parcial ou feedback final.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Instrução dos exercícios</h2>
+      <div class="exercise-grid">
+        <article class="exercise">
+          <div class="exercise-title">
+            <h3>Flexões</h3>
+            <span class="dose">10 reps</span>
+          </div>
+          <div class="oqpc">
+            <div><strong>O quê?</strong><span>Movimento de empurrar com o peso corporal.</span></div>
+            <div><strong>Porquê?</strong><span>Trabalhar força dos membros superiores e controlo do tronco.</span></div>
+            <div><strong>Como?</strong><span>Mãos estáveis, corpo alinhado, descer de forma controlada e empurrar até regressar.</span></div>
+          </div>
+          <div class="mini">
+            <p><b>Cues:</b> “corpo em bloco”, “controla a descida”, “empurra o chão”.</p>
+            <p><b>Regressão:</b> mãos numa superfície elevada.</p>
+            <p><b>Critério:</b> parar ou regredir se a técnica se deteriorar claramente.</p>
+          </div>
+        </article>
+
+        <article class="exercise">
+          <div class="exercise-title">
+            <h3>Squat</h3>
+            <span class="dose">20 reps</span>
+          </div>
+          <div class="oqpc">
+            <div><strong>O quê?</strong><span>Movimento de agachamento envolvendo principalmente joelhos e ancas.</span></div>
+            <div><strong>Porquê?</strong><span>Trabalhar força e controlo dos membros inferiores num padrão funcional básico.</span></div>
+            <div><strong>Como?</strong><span>Pés numa posição confortável, descer com controlo e regressar à posição de pé.</span></div>
+          </div>
+          <div class="mini">
+            <p><b>Cues:</b> “pé todo no chão”, “desce confortável”, “sobe com controlo”.</p>
+            <p><b>Regressão:</b> squat para banco/caixa ou menor amplitude.</p>
+            <p><b>Critério:</b> amplitude adequada à mobilidade e controlo individual.</p>
+          </div>
+        </article>
+
+        <article class="exercise">
+          <div class="exercise-title">
+            <h3>Prancha</h3>
+            <span class="dose">40 s</span>
+          </div>
+          <div class="oqpc">
+            <div><strong>O quê?</strong><span>Exercício isométrico de estabilidade do tronco.</span></div>
+            <div><strong>Porquê?</strong><span>Treinar a capacidade de manter o tronco estável sob tensão.</span></div>
+            <div><strong>Como?</strong><span>Antebraços apoiados, corpo alinhado, tensão abdominal e respiração normal.</span></div>
+          </div>
+          <div class="mini">
+            <p><b>Cues:</b> “aperta glúteos”, “costelas para baixo”, “continua a respirar”.</p>
+            <p><b>Regressão:</b> joelhos apoiados ou apoio elevado.</p>
+            <p><b>Critério:</b> terminar antes dos 40 s se perder claramente o alinhamento.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="circuito">Circuito clássico</button>
+        <button class="tab-btn" data-tab="tabata">Modo Tabata</button>
+      </div>
+
+      <div id="circuito" class="tab-panel active">
+        <div class="workout-grid">
+          <div class="workout-card">
+            <h2>Circuito · 3 séries</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ordem</th>
+                  <th>Exercício</th>
+                  <th>Dose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Flexões</td><td>10 reps</td></tr>
+                <tr><td>2</td><td>Squat</td><td>20 reps</td></tr>
+                <tr><td>3</td><td>Prancha</td><td>40 s</td></tr>
+              </tbody>
+            </table>
+            <div class="note">
+              Descanso sugerido: transições curtas entre exercícios e 45–60 s entre voltas.
+              Ajustar ao nível do praticante em vez de forçar o cumprimento exato das repetições.
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <h2>Foco do instrutor</h2>
+            <ul>
+              <li>Observar controlo técnico antes de aumentar ritmo.</li>
+              <li>Usar poucas correções de cada vez.</li>
+              <li>Dar feedback específico e simples.</li>
+              <li>Manter intensidade moderada: aula experimental não é um teste máximo.</li>
+              <li>Ter uma regressão pronta para cada exercício.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabata" class="tab-panel">
+        <div class="tabata-layout">
+          <div>
+            <h2>Tabata adaptado · 2 blocos</h2>
+            <p style="color:var(--muted)">
+              Cada bloco tem 8 rondas de <strong style="color:var(--text)">20 s de trabalho + 10 s de descanso</strong>
+              (4 minutos). Alternar os exercícios abaixo e repetir o bloco uma segunda vez após 60 s de recuperação.
+            </p>
+
+            <div class="rounds">
+              <div class="round"><strong>Ronda 1</strong><span>Flexões · 20 s</span></div>
+              <div class="round"><strong>Ronda 2</strong><span>Squat · 20 s</span></div>
+              <div class="round"><strong>Ronda 3</strong><span>Prancha · 20 s</span></div>
+              <div class="round"><strong>Ronda 4</strong><span>Squat · 20 s</span></div>
+              <div class="round"><strong>Ronda 5</strong><span>Flexões · 20 s</span></div>
+              <div class="round"><strong>Ronda 6</strong><span>Squat · 20 s</span></div>
+              <div class="round"><strong>Ronda 7</strong><span>Prancha · 20 s</span></div>
+              <div class="round"><strong>Ronda 8</strong><span>Squat · 20 s</span></div>
+            </div>
+
+            <div class="note">
+              Esta é uma utilização do formato temporal “Tabata” para organização da aula, não uma reprodução do protocolo
+              original de investigação. O objetivo continua a ser técnico e submáximo, não esforço máximo.
+            </div>
+
+            <div class="coach-card" style="margin-top:14px">
+              <h3>Critérios de ajuste</h3>
+              <ul>
+                <li>Flexões: usar inclinação suficiente para manter movimento contínuo e controlado.</li>
+                <li>Squat: manter cadência natural; não transformar o bloco numa competição por repetições.</li>
+                <li>Prancha: 20 s é o alvo; regredir se o alinhamento se perder.</li>
+                <li>Entre blocos: 60 s de recuperação e breve feedback técnico.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="timer">
+            <div class="timer-label">Temporizador Tabata</div>
+            <div class="timer-time" id="time">20</div>
+            <div class="timer-round" id="roundInfo">Ronda 1 · Trabalho</div>
+            <div class="timer-controls">
+              <button class="start" id="startBtn">Iniciar</button>
+              <button class="reset" id="resetBtn">Reiniciar</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Checklist antes da aula</h2>
+      <div class="checklist">
+        <div class="check">☐ Confirmar dores, limitações ou contraindicações relevantes.</div>
+        <div class="check">☐ Escolher antecipadamente a regressão das flexões.</div>
+        <div class="check">☐ Explicar a regra 10 · 20 · 40.</div>
+        <div class="check">☐ Demonstrar 1–2 repetições de cada exercício.</div>
+        <div class="check">☐ Evitar excesso de informação técnica.</div>
+        <div class="check">☐ Priorizar qualidade do movimento sobre velocidade.</div>
+        <div class="check">☐ Manter esforço global moderado.</div>
+        <div class="check">☐ Reservar 2–3 minutos para feedback final.</div>
+      </div>
+    </section>
+
+    <footer>
+      Documento de preparação do instrutor · Aula experimental de 20 minutos
+    </footer>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    const timeEl = document.getElementById('time');
+    const roundInfo = document.getElementById('roundInfo');
+    const startBtn = document.getElementById('startBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    let running = false;
+    let timer = null;
+    let round = 1;
+    let phase = 'work';
+    let seconds = 20;
+
+    function render(){
+      timeEl.textContent = seconds;
+      roundInfo.textContent = `Ronda ${round} · ${phase === 'work' ? 'Trabalho' : 'Descanso'}`;
+      startBtn.textContent = running ? 'Pausar' : 'Iniciar';
+    }
+
+    function tick(){
+      if(seconds > 0){
+        seconds--;
+        render();
+        return;
+      }
+
+      if(phase === 'work'){
+        phase = 'rest';
+        seconds = 10;
+      } else {
+        if(round >= 8){
+          running = false;
+          clearInterval(timer);
+          timer = null;
+          roundInfo.textContent = 'Bloco concluído';
+          timeEl.textContent = '✓';
+          startBtn.textContent = 'Iniciar';
+          return;
+        }
+        round++;
+        phase = 'work';
+        seconds = 20;
+      }
+      render();
+    }
+
+    startBtn.addEventListener('click', () => {
+      if(timeEl.textContent === '✓'){
+        round = 1;
+        phase = 'work';
+        seconds = 20;
+      }
+      running = !running;
+      if(running){
+        timer = setInterval(tick, 1000);
+      } else {
+        clearInterval(timer);
+        timer = null;
+      }
+      render();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      running = false;
+      if(timer) clearInterval(timer);
+      timer = null;
+      round = 1;
+      phase = 'work';
+      seconds = 20;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
