@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#173f35" />
+  <title>Plano de Treino — Lala</title>
+  <style>
+    :root{
+      --brand:#183b2f;
+      --brand-dark:#0e2a21;
+      --brand-mid:#2d5a49;
+      --brand-soft:#e4ece7;
+      --accent:#d7e56a;
+      --accent-strong:#c5d64f;
+      --paper:#f5f2e9;
+      --surface:#ffffff;
+      --surface-soft:#f0f4f1;
+      --ink:#16201c;
+      --muted:#68736d;
+      --line:#dfe5e1;
+      --warning-bg:#fff4cf;
+      --warning-text:#5d4b12;
+      --shadow:0 16px 42px rgba(12,35,27,.10);
+      --shadow-soft:0 8px 24px rgba(12,35,27,.07);
+      --radius-xl:28px;
+      --radius-lg:20px;
+      --radius-md:14px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(215,229,106,.08), transparent 28rem),
+        var(--paper);
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    button, select{font:inherit}
+
+    .sitebar{
+      background:var(--brand-dark);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .sitebar-inner{
+      width:min(980px,100%);
+      margin:0 auto;
+      padding:13px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand-lockup{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--accent);
+      color:var(--brand-dark);
+      font-weight:950;
+      letter-spacing:-.06em;
+      flex:0 0 auto;
+    }
+
+    .brand-copy{
+      line-height:1.05;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      font-size:.69rem;
+      font-weight:850;
+    }
+
+    .brand-copy strong{
+      display:block;
+      font-size:.82rem;
+      letter-spacing:.055em;
+    }
+
+    .plan-label{
+      flex:0 0 auto;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      color:rgba(255,255,255,.78);
+      font-size:.72rem;
+      font-weight:750;
+    }
+
+    .hero{
+      position:relative;
+      isolation:isolate;
+      overflow:hidden;
+      color:#fff;
+      background:var(--brand);
+      min-height:292px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:
+        linear-gradient(90deg, rgba(10,37,28,.96) 0%, rgba(17,55,42,.89) 46%, rgba(17,55,42,.46) 100%),
+        url("https://izak90.github.io/isaac_treinos_ar_livre/img/Foto-Hero.jpg") center 43% / cover no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:86px;
+      z-index:-1;
+      background:linear-gradient(to top, rgba(8,29,22,.24), transparent);
+    }
+
+    .hero-inner{
+      width:min(980px,100%);
+      min-height:292px;
+      margin:0 auto;
+      padding:48px 20px 64px;
+      display:flex;
+      align-items:flex-end;
+    }
+
+    .hero-copy{
+      width:min(600px,100%);
+    }
+
+    .eyebrow{
+      margin:0 0 10px;
+      color:var(--accent);
+      font-size:.74rem;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(3rem, 11vw, 5.6rem);
+      line-height:.89;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+    }
+
+    .hero-subtitle{
+      margin:16px 0 0;
+      max-width:500px;
+      color:rgba(255,255,255,.82);
+      font-size:clamp(.92rem,2vw,1.02rem);
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:20px;
+    }
+
+    .hero-meta span{
+      padding:7px 10px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(6px);
+      color:#fff;
+      font-size:.77rem;
+      font-weight:750;
+    }
+
+    .app{
+      width:min(900px,100%);
+      margin:0 auto;
+      padding:0 18px 64px;
+    }
+
+    .session-picker{
+      position:relative;
+      z-index:5;
+      margin-top:-31px;
+      padding:10px;
+      border-radius:22px;
+      background:rgba(255,255,255,.97);
+      border:1px solid rgba(255,255,255,.9);
+      box-shadow:var(--shadow);
+    }
+
+    .selectors{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .select-wrap{
+      position:relative;
+      padding:10px 12px 11px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+    }
+
+    .select-wrap:focus-within{
+      border-color:var(--brand-mid);
+      box-shadow:0 0 0 3px rgba(45,90,73,.10);
+    }
+
+    .select-wrap label{
+      display:block;
+      margin:0 0 3px;
+      color:var(--muted);
+      font-size:.67rem;
+      font-weight:900;
+      letter-spacing:.095em;
+      text-transform:uppercase;
+    }
+
+    select{
+      width:100%;
+      border:0;
+      outline:0;
+      padding:0;
+      background:transparent;
+      color:var(--ink);
+      font-size:.97rem;
+      font-weight:820;
+      cursor:pointer;
+    }
+
+    .session-head{
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:end;
+      gap:20px;
+      padding:30px 2px 12px;
+    }
+
+    .session-kicker{
+      margin:0 0 5px;
+      color:var(--brand-mid);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    .session-head h2{
+      margin:0;
+      font-size:clamp(1.65rem,5vw,2.35rem);
+      line-height:1.05;
+      letter-spacing:-.045em;
+    }
+
+    .session-head p{
+      margin:8px 0 0;
+      max-width:620px;
+      color:var(--muted);
+      font-size:.91rem;
+    }
+
+    .duration{
+      align-self:center;
+      min-width:78px;
+      padding:9px 11px;
+      border-radius:999px;
+      background:var(--accent);
+      color:var(--brand-dark);
+      text-align:center;
+      font-size:.78rem;
+      font-weight:900;
+    }
+
+    .section{
+      overflow:hidden;
+      margin:13px 0;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      background:var(--surface);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:15px 16px;
+      background:linear-gradient(90deg, var(--surface-soft), #fff);
+      border-bottom:1px solid var(--line);
+    }
+
+    .section-title .num{
+      width:35px;
+      height:35px;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      border-radius:11px;
+      background:var(--brand);
+      color:var(--accent);
+      font-size:.75rem;
+      font-weight:950;
+      letter-spacing:.03em;
+    }
+
+    .section-title h3{
+      margin:0;
+      font-size:1rem;
+      line-height:1.15;
+      letter-spacing:-.015em;
+    }
+
+    .section-title span{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:.75rem;
+      font-weight:700;
+    }
+
+    .exercise{
+      padding:15px 16px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .exercise:last-of-type{border-bottom:0}
+
+    .exercise-row{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      align-items:start;
+      gap:14px;
+    }
+
+    .exercise h4{
+      margin:0;
+      font-size:.98rem;
+      line-height:1.3;
+      letter-spacing:-.012em;
+    }
+
+    .dose{
+      min-width:90px;
+      text-align:right;
+      color:var(--brand);
+      font-size:.87rem;
+      font-weight:900;
+      white-space:normal;
+    }
+
+    .note{
+      margin:6px 0 0;
+      max-width:680px;
+      color:var(--muted);
+      font-size:.84rem;
+      line-height:1.48;
+    }
+
+    .tip{
+      margin:12px 12px 0;
+      padding:12px 13px;
+      border-radius:13px;
+      border-left:3px solid var(--brand-mid);
+      background:var(--surface-soft);
+      color:#3e4a45;
+      font-size:.82rem;
+      line-height:1.48;
+    }
+
+    .tip:last-child{margin-bottom:12px}
+
+    .tip strong{color:var(--brand)}
+
+    .warning{
+      border-left-color:#d9a817;
+      background:var(--warning-bg);
+      color:var(--warning-text);
+    }
+
+    .controls{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .btn{
+      min-height:48px;
+      border:0;
+      border-radius:14px;
+      padding:12px 14px;
+      font-weight:880;
+      cursor:pointer;
+      transition:transform .15s ease, background .15s ease, opacity .15s ease;
+    }
+
+    .btn:active{transform:scale(.985)}
+
+    .btn.secondary{
+      background:#e5ece7;
+      color:var(--brand);
+    }
+
+    .btn.primary{
+      background:var(--brand);
+      color:#fff;
+    }
+
+    .btn.primary:hover{background:var(--brand-mid)}
+
+    .btn:disabled{
+      opacity:.32;
+      cursor:not-allowed;
+      transform:none;
+    }
+
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid rgba(24,59,47,.12);
+      color:var(--muted);
+      text-align:center;
+      font-size:.73rem;
+      line-height:1.5;
+    }
+
+    .footer-brand{
+      display:block;
+      margin-bottom:6px;
+      color:var(--brand);
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    @media (max-width:640px){
+      .sitebar-inner{padding:11px 14px}
+      .plan-label{display:none}
+      .hero-inner{
+        min-height:270px;
+        padding:38px 16px 60px;
+      }
+      .hero::before{
+        background:
+          linear-gradient(90deg, rgba(10,37,28,.97) 0%, rgba(17,55,42,.87) 62%, rgba(17,55,42,.56) 100%),
+          url("https://izak90.github.io/isaac_treinos_ar_livre/img/Foto-Hero.jpg") 58% 43% / cover no-repeat;
+      }
+      .app{padding-left:12px;padding-right:12px}
+      .session-picker{margin-top:-28px;padding:8px;border-radius:18px}
+      .selectors{grid-template-columns:1fr 1fr;gap:8px}
+      .select-wrap{padding:9px 10px}
+      .session-head{padding-top:26px;gap:10px}
+      .session-head p{font-size:.87rem}
+      .duration{min-width:auto;padding:8px 10px}
+      .section{border-radius:17px}
+      .section-title{padding:14px}
+      .exercise{padding:14px}
+      .exercise-row{
+        grid-template-columns:minmax(0,1fr);
+        gap:6px;
+      }
+      .dose{
+        min-width:0;
+        text-align:left;
+        font-size:.84rem;
+      }
+      .note{margin-top:5px}
+      .tip{margin-left:10px;margin-right:10px}
+    }
+
+    @media (max-width:390px){
+      .brand-copy{font-size:.62rem}
+      .brand-copy strong{font-size:.74rem}
+      .hero-meta span{font-size:.7rem}
+      .selectors{grid-template-columns:1fr}
+      .session-head{grid-template-columns:1fr}
+      .duration{justify-self:start}
+      .controls{grid-template-columns:1fr}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <div class="brand-lockup" aria-label="Isaac Treinos Ar Livre">
+        <div class="brand-mark">IT</div>
+        <div class="brand-copy">
+          <strong>Isaac</strong>
+          Treinos Ar Livre
+        </div>
+      </div>
+      <div class="plan-label">Plano individual</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Plano de treino individual</p>
+        <h1>Lala</h1>
+        <p class="hero-subtitle">Força de superiores, core e progressão técnica de pino.</p>
+        <div class="hero-meta" aria-label="Resumo do plano">
+          <span>1× / semana</span>
+          <span>≈ 60 min</span>
+          <span>8 semanas</span>
+          <span>Outdoor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="app">
+    <section class="session-picker" aria-label="Escolher sessão">
+      <div class="selectors">
+        <div class="select-wrap">
+          <label for="weekSelect">Semana</label>
+          <select id="weekSelect" aria-label="Selecionar semana"></select>
+        </div>
+        <div class="select-wrap">
+          <label for="workoutSelect">Treino</label>
+          <select id="workoutSelect" aria-label="Selecionar treino">
+            <option value="1">Treino 1</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <div id="session"></div>
+
+    <nav class="controls" aria-label="Navegação entre semanas">
+      <button id="prevBtn" class="btn secondary" type="button">← Semana anterior</button>
+      <button id="nextBtn" class="btn primary" type="button">Semana seguinte →</button>
+    </nav>
+
+    <footer>
+      <span class="footer-brand">Isaac Treinos Ar Livre</span>
+      Prioriza técnica consistente. Interrompe qualquer exercício que provoque dor ou sintomas anormais.
+    </footer>
+  </main>
+
+<script>
+const weeks = {
+  1: {
+    phase: "Base técnica",
+    focus: "Construir posições sólidas e acumular volume de qualidade.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos no chão","60–90 s","Movimentos progressivos, sem forçar amplitudes desconfortáveis."],
+        ["Band pull-apart","2 × 12–15","Movimento controlado."],
+        ["Rotação externa com elástico","2 × 10–12/lado","Cotovelo estável."],
+        ["Scapular push-up","2 × 8–10","Move as omoplatas sem dobrar os cotovelos."],
+        ["Scapular pull-up","2 × 5–6","Movimento curto e controlado."]
+      ]},
+      {title:"Skill", time:"13 min", items:[
+        ["Pino de cabeça — tripod junto à parede","3–4 × 10–20 s","Usa a parede como segurança. Mantém apoio ativo das mãos."],
+        ["Pino — chest-to-wall","4 × 15–25 s","Braços estendidos, ombros elevados, costelas controladas e glúteos ativos."]
+      ], tip:"O objetivo não é cansar. Termina cada série enquanto ainda consegues manter uma posição sólida.", warning:"Se sentires desconforto no pescoço no pino de cabeça, interrompe a progressão."},
+      {title:"Força principal", time:"20 min", items:[
+        ["Elevações pronadas","4 × 3–5 · 1–2 RIR","Começa cada série sem assistência. Se necessário, usa a banda mais leve que te permita completar a série com boa técnica."],
+        ["Dips nas paralelas — banda 30 kg","4 × 5–8 · 1–2 RIR","Amplitude confortável e controlo do movimento."]
+      ], tip:"Alterna elevações e dips. Descansa aproximadamente 90–120 s entre esforços do mesmo exercício."},
+      {title:"Complementares", time:"11 min", items:[
+        ["Remada nas argolas","3 × 8–12","Ajusta a dificuldade pela inclinação do corpo."],
+        ["Pike push-up","3 × 6–10","Mantém controlo e procura uma trajetória vertical."]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging knee raise","2–3 × 6–10","Evita balanço excessivo."],
+        ["Hollow body hold","2–3 × 20–30 s","Mantém lombar controlada."],
+        ["Side plank","2–3 × 20–30 s/lado","Corpo alinhado."]
+      ]}
+    ]
+  },
+
+  2: {
+    phase: "Base técnica",
+    focus: "Repetir a sessão e procurar pequenas melhorias sem alterar os exercícios.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos no chão","60–90 s","Progressiva e confortável."],
+        ["Band pull-apart","2 × 12–15","Sem pressa."],
+        ["Rotação externa com elástico","2 × 10–12/lado","Controlo total."],
+        ["Scapular push-up","2 × 8–10","Cotovelo estendido."],
+        ["Scapular pull-up","2 × 5–6","Movimento curto."]
+      ]},
+      {title:"Skill", time:"13 min", items:[
+        ["Pino de cabeça — tripod junto à parede","3–4 × 10–20 s","Tenta sentir mais controlo na entrada e saída."],
+        ["Pino — chest-to-wall","4 × 15–25 s","Repete a posição da semana 1 e procura maior consistência."]
+      ], tip:"Mantém a progressão técnica. Não aumentes o tempo se a posição se deteriorar.", warning:"Qualquer desconforto cervical no pino de cabeça é motivo para parar."},
+      {title:"Força principal", time:"20 min", items:[
+        ["Elevações pronadas","4 × 3–5 · 1–2 RIR","Tenta igualar ou superar ligeiramente o número de repetições livres da semana anterior."],
+        ["Dips nas paralelas — banda 30 kg","4 × 5–8 · 1–2 RIR","Tenta acrescentar uma repetição total ao longo das séries, se a técnica permitir."]
+      ]},
+      {title:"Complementares", time:"11 min", items:[
+        ["Remada nas argolas","3 × 8–12","Se 12 reps forem fáceis, coloca o corpo ligeiramente mais horizontal."],
+        ["Pike push-up","3 × 6–10","Mantém 1–2 reps em reserva."]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging knee raise","2–3 × 6–10","Controlo do balanço."],
+        ["Hollow body hold","2–3 × 20–30 s","Qualidade antes da duração."],
+        ["Side plank","2–3 × 20–30 s/lado","Respira normalmente."]
+      ]}
+    ]
+  },
+
+  3: {
+    phase: "Mais controlo + volume",
+    focus: "Aumentar a proporção de repetições livres e introduzir equilíbrio no pino.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13 min", items:[
+        ["Pino de cabeça","3 × 15–25 s","Usa progressivamente menos contacto com a parede, se tiveres controlo."],
+        ["Pino — chest-to-wall","2 × 20–30 s","Consolida a posição."],
+        ["Toe pulls","3–4 séries","Afasta brevemente os pés da parede e tenta encontrar o ponto de equilíbrio."]
+      ], tip:"Nas toe pulls, faz poucas tentativas de qualidade por série. Não transformes a skill num exercício de resistência."},
+      {title:"Força principal", time:"20 min", items:[
+        ["Elevações pronadas","4 × 3–5","Começa sem assistência e completa apenas se necessário com banda."],
+        ["Dips — banda 30 kg","4 × 6–8","Mantém 1–2 RIR. Só reduz assistência quando as séries estiverem sólidas."]
+      ]},
+      {title:"Complementares", time:"11 min", items:[
+        ["Remada nas argolas","3 × 9–12","Mais horizontal se necessário."],
+        ["Pike push-up","3 × 7–10","Progressão pequena de reps."]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging knee raise","3 × 8–12",""],
+        ["Hollow body hold","3 × 25–35 s",""]
+      ]}
+    ]
+  },
+
+  4: {
+    phase: "Mais controlo + volume",
+    focus: "Consolidar o aumento de volume antes de intensificar.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13 min", items:[
+        ["Pino de cabeça","3 × 15–25 s","Se estiver estável, reduz ainda mais o apoio da parede."],
+        ["Pino — chest-to-wall","2 × 20–30 s",""],
+        ["Toe pulls","3–4 séries","Tenta aumentar o controlo, não necessariamente o tempo."]
+      ]},
+      {title:"Força principal", time:"20 min", items:[
+        ["Elevações pronadas","4 × 3–5","Procura mais repetições sem banda do que na semana 3."],
+        ["Dips","4 × 6–8","Se fizeres 4 × 8 com boa técnica e 1–2 RIR, experimenta a banda de 25 kg na próxima sessão."]
+      ]},
+      {title:"Complementares", time:"11 min", items:[
+        ["Remada nas argolas","3 × 9–12",""],
+        ["Pike push-up","3 × 7–10",""]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging knee raise","3 × 8–12",""],
+        ["Hollow body hold","3 × 25–35 s",""]
+      ]}
+    ]
+  },
+
+  5: {
+    phase: "Intensificação",
+    focus: "Mais trabalho específico sem assistência e primeiras entradas livres no pino.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13–15 min", items:[
+        ["Pino de cabeça","3 × 20–30 s","Se já estiver dominado, trabalha sobretudo entradas e saídas controladas."],
+        ["Pino — chest-to-wall","2 × 20–30 s",""],
+        ["Kick-up para pino","5–8 tentativas","Usa a parede como segurança. Descansa o suficiente para repetir com qualidade."]
+      ], tip:"Não contes tentativas falhadas como um problema. O objetivo é aprender a dosear a entrada e encontrar equilíbrio."},
+      {title:"Força principal", time:"18–20 min", items:[
+        ["Elevações pronadas","5 × 2–4","Todas as séries começam sem assistência. Usa banda apenas para completar o intervalo se necessário."],
+        ["Dips","4 × 5–8","Usa a menor assistência que permita amplitude e técnica consistentes."]
+      ]},
+      {title:"Complementares", time:"10–11 min", items:[
+        ["Remada nas argolas","3 × 8–10","Aumenta a inclinação/dificuldade."],
+        ["Pike push-up","3 × 6–8","Se estiver confortável, eleva os pés."]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging knee raise / straight-leg raise parcial","3 × 6–10","Escolhe a variante que consigas controlar."],
+        ["Hollow body hold","3 × 25–40 s",""]
+      ]}
+    ]
+  },
+
+  6: {
+    phase: "Intensificação",
+    focus: "Repetir a exposição mais intensa e procurar pequenas melhorias.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13–15 min", items:[
+        ["Pino de cabeça","3 × 20–30 s","Menos parede, se houver controlo."],
+        ["Pino — chest-to-wall","2 × 20–30 s",""],
+        ["Kick-up para pino","5–8 tentativas","Procura entradas mais consistentes e menos agressivas."]
+      ]},
+      {title:"Força principal", time:"18–20 min", items:[
+        ["Elevações pronadas","5 × 2–4","Tenta aumentar o total de reps livres em relação à semana 5."],
+        ["Dips","4 × 5–8","Mantém a assistência da semana anterior ou reduz apenas se a execução continuar sólida."]
+      ]},
+      {title:"Complementares", time:"10–11 min", items:[
+        ["Remada nas argolas","3 × 8–10",""],
+        ["Pike push-up / pés elevados","3 × 6–8",""]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging raise","3 × 6–10","Usa a variante mais difícil que controles."],
+        ["Hollow body hold","3 × 25–40 s",""]
+      ]}
+    ]
+  },
+
+  7: {
+    phase: "Consolidação",
+    focus: "Manter os padrões e dar mais espaço às tentativas livres de pino.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13–15 min", items:[
+        ["Pino de cabeça","2–3 × 20–30 s","Volume ligeiramente menor."],
+        ["Pino — chest-to-wall","2 × 20–25 s",""],
+        ["Kick-up / tentativas livres","6–10 tentativas","Mantém a parede próxima como segurança."]
+      ], tip:"Se possível, filma 2–3 tentativas para comparar alinhamento e controlo."},
+      {title:"Força principal", time:"18–20 min", items:[
+        ["Elevações pronadas","4 × 3–5","Todas as séries começam livres."],
+        ["Dips","4 × 5–8","Usa o menor nível de assistência que ainda permita boa execução."]
+      ]},
+      {title:"Complementares", time:"10–11 min", items:[
+        ["Remada nas argolas","3 × 8–12",""],
+        ["Pike push-up / pés elevados","3 × 6–10",""]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging leg/knee raise","3 × 8–12",""],
+        ["Hollow body hold","3 × 30–40 s",""]
+      ]}
+    ]
+  },
+
+  8: {
+    phase: "Consolidação + avaliação",
+    focus: "Fechar o bloco e registar a evolução para o próximo ciclo.",
+    blocks: [
+      {title:"Aquecimento", time:"7 min", items:[
+        ["Mobilização de punhos","60–90 s",""],
+        ["Band pull-apart","2 × 12–15",""],
+        ["Rotação externa com elástico","2 × 10–12/lado",""],
+        ["Scapular push-up","2 × 8–10",""],
+        ["Scapular pull-up","2 × 5–6",""]
+      ]},
+      {title:"Skill", time:"13–15 min", items:[
+        ["Pino de cabeça","2–3 × 20–30 s","Regista o nível de assistência necessário."],
+        ["Pino — chest-to-wall","2 × 20–25 s",""],
+        ["Kick-up / tentativas livres","6–10 tentativas","Regista qualidade e melhor tentativa."]
+      ]},
+      {title:"Força principal", time:"18–20 min", items:[
+        ["Elevações — série de avaliação","1 série forte, sem falhar tecnicamente","Regista quantas repetições livres completas consegues."],
+        ["Elevações — trabalho","3 × 3–5","Depois da avaliação, completa o trabalho sem necessidade de chegar à falha."],
+        ["Dips","4 × 5–8","Regista a banda mínima necessária e as reps realizadas."]
+      ], tip:"A avaliação serve para comparar com o início: elevações livres, assistência nos dips e controlo do pino."},
+      {title:"Complementares", time:"10–11 min", items:[
+        ["Remada nas argolas","3 × 8–12",""],
+        ["Pike push-up / pés elevados","3 × 6–10",""]
+      ]},
+      {title:"Core", time:"7 min", items:[
+        ["Hanging leg/knee raise","3 × 8–12",""],
+        ["Hollow body hold","3 × 30–40 s",""]
+      ]}
+    ]
+  }
+};
+
+const weekSelect = document.getElementById("weekSelect");
+const session = document.getElementById("session");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+Object.keys(weeks).forEach(w => {
+  const option = document.createElement("option");
+  option.value = w;
+  option.textContent = `Semana ${w}`;
+  weekSelect.appendChild(option);
+});
+
+function renderWeek(weekNumber){
+  const data = weeks[weekNumber];
+
+  const blocksHTML = data.blocks.map((block, index) => {
+    const items = block.items.map(item => `
+      <div class="exercise">
+        <div class="exercise-row">
+          <h4>${item[0]}</h4>
+          <div class="dose">${item[1]}</div>
+        </div>
+        ${item[2] ? `<p class="note">${item[2]}</p>` : ""}
+      </div>
+    `).join("");
+
+    return `
+      <section class="section">
+        <div class="section-title">
+          <div class="num">${String(index + 1).padStart(2,"0")}</div>
+          <div>
+            <h3>${block.title}</h3>
+            <span>${block.time}</span>
+          </div>
+        </div>
+        ${items}
+        ${block.tip ? `<div class="tip"><strong>Nota:</strong> ${block.tip}</div>` : ""}
+        ${block.warning ? `<div class="tip warning"><strong>Atenção:</strong> ${block.warning}</div>` : ""}
+      </section>
+    `;
+  }).join("");
+
+  session.innerHTML = `
+    <div class="session-head">
+      <div>
+        <p class="session-kicker">${data.phase}</p>
+        <h2>Semana ${weekNumber} · Treino 1</h2>
+        <p>${data.focus}</p>
+      </div>
+      <div class="duration">≈ 60 min</div>
+    </div>
+    ${blocksHTML}
+  `;
+
+  prevBtn.disabled = Number(weekNumber) === 1;
+  nextBtn.disabled = Number(weekNumber) === 8;
+
+  localStorage.setItem("lalaWeek", weekNumber);
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+const savedWeek = localStorage.getItem("lalaWeek");
+const initialWeek = savedWeek && weeks[savedWeek] ? savedWeek : "1";
+weekSelect.value = initialWeek;
+renderWeek(initialWeek);
+
+weekSelect.addEventListener("change", () => renderWeek(weekSelect.value));
+
+prevBtn.addEventListener("click", () => {
+  const current = Number(weekSelect.value);
+  if(current > 1){
+    weekSelect.value = String(current - 1);
+    renderWeek(current - 1);
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  const current = Number(weekSelect.value);
+  if(current < 8){
+    weekSelect.value = String(current + 1);
+    renderWeek(current + 1);
+  }
+});
+</script>
+</body>
+</html>
