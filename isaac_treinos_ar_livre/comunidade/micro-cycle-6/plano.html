@@ -241,13 +241,116 @@
         }
 
         .is-hidden { display: none !important; }
+        .mobile-prescription { display: none; }
 
         @media (max-width: 700px) {
             .workout-controls__grid { grid-template-columns: 1fr; }
             .workout-phase li { flex-direction: column; gap: 2px; }
             .workout-phase li span { text-align: left; }
-            .workout-table th, .workout-table td { padding: 8px 6px; font-size: .78rem; }
             .strength-head { align-items: flex-start; flex-direction: column; }
+
+            /* Força: tabela no desktop, cartões no mobile */
+            .workout-table-wrapper {
+                overflow: visible;
+                box-shadow: none;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .workout-table {
+                min-width: 0;
+                width: 100%;
+                background: transparent;
+                border-collapse: separate;
+                border-spacing: 0;
+            }
+
+            .workout-table thead {
+                display: none;
+            }
+
+            .workout-table,
+            .workout-table tbody,
+            .workout-table tr,
+            .workout-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .workout-table tr {
+                background: #fff;
+                border: 1px solid var(--border-light);
+                border-radius: 10px;
+                margin-bottom: 12px;
+                padding: 14px;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .workout-table tbody tr:hover td {
+                background: transparent;
+            }
+
+            .workout-table td {
+                border: 0;
+                padding: 5px 0;
+                display: grid;
+                grid-template-columns: 86px minmax(0, 1fr);
+                gap: 10px;
+                align-items: start;
+                font-size: .88rem;
+                line-height: 1.4;
+            }
+
+            .workout-table td::before {
+                content: attr(data-label);
+                font-size: .69rem;
+                line-height: 1.45;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .04em;
+                color: var(--text-secondary);
+            }
+
+            .workout-table td.exercise-name {
+                display: block;
+                padding: 0 0 10px;
+                margin-bottom: 8px;
+                border-bottom: 1px solid var(--border-light);
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+
+            .workout-table td.exercise-name::before {
+                display: none;
+            }
+
+            .mobile-prescription {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-top: 7px;
+                color: var(--text-secondary);
+                font-size: .82rem;
+                font-weight: 600;
+            }
+
+            .mobile-prescription span {
+                display: inline-flex;
+                align-items: center;
+                padding: 4px 7px;
+                border-radius: 6px;
+                background: var(--surface-2, #f7f7f7);
+            }
+
+            .workout-table td.mobile-hide {
+                display: none;
+            }
+
+            .workout-table td.exercise-note {
+                margin-top: 3px;
+                padding-top: 8px;
+                border-top: 1px dashed var(--border-light);
+            }
         }
     </style>
 </head>
@@ -278,10 +381,10 @@
                     <div>
                         <label for="weekSelect">Semana</label>
                         <select id="weekSelect">
-                            <option value="1">Semana 1 · Base</option>
-                            <option value="2">Semana 2 · Acumulação</option>
-                            <option value="3">Semana 3 · Intensificação</option>
-                            <option value="4">Semana 4 · Consolidação</option>
+                            <option value="1">Semana 21 · Base</option>
+                            <option value="2">Semana 22 · Acumulação</option>
+                            <option value="3">Semana 23 · Intensificação</option>
+                            <option value="4">Semana 24 · Consolidação</option>
                         </select>
                     </div>
                     <div>
@@ -296,13 +399,13 @@
 
                 <div class="section-filter-label">Filtrar secção</div>
                 <div class="section-filters" role="group" aria-label="Filtrar secções da sessão">
-                    <button class="section-filter is-active" type="button" data-filter="all">Todas</button>
-                    <button class="section-filter" type="button" data-filter="warmup">Aquecimento</button>
+                    <button class="section-filter is-active" type="button" data-filter="strength">Força</button>
                     <button class="section-filter" type="button" data-filter="mobility">Mobilidade</button>
                     <button class="section-filter" type="button" data-filter="running">Técnica de corrida</button>
                     <button class="section-filter" type="button" data-filter="skill">Skill</button>
-                    <button class="section-filter" type="button" data-filter="strength">Força</button>
+                    <button class="section-filter" type="button" data-filter="warmup">Aquecimento</button>
                     <button class="section-filter" type="button" data-filter="stretching">Alongamentos</button>
+                    <button class="section-filter" type="button" data-filter="all">Todas</button>
                 </div>
             </div>
 
@@ -330,7 +433,7 @@
     <script src="../../assets/js/bundle.optimized.js"></script>
 
     <script>
-        const PLAN = {"baseSessions": {"1": {"name": "Pull vertical + Push vertical", "warmup": [["Corrida ligeira", "2 min"], ["Scapular Pull-Ups", "1× 8 reps"], ["Scapular Push-Ups", "1× 10 reps"], ["Squat", "1× 10 reps"]], "mobility": [["Rotações de pulsos", "30s cada direção"], ["Círculos de braços", "frente e trás, 30s cada"], ["Rotação torácica em quatro apoios", "6 reps/lado"], ["Balanços de perna", "10 reps frente/trás + lateral por lado"]], "running": [["Marcha com elevação de joelhos", "2× 20m"], ["A-Skip", "2× 20m"], ["Butt kicks", "2× 20m"]], "skill": {"title": "Headstand", "items": [["Headstand", "3 séries de 10–20s"], ["Regressão", "Frog Stand ou Headstand com apoio"], ["Progressão", "Entrada controlada e menor apoio"]], "note": "Prioridade à posição, controlo e saídas seguras. Terminar a série antes de perder alinhamento."}}, "2": {"name": "Dips + Chin-Up + Cadeia posterior", "warmup": [["Corrida ligeira / deslocamentos", "2 min"], ["Reverse Lunges", "1× 6 reps/lado"], ["Scapular Pull-Ups", "1× 8 reps"], ["Push-Ups inclinadas", "1× 8 reps"]], "mobility": [["Mobilidade de pulsos em quatro apoios", "45s"], ["Pass-through com elástico", "10 reps"], ["Afundo com rotação", "5 reps/lado"], ["Mobilidade de tornozelo", "8 reps/lado"], ["Inchworm", "3 reps"]], "running": [["Tocar pé + joelho contrário", "2× 20m"], ["Skipping tibial", "2× 20m"], ["Mini steps + aceleração", "3× 10–15m"]], "skill": {"title": "Pino", "items": [["Pike Hold", "opção de regressão"], ["Pino na parede", "3–4 séries de 10–25s"], ["Kick-up controlado", "opção para níveis intermédios/avançados"]], "note": "Escolher a variante que permita acumular tempo com boa linha corporal. Evitar transformar a skill num teste de fadiga."}}, "3": {"name": "Densidade Push/Pull + Pernas", "warmup": [["Corrida ligeira", "2 min"], ["Bear Crawl", "1× 10m"], ["Reverse Lunges", "1× 6 reps/lado"], ["Dead Hang", "1× 15–20s"]], "mobility": [["Wrist rocks", "45s"], ["Círculos de anca", "30s/lado"], ["Agachamento profundo + alcance", "45s"], ["Inchworm", "3 reps"]], "running": [["Skipping médio", "2× 20m"], ["Skipping alto", "2× 20m"], ["Saltos unilaterais controlados", "2× 10–15m/lado"]], "skill": {"title": "Headstand / Pino", "items": [["Headstand", "3× 15–20s para quem ainda consolida a posição"], ["Pino com apoio", "3× 15–20s"], ["Tentativas livres", "apenas com controlo e saídas consistentes"]], "note": "Cada atleta mantém a progressão adequada ao seu nível; não é obrigatório avançar de Headstand para Pino durante o ciclo."}}}, "strength": {"1": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈3 RIR · escolher assistência estável"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "≈3 RIR"], ["Bulgarian Split Squat", "3", "8–10/lado", "2-0-X-0", "60–90s", "Amplitude confortável"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "Corpo rígido"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Regredir antes de perder posição"], ["Half Burpee", "EMOM 4'", "8–12 reps", "contínuo", "resto do minuto", "Manter reps estáveis"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈3 RIR · banda se necessário"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Escolher inclinação adequada"], ["Chin-Up com pausa no topo", "2", "3–6 reps", "1s topo", "90s", "Assistência que permita controlo"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Peso, banda ou apoio conforme nível"], ["Ring Push-Up", "2", "8–15 reps", "2-0-X-0", "75s", "≈3 RIR"], ["Plank Band Pulldown", "2", "8–12/lado", "2-1-2-0", "60s", "Evitar rotação do tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Deixar margem desde a 1.ª ronda"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Reps estáveis nas 4 rondas"], ["Shrimp Squat", "3", "6–10/lado", "2-0-X-0", "60–75s", "Usar apoio se necessário"], ["Ring Row", "2", "10–15 reps", "2-1-X-1", "75s", "≈3 RIR"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈3 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Controlar sobretudo a descida"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "2": {"1": [["Pull-Ups", "4", "3–6 reps", "controlado / subida rápida", "90–120s", "≈2 RIR · mesma banda se possível"], ["Pike Push-Ups", "3", "6–9 reps", "2-0-X-0", "90s", "Aumentar reps antes da dificuldade"], ["Bulgarian Split Squat", "3", "9–11/lado", "2-0-X-0", "60–90s", "Mesma variante da semana 1"], ["Ring Row / Australian Row", "2", "10–12 reps", "2-1-X-1", "75–90s", "Mesma inclinação se possível"], ["Hollow Hold", "2", "25–35s", "isométrico", "60s", "Boa posição lombar"], ["Half Burpee", "EMOM 4'", "9–12 reps", "contínuo", "resto do minuto", "Sem quebra marcada de ritmo"]], "2": [["Dips", "4", "6–9 reps", "2-1-X-0", "90–120s", "≈2 RIR · mesma assistência"], ["Australian / Ring Row", "3", "9–13 reps", "2-1-X-1", "75–90s", "Aumentar reps"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Adicionar 1 série se técnica consistente"], ["Single-Leg RDL", "3", "9–11/lado", "3-0-X-0", "60–90s", "Aumentar reps antes da carga"], ["Ring Push-Up", "2", "10–15 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "10–12/lado", "2-1-2-0", "60s", "Sem compensação pélvica"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "3–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Mesma variante da semana 1"], ["A2. Push-Ups", "EMOM 8' alternado", "8–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Subir reps sem chegar à falha"], ["Shrimp Squat", "3", "7–10/lado", "2-0-X-0", "60–75s", "≈2 RIR"], ["Ring Row", "2", "11–15 reps", "2-1-X-1", "75s", "Se atingir 15, aumentar dificuldade"], ["Pike Push-Up", "2", "7–10 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "7–10 reps", "3-0-X-0", "90s", "Amplitude controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "7–10 reps", "X-0-2-0", "60s", "Mais reps sem balanço"]]}, "3": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈1–2 RIR · reduzir assistência se atingiu topo da faixa"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "Variante ligeiramente mais difícil"], ["Bulgarian Split Squat", "3", "8–12/lado", "2-0-X-0", "60–90s", "Adicionar carga se adequado"], ["Ring Row / Australian Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Mais difícil ou mais horizontal"], ["Hollow Hold", "2", "30–40s", "isométrico", "60s", "Manter controlo"], ["Half Burpee", "EMOM 4'", "10–12 reps", "contínuo", "resto do minuto", "Qualidade constante"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈1–2 RIR · menos assistência ou carga"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Aumentar dificuldade da posição"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Reduzir assistência se possível"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Subir carga/tensão"], ["Ring Push-Up", "3", "8–12 reps", "2-0-X-0", "75–90s", "Variante mais exigente"], ["Plank Band Pulldown", "2", "10–14/lado", "2-1-2-0", "60s", "Mais tensão sem rodar tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Usar variante ligeiramente mais difícil"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Variante mais difícil se necessário"], ["Shrimp Squat", "3", "8–10/lado", "2-0-X-0", "60–75s", "≈1–2 RIR"], ["Ring Row", "3", "8–12 reps", "2-1-X-1", "75s", "Aumentar dificuldade"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈1–2 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Maior amplitude se controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "8–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "4": {"1": [["Pull-Ups — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "técnico", "2–3 min", "Usar a variante de referência; comparar sem falhar"], ["Pike Push-Ups", "2", "6–8 reps", "2-0-X-0", "90s", "≈2 RIR"], ["Bulgarian Split Squat", "2", "8–10/lado", "2-0-X-0", "60–90s", "Volume reduzido"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Sem necessidade de recorde"], ["Half Burpee", "EMOM 3'", "8–10 reps", "contínuo", "resto do minuto", "Final leve"]], "2": [["Dips — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "2-1-X-0", "2–3 min", "Mesma variante de referência; não testar falha"], ["Australian / Ring Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Chin-Up com pausa no topo", "2", "3–5 reps", "1s topo", "90s", "Volume reduzido"], ["Single-Leg RDL", "2", "8–10/lado", "3-0-X-0", "60–90s", "Carga moderada"], ["Ring Push-Up", "2", "8–12 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "8–10/lado", "2-1-2-0", "60s", "Controlo acima da tensão"]], "3": [["A1. Pull-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da semana 1", "técnico", "até minuto seguinte", "Melhorar apenas reps, assistência ou variante — uma variável"], ["A2. Push-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da semana 1", "2-0-X-0", "até minuto seguinte", "Comparar qualidade e reps totais"], ["Shrimp Squat", "2", "6–10/lado", "2-0-X-0", "60–75s", "Volume reduzido"], ["Ring Row", "2", "8–12 reps", "2-1-X-1", "75s", "≈2 RIR"], ["Pike Push-Up", "2", "6–8 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "6–8 reps", "3-0-X-0", "90s", "Sem procurar falha"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–8 reps", "X-0-2-0", "60s", "Execução limpa"]]}}, "weekMeta": {"1": {"title": "Base", "rir": "≈3 RIR", "goal": "Estabelecer variantes e referências consistentes."}, "2": {"title": "Acumulação", "rir": "≈2 RIR", "goal": "Aumentar reps mantendo a mesma variante sempre que possível."}, "3": {"title": "Intensificação", "rir": "≈1–2 RIR", "goal": "Aumentar dificuldade, reduzir assistência ou adicionar carga quando justificado."}, "4": {"title": "Consolidação", "rir": "≈2 RIR", "goal": "Reduzir volume acessório e recolher benchmarks técnicos sem falha."}}};
+        const PLAN = {"baseSessions": {"1": {"name": "Pull vertical + Push vertical", "warmup": [["Corrida ligeira", "2 min"], ["Scapular Pull-Ups", "1× 8 reps"], ["Scapular Push-Ups", "1× 10 reps"], ["Squat", "1× 10 reps"]], "mobility": [["Rotações de pulsos", "30s cada direção"], ["Círculos de braços", "frente e trás, 30s cada"], ["Rotação torácica em quatro apoios", "6 reps/lado"], ["Balanços de perna", "10 reps frente/trás + lateral por lado"]], "running": [["Marcha com elevação de joelhos", "2× 20m"], ["A-Skip", "2× 20m"], ["Butt kicks", "2× 20m"]], "skill": {"title": "Headstand", "items": [["Headstand", "3 séries de 10–20s"], ["Regressão", "Frog Stand ou Headstand com apoio"], ["Progressão", "Entrada controlada e menor apoio"]], "note": "Prioridade à posição, controlo e saídas seguras. Terminar a série antes de perder alinhamento."}}, "2": {"name": "Dips + Chin-Up + Cadeia posterior", "warmup": [["Corrida ligeira / deslocamentos", "2 min"], ["Reverse Lunges", "1× 6 reps/lado"], ["Scapular Pull-Ups", "1× 8 reps"], ["Push-Ups inclinadas", "1× 8 reps"]], "mobility": [["Mobilidade de pulsos em quatro apoios", "45s"], ["Pass-through com elástico", "10 reps"], ["Afundo com rotação", "5 reps/lado"], ["Mobilidade de tornozelo", "8 reps/lado"], ["Inchworm", "3 reps"]], "running": [["Tocar pé + joelho contrário", "2× 20m"], ["Skipping tibial", "2× 20m"], ["Mini steps + aceleração", "3× 10–15m"]], "skill": {"title": "Pino", "items": [["Pike Hold", "opção de regressão"], ["Pino na parede", "3–4 séries de 10–25s"], ["Kick-up controlado", "opção para níveis intermédios/avançados"]], "note": "Escolher a variante que permita acumular tempo com boa linha corporal. Evitar transformar a skill num teste de fadiga."}}, "3": {"name": "Densidade Push/Pull + Pernas", "warmup": [["Corrida ligeira", "2 min"], ["Bear Crawl", "1× 10m"], ["Reverse Lunges", "1× 6 reps/lado"], ["Dead Hang", "1× 15–20s"]], "mobility": [["Wrist rocks", "45s"], ["Círculos de anca", "30s/lado"], ["Agachamento profundo + alcance", "45s"], ["Inchworm", "3 reps"]], "running": [["Skipping médio", "2× 20m"], ["Skipping alto", "2× 20m"], ["Saltos unilaterais controlados", "2× 10–15m/lado"]], "skill": {"title": "Headstand / Pino", "items": [["Headstand", "3× 15–20s para quem ainda consolida a posição"], ["Pino com apoio", "3× 15–20s"], ["Tentativas livres", "apenas com controlo e saídas consistentes"]], "note": "Cada atleta mantém a progressão adequada ao seu nível; não é obrigatório avançar de Headstand para Pino durante o ciclo."}}}, "strength": {"1": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈3 RIR · escolher assistência estável"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "≈3 RIR"], ["Bulgarian Split Squat", "3", "8–10/lado", "2-0-X-0", "60–90s", "Amplitude confortável"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "Corpo rígido"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Regredir antes de perder posição"], ["Half Burpee", "EMOM 4'", "8–12 reps", "contínuo", "resto do minuto", "Manter reps estáveis"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈3 RIR · banda se necessário"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Escolher inclinação adequada"], ["Chin-Up com pausa no topo", "2", "3–6 reps", "1s topo", "90s", "Assistência que permita controlo"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Peso, banda ou apoio conforme nível"], ["Ring Push-Up", "2", "8–15 reps", "2-0-X-0", "75s", "≈3 RIR"], ["Plank Band Pulldown", "2", "8–12/lado", "2-1-2-0", "60s", "Evitar rotação do tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Deixar margem desde a 1.ª ronda"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Reps estáveis nas 4 rondas"], ["Shrimp Squat", "3", "6–10/lado", "2-0-X-0", "60–75s", "Usar apoio se necessário"], ["Ring Row", "2", "10–15 reps", "2-1-X-1", "75s", "≈3 RIR"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈3 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Controlar sobretudo a descida"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "2": {"1": [["Pull-Ups", "4", "3–6 reps", "controlado / subida rápida", "90–120s", "≈2 RIR · mesma banda se possível"], ["Pike Push-Ups", "3", "6–9 reps", "2-0-X-0", "90s", "Aumentar reps antes da dificuldade"], ["Bulgarian Split Squat", "3", "9–11/lado", "2-0-X-0", "60–90s", "Mesma variante da Semana 21"], ["Ring Row / Australian Row", "2", "10–12 reps", "2-1-X-1", "75–90s", "Mesma inclinação se possível"], ["Hollow Hold", "2", "25–35s", "isométrico", "60s", "Boa posição lombar"], ["Half Burpee", "EMOM 4'", "9–12 reps", "contínuo", "resto do minuto", "Sem quebra marcada de ritmo"]], "2": [["Dips", "4", "6–9 reps", "2-1-X-0", "90–120s", "≈2 RIR · mesma assistência"], ["Australian / Ring Row", "3", "9–13 reps", "2-1-X-1", "75–90s", "Aumentar reps"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Adicionar 1 série se técnica consistente"], ["Single-Leg RDL", "3", "9–11/lado", "3-0-X-0", "60–90s", "Aumentar reps antes da carga"], ["Ring Push-Up", "2", "10–15 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "10–12/lado", "2-1-2-0", "60s", "Sem compensação pélvica"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "3–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Mesma variante da Semana 21"], ["A2. Push-Ups", "EMOM 8' alternado", "8–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Subir reps sem chegar à falha"], ["Shrimp Squat", "3", "7–10/lado", "2-0-X-0", "60–75s", "≈2 RIR"], ["Ring Row", "2", "11–15 reps", "2-1-X-1", "75s", "Se atingir 15, aumentar dificuldade"], ["Pike Push-Up", "2", "7–10 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "7–10 reps", "3-0-X-0", "90s", "Amplitude controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "7–10 reps", "X-0-2-0", "60s", "Mais reps sem balanço"]]}, "3": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈1–2 RIR · reduzir assistência se atingiu topo da faixa"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "Variante ligeiramente mais difícil"], ["Bulgarian Split Squat", "3", "8–12/lado", "2-0-X-0", "60–90s", "Adicionar carga se adequado"], ["Ring Row / Australian Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Mais difícil ou mais horizontal"], ["Hollow Hold", "2", "30–40s", "isométrico", "60s", "Manter controlo"], ["Half Burpee", "EMOM 4'", "10–12 reps", "contínuo", "resto do minuto", "Qualidade constante"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈1–2 RIR · menos assistência ou carga"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Aumentar dificuldade da posição"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Reduzir assistência se possível"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Subir carga/tensão"], ["Ring Push-Up", "3", "8–12 reps", "2-0-X-0", "75–90s", "Variante mais exigente"], ["Plank Band Pulldown", "2", "10–14/lado", "2-1-2-0", "60s", "Mais tensão sem rodar tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Usar variante ligeiramente mais difícil"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Variante mais difícil se necessário"], ["Shrimp Squat", "3", "8–10/lado", "2-0-X-0", "60–75s", "≈1–2 RIR"], ["Ring Row", "3", "8–12 reps", "2-1-X-1", "75s", "Aumentar dificuldade"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈1–2 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Maior amplitude se controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "8–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "4": {"1": [["Pull-Ups — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "técnico", "2–3 min", "Usar a variante de referência; comparar sem falhar"], ["Pike Push-Ups", "2", "6–8 reps", "2-0-X-0", "90s", "≈2 RIR"], ["Bulgarian Split Squat", "2", "8–10/lado", "2-0-X-0", "60–90s", "Volume reduzido"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Sem necessidade de recorde"], ["Half Burpee", "EMOM 3'", "8–10 reps", "contínuo", "resto do minuto", "Final leve"]], "2": [["Dips — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "2-1-X-0", "2–3 min", "Mesma variante de referência; não testar falha"], ["Australian / Ring Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Chin-Up com pausa no topo", "2", "3–5 reps", "1s topo", "90s", "Volume reduzido"], ["Single-Leg RDL", "2", "8–10/lado", "3-0-X-0", "60–90s", "Carga moderada"], ["Ring Push-Up", "2", "8–12 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "8–10/lado", "2-1-2-0", "60s", "Controlo acima da tensão"]], "3": [["A1. Pull-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da Semana 21", "técnico", "até minuto seguinte", "Melhorar apenas reps, assistência ou variante — uma variável"], ["A2. Push-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da Semana 21", "2-0-X-0", "até minuto seguinte", "Comparar qualidade e reps totais"], ["Shrimp Squat", "2", "6–10/lado", "2-0-X-0", "60–75s", "Volume reduzido"], ["Ring Row", "2", "8–12 reps", "2-1-X-1", "75s", "≈2 RIR"], ["Pike Push-Up", "2", "6–8 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "6–8 reps", "3-0-X-0", "90s", "Sem procurar falha"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–8 reps", "X-0-2-0", "60s", "Execução limpa"]]}}, "weekMeta": {"1": {"title": "Base", "rir": "≈3 RIR", "goal": "Estabelecer variantes e referências consistentes."}, "2": {"title": "Acumulação", "rir": "≈2 RIR", "goal": "Aumentar reps mantendo a mesma variante sempre que possível."}, "3": {"title": "Intensificação", "rir": "≈1–2 RIR", "goal": "Aumentar dificuldade, reduzir assistência ou adicionar carga quando justificado."}, "4": {"title": "Consolidação", "rir": "≈2 RIR", "goal": "Reduzir volume acessório e recolher benchmarks técnicos sem falha."}}};
 
         const sectionIcons = {
             warmup: "flame",
@@ -350,7 +453,7 @@
             stretching: "Alongamentos"
         };
 
-        let activeFilter = "all";
+        let activeFilter = "strength";
 
         function listMarkup(items) {
             return `<ul>${items.map(([name, detail]) =>
@@ -398,12 +501,18 @@
                             <tbody>
                                 ${rows.map(row => `
                                     <tr>
-                                        <td class="exercise-name">${row[0]}</td>
-                                        <td>${row[1]}</td>
-                                        <td>${row[2]}</td>
-                                        <td>${row[3]}</td>
-                                        <td>${row[4]}</td>
-                                        <td class="exercise-note">${row[5]}</td>
+                                        <td class="exercise-name" data-label="Exercício">
+                                            ${row[0]}
+                                            <div class="mobile-prescription">
+                                                <span>${row[1]}</span>
+                                                <span>${row[2]}</span>
+                                            </div>
+                                        </td>
+                                        <td class="mobile-hide" data-label="Séries">${row[1]}</td>
+                                        <td class="mobile-hide" data-label="Reps / Tempo">${row[2]}</td>
+                                        <td data-label="Cadência">${row[3]}</td>
+                                        <td data-label="Descanso">${row[4]}</td>
+                                        <td class="exercise-note" data-label="Nota">${row[5]}</td>
                                     </tr>
                                 `).join("")}
                             </tbody>
@@ -446,7 +555,7 @@
                 <div class="workout-day">
                     <h2 class="workout-day__title">
                         <i data-lucide="circle-dot"></i>
-                        Semana ${week} · Treino ${day}
+                        Semana 2${week} · Treino ${day}
                     </h2>
                     <p class="workout-day__subtitle">${session.name}</p>
 
