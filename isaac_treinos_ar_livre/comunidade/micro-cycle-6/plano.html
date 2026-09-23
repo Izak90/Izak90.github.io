@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Micro Ciclo de Treino — Grupo · Ciclo de 4 Semanas">
+    <link rel="canonical" href="https://izak90.github.io/isaac_treinos_ar_livre/comunidade/microciclo/">
+    <link rel="icon" type="image/png" href="../../img/logo-favicon.png" sizes="512x512">
+    <link rel="manifest" href="/isaac_treinos_ar_livre/manifest.webmanifest">
+    <meta name="theme-color" content="#2A9D8F">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="/isaac_treinos_ar_livre/img/logo-black.png">
+
+    <title>Micro Ciclo | Grupo — Isaac Treinos Ar Livre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js" defer></script>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/components/access-protection.css">
+    <link rel="stylesheet" href="../../assets/css/visual-enhancements.css">
+    <link rel="stylesheet" href="../../assets/css/pages/community.css">
+    <link rel="stylesheet" href="../../assets/css/mobile-optimizations.css">
+
+    <style>
+        .workout-day { margin-bottom: 40px; }
+        .workout-day__title { font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--text-primary); }
+        .workout-day__subtitle { margin: 0 0 18px 0; color: var(--text-secondary); font-size: .95rem; }
+
+        .workout-controls {
+            background: var(--surface-2, #f7f7f7);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .workout-controls__grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .workout-controls label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--text-secondary);
+        }
+        .workout-controls select {
+            width: 100%;
+            min-height: 44px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fff;
+            color: var(--text-primary);
+            font: inherit;
+            font-weight: 600;
+        }
+        .section-filter-label {
+            margin: 16px 0 8px;
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--text-secondary);
+        }
+        .section-filters {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+        .section-filter {
+            flex: 0 0 auto;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--text-secondary);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font: inherit;
+            font-size: .82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .2s ease;
+        }
+        .section-filter:hover { border-color: var(--primary); color: var(--text-primary); }
+        .section-filter.is-active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--text-primary);
+        }
+
+        .session-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        .summary-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: var(--surface-2, #f7f7f7);
+            color: var(--text-secondary);
+            font-size: .82rem;
+            font-weight: 600;
+        }
+        .summary-chip i { width: 15px; height: 15px; color: var(--primary); }
+
+        .workout-phase {
+            background: var(--surface-2, #f7f7f7);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .workout-phase h4 {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .95rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+        .workout-phase h4 i { width: 18px; height: 18px; color: var(--primary); }
+        .workout-phase ul { list-style: none; padding-left: 0; margin: 0; }
+        .workout-phase li {
+            font-size: .9rem;
+            padding: 7px 0;
+            border-bottom: 1px dashed var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            color: var(--text-secondary);
+        }
+        .workout-phase li:last-child { border-bottom: none; }
+        .workout-phase li strong { color: var(--text-primary); font-weight: 600; }
+        .workout-phase li span { text-align: right; }
+        .phase-note {
+            margin: 12px 0 0;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            font-size: .85rem;
+            line-height: 1.45;
+        }
+
+        .workout-table-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            margin-top: 12px;
+        }
+        .workout-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            font-size: .85rem;
+            min-width: 820px;
+        }
+        .workout-table th {
+            background: var(--surface-2);
+            font-weight: 600;
+            padding: 10px 8px;
+            text-align: left;
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .workout-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+        .workout-table tbody tr:hover td { background-color: var(--surface-hover); }
+        .workout-table .exercise-name { font-weight: 600; color: var(--text-primary); }
+        .workout-table .exercise-note { color: var(--text-secondary); font-size: .82rem; }
+
+        .strength-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .strength-head h4 { margin: 0; }
+        .strength-badge {
+            display: inline-flex;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: rgba(42, 157, 143, .12);
+            color: var(--text-primary);
+            font-size: .76rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .stretch-card {
+            margin-top: 0;
+            padding: 16px;
+            background: linear-gradient(135deg,var(--surface-2) 0%,var(--surface-hover) 100%);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .stretch-card__head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .stretch-card__head i { width: 20px; height: 20px; color: var(--primary); }
+        .stretch-card__head h4 { margin: 0; font-weight: 600; color: var(--text-primary); }
+        .stretch-card p { margin: 0 0 12px 0; color: var(--text-secondary); font-size: .9rem; }
+        .stretch-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: var(--primary);
+            color: var(--text-primary);
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 600;
+            transition: opacity .2s;
+        }
+
+        .is-hidden { display: none !important; }
+
+        @media (max-width: 700px) {
+            .workout-controls__grid { grid-template-columns: 1fr; }
+            .workout-phase li { flex-direction: column; gap: 2px; }
+            .workout-phase li span { text-align: left; }
+            .workout-table th, .workout-table td { padding: 8px 6px; font-size: .78rem; }
+            .strength-head { align-items: flex-start; flex-direction: column; }
+        }
+    </style>
+</head>
+
+<body class="has-fixed-header">
+    <app-access-protection storage-key="communityAccess" password="" depth="2"></app-access-protection>
+    <app-header mode="comunidade" current="comunidade" depth="2"></app-header>
+
+    <section class="hero hero--gradient">
+        <div class="container">
+            <div class="hero__badge"><i data-lucide="dumbbell"></i><span>PLANO DE TREINO</span></div>
+            <h1 class="hero__title">Micro Ciclo | 4 Semanas</h1>
+            <p class="hero__subtitle">Full Body · Prioridade Pull & Push · 3× / semana</p>
+        </div>
+    </section>
+
+    <section class="section section--back-link">
+        <div class="container">
+            <a href="../../comunidade.html" class="back-link"><i data-lucide="arrow-left"></i> Voltar para Comunidade</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="workout-controls" aria-label="Selecionar sessão">
+                <div class="workout-controls__grid">
+                    <div>
+                        <label for="weekSelect">Semana</label>
+                        <select id="weekSelect">
+                            <option value="1">Semana 1 · Base</option>
+                            <option value="2">Semana 2 · Acumulação</option>
+                            <option value="3">Semana 3 · Intensificação</option>
+                            <option value="4">Semana 4 · Consolidação</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="daySelect">Treino</label>
+                        <select id="daySelect">
+                            <option value="1">Treino 1 · Pull vertical + Push vertical</option>
+                            <option value="2">Treino 2 · Dips + Chin-Up + Cadeia posterior</option>
+                            <option value="3">Treino 3 · Densidade Push/Pull + Pernas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section-filter-label">Filtrar secção</div>
+                <div class="section-filters" role="group" aria-label="Filtrar secções da sessão">
+                    <button class="section-filter is-active" type="button" data-filter="all">Todas</button>
+                    <button class="section-filter" type="button" data-filter="warmup">Aquecimento</button>
+                    <button class="section-filter" type="button" data-filter="mobility">Mobilidade</button>
+                    <button class="section-filter" type="button" data-filter="running">Técnica de corrida</button>
+                    <button class="section-filter" type="button" data-filter="skill">Skill</button>
+                    <button class="section-filter" type="button" data-filter="strength">Força</button>
+                    <button class="section-filter" type="button" data-filter="stretching">Alongamentos</button>
+                </div>
+            </div>
+
+            <div id="sessionRoot" aria-live="polite"></div>
+
+            <div class="footer-info" style="margin-top:32px;">
+                <i data-lucide="info"></i>
+                <strong>Execução</strong><br>
+                <span>Adapta a variante, assistência e volume ao nível de cada atleta. O objetivo é preservar a técnica e a margem de repetições indicada em cada semana.</span>
+            </div>
+        </div>
+    </section>
+
+    <app-footer depth="2"></app-footer>
+
+    <a href="https://wa.me/351939481840?text=Olá!%20Vim%20da%20Turma%20Fundadora" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar via WhatsApp">
+        <div class="whatsapp-float__btn">
+            <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+    </a>
+
+    <script src="../../assets/js/security.js"></script>
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/components.js" defer></script>
+    <script src="../../assets/js/bundle.optimized.js"></script>
+
+    <script>
+        const PLAN = {"baseSessions": {"1": {"name": "Pull vertical + Push vertical", "warmup": [["Corrida ligeira", "2 min"], ["Scapular Pull-Ups", "1× 8 reps"], ["Scapular Push-Ups", "1× 10 reps"], ["Squat", "1× 10 reps"]], "mobility": [["Rotações de pulsos", "30s cada direção"], ["Círculos de braços", "frente e trás, 30s cada"], ["Rotação torácica em quatro apoios", "6 reps/lado"], ["Balanços de perna", "10 reps frente/trás + lateral por lado"]], "running": [["Marcha com elevação de joelhos", "2× 20m"], ["A-Skip", "2× 20m"], ["Butt kicks", "2× 20m"]], "skill": {"title": "Headstand", "items": [["Headstand", "3 séries de 10–20s"], ["Regressão", "Frog Stand ou Headstand com apoio"], ["Progressão", "Entrada controlada e menor apoio"]], "note": "Prioridade à posição, controlo e saídas seguras. Terminar a série antes de perder alinhamento."}}, "2": {"name": "Dips + Chin-Up + Cadeia posterior", "warmup": [["Corrida ligeira / deslocamentos", "2 min"], ["Reverse Lunges", "1× 6 reps/lado"], ["Scapular Pull-Ups", "1× 8 reps"], ["Push-Ups inclinadas", "1× 8 reps"]], "mobility": [["Mobilidade de pulsos em quatro apoios", "45s"], ["Pass-through com elástico", "10 reps"], ["Afundo com rotação", "5 reps/lado"], ["Mobilidade de tornozelo", "8 reps/lado"], ["Inchworm", "3 reps"]], "running": [["Tocar pé + joelho contrário", "2× 20m"], ["Skipping tibial", "2× 20m"], ["Mini steps + aceleração", "3× 10–15m"]], "skill": {"title": "Pino", "items": [["Pike Hold", "opção de regressão"], ["Pino na parede", "3–4 séries de 10–25s"], ["Kick-up controlado", "opção para níveis intermédios/avançados"]], "note": "Escolher a variante que permita acumular tempo com boa linha corporal. Evitar transformar a skill num teste de fadiga."}}, "3": {"name": "Densidade Push/Pull + Pernas", "warmup": [["Corrida ligeira", "2 min"], ["Bear Crawl", "1× 10m"], ["Reverse Lunges", "1× 6 reps/lado"], ["Dead Hang", "1× 15–20s"]], "mobility": [["Wrist rocks", "45s"], ["Círculos de anca", "30s/lado"], ["Agachamento profundo + alcance", "45s"], ["Inchworm", "3 reps"]], "running": [["Skipping médio", "2× 20m"], ["Skipping alto", "2× 20m"], ["Saltos unilaterais controlados", "2× 10–15m/lado"]], "skill": {"title": "Headstand / Pino", "items": [["Headstand", "3× 15–20s para quem ainda consolida a posição"], ["Pino com apoio", "3× 15–20s"], ["Tentativas livres", "apenas com controlo e saídas consistentes"]], "note": "Cada atleta mantém a progressão adequada ao seu nível; não é obrigatório avançar de Headstand para Pino durante o ciclo."}}}, "strength": {"1": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈3 RIR · escolher assistência estável"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "≈3 RIR"], ["Bulgarian Split Squat", "3", "8–10/lado", "2-0-X-0", "60–90s", "Amplitude confortável"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "Corpo rígido"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Regredir antes de perder posição"], ["Half Burpee", "EMOM 4'", "8–12 reps", "contínuo", "resto do minuto", "Manter reps estáveis"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈3 RIR · banda se necessário"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Escolher inclinação adequada"], ["Chin-Up com pausa no topo", "2", "3–6 reps", "1s topo", "90s", "Assistência que permita controlo"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Peso, banda ou apoio conforme nível"], ["Ring Push-Up", "2", "8–15 reps", "2-0-X-0", "75s", "≈3 RIR"], ["Plank Band Pulldown", "2", "8–12/lado", "2-1-2-0", "60s", "Evitar rotação do tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Deixar margem desde a 1.ª ronda"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Reps estáveis nas 4 rondas"], ["Shrimp Squat", "3", "6–10/lado", "2-0-X-0", "60–75s", "Usar apoio se necessário"], ["Ring Row", "2", "10–15 reps", "2-1-X-1", "75s", "≈3 RIR"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈3 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Controlar sobretudo a descida"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "2": {"1": [["Pull-Ups", "4", "3–6 reps", "controlado / subida rápida", "90–120s", "≈2 RIR · mesma banda se possível"], ["Pike Push-Ups", "3", "6–9 reps", "2-0-X-0", "90s", "Aumentar reps antes da dificuldade"], ["Bulgarian Split Squat", "3", "9–11/lado", "2-0-X-0", "60–90s", "Mesma variante da semana 1"], ["Ring Row / Australian Row", "2", "10–12 reps", "2-1-X-1", "75–90s", "Mesma inclinação se possível"], ["Hollow Hold", "2", "25–35s", "isométrico", "60s", "Boa posição lombar"], ["Half Burpee", "EMOM 4'", "9–12 reps", "contínuo", "resto do minuto", "Sem quebra marcada de ritmo"]], "2": [["Dips", "4", "6–9 reps", "2-1-X-0", "90–120s", "≈2 RIR · mesma assistência"], ["Australian / Ring Row", "3", "9–13 reps", "2-1-X-1", "75–90s", "Aumentar reps"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Adicionar 1 série se técnica consistente"], ["Single-Leg RDL", "3", "9–11/lado", "3-0-X-0", "60–90s", "Aumentar reps antes da carga"], ["Ring Push-Up", "2", "10–15 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "10–12/lado", "2-1-2-0", "60s", "Sem compensação pélvica"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "3–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Mesma variante da semana 1"], ["A2. Push-Ups", "EMOM 8' alternado", "8–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Subir reps sem chegar à falha"], ["Shrimp Squat", "3", "7–10/lado", "2-0-X-0", "60–75s", "≈2 RIR"], ["Ring Row", "2", "11–15 reps", "2-1-X-1", "75s", "Se atingir 15, aumentar dificuldade"], ["Pike Push-Up", "2", "7–10 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "7–10 reps", "3-0-X-0", "90s", "Amplitude controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "7–10 reps", "X-0-2-0", "60s", "Mais reps sem balanço"]]}, "3": {"1": [["Pull-Ups", "4", "2–5 reps", "controlado / subida rápida", "90–120s", "≈1–2 RIR · reduzir assistência se atingiu topo da faixa"], ["Pike Push-Ups", "3", "5–8 reps", "2-0-X-0", "90s", "Variante ligeiramente mais difícil"], ["Bulgarian Split Squat", "3", "8–12/lado", "2-0-X-0", "60–90s", "Adicionar carga se adequado"], ["Ring Row / Australian Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Mais difícil ou mais horizontal"], ["Hollow Hold", "2", "30–40s", "isométrico", "60s", "Manter controlo"], ["Half Burpee", "EMOM 4'", "10–12 reps", "contínuo", "resto do minuto", "Qualidade constante"]], "2": [["Dips", "4", "5–8 reps", "2-1-X-0", "90–120s", "≈1–2 RIR · menos assistência ou carga"], ["Australian / Ring Row", "3", "8–12 reps", "2-1-X-1", "75–90s", "Aumentar dificuldade da posição"], ["Chin-Up com pausa no topo", "3", "3–6 reps", "1s topo", "90s", "Reduzir assistência se possível"], ["Single-Leg RDL", "3", "8–10/lado", "3-0-X-0", "60–90s", "Subir carga/tensão"], ["Ring Push-Up", "3", "8–12 reps", "2-0-X-0", "75–90s", "Variante mais exigente"], ["Plank Band Pulldown", "2", "10–14/lado", "2-1-2-0", "60s", "Mais tensão sem rodar tronco"]], "3": [["A1. Pull-Ups", "EMOM 8' alternado", "2–4 reps nos minutos ímpares", "técnico", "até minuto seguinte", "Usar variante ligeiramente mais difícil"], ["A2. Push-Ups", "EMOM 8' alternado", "6–12 reps nos minutos pares", "2-0-X-0", "até minuto seguinte", "Variante mais difícil se necessário"], ["Shrimp Squat", "3", "8–10/lado", "2-0-X-0", "60–75s", "≈1–2 RIR"], ["Ring Row", "3", "8–12 reps", "2-1-X-1", "75s", "Aumentar dificuldade"], ["Pike Push-Up", "2", "6–10 reps", "2-0-X-0", "75–90s", "≈1–2 RIR"], ["Nordic Curl", "2", "6–10 reps", "3-0-X-0", "90s", "Maior amplitude se controlada"], ["Hanging Knee Raise / L-Sit Raise", "2", "8–10 reps", "X-0-2-0", "60s", "Sem balanço"]]}, "4": {"1": [["Pull-Ups — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "técnico", "2–3 min", "Usar a variante de referência; comparar sem falhar"], ["Pike Push-Ups", "2", "6–8 reps", "2-0-X-0", "90s", "≈2 RIR"], ["Bulgarian Split Squat", "2", "8–10/lado", "2-0-X-0", "60–90s", "Volume reduzido"], ["Ring Row / Australian Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Hollow Hold", "2", "20–30s", "isométrico", "60s", "Sem necessidade de recorde"], ["Half Burpee", "EMOM 3'", "8–10 reps", "contínuo", "resto do minuto", "Final leve"]], "2": [["Dips — Benchmark", "1 + 2 back-off", "1 série a ~1 RIR + 2× 60–70% das reps", "2-1-X-0", "2–3 min", "Mesma variante de referência; não testar falha"], ["Australian / Ring Row", "2", "8–12 reps", "2-1-X-1", "75–90s", "≈2 RIR"], ["Chin-Up com pausa no topo", "2", "3–5 reps", "1s topo", "90s", "Volume reduzido"], ["Single-Leg RDL", "2", "8–10/lado", "3-0-X-0", "60–90s", "Carga moderada"], ["Ring Push-Up", "2", "8–12 reps", "2-0-X-0", "75s", "≈2 RIR"], ["Plank Band Pulldown", "2", "8–10/lado", "2-1-2-0", "60s", "Controlo acima da tensão"]], "3": [["A1. Pull-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da semana 1", "técnico", "até minuto seguinte", "Melhorar apenas reps, assistência ou variante — uma variável"], ["A2. Push-Ups — Benchmark", "EMOM 8' alternado", "repetir formato da semana 1", "2-0-X-0", "até minuto seguinte", "Comparar qualidade e reps totais"], ["Shrimp Squat", "2", "6–10/lado", "2-0-X-0", "60–75s", "Volume reduzido"], ["Ring Row", "2", "8–12 reps", "2-1-X-1", "75s", "≈2 RIR"], ["Pike Push-Up", "2", "6–8 reps", "2-0-X-0", "75–90s", "≈2 RIR"], ["Nordic Curl", "2", "6–8 reps", "3-0-X-0", "90s", "Sem procurar falha"], ["Hanging Knee Raise / L-Sit Raise", "2", "6–8 reps", "X-0-2-0", "60s", "Execução limpa"]]}}, "weekMeta": {"1": {"title": "Base", "rir": "≈3 RIR", "goal": "Estabelecer variantes e referências consistentes."}, "2": {"title": "Acumulação", "rir": "≈2 RIR", "goal": "Aumentar reps mantendo a mesma variante sempre que possível."}, "3": {"title": "Intensificação", "rir": "≈1–2 RIR", "goal": "Aumentar dificuldade, reduzir assistência ou adicionar carga quando justificado."}, "4": {"title": "Consolidação", "rir": "≈2 RIR", "goal": "Reduzir volume acessório e recolher benchmarks técnicos sem falha."}}};
+
+        const sectionIcons = {
+            warmup: "flame",
+            mobility: "move",
+            running: "activity",
+            skill: "zap",
+            strength: "dumbbell",
+            stretching: "wind"
+        };
+
+        const sectionLabels = {
+            warmup: "Aquecimento",
+            mobility: "Mobilidade",
+            running: "Técnica de Corrida",
+            skill: "Skill",
+            strength: "Força",
+            stretching: "Alongamentos"
+        };
+
+        let activeFilter = "all";
+
+        function listMarkup(items) {
+            return `<ul>${items.map(([name, detail]) =>
+                `<li><strong>${name}</strong><span>${detail}</span></li>`
+            ).join("")}</ul>`;
+        }
+
+        function simplePhase(type, items) {
+            return `
+                <div class="workout-phase session-section" data-section="${type}">
+                    <h4><i data-lucide="${sectionIcons[type]}"></i>${sectionLabels[type]}</h4>
+                    ${listMarkup(items)}
+                </div>`;
+        }
+
+        function skillPhase(session) {
+            return `
+                <div class="workout-phase session-section" data-section="skill">
+                    <h4><i data-lucide="${sectionIcons.skill}"></i>Skill · ${session.skill.title}</h4>
+                    ${listMarkup(session.skill.items)}
+                    <p class="phase-note">${session.skill.note}</p>
+                </div>`;
+        }
+
+        function strengthPhase(week, day) {
+            const rows = PLAN.strength[week][day];
+            return `
+                <div class="workout-phase session-section" data-section="strength">
+                    <div class="strength-head">
+                        <h4><i data-lucide="${sectionIcons.strength}"></i>Força</h4>
+                        <span class="strength-badge">${PLAN.weekMeta[week].rir}</span>
+                    </div>
+                    <div class="workout-table-wrapper">
+                        <table class="workout-table">
+                            <thead>
+                                <tr>
+                                    <th>Exercício</th>
+                                    <th>Séries</th>
+                                    <th>Reps / Tempo</th>
+                                    <th>Cadência</th>
+                                    <th>Descanso</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${rows.map(row => `
+                                    <tr>
+                                        <td class="exercise-name">${row[0]}</td>
+                                        <td>${row[1]}</td>
+                                        <td>${row[2]}</td>
+                                        <td>${row[3]}</td>
+                                        <td>${row[4]}</td>
+                                        <td class="exercise-note">${row[5]}</td>
+                                    </tr>
+                                `).join("")}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>`;
+        }
+
+        function stretchingPhase() {
+            return `
+                <div class="session-section" data-section="stretching">
+                    <div class="stretch-card">
+                        <div class="stretch-card__head">
+                            <i data-lucide="wind"></i>
+                            <h4>Não esqueças os Alongamentos</h4>
+                        </div>
+                        <p>Completa a sessão com 5–7 minutos de alongamentos, ajustando as posições às zonas mais solicitadas no treino.</p>
+                        <a href="../recursos/alongamentos.html">
+                            <span>Ver Alongamentos</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </a>
+                    </div>
+                </div>`;
+        }
+
+        function applySectionFilter() {
+            document.querySelectorAll(".session-section").forEach(section => {
+                const visible = activeFilter === "all" || section.dataset.section === activeFilter;
+                section.classList.toggle("is-hidden", !visible);
+            });
+        }
+
+        function renderSession() {
+            const week = document.getElementById("weekSelect").value;
+            const day = document.getElementById("daySelect").value;
+            const session = PLAN.baseSessions[day];
+            const meta = PLAN.weekMeta[week];
+
+            document.getElementById("sessionRoot").innerHTML = `
+                <div class="workout-day">
+                    <h2 class="workout-day__title">
+                        <i data-lucide="circle-dot"></i>
+                        Semana ${week} · Treino ${day}
+                    </h2>
+                    <p class="workout-day__subtitle">${session.name}</p>
+
+                    <div class="session-summary">
+                        <span class="summary-chip"><i data-lucide="target"></i>${meta.title}</span>
+                        <span class="summary-chip"><i data-lucide="gauge"></i>${meta.rir}</span>
+                        <span class="summary-chip"><i data-lucide="route"></i>${meta.goal}</span>
+                    </div>
+
+                    ${simplePhase("warmup", session.warmup)}
+                    ${simplePhase("mobility", session.mobility)}
+                    ${simplePhase("running", session.running)}
+                    ${skillPhase(session)}
+                    ${strengthPhase(week, day)}
+                    ${stretchingPhase()}
+                </div>
+            `;
+
+            applySectionFilter();
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function initPlan() {
+            const weekSelect = document.getElementById("weekSelect");
+            const daySelect = document.getElementById("daySelect");
+            const filterButtons = document.querySelectorAll(".section-filter");
+
+            weekSelect.addEventListener("change", renderSession);
+            daySelect.addEventListener("change", renderSession);
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    activeFilter = button.dataset.filter;
+                    filterButtons.forEach(btn => btn.classList.toggle("is-active", btn === button));
+                    applySectionFilter();
+                });
+            });
+
+            renderSession();
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initPlan);
+        } else {
+            initPlan();
+        }
+    </script>
+</body>
+</html>
