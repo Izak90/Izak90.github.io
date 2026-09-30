@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v9';
+const CACHE_NAME = 'cet-tef-v11';
 
 const PRECACHE_URLS = [
     './',
@@ -7,6 +7,7 @@ const PRECACHE_URLS = [
     './plano_mj.html',
     './plano.html',
     './sw.js',
+
     './simuladores/index.html',
     './simuladores/uc01_coaching_no_fitness.html',
     './simuladores/uc02_pedagogia_do_exercicio.html',
@@ -25,6 +26,11 @@ const PRECACHE_URLS = [
     './simuladores/uc15_etica_e_deontologia_no_fitness.html',
     './simuladores/uc16_gestao_no_fitness.html',
     './simuladores/uc17_empreendedorismo_no_fitness.html',
+
+    './centro_estudo/index.html',
+    './centro_estudo/PEVS_estudo/resumo.html',
+    './centro_estudo/PEVS_estudo/simulador.html',
+    './centro_estudo/PEVS_estudo/banco_80_perguntas.json',
 ];
 
 self.addEventListener('install', (event) => {
@@ -55,10 +61,18 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
         fetch(event.request)
             .then((response) => {
-                const responseClone = response.clone();
+                if (
+                    !response ||
+                    response.status !== 200 ||
+                    response.type === 'opaque'
+                ) {
+                    return response;
+                }
+
+                const copy = response.clone();
 
                 caches.open(CACHE_NAME).then((cache) => {
-                    cache.put(event.request, responseClone);
+                    cache.put(event.request, copy);
                 });
 
                 return response;

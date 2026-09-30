@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Centro de Estudo TEEF</title>
+
+    <meta id="theme-color-meta" name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#090d16',
+                        darkcard: '#111827',
+                        accent: '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            transition: background-color .3s ease, color .3s ease;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .touch-active:active {
+            transform: scale(.97);
+            transition: transform .1s cubic-bezier(.4,0,.2,1);
+        }
+        button:focus-visible, input:focus-visible, a:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        .pb-safe { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)); }
+        .pt-safe { padding-top: env(safe-area-inset-top); }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white">
+
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
+        <div class="max-w-2xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between gap-3">
+
+                <div class="flex items-center gap-3 min-w-0">
+                    <a href="../index.html"
+                       class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active shrink-0"
+                       aria-label="Voltar à aplicação">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </a>
+
+                    <div class="min-w-0">
+                        <div class="text-[9px] font-black uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">
+                            CET_TEF_LIS_60
+                        </div>
+                        <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-tight truncate">
+                            Centro de Estudo TEEF
+                        </h1>
+                    </div>
+                </div>
+
+                <button onclick="toggleDarkMode()"
+                        class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active shrink-0"
+                        title="Alternar Modo Escuro/Claro"
+                        aria-label="Alternar modo escuro ou claro">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+
+        <section class="mb-4 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                <i class="fa-solid fa-book-open-reader"></i>
+                Estudo orientado por UC
+            </div>
+
+            <h2 class="font-black text-xl sm:text-2xl text-slate-900 dark:text-white mt-3 leading-tight">
+                Resumos + treino ativo
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Um ponto único para rever matéria, consolidar conceitos e praticar com simuladores preparados para cada Unidade de Competência.
+            </p>
+
+            <div class="grid grid-cols-3 gap-2 mt-4">
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="ready-count" class="font-black text-base text-slate-900 dark:text-white">0 / 27</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Disponíveis</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="summary-count" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Resumos</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="sim-count" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Simuladores</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-4">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                <input id="search-input"
+                       type="search"
+                       placeholder="Procurar uma UC..."
+                       class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition"
+                       aria-label="Procurar uma unidade de competência">
+            </div>
+
+            <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar mt-2 pb-1 text-xs">
+                <button data-filter="all"
+                        class="study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0">
+                    Todas
+                </button>
+                <button data-filter="ready"
+                        class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
+                    Disponíveis
+                </button>
+                <button data-filter="soon"
+                        class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
+                    Por preparar
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center justify-between mb-2.5">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap text-slate-400 dark:text-slate-500"></i>
+                    <span>Unidades de Competência</span>
+                </div>
+                <span id="visible-count" class="text-xs text-slate-500 font-medium">27 UCs</span>
+            </div>
+
+            <div id="uc-list" class="space-y-2.5"></div>
+
+            <div id="empty-state"
+                 class="hidden text-center py-12 px-4 bg-white dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800/80 my-4">
+                <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-400 dark:text-slate-500 text-xl">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Sem UCs encontradas</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Não existem unidades correspondentes à pesquisa ou filtro atual.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const UCS = [
+            { n: 1, name: 'Promoção de Estilos de Vida Saudável', summary: './PEVS_estudo/resumo.html', simulator: './PEVS_estudo/simulador.html', description: 'Resumo orientado para avaliação, revisão ativa e simulações de exame.' },
+            { n: 2, name: 'Coaching no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 3, name: 'Pedagogia do Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 4, name: 'Fisiologia do Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 5, name: 'Psicologia do Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 6, name: 'Aulas de Grupo', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 7, name: 'Comunicação no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 8, name: 'Ética e Deontologia no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 9, name: 'Marketing no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 10, name: 'Aplicações Digitais', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 11, name: 'Avaliação e Prescrição de Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 12, name: 'Treino de Fitness Online', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 13, name: 'Inglês no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 14, name: 'Satisfação de Clientes no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 15, name: 'Treino para Populações Especiais', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 16, name: 'Treino Outdoor', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 17, name: 'Hidroginástica', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 18, name: 'Body & Mind', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 19, name: 'Empreendedorismo no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 20, name: 'Treino personalizado', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 21, name: 'Colaborar em equipa', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 22, name: 'Nutrição e Suplementação', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 23, name: 'Primeiros Socorros no Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 24, name: 'Biomecânica do Exercício', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 25, name: 'Gestão de clientes no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 26, name: 'Anatomia do movimento', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' },
+            { n: 27, name: 'Gestão no Fitness', summary: null, simulator: null, description: 'Conteúdos de estudo ainda por adicionar.' }
+        ];
+
+        let activeFilter = 'all';
+
+        function esc(value) {
+            return String(value).replace(/[&<>"']/g, ch => ({
+                '&':'&amp;',
+                '<':'&lt;',
+                '>':'&gt;',
+                '"':'&quot;',
+                "'":'&#39;'
+            }[ch]));
+        }
+
+        function isReady(uc) {
+            return Boolean(uc.summary || uc.simulator);
+        }
+
+        function render() {
+            const query = document.getElementById('search-input')
+                .value
+                .trim()
+                .toLocaleLowerCase('pt-PT');
+
+            const filtered = UCS.filter(uc => {
+                const ready = isReady(uc);
+
+                const statusOk =
+                    activeFilter === 'all' ||
+                    (activeFilter === 'ready' && ready) ||
+                    (activeFilter === 'soon' && !ready);
+
+                const searchable = `${uc.n} ${uc.name} ${uc.description}`
+                    .toLocaleLowerCase('pt-PT');
+
+                return statusOk && (!query || searchable.includes(query));
+            });
+
+            const list = document.getElementById('uc-list');
+
+            list.innerHTML = filtered.map(uc => {
+                const ready = isReady(uc);
+
+                const studyButton = uc.summary
+                    ? `<a href="${esc(uc.summary)}"
+                          class="px-2.5 py-1.5 rounded-lg bg-blue-500/10 text-[10px] font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1 border border-blue-500/20 touch-active">
+                           <i class="fa-solid fa-book-open-reader"></i>
+                           Estudar
+                       </a>`
+                    : '';
+
+                const simButton = uc.simulator
+                    ? `<a href="${esc(uc.simulator)}"
+                          class="px-2.5 py-1.5 rounded-lg bg-rose-500/10 text-[10px] font-bold text-rose-600 dark:text-rose-400 flex items-center gap-1 border border-rose-500/20 touch-active">
+                           <i class="fa-solid fa-vial-circle-check"></i>
+                           Simular
+                       </a>`
+                    : '';
+
+                const buttons = (studyButton || simButton)
+                    ? `<div class="flex items-center gap-1.5 mt-2 flex-wrap">${studyButton}${simButton}</div>`
+                    : '';
+
+                const badge = ready
+                    ? `<span class="px-2 py-0.5 rounded text-[9px] font-black border bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 shrink-0">Disponível</span>`
+                    : `<span class="px-2 py-0.5 rounded text-[9px] font-black border bg-slate-200 dark:bg-slate-800 text-slate-500 border-slate-300 dark:border-slate-700 shrink-0">Por preparar</span>`;
+
+                return `
+                    <article class="p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${ready ? 'border-blue-500/30' : 'border-slate-200 dark:border-slate-800'} shadow-sm">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="min-w-0">
+                                <div class="text-[9px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                                    UC ${String(uc.n).padStart(2,'0')}
+                                </div>
+                                <h3 class="font-extrabold text-sm text-slate-900 dark:text-white leading-snug mt-1">
+                                    ${esc(uc.name)}
+                                </h3>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                                    ${esc(uc.description)}
+                                </p>
+                            </div>
+                            ${badge}
+                        </div>
+                        ${buttons}
+                    </article>
+                `;
+            }).join('');
+
+            document.getElementById('visible-count').innerText =
+                `${filtered.length} ${filtered.length === 1 ? 'UC' : 'UCs'}`;
+
+            document.getElementById('empty-state')
+                .classList.toggle('hidden', filtered.length !== 0);
+        }
+
+        function setFilter(filter) {
+            activeFilter = filter;
+
+            document.querySelectorAll('.study-filter').forEach(btn => {
+                btn.className =
+                    'study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0';
+            });
+
+            const active = document.querySelector(`[data-filter="${filter}"]`);
+            if (active) {
+                active.className =
+                    'study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0';
+            }
+
+            render();
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('cet_theme');
+            if (savedTheme === 'light') {
+                setLightMode();
+            } else {
+                setDarkMode();
+            }
+        }
+
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                setLightMode();
+            } else {
+                setDarkMode();
+            }
+        }
+
+        function setDarkMode() {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('cet_theme', 'dark');
+
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = 'fa-solid fa-sun text-amber-400 text-xs';
+
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#090d16');
+        }
+
+        function setLightMode() {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('cet_theme', 'light');
+
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = 'fa-solid fa-moon text-slate-700 text-xs';
+
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#ffffff');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+
+            document.getElementById('ready-count').innerText =
+                `${UCS.filter(isReady).length} / ${UCS.length}`;
+
+            document.getElementById('summary-count').innerText =
+                UCS.filter(uc => uc.summary).length;
+
+            document.getElementById('sim-count').innerText =
+                UCS.filter(uc => uc.simulator).length;
+
+            document.getElementById('search-input')
+                .addEventListener('input', render);
+
+            document.querySelectorAll('.study-filter')
+                .forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.filter)));
+
+            render();
+        });
+    </script>
+</body>
+</html>
