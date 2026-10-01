@@ -277,10 +277,94 @@
             </div>
         </div>
 
-        <!-- ABA 2: RECURSOS (Com os botões na mesma linha + Painel de Progresso das 27 UC) -->
-        <div id="tab-content-recursos" class="tab-pane hidden space-y-4">
-            <!-- Recursos Rápidos na Mesma Linha -->
-            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+
+        <!-- ABA 2: ESTUDO -->
+        <div id="tab-content-estudo" class="tab-pane hidden space-y-4">
+
+            <!-- Hero Centro de Estudo -->
+            <section class="rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    Centro de Estudo TEEF
+                </div>
+
+                <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">
+                    Resumos + treino ativo
+                </h2>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                    Revê a matéria, consolida conceitos e pratica com os materiais de estudo preparados para cada Unidade de Competência.
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4">
+                    <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                        <div id="study-ready-count" class="font-black text-base text-slate-900 dark:text-white">0 / 27</div>
+                        <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Disponíveis</div>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                        <div id="study-summary-count" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                        <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Resumos</div>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                        <div id="study-training-count" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                        <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Treinos</div>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                        <div id="study-sim-count" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                        <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Simulações</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filtros do Centro de Estudo -->
+            <section>
+                <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-1 text-xs">
+                    <button onclick="setStudyFilter('all')" id="study-filter-all" class="study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0">
+                        Todas
+                    </button>
+                    <button onclick="setStudyFilter('ready')" id="study-filter-ready" class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
+                        Disponíveis
+                    </button>
+                    <button onclick="setStudyFilter('soon')" id="study-filter-soon" class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
+                        Por preparar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Lista Centro de Estudo -->
+            <section>
+                <div class="flex items-center justify-between mb-2.5">
+                    <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-graduation-cap text-slate-400 dark:text-slate-500"></i>
+                        <span>Unidades de Competência</span>
+                    </div>
+                    <span id="study-visible-count" class="text-xs text-slate-500 font-medium">27 UCs</span>
+                </div>
+
+                <div id="study-uc-list" class="space-y-2.5"></div>
+
+                <div id="study-empty-state" class="hidden text-center py-12 px-4 bg-white dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800/80 my-4">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-400 dark:text-slate-500 text-xl">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Sem UCs encontradas</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                        Não existem unidades correspondentes à pesquisa ou ao filtro atual.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABA 3: CURSO (Ferramentas + Progresso + Lista das 27 UC) -->
+        <div id="tab-content-curso" class="tab-pane hidden space-y-4">
+            <!-- Ferramentas do Curso -->
+            <section>
+                <div class="flex items-center justify-between mb-2">
+                    <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-toolbox text-slate-400 dark:text-slate-500"></i>
+                        <span>Ferramentas</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
                 <a href="https://campus.fitnessacademy.pt/courses/cettef_lis_60/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center hover:border-purple-500/50 transition touch-active">
                     <div class="w-10 h-10 mb-2">
                         <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" class="rounded-xl">
@@ -320,16 +404,8 @@
                     <h4 class="font-bold text-xs text-slate-900 dark:text-white leading-tight">Simulações UC</h4>
                     <span class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Workbook</span>
                 </a>
-
-                <a href="./centro_estudo/index.html" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center hover:border-blue-500/50 transition touch-active">
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-base shrink-0 border border-blue-500/20 mb-2">
-                        <i class="fa-solid fa-book-open-reader"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-slate-900 dark:text-white leading-tight">Centro de Estudo</h4>
-                    <span class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Resumos + treino</span>
-                </a>
-            </div>
-
+                </div>
+            </section>
             <!-- Painel de Progresso do Curso (27 UC) -->
             <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div class="flex items-center justify-between mb-4">
@@ -380,16 +456,22 @@
         </div>
     </main>
 
-    <!-- Barra Fixa Fina no Rodapé (56px) - Navegação por Abas -->
+    <!-- Barra Fixa no Rodapé - Navegação Principal -->
     <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors" style="height: calc(56px + env(safe-area-inset-bottom));">
         <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
             <button onclick="switchMainTab('agenda')" id="nav-tab-agenda" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
                 <i class="fa-solid fa-calendar-days text-base"></i>
                 <span class="font-bold text-[10px] leading-none">Agenda</span>
             </button>
-            <button onclick="switchMainTab('recursos')" id="nav-tab-recursos" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
-                <i class="fa-solid fa-folder-open text-base"></i>
-                <span class="font-bold text-[10px] leading-none">Recursos</span>
+
+            <button onclick="switchMainTab('estudo')" id="nav-tab-estudo" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+                <i class="fa-solid fa-book-open-reader text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Estudo</span>
+            </button>
+
+            <button onclick="switchMainTab('curso')" id="nav-tab-curso" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+                <i class="fa-solid fa-graduation-cap text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Curso</span>
             </button>
         </div>
     </nav>
@@ -561,7 +643,15 @@
         };
 
         const studyCenterUrls = {
-            'Promoção de Estilos de Vida Saudável': './centro_estudo/PEVS_estudo/resumo.html'
+            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_resumo.html'
+        };
+
+        const studyCenterTrainingUrls = {
+            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_treino.html'
+        };
+
+        const studyCenterSimulatorUrls = {
+            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_simulador.html'
         };
 
         // Module Repositories and Trainers Master Config
@@ -748,7 +838,7 @@
 
         // State variables (with localStorage persistence)
         let simulatedDateISO = '2026-09-18';
-        let currentMainTab = 'agenda'; // 'agenda' ou 'recursos'
+        let currentMainTab = 'agenda'; // 'agenda', 'estudo' ou 'curso'
         let currentViewTab = localStorage.getItem('cet_tab') || 'proximas';
         let currentMonthFilter = localStorage.getItem('cet_mfilter') || 'ALL';
         let currentLocationFilter = localStorage.getItem('cet_locfilter') || 'ALL';
@@ -757,8 +847,21 @@
         let deferredPwaPrompt = null;
         let searchDebounceTimeout = null;
         let activeUcFilter = null;
+        let activeStudyFilter = 'all';
 
-        const mainTabsList = ['agenda', 'recursos'];
+        const mainTabsList = ['agenda', 'estudo', 'curso'];
+
+        function getTabFromHash() {
+            const hash = window.location.hash.replace('#', '').toLowerCase();
+            return mainTabsList.includes(hash) ? hash : null;
+        }
+
+        function applyHashTab() {
+            const hashTab = getTabFromHash();
+            if (hashTab && hashTab !== currentMainTab) {
+                switchMainTab(hashTab, false);
+            }
+        }
 
         // Atualizar altura dinâmica do cabeçalho para fixar os meses corretamente
         function updateHeaderHeightVar() {
@@ -770,8 +873,15 @@
         }
 
         // Gestão de Abas Principais e Swipe Gestures
-        function switchMainTab(tabName) {
+        function switchMainTab(tabName, updateHash = true) {
             currentMainTab = tabName;
+
+            if (updateHash) {
+                const newHash = `#${tabName}`;
+                if (window.location.hash !== newHash) {
+                    history.replaceState(null, '', newHash);
+                }
+            }
             mainTabsList.forEach(t => {
                 const pane = document.getElementById(`tab-content-${t}`);
                 const navBtn = document.getElementById(`nav-tab-${t}`);
@@ -788,6 +898,7 @@
                 }
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            syncGlobalSearchWithCurrentTab();
             renderApp();
             updateHeaderHeightVar();
         }
@@ -975,6 +1086,9 @@
 
         // App Initialization
         document.addEventListener('DOMContentLoaded', () => {
+            const hashTab = getTabFromHash();
+            if (hashTab) currentMainTab = hashTab;
+
             initTheme();
             checkIosInstallation();
             initSwipeToDismiss();
@@ -992,16 +1106,136 @@
             setMonthFilter(currentMonthFilter, false);
             setLocationFilter(currentLocationFilter, false);
 
+            switchMainTab(currentMainTab, false);
+            syncGlobalSearchWithCurrentTab();
             renderApp();
             updateHeaderHeightVar();
         });
 
+        window.addEventListener('hashchange', () => {
+            const hashTab = getTabFromHash();
+            if (hashTab && hashTab !== currentMainTab) {
+                switchMainTab(hashTab, false);
+            }
+        });
+
         function renderApp() {
             renderUcStatus();
+            renderStudyCenter();
             renderTodayHero();
             renderNextExamBanner();
             renderScheduleList();
             setTimeout(updateHeaderHeightVar, 50);
+        }
+
+        /* ----------------------------------------------------
+           CENTRO DE ESTUDO
+        ----------------------------------------------------- */
+        function isStudyReady(ucName) {
+            return Boolean(studyCenterUrls[ucName] || studyCenterTrainingUrls[ucName] || studyCenterSimulatorUrls[ucName]);
+        }
+
+        function setStudyFilter(filter) {
+            activeStudyFilter = filter;
+
+            document.querySelectorAll('.study-filter').forEach(btn => {
+                btn.className = 'study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0';
+            });
+
+            const active = document.getElementById(`study-filter-${filter}`);
+            if (active) {
+                active.className = 'study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0';
+            }
+
+            renderStudyCenter();
+        }
+
+        function renderStudyCenter() {
+            const listEl = document.getElementById('study-uc-list');
+            if (!listEl) return;
+
+            const query = searchQuery.trim().toLocaleLowerCase('pt-PT');
+
+            const readyCount = all27UC.filter(isStudyReady).length;
+            const summaryCount = all27UC.filter(name => Boolean(studyCenterUrls[name])).length;
+            const trainingCount = all27UC.filter(name => Boolean(studyCenterTrainingUrls[name])).length;
+            const simCount = all27UC.filter(name => Boolean(studyCenterSimulatorUrls[name])).length;
+
+            const readyEl = document.getElementById('study-ready-count');
+            const summaryEl = document.getElementById('study-summary-count');
+            const trainingEl = document.getElementById('study-training-count');
+            const simEl = document.getElementById('study-sim-count');
+
+            if (readyEl) readyEl.innerText = `${readyCount} / ${all27UC.length}`;
+            if (summaryEl) summaryEl.innerText = summaryCount;
+            if (trainingEl) trainingEl.innerText = trainingCount;
+            if (simEl) simEl.innerText = simCount;
+
+            const filtered = all27UC
+                .map((name, index) => ({
+                    n: index + 1,
+                    name,
+                    ready: isStudyReady(name),
+                    summary: studyCenterUrls[name] || null,
+                    training: studyCenterTrainingUrls[name] || null,
+                    simulator: studyCenterSimulatorUrls[name] || null
+                }))
+                .filter(item => {
+                    const filterOk =
+                        activeStudyFilter === 'all' ||
+                        (activeStudyFilter === 'ready' && item.ready) ||
+                        (activeStudyFilter === 'soon' && !item.ready);
+
+                    const textOk = !query || `${item.n} ${item.name}`.toLocaleLowerCase('pt-PT').includes(query);
+                    return filterOk && textOk;
+                });
+
+            listEl.innerHTML = filtered.map(item => {
+                const badge = item.ready
+                    ? `<span class="px-2 py-0.5 rounded text-[9px] font-black border bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 shrink-0">Disponível</span>`
+                    : `<span class="px-2 py-0.5 rounded text-[9px] font-black border bg-slate-200 dark:bg-slate-800 text-slate-500 border-slate-300 dark:border-slate-700 shrink-0">Por preparar</span>`;
+
+                let actions = '';
+                if (item.summary || item.training || item.simulator) {
+                    actions = '<div class="flex items-center gap-1.5 mt-2 flex-wrap">';
+                    if (item.summary) {
+                        actions += `<a href="${item.summary}" class="px-2.5 py-1.5 rounded-lg bg-blue-500/10 text-[10px] font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1 border border-blue-500/20 touch-active"><i class="fa-solid fa-book-open-reader"></i> Estudar</a>`;
+                    }
+                    if (item.training) {
+                        actions += `<a href="${item.training}" class="px-2.5 py-1.5 rounded-lg bg-amber-500/10 text-[10px] font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1 border border-amber-500/20 touch-active"><i class="fa-solid fa-brain"></i> Treinar</a>`;
+                    }
+                    if (item.simulator) {
+                        actions += `<a href="${item.simulator}" class="px-2.5 py-1.5 rounded-lg bg-rose-500/10 text-[10px] font-bold text-rose-600 dark:text-rose-400 flex items-center gap-1 border border-rose-500/20 touch-active"><i class="fa-solid fa-vial-circle-check"></i> Simular</a>`;
+                    }
+                    actions += '</div>';
+                }
+
+                return `
+                    <article class="p-3.5 rounded-2xl bg-white dark:bg-slate-900/60 border ${item.ready ? 'border-blue-500/30' : 'border-slate-200 dark:border-slate-800'} shadow-sm">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="min-w-0">
+                                <div class="text-[9px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                                    UC ${String(item.n).padStart(2, '0')}
+                                </div>
+                                <h3 class="font-extrabold text-sm text-slate-900 dark:text-white leading-snug mt-1">
+                                    ${item.name}
+                                </h3>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                                    ${item.ready ? 'Resumo, treino ativo e simulações disponíveis para esta UC.' : 'Conteúdos de estudo ainda por adicionar.'}
+                                </p>
+                            </div>
+                            ${badge}
+                        </div>
+                        ${actions}
+                    </article>
+                `;
+            }).join('');
+
+            const countEl = document.getElementById('study-visible-count');
+            if (countEl) countEl.innerText = `${filtered.length} ${filtered.length === 1 ? 'UC' : 'UCs'}`;
+
+            const emptyEl = document.getElementById('study-empty-state');
+            if (emptyEl) emptyEl.classList.toggle('hidden', filtered.length !== 0);
         }
 
         /* ----------------------------------------------------
@@ -1071,9 +1305,23 @@
             const titleEl = document.getElementById('uc-list-title');
             const listEl = document.getElementById('uc-items-list');
             const { completed, inProgress, pending } = getCategorizedUCs();
-            const allSorted = [...completed, ...inProgress, ...pending].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+            let allSorted = [...completed, ...inProgress, ...pending].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+
+            if (searchQuery.trim()) {
+                const q = searchQuery.trim().toLocaleLowerCase('pt-PT');
+                allSorted = allSorted.filter(item => {
+                    const cfg = moduleConfig[item.name] || {};
+                    const searchable = `${item.name} ${cfg.trainer || ''} ${item.status || ''} ${item.startDate || ''} ${item.endDate || ''}`
+                        .toLocaleLowerCase('pt-PT');
+                    return searchable.includes(q);
+                });
+            }
             
-            if (titleEl) titleEl.innerText = `Todas as UC (${allSorted.length})`;
+            if (titleEl) {
+                titleEl.innerText = searchQuery.trim()
+                    ? `Resultados no Curso (${allSorted.length})`
+                    : `Todas as UC (${allSorted.length})`;
+            }
 
             let html = '';
             allSorted.forEach(item => {
@@ -1124,6 +1372,16 @@
             const listEl = document.getElementById('uc-items-list');
             const { completed, inProgress, pending } = getCategorizedUCs();
             let items = type === 'completed' ? completed : (type === 'progress' ? inProgress : pending);
+
+            if (searchQuery.trim()) {
+                const q = searchQuery.trim().toLocaleLowerCase('pt-PT');
+                items = items.filter(item => {
+                    const cfg = moduleConfig[item.name] || {};
+                    const searchable = `${item.name} ${cfg.trainer || ''} ${item.status || ''} ${item.startDate || ''} ${item.endDate || ''}`
+                        .toLocaleLowerCase('pt-PT');
+                    return searchable.includes(q);
+                });
+            }
             
             titleEl.innerText = `${type === 'completed' ? 'Concluídas' : (type === 'progress' ? 'Em Progresso' : 'Não Iniciadas')} (${items.length})`;
 
@@ -1476,34 +1734,69 @@
             setTimeout(updateHeaderHeightVar, 20);
         }
 
-        // Search Handlers (Floating Search Box)
+        // Pesquisa global partilhada entre Agenda, Estudo e Curso
+        function getCurrentTabSearchPlaceholder() {
+            if (currentMainTab === 'estudo') return 'Pesquisar unidades de competência...';
+            if (currentMainTab === 'curso') return 'Pesquisar UC, formadores e recursos...';
+            return 'Pesquisar exames, módulos, formadores, locais...';
+        }
+
+        function syncGlobalSearchWithCurrentTab() {
+            const input = document.getElementById('search-input');
+            if (!input) return;
+
+            input.placeholder = getCurrentTabSearchPlaceholder();
+            input.value = searchQuery;
+        }
+
+        function applyGlobalSearch() {
+            if (currentMainTab === 'estudo') {
+                renderStudyCenter();
+            } else if (currentMainTab === 'curso') {
+                renderUcStatus();
+            } else {
+                renderScheduleList();
+            }
+        }
+
         function toggleSearch() {
             const box = document.getElementById('search-box');
+            const input = document.getElementById('search-input');
+
+            syncGlobalSearchWithCurrentTab();
+
             if (box.classList.contains('hidden')) {
                 box.classList.remove('hidden');
-                document.getElementById('search-input').focus();
+                input.focus();
             } else {
                 box.classList.add('hidden');
-                clearSearch();
             }
+
             updateHeaderHeightVar();
         }
 
         function handleSearchDebounced() {
             clearTimeout(searchDebounceTimeout);
+
             searchDebounceTimeout = setTimeout(() => {
-                const val = document.getElementById('search-input').value;
-                searchQuery = val;
-                renderScheduleList();
+                searchQuery = document.getElementById('search-input').value;
+                applyGlobalSearch();
                 updateHeaderHeightVar();
-            }, 250);
+            }, 200);
         }
 
         function clearSearch() {
-            document.getElementById('search-input').value = '';
             searchQuery = '';
-            document.getElementById('search-box').classList.add('hidden');
+
+            const input = document.getElementById('search-input');
+            input.value = '';
+
+            // Limpar significa limpar a pesquisa de toda a app.
             renderScheduleList();
+            renderStudyCenter();
+            renderUcStatus();
+
+            document.getElementById('search-box').classList.add('hidden');
             updateHeaderHeightVar();
         }
 

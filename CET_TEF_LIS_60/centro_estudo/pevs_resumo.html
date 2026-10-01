@@ -21,7 +21,7 @@
                         accent: '#3b82f6'
                     },
                     fontFamily: {
-                        sans: ['Inter','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','sans-serif']
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
                     }
                 }
             }
@@ -39,16 +39,21 @@
             -webkit-tap-highlight-color:transparent;
             transition:background-color .3s ease,color .3s ease;
         }
-        .hide-scrollbar::-webkit-scrollbar{display:none}
-        .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-        .touch-active:active{transform:scale(.97);transition:transform .1s cubic-bezier(.4,0,.2,1)}
-        button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
-        .pt-safe{padding-top:env(safe-area-inset-top)}
-        .pb-safe{padding-bottom:calc(2rem + env(safe-area-inset-bottom))}
+        .hide-scrollbar::-webkit-scrollbar { display:none; }
+        .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+        .touch-active:active {
+            transform:scale(.97);
+            transition:transform .1s cubic-bezier(.4,0,.2,1);
+        }
+        button:focus-visible,input:focus-visible,a:focus-visible {
+            outline:2px solid #3b82f6;
+            outline-offset:2px;
+        }
+        .pt-safe { padding-top:env(safe-area-inset-top); }
+        .pb-safe { padding-bottom:calc(4.5rem + env(safe-area-inset-bottom)); }
 
-        /* Conteúdo do resumo */
         .study-card {
-            scroll-margin-top:112px;
+            scroll-margin-top:220px;
             background:#fff;
             border:1px solid #e2e8f0;
             border-radius:1.25rem;
@@ -67,13 +72,14 @@
             font-weight:900;
             color:#0f172a;
         }
-        .dark .study-card h2{color:#fff}
+        .dark .study-card h2 { color:#fff; }
         .study-card p,.study-card li,.study-card td,.study-card th,.study-card summary {
             font-size:.75rem;
             line-height:1.55;
         }
-        .study-card p,.study-card li{color:#475569}
-        .dark .study-card p,.dark .study-card li{color:#cbd5e1}
+        .study-card p,.study-card li { color:#475569; }
+        .dark .study-card p,.dark .study-card li { color:#cbd5e1; }
+
         .pill {
             display:inline-flex;
             align-items:center;
@@ -88,7 +94,8 @@
             text-transform:uppercase;
             letter-spacing:.06em;
         }
-        .dark .pill{color:#60a5fa}
+        .dark .pill { color:#60a5fa; }
+
         .grid {
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
@@ -103,9 +110,10 @@
             font-size:.73rem;
             line-height:1.5;
         }
-        .dark .mini{background:#0f172a;border-color:#1e293b;color:#cbd5e1}
-        .mini h3{margin:0 0 .3rem;font-size:.77rem;font-weight:900;color:#0f172a}
-        .dark .mini h3{color:#fff}
+        .dark .mini { background:#0f172a; border-color:#1e293b; color:#cbd5e1; }
+        .mini h3 { margin:0 0 .3rem; font-size:.77rem; font-weight:900; color:#0f172a; }
+        .dark .mini h3 { color:#fff; }
+
         .key {
             border-left:3px solid #3b82f6;
             padding:.7rem .8rem;
@@ -116,9 +124,10 @@
             font-size:.73rem;
             line-height:1.5;
         }
-        .dark .key{background:rgba(59,130,246,.08);color:#cbd5e1}
-        .warn{border-left-color:#f59e0b}
-        .ok{border-left-color:#10b981}
+        .dark .key { background:rgba(59,130,246,.08); color:#cbd5e1; }
+        .warn { border-left-color:#f59e0b; }
+        .ok { border-left-color:#10b981; }
+
         table {
             width:100%;
             border-collapse:separate;
@@ -129,13 +138,20 @@
             border-radius:.8rem;
             overflow:hidden;
         }
-        .dark table{border-color:#1e293b}
-        th,td{padding:.55rem;text-align:left;vertical-align:top;border-right:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
-        .dark th,.dark td{border-color:#1e293b}
-        th{background:#f1f5f9;color:#334155;font-weight:800}
-        .dark th{background:#0f172a;color:#cbd5e1}
-        tr:last-child td{border-bottom:0}
-        th:last-child,td:last-child{border-right:0}
+        .dark table { border-color:#1e293b; }
+        th,td {
+            padding:.55rem;
+            text-align:left;
+            vertical-align:top;
+            border-right:1px solid #e2e8f0;
+            border-bottom:1px solid #e2e8f0;
+        }
+        .dark th,.dark td { border-color:#1e293b; }
+        th { background:#f1f5f9; color:#334155; font-weight:800; }
+        .dark th { background:#0f172a; color:#cbd5e1; }
+        tr:last-child td { border-bottom:0; }
+        th:last-child,td:last-child { border-right:0; }
+
         details {
             border:1px solid #e2e8f0;
             border-radius:.8rem;
@@ -143,62 +159,102 @@
             margin:.5rem 0;
             background:#fff;
         }
-        .dark details{border-color:#1e293b;background:#0f172a}
-        summary{cursor:pointer;font-weight:800;color:#0f172a}
-        .dark summary{color:#fff}
-        .footer{color:#64748b;font-size:.66rem;margin-top:1rem}
-        .actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
-        .btn {
-            display:inline-flex;
-            align-items:center;
-            gap:.35rem;
-            text-decoration:none;
-            border-radius:.75rem;
-            padding:.55rem .75rem;
-            font-size:.68rem;
-            font-weight:800;
-            background:#2563eb;
-            color:#fff;
-            border:1px solid #2563eb;
+        .dark details { border-color:#1e293b; background:#0f172a; }
+        summary { cursor:pointer; font-weight:800; color:#0f172a; }
+        .dark summary { color:#fff; }
+        .footer { color:#64748b; font-size:.66rem; margin-top:1rem; }
+
+        @media(max-width:620px) {
+            table { display:block; overflow-x:auto; }
         }
-        .btn.alt {
-            background:rgba(244,63,94,.08);
-            color:#e11d48;
-            border-color:rgba(244,63,94,.22);
-        }
-        .dark .btn.alt{color:#fda4af}
-        @media(max-width:620px){table{display:block;overflow-x:auto}}
     </style>
 </head>
 
-<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
 
-<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
-    <div class="max-w-2xl mx-auto px-4 py-3">
-        <div class="flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3 min-w-0">
-                <a href="../index.html"
-                   class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active shrink-0"
-                   aria-label="Voltar ao Centro de Estudo">
-                    <i class="fa-solid fa-chevron-left text-xs"></i>
+    <!-- HEADER PRINCIPAL DA APP -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
+        <div class="max-w-2xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+
+                <a href="../index.html#estudo" class="flex items-center gap-3 min-w-0" aria-label="Voltar ao Centro de Estudo">
+                    <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative touch-active shrink-0">
+                        <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png"
+                             alt="Logo Grupo Academy"
+                             class="w-full h-full object-contain"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-1.5">
+                            <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none truncate">
+                                CET_TEF_LIS_60
+                            </h1>
+                        </div>
+                        <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">
+                            Promoção de Estilos de Vida Saudável
+                        </p>
+                    </div>
                 </a>
-                <div class="min-w-0">
-                    <div class="text-[9px] font-black uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">Centro de Estudo TEEF</div>
-                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-tight truncate">Promoção de Estilos de Vida Saudável</h1>
-                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Resumo orientado para avaliação</p>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <button onclick="toggleDarkMode()"
+                            class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active"
+                            title="Alternar Modo Escuro/Claro"
+                            aria-label="Alternar modo escuro ou claro">
+                        <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                    </button>
+
+                    <button onclick="toggleSearch()"
+                            class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active"
+                            aria-label="Abrir pesquisa">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </button>
                 </div>
             </div>
 
-            <button onclick="toggleDarkMode()"
-                    class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active shrink-0"
-                    aria-label="Alternar modo escuro ou claro">
-                <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
-            </button>
+            <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+                <div class="relative">
+                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                    <input type="text"
+                           id="search-input"
+                           oninput="handleSummarySearch()"
+                           placeholder="Pesquisar neste resumo..."
+                           class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition"
+                           aria-label="Pesquisar neste resumo">
+                    <button onclick="clearSummarySearch()"
+                            id="clear-search"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1"
+                            aria-label="Limpar pesquisa">
+                        <i class="fa-solid fa-xmark text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVEGAÇÃO LOCAL DA UC - FIXA ABAIXO DO HEADER -->
+    <div id="uc-local-nav"
+         class="sticky top-[65px] z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-2xl mx-auto px-4 py-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <a href="pevs_resumo.html"
+                   class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center shadow-sm shadow-blue-500/20">
+                    <i class="fa-solid fa-book-open-reader mr-1"></i> Resumo
+                </a>
+                <a href="pevs_treino.html"
+                   class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                    <i class="fa-solid fa-brain mr-1"></i> Treino
+                </a>
+                <a href="pevs_simulador.html"
+                   class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                    <i class="fa-solid fa-vial-circle-check mr-1"></i> Simulações
+                </a>
+            </div>
         </div>
     </div>
-</header>
 
-<nav class="sticky top-[65px] z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <!-- NAVEGAÇÃO DOS TEMAS -->
+    <nav class="sticky top-[124px] z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
     <div class="max-w-2xl mx-auto px-4 py-2 flex items-center gap-1.5">
         <button id="nav-scroll-left"
                 onclick="scrollStudyNav(-1)"
@@ -219,9 +275,6 @@
             <a href="#segura" data-section="segura" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. AF Segura</a>
             <a href="#dnt" data-section="dnt" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. DNT</a>
             <a href="#check" data-section="check" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">Checklist</a>
-            <a href="simulador.html" class="px-2.5 py-1.5 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 font-bold whitespace-nowrap shrink-0">
-                <i class="fa-solid fa-vial-circle-check mr-1"></i>Simular
-            </a>
         </div>
 
         <button id="nav-scroll-right"
@@ -233,26 +286,35 @@
     </div>
 </nav>
 
-<main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
-    <section class="mb-3 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
-            <i class="fa-solid fa-book-open-reader"></i>
-            Resumo de estudo
-        </div>
-        <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">Revisão orientada para exame</h2>
-        <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
-            Resumo orientado pela Lista de Saberes e pelos materiais da UC, com foco nos conceitos e valores mais importantes para avaliação.
-        </p>
-        <div class="mt-3">
-            <a href="simulador.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 text-[10px] font-bold touch-active">
-                <i class="fa-solid fa-vial-circle-check"></i>
-                Fazer simulação
-            </a>
-        </div>
-    </section>
+    <main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
+        <section class="mb-3 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                <i class="fa-solid fa-book-open-reader"></i>
+                Resumo de estudo
+            </div>
 
-    <div id="study-content">
-        <section class="card" id="desinfo"><span class="pill">Tema 1</span><h2>1. Desinformação em Saúde</h2>
+            <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">
+                Revisão orientada para exame
+            </h2>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Resumo orientado pela Lista de Saberes e pelos materiais da UC, com foco nos conceitos e valores mais importantes para avaliação.
+            </p>
+
+            <div class="mt-3 flex items-center gap-2 flex-wrap">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[9px] font-bold">
+                    <i class="fa-solid fa-list-check"></i>
+                    Revisão por temas
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[9px] font-bold">
+                    <i class="fa-solid fa-bullseye"></i>
+                    Foco em avaliação
+                </span>
+            </div>
+        </section>
+
+        <div id="study-content">
+            <section class="card" id="desinfo"><span class="pill">Tema 1</span><h2>1. Desinformação em Saúde</h2>
 <div class="grid"><div class="mini"><h3>Desinformação</h3>Informação falsa criada e partilhada <b>deliberadamente</b>, com intenção de causar dano, influenciar ou obscurecer a verdade.</div><div class="mini"><h3>Misinformation</h3>Informação falsa partilhada <b>sem intenção de causar dano</b>.</div><div class="mini"><h3>Fake news</h3>Informação falsa apresentada em formato de “notícia”, por vezes imitando órgãos de comunicação.</div><div class="mini"><h3>Teoria da conspiração</h3>Explicação de acontecimentos através de complôs secretos de grupos/instituições poderosos e mal-intencionados.</div></div>
 <div class="key"><b>Diferença de exame:</b> desinformação = intenção; misinformation = erro sem intenção.</div>
 <p><b>Infodemia:</b> superabundância de informação, incluindo informação falsa ou enganadora, especialmente relevante durante emergências de saúde.</p>
@@ -307,41 +369,98 @@
 <details><summary>Saúde mental</summary><p>É mais do que ausência de doença; existe num continuum. AF associa-se a benefícios em cognição, qualidade de vida, ansiedade, sintomas depressivos e sono. Intensidades muito elevadas podem reduzir o prazer agudo da experiência para algumas pessoas.</p></details></section>
 
 <section class="card" id="check"><h2>Checklist de memorização antes do exame</h2><ol><li>Desinformação vs misinformation.</li><li>Prevalência vs incidência.</li><li>Correlação ≠ causalidade.</li><li>Pirâmide da evidência e revisão por pares.</li><li>AF vs exercício vs desporto vs aptidão.</li><li>Sedentário vs inativo.</li><li>Recomendações 24h e valores de sono.</li><li>Adultos: 150–300 / 75–150 / força 2; idosos: + equilíbrio 3.</li><li>HTA: normal, grau I, grau II, crise.</li><li>Diabetes: jejum ≥126; 2h ≥200; HbA1c ≥6,5%.</li><li>IMC 25 / 30 / 35 / 40.</li><li>AVC isquémico vs hemorrágico.</li><li>Hipotensão pós-exercício.</li><li>Vigorexia e riscos de EAA.</li><li>Relação AF/sedentarismo com DCV, diabetes, obesidade, cancro e saúde mental.</li></ol>
-<div class="actions"><a class="btn" href="simulador.html">Fazer simulação de exame</a></div></section>
+<div class="actions"><a class="btn" href="pevs_simulador.html">Fazer simulação de exame</a></div></section>
 <p class="footer">Baseado na Lista de Saberes e nos diapositivos fornecidos para a UC “Promover a atividade física, a saúde e estilos de vida saudável”. Para o exame, prioriza a formulação e os valores usados nos materiais da formadora.</p>
-    </div>
-</main>
+        </div>
+    </main>
+
+    <!-- FOOTER / NAVEGAÇÃO PRINCIPAL DA APP -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors"
+         style="height:calc(56px + env(safe-area-inset-bottom));">
+        <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+
+            <a href="../index.html#agenda"
+               class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+                <i class="fa-solid fa-calendar-days text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Agenda</span>
+            </a>
+
+            <a href="../index.html#estudo"
+               class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+                <i class="fa-solid fa-book-open-reader text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Estudo</span>
+            </a>
+
+            <a href="../index.html#curso"
+               class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+                <i class="fa-solid fa-graduation-cap text-base"></i>
+                <span class="font-bold text-[10px] leading-none">Curso</span>
+            </a>
+        </div>
+    </nav>
 
 <script>
-document.querySelectorAll('#study-content > section.card').forEach(el => {
-    el.classList.remove('card');
-    el.classList.add('study-card');
-});
-
 function initTheme() {
     const savedTheme = localStorage.getItem('cet_theme');
     if (savedTheme === 'light') setLightMode();
     else setDarkMode();
 }
+
 function toggleDarkMode() {
     if (document.documentElement.classList.contains('dark')) setLightMode();
     else setDarkMode();
 }
+
 function setDarkMode() {
     document.documentElement.classList.add('dark');
     localStorage.setItem('cet_theme','dark');
-    const i=document.getElementById('theme-icon');
-    if(i)i.className='fa-solid fa-sun text-amber-400 text-xs';
+    const icon = document.getElementById('theme-icon');
+    if (icon) icon.className='fa-solid fa-sun text-amber-400 text-xs';
     document.getElementById('theme-color-meta')?.setAttribute('content','#090d16');
 }
+
 function setLightMode() {
     document.documentElement.classList.remove('dark');
     localStorage.setItem('cet_theme','light');
-    const i=document.getElementById('theme-icon');
-    if(i)i.className='fa-solid fa-moon text-slate-700 text-xs';
+    const icon = document.getElementById('theme-icon');
+    if (icon) icon.className='fa-solid fa-moon text-slate-700 text-xs';
     document.getElementById('theme-color-meta')?.setAttribute('content','#ffffff');
 }
 
+function toggleSearch() {
+    const box = document.getElementById('search-box');
+    const input = document.getElementById('search-input');
+
+    if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        input.focus();
+    } else {
+        box.classList.add('hidden');
+    }
+}
+
+function handleSummarySearch() {
+    const q = document.getElementById('search-input').value.trim().toLocaleLowerCase('pt-PT');
+    const cards = [...document.querySelectorAll('#study-content .study-card')];
+
+    cards.forEach(card => {
+        const match = !q || card.textContent.toLocaleLowerCase('pt-PT').includes(q);
+        card.style.display = match ? '' : 'none';
+    });
+}
+
+function clearSummarySearch() {
+    document.getElementById('search-input').value = '';
+    document.querySelectorAll('#study-content .study-card').forEach(card => card.style.display = '');
+    document.getElementById('search-box').classList.add('hidden');
+}
+
+document.querySelectorAll('#study-content > section.card').forEach(el => {
+    el.classList.remove('card');
+    el.classList.add('study-card');
+});
+
+// Navegação horizontal dinâmica
 const studyNavScroll = document.getElementById('study-nav-scroll');
 const studyNavLinks = [...document.querySelectorAll('.study-nav[data-section]')];
 const navLeftBtn = document.getElementById('nav-scroll-left');
@@ -357,7 +476,7 @@ function updateStudyNavArrows() {
 function scrollStudyNav(direction) {
     if (!studyNavScroll) return;
     const amount = Math.max(180, Math.round(studyNavScroll.clientWidth * 0.72));
-    studyNavScroll.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    studyNavScroll.scrollBy({ left:direction * amount, behavior:'smooth' });
 }
 
 function setActiveStudyNav(sectionId) {
@@ -370,24 +489,54 @@ function setActiveStudyNav(sectionId) {
 
     const activeLink = studyNavLinks.find(link => link.dataset.section === sectionId);
     if (activeLink) {
-        activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        activeLink.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
     }
 }
 
+function getStudyStickyOffset() {
+    const appHeader = document.querySelector('body > header');
+    const localNav = document.getElementById('uc-local-nav');
+    const topicNav = document.querySelector('nav.sticky');
+
+    const headerH = appHeader ? appHeader.offsetHeight : 0;
+    const localH = localNav ? localNav.offsetHeight : 0;
+    const topicH = topicNav ? topicNav.offsetHeight : 0;
+
+    return headerH + localH + topicH + 8;
+}
+
+function scrollToStudySection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const offset = getStudyStickyOffset();
+    const y = section.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+        top: Math.max(0, y),
+        behavior: 'smooth'
+    });
+}
+
 studyNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        setActiveStudyNav(link.dataset.section);
+    link.addEventListener('click', event => {
+        event.preventDefault();
+
+        const sectionId = link.dataset.section;
+        setActiveStudyNav(sectionId);
+        history.replaceState(null, '', `#${sectionId}`);
+        scrollToStudySection(sectionId);
     });
 });
 
 if (studyNavScroll) {
-    studyNavScroll.addEventListener('scroll', updateStudyNavArrows, { passive: true });
-    studyNavScroll.addEventListener('wheel', (event) => {
+    studyNavScroll.addEventListener('scroll', updateStudyNavArrows, { passive:true });
+    studyNavScroll.addEventListener('wheel', event => {
         if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
             event.preventDefault();
             studyNavScroll.scrollLeft += event.deltaY;
         }
-    }, { passive: false });
+    }, { passive:false });
 }
 
 const observedSections = studyNavLinks
@@ -395,88 +544,38 @@ const observedSections = studyNavLinks
     .filter(Boolean);
 
 if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         const visible = entries
             .filter(entry => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            .sort((a,b) => b.intersectionRatio - a.intersectionRatio);
 
         if (visible.length) setActiveStudyNav(visible[0].target.id);
     }, {
-        root: null,
-        rootMargin: '-125px 0px -55% 0px',
-        threshold: [0.05, 0.2, 0.5]
+        root:null,
+        rootMargin:'-185px 0px -55% 0px',
+        threshold:[0.05,0.2,0.5]
     });
 
     observedSections.forEach(section => observer.observe(section));
 }
 
 window.addEventListener('resize', updateStudyNavArrows);
+
+initTheme();
 requestAnimationFrame(() => {
     updateStudyNavArrows();
     const initial = location.hash ? location.hash.slice(1) : (observedSections[0]?.id || '');
-    if (initial) setActiveStudyNav(initial);
-});
 
-initTheme();
+    if (initial) {
+        setActiveStudyNav(initial);
 
-
-(() => {
-  const nav = document.querySelector('nav');
-  const navLinks = [...document.querySelectorAll('.navin a[href^="#"]')];
-  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
-  function setActive(id, scrollIntoView = false) {
-    navLinks.forEach(a => {
-      const active = a.getAttribute('href') === '#' + id;
-      a.classList.toggle('active', active);
-      if (active && scrollIntoView) {
-        a.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
-      }
-    });
-  }
-
-  function scrollToSection(id, smooth = true) {
-    const target = document.getElementById(id);
-    if (!target) return;
-    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
-    const gap = 16;
-    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - gap;
-    window.scrollTo({ top: Math.max(0, top), behavior: smooth ? 'smooth' : 'auto' });
-  }
-
-  navLinks.forEach(a => {
-    a.addEventListener('click', (event) => {
-      event.preventDefault();
-      const id = a.getAttribute('href').slice(1);
-      history.replaceState(null, '', '#' + id);
-      setActive(id, true);
-      scrollToSection(id, true);
-    });
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
-    if (visible.length) setActive(visible[0].target.id, true);
-  }, {
-    rootMargin: `-${(nav?.offsetHeight || 70) + 8}px 0px -70% 0px`,
-    threshold: 0
-  });
-
-  sections.forEach(section => observer.observe(section));
-
-  const initial = location.hash && document.querySelector(location.hash)
-    ? location.hash.slice(1)
-    : sections[0]?.id;
-  if (initial) {
-    setActive(initial, false);
-    if (location.hash) {
-      requestAnimationFrame(() => scrollToSection(initial, false));
+        // Se a página abrir já com hash, corrige a posição depois de o layout estar calculado.
+        if (location.hash) {
+            requestAnimationFrame(() => scrollToStudySection(initial));
+        }
     }
-  }
-})();
-
+});
 </script>
+
 </body>
 </html>

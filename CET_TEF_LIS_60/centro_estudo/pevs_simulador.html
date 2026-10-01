@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Simulação — Promoção de Estilos de Vida Saudável</title>
+    <title>Simulações — Promoção de Estilos de Vida Saudável</title>
 
     <meta id="theme-color-meta" name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,24 +38,12 @@
         .touch-active:active{transform:scale(.97);transition:transform .1s cubic-bezier(.4,0,.2,1)}
         button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
         .pt-safe{padding-top:env(safe-area-inset-top)}
-        .pb-safe{padding-bottom:calc(2rem + env(safe-area-inset-bottom))}
+        .pb-safe{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom))}
         .hidden{display:none!important}
 
-        .hero {
-            border:1px solid #e2e8f0;
-            background:#fff;
-            border-radius:1.5rem;
-            padding:1.25rem;
-        }
-        .dark .hero {
-            border-color:rgba(59,130,246,.3);
-            background:linear-gradient(to bottom right,#0f172a,#0f172a,#172554cc);
-        }
-        .eyebrow {
-            display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .55rem;border-radius:9999px;
-            background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);
-            color:#2563eb;font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em
-        }
+        .hero{border:1px solid #e2e8f0;background:#fff;border-radius:1.5rem;padding:1.25rem}
+        .dark .hero{border-color:rgba(59,130,246,.3);background:linear-gradient(to bottom right,#0f172a,#0f172a,#172554cc)}
+        .eyebrow{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .55rem;border-radius:9999px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);color:#2563eb;font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
         .dark .eyebrow{color:#60a5fa}
         .hero h2{font-size:1.25rem;line-height:1.2;margin:.75rem 0 .45rem;font-weight:900;color:#0f172a}
         .dark .hero h2{color:#fff}
@@ -67,14 +55,10 @@
         .info b{display:block;font-size:.9rem;color:#0f172a}
         .dark .info b{color:#fff}
         .info span{display:block;font-size:.55rem;color:#64748b;font-weight:800;text-transform:uppercase;margin-top:.1rem}
-
         .section-title{margin:1.1rem .1rem .55rem;font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:900}
-        .exam-card,.question-card,.result-card,.review,.loading,.error {
-            background:#fff;border:1px solid #e2e8f0;border-radius:1.15rem;
-        }
-        .dark .exam-card,.dark .question-card,.dark .result-card,.dark .review,.dark .loading,.dark .error {
-            background:rgba(15,23,42,.6);border-color:#1e293b;
-        }
+
+        .exam-card,.question-card,.result-card,.review,.loading,.error{background:#fff;border:1px solid #e2e8f0;border-radius:1.15rem}
+        .dark .exam-card,.dark .question-card,.dark .result-card,.dark .review,.dark .loading,.dark .error{background:rgba(15,23,42,.6);border-color:#1e293b}
         .exam-card{padding:1rem;margin-bottom:.65rem}
         .exam-card-top{display:flex;justify-content:space-between;gap:.75rem;align-items:flex-start}
         .exam-card h3{font-size:.85rem;margin:0 0 .25rem;font-weight:900;color:#0f172a}
@@ -87,7 +71,7 @@
         .secondary{border:1px solid #e2e8f0;background:#f8fafc;color:#334155;border-radius:.8rem;padding:.65rem .75rem;font-weight:800;font-size:.7rem}
         .dark .secondary{border-color:#334155;background:#0f172a;color:#e2e8f0}
 
-        .exam-head{border:1px solid #e2e8f0;background:#fff;border-radius:1rem;padding:.85rem;position:sticky;top:66px;z-index:20;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+        .exam-head{border:1px solid #e2e8f0;background:#fff;border-radius:1rem;padding:.85rem;position:sticky;top:124px;z-index:20;box-shadow:0 8px 24px rgba(15,23,42,.08)}
         .dark .exam-head{border-color:#1e293b;background:#0f172af2;box-shadow:0 8px 24px rgba(0,0,0,.22)}
         .exam-head-row{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
         .exam-meta{font-size:.58rem;color:#64748b;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
@@ -133,65 +117,90 @@
         .result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem;margin:.8rem 0}
         .result-stat{border:1px solid #e2e8f0;border-radius:.8rem;padding:.6rem;background:#f8fafc}
         .dark .result-stat{border-color:#334155;background:#0b1220}
-        .result-stat b{display:block;font-size:.82rem;color:#0f172a} .dark .result-stat b{color:#fff}
+        .result-stat b{display:block;font-size:.82rem;color:#0f172a}
+        .dark .result-stat b{color:#fff}
         .result-stat span{font-size:.52rem;color:#64748b;text-transform:uppercase;font-weight:800}
         .review-title{margin:1rem .1rem .55rem;font-size:.66rem;text-transform:uppercase;color:#64748b;letter-spacing:.05em}
         .review{padding:.8rem;margin-bottom:.45rem}
-        .review.correct{border-left:4px solid #10b981} .review.incorrect{border-left:4px solid #f43f5e}
+        .review.correct{border-left:4px solid #10b981}
+        .review.incorrect{border-left:4px solid #f43f5e}
         .review .small{font-size:.56rem;color:#64748b}
         .review h3{font-size:.72rem;line-height:1.4;margin:.45rem 0;color:#0f172a;font-weight:900}
         .dark .review h3{color:#fff}
         .review p{font-size:.66rem;line-height:1.5;margin:.3rem 0;color:#475569}
         .dark .review p{color:#cbd5e1}
-        .review .answer{font-weight:800;color:#0f172a} .dark .review .answer{color:#fff}
+        .review .answer{font-weight:800;color:#0f172a}
+        .dark .review .answer{color:#fff}
         .notice{border:1px solid rgba(245,158,11,.3);background:rgba(245,158,11,.08);border-radius:.8rem;padding:.65rem .7rem;color:#b45309;font-size:.64rem;margin-top:.7rem}
         .dark .notice{color:#fcd34d}
         .loading,.error{padding:1rem;text-align:center;color:#64748b;font-size:.7rem}
     </style>
 </head>
 
-<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
 
 <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
     <div class="max-w-2xl mx-auto px-4 py-3">
-        <div class="flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3 min-w-0">
-                <a href="../index.html"
-                   class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active shrink-0"
-                   aria-label="Voltar ao Centro de Estudo">
-                    <i class="fa-solid fa-chevron-left text-xs"></i>
-                </a>
-                <div class="min-w-0">
-                    <div class="text-[9px] font-black uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">Centro de Estudo TEEF</div>
-                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-tight truncate">Promoção de Estilos de Vida Saudável</h1>
-                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Simulação de exame · 40 questões · 60 minutos</p>
+        <div class="flex items-center justify-between">
+            <a href="../index.html#estudo" class="flex items-center gap-3 min-w-0" aria-label="Voltar ao Centro de Estudo">
+                <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative touch-active shrink-0">
+                    <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png"
+                         alt="Logo Grupo Academy"
+                         class="w-full h-full object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
                 </div>
-            </div>
+                <div class="min-w-0">
+                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none truncate">CET_TEF_LIS_60</h1>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Promoção de Estilos de Vida Saudável</p>
+                </div>
+            </a>
 
             <div class="flex items-center gap-2 shrink-0">
-                <a href="resumo.html"
-                   class="px-2.5 py-1.5 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[10px] font-bold touch-active">
-                    Resumo
-                </a>
-                <button onclick="toggleDarkMode()"
-                        class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active"
-                        aria-label="Alternar modo escuro ou claro">
+                <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Alternar modo escuro ou claro">
                     <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                </button>
+                <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="relative">
+                <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                <input type="text" id="search-input" oninput="handleSimulationSearch()" placeholder="Pesquisar nesta página..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
+                <button onclick="clearSimulationSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1" aria-label="Limpar pesquisa">
+                    <i class="fa-solid fa-xmark text-xs"></i>
                 </button>
             </div>
         </div>
     </div>
 </header>
 
-<main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+<div id="uc-local-nav" class="sticky top-[65px] z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2.5">
+        <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <a href="pevs_resumo.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-book-open-reader mr-1"></i> Resumo
+            </a>
+            <a href="pevs_treino.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-brain mr-1"></i> Treino
+            </a>
+            <a href="pevs_simulador.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center shadow-sm shadow-blue-500/20">
+                <i class="fa-solid fa-vial-circle-check mr-1"></i> Simulações
+            </a>
+        </div>
+    </div>
+</div>
 
-    <div id="loading" class="loading">A carregar banco de questões…</div>
+<main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+<div id="loading" class="loading">A carregar banco de questões…</div>
 
     <section id="home" class="hidden">
         <div class="hero">
             <div class="eyebrow"><i class="fa-solid fa-vial-circle-check"></i> Preparação para avaliação</div>
-            <h2>Simulações de exame</h2>
-            <p>Dois exames distintos, construídos a partir do banco desta UC. A classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
+            <h2>Simulações da UC</h2>
+            <p>Aqui tens a simulação baseada no Workbook da UC e dois exames de estudo construídos a partir do banco desta unidade. Nos exames de estudo, a classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
 
             <div class="info-grid">
                 <div class="info"><b>40</b><span>Questões</span></div>
@@ -200,28 +209,45 @@
             </div>
         </div>
 
-        <div class="section-title">Escolher simulação</div>
+        <div class="section-title">Simulação da UC</div>
+
+        <article class="exam-card" style="border-color:rgba(59,130,246,.38)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Simulação UC — Workbook</h3>
+                    <p>Questões baseadas no Workbook da formação. É a simulação mais próxima do formato e dos conteúdos trabalhados no módulo.</p>
+                </div>
+                <span class="pill">Workbook</span>
+            </div>
+            <a href="../simuladores/uc03_promocao_de_estilos_de_vida_saudavel.html"
+               class="primary touch-active"
+               style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                Abrir Simulação UC
+            </a>
+        </article>
+
+        <div class="section-title">Exames de Estudo</div>
 
         <article class="exam-card">
             <div class="exam-card-top">
                 <div>
-                    <h3>Simulação 1</h3>
+                    <h3>Exame de Estudo 1</h3>
                     <p>40 questões distribuídas pelos conteúdos da UC.</p>
                 </div>
                 <span class="pill">Exame 1</span>
             </div>
-            <button class="primary touch-active" onclick="startExam('exam1')">Iniciar simulação 1</button>
+            <button class="primary touch-active" onclick="startExam('exam1')">Iniciar exame de estudo 1</button>
         </article>
 
         <article class="exam-card">
             <div class="exam-card-top">
                 <div>
-                    <h3>Simulação 2</h3>
+                    <h3>Exame de Estudo 2</h3>
                     <p>40 questões diferentes, com a mesma lógica de avaliação.</p>
                 </div>
                 <span class="pill">Exame 2</span>
             </div>
-            <button class="primary touch-active" onclick="startExam('exam2')">Iniciar simulação 2</button>
+            <button class="primary touch-active" onclick="startExam('exam2')">Iniciar exame de estudo 2</button>
         </article>
 
         <div class="notice">
@@ -260,6 +286,23 @@
     <section id="result" class="hidden"></section>
 </main>
 
+<nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors" style="height:calc(56px + env(safe-area-inset-bottom));">
+    <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+        <a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-calendar-days text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Agenda</span>
+        </a>
+        <a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+            <i class="fa-solid fa-book-open-reader text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Estudo</span>
+        </a>
+        <a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-graduation-cap text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Curso</span>
+        </a>
+    </div>
+</nav>
+
 <script>
 function initTheme() {
     const savedTheme = localStorage.getItem('cet_theme');
@@ -273,18 +316,44 @@ function toggleDarkMode() {
 function setDarkMode() {
     document.documentElement.classList.add('dark');
     localStorage.setItem('cet_theme','dark');
-    const i=document.getElementById('theme-icon');
-    if(i)i.className='fa-solid fa-sun text-amber-400 text-xs';
+    const icon=document.getElementById('theme-icon');
+    if(icon) icon.className='fa-solid fa-sun text-amber-400 text-xs';
     document.getElementById('theme-color-meta')?.setAttribute('content','#090d16');
 }
 function setLightMode() {
     document.documentElement.classList.remove('dark');
     localStorage.setItem('cet_theme','light');
-    const i=document.getElementById('theme-icon');
-    if(i)i.className='fa-solid fa-moon text-slate-700 text-xs';
+    const icon=document.getElementById('theme-icon');
+    if(icon) icon.className='fa-solid fa-moon text-slate-700 text-xs';
     document.getElementById('theme-color-meta')?.setAttribute('content','#ffffff');
 }
+function toggleSearch() {
+    const box=document.getElementById('search-box');
+    const input=document.getElementById('search-input');
+    if(box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        input.focus();
+    } else {
+        box.classList.add('hidden');
+    }
+}
+function handleSimulationSearch() {
+    const q=document.getElementById('search-input').value.trim().toLocaleLowerCase('pt-PT');
+    if(!document.getElementById('home').classList.contains('hidden')) {
+        document.querySelectorAll('#home .exam-card').forEach(card => {
+            const match=!q || card.textContent.toLocaleLowerCase('pt-PT').includes(q);
+            card.style.display=match?'':'none';
+        });
+    }
+}
+function clearSimulationSearch() {
+    document.getElementById('search-input').value='';
+    document.querySelectorAll('#home .exam-card').forEach(card => card.style.display='');
+    document.getElementById('search-box').classList.add('hidden');
+}
 initTheme();
+
+
 
 
 let BANK = [];
@@ -302,7 +371,7 @@ let state = {
 
 async function init() {
   try {
-    const res = await fetch('./banco_80_perguntas.json', { cache: 'no-store' });
+    const res = await fetch('./pevs_banco_80_perguntas.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('Falha ao carregar o banco de questões.');
     const data = await res.json();
 
@@ -319,7 +388,7 @@ async function init() {
   } catch (err) {
     const el = document.getElementById('loading');
     el.className = 'error';
-    el.textContent = 'Não foi possível carregar as questões. Confirma que “banco_80_perguntas.json” está na mesma pasta desta página e que a app está a ser aberta por HTTP/HTTPS.';
+    el.textContent = 'Não foi possível carregar as questões. Confirma que “pevs_banco_80_perguntas.json” está na mesma pasta desta página e que a app está a ser aberta por HTTP/HTTPS.';
     console.error(err);
   }
 }
@@ -340,7 +409,7 @@ function startExam(examKey) {
   document.getElementById('home').classList.add('hidden');
   document.getElementById('result').classList.add('hidden');
   document.getElementById('exam').classList.remove('hidden');
-  document.getElementById('examLabel').textContent = examKey === 'exam1' ? 'Simulação 1' : 'Simulação 2';
+  document.getElementById('examLabel').textContent = examKey === 'exam1' ? 'Exame de Estudo 1' : 'Exame de Estudo 2';
 
   renderQuestion();
   renderNav();
@@ -563,6 +632,7 @@ window.addEventListener('beforeunload', (e) => {
 });
 
 init();
+
 
 </script>
 </body>
