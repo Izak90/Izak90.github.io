@@ -11,85 +11,8 @@ tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;transition:background-color .3s,color .3s}
-.touch-active:active{transform:scale(.97)}
-.pt-safe{padding-top:env(safe-area-inset-top)}
-.pb-safe{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom))}
-.hide-scrollbar::-webkit-scrollbar{display:none} .hide-scrollbar{scrollbar-width:none}
-.study-section{margin-bottom:1.5rem}
-
-        .study-card {
-            scroll-margin-top:220px;
-            background:#fff;
-            border:1px solid #e2e8f0;
-            border-radius:1.25rem;
-            padding:1rem;
-            margin:.65rem 0;
-            box-shadow:0 1px 2px rgba(15,23,42,.04);
-        }
-        .dark .study-card {
-            background:rgba(15,23,42,.6);
-            border-color:#1e293b;
-        }
-        .study-card > .section-head {
-            display:flex;
-            align-items:center;
-            gap:.75rem;
-            margin-bottom:.8rem;
-        }
-        .study-card > .section-head h2 {
-            font-size:1rem;
-            line-height:1.3;
-            font-weight:900;
-            color:#0f172a;
-        }
-        .dark .study-card > .section-head h2 { color:#fff; }
-
-
-.study-card > .pill{
-    display:inline-flex;
-    align-items:center;
-    padding:.25rem .55rem;
-    border-radius:9999px;
-    background:rgba(59,130,246,.10);
-    border:1px solid rgba(59,130,246,.28);
-    color:#2563eb;
-    font-size:.58rem;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-}
-.dark .study-card > .pill{color:#60a5fa}
-.study-card > h2{
-    margin:.55rem 0 .8rem;
-    font-size:1rem;
-    line-height:1.3;
-    font-weight:900;
-    color:#0f172a;
-}
-.dark .study-card > h2{color:#fff}
-
-
-.study-nav{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:32px;
-    line-height:1.2;
-    padding-left:.7rem !important;
-    padding-right:.7rem !important;
-    overflow:visible;
-    text-overflow:clip;
-    max-width:none;
-}
-#study-nav-scroll{
-    padding:1px 10px 2px;
-    scroll-padding-left:10px;
-    scroll-padding-right:10px;
-}
-
-</style>
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/study.css">
 </head>
 <body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28">
 
@@ -105,7 +28,7 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 </div>
 </header>
 
-<div id="localNav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+<div id="uc-local-nav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
 <div class="max-w-2xl mx-auto px-4 py-2.5">
 <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
 <a href="pedex_resumo.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center"><i class="fa-solid fa-book-open-reader mr-1"></i>Resumo</a>
@@ -128,7 +51,7 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 
         <div id="study-nav-scroll"
              class="flex-1 min-w-0 flex gap-1.5 overflow-x-auto hide-scrollbar text-[10px] scroll-smooth"
-             style="overscroll-behavior-x:contain; touch-action:pan-x;">
+             >
             <a href="#s1" data-section="s1" title="Pedagogia no Desporto" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Pedagogia</a><a href="#s2" data-section="s2" title="Ética e Postura Profissional" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. Ética</a><a href="#s3" data-section="s3" title="Processo de Ensino–Aprendizagem" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Ensino–Aprend.</a><a href="#s4" data-section="s4" title="Ensino da Técnica" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Técnica</a><a href="#s5" data-section="s5" title="Objetivos e Planeamento" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. Objetivos</a><a href="#s6" data-section="s6" title="Gestão da Sessão" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Gestão</a><a href="#s7" data-section="s7" title="Comunicação" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. Comunicação</a><a href="#s8" data-section="s8" title="Instrução e Demonstração" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. Instrução</a><a href="#s9" data-section="s9" title="Feedback Pedagógico e Erro" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">9. Feedback/Erro</a>
         </div>
 
@@ -184,37 +107,37 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>1. Pedagogia no Desporto</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Pedagogia no Desporto</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ciência que estuda os processos de ensino–aprendizagem. No fitness, ensinar vai além de transmitir informação técnica: procura criar condições para envolvimento, autonomia, crescimento, atitudes e valores.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Características inerentes à pedagogia no desporto</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">A intervenção pedagógica inclui ensinar, agir sobre atitudes, informar/explicar, influenciar, prevenir, supervisionar, dialogar/interagir, ouvir, persuadir, sensibilizar/aconselhar, estabelecer regras, consciencializar, definir objetivos, gerir conflitos, repreender/elogiar, educar/formar e aplicar sanções previstas quando necessário.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo de análise da relação pedagógica — Antes</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>ANTES = preságio.</b> Inclui características do profissional, como formação inicial, experiência, competência, motivação, inteligência, personalidade e valores, bem como o programa e o contexto de intervenção.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo de análise da relação pedagógica — Durante</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>DURANTE = processo.</b> Corresponde ao processo de treino, aos comportamentos e às interações que acontecem durante a intervenção pedagógica.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo de análise da relação pedagógica — Depois</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>DEPOIS = produto.</b> Corresponde aos resultados do processo: aprendizagens, performances e resultados alcançados.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Papel do profissional no processo pedagógico</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O TEF deve criar condições favoráveis à aprendizagem, orientar e supervisionar o praticante, comunicar de forma adequada, adaptar a intervenção ao contexto e ao praticante, observar a resposta e reajustar quando necessário.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Quatro pilares apresentados nos slides</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Papel do TEF · Ferramentas pedagógicas · Feedback · Planeamento, objetivos e avaliação.</p>
         </div>
@@ -227,37 +150,37 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>2. Ética e Postura Profissional</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Ética — conceito</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Doutrina filosófica que tem por objeto a moral no tempo e no espaço, estudando os juízos de apreciação referentes à conduta humana.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Código de ética</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Princípios destacados nos slides: agir segundo os melhores interesses do cliente; manter fronteiras profissionais apropriadas; possuir educação e experiência adequadas; usar verdade, justiça e integridade nas decisões e relações; respeitar clientes e colegas; manter imagem profissional através de conduta e aparência adequadas.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Postura profissional do instrutor/PT</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">A postura profissional resulta do comportamento, atitude, comunicação, aparência e forma de relação com o cliente. Deve transmitir competência, respeito, atenção e coerência com o papel profissional.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Situações éticas em contexto profissional</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Um problema ético surge quando a decisão ou comportamento pode contrariar os interesses do cliente, ultrapassar limites profissionais, exceder a competência do TEF ou comprometer verdade, justiça, integridade e respeito.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Boas práticas profissionais</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Cumprir compromissos, demonstrar interesse genuíno, resolver problemas dentro das competências profissionais, comunicar com respeito, manter fronteiras adequadas e colocar o aluno no centro da intervenção.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Imagem, comunicação e primeira impressão</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Vestuário/farda apropriado, higiene cuidada, perfume leve, sorriso, tratar pelo nome, distância social apropriada, saber ouvir e demonstrar autenticidade. A primeira impressão resulta tanto da imagem como da comunicação e do comportamento.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Centralidade do aluno</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Durante a sessão, o aluno é o elemento central. A intervenção deve partir das suas necessidades, objetivos, capacidades e experiência, e não das preferências do profissional.</p>
         </div>
@@ -270,47 +193,47 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>3. Processo de Ensino–Aprendizagem</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Processo de ensino–aprendizagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O processo relaciona aquilo que o TEF ensina e organiza com aquilo que o praticante compreende, pratica, retém e consegue aplicar. É influenciado por fatores prévios, concomitantes e posteriores.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de aprendizagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Aprender não é apenas modificar momentaneamente o comportamento: implica reter a competência adquirida durante um tempo relativamente longo. Nos slides, aprender é também associado ao armazenamento de informação na memória que se traduz em conhecimento da situação vivida.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fatores influenciadores da aprendizagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Prévios:</b> instrução/demonstração, motivação, antecipação, emoção/ansiedade, características da tarefa e fatores sociais/culturais. <b>Concomitantes:</b> prática motora e fadiga. <b>Posteriores:</b> informação de retorno sobre o resultado — feedback.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fatores prévios — motivação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Motivação positiva: aprender com base na utilidade da informação. Motivação negativa: aprender com base no medo das consequências. Objetivos demasiado fáceis ou demasiado difíceis podem reduzir a motivação.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fatores prévios — antecipação, emoção e ansiedade</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Antecipação é o processo prévio à ação que prepara o organismo para alterações previsíveis. Ansiedade é a tendência para considerar uma situação como stressante.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fatores prévios — características do praticante e contexto</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Características morfológicas e fisiológicas, nível de aprendizagem, estado cognitivo, prontidão maturacional e fatores sociais/culturais influenciam o processo de aprendizagem.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Prática motora e fadiga</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Não basta praticar. A prática deve ser apropriada, adequada ao nível do praticante e realizada nas melhores condições. A fadiga tende a ser pouco favorável à aprendizagem, pelo que deve ser considerada na organização da sessão.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Domínios de aprendizagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Motor = Fazer</b> — atividades motoras/manipulativas. <b>Cognitivo = Saber</b> — atividade mental, aquisição de informação e estratégias cognitivas. <b>Afetivo = Estar/Ser</b> — interesses, atitudes e valores.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fases da aprendizagem motora</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">1) <b>Cognitiva/Generalização:</b> movimentos pouco precisos, dificuldade de controlo e contrações parasitas. 2) <b>Associativa/Concentração:</b> movimento mais preciso, eficiente e controlado, com menos movimentos parasitas. 3) <b>Autónoma/Estabilização:</b> movimento totalmente coordenado e domínio completo da técnica.</p>
         </div>
@@ -323,42 +246,42 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>4. Ensino da Técnica</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conhecimento e domínio das técnicas a ensinar</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Antes de ensinar, o TEF deve conseguir descrever e demonstrar a técnica, distinguir as partes que a constituem, identificar critérios de êxito, reconhecer erros comuns e respetivas consequências e saber quais as correções essenciais.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Metodologia do ensino da técnica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>INSTRUÇÃO → DEMONSTRAÇÃO → EXECUÇÃO → CORREÇÃO.</b> Esta sequência organiza a aprendizagem técnica e permite observar, praticar e corrigir de forma progressiva.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Antes da instrução</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Assegurar bom posicionamento do aluno/cliente; garantir ambiente adequado ao ensino, calmo e sereno; prender a atenção através da voz e expressão corporal.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Durante a explicação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Salientar para que serve; destacar os aspetos fundamentais da técnica; evitar demasiados detalhes; usar linguagem simples e concreta; ser breve; observar a face e reação do praticante para detetar compreensão ou confusão.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Durante a demonstração</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Demonstrar a técnica no seu todo e à velocidade normal; acentuar apenas os aspetos fundamentais; escolher os ângulos de observação adequados; usar palavras‑chave ou frases curtas associadas aos aspetos fundamentais.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Durante a correção</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Permitir um número razoável de tentativas antes das primeiras correções; concentrar atenção nos erros mais significativos; em grupo, começar por correções dirigidas ao todo; individualizar quando necessário.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Estratégias para melhorar a execução técnica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Permitir um número considerável de repetições; progredir em complexidade; variar as condições de execução; dividir as partes fundamentais da técnica e trabalhá-las especificamente.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Descrição e análise de exercícios</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ao analisar um exercício, o praticante deve conseguir: descrevê-lo de forma geral e, quando útil, com representação gráfica; evidenciar os aspetos fundamentais; identificar progressões para a aprendizagem; reconhecer erros mais comuns.</p>
         </div>
@@ -371,52 +294,52 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>5. Objetivos e Planeamento</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Importância da definição de objetivos</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Os objetivos orientam o planeamento e permitem decidir o que fazer, acompanhar o progresso e avaliar se o plano está a conduzir ao resultado pretendido.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Ponto de partida</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Recolha de dados iniciais/avaliação inicial → análise de necessidades → recolha de objetivos. A avaliação inicial deve ser tão exaustiva e multidimensional quanto necessário para estabelecer criteriosamente as necessidades do praticante.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Estruturação de objetivos</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Perguntas usadas nos slides: <b>O que quer? Zona alvo/Onde? Quantidade/Quanto? Até quando? Porquê?</b> O «Porquê»/«Dor» corresponde à motivação principal que leva o praticante a treinar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Regra 80/20</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Na abordagem apresentada nos slides: 80% do que o praticante gosta e 20% do que precisa, procurando conciliar preferência, adesão e necessidades essenciais para resultados.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Processo de definição de objetivos</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Primeiro perceber dados iniciais e capacidades; depois analisar necessidades; identificar a natureza da motivação; só depois estruturar o objetivo e a melhor forma de o alcançar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Planeamento no fitness</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Processo que analisa, define e sistematiza operações inerentes à construção e desenvolvimento dos praticantes, organizando-as em função de objetivos e previsões de curto, médio e longo prazo.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Passos do planeamento</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Dados iniciais → Objetivos → Planeamento → Supervisão → Avaliação → Reajuste.</b> O processo deve permitir controlo e correção permanente dos desvios.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fases do planeamento</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Longo prazo/macrociclo:</b> 6–12 meses. <b>Médio prazo/mesociclo:</b> 2–6 semanas. <b>Curto prazo/microciclo:</b> cerca de 1 semana (5–10 dias dependendo do modelo). <b>Sessão:</b> o plano do que será realizado num determinado dia.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Supervisão no processo de planeamento</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Nos slides, a supervisão a longo e médio prazo é associada às atividades individuais através de ficha programa; a curto prazo, em atividades de grupo, ocorre nas próprias aulas.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Avaliação, reavaliação e ajuste</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">A avaliação é um processo permanente e um pilar do controlo do treino. Devem existir avaliações periódicas para verificar se o plano de ação é adequado aos objetivos ou se necessita de reajuste.</p>
         </div>
@@ -429,37 +352,37 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>6. Gestão da Sessão</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Gestão da sessão de treino/aula</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Conjunto de comportamentos que regulam a conduta dos praticantes, o tempo da sessão, as tarefas, os materiais e os espaços a utilizar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Objetivo da gestão</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Toda a organização tem como objetivo criar condições para otimizar ao máximo o tempo de prática.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Estratégias de organização da sessão</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Planear deslocações no espaço, arrumação/manipulação dos materiais, disposição dos praticantes e transmissão da informação/instrução.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Posicionamento do professor/instrutor</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O posicionamento deve permitir ver e ser visto, facilitar observação, instrução e correção, e organizar os praticantes de forma eficaz no espaço disponível.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Gestão do tempo e das transições</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Diminuir o tempo de mudança entre atividades, preparar materiais, ensinar a manipulação correta dos equipamentos e treinar rotinas de transição.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Tempo útil da sessão</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Tempo previsto para a atividade menos o tempo passado em tarefas de organização. Este tempo deve ser o máximo possível.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Estratégias para maximizar tempo útil e envolvimento</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Diminuir o tempo de fala; reduzir discursos e quantidade de informação verbal; reduzir tempo de montagem de materiais; diminuir tempo de mudança de atividades; planear e treinar rotinas da aula.</p>
         </div>
@@ -472,72 +395,72 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>7. Comunicação</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de comunicação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Modo de fornecer aos participantes a informação de que precisam, no momento oportuno e de forma a que entendam, num bom ambiente e com metas estabelecidas dentro das capacidades dos intervenientes.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Elementos do processo de comunicação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Emissor:</b> emite. <b>Recetor:</b> recebe. <b>Mensagem:</b> conteúdo. <b>Código:</b> signos/palavras usados. <b>Canal:</b> meio de transmissão. <b>Contexto:</b> situação comunicativa. <b>Ruído:</b> perturba a descodificação. <b>Feedback:</b> resposta do recetor ao emissor.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Ruído no processo comunicacional</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Existe quando a mensagem não é descodificada corretamente. Pode resultar de código desconhecido, barulho, volume de voz baixo ou outras condições que dificultem a compreensão.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Feedback como elemento da comunicação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">É a resposta do recetor que chega ao emissor e permite perceber como a mensagem foi captada. Não é o mesmo que feedback pedagógico sobre uma execução motora, embora ambos sejam informação de retorno.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Regras e orientações para uma boa comunicação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Tratar os alunos pelo nome; demonstrar interesse por aspetos relevantes para a pessoa; ouvir opiniões e dúvidas; incentivar expressão de ideias; fornecer informação sobre desempenho; elogiar com sinceridade; usar linguagem simples; equilibrar proximidade e funções; envolver o praticante nas decisões sempre que possível.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação verbal</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Inclui aquilo que se diz e aquilo que se escreve: corresponde ao conteúdo da mensagem.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação não verbal</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Inclui o que mostramos através do corpo, espaço, voz, tempo, aparência, toque e outros sinais que acompanham ou substituem as palavras.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Proxémica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Distância e posições entre pessoas, objetos e ambiente/espaço.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Cinésica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Linguagem corporal: movimentos, gestos, posturas, expressões faciais e olhar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Paralinguagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Semântica da voz: entoação, duração silábica, volume, ritmo, silêncios intencionais, palavras repetidas e pronúncia.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Cronémica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Fatores temporais da comunicação: sequencialidade, simultaneidade, duração e outros aspetos relacionados com o tempo.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Imagem e aparência física</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Aspetos externos, incluindo vestuário, acessórios, penteado, maquilhagem, unhas, dentes e outros elementos da apresentação pessoal.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Tacésica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Comunicação através do toque do emissor no recetor ou do auto-toque.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação olfativa</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Comunicação através de aromas exalados pelo corpo, que podem atrair ou repelir o recetor.</p>
         </div>
@@ -550,57 +473,57 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>8. Instrução e Demonstração</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de instrução</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Fornecer informação ao sujeito sobre o objetivo da tarefa motora a efetuar e sobre a forma de desempenho mais adequada para a concretizar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de demonstração</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Apresentação de uma imagem representativa da tarefa a realizar.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Relação entre instrução e demonstração</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">São complementares: a instrução explica e orienta; a demonstração fornece um modelo visual da tarefa.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Funções da instrução</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Informação:</b> dar a conhecer o quê, porquê e como. <b>Atenção:</b> centrar a atenção na situação prática e aspetos críticos. <b>Motivação:</b> elevar e manter o interesse pela tarefa.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Aspetos essenciais da instrução</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Objetivo da tarefa · critérios de êxito · aspetos/componentes críticas a considerar no desempenho. A capacidade de atenção é limitada, pelo que a informação deve ser planeada e selecionada.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Pistas verbais</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">As explicações verbais devem ser claras e sumárias e, sempre que possível, relacionadas com experiências de aprendizagem anteriores para beneficiar o princípio do transfer.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Erros mais comuns na qualidade da informação</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Insuficiência informacional · desordenação informacional · descontrolo da comunicação · incoerência informacional.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Objetivos da demonstração</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Dar a conhecer a tarefa; facilitar o reconhecimento das componentes segmentares relevantes; permitir comparação da própria execução com o modelo; ganhar tempo útil para a prática.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Fatores de aquisição do modelo</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Atenção → Retenção → Reprodução → Motivação.</b></p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Variáveis da demonstração</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Nível de desempenho do modelo; características do observador; características/complexidade da habilidade; forma e timing de apresentação; frequência e momento; velocidade de demonstração.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Momentos de apresentação do modelo</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Antes:</b> fornecer modelo orientador. <b>Durante:</b> repetir demonstrações e introduzir variantes/especificações. <b>Depois:</b> rever e reforçar a habilidade aprendida.</p>
         </div>
@@ -613,67 +536,67 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 <h2>9. Feedback Pedagógico e Erro</h2>
 <div class="grid gap-2">
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de feedback pedagógico</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Informação de retorno dada pelo TEF, verbal ou não verbal, que visa corrigir, descrever, avaliar ou interrogar o aluno relativamente à sua prestação motora.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Importância do feedback na aprendizagem motora</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ajuda o praticante a interpretar aspetos da execução que pode não conseguir identificar sozinho, orienta correções, reforça a aprendizagem, pode apoiar a motivação e permite acompanhar a evolução do desempenho.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo de aplicação do feedback</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>TEF → OBSERVA → DECIDE → FEEDBACK.</b> Primeiro observa a prestação, depois decide se e como deve intervir.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Dimensões do feedback pedagógico</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Objetivo · Direção · Forma · Afetividade.</b></p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Tipos de feedback — objetivo</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Avaliativo:</b> juízo de valor. <b>Prescritivo:</b> indica como executar. <b>Descritivo:</b> relata como foi executado. <b>Interrogativo:</b> questiona o praticante sobre a prestação.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Classificação — direção</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Individual · Grupo · Classe/Turma.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Classificação — forma</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Auditivo · Visual · Quinestésico/Tátil · Misto.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Classificação — afetividade</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Positivo: elogia/encoraja. Negativo: intervenção com formulação negativa.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Aplicação eficaz do feedback</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Deve beneficiar o praticante, ser específico, explicar o porquê, usar referências conhecidas quando necessário, evitar excesso de informação, reforçar melhorias e continuar a observar após a intervenção.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Conceito de erro</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O erro corresponde a uma execução que se afasta do resultado ou critério pretendido. Deve ser interpretado no contexto do processo de aprendizagem.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">O erro como parte da aprendizagem</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">As aprendizagens envolvem erros. O erro não deve ser visto apenas como fracasso: pode fornecer informação útil para orientar a correção e a aprendizagem.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Clima de aprendizagem e tolerância ao erro</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Um clima em que o praticante pode errar sem ser ridicularizado ou desvalorizado favorece a participação, a experimentação e a aceitação das correções.</p>
         </div>
 
-        <div class="rounded-xl p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+        <div class="study-subcard">
             <h3 class="font-black text-sm text-slate-900 dark:text-white">Repensar o erro na intervenção pedagógica</h3>
             <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O TEF deve usar o erro como informação sobre a execução e sobre o estado da aprendizagem, observando, identificando o que é prioritário e intervindo de forma adequada, em vez de corrigir indiscriminadamente todos os desvios.</p>
         </div>
@@ -683,7 +606,7 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 </div>
 </main>
 
-<nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe" style="height:calc(56px + env(safe-area-inset-bottom));">
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe">
 <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
 <a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-calendar-days"></i><span class="font-bold text-[10px]">Agenda</span></a>
 <a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center text-blue-600 dark:text-blue-400"><i class="fa-solid fa-book-open-reader"></i><span class="font-bold text-[10px]">Estudo</span></a>
@@ -691,134 +614,6 @@ body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;tran
 </div>
 </nav>
 
-<script>
-function setDark(){document.documentElement.classList.add('dark');localStorage.setItem('cet_theme','dark');document.getElementById('theme-icon').className='fa-solid fa-sun text-amber-400 text-xs';}
-function setLight(){document.documentElement.classList.remove('dark');localStorage.setItem('cet_theme','light');document.getElementById('theme-icon').className='fa-solid fa-moon text-slate-700 text-xs';}
-function toggleTheme(){document.documentElement.classList.contains('dark')?setLight():setDark();}
-localStorage.getItem('cet_theme')==='light'?setLight():setDark();
 
-
-
-// ---------- Navegação horizontal dinâmica dos temas ----------
-const studyNavScroll = document.getElementById('study-nav-scroll');
-const studyNavLinks = [...document.querySelectorAll('.study-nav[data-section]')];
-const navLeftBtn = document.getElementById('nav-scroll-left');
-const navRightBtn = document.getElementById('nav-scroll-right');
-
-let selectedStudySection = null;
-let programmaticStudyScroll = false;
-let studyScrollReleaseTimer = null;
-
-function updateStickyPositions() {
-    const header = document.querySelector('body > header');
-    const localNav = document.getElementById('uc-local-nav');
-    const topicNav = document.getElementById('topic-nav');
-    const headerH = header ? header.offsetHeight : 0;
-    const localH = localNav ? localNav.offsetHeight : 0;
-    if (localNav) localNav.style.top = `${headerH}px`;
-    if (topicNav) topicNav.style.top = `${headerH + localH}px`;
-}
-function updateStudyNavArrows() {
-    if (!studyNavScroll || !navLeftBtn || !navRightBtn) return;
-    const maxScroll = Math.max(0, studyNavScroll.scrollWidth - studyNavScroll.clientWidth);
-    navLeftBtn.disabled = studyNavScroll.scrollLeft <= 2;
-    navRightBtn.disabled = studyNavScroll.scrollLeft >= maxScroll - 2;
-}
-function scrollStudyNav(direction) {
-    if (!studyNavScroll) return;
-    const amount = Math.max(180, Math.round(studyNavScroll.clientWidth * .72));
-    studyNavScroll.scrollBy({left:direction*amount,behavior:'smooth'});
-}
-function setActiveStudyNav(sectionId, center=true) {
-    selectedStudySection = sectionId;
-    studyNavLinks.forEach(link => {
-        const active=link.dataset.section===sectionId;
-        link.className=active
-            ? 'study-nav rounded-xl bg-blue-600 border border-blue-600 text-white font-bold whitespace-nowrap shrink-0'
-            : 'study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0';
-    });
-    if(center && studyNavScroll){
-        const activeLink=studyNavLinks.find(link=>link.dataset.section===sectionId);
-        if(activeLink){
-            const scrollerRect = studyNavScroll.getBoundingClientRect();
-            const itemRect = activeLink.getBoundingClientRect();
-            const itemCenterInsideScroller =
-                (itemRect.left - scrollerRect.left) +
-                studyNavScroll.scrollLeft +
-                (itemRect.width / 2);
-
-            const target = itemCenterInsideScroller - (studyNavScroll.clientWidth / 2);
-
-            studyNavScroll.scrollTo({
-                left: Math.max(0, target),
-                behavior: 'smooth'
-            });
-        }
-    }
-}
-function getStudyStickyOffset(){
-    const header=document.querySelector('body > header');
-    const localNav=document.getElementById('uc-local-nav');
-    const topicNav=document.getElementById('topic-nav');
-    return (header?.offsetHeight||0)+(localNav?.offsetHeight||0)+(topicNav?.offsetHeight||0)+8;
-}
-function scrollToStudySection(sectionId,smooth=true){
-    const section=document.getElementById(sectionId);
-    if(!section)return;
-    if(smooth){
-        programmaticStudyScroll=true;
-        selectedStudySection=sectionId;
-        clearTimeout(studyScrollReleaseTimer);
-        studyScrollReleaseTimer=setTimeout(()=>{programmaticStudyScroll=false;},1100);
-    }
-    const y=section.getBoundingClientRect().top+window.scrollY-getStudyStickyOffset();
-    window.scrollTo({top:Math.max(0,y),behavior:smooth?'smooth':'auto'});
-}
-studyNavLinks.forEach(link=>{
-    link.addEventListener('click',event=>{
-        event.preventDefault();
-        const sectionId=link.dataset.section;
-        setActiveStudyNav(sectionId,true);
-        history.replaceState(null,'',`#${sectionId}`);
-        scrollToStudySection(sectionId,true);
-    });
-});
-if(studyNavScroll){
-    studyNavScroll.addEventListener('scroll',updateStudyNavArrows,{passive:true});
-    studyNavScroll.addEventListener('wheel',event=>{
-        if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){
-            event.preventDefault();
-            studyNavScroll.scrollLeft+=event.deltaY;
-        }
-    },{passive:false});
-}
-const observedSections=studyNavLinks.map(link=>document.getElementById(link.dataset.section)).filter(Boolean);
-if('IntersectionObserver' in window){
-    const observer=new IntersectionObserver(entries=>{
-        if(programmaticStudyScroll)return;
-        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
-        if(visible.length)setActiveStudyNav(visible[0].target.id,true);
-    },{root:null,rootMargin:'-190px 0px -58% 0px',threshold:[.05,.2,.5]});
-    observedSections.forEach(section=>observer.observe(section));
-}
-['wheel','touchstart','pointerdown'].forEach(evt=>{
-    window.addEventListener(evt,()=>{
-        if(programmaticStudyScroll){
-            programmaticStudyScroll=false;
-            clearTimeout(studyScrollReleaseTimer);
-        }
-    },{passive:true});
-});
-window.addEventListener('resize',()=>{updateStickyPositions();updateStudyNavArrows();});
-requestAnimationFrame(()=>{
-    updateStickyPositions();
-    updateStudyNavArrows();
-    const initial=location.hash?location.hash.slice(1):(observedSections[0]?.id||'');
-    if(initial&&document.getElementById(initial)){
-        setActiveStudyNav(initial,true);
-        if(location.hash)requestAnimationFrame(()=>scrollToStudySection(initial,false));
-    }
-});
-
-</script>
+<script src="../assets/study.js" defer></script>
 </body></html>

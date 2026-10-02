@@ -1,0 +1,123 @@
+/* ============================================================
+   Centro de Estudo — Treino Ativo
+   Shared by all UC treino pages.
+   ============================================================ */
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  padding: .8rem;
+  border-radius: .9rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color .15s, background-color .15s, transform .1s;
+}
+
+.dark .option {
+  border-color: #334155;
+  background: #0b1220;
+}
+
+.option:hover {
+  border-color: #60a5fa;
+}
+
+.option.selected {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, .08);
+}
+
+.option.correct {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, .10);
+}
+
+.option.wrong {
+  border-color: #f43f5e;
+  background: rgba(244, 63, 94, .09);
+}
+
+.letter {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  border-radius: .55rem;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: .62rem;
+  font-weight: 900;
+}
+
+.dark .letter {
+  background: #172033;
+  color: #cbd5e1;
+}
+
+.option.selected .letter {
+  background: #2563eb;
+  color: #fff;
+}
+
+.option.correct .letter {
+  background: #10b981;
+  color: #052e26;
+}
+
+.option.wrong .letter {
+  background: #f43f5e;
+  color: #fff;
+}
+
+.topic-chip {
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #475569;
+  border-radius: .8rem;
+  padding: .55rem .7rem;
+  font-size: .66rem;
+  font-weight: 800;
+  text-align: left;
+  transition: border-color .15s, background-color .15s, color .15s;
+}
+
+.dark .topic-chip {
+  border-color: #334155;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+.topic-chip:hover {
+  border-color: #60a5fa;
+}
+
+.progressbar {
+  height: 6px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.dark .progressbar {
+  background: #1e293b;
+}
+
+.progressbar > div {
+  height: 100%;
+  background: #3b82f6;
+  transition: width .2s;
+}
+
+/* The question-session status bar always stays below the real
+   app header + local UC navigation, regardless of search/header height. */
+.training-session-head {
+  top: calc(var(--study-shell-offset, 124px) + 8px);
+}
+
+/* Ensure the UC navigation itself never relies on a hard-coded 65px top. */
+#uc-local-nav {
+  top: var(--app-header-height, 65px);
+}

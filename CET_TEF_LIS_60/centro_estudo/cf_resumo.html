@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Resumo — Coaching no Fitness</title>
+<meta id="theme-color-meta" name="theme-color" content="#090d16">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/study.css">
+</head>
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 pt-safe">
+<div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+<a href="../index.html#estudo" class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shrink-0">
+<img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" alt="Academy" class="w-full h-full object-contain">
+</div>
+<div class="min-w-0"><h1 class="font-black text-base leading-none truncate">CET_TEF_LIS_60</h1><p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Coaching no Fitness</p></div>
+</a>
+<button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><i id="theme-icon" class="fa-solid fa-sun text-amber-400 text-xs"></i></button>
+</div>
+</header>
+
+<div id="uc-local-nav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+<div class="max-w-2xl mx-auto px-4 py-2.5">
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<a href="cf_resumo.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center"><i class="fa-solid fa-book-open-reader mr-1"></i>Resumo</a>
+<a href="cf_treino.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center"><i class="fa-solid fa-brain mr-1"></i>Treino</a>
+<a href="cf_simulador.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center"><i class="fa-solid fa-vial-circle-check mr-1"></i>Simulações</a>
+</div>
+</div>
+</div>
+
+
+<nav id="topic-nav" class="sticky z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2 flex items-center gap-1.5">
+        <button id="nav-scroll-left"
+                type="button"
+                onclick="scrollStudyNav(-1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a esquerda">
+            <i class="fa-solid fa-chevron-left text-[9px]"></i>
+        </button>
+
+        <div id="study-nav-scroll"
+             class="flex-1 min-w-0 flex gap-1.5 overflow-x-auto hide-scrollbar text-[10px] scroll-smooth"
+             ><a href="#s1" data-section="s1" title="Essência do Coaching" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Coaching</a><a href="#s2" data-section="s2" title="Papéis do Coach e Perguntas Poderosas" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. Papéis</a><a href="#s3" data-section="s3" title="Pressupostos do Coaching" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Pressupostos</a><a href="#s4" data-section="s4" title="Crenças e Reenquadramento" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Crenças</a><a href="#s5" data-section="s5" title="Inteligência Emocional" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. I. Emocional</a><a href="#s6" data-section="s6" title="6 Necessidades Humanas" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Necessidades</a><a href="#s7" data-section="s7" title="Rapport e Escuta Ativa" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. Rapport</a><a href="#s8" data-section="s8" title="Comunicação e Backtracking" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. Comunicação</a><a href="#s9" data-section="s9" title="Método LASEr" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">9. LASEr</a><a href="#s10" data-section="s10" title="Feedback Sandwich e BEAR" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">10. Feedback</a><a href="#s11" data-section="s11" title="GROW, SMART, Roda da Vida e Mudança de Paradigma" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">11. GROW</a><a href="#s12" data-section="s12" title="SWOT, Road Map e Ética" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">12. SWOT/Ética</a></div>
+
+        <button id="nav-scroll-right"
+                type="button"
+                onclick="scrollStudyNav(1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a direita">
+            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+        </button>
+    </div>
+</nav>
+
+<main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
+
+<section class="mb-3 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+<i class="fa-solid fa-graduation-cap"></i> Preparação para exame
+</div>
+<h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">Coaching no Fitness</h2>
+<p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">Resumo orientado pela Lista de Saberes e pelos conteúdos das Aulas 1–4, com foco nos conceitos, modelos e ferramentas que precisas de reconhecer, distinguir e aplicar no exame.</p>
+<div class="grid grid-cols-3 gap-2 mt-4">
+<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800"><div class="font-black text-base text-slate-900 dark:text-white">12</div><div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Temas</div></div>
+<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800"><div class="font-black text-base text-slate-900 dark:text-white">80</div><div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Perguntas</div></div>
+<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800"><div class="font-black text-base text-slate-900 dark:text-white">40</div><div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Questões/exame</div></div>
+</div>
+</section>
+<section class="mb-5 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+<h2 class="font-black text-sm text-amber-700 dark:text-amber-300"><i class="fa-solid fa-key mr-1"></i>Pontos-chave que tens mesmo de saber</h2>
+<p class="text-xs leading-relaxed mt-2 text-slate-700 dark:text-slate-300">Definir coaching e os quatro papéis do coach; dominar os 10 pressupostos; distinguir crenças potenciadoras/limitadoras e reenquadramento; reconhecer os quatro domínios da inteligência emocional e as seis necessidades humanas; construir rapport através de escuta, comunicação e adaptação; distinguir mirroring/matching e psicogeografia; dominar LASEr; aplicar Sandwich e BEAR; saber GROW + SMART + Roda da Vida + mudança de paradigma; utilizar SWOT e Road Map; e reconhecer os princípios éticos/deontológicos.</p>
+</section>
+<div class="space-y-6">
+<section id="s1" class="study-card study-section">
+<span class="pill">Tema 1</span>
+<h2>1. Essência do Coaching</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Definição de Coaching</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Segundo a ICF apresentada nos slides, coaching é uma <b>parceria</b> com o cliente num processo estimulante e criativo que o inspira a maximizar o seu potencial pessoal e profissional. É apresentado também como um processo para desenvolver, desafiar, apoiar e capacitar através de perguntas e outras técnicas.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">O que não é Coaching</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Nos materiais, coaching <b>não é terapia, formação, mentoria nem psicoterapia</b>. O TEF deve reconhecer estes limites e não substituir profissionais de outras áreas.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Coach e Coachee</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Coach</b> = quem conduz a sessão/processo. <b>Coachee</b> = pessoa acompanhada na direção do objetivo que pretende alcançar.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Processo e resultado</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">É um processo porque tem princípio, meio e fim. Deve existir um resultado/objetivo concretizado ou uma progressão objetiva na direção definida.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Coaching vs instrução técnica</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Sem coaching, a abordagem tende a centrar-se no exercício e no «o quê». Com coaching, centra-se mais na pessoa, nos motivos, no «para quê», em perguntas, consciência, autonomia e objetivos co-criados.</p>
+</div>
+</div>
+</section>
+<section id="s2" class="study-card study-section">
+<span class="pill">Tema 2</span>
+<h2>2. Papéis do Coach e Perguntas Poderosas</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Quatro papéis do Coach</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Desenvolver · Desafiar · Apoiar · Capacitar.</b> Desenvolver = ampliar competências já existentes; desafiar = ajudar a ir mais longe/criar novas possibilidades; apoiar = estar presente nos momentos difíceis; capacitar = fornecer nova competência ou forma de pensar.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Perguntas como ferramenta central</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Pressuposto-chave: <b>«O coach tem as perguntas, o cliente tem as respostas.»</b> As perguntas devem promover reflexão, clareza, novas perspetivas e tomada de decisão.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Perguntas poderosas</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Podem abrir novos caminhos, gerar pensamento diferente, aumentar clareza e criar novas perspetivas. Devem estar ligadas ao objetivo e à realidade do cliente.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Abertas vs fechadas</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Abertas</b> permitem várias respostas e favorecem exploração. <b>Fechadas</b> limitam as respostas e tendem a gerar menos partilha. Nos slides recomenda-se evitar começar perguntas por «Porquê?» quando isso pode gerar defesa.</p>
+</div>
+</div>
+</section>
+<section id="s3" class="study-card study-section">
+<span class="pill">Tema 3</span>
+<h2>3. Pressupostos do Coaching</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">1–4</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Perguntas:</b> o coach tem perguntas e o cliente respostas. <b>Respeito:</b> o mapa não é o território. <b>Feedback:</b> não há falha, só feedback. <b>Recursos:</b> as pessoas têm recursos dentro delas ou podem adquiri-los.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">5–7</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Melhor opção no momento:</b> a pessoa escolhe a melhor opção disponível no contexto. <b>Causa-Efeito:</b> cada pessoa cria a sua própria realidade. <b>Ação:</b> se queres compreender, age.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">8–10</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Flexibilidade:</b> se não tens resultados, faz de outra forma. <b>Positivo:</b> todo o comportamento tem por detrás uma intenção positiva. <b>Não imposição:</b> estes pressupostos não devem ser impostos ao cliente.</p>
+</div>
+</div>
+</section>
+<section id="s4" class="study-card study-section">
+<span class="pill">Tema 4</span>
+<h2>4. Crenças e Reenquadramento</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Definição de crença</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Convicções, ideias ou suposições, conscientes ou inconscientes, sobre o mundo e a vida. Funcionam como uma lente que molda perceções, atitudes e comportamentos.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Como se formam</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Experiências pessoais; influências sociais e culturais; autoridade e educação; informação, interpretação e generalização; recompensas e punições.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Potenciadoras vs limitadoras</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Potenciadoras</b> facilitam ação e desenvolvimento. <b>Limitadoras</b> restringem perceção de possibilidades e comportamento.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Reenquadramento cognitivo</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Sequência apresentada: <b>Escuta ativa → Pergunta poderosa → Ponte → Nova lente.</b> O objetivo é ajudar a pessoa a observar a situação através de uma perspetiva diferente.</p>
+</div>
+</div>
+</section>
+<section id="s5" class="study-card study-section">
+<span class="pill">Tema 5</span>
+<h2>5. Inteligência Emocional</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Definição</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Capacidade de reconhecer os próprios sentimentos e os dos outros, motivar-nos e gerir emoções em nós próprios e nas relações.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo misto de Goleman</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Quatro domínios: <b>Autoconsciência · Autorregulação · Consciência social · Gerir relacionamentos.</b></p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Autoconsciência</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Reconhecer e compreender emoções próprias e o seu impacto nos pensamentos e comportamentos. Exemplo dos slides: diário emocional.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Autorregulação</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Gerir emoções eficazmente, sobretudo em stress/conflito, mantendo controlo emocional e adaptação. Exemplo: técnica respiratória 4-7-8.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Consciência social</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Compreender emoções, necessidades e preocupações dos outros; inclui empatia. A escuta ativa é apresentada como ferramenta.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Gerir relacionamentos</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Influenciar, inspirar e gerir conflitos de forma positiva e colaborativa; nos slides surge o «caminho do meio/win-win».</p>
+</div>
+</div>
+</section>
+<section id="s6" class="study-card study-section">
+<span class="pill">Tema 6</span>
+<h2>6. Seis Necessidades Humanas — Tony Robbins</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">As seis necessidades</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Certeza · Variedade · Importância · Amor & Conexão · Crescimento · Contribuição.</b></p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Princípio central</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Todos têm estas seis necessidades. O que varia é a <b>prioridade</b> dada a cada uma e a <b>forma</b> usada para as satisfazer.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Certeza e Variedade</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Certeza</b> = estabilidade, segurança, previsibilidade. <b>Variedade</b> = novidade, mudança, estímulo.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Importância e Amor &amp; Conexão</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Importância</b> = sentir-se especial/reconhecido. <b>Amor & Conexão</b> = vínculo, proximidade, pertença.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Crescimento e Contribuição</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Crescimento</b> = desenvolver-se/evoluir. <b>Contribuição</b> = dar para além de si próprio e participar em algo maior.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Nota dos materiais</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Os slides referem que quando uma mesma ação/situação satisfaz pelo menos 3 das 4 primeiras necessidades pode tornar-se altamente reforçadora/«vício» no enquadramento apresentado.</p>
+</div>
+</div>
+</section>
+<section id="s7" class="study-card study-section">
+<span class="pill">Tema 7</span>
+<h2>7. Rapport e Escuta Ativa</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Definição de Rapport</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Capacidade de entrar no «mundo» da outra pessoa, fazê-la sentir-se compreendida e criar um forte laço comum. Nos slides associa-se a <b>confiança e influência</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Importância do Rapport</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Promove comunicação mais aberta, desenvolve confiança e favorece novas perspetivas.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Ausência de Rapport</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">É associada às respostas de stress <b>fight · flight · freeze</b> — lutar, fugir ou congelar.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Como criar Rapport</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Os materiais destacam <b>escuta ativa, comunicação verbal e não verbal e compreensão da psicologia do outro</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Escuta ativa</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ouvir e responder de forma a garantir compreensão mútua genuína. Exige presença e atenção consciente, não apenas ouvir palavras.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Níveis de atenção</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Palavras, gestos, expressão corporal e emoções. O objetivo é criar um espaço em que a pessoa se sinta verdadeiramente ouvida e compreendida.</p>
+</div>
+</div>
+</section>
+<section id="s8" class="study-card study-section">
+<span class="pill">Tema 8</span>
+<h2>8. Comunicação, Backtracking e Comunicação Não Verbal</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação eficaz</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O processo não é linear; deve verificar-se a compreensão do recetor. Tende a ser mais eficaz quando é <b>bidirecional</b> e quando contexto e tarefa são conhecidos.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação verbal</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Toda a comunicação através de linguagem falada ou escrita. Elementos destacados: escolha das palavras, energia verbal e referências pessoais de nomes.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Backtracking</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Resumo dos pontos centrais usando as <b>mesmas palavras da outra pessoa</b>. Demonstra escuta, ajuda a processar a sessão e cria síntese/clarificação.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Comunicação não verbal</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Inclui linguagem corporal: expressões faciais, posturas, distância física, movimentos e gestos; estende-se também a sinalética, aparência, cores, símbolos e imagens.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Observação do corpo</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Deve ser feita em contexto. Os slides destacam baseline, mudanças súbitas, sinais incongruentes, conforto/desconforto e observação subtil.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Mirroring vs Matching</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Mirroring:</b> posição em espelho/simétrica. <b>Matching:</b> adotar a mesma posição. O objetivo é criar maior sintonia sem artificialidade.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Psicogeografia</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Analisa o efeito do ambiente e da geografia/espaço nas emoções e comportamentos. A distância PT–aluno deve ser a que for mais confortável para o aluno.</p>
+</div>
+</div>
+</section>
+<section id="s9" class="study-card study-section">
+<span class="pill">Tema 9</span>
+<h2>9. Método LASEr</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">O que é</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Modelo de Pedro Vieira com quatro cores/energias ou estratégias comportamentais. Permite identificar comportamentos, ligá-los a necessidades psicológicas, criar relações rápidas/empáticas e influenciar comportamentos.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Energia Laranja</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Movimento, ação, criatividade, mudança, multitasking, experimentar, arriscar e expressão. Necessidade associada: <b>Experiência/Novidade</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Energia Vermelha</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ação, eficácia, orientação para objetivo, decisão, assertividade e linguagem simples. Necessidade: <b>Importância/Reconhecimento</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Energia Azul</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Organização, planeamento, análise, procedimentos, linguagem cuidada, tradição/rotina. Necessidade: <b>Conhecimento/Segurança</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Energia Verde</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Mundo interior, tranquilidade, valorização do outro, valores, causas sociais e silêncio. Necessidade: <b>Ligação/Pertença</b>.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Ativação das energias</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Sequência: <b>1) identificar a energia atual → 2) definir a intenção/energia pretendida → 3) ativação mental e física.</b> Podem adaptar-se palavras, movimentos, expressões faciais e tom de voz.</p>
+</div>
+</div>
+</section>
+<section id="s10" class="study-card study-section">
+<span class="pill">Tema 10</span>
+<h2>10. Feedback — Sandwich e BEAR</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Feedback Sandwich</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Usado quando existe bom desempenho com aspetos a melhorar: <b>1) destacar pontos positivos → 2) mostrar o que pode melhorar → 3) terminar com motivação/encorajamento.</b></p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Feedback Corretivo BEAR</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Indicado para baixa performance: <b>Behaviour</b> — descrever comportamento; <b>Effect</b> — impacto; <b>Alternative</b> — dar espaço para encontrar solução; <b>Result</b> — consequências da solução.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Boas práticas de feedback</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ser descritivo, sem julgamento; específico e não genérico; orientado para as necessidades do recetor e não para descarregar frustração; validar no final.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Aplicação prática</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O objetivo do feedback é promover desenvolvimento e consciência, não humilhar, rotular ou substituir a autonomia do cliente.</p>
+</div>
+</div>
+</section>
+<section id="s11" class="study-card study-section">
+<span class="pill">Tema 11</span>
+<h2>11. GROW, SMART, Roda da Vida e Mudança de Paradigma</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Modelo GROW</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5"><b>Goal</b> — What do you want? · <b>Reality</b> — Where are you now? · <b>Options</b> — What could you do? · <b>Will</b> — What will you do?</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Goal + SMART</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">O Goal deve ser <b>Specific, Measurable, Attainable, Relevant e Time-bound</b> e, nos materiais, definido pela positiva.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Reality + Roda da Vida</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Explora «Onde estás agora?», satisfação, o que corre bem/mal. A <b>Roda da Vida</b> ajuda a classificar áreas de 0 a 10 e a visualizar a situação atual.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Options + Mudança de Paradigma</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Procura alternativas: «O que podes fazer?», «Que mais?». A mudança de paradigma ajuda a romper barreiras/padrões limitadores e gerar opções novas.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Will</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Clarifica ação e compromisso: <b>o que vais fazer, quando, onde, com quem</b> e como saber que foi concretizado.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Expansão de perspetiva</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Nos slides aparecem posições percetivas, «varinha mágica» e role model/cadeira vazia como formas de gerar opções.</p>
+</div>
+</div>
+</section>
+<section id="s12" class="study-card study-section">
+<span class="pill">Tema 12</span>
+<h2>12. SWOT, Road Map e Princípios Éticos</h2>
+<div class="grid gap-2">
+<div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">SWOT</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Ferramenta de tomada de decisão: <b>Strengths (Pontos Fortes) · Weaknesses (Pontos Fracos) · Opportunities (Oportunidades) · Threats (Ameaças).</b> Permite comparar cenários e pensar num plano B.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Perguntas de conclusão na SWOT</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Depois de pesar os elementos: qual a melhor solução? E pergunta de congruência: essa solução está adequada à pessoa? Há algo a acrescentar?</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Road Map</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">1) definir objetivo; 2) construir linha temporal presente→futuro; 3) posicionar-se na data futura; 4) recuar perguntando o que aconteceu um passo antes; 5) anotar passos e construir rota de ações.</p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Princípios Éticos e Deontológicos</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">Destacados: <b>confidencialidade e privacidade · não discriminação · informações verdadeiras e exatas · clareza nas informações · encorajamento do cliente para mudar · respeito e liberdade do cliente.</b></p>
+</div><div class="study-subcard">
+<h3 class="font-black text-sm text-slate-900 dark:text-white">Aplicação profissional</h3>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300 mt-1.5">As ferramentas de coaching e feedback devem ser usadas respeitando limites profissionais e a autonomia do cliente. Coaching não substitui diagnóstico, psicoterapia ou intervenção clínica.</p>
+</div>
+</div>
+</section>
+</div></main>
+
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe">
+<div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+<a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-calendar-days"></i><span class="font-bold text-[10px]">Agenda</span></a>
+<a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center text-blue-600 dark:text-blue-400"><i class="fa-solid fa-book-open-reader"></i><span class="font-bold text-[10px]">Estudo</span></a>
+<a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-graduation-cap"></i><span class="font-bold text-[10px]">Curso</span></a>
+</div>
+</nav>
+
+
+<script src="../assets/study.js" defer></script>
+</body></html>

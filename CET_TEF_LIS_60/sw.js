@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v12';
+const CACHE_NAME = 'cet-tef-v16';
 
 const CORE_URLS = [
   './',
@@ -10,6 +10,15 @@ const CORE_URLS = [
 const OPTIONAL_URLS = [
   './plano_mj.html',
   './plano.html',
+
+  // Design partilhado do Centro de Estudo
+  './assets/app.css',
+  './assets/study.css',
+  './assets/study.js',
+  './assets/training.css',
+  './assets/training.js',
+  './assets/simulator.css',
+  './assets/simulator.js',
 
   // Simuladores por UC
   './simuladores/index.html',
@@ -36,10 +45,18 @@ const OPTIONAL_URLS = [
   './centro_estudo/pevs_treino.html',
   './centro_estudo/pevs_simulador.html',
   './centro_estudo/pevs_banco_80_perguntas.json',
+
+  // Centro de Estudo — Pedagogia do Exercício
   './centro_estudo/pedex_resumo.html',
   './centro_estudo/pedex_treino.html',
   './centro_estudo/pedex_simulador.html',
-  './centro_estudo/pedex_banco_80_perguntas.json'
+  './centro_estudo/pedex_banco_80_perguntas.json',
+
+  // Centro de Estudo — Coaching no Fitness
+  './centro_estudo/cf_resumo.html',
+  './centro_estudo/cf_treino.html',
+  './centro_estudo/cf_simulador.html',
+  './centro_estudo/cf_banco_80_perguntas.json'
 ];
 
 self.addEventListener('install', event => {
@@ -81,10 +98,7 @@ self.addEventListener('fetch', event => {
 
   if (request.method !== 'GET') return;
 
-  if (
-    !request.url.startsWith('http://') &&
-    !request.url.startsWith('https://')
-  ) {
+  if (!request.url.startsWith('http://') && !request.url.startsWith('https://')) {
     return;
   }
 
@@ -108,18 +122,12 @@ self.addEventListener('fetch', event => {
         return response;
       } catch (error) {
         const cached = await cache.match(request);
-
-        if (cached) {
-          return cached;
-        }
+        if (cached) return cached;
 
         // Fallback da app para navegação offline.
         if (request.mode === 'navigate') {
           const appShell = await cache.match('./index.html');
-
-          if (appShell) {
-            return appShell;
-          }
+          if (appShell) return appShell;
         }
 
         throw error;

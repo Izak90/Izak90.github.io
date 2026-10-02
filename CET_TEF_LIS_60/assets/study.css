@@ -1,0 +1,278 @@
+/* ============================================================
+   Centro de Estudo — shared summary design
+   Used by PEVS, PEDEX, CF and future UCs.
+   ============================================================ */
+
+.study-section {
+  margin-bottom: 1.5rem;
+  scroll-margin-top: 220px;
+}
+
+/* Main theme card */
+.study-card {
+  scroll-margin-top: 220px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  margin: .65rem 0;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+
+.dark .study-card {
+  background: rgba(15, 23, 42, .60);
+  border-color: #1e293b;
+}
+
+.study-card > .pill,
+.study-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .55rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, .10);
+  border: 1px solid rgba(59, 130, 246, .28);
+  color: #2563eb;
+  font-size: .58rem;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.dark .study-card > .pill,
+.dark .study-pill {
+  color: #60a5fa;
+}
+
+.study-card > h2 {
+  margin: .55rem 0 .8rem;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.dark .study-card > h2 {
+  color: #fff;
+}
+
+.study-card p,
+.study-card li,
+.study-card td,
+.study-card th,
+.study-card summary {
+  font-size: .75rem;
+  line-height: 1.55;
+}
+
+.study-card p,
+.study-card li {
+  color: #475569;
+}
+
+.dark .study-card p,
+.dark .study-card li {
+  color: #cbd5e1;
+}
+
+/* Inner cards used by the 3 current UCs */
+.study-subcard {
+  border: 1px solid #e2e8f0;
+  border-radius: .9rem;
+  padding: .875rem;
+  background: #f8fafc;
+}
+
+.dark .study-subcard {
+  border-color: #1e293b;
+  background: rgba(2, 6, 23, .52);
+}
+
+.study-subcard h3 {
+  margin: 0 0 .35rem;
+  font-size: .875rem;
+  line-height: 1.3;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.dark .study-subcard h3 {
+  color: #fff;
+}
+
+.study-subcard p {
+  margin-top: .25rem;
+}
+
+/* PEVS-style responsive content grids */
+.study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: .5rem;
+}
+
+.study-mini {
+  border: 1px solid #e2e8f0;
+  border-radius: .9rem;
+  padding: .75rem;
+  background: #f8fafc;
+  color: #334155;
+  font-size: .73rem;
+  line-height: 1.5;
+}
+
+.dark .study-mini {
+  background: #0f172a;
+  border-color: #1e293b;
+  color: #cbd5e1;
+}
+
+.study-mini h3 {
+  margin: 0 0 .3rem;
+  font-size: .77rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.dark .study-mini h3 {
+  color: #fff;
+}
+
+/* Callout blocks */
+.study-key {
+  border-left: 3px solid #3b82f6;
+  padding: .7rem .8rem;
+  background: rgba(59, 130, 246, .06);
+  border-radius: .7rem;
+  margin: .65rem 0;
+  color: #334155;
+  font-size: .73rem;
+  line-height: 1.5;
+}
+
+.dark .study-key {
+  background: rgba(59, 130, 246, .08);
+  color: #cbd5e1;
+}
+
+.study-key.warn {
+  border-left-color: #f59e0b;
+}
+
+.study-key.ok {
+  border-left-color: #10b981;
+}
+
+/* Tables and expandable blocks */
+.study-card table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: .65rem 0;
+  font-size: .68rem;
+  border: 1px solid #e2e8f0;
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+.dark .study-card table {
+  border-color: #1e293b;
+}
+
+.study-card th,
+.study-card td {
+  padding: .55rem;
+  text-align: left;
+  vertical-align: top;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark .study-card th,
+.dark .study-card td {
+  border-color: #1e293b;
+}
+
+.study-card th {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 800;
+}
+
+.dark .study-card th {
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+.study-card tr:last-child td {
+  border-bottom: 0;
+}
+
+.study-card th:last-child,
+.study-card td:last-child {
+  border-right: 0;
+}
+
+.study-card details {
+  border: 1px solid #e2e8f0;
+  border-radius: .8rem;
+  padding: .65rem .75rem;
+  margin: .5rem 0;
+  background: #fff;
+}
+
+.dark .study-card details {
+  border-color: #1e293b;
+  background: #0f172a;
+}
+
+.study-card summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dark .study-card summary {
+  color: #fff;
+}
+
+/* Horizontal topic navigation */
+.study-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  line-height: 1.2;
+  padding: .45rem .7rem !important;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: none;
+}
+
+.study-nav.is-active {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+#study-nav-scroll {
+  padding: 1px 10px 2px;
+  scroll-padding-left: 10px;
+  scroll-padding-right: 10px;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+}
+
+/* Search hides non-matching topics without reflow bugs */
+.study-search-hidden {
+  display: none !important;
+}
+
+@media (max-width: 620px) {
+  .study-card table {
+    display: block;
+    overflow-x: auto;
+  }
+}

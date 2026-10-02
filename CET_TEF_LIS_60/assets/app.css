@@ -1,0 +1,70 @@
+:root {
+  --app-bg: #f8fafc;
+  --app-bg-dark: #090d16;
+  --app-card: #ffffff;
+  --app-card-dark: rgba(15, 23, 42, .62);
+  --app-border: #e2e8f0;
+  --app-border-dark: #1e293b;
+  --app-text: #0f172a;
+  --app-text-muted: #64748b;
+  --app-text-dark: #f8fafc;
+  --app-text-muted-dark: #94a3b8;
+  --app-accent: #2563eb;
+  --app-accent-soft: rgba(59, 130, 246, .10);
+  --app-radius: 1.25rem;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.touch-active:active {
+  transform: scale(.97);
+  transition: transform .1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+.pb-safe {
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shared shell hooks */
+#uc-local-nav,
+#topic-nav {
+  will-change: top;
+}
+
+.app-bottom-nav {
+  height: calc(56px + env(safe-area-inset-bottom));
+}
