@@ -167,7 +167,26 @@
         @media(max-width:620px) {
             table { display:block; overflow-x:auto; }
         }
-    </style>
+    
+.study-nav{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:32px;
+    line-height:1.2;
+    padding-left:.7rem !important;
+    padding-right:.7rem !important;
+    overflow:visible;
+    text-overflow:clip;
+    max-width:none;
+}
+#study-nav-scroll{
+    padding:1px 10px 2px;
+    scroll-padding-left:10px;
+    scroll-padding-right:10px;
+}
+
+</style>
 </head>
 
 <body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
@@ -234,7 +253,7 @@
 
     <!-- NAVEGAÇÃO LOCAL DA UC - FIXA ABAIXO DO HEADER -->
     <div id="uc-local-nav"
-         class="sticky top-[65px] z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+         class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
         <div class="max-w-2xl mx-auto px-4 py-2.5">
             <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                 <a href="pevs_resumo.html"
@@ -254,9 +273,11 @@
     </div>
 
     <!-- NAVEGAÇÃO DOS TEMAS -->
-    <nav class="sticky top-[124px] z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+
+<nav id="topic-nav" class="sticky z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
     <div class="max-w-2xl mx-auto px-4 py-2 flex items-center gap-1.5">
         <button id="nav-scroll-left"
+                type="button"
                 onclick="scrollStudyNav(-1)"
                 class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
                 aria-label="Deslocar temas para a esquerda">
@@ -266,18 +287,11 @@
         <div id="study-nav-scroll"
              class="flex-1 min-w-0 flex gap-1.5 overflow-x-auto hide-scrollbar text-[10px] scroll-smooth"
              style="overscroll-behavior-x:contain; touch-action:pan-x;">
-            <a href="#desinfo" data-section="desinfo" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Desinformação</a>
-            <a href="#evidencia" data-section="evidencia" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. Evidência</a>
-            <a href="#numeros" data-section="numeros" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Números AF</a>
-            <a href="#saude" data-section="saude" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Saúde</a>
-            <a href="#conceitos" data-section="conceitos" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. Conceitos AF</a>
-            <a href="#rec24" data-section="rec24" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Recomendações 24h</a>
-            <a href="#segura" data-section="segura" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. AF Segura</a>
-            <a href="#dnt" data-section="dnt" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. DNT</a>
-            <a href="#check" data-section="check" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">Checklist</a>
+            <a href="#desinfo" data-section="desinfo" title="Desinformação em Saúde" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Desinformação</a><a href="#evidencia" data-section="evidencia" title="Evidência Científica em Saúde" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. Evidência</a><a href="#numeros" data-section="numeros" title="Os Números da Atividade Física" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Números AF</a><a href="#saude" data-section="saude" title="Conceitos de Saúde" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Saúde</a><a href="#conceitos" data-section="conceitos" title="Atividade Física e Comportamento Sedentário" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. Conceitos AF</a><a href="#rec24" data-section="rec24" title="Recomendações de 24 horas" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Recomendações</a><a href="#segura" data-section="segura" title="Atividade Física Segura" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. AF Segura</a><a href="#dnt" data-section="dnt" title="Doenças Não Transmissíveis" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. DNT</a><a href="#check" data-section="check" title="Checklist de revisão" class="study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">Checklist</a>
         </div>
 
         <button id="nav-scroll-right"
+                type="button"
                 onclick="scrollStudyNav(1)"
                 class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
                 aria-label="Deslocar temas para a direita">
@@ -287,89 +301,231 @@
 </nav>
 
     <main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
+        
         <section class="mb-3 rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
             <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
-                <i class="fa-solid fa-book-open-reader"></i>
-                Resumo de estudo
+                <i class="fa-solid fa-graduation-cap"></i>
+                Preparação para exame
             </div>
+            <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">Promoção de Estilos de Vida Saudável</h2>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">Resumo orientado para a avaliação, organizado pelos temas nucleares da UC e focado no que precisas de reconhecer, distinguir, explicar e aplicar.</p>
 
-            <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">
-                Revisão orientada para exame
-            </h2>
-
-            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
-                Resumo orientado pela Lista de Saberes e pelos materiais da UC, com foco nos conceitos e valores mais importantes para avaliação.
-            </p>
-
-            <div class="mt-3 flex items-center gap-2 flex-wrap">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[9px] font-bold">
-                    <i class="fa-solid fa-list-check"></i>
-                    Revisão por temas
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[9px] font-bold">
-                    <i class="fa-solid fa-bullseye"></i>
-                    Foco em avaliação
-                </span>
+            <div class="grid grid-cols-3 gap-2 mt-4">
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div class="font-black text-base text-slate-900 dark:text-white">8</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Temas</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div class="font-black text-base text-slate-900 dark:text-white">80</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Perguntas</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div class="font-black text-base text-slate-900 dark:text-white">40</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Questões/exame</div>
+                </div>
             </div>
         </section>
 
-        <div id="study-content">
-            <section class="card" id="desinfo"><span class="pill">Tema 1</span><h2>1. Desinformação em Saúde</h2>
-<div class="grid"><div class="mini"><h3>Desinformação</h3>Informação falsa criada e partilhada <b>deliberadamente</b>, com intenção de causar dano, influenciar ou obscurecer a verdade.</div><div class="mini"><h3>Misinformation</h3>Informação falsa partilhada <b>sem intenção de causar dano</b>.</div><div class="mini"><h3>Fake news</h3>Informação falsa apresentada em formato de “notícia”, por vezes imitando órgãos de comunicação.</div><div class="mini"><h3>Teoria da conspiração</h3>Explicação de acontecimentos através de complôs secretos de grupos/instituições poderosos e mal-intencionados.</div></div>
-<div class="key"><b>Diferença de exame:</b> desinformação = intenção; misinformation = erro sem intenção.</div>
-<p><b>Infodemia:</b> superabundância de informação, incluindo informação falsa ou enganadora, especialmente relevante durante emergências de saúde.</p>
-<p><b>Prevenção:</b> verificar autor, data, objetivo, fontes, referências, validação por entidades credíveis e existência de interesses comerciais. “Curas milagrosas”, testemunhos isolados e ausência de fontes são sinais de alerta. Fact-checking, refutação factual e literacia dos media são estratégias centrais.</p></section>
+        <section class="mb-5 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+            <h2 class="font-black text-sm text-amber-700 dark:text-amber-300">
+                <i class="fa-solid fa-key mr-1"></i>Pontos-chave que tens mesmo de saber
+            </h2>
+            <p class="text-xs leading-relaxed mt-2 text-slate-700 dark:text-slate-300">Distinguir desinformação, misinformation e fake news; reconhecer níveis de evidência científica; diferenciar prevalência de incidência e correlação de causalidade; interpretar os principais números de atividade física; distinguir atividade física, exercício e comportamento sedentário; conhecer recomendações de 24 horas; identificar princípios de prática segura; e relacionar atividade física com prevenção e gestão das DNT.</p>
+        </section>
+<div id="study-content">
+            <section class="card" id="desinfo">
 
-<section class="card" id="evidencia"><span class="pill">Tema 2</span><h2>2. Evidência Científica em Saúde</h2>
-<p><b>Pirâmide da evidência:</b> no topo surgem guidelines de prática clínica e revisões sistemáticas; seguem-se ensaios clínicos, estudos de coorte, caso-controlo, relatos de caso, opinião de especialistas e estudos animais/laboratoriais.</p>
-<div class="key"><b>Revisão por pares:</b> investigadores independentes analisam o manuscrito e dão feedback antes da decisão editorial. Não garante perfeição, mas aumenta o escrutínio científico.</div>
-<div class="grid"><div class="mini"><h3>Prevalência</h3>Casos <b>existentes</b> numa população num determinado momento/período. “Quantos têm isto?”</div><div class="mini"><h3>Incidência</h3><b>Novos casos</b> que surgem numa população ao longo de um período. “Quantos apareceram?”</div></div>
-<p><b>Correlação ≠ causalidade.</b> Duas variáveis podem variar juntas sem que uma cause a outra. O exemplo dos slides usa vendas de gelados e ataques de tubarão, ambos influenciados pelo bom tempo.</p>
-<p><b>Bradford Hill:</b> força da associação, consistência, especificidade, temporalidade, gradiente biológico, plausibilidade biológica, coerência, evidência experimental e analogia. São <b>guidelines</b>, não uma checklist obrigatória.</p></section>
+<span class="pill">Tema 1</span><h2>1. Desinformação em Saúde</h2>
+<div class="grid">
+<div class="mini"><h3>Desinformação</h3>Informação falsa criada e partilhada <b>deliberadamente</b>, com intenção de causar dano, influenciar a opinião pública ou obscurecer a verdade.</div>
+<div class="mini"><h3>Misinformation</h3>Informação falsa ou errónea partilhada <b>sem intenção de causar dano</b>.</div>
+<div class="mini"><h3>Fake news</h3>Informação falsa apresentada sob a forma de “notícia”, por vezes imitando órgãos de comunicação social.</div>
+<div class="mini"><h3>Teoria da conspiração</h3>Explicação de acontecimentos significativos como complôs secretos de instituições, grupos ou indivíduos poderosos e mal-intencionados.</div>
+</div>
+<div class="key"><b>Diferença essencial:</b> desinformação envolve intenção deliberada; misinformation pode ser partilhada sem intenção de enganar.</div>
+<p><b>Infodemia:</b> superabundância de informação, incluindo informação falsa ou enganadora, em ambientes digitais e físicos durante uma emergência de saúde.</p>
+<p><b>Desinformação nas redes sociais:</b> pode ser favorecida pela facilidade de publicação por não-peritos, perda de confiança em instituições credíveis, marketing enganador e circulação rápida de conteúdos insuficientemente verificados.</p>
+<div class="grid">
+<div class="mini"><h3>Truques usados nas fake news</h3><b>Impersonação</b>, <b>fabricação</b>, <b>linguagem emocional</b>, <b>criação de conspirações</b>, <b>trolling</b> e <b>desacreditação</b>.</div>
+<div class="mini"><h3>Reconhecer informação de confiança</h3>Verificar quem produziu a informação, data de publicação/revisão, objetivo, fontes/referências, validação por entidades credíveis, aspeto profissional e existência de interesse comercial ou promessa de “cura milagrosa”.</div>
+</div>
+<p><b>Prevenção e controlo:</b> refutar informação falsa com factos, melhorar literacia em informação e media, promover partilha consciente, recorrer a fact-checking e reportar desinformação online.</p>
 
-<section class="card" id="numeros"><span class="pill">Tema 3</span><h2>3. Os Números da Atividade Física</h2>
-<p>O Eurobarómetro 2022 distingue <b>exercício/desporto</b> de <b>outra atividade física</b> (ex.: bicicleta, dança, jardinagem). Isto evita concluir que quem não faz desporto não faz qualquer atividade física.</p>
-<div class="key"><b>Portugal:</b> os diapositivos evidenciam uma elevada proporção de pessoas que refere nunca fazer exercício/desporto e uma situação que não permite considerar a população portuguesa globalmente muito ativa.</div>
-<p><b>Comportamento sedentário:</b> avaliado, entre outros indicadores, pelo tempo passado sentado num dia normal. <b>Obstáculo principal:</b> falta de tempo. Entre as motivações surgem melhorar a saúde, melhorar a aptidão física, relaxar, divertir-se e melhorar a aparência.</p></section>
+</section>
 
-<section class="card" id="saude"><span class="pill">Tema 4</span><h2>4. Conceitos de Saúde</h2>
-<p><b>Saúde:</b> não é apenas ausência de doença; inclui bem-estar físico, mental e social. Pode ser entendida como um continuum entre polos mais positivos e negativos.</p>
-<p><b>Saúde pública:</b> arte e ciência de prevenir doença, prolongar a vida e promover saúde através de esforços organizados da sociedade.</p>
-<table><tr><th>Nível</th><th>Ideia-chave</th><th>Exemplo</th></tr><tr><td>Primária</td><td>Antes de doença instalada</td><td>Promoção de atividade física</td></tr><tr><td>Secundária</td><td>Diagnóstico e tratamento precoce</td><td>Identificar cedo uma condição</td></tr><tr><td>Terciária</td><td>Doença já instalada</td><td>Minimizar progressão e maximizar qualidade de vida</td></tr></table>
-<p><b>Promoção da saúde (Carta de Ottawa):</b> capacitar as pessoas para aumentarem o controlo sobre a sua saúde e melhorá-la. Estratégias: <b>defesa da causa, capacitação e mediação</b>.</p>
-<p><b>Educação para a saúde:</b> desenvolver conhecimentos, atitudes e valores que apoiem decisões adequadas para a saúde e bem-estar.</p></section>
+<section class="card" id="evidencia">
 
-<section class="card" id="conceitos"><span class="pill">Tema 5</span><h2>5. Atividade Física e Comportamento Sedentário</h2>
-<div class="grid"><div class="mini"><h3>Atividade física</h3>Qualquer movimento corporal com gasto energético acima do repouso.</div><div class="mini"><h3>Exercício físico</h3>AF planeada, estruturada e repetitiva para manter/melhorar aptidão física.</div><div class="mini"><h3>Aptidão física</h3>Conjunto de parâmetros que caracterizam a capacidade individual para praticar AF.</div><div class="mini"><h3>Desporto</h3>AF sujeita a regras/regulamentos e orientada fundamentalmente para competição.</div></div>
-<p><b>Comportamento sedentário:</b> enquanto acordado, sentado/reclinado/deitado e com dispêndio ≤1,5 MET.</p>
-<div class="key warn"><b>Não confundir:</b> inatividade física = não cumprir recomendações de AF. Sedentarismo/comportamento sedentário = acumular tempo em comportamentos sedentários. Uma pessoa pode ser <b>ativa e sedentária</b> no mesmo dia.</div></section>
+<span class="pill">Tema 2</span><h2>2. Evidência Científica em Saúde</h2>
+<p><b>Pirâmide da evidência:</b> a evidência mais forte situa-se no topo. Nos slides: <b>guidelines de prática clínica → revisões sistemáticas → ensaios clínicos → estudos de coorte → estudos caso-controlo → relatos de caso → opinião de peritos/especialistas → estudos animais/laboratoriais</b>.</p>
+<div class="key"><b>Ideia de exame:</b> opinião de especialistas e estudos animais/laboratoriais têm menor robustez do que investigação clínica sistemática.</div>
+<p><b>Artigos científicos e revisão por pares:</b> após preparação e submissão do artigo, outros investigadores analisam o manuscrito e fornecem feedback. Os revisores informam o editor sobre o potencial de publicação; o artigo pode ser aceite, revisto ou rejeitado. A revisão por pares aumenta o escrutínio, mas não garante que um estudo esteja isento de erro.</p>
+<div class="grid">
+<div class="mini"><h3>Prevalência</h3>Razão de <b>casos existentes</b> numa população num determinado momento/período. Indica quão comum é uma condição.</div>
+<div class="mini"><h3>Incidência</h3>Número de <b>novos casos</b> que aparecem numa população ao longo de um intervalo de tempo; traduz o risco/intensidade de aparecimento.</div>
+</div>
+<p><b>Correlação ≠ causalidade:</b> duas variáveis podem variar juntas sem que uma provoque a outra. Nos slides, vendas de gelados e ataques de tubarão aumentam no verão por influência de um terceiro fator: o bom tempo.</p>
+<p><b>Bradford Hill — guidelines de causalidade:</b> força da associação, consistência, especificidade, relação temporal, gradiente biológico, plausibilidade biológica, coerência, evidência experimental e analogia. <b>Não são uma checklist obrigatória.</b></p>
 
-<section class="card" id="rec24"><span class="pill">Tema 6</span><h2>6. Recomendações de 24 horas</h2>
-<table><tr><th>Faixa</th><th>Atividade física</th><th>Sedentarismo/ecrã</th><th>Sono</th></tr>
-<tr><td>&lt;1 ano</td><td>≥30 min/dia, variada</td><td>Ecrã: 0; evitar confinamento prolongado</td><td>14–17 h</td></tr>
-<tr><td>1–2 anos</td><td>≥180 min/dia</td><td>Ecrã não recomendado até aos 2 anos</td><td>11–14 h</td></tr>
-<tr><td>3–4 anos</td><td>≥180 min/dia, incluindo ≥60 min moderada-vigorosa</td><td>≤1 h ecrã/dia</td><td>10–13 h</td></tr>
-<tr><td>5–17 anos</td><td>≥60 min/dia AFMV; força/óssea ≥3 dias/sem.</td><td>Limitar tempo sentado; ecrã recreativo ≤2 h/dia</td><td>5–13: 9–11 h; 14–17: 8–10 h</td></tr>
-<tr><td>18–64 anos</td><td>150–300 min moderada ou 75–150 vigorosa/sem.; força ≥2 dias</td><td>&lt;8 h sedentário; ecrã recreativo &lt;3 h</td><td>7–9 h</td></tr>
-<tr><td>≥65 anos</td><td>Como adultos + equilíbrio/prevenção de quedas ≥3 dias</td><td>&lt;8 h sedentário; ecrã recreativo &lt;3 h</td><td>7–8 h</td></tr></table>
-<div class="key ok"><b>Regra mental:</b> adultos/idosos = <b>150–300 / 75–150 / força 2</b>; idosos acrescentam <b>equilíbrio 3</b>.</div></section>
+</section>
 
-<section class="card" id="segura"><span class="pill">Tema 7</span><h2>7. Atividade Física Segura</h2>
-<p>Os benefícios da AF regular superam largamente os riscos, mas podem ocorrer <b>lesões musculoesqueléticas</b> (mais comuns) e complicações cardiovasculares.</p>
-<ul><li>Lesões: mais frequentes em membros inferiores (joelho, pé, tornozelo); risco maior com atividade vigorosa, alto impacto e contacto.</li><li>Cardiovasculares: morte súbita cardíaca e EAM podem associar-se a esforço vigoroso.</li><li>Prevenção: triagem pré-exercício, avaliação inicial e monitorização.</li></ul>
-<p><b>Vigorexia/dismorfia muscular:</b> crença de que o corpo é demasiado pequeno ou insuficientemente musculoso; pode consumir a vida diária e associar-se a exercício excessivo, dietas restritivas e substâncias dopantes.</p>
-<p><b>EAA:</b> podem causar alterações cardiovasculares, endócrinas, hepáticas, renais e psicológicas. No homem: ginecomastia, atrofia testicular, infertilidade, disfunção erétil. Na mulher: hirsutismo, alteração da voz, irregularidades menstruais, entre outras.</p></section>
+<section class="card" id="numeros">
 
-<section class="card" id="dnt"><span class="pill">Tema 8</span><h2>8. Doenças Não-Transmissíveis e Atividade Física</h2>
-<details open><summary>Doenças cardiovasculares</summary><p>Patologias do coração e vasos. EAM e AVC são eventos agudos importantes. AVC isquémico = bloqueio; hemorrágico = rutura. Fatores modificáveis incluem tabaco, inatividade, obesidade, HTA, dislipidemia, diabetes, álcool e alimentação. AF associa-se a menor incidência/mortalidade e integra reabilitação cardíaca.</p></details>
-<details><summary>Hipertensão</summary><p>PAS = pressão durante contração; PAD = durante relaxamento. Classificação: normal &lt;120/&lt;80; elevada 120–129 e &lt;80; Grau I 130–139 ou 80–89; Grau II ≥140 ou ≥90; crise &gt;180 e/ou &gt;120. Durante aeróbio: PAS sobe e PAD mantém/baixa ligeiramente. Após exercício pode ocorrer hipotensão pós-exercício.</p></details>
-<details><summary>Diabetes</summary><p>Hiperglicemia por problemas de produção/utilização de insulina. Jejum: normal 70–99; pré-DM 100–125; DM ≥126 mg/dL. 2h após 75 g: pré-DM 140–199; DM ≥200. HbA1c: pré-DM 5,7–6,4%; DM ≥6,5%. DT1: défice de insulina; DT2: resistência à insulina e progressiva insuficiência. Sintomas: poliúria, polidipsia, polifagia, fadiga, perda de peso, visão turva.</p></details>
-<details><summary>Excesso de peso e obesidade</summary><p>IMC adultos: &lt;18,5 baixo peso; 18,5–24,9 normal; 25–29,9 excesso de peso; 30–34,9 obesidade I; 35–39,9 II; ≥40 III. É multifatorial e o IMC é um indicador indireto. AF e redução do sedentarismo integram prevenção e controlo.</p></details>
-<details><summary>Cancro</summary><p>Crescimento e replicação anormal de células; metastização = disseminação para outros órgãos/tecidos. Prevenção: não fumar, peso saudável, alimentação adequada, AF, reduzir álcool, vacinação indicada e proteção UV. AF é recomendada em várias fases da doença oncológica.</p></details>
-<details><summary>Saúde mental</summary><p>É mais do que ausência de doença; existe num continuum. AF associa-se a benefícios em cognição, qualidade de vida, ansiedade, sintomas depressivos e sono. Intensidades muito elevadas podem reduzir o prazer agudo da experiência para algumas pessoas.</p></details></section>
+<span class="pill">Tema 3</span><h2>3. Os Números da Atividade Física</h2>
+<p><b>Eurobarómetro 2022:</b> distingue “exercício/desporto” de “outra atividade física” (bicicleta, dança, jardinagem, etc.). Esta distinção é importante para interpretar corretamente os níveis de atividade.</p>
+<div class="grid">
+<div class="mini"><h3>Portugal vs União Europeia — exercício/desporto</h3>Em Portugal, <b>73%</b> referiram <b>nunca</b> fazer exercício ou praticar desporto, um dos valores mais elevados apresentados no conjunto da UE.</div>
+<div class="mini"><h3>Portugal vs União Europeia — outra atividade física</h3>No indicador “outra atividade física”, <b>72%</b> dos portugueses responderam “nunca”, comparando com <b>31%</b> no total UE27 apresentado nos slides.</div>
+</div>
+<p><b>Portugal — comparação 2022 vs 2017, exercício/desporto:</b> regularmente 4% (<b>-1 p.p.</b>), com alguma regularidade 18% (<b>-3 p.p.</b>), raramente 5% (<b>-1 p.p.</b>) e nunca 73% (<b>+5 p.p.</b>).</p>
+<p><b>Portugal — comparação 2022 vs 2017, outra atividade física:</b> regularmente 4% (-1 p.p.), com alguma regularidade 13% (-3 p.p.), raramente 11% (-4 p.p.) e nunca 72% (+8 p.p.).</p>
+<p><b>Comportamento sedentário em Portugal:</b> 21% referiram ≤2h30 sentados/dia; 47% entre 2h31 e 5h30; 20% entre 5h31 e 8h30; 9% ≥8h31; 3% não souberam responder.</p>
+<div class="grid">
+<div class="mini"><h3>Principais incentivos em Portugal</h3>1.º melhorar a saúde (49%); 2.º relaxar (46%); 3.º melhorar a preparação física (34%). Surgem ainda desempenho físico, controlo do peso, aspeto físico e divertimento.</div>
+<div class="mini"><h3>Principais obstáculos em Portugal</h3>1.º falta de tempo (44%); 2.º falta de motivação/interesse (29%); seguem-se não gostar de atividades competitivas, doença/deficiência, já praticar regularmente, medo de lesão e custo.</div>
+</div>
 
-<section class="card" id="check"><h2>Checklist de memorização antes do exame</h2><ol><li>Desinformação vs misinformation.</li><li>Prevalência vs incidência.</li><li>Correlação ≠ causalidade.</li><li>Pirâmide da evidência e revisão por pares.</li><li>AF vs exercício vs desporto vs aptidão.</li><li>Sedentário vs inativo.</li><li>Recomendações 24h e valores de sono.</li><li>Adultos: 150–300 / 75–150 / força 2; idosos: + equilíbrio 3.</li><li>HTA: normal, grau I, grau II, crise.</li><li>Diabetes: jejum ≥126; 2h ≥200; HbA1c ≥6,5%.</li><li>IMC 25 / 30 / 35 / 40.</li><li>AVC isquémico vs hemorrágico.</li><li>Hipotensão pós-exercício.</li><li>Vigorexia e riscos de EAA.</li><li>Relação AF/sedentarismo com DCV, diabetes, obesidade, cancro e saúde mental.</li></ol>
+</section>
+
+<section class="card" id="saude">
+
+<span class="pill">Tema 4</span><h2>4. Conceitos de Saúde</h2>
+<div class="grid">
+<div class="mini"><h3>Saúde</h3>Segundo a OMS, não é apenas ausência de doença: inclui bem-estar físico, mental e social. Nos slides é também apresentada como um <b>continuum</b> entre polos positivo e negativo.</div>
+<div class="mini"><h3>Saúde Pública</h3>Arte e ciência de prevenir a doença, prolongar a vida e promover a saúde através de esforços organizados da sociedade, procurando também reduzir desigualdades.</div>
+<div class="mini"><h3>Promoção da Saúde</h3>Processo que permite <b>capacitar as pessoas</b> para melhorar e aumentar o controlo sobre a própria saúde e os seus determinantes. Estratégias da Carta de Ottawa: defesa da causa, capacitação e mediação.</div>
+<div class="mini"><h3>Educação para a Saúde</h3>Desenvolvimento de conhecimentos, atitudes e valores que ajudem a fazer escolhas e tomar decisões adequadas à saúde e ao bem-estar físico, social e mental.</div>
+</div>
+<p><b>Modelos de intervenção em saúde:</b> primária = promoção/educação antes da doença; secundária = diagnóstico e tratamento precoce; terciária = doença instalada, procurando minimizar progressão e maximizar qualidade de vida.</p>
+
+</section>
+
+<section class="card" id="conceitos">
+
+<span class="pill">Tema 5</span><h2>5. Atividade Física e Comportamento Sedentário</h2>
+<div class="grid">
+<div class="mini"><h3>Atividade Física</h3>Qualquer movimento corporal produzido pelo sistema músculo-esquelético que aumente o dispêndio energético acima do repouso.</div>
+<div class="mini"><h3>Exercício Físico</h3>Atividade física <b>planeada, estruturada e repetitiva</b>, com o objetivo de aumentar ou manter a aptidão física.</div>
+<div class="mini"><h3>Desporto</h3>Atividade física sujeita a regras e regulamentos, orientada fundamentalmente para a competição.</div>
+<div class="mini"><h3>Aptidão Física</h3>Conjunto de parâmetros que caracterizam a capacidade individual para praticar atividade física.</div>
+</div>
+<p><b>Comportamento sedentário — adultos:</b> comportamento realizado enquanto acordado, sentado, reclinado ou deitado, com dispêndio energético ≤1,5 MET.</p>
+<p><b>Comportamento sedentário — crianças &lt;1 ano / que ainda não andam autonomamente:</b> baixo dispêndio energético enquanto estão confinadas (ex.: carrinho, cadeira alta, assento de carro) ou sonolentas/reclinadas com pouco movimento. O tempo em decúbito ventral (“tummy time”) <b>não</b> é considerado comportamento sedentário.</p>
+<p><b>Inatividade física:</b> não cumprir as recomendações de atividade física definidas para a faixa etária.</p>
+<p><b>Sedentarismo:</b> relaciona-se com a acumulação de comportamento sedentário. É um conceito diferente de inatividade física.</p>
+<div class="key warn"><b>Não confundir:</b> uma pessoa pode ser <b>ativa e sedentária</b> no mesmo dia; também pode ser inativa sem acumular muito comportamento sedentário. Os dois eixos são independentes.</div>
+
+</section>
+
+<section class="card" id="rec24">
+
+<span class="pill">Tema 6</span><h2>6. Recomendações de 24 horas</h2>
+<p>As recomendações devem ser vistas numa lógica de <b>24 horas</b>, integrando atividade física, comportamento sedentário e sono.</p>
+<table><tr><th>Faixa</th><th>Atividade física</th><th>Comportamento sedentário/ecrã</th><th>Sono</th></tr>
+<tr><td>&lt;1 ano</td><td>≥30 min/dia de AF variada enquanto acordado</td><td>0 h de ecrã; não permanecer restringido &gt;1 h seguida</td><td>14–17 h, incluindo sestas</td></tr>
+<tr><td>1–2 anos</td><td>≥180 min/dia de AF variada</td><td>até aos 2 anos: ecrã não recomendado; evitar &gt;1 h seguida restringido</td><td>11–14 h, com rotina e sestas</td></tr>
+<tr><td>3–4 anos</td><td>≥180 min/dia, incluindo ≥60 min AF moderada-vigorosa</td><td>≤1 h ecrã/dia; evitar longos períodos sentados/restringidos</td><td>10–13 h</td></tr>
+<tr><td>5–17 anos</td><td>média ≥60 min/dia AF moderada-vigorosa; vigorosa + fortalecimento muscular/ósseo ≥3 dias/sem.</td><td>limitar longos períodos sentados; ecrã recreativo ≤2 h/dia</td><td>5–13: 9–11 h; 14–17: 8–10 h</td></tr>
+<tr><td>18–64 anos</td><td>150–300 min moderada ou 75–150 min vigorosa/sem.; força ≥2 dias/sem.</td><td>&lt;8 h sedentário/dia; ecrã recreativo &lt;3 h; interromper períodos prolongados</td><td>7–9 h</td></tr>
+<tr><td>≥65 anos</td><td>como adultos + atividades multicomponentes com equilíbrio/prevenção de quedas ≥3 dias/sem.</td><td>&lt;8 h sedentário/dia; ecrã recreativo &lt;3 h; interromper períodos prolongados</td><td>7–8 h</td></tr></table>
+<div class="key ok"><b>Regra mental:</b> adultos/idosos = <b>150–300 / 75–150 / força 2</b>; idosos acrescentam <b>equilíbrio 3</b>. Jovens = <b>60 min/dia + força/óssea 3</b>.</div>
+<p><b>Relação com a saúde por faixa etária:</b> nas crianças e jovens, maior atividade e menor sedentarismo associam-se a melhor aptidão física, saúde cardiometabólica, saúde óssea, cognição e saúde mental. Nos adultos, associam-se a menor mortalidade e menor risco de várias doenças crónicas. Nos idosos, para além desses benefícios, a atividade multicomponente contribui para capacidade funcional e prevenção de quedas. Em todas as idades, <b>todos os movimentos contam</b> e substituir tempo sedentário por movimento é benéfico.</p>
+
+</section>
+
+<section class="card" id="segura">
+
+<span class="pill">Tema 7</span><h2>7. Atividade Física Segura</h2>
+<p>Os benefícios da atividade física regular superam largamente os riscos, mas alguns contextos de prática podem aumentar o risco de problemas de saúde.</p>
+<div class="grid">
+<div class="mini"><h3>Lesões musculoesqueléticas — tipos/risco</h3>São o problema mais comum; aparecem sobretudo nos membros inferiores, nomeadamente joelho, pé e tornozelo. O risco é maior em atividades vigorosas, de alto impacto e com contacto direto.</div>
+<div class="mini"><h3>Complicações cardiovasculares — tipos/risco</h3>Podem incluir morte súbita cardíaca e enfarte agudo do miocárdio, particularmente associados a atividade física de intensidade vigorosa.</div>
+</div>
+<p><b>Prevenção:</b> triagem pré-exercício, avaliação inicial de qualidade e monitorização durante a prática reduzem significativamente o risco.</p>
+<p><b>Vigorexia / dismorfia muscular — definição:</b> variante da dismorfia corporal caracterizada pela crença de que o corpo é demasiado pequeno ou insuficientemente musculoso, podendo dominar a vida diária através de treino de força, dieta e eventual consumo de substâncias dopantes.</p>
+<p><b>Consequências da vigorexia:</b> sofrimento com a imagem corporal, prejuízo da vida social e profissional, maior suscetibilidade a exercício excessivo, dietas demasiado restritivas e utilização de drogas para alterar o físico.</p>
+<p><b>Substâncias dopantes — definição:</b> substâncias utilizadas para melhorar ou alterar a imagem corporal e/ou aumentar força e performance desportiva. Nos slides, os esteroides anabolizantes androgénicos são apresentados como a substância predominante.</p>
+<p><b>Riscos para a saúde:</b> podem ocorrer efeitos cardiovasculares, endócrinos, hepáticos, renais, psicológicos e reprodutivos. Nos EAA incluem cardiomiopatia, hipertensão, hipogonadismo, ginecomastia, alterações genitais, depressão, dependência, agressividade, lesão renal e hepática; existem ainda efeitos específicos no homem e na mulher.</p>
+
+</section>
+
+<section class="card" id="dnt">
+
+<span class="pill">Tema 8</span><h2>8. Doenças Não-Transmissíveis e Atividade Física</h2>
+
+<details open><summary>Doenças cardiovasculares</summary>
+<p><b>Definição:</b> grupo de patologias do coração e vasos sanguíneos, incluindo doença coronária, cerebrovascular, arterial periférica, reumática, congénita, trombose venosa profunda e embolia pulmonar.</p>
+<p><b>Causas:</b> EAM e AVC resultam frequentemente de bloqueios do aporte sanguíneo; o AVC pode ser isquémico (coágulo/bloqueio) ou hemorrágico (rutura vascular). A aterosclerose/placa de ateroma é central no bloqueio vascular e existe combinação de vários fatores de risco.</p>
+<p><b>Sintomas:</b> AVC — dormência súbita unilateral, alterações da fala/visão, dificuldade na marcha, tonturas/perda de equilíbrio, cefaleia aguda. EAM — dor/desconforto torácico, podendo irradiar para braços, ombro, maxilar ou costas, e associar-se a dispneia, náuseas, desmaio, suor frio e palidez.</p>
+<p><b>Prevenção/controlo:</b> atuar nos fatores modificáveis: tabaco, inatividade física, obesidade, hipertensão, dislipidemia, diabetes, álcool e alimentação.</p>
+<p><b>Tratamento:</b> o tratamento clínico depende da condição e compete aos profissionais de saúde; nos slides é salientado que o <b>exercício físico integra os programas de reabilitação cardíaca</b>.</p>
+<p><b>Relação com AF e sedentarismo:</b> pessoas fisicamente ativas apresentam menor incidência/mortalidade por DCV; qualquer volume de AF é melhor que nenhum. Quanto maior o comportamento sedentário, maior o risco de DCV e morte prematura.</p>
+</details>
+
+<details><summary>Hipertensão arterial</summary>
+<p><b>Definição:</b> pressão arterial persistentemente acima dos valores de referência. PAS = pressão durante a contração cardíaca; PAD = pressão durante o relaxamento.</p>
+<p><b>Causas/fatores de risco:</b> modificáveis — excesso de sal/gordura saturada, álcool, tabaco, inatividade física, excesso de peso/obesidade; não modificáveis — idade, história familiar e doença pré-existente.</p>
+<p><b>Consequências:</b> enfarte do miocárdio, AVC, insuficiência renal, cegueira e outras complicações.</p>
+<p><b>Sintomas:</b> a maioria é assintomática. Em valores muito elevados podem surgir cefaleias severas, epistaxe, arritmias, alterações visuais, zumbidos, tonturas, náuseas/vómitos, confusão, ansiedade, dor no peito e dificuldade respiratória.</p>
+<p><b>Diagnóstico e valores:</b> normal &lt;120 e &lt;80; elevada 120–129 e &lt;80; HTA grau I 130–139 ou 80–89; grau II ≥140 ou ≥90; crise hipertensiva &gt;180 e/ou &gt;120 mmHg. <b>Somente um médico faz o diagnóstico</b>; a medição regular é importante e a avaliação clínica deve confirmar risco/condições associadas.</p>
+<p><b>Prevenção/controlo:</b> reduzir sal, comer frutas/vegetais, evitar gorduras saturadas/trans, tabaco e excesso de álcool, ser fisicamente ativo, seguir aconselhamento médico, tomar medicação prescrita, medir PA e controlar stress.</p>
+<p><b>Relação com AF:</b> durante exercício aeróbio a PAS aumenta e a PAD tende a manter-se ou diminuir ligeiramente; no treino de força/isométrico ambas podem aumentar. Após uma sessão pode ocorrer <b>hipotensão pós-exercício</b>. A prática regular reduz PA, sobretudo em pessoas com valores elevados.</p>
+</details>
+
+<details><summary>Diabetes</summary>
+<p><b>Definição:</b> grupo de doenças metabólicas caracterizado por hiperglicemia, relacionada com défice na secreção de insulina e/ou incapacidade de a utilizar eficazmente.</p>
+<p><b>Causas:</b> disfunção/destruição das células β, resistência à insulina, autoimunidade, predisposição genética, doença pré-existente, inflamação e fatores ambientais.</p>
+<p><b>Valores de referência:</b> jejum: normal 70–99, pré-diabetes 100–125, diabetes ≥126 mg/dL; 2h após 75 g: pré-diabetes 140–199, diabetes ≥200 mg/dL; HbA1c: pré-diabetes 5,7–6,4%, diabetes ≥6,5%; glicemia casual ≥200 mg/dL é apresentada como valor compatível com diabetes.</p>
+<p><b>Sintomas:</b> urina frequente, sede excessiva, aumento do apetite, fadiga extrema, visão turva, feridas difíceis de sarar, perda de peso e dormência de pés/mãos.</p>
+<p><b>Tipos:</b> tipo 1 — produção insuficiente de insulina; tipo 2 — resistência à insulina e posterior insuficiência; gestacional — durante a gravidez; outros tipos — combinação de fatores genéticos, autoimunes e ambientais.</p>
+<p><b>Prevenção/tratamento:</b> alimentação saudável, AF, evitar excesso de peso, controlo da glicemia, seguir prescrição médica, ambientes saudáveis, melhor diagnóstico e tratamento.</p>
+<p><b>Relação com AF e sedentarismo:</b> a AF regular reduz risco de DT2 e é fundamental no seu controlo/tratamento; em DT1 ajuda a reduzir complicações. Mais tempo sedentário associa-se a maior risco de DT2.</p>
+</details>
+
+<details><summary>Excesso de peso e obesidade</summary>
+<p><b>Definição:</b> acumulação excessiva de gordura com risco para a saúde. A obesidade é apresentada como doença metabólica crónica e recidivante, resultante de interações complexas entre vários fatores.</p>
+<p><b>Valores de referência em adultos:</b> IMC &lt;18,5 baixo peso; 18,5–24,9 normal; 25–29,9 excesso de peso; 30–34,9 obesidade I; 35–39,9 obesidade II; ≥40 obesidade III. O IMC é indireto e pode ser complementado por perímetro da cintura.</p>
+<p><b>Causas:</b> multifatoriais — genética, neurobiologia, metabolismo, comportamento, ambiente, cultura e fatores socioeconómicos; existe desequilíbrio entre consumo calórico e dispêndio energético.</p>
+<p><b>Consequências:</b> maior risco de DCV, diabetes, cancro, doenças de saúde mental, problemas musculoesqueléticos/respiratórios, doença renal e alterações de fertilidade/sexualidade.</p>
+<p><b>Prevenção/tratamento:</b> alimentação saudável, AF regular, menor sedentarismo, sono adequado e medidas ambientais/políticas que facilitem escolhas saudáveis. Nos slides é também referido tratamento farmacológico em adultos com obesidade, sempre inserido numa abordagem mais ampla e clínica.</p>
+<p><b>Relação com AF:</b> níveis elevados de AF ajudam a controlar o ganho de peso; o benefício é mais evidente com volumes semanais superiores a 150 min. AF integra prevenção e gestão do excesso de peso/obesidade.</p>
+</details>
+
+<details><summary>Cancro</summary>
+<p><b>Definição:</b> grupo de doenças caracterizado por crescimento e replicação anormal de células, capazes de invadir tecidos e disseminar-se para outros órgãos; esta disseminação chama-se <b>metastização</b>.</p>
+<p><b>Prevenção:</b> não fumar, manter peso saudável, alimentação saudável, ser fisicamente ativo, reduzir álcool, vacinação indicada (HPV/hepatite B), proteção UV e redução de exposições nocivas. Muitos casos podem ser prevenidos pela modificação de fatores de risco e rastreio/diagnóstico precoce.</p>
+<p><b>Tratamento:</b> depende do tipo de cancro e da pessoa. Terapêuticas locais: cirurgia, radioterapia e radiologia de intervenção. Terapêuticas sistémicas: quimioterapia, hormonoterapia, imunoterapia e terapêutica-alvo.</p>
+<p><b>Relação com AF:</b> a AF é recomendada ao longo das diferentes fases da doença; associa-se a menor risco de vários cancros e, após diagnóstico, a melhor qualidade de vida, controlo de efeitos adversos e menor mortalidade em vários tipos.</p>
+<p><b>Relação com sedentarismo:</b> mais tempo sedentário associa-se a maior incidência de cancro, com evidência destacada nos slides para endométrio, cólon e pulmão.</p>
+</details>
+
+<details><summary>Saúde mental</summary>
+<p><b>Definição:</b> estado de bem-estar mental que permite lidar com o stress da vida, reconhecer capacidades, aprender, trabalhar e contribuir para a comunidade. Existe num <b>continuum</b> e é mais do que ausência de perturbação mental.</p>
+<p><b>Tipos/exemplos:</b> depressão, perturbações de ansiedade, doença bipolar, esquizofrenia, perturbações do comportamento alimentar, demência e stress pós-traumático.</p>
+<p><b>Prevenção/tratamento:</b> proteção e promoção da saúde mental exige ação intersectorial e respeito por direitos civis, sociais e económicos; é igualmente necessário garantir apoio e tratamento adequado às pessoas com doença mental diagnosticada.</p>
+<p><b>Relação com AF:</b> atividade física associa-se a benefícios na cognição, qualidade de vida, ansiedade, humor depressivo/depressão e sono. Nos slides, níveis muito elevados de intensidade podem reduzir o prazer agudo da experiência de exercício em algumas pessoas.</p>
+</details>
+
+</section>
+
+
+<section class="card" id="check"><h2>Pontos-chave que tens mesmo de saber</h2>
+<ol>
+<li>Desinformação vs misinformation; fake news, teorias da conspiração, truques e prevenção.</li>
+<li>Pirâmide da evidência, revisão por pares, prevalência vs incidência, correlação ≠ causalidade e Bradford Hill.</li>
+<li>Eurobarómetro 2022: Portugal vs UE, evolução 2017→2022, incentivos e obstáculos.</li>
+<li>Saúde, saúde pública, promoção da saúde e educação para a saúde.</li>
+<li>AF vs exercício vs desporto vs aptidão; comportamento sedentário em adultos e bebés; sedentário vs inativo.</li>
+<li>Recomendações 24 h por faixa etária: AF, sedentarismo/ecrã e sono.</li>
+<li>Riscos da prática: lesões, eventos cardiovasculares, prevenção, vigorexia e substâncias dopantes.</li>
+<li>DCV: definição, causas, sintomas, prevenção/controlo, reabilitação, AF e sedentarismo.</li>
+<li>HTA: definição, fatores de risco, consequências, sintomas, valores, diagnóstico, prevenção/controlo e resposta ao exercício.</li>
+<li>Diabetes: definição, causas, valores, sintomas, tipos, prevenção/tratamento, AF e sedentarismo.</li>
+<li>Obesidade: definição, IMC adulto, causas, consequências, prevenção/tratamento e AF.</li>
+<li>Cancro: definição, prevenção, tratamento, AF e sedentarismo.</li>
+<li>Saúde mental: definição, tipos, prevenção/tratamento e relação com AF.</li>
+</ol>
 <div class="actions"><a class="btn" href="pevs_simulador.html">Fazer simulação de exame</a></div></section>
+
 <p class="footer">Baseado na Lista de Saberes e nos diapositivos fornecidos para a UC “Promover a atividade física, a saúde e estilos de vida saudável”. Para o exame, prioriza a formulação e os valores usados nos materiais da formadora.</p>
         </div>
     </main>
@@ -460,121 +616,131 @@ document.querySelectorAll('#study-content > section.card').forEach(el => {
     el.classList.add('study-card');
 });
 
-// Navegação horizontal dinâmica
+
+
+// ---------- Navegação horizontal dinâmica dos temas ----------
 const studyNavScroll = document.getElementById('study-nav-scroll');
 const studyNavLinks = [...document.querySelectorAll('.study-nav[data-section]')];
 const navLeftBtn = document.getElementById('nav-scroll-left');
 const navRightBtn = document.getElementById('nav-scroll-right');
 
+let selectedStudySection = null;
+let programmaticStudyScroll = false;
+let studyScrollReleaseTimer = null;
+
+function updateStickyPositions() {
+    const header = document.querySelector('body > header');
+    const localNav = document.getElementById('uc-local-nav');
+    const topicNav = document.getElementById('topic-nav');
+    const headerH = header ? header.offsetHeight : 0;
+    const localH = localNav ? localNav.offsetHeight : 0;
+    if (localNav) localNav.style.top = `${headerH}px`;
+    if (topicNav) topicNav.style.top = `${headerH + localH}px`;
+}
 function updateStudyNavArrows() {
-    if (!studyNavScroll) return;
-    const maxScroll = studyNavScroll.scrollWidth - studyNavScroll.clientWidth;
+    if (!studyNavScroll || !navLeftBtn || !navRightBtn) return;
+    const maxScroll = Math.max(0, studyNavScroll.scrollWidth - studyNavScroll.clientWidth);
     navLeftBtn.disabled = studyNavScroll.scrollLeft <= 2;
     navRightBtn.disabled = studyNavScroll.scrollLeft >= maxScroll - 2;
 }
-
 function scrollStudyNav(direction) {
     if (!studyNavScroll) return;
-    const amount = Math.max(180, Math.round(studyNavScroll.clientWidth * 0.72));
-    studyNavScroll.scrollBy({ left:direction * amount, behavior:'smooth' });
+    const amount = Math.max(180, Math.round(studyNavScroll.clientWidth * .72));
+    studyNavScroll.scrollBy({left:direction*amount,behavior:'smooth'});
 }
-
-function setActiveStudyNav(sectionId) {
+function setActiveStudyNav(sectionId, center=true) {
+    selectedStudySection = sectionId;
     studyNavLinks.forEach(link => {
-        const active = link.dataset.section === sectionId;
-        link.className = active
-            ? 'study-nav px-2.5 py-1.5 rounded-xl bg-blue-600 border border-blue-600 text-white font-bold whitespace-nowrap shrink-0'
-            : 'study-nav px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0';
+        const active=link.dataset.section===sectionId;
+        link.className=active
+            ? 'study-nav rounded-xl bg-blue-600 border border-blue-600 text-white font-bold whitespace-nowrap shrink-0'
+            : 'study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0';
     });
+    if(center && studyNavScroll){
+        const activeLink=studyNavLinks.find(link=>link.dataset.section===sectionId);
+        if(activeLink){
+            const scrollerRect = studyNavScroll.getBoundingClientRect();
+            const itemRect = activeLink.getBoundingClientRect();
+            const itemCenterInsideScroller =
+                (itemRect.left - scrollerRect.left) +
+                studyNavScroll.scrollLeft +
+                (itemRect.width / 2);
 
-    const activeLink = studyNavLinks.find(link => link.dataset.section === sectionId);
-    if (activeLink) {
-        activeLink.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+            const target = itemCenterInsideScroller - (studyNavScroll.clientWidth / 2);
+
+            studyNavScroll.scrollTo({
+                left: Math.max(0, target),
+                behavior: 'smooth'
+            });
+        }
     }
 }
-
-function getStudyStickyOffset() {
-    const appHeader = document.querySelector('body > header');
-    const localNav = document.getElementById('uc-local-nav');
-    const topicNav = document.querySelector('nav.sticky');
-
-    const headerH = appHeader ? appHeader.offsetHeight : 0;
-    const localH = localNav ? localNav.offsetHeight : 0;
-    const topicH = topicNav ? topicNav.offsetHeight : 0;
-
-    return headerH + localH + topicH + 8;
+function getStudyStickyOffset(){
+    const header=document.querySelector('body > header');
+    const localNav=document.getElementById('uc-local-nav');
+    const topicNav=document.getElementById('topic-nav');
+    return (header?.offsetHeight||0)+(localNav?.offsetHeight||0)+(topicNav?.offsetHeight||0)+8;
 }
-
-function scrollToStudySection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (!section) return;
-
-    const offset = getStudyStickyOffset();
-    const y = section.getBoundingClientRect().top + window.scrollY - offset;
-
-    window.scrollTo({
-        top: Math.max(0, y),
-        behavior: 'smooth'
-    });
+function scrollToStudySection(sectionId,smooth=true){
+    const section=document.getElementById(sectionId);
+    if(!section)return;
+    if(smooth){
+        programmaticStudyScroll=true;
+        selectedStudySection=sectionId;
+        clearTimeout(studyScrollReleaseTimer);
+        studyScrollReleaseTimer=setTimeout(()=>{programmaticStudyScroll=false;},1100);
+    }
+    const y=section.getBoundingClientRect().top+window.scrollY-getStudyStickyOffset();
+    window.scrollTo({top:Math.max(0,y),behavior:smooth?'smooth':'auto'});
 }
-
-studyNavLinks.forEach(link => {
-    link.addEventListener('click', event => {
+studyNavLinks.forEach(link=>{
+    link.addEventListener('click',event=>{
         event.preventDefault();
-
-        const sectionId = link.dataset.section;
-        setActiveStudyNav(sectionId);
-        history.replaceState(null, '', `#${sectionId}`);
-        scrollToStudySection(sectionId);
+        const sectionId=link.dataset.section;
+        setActiveStudyNav(sectionId,true);
+        history.replaceState(null,'',`#${sectionId}`);
+        scrollToStudySection(sectionId,true);
     });
 });
-
-if (studyNavScroll) {
-    studyNavScroll.addEventListener('scroll', updateStudyNavArrows, { passive:true });
-    studyNavScroll.addEventListener('wheel', event => {
-        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+if(studyNavScroll){
+    studyNavScroll.addEventListener('scroll',updateStudyNavArrows,{passive:true});
+    studyNavScroll.addEventListener('wheel',event=>{
+        if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){
             event.preventDefault();
-            studyNavScroll.scrollLeft += event.deltaY;
+            studyNavScroll.scrollLeft+=event.deltaY;
         }
-    }, { passive:false });
+    },{passive:false});
 }
-
-const observedSections = studyNavLinks
-    .map(link => document.getElementById(link.dataset.section))
-    .filter(Boolean);
-
-if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-        const visible = entries
-            .filter(entry => entry.isIntersecting)
-            .sort((a,b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visible.length) setActiveStudyNav(visible[0].target.id);
-    }, {
-        root:null,
-        rootMargin:'-185px 0px -55% 0px',
-        threshold:[0.05,0.2,0.5]
-    });
-
-    observedSections.forEach(section => observer.observe(section));
+const observedSections=studyNavLinks.map(link=>document.getElementById(link.dataset.section)).filter(Boolean);
+if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+        if(programmaticStudyScroll)return;
+        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+        if(visible.length)setActiveStudyNav(visible[0].target.id,true);
+    },{root:null,rootMargin:'-190px 0px -58% 0px',threshold:[.05,.2,.5]});
+    observedSections.forEach(section=>observer.observe(section));
 }
+['wheel','touchstart','pointerdown'].forEach(evt=>{
+    window.addEventListener(evt,()=>{
+        if(programmaticStudyScroll){
+            programmaticStudyScroll=false;
+            clearTimeout(studyScrollReleaseTimer);
+        }
+    },{passive:true});
+});
+window.addEventListener('resize',()=>{updateStickyPositions();updateStudyNavArrows();});
+requestAnimationFrame(()=>{
+    updateStickyPositions();
+    updateStudyNavArrows();
+    const initial=location.hash?location.hash.slice(1):(observedSections[0]?.id||'');
+    if(initial&&document.getElementById(initial)){
+        setActiveStudyNav(initial,true);
+        if(location.hash)requestAnimationFrame(()=>scrollToStudySection(initial,false));
+    }
+});
 
-window.addEventListener('resize', updateStudyNavArrows);
 
 initTheme();
-requestAnimationFrame(() => {
-    updateStudyNavArrows();
-    const initial = location.hash ? location.hash.slice(1) : (observedSections[0]?.id || '');
-
-    if (initial) {
-        setActiveStudyNav(initial);
-
-        // Se a página abrir já com hash, corrige a posição depois de o layout estar calculado.
-        if (location.hash) {
-            requestAnimationFrame(() => scrollToStudySection(initial));
-        }
-    }
-});
 </script>
 
 </body>

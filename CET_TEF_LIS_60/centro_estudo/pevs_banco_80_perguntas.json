@@ -1,6 +1,6 @@
 {
   "uc": "Promoção de Estilos de Vida Saudável",
-  "version": "1.0",
+  "version": "2.0",
   "questions": [
     {
       "id": "PEVS001",
@@ -81,16 +81,16 @@
       "id": "PEVS006",
       "topic": "1. Desinformação em Saúde",
       "type": "multiple_choice",
-      "question": "Qual das afirmações sobre conteúdo viral está correta?",
+      "question": "Qual conjunto apresenta estratégias usadas frequentemente em fake news, segundo os conteúdos da UC?",
       "options": [
-        "Se é viral, foi necessariamente verificado por especialistas.",
-        "A viralidade é um indicador de elevada qualidade científica.",
-        "Um conteúdo viral pode ser falso; viralidade não significa veracidade.",
-        "Só conteúdos verdadeiros conseguem tornar-se virais."
+        "Impersonação, fabricação, linguagem emocional, conspiração, trolling e desacreditação.",
+        "Revisão por pares, replicação, randomização e cegamento.",
+        "Prevalência, incidência, risco relativo e odds ratio.",
+        "Triagem, diagnóstico, tratamento e reabilitação."
       ],
-      "answer": 2,
-      "explanation": "Os slides sublinham que viralidade não significa veracidade e que conteúdos falsos podem espalhar-se rapidamente.",
-      "source": "Tema 1, 2, 3 — Desinformação"
+      "answer": 0,
+      "explanation": "Os slides apresentam vários truques usados na desinformação, incluindo impersonação, fabricação, linguagem emocional, teorias da conspiração, trolling e desacreditação.",
+      "source": "Tema 1 — Estratégias usadas nas Fake-News"
     },
     {
       "id": "PEVS007",
@@ -141,16 +141,16 @@
       "id": "PEVS010",
       "topic": "1. Desinformação em Saúde",
       "type": "multiple_choice",
-      "question": "Porque pode a repetição de uma informação falsa aumentar a probabilidade de acreditarmos nela?",
+      "question": "Qual combinação representa estratégias de prevenção e controlo da desinformação?",
       "options": [
-        "Porque a repetição torna automaticamente a informação científica.",
-        "Porque qualquer informação repetida passa a ser revista por pares.",
-        "Porque exposição repetida e emoções fortes podem aumentar a crença na informação falsa.",
-        "Porque o algoritmo valida a verdade antes de repetir conteúdos."
+        "Refutar informação falsa com factos, melhorar literacia mediática, verificar fontes e reportar conteúdos enganosos.",
+        "Partilhar rapidamente conteúdos virais antes de os verificar.",
+        "Confiar apenas no número de seguidores da fonte.",
+        "Aceitar informação quando confirma as nossas crenças."
       ],
-      "answer": 2,
-      "explanation": "Os conteúdos da UC referem que emoções fortes e exposição repetida podem aumentar a probabilidade de acreditar em informação falsa.",
-      "source": "Tema 1, 2, 3 — Desinformação"
+      "answer": 0,
+      "explanation": "A prevenção passa por fact-checking, literacia em informação/media, correção baseada em factos, partilha consciente e reporte de conteúdos falsos.",
+      "source": "Tema 1 — Estratégias de prevenção e controlo"
     },
     {
       "id": "PEVS011",
@@ -306,16 +306,16 @@
       "id": "PEVS021",
       "topic": "3. Os Números da Atividade Física",
       "type": "multiple_choice",
-      "question": "No Eurobarómetro 2022 apresentado na UC, Portugal caracteriza-se por:",
+      "question": "No Eurobarómetro 2022 apresentado nos slides, que percentagem dos portugueses referiu nunca fazer exercício ou praticar desporto?",
       "options": [
-        "Uma proporção elevada de pessoas que refere nunca fazer exercício/desporto.",
-        "Ser o país da UE com maior prática diária de exercício.",
-        "Não apresentar comportamento sedentário relevante.",
-        "Ter melhorado claramente todos os indicadores face a 2017."
+        "31%.",
+        "49%.",
+        "73%.",
+        "18%."
       ],
-      "answer": 0,
-      "explanation": "Os slides destacam uma elevada percentagem de respostas “nunca” à prática de exercício/desporto em Portugal.",
-      "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
+      "answer": 2,
+      "explanation": "Nos dados apresentados, 73% dos portugueses responderam «nunca» à prática de exercício/desporto.",
+      "source": "Tema 3 — Eurobarómetro 2022: Portugal"
     },
     {
       "id": "PEVS022",
@@ -351,31 +351,31 @@
       "id": "PEVS024",
       "topic": "3. Os Números da Atividade Física",
       "type": "multiple_choice",
-      "question": "Porque é importante distinguir QB1 de QB2 no Eurobarómetro?",
+      "question": "Nos slides, qual comparação está correta para «outra atividade física» no Eurobarómetro 2022?",
       "options": [
-        "Porque atividade física pode ocorrer fora do contexto formal de exercício/desporto.",
-        "Porque QB2 mede apenas doença cardiovascular.",
-        "Porque exercício e atividade física são exatamente o mesmo conceito.",
-        "Porque QB1 mede apenas crianças."
+        "Portugal: 72% nunca; UE27: 31% nunca.",
+        "Portugal: 31% nunca; UE27: 72% nunca.",
+        "Portugal: 4% nunca; UE27: 73% nunca.",
+        "Portugal e UE27: 10% nunca."
       ],
       "answer": 0,
-      "explanation": "Uma pessoa pode acumular atividade física em deslocações, tarefas ou lazer sem “fazer exercício” formal.",
-      "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
+      "explanation": "Para «outra atividade física», os slides mostram 72% de respostas «nunca» em Portugal e 31% no total UE27.",
+      "source": "Tema 3 — Eurobarómetro 2022: diferenças Portugal/UE"
     },
     {
       "id": "PEVS025",
       "topic": "3. Os Números da Atividade Física",
       "type": "multiple_choice",
-      "question": "A pergunta sobre “quanto tempo passa sentado num dia normal” avalia principalmente:",
+      "question": "Na comparação portuguesa 2022 vs 2017 para exercício/desporto, qual alteração aparece nos slides?",
       "options": [
-        "Aptidão cardiorrespiratória.",
-        "Força máxima.",
-        "Comportamento sedentário.",
-        "Incidência de diabetes."
+        "A categoria «nunca» aumentou 5 pontos percentuais.",
+        "A categoria «nunca» diminuiu 20 pontos percentuais.",
+        "A prática regular passou para 50%.",
+        "Todas as categorias melhoraram."
       ],
-      "answer": 2,
-      "explanation": "Tempo sentado é usado como indicador de comportamento sedentário.",
-      "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
+      "answer": 0,
+      "explanation": "Nos slides, a resposta «nunca» em exercício/desporto aumenta 5 pontos percentuais em 2022 face a 2017.",
+      "source": "Tema 3 — Eurobarómetro 2022: comparação 2017–2022"
     },
     {
       "id": "PEVS026",
@@ -396,31 +396,31 @@
       "id": "PEVS027",
       "topic": "3. Os Números da Atividade Física",
       "type": "multiple_choice",
-      "question": "Qual das seguintes aparece como uma motivação para praticar desporto/atividade física?",
+      "question": "Qual conjunto inclui os principais incentivos à prática apresentados para Portugal?",
       "options": [
-        "Melhorar a saúde.",
-        "Aumentar o tempo sentado.",
-        "Reduzir a aptidão física.",
-        "Evitar qualquer interação social."
+        "Melhorar a saúde, relaxar e melhorar a preparação física.",
+        "Aumentar tempo sentado, reduzir aptidão e evitar contacto social.",
+        "Evitar exercício, dormir menos e competir.",
+        "Apenas perder peso e ganhar prémios."
       ],
       "answer": 0,
-      "explanation": "Melhorar a saúde é uma das principais motivações apresentadas no Eurobarómetro.",
-      "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
+      "explanation": "Nos slides, melhorar a saúde, relaxar e melhorar a preparação física surgem entre os principais incentivos.",
+      "source": "Tema 3 — Incentivos à prática em Portugal"
     },
     {
       "id": "PEVS028",
       "topic": "3. Os Números da Atividade Física",
       "type": "multiple_choice",
-      "question": "Qual é a leitura correta da comparação Portugal 2017–2022 mostrada nos slides?",
+      "question": "Qual conjunto inclui obstáculos à prática de exercício/desporto apresentados para Portugal?",
       "options": [
-        "Portugal passou a ter participação universal em exercício.",
-        "Os indicadores não justificam concluir que os portugueses são uma população muito ativa.",
-        "O comportamento sedentário desapareceu.",
-        "Todos os grupos aumentaram atividade vigorosa para mais de 300 min/semana."
+        "Falta de tempo e falta de motivação/interesse.",
+        "Excesso de tempo livre e excesso de motivação.",
+        "Demasiadas horas de sono e excesso de força muscular.",
+        "Apenas falta de equipamento profissional."
       ],
-      "answer": 1,
-      "explanation": "A mensagem de estudo é a baixa participação e a ausência de uma melhoria global que permita classificar a população como muito ativa.",
-      "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
+      "answer": 0,
+      "explanation": "A falta de tempo é o principal obstáculo apresentado, seguida da falta de motivação/interesse.",
+      "source": "Tema 3 — Obstáculos à prática em Portugal"
     },
     {
       "id": "PEVS029",
@@ -454,303 +454,303 @@
     },
     {
       "id": "PEVS031",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "4. Conceitos de Saúde",
       "type": "multiple_choice",
       "question": "Segundo a definição clássica da OMS apresentada, saúde é:",
       "options": [
-        "Apenas ausência de doença diagnosticada.",
-        "Um estado de bem-estar físico, mental e social, e não apenas ausência de doença.",
-        "A capacidade de praticar desporto competitivo.",
-        "Ter IMC entre 18,5 e 24,9."
+        "Apenas ausência de doença.",
+        "Um estado de completo bem-estar físico, mental e social, e não apenas ausência de doença.",
+        "Capacidade de realizar exercício vigoroso.",
+        "Ausência de fatores de risco cardiovasculares."
       ],
       "answer": 1,
-      "explanation": "A definição da OMS enfatiza bem-estar físico, mental e social.",
-      "source": "Tema 4.5 — Conceitos de Saúde"
+      "explanation": "A definição da OMS inclui bem-estar físico, mental e social, não se limitando à ausência de doença.",
+      "source": "Tema 4 — Saúde"
     },
     {
       "id": "PEVS032",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "4. Conceitos de Saúde",
       "type": "multiple_choice",
-      "question": "Saúde pública é apresentada como:",
+      "question": "Saúde Pública é apresentada como:",
       "options": [
-        "Apenas tratamento hospitalar.",
-        "Treino individual em ginásio.",
         "A arte e ciência de prevenir doença, prolongar a vida e promover saúde através de esforços organizados da sociedade.",
-        "A prescrição de medicação por um médico."
+        "Uma prática limitada ao tratamento hospitalar.",
+        "Apenas educação física escolar.",
+        "Um conjunto de recomendações individuais de treino."
       ],
-      "answer": 2,
-      "explanation": "Saúde pública atua ao nível coletivo e organiza esforços para prevenir doença e promover saúde.",
-      "source": "Tema 4.5 — Conceitos de Saúde"
+      "answer": 0,
+      "explanation": "A definição apresentada destaca prevenção, promoção da saúde, ação organizada da sociedade e redução de desigualdades.",
+      "source": "Tema 4 — Saúde Pública"
     },
     {
       "id": "PEVS033",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "4. Conceitos de Saúde",
       "type": "multiple_choice",
-      "question": "Qual é um exemplo de prevenção primária?",
+      "question": "Qual associação entre níveis de intervenção em saúde está correta?",
       "options": [
-        "Promover atividade física em pessoas sem doença instalada.",
-        "Reabilitar limitações após doença crónica avançada.",
-        "Tratar precocemente uma doença já diagnosticada.",
-        "Ajustar medicação antihipertensora."
+        "Primária: promoção/educação antes da doença; secundária: diagnóstico/tratamento precoce; terciária: minimizar progressão e maximizar qualidade de vida.",
+        "Primária: cirurgia; secundária: prevenção; terciária: rastreio.",
+        "Primária: reabilitação; secundária: promoção; terciária: vacinação.",
+        "Os três níveis são equivalentes."
       ],
       "answer": 0,
-      "explanation": "Prevenção primária atua antes de existirem condições adversas, através de promoção e educação para a saúde.",
-      "source": "Tema 4.5 — Conceitos de Saúde"
+      "explanation": "Os slides distinguem intervenção primária, secundária e terciária pela fase do processo de doença e objetivo da intervenção.",
+      "source": "Tema 4 — Intervenção primária, secundária e terciária"
     },
     {
       "id": "PEVS034",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "4. Conceitos de Saúde",
       "type": "multiple_choice",
-      "question": "Na Carta de Ottawa, promoção da saúde significa sobretudo:",
+      "question": "Na Carta de Ottawa, promoção da saúde corresponde sobretudo a:",
       "options": [
-        "Ensinar apenas anatomia.",
-        "Capacitar as pessoas para aumentar o controlo sobre a sua saúde e melhorá-la.",
-        "Diagnosticar doenças na população.",
-        "Substituir políticas públicas por responsabilidade individual."
+        "Capacitar as pessoas para melhorar e aumentar o controlo sobre a própria saúde e os seus determinantes.",
+        "Tratar doença apenas com medicação.",
+        "Substituir prevenção por tratamento.",
+        "Aumentar exclusivamente o número de consultas médicas."
       ],
-      "answer": 1,
-      "explanation": "Promoção da saúde envolve capacitação para melhorar e aumentar o controlo sobre a própria saúde e seus determinantes.",
-      "source": "Tema 4.5 — Promoção da Saúde"
+      "answer": 0,
+      "explanation": "Promoção da saúde é um processo de capacitação para aumentar o controlo sobre a saúde e os seus determinantes.",
+      "source": "Tema 4 — Promoção da Saúde"
     },
     {
       "id": "PEVS035",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "4. Conceitos de Saúde",
       "type": "multiple_choice",
-      "question": "Quais são as três estratégias essenciais de promoção da saúde apresentadas na Carta de Ottawa?",
+      "question": "Educação para a Saúde procura sobretudo:",
       "options": [
-        "Diagnóstico, medicação e cirurgia.",
-        "Força, resistência e flexibilidade.",
-        "Defesa da causa, capacitação e mediação.",
-        "Triagem, tratamento e alta."
+        "Desenvolver conhecimentos, atitudes e valores que apoiem decisões adequadas à saúde e bem-estar.",
+        "Ensinar apenas regras de competição desportiva.",
+        "Substituir todos os cuidados clínicos por atividade física.",
+        "Transmitir informação sem promover capacidade de decisão."
       ],
-      "answer": 2,
-      "explanation": "Os slides apresentam defesa da causa, capacitação e mediação.",
-      "source": "Tema 4.5 — Promoção da Saúde"
+      "answer": 0,
+      "explanation": "A educação para a saúde visa apoiar escolhas e decisões informadas através de conhecimentos, atitudes e valores.",
+      "source": "Tema 4 — Educação para a Saúde"
     },
     {
       "id": "PEVS036",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
       "type": "multiple_choice",
       "question": "Atividade física é:",
       "options": [
-        "Qualquer movimento corporal que aumente o dispêndio energético acima do repouso.",
+        "Qualquer movimento corporal produzido pelo sistema músculo-esquelético que aumente o dispêndio energético acima do repouso.",
         "Apenas treino planeado em ginásio.",
         "Apenas atividade vigorosa.",
         "Qualquer período sentado abaixo de 1,5 MET."
       ],
       "answer": 0,
-      "explanation": "Atividade física inclui movimentos do quotidiano, trabalho, lazer, exercício e desporto.",
-      "source": "Tema 4.5 — Atividade Física"
+      "explanation": "Atividade física inclui movimentos do quotidiano, trabalho e lazer, além de exercício e desporto.",
+      "source": "Tema 5 — Atividade Física"
     },
     {
       "id": "PEVS037",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
       "type": "multiple_choice",
       "question": "Exercício físico distingue-se por ser:",
       "options": [
-        "Sempre competitivo.",
-        "Atividade física planeada, estruturada e repetitiva, orientada para manter ou melhorar a aptidão física.",
-        "Qualquer movimento involuntário.",
+        "Atividade física planeada, estruturada e repetitiva, com objetivo de manter ou melhorar aptidão física.",
+        "Qualquer movimento espontâneo.",
+        "Sempre uma atividade competitiva.",
         "Apenas treino de força."
       ],
-      "answer": 1,
-      "explanation": "Exercício é uma subcategoria de atividade física com estrutura, repetição e objetivo de aptidão.",
-      "source": "Tema 4.5 — Exercício Físico"
+      "answer": 0,
+      "explanation": "Exercício é uma subcategoria da atividade física com planeamento, estrutura, repetição e objetivo.",
+      "source": "Tema 5 — Exercício Físico"
     },
     {
       "id": "PEVS038",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
       "type": "multiple_choice",
-      "question": "Desporto é definido nos slides como atividade física:",
+      "question": "Qual opção associa corretamente desporto e aptidão física?",
       "options": [
-        "Sem regras e sem objetivo.",
-        "Realizada apenas em ginásio.",
-        "Sujeita a regras/regulamentos e orientada fundamentalmente para competição.",
-        "Que não aumenta o gasto energético."
+        "Desporto: atividade física com regras/regulamentos orientada para competição; aptidão física: conjunto de parâmetros que caracterizam a capacidade para praticar AF.",
+        "Desporto e aptidão física são sinónimos.",
+        "Desporto é qualquer comportamento sentado; aptidão física é ausência de doença.",
+        "Aptidão física é apenas força máxima."
       ],
-      "answer": 2,
-      "explanation": "A componente de regras/regulamentos e competição diferencia o desporto.",
-      "source": "Tema 4.5 — Desporto"
+      "answer": 0,
+      "explanation": "Os slides distinguem desporto pela componente regulamentada/competitiva e aptidão física pela capacidade individual para praticar AF.",
+      "source": "Tema 5 — Desporto e Aptidão Física"
     },
     {
       "id": "PEVS039",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
       "type": "multiple_choice",
-      "question": "Comportamento sedentário em adultos é:",
+      "question": "Qual associação sobre comportamento sedentário está correta?",
       "options": [
-        "Qualquer atividade com menos de 6 MET.",
-        "Não cumprir 150 min/semana de AF.",
-        "Dormir mais de 8 horas.",
-        "Comportamento acordado, sentado/reclinado/deitado, com dispêndio ≤1,5 MET."
+        "Adultos: acordado, sentado/reclinado/deitado, ≤1,5 MET; crianças <1 ano: inclui baixo dispêndio quando confinadas ou sonolentas, mas tummy time não conta como sedentário.",
+        "Adultos: qualquer atividade <6 MET; bebés: todo o tempo de barriga para baixo é sedentário.",
+        "Adultos: dormir é comportamento sedentário; bebés: brincar no chão é sempre sedentário.",
+        "Comportamento sedentário é sinónimo de inatividade física em todas as idades."
       ],
-      "answer": 3,
-      "explanation": "Sedentarismo comportamental é definido por postura e baixo dispêndio energético enquanto acordado.",
-      "source": "Tema 4.5 — Comportamento sedentário"
+      "answer": 0,
+      "explanation": "A definição combina postura e baixo dispêndio; nos bebés existem especificidades, e o tempo em decúbito ventral não é classificado como sedentário.",
+      "source": "Tema 5 — Comportamento sedentário em adultos e crianças <1 ano"
     },
     {
       "id": "PEVS040",
-      "topic": "4-5. Conceitos de Saúde e Atividade Física",
+      "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
       "type": "multiple_choice",
-      "question": "Qual das afirmações está correta?",
+      "question": "Qual afirmação distingue corretamente inatividade física de comportamento sedentário?",
       "options": [
-        "Uma pessoa ativa nunca pode ser sedentária.",
-        "Uma pessoa pode cumprir recomendações de AF e, ainda assim, acumular muito comportamento sedentário.",
-        "Inatividade física e comportamento sedentário são sinónimos perfeitos.",
-        "Estar de pé parado é sempre comportamento sedentário."
+        "Inatividade significa não cumprir as recomendações de AF; comportamento sedentário refere-se a atividades acordadas de baixo dispêndio em posição sentada/reclinada/deitada.",
+        "São exatamente o mesmo conceito.",
+        "Ser ativo impede acumular comportamento sedentário.",
+        "Uma pessoa inativa passa obrigatoriamente todo o dia sentada."
       ],
-      "answer": 1,
-      "explanation": "Atividade física e comportamento sedentário são dimensões independentes; pode existir o perfil ativo-sedentário.",
-      "source": "Tema 4.5 — Sedentarismo e Inatividade Física"
+      "answer": 0,
+      "explanation": "São dimensões diferentes: uma pessoa pode cumprir recomendações de AF e ainda acumular muito tempo sedentário.",
+      "source": "Tema 5 — Sedentarismo e Inatividade Física"
     },
     {
       "id": "PEVS041",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Para bebés com menos de 1 ano, os slides recomendam pelo menos:",
+      "question": "Qual associação para bebés com menos de 1 ano está de acordo com os slides?",
       "options": [
-        "30 min/dia de atividade física variada enquanto acordados.",
-        "60 min/dia de AF vigorosa.",
-        "180 min/dia de AF moderada-vigorosa.",
-        "150 min/semana de AF moderada."
+        "≥30 min/dia de AF variada enquanto acordados; evitar tempo de ecrã; cerca de 14–17 h de sono incluindo sestas.",
+        "150 min/semana de AF; 2 h de ecrã; 7 h de sono.",
+        "60 min/dia de AF vigorosa; ecrã livre; 9 h de sono.",
+        "Sem recomendação de movimento antes de andar."
       ],
       "answer": 0,
-      "explanation": "Nos menores de 1 ano, a recomendação apresentada é acumular pelo menos 30 minutos de atividade física variada.",
-      "source": "Tema 6 — Crianças 0-4"
+      "explanation": "As recomendações de 24 h incluem movimento diário, ausência de ecrã e elevada necessidade de sono nos bebés.",
+      "source": "Tema 6 — Crianças 0–4: AF, sedentarismo e sono"
     },
     {
       "id": "PEVS042",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Para crianças de 1–2 anos, a recomendação de atividade física diária é:",
+      "question": "Para crianças de 1–2 anos, qual conjunto está correto?",
       "options": [
-        "30 minutos.",
-        "60 minutos.",
-        "Pelo menos 180 minutos de atividade de diferentes intensidades.",
-        "150 minutos por semana."
+        "≥180 min/dia de AF variada; evitar períodos prolongados restringidas; sono 11–14 h.",
+        "30 min/dia de AF; 4 h de ecrã; 6 h de sono.",
+        "150 min/semana de AF; sem recomendações de sono.",
+        "Apenas AF vigorosa, sem atividade ligeira."
       ],
-      "answer": 2,
-      "explanation": "Crianças de 1–2 anos devem acumular pelo menos 180 minutos ao longo do dia.",
-      "source": "Tema 6 — Crianças 0-4"
+      "answer": 0,
+      "explanation": "Nesta faixa etária, as recomendações integram pelo menos 180 min de movimento, limitação do comportamento sedentário e 11–14 h de sono.",
+      "source": "Tema 6 — Crianças 1–2: recomendações 24 h"
     },
     {
       "id": "PEVS043",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Para crianças de 3–4 anos, dentro dos 180 min/dia de atividade física devem existir pelo menos:",
+      "question": "Para crianças de 3–4 anos, qual opção está correta?",
       "options": [
-        "10 min de força máxima.",
-        "60 min de atividade moderada a vigorosa.",
-        "120 min de comportamento sedentário.",
-        "90 min de ecrã obrigatório."
+        "≥180 min/dia de AF, incluindo ≥60 min moderada-vigorosa; ecrã ≤1 h/dia; sono 10–13 h.",
+        "60 min/semana de AF; 3 h de ecrã; 6 h de sono.",
+        "150 min/semana de AF vigorosa apenas.",
+        "Sem limite de ecrã se cumprir a AF."
       ],
-      "answer": 1,
-      "explanation": "A recomendação é 180 min totais, incluindo pelo menos 60 min de intensidade moderada a vigorosa.",
-      "source": "Tema 6 — Crianças 0-4"
+      "answer": 0,
+      "explanation": "A recomendação combina 180 min totais, dos quais 60 min moderada-vigorosa, baixo tempo de ecrã e sono adequado.",
+      "source": "Tema 6 — Crianças 3–4: recomendações 24 h"
     },
     {
       "id": "PEVS044",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Quanto tempo de ecrã é recomendado para crianças dos 0 aos 2 anos nos slides?",
+      "question": "Qual associação para jovens dos 5–17 anos está correta?",
       "options": [
-        "Até 3 h/dia.",
-        "Até 2 h/dia.",
-        "Até 1 h/dia.",
-        "Não é recomendado tempo de ecrã."
+        "Média ≥60 min/dia de AF moderada-vigorosa; vigorosa e fortalecimento muscular/ósseo ≥3 dias/semana; limitar tempo sedentário/ecrã; sono adequado à idade.",
+        "150 min de AF por mês; sem recomendações de sedentarismo.",
+        "Apenas força 1 dia/semana; 6 h de sono.",
+        "Não existem recomendações de sono para jovens."
       ],
-      "answer": 3,
-      "explanation": "Nos 0–2 anos, os slides indicam que não é recomendado qualquer tempo de ecrã.",
-      "source": "Tema 6 — Crianças 0-4"
+      "answer": 0,
+      "explanation": "As recomendações de 24 h para jovens integram atividade física, redução do sedentarismo/ecrã e sono.",
+      "source": "Tema 6 — Jovens 5–17: recomendações 24 h"
     },
     {
       "id": "PEVS045",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Qual é a recomendação central de AF para jovens dos 5–17 anos?",
+      "question": "Nos adultos 18–64 anos, qual conjunto resume melhor as recomendações?",
       "options": [
-        "Média de pelo menos 60 min/dia de AF moderada-vigorosa.",
-        "150 min de AF por mês.",
-        "30 min por semana.",
-        "Apenas treino de força 1 dia/semana."
+        "150–300 min/semana moderada ou 75–150 vigorosa, força ≥2 dias/semana, limitar sedentarismo e procurar 7–9 h de sono.",
+        "60 min de AF por mês e 5 h de sono.",
+        "Apenas treino de força, sem atividade aeróbia.",
+        "Não interromper períodos prolongados sentados."
       ],
       "answer": 0,
-      "explanation": "A referência é ≥60 minutos diários, em média, de atividade moderada a vigorosa.",
-      "source": "Tema 6 — Jovens 5-17"
+      "explanation": "As recomendações dos adultos combinam atividade aeróbia, força, redução do comportamento sedentário e sono suficiente.",
+      "source": "Tema 6 — Adultos 18–64: recomendações 24 h"
     },
     {
       "id": "PEVS046",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Para jovens dos 5–17 anos, atividades de fortalecimento muscular e ósseo devem ocorrer pelo menos:",
+      "question": "Nos idosos ≥65 anos, além das recomendações gerais dos adultos, destaca-se:",
       "options": [
-        "1 dia/semana.",
-        "2 dias/semana.",
-        "3 dias/semana.",
-        "7 dias/semana obrigatoriamente."
+        "Atividade multicomponente com equilíbrio/prevenção de quedas ≥3 dias/semana, redução do sedentarismo e cerca de 7–8 h de sono.",
+        "Eliminar treino de força.",
+        "Evitar qualquer atividade física vigorosa em todos os casos.",
+        "Dormir obrigatoriamente mais de 12 h/dia."
       ],
-      "answer": 2,
-      "explanation": "Os slides indicam pelo menos 3 dias por semana.",
-      "source": "Tema 6 — Jovens 5-17"
+      "answer": 0,
+      "explanation": "Nos idosos, a recomendação acrescenta trabalho multicomponente/equilíbrio e mantém atenção ao sedentarismo e sono.",
+      "source": "Tema 6 — Idosos ≥65: recomendações 24 h"
     },
     {
       "id": "PEVS047",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Nos adultos 18–64 anos, qual é a recomendação semanal de atividade aeróbia?",
+      "question": "Qual afirmação sobre comportamento sedentário nas recomendações de 24 h é correta?",
       "options": [
-        "60 min moderada ou 30 min vigorosa.",
-        "150–300 min moderada ou 75–150 min vigorosa, ou combinação equivalente.",
-        "500–700 min vigorosa obrigatória.",
-        "Apenas 2 sessões de força, sem trabalho aeróbio."
+        "Devem ser evitados períodos prolongados sentados e, quando possível, substituídos por movimento.",
+        "Cumprir a recomendação de AF torna irrelevante todo o tempo sentado.",
+        "O sedentarismo só é relevante em idosos.",
+        "Tempo de ecrã recreativo não integra as recomendações."
       ],
-      "answer": 1,
-      "explanation": "É a regra-chave 150–300 moderada ou 75–150 vigorosa por semana.",
-      "source": "Tema 6 — Adultos"
+      "answer": 0,
+      "explanation": "As recomendações procuram reduzir e interromper o comportamento sedentário, mesmo em pessoas fisicamente ativas.",
+      "source": "Tema 6 — Recomendações sobre comportamento sedentário"
     },
     {
       "id": "PEVS048",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Nos adultos, o fortalecimento muscular é recomendado em pelo menos:",
+      "question": "Qual associação de sono está correta?",
       "options": [
-        "2 dias por semana.",
-        "1 dia por mês.",
-        "5 dias por semana obrigatoriamente.",
-        "Apenas quando há doença."
+        "3–4 anos: 10–13 h; 5–13 anos: 9–11 h; 14–17 anos: 8–10 h; adultos: 7–9 h; idosos: 7–8 h.",
+        "Todas as idades: exatamente 8 h.",
+        "Crianças 3–4 anos: 6 h; adultos: 12 h.",
+        "Sono não faz parte das recomendações de 24 h."
       ],
       "answer": 0,
-      "explanation": "Os slides indicam ≥2 dias por semana de fortalecimento muscular.",
-      "source": "Tema 6 — Adultos"
+      "explanation": "A necessidade de sono varia com a idade e integra as recomendações de 24 horas.",
+      "source": "Tema 6 — Recomendações sobre sono"
     },
     {
       "id": "PEVS049",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Nos idosos ≥65 anos, além das recomendações dos adultos, deve ser dada especial atenção a:",
+      "question": "Qual afirmação descreve melhor a relação entre atividade física, sedentarismo e saúde ao longo das faixas etárias?",
       "options": [
-        "Apenas alongamentos passivos.",
-        "Atividades de equilíbrio/prevenção de quedas em pelo menos 3 dias/semana.",
-        "Abolir treino de força.",
-        "Evitar qualquer atividade vigorosa em todos os casos."
+        "Mais movimento e menos sedentarismo associam-se a benefícios de saúde; nos idosos, o trabalho multicomponente acrescenta benefícios funcionais e de prevenção de quedas.",
+        "A atividade física só produz benefícios em adultos jovens.",
+        "O sedentarismo não se relaciona com saúde se houver treino de força.",
+        "Nas crianças, atividade física não se relaciona com saúde óssea ou cardiometabólica."
       ],
-      "answer": 1,
-      "explanation": "A recomendação inclui atividade multicomponente/equilíbrio em ≥3 dias/semana para prevenção de quedas.",
-      "source": "Tema 6 — Idosos"
+      "answer": 0,
+      "explanation": "Os slides relacionam maior AF e menor comportamento sedentário com benefícios específicos em diferentes fases da vida.",
+      "source": "Tema 6 — Relação com condições de saúde por faixa etária"
     },
     {
       "id": "PEVS050",
       "topic": "6. Recomendações 24h",
       "type": "multiple_choice",
-      "question": "Qual associação de sono está correta segundo os slides?",
+      "question": "Qual princípio transversal às recomendações de 24 horas é mais adequado?",
       "options": [
-        "Adultos 18–64: 5–6 h; idosos: 10–12 h.",
-        "Jovens 14–17: 4–6 h; adultos: 12–14 h.",
-        "Adultos 18–64: 7–9 h; idosos ≥65: 7–8 h.",
-        "Crianças 3–4: 6–7 h."
+        "Todos os movimentos contam e substituir parte do tempo sedentário por movimento é benéfico.",
+        "Apenas exercício vigoroso produz benefício.",
+        "Só o exercício realizado num ginásio conta.",
+        "Se uma pessoa não atingir a recomendação completa, não obtém qualquer benefício."
       ],
-      "answer": 2,
-      "explanation": "Adultos: 7–9 h; idosos: 7–8 h. Nos jovens, 5–13 anos: 9–11 h; 14–17: 8–10 h.",
-      "source": "Tema 6 — Sono"
+      "answer": 0,
+      "explanation": "Mesmo volumes abaixo da recomendação podem ser úteis; aumentar movimento e reduzir sedentarismo é benéfico.",
+      "source": "Tema 6 — Princípios gerais das recomendações"
     },
     {
       "id": "PEVS051",
@@ -861,16 +861,16 @@
       "id": "PEVS058",
       "topic": "7. Atividade Física Segura",
       "type": "multiple_choice",
-      "question": "Os esteroides anabolizantes androgénicos são usados sobretudo com o objetivo de:",
+      "question": "No contexto dos slides, «substâncias dopantes» refere-se a substâncias utilizadas para:",
       "options": [
-        "Reduzir qualquer massa muscular.",
-        "Aumentar massa muscular e/ou performance.",
-        "Tratar automaticamente hipertensão.",
-        "Melhorar sono sem outros efeitos."
+        "Alterar imagem corporal e/ou aumentar força e performance, podendo acarretar riscos para a saúde.",
+        "Substituir alimentação saudável sem qualquer risco.",
+        "Tratar automaticamente hipertensão e diabetes.",
+        "Reduzir massa muscular de forma terapêutica."
       ],
-      "answer": 1,
-      "explanation": "No contexto do fitness, os EAA são utilizados para imagem/performance, sobretudo aumento de massa muscular.",
-      "source": "Tema 7 — Substâncias dopantes"
+      "answer": 0,
+      "explanation": "No contexto da UC, o consumo de substâncias dopantes é associado à alteração da imagem e/ou performance e a riscos importantes para a saúde.",
+      "source": "Tema 7 — Consumo de substâncias dopantes: definição"
     },
     {
       "id": "PEVS059",
@@ -891,316 +891,316 @@
       "id": "PEVS060",
       "topic": "7. Atividade Física Segura",
       "type": "multiple_choice",
-      "question": "Qual é um possível efeito adverso dos EAA na mulher?",
+      "question": "Qual conjunto inclui riscos para a saúde associados aos esteroides anabolizantes androgénicos?",
       "options": [
-        "Aumento garantido da fertilidade.",
-        "Diminuição permanente do pelo corporal.",
-        "Hirsutismo, alterações da voz e irregularidades menstruais.",
-        "Eliminação do risco cardiovascular."
+        "Alterações cardiovasculares, endócrinas, hepáticas, renais, psicológicas e reprodutivas.",
+        "Apenas dor muscular transitória.",
+        "Melhoria garantida da fertilidade e redução do risco cardiovascular.",
+        "Ausência de efeitos sistémicos."
       ],
-      "answer": 2,
-      "explanation": "Os slides referem hirsutismo, alteração da voz, aumento do clitóris, irregularidades menstruais, entre outros.",
-      "source": "Tema 7 — Substâncias dopantes"
+      "answer": 0,
+      "explanation": "Os slides apresentam efeitos adversos em vários sistemas, incluindo cardiovascular, endócrino, hepático, renal, psicológico e reprodutivo.",
+      "source": "Tema 7 — Substâncias dopantes: riscos para a saúde"
     },
     {
       "id": "PEVS061",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Doenças cardiovasculares correspondem a:",
+      "question": "Qual opção descreve corretamente as doenças cardiovasculares (DCV)?",
       "options": [
-        "Um grupo de patologias do coração e vasos sanguíneos.",
-        "Apenas hipertensão.",
-        "Apenas doença do músculo esquelético.",
-        "Qualquer infeção respiratória."
+        "Grupo de patologias do coração e dos vasos sanguíneos, incluindo doença coronária, cerebrovascular e arterial periférica.",
+        "Apenas hipertensão arterial.",
+        "Qualquer lesão musculoesquelética.",
+        "Somente doenças infecciosas do coração."
       ],
       "answer": 0,
-      "explanation": "As DCV incluem doença coronária, cerebrovascular, arterial periférica e outras patologias do coração/vasos.",
-      "source": "Tema 8 — Doenças cardiovasculares"
+      "explanation": "As DCV incluem várias patologias que afetam coração e vasos sanguíneos.",
+      "source": "Tema 8 — DCV: definição"
     },
     {
       "id": "PEVS062",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual é a diferença fundamental entre AVC isquémico e hemorrágico?",
+      "question": "Qual associação sobre causas/mecanismos e sintomas de DCV está correta?",
       "options": [
-        "O isquémico ocorre por bloqueio; o hemorrágico por rutura de um vaso.",
-        "O isquémico é sempre assintomático; o hemorrágico nunca é grave.",
-        "O hemorrágico afeta apenas o coração.",
-        "Não existe diferença fisiopatológica."
+        "AVC isquémico envolve bloqueio e hemorrágico rutura vascular; EAM pode causar dor torácica com possível irradiação, dispneia e suor frio.",
+        "AVC isquémico resulta sempre de rutura; EAM nunca causa dor.",
+        "DCV não se relaciona com aterosclerose.",
+        "AVC afeta apenas o coração."
       ],
       "answer": 0,
-      "explanation": "AVC isquémico envolve obstrução do fluxo; hemorrágico envolve rutura vascular.",
-      "source": "Tema 8 — Doenças cardiovasculares"
+      "explanation": "Os slides distinguem os mecanismos de AVC e apresentam sintomas típicos de eventos cardiovasculares agudos.",
+      "source": "Tema 8 — DCV: causas e sintomas"
     },
     {
       "id": "PEVS063",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual dos seguintes é um fator de risco cardiovascular modificável?",
+      "question": "Qual opção reúne medidas de prevenção/controlo de DCV?",
       "options": [
-        "Idade.",
-        "História familiar.",
-        "Inatividade física.",
-        "Sexo biológico."
+        "Não fumar, ser fisicamente ativo, controlar peso, pressão arterial, lípidos, diabetes, álcool e alimentação.",
+        "Aumentar sedentarismo para poupar o coração.",
+        "Eliminar toda a atividade física.",
+        "Intervir apenas depois de ocorrer enfarte."
       ],
-      "answer": 2,
-      "explanation": "Inatividade física, tabaco, obesidade, HTA, dislipidemia, diabetes, álcool e alimentação são modificáveis.",
-      "source": "Tema 8 — Doenças cardiovasculares"
+      "answer": 0,
+      "explanation": "A prevenção cardiovascular atua sobretudo nos fatores de risco modificáveis.",
+      "source": "Tema 8 — DCV: prevenção"
     },
     {
       "id": "PEVS064",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual afirmação descreve corretamente a relação entre AF e DCV?",
+      "question": "Qual afirmação sobre tratamento/reabilitação e relação entre AF, sedentarismo e DCV está correta?",
       "options": [
-        "Qualquer AF aumenta o risco cardiovascular crónico.",
-        "Pessoas fisicamente ativas têm menor incidência e probabilidade de morte por DCV.",
-        "A AF só é útil em pessoas sem doença.",
-        "A reabilitação cardíaca exclui exercício."
+        "O tratamento clínico depende da condição; o exercício integra programas de reabilitação cardíaca e maior AF associa-se a menor risco, enquanto mais sedentarismo se associa a maior risco.",
+        "A reabilitação cardíaca exclui exercício.",
+        "O sedentarismo reduz a mortalidade cardiovascular.",
+        "A AF só é útil antes de existir qualquer DCV."
       ],
-      "answer": 1,
-      "explanation": "A AF associa-se a menor risco e é componente importante da reabilitação cardíaca.",
-      "source": "Tema 8 — Doenças cardiovasculares"
+      "answer": 0,
+      "explanation": "A AF tem papel preventivo e integra a reabilitação cardíaca; maior sedentarismo associa-se a pior risco cardiovascular.",
+      "source": "Tema 8 — DCV: tratamento, AF e comportamento sedentário"
     },
     {
       "id": "PEVS065",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Na classificação usada nos slides, hipertensão Grau I corresponde a:",
+      "question": "Qual opção descreve corretamente a hipertensão arterial e alguns dos seus fatores de risco?",
       "options": [
-        "PAS <120 e PAD <80.",
-        "PAS 120–129 e PAD <80.",
-        "PAS 130–139 ou PAD 80–89.",
-        "PAS ≥180 e PAD ≥120 em todos os casos."
+        "Pressão arterial persistentemente elevada; fatores modificáveis incluem excesso de sal, álcool, tabaco, inatividade e excesso de peso.",
+        "É definida por uma única medição elevada durante exercício.",
+        "Não tem fatores modificáveis.",
+        "É sempre provocada por exercício físico."
       ],
-      "answer": 2,
-      "explanation": "Grau I: PAS 130–139 ou PAD 80–89 mmHg.",
-      "source": "Tema 8 — Hipertensão"
+      "answer": 0,
+      "explanation": "HTA é elevação persistente da PA e resulta de múltiplos fatores, alguns modificáveis.",
+      "source": "Tema 8 — Hipertensão: definição e causas/fatores de risco"
     },
     {
       "id": "PEVS066",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Uma crise hipertensiva é indicada nos slides por valores:",
+      "question": "Qual associação sobre consequências e sintomas da hipertensão está correta?",
       "options": [
-        ">180 mmHg sistólica e/ou >120 mmHg diastólica.",
-        "120/80 exatamente.",
-        "100/60.",
-        "130/70 apenas."
+        "Pode contribuir para EAM, AVC, insuficiência renal e cegueira; muitas pessoas são assintomáticas.",
+        "É sempre sintomática e não causa lesão de órgãos.",
+        "Só afeta músculos esqueléticos.",
+        "Não se relaciona com risco cardiovascular."
       ],
       "answer": 0,
-      "explanation": "Valores >180 e/ou >120 exigem atenção médica imediata segundo o slide de classificação.",
-      "source": "Tema 8 — Hipertensão"
+      "explanation": "A HTA pode ser silenciosa e causar complicações cardiovasculares e renais importantes.",
+      "source": "Tema 8 — Hipertensão: consequências e sintomas"
     },
     {
       "id": "PEVS067",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Durante exercício aeróbio dinâmico, é esperado que:",
+      "question": "Qual opção sobre diagnóstico e valores de referência da pressão arterial está correta?",
       "options": [
-        "PAS diminua sempre e PAD aumente muito.",
-        "PAS aumente e PAD se mantenha estável ou diminua ligeiramente.",
-        "PAS e PAD caiam para zero.",
-        "Não haja alteração hemodinâmica."
+        "Normal <120/<80; HTA grau I 130–139 ou 80–89; grau II ≥140 ou ≥90; o diagnóstico é clínico e deve ser confirmado por profissional de saúde.",
+        "Qualquer valor >100/60 significa HTA.",
+        "Uma única medição após exercício confirma diagnóstico.",
+        "HTA grau I começa apenas acima de 180/120."
       ],
-      "answer": 1,
-      "explanation": "Nos slides, durante exercício aeróbio a sistólica aumenta e a diastólica tende a manter-se ou reduzir ligeiramente.",
-      "source": "Tema 8 — Hipertensão e AF"
+      "answer": 0,
+      "explanation": "Os slides apresentam os intervalos de PA e salientam que o diagnóstico não deve ser feito a partir de uma medição isolada pelo TEF.",
+      "source": "Tema 8 — Hipertensão: diagnóstico, valores e procedimentos"
     },
     {
       "id": "PEVS068",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Hipotensão pós-exercício significa:",
+      "question": "Qual afirmação integra prevenção/controlo e relação da hipertensão com o exercício?",
       "options": [
-        "Elevação persistente da PA após treino.",
-        "Redução da PA sistólica e/ou diastólica após uma sessão, face aos valores pré-exercício.",
-        "Perda de consciência obrigatória após exercício.",
-        "Diagnóstico de hipertensão."
+        "Reduzir sal, evitar tabaco/excesso de álcool, ser ativo e seguir tratamento médico; o exercício regular tende a reduzir PA e pode causar hipotensão pós-exercício.",
+        "Pessoas com HTA devem evitar toda a atividade física.",
+        "O exercício aeróbio faz sempre a PAD subir muito.",
+        "A medicação deve ser alterada pelo TEF em função do treino."
       ],
-      "answer": 1,
-      "explanation": "É a redução aguda da pressão arterial após o exercício, podendo durar algumas horas.",
-      "source": "Tema 8 — Hipertensão e AF"
+      "answer": 0,
+      "explanation": "A gestão inclui estilo de vida e cuidados médicos; a AF regular contribui para reduzir PA e existe hipotensão pós-exercício.",
+      "source": "Tema 8 — Hipertensão: prevenção, controlo e relação com AF"
     },
     {
       "id": "PEVS069",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual valor de glicemia em jejum é critério de diabetes nos slides?",
+      "question": "Qual opção define melhor diabetes e apresenta causas/mecanismos relevantes?",
       "options": [
-        "≥90 mg/dL.",
-        "≥100 mg/dL.",
-        "≥110 mg/dL.",
-        "≥126 mg/dL."
+        "Grupo de doenças metabólicas com hiperglicemia por défice de secreção de insulina e/ou incapacidade de a utilizar eficazmente.",
+        "Doença causada exclusivamente por consumo de açúcar.",
+        "Apenas uma alteração transitória após exercício.",
+        "Doença infeciosa do pâncreas."
       ],
-      "answer": 3,
-      "explanation": "Glicemia em jejum ≥126 mg/dL aparece na coluna “Diabetes”.",
-      "source": "Tema 8 — Diabetes"
+      "answer": 0,
+      "explanation": "A diabetes envolve hiperglicemia e alterações na produção e/ou utilização da insulina, com múltiplos mecanismos possíveis.",
+      "source": "Tema 8 — Diabetes: definição e causas"
     },
     {
       "id": "PEVS070",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual HbA1c é apresentada como critério de diabetes?",
+      "question": "Qual conjunto de valores está de acordo com os critérios apresentados para diabetes?",
       "options": [
-        "≥4,0%.",
-        "≥5,0%.",
-        "≥6,5%.",
-        "≥10% exclusivamente."
+        "Glicemia em jejum ≥126 mg/dL e HbA1c ≥6,5%.",
+        "Jejum 80 mg/dL e HbA1c 4%.",
+        "Jejum ≥100 mg/dL confirma sempre diabetes.",
+        "HbA1c 5,0% confirma diabetes."
       ],
-      "answer": 2,
-      "explanation": "HbA1c ≥6,5% é o limiar apresentado para diabetes.",
-      "source": "Tema 8 — Diabetes"
+      "answer": 0,
+      "explanation": "Os slides apresentam ≥126 mg/dL em jejum e HbA1c ≥6,5% como limiares de diabetes.",
+      "source": "Tema 8 — Diabetes: valores de referência para diagnóstico"
     },
     {
       "id": "PEVS071",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Na diabetes tipo 1:",
+      "question": "Qual opção associa corretamente tipos e sintomas de diabetes?",
       "options": [
-        "Existe sobretudo resistência à insulina com produção sempre elevada.",
-        "As células β deixam de produzir insulina suficiente, sendo necessária administração de insulina.",
-        "A condição ocorre apenas na gravidez.",
-        "A atividade física é contraindicada em todos os casos."
+        "Tipo 1: défice marcado de insulina; tipo 2: resistência à insulina; sintomas podem incluir poliúria, polidipsia, polifagia, fadiga e visão turva.",
+        "Tipo 1 e tipo 2 são exatamente o mesmo mecanismo.",
+        "Diabetes nunca provoca sede ou alteração urinária.",
+        "Diabetes gestacional ocorre apenas em homens."
       ],
-      "answer": 1,
-      "explanation": "A DT1 envolve deficiência marcada de produção de insulina por destruição/disfunção das células β.",
-      "source": "Tema 8 — Diabetes"
+      "answer": 0,
+      "explanation": "Os slides distinguem os tipos e apresentam sintomas clássicos de hiperglicemia.",
+      "source": "Tema 8 — Diabetes: sintomas e tipos"
     },
     {
       "id": "PEVS072",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Na diabetes tipo 2, uma característica inicial frequente é:",
+      "question": "Qual afirmação sobre prevenção, tratamento e relação entre diabetes e atividade física está correta?",
       "options": [
-        "Resistência à insulina.",
-        "Ausência total de glicose no sangue.",
-        "Produção obrigatoriamente nula de insulina desde o início.",
-        "Ocorrência apenas em crianças."
+        "Alimentação saudável, AF e controlo do peso ajudam na prevenção/gestão; a AF regular reduz risco de DT2 e integra o seu tratamento, enquanto mais sedentarismo se associa a maior risco.",
+        "A AF aumenta obrigatoriamente o risco de DT2.",
+        "O sedentarismo protege contra diabetes.",
+        "O exercício substitui sempre medicação prescrita."
       ],
       "answer": 0,
-      "explanation": "A DT2 começa frequentemente por resistência à insulina, com aumento compensatório da produção.",
-      "source": "Tema 8 — Diabetes"
+      "explanation": "A AF tem papel importante na prevenção e gestão da DT2, mas não substitui cuidados médicos quando necessários.",
+      "source": "Tema 8 — Diabetes: prevenção, tratamento, AF e sedentarismo"
     },
     {
       "id": "PEVS073",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual trio corresponde aos sintomas clássicos de diabetes frequentemente referido?",
+      "question": "Qual opção descreve corretamente excesso de peso/obesidade e os valores de IMC em adultos?",
       "options": [
-        "Poliúria, polidipsia e polifagia.",
-        "Bradicardia, hipotermia e surdez.",
-        "Tosse, febre e espirros.",
-        "Rigidez, tremor e diplopia."
+        "Excesso de peso: IMC 25–29,9; obesidade: ≥30 kg/m², sendo ≥40 obesidade grau III.",
+        "Excesso de peso começa em IMC 18,5.",
+        "Obesidade só existe acima de IMC 50.",
+        "IMC não é utilizado nos adultos."
       ],
       "answer": 0,
-      "explanation": "Urinar frequentemente, sede excessiva e aumento do apetite são sintomas clássicos.",
-      "source": "Tema 8 — Diabetes"
+      "explanation": "Os slides apresentam os intervalos de IMC para adultos, embora o IMC seja uma medida indireta.",
+      "source": "Tema 8 — Excesso de peso e obesidade: definição e valores"
     },
     {
       "id": "PEVS074",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Nos adultos, um IMC de 27 kg/m² é classificado nos slides como:",
+      "question": "Qual associação sobre causas e consequências da obesidade está correta?",
       "options": [
-        "Baixo peso.",
-        "Peso normal.",
-        "Excesso de peso.",
-        "Obesidade Grau II."
+        "É multifatorial, envolvendo genética, metabolismo, comportamento, ambiente e fatores socioeconómicos; aumenta risco de várias doenças crónicas.",
+        "É causada exclusivamente por falta de força de vontade e não tem consequências clínicas.",
+        "É sempre causada por uma única doença genética.",
+        "Não se relaciona com DCV, diabetes ou saúde mental."
       ],
-      "answer": 2,
-      "explanation": "IMC 25–29,9 corresponde a excesso de peso.",
-      "source": "Tema 8 — Excesso de peso e obesidade"
+      "answer": 0,
+      "explanation": "A obesidade é uma doença multifatorial e crónica associada a diversas consequências para a saúde.",
+      "source": "Tema 8 — Excesso de peso e obesidade: causas e consequências"
     },
     {
       "id": "PEVS075",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual classificação corresponde a IMC ≥40 kg/m² em adultos?",
+      "question": "Qual afirmação integra prevenção, tratamento e relação da obesidade com atividade física?",
       "options": [
-        "Peso normal.",
-        "Excesso de peso.",
-        "Obesidade Grau I.",
-        "Obesidade Grau III."
+        "Alimentação saudável, AF regular, menor sedentarismo e sono adequado fazem parte da abordagem; a AF ajuda no controlo do peso e integra prevenção/tratamento.",
+        "A única intervenção possível é exercício vigoroso diário.",
+        "A AF não tem relação com gestão do peso.",
+        "O tratamento nunca pode envolver acompanhamento clínico."
       ],
-      "answer": 3,
-      "explanation": "IMC ≥40 corresponde a obesidade Grau III.",
-      "source": "Tema 8 — Excesso de peso e obesidade"
+      "answer": 0,
+      "explanation": "A abordagem é multifatorial e pode incluir intervenção no estilo de vida e, quando indicado, tratamento clínico.",
+      "source": "Tema 8 — Obesidade: prevenção, tratamento e relação com AF"
     },
     {
       "id": "PEVS076",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "A obesidade é apresentada nos slides como:",
+      "question": "Qual opção define corretamente cancro?",
       "options": [
-        "Um problema explicado exclusivamente por falta de força de vontade.",
-        "Uma doença multifatorial, crónica e recidivante, resultante de interações complexas.",
-        "Uma condição definida apenas pela balança.",
-        "Uma infeção transmissível."
+        "Grupo de doenças caracterizado por crescimento anormal de células que podem invadir tecidos e disseminar-se para outros órgãos.",
+        "Doença exclusivamente cardiovascular.",
+        "Qualquer aumento benigno de massa muscular.",
+        "Infeção que desaparece sempre sem tratamento."
       ],
-      "answer": 1,
-      "explanation": "Os slides destacam a natureza multifatorial, crónica e recidivante da obesidade.",
-      "source": "Tema 8 — Excesso de peso e obesidade"
+      "answer": 0,
+      "explanation": "O cancro envolve crescimento celular anormal e pode disseminar-se; essa disseminação é metastização.",
+      "source": "Tema 8 — Cancro: definição"
     },
     {
       "id": "PEVS077",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Metastização significa:",
+      "question": "Qual conjunto está alinhado com prevenção e tratamento do cancro apresentados nos slides?",
       "options": [
-        "Redução do tumor após exercício.",
-        "Disseminação de células cancerígenas para outros órgãos/tecidos.",
-        "Apenas inflamação local.",
-        "Conversão de gordura em músculo."
+        "Não fumar, manter peso saudável, alimentação saudável, AF, reduzir álcool e realizar rastreios indicados; o tratamento pode incluir cirurgia, radioterapia, quimioterapia, imunoterapia e outras terapêuticas.",
+        "Apenas suplementação e repouso.",
+        "Evitar rastreios e toda a atividade física.",
+        "O tratamento é sempre exclusivamente cirúrgico."
       ],
-      "answer": 1,
-      "explanation": "Metastização é a propagação do cancro para outros locais do organismo.",
-      "source": "Tema 8 — Cancro"
+      "answer": 0,
+      "explanation": "A prevenção atua em fatores de risco e rastreio; o tratamento depende do tipo de cancro e pode incluir terapias locais e sistémicas.",
+      "source": "Tema 8 — Cancro: prevenção e tratamento"
     },
     {
       "id": "PEVS078",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual destas medidas está alinhada com prevenção do cancro nos slides?",
+      "question": "Qual afirmação descreve corretamente a relação entre cancro, atividade física e comportamento sedentário?",
       "options": [
-        "Fumar apenas ocasionalmente.",
-        "Evitar toda a atividade física.",
-        "Ser fisicamente ativo, não fumar e manter um peso saudável.",
-        "Aumentar exposição UV sem proteção."
+        "AF associa-se a menor risco de vários cancros e benefícios após diagnóstico; mais sedentarismo associa-se a maior incidência de alguns cancros.",
+        "AF aumenta obrigatoriamente o risco de todos os cancros.",
+        "Sedentarismo protege contra cancro.",
+        "Após diagnóstico, AF é sempre proibida."
       ],
-      "answer": 2,
-      "explanation": "A prevenção inclui não fumar, AF, peso saudável, alimentação adequada e redução de álcool, entre outras medidas.",
-      "source": "Tema 8 — Cancro"
+      "answer": 0,
+      "explanation": "Os slides apresentam benefícios da AF na prevenção e após diagnóstico, e associação desfavorável do sedentarismo com alguns cancros.",
+      "source": "Tema 8 — Cancro: relação com AF e sedentarismo"
     },
     {
       "id": "PEVS079",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual afirmação sobre saúde mental está correta?",
+      "question": "Qual opção descreve corretamente saúde mental e alguns tipos de perturbação apresentados?",
       "options": [
-        "É apenas ausência de doença mental.",
-        "Existe num continuum e inclui capacidade de lidar com stress, aprender, trabalhar e contribuir para a comunidade.",
-        "É determinada apenas por genética.",
-        "Não tem relação com fatores sociais."
+        "É um estado de bem-estar mental num continuum; exemplos incluem depressão, ansiedade, bipolaridade, esquizofrenia, perturbações alimentares e PTSD.",
+        "É apenas ausência de depressão.",
+        "Não inclui capacidade de lidar com o stress.",
+        "Não existem diferentes tipos de perturbação mental."
       ],
-      "answer": 1,
-      "explanation": "Os slides definem saúde mental como um estado positivo de bem-estar e funcionamento, num continuum.",
-      "source": "Tema 8 — Saúde Mental"
+      "answer": 0,
+      "explanation": "Saúde mental é mais do que ausência de doença e existe num continuum; os slides apresentam vários exemplos de perturbações.",
+      "source": "Tema 8 — Saúde mental: definição e tipos"
     },
     {
       "id": "PEVS080",
       "topic": "8. Doenças Não-Transmissíveis",
       "type": "multiple_choice",
-      "question": "Qual relação entre atividade física e saúde mental é suportada nos slides?",
+      "question": "Qual afirmação integra prevenção/tratamento e relação entre atividade física e saúde mental?",
       "options": [
-        "AF regular associa-se a redução de ansiedade e sintomas depressivos e a melhor sono/qualidade de vida.",
-        "AF piora sempre a qualidade do sono.",
-        "A intensidade máxima é sempre a experiência mais agradável.",
-        "AF não tem relação com cognição."
+        "Promoção e prevenção exigem ambientes e apoio adequados; tratamento requer cuidados apropriados, e a AF associa-se a benefícios na ansiedade, depressão, sono, cognição e qualidade de vida.",
+        "A AF substitui sempre acompanhamento psicológico ou médico.",
+        "Saúde mental não se relaciona com condições sociais ou ambientais.",
+        "A AF piora necessariamente todos os sintomas psicológicos."
       ],
       "answer": 0,
-      "explanation": "Os slides apresentam evidência favorável para ansiedade, depressão, sono, qualidade de vida e cognição.",
-      "source": "Tema 8 — Saúde Mental"
+      "explanation": "A saúde mental exige promoção, prevenção e tratamento apropriado; a atividade física pode contribuir para vários resultados positivos.",
+      "source": "Tema 8 — Saúde mental: prevenção, tratamento e relação com AF"
     }
   ],
   "exams": {
@@ -1288,5 +1288,215 @@
       "PEVS078",
       "PEVS080"
     ]
+  },
+  "coverage_audit": {
+    "source": "Lista de Saberes — UC Promover a atividade física, a saúde e estilos de vida saudável",
+    "coverage_percent": 100,
+    "audited_items": 54,
+    "covered_items": 54,
+    "map": {
+      "1. Desinformação em Saúde": {
+        "Conceitos: desinformação, misinformation, fake news e teorias da conspiração": [
+          "PEVS001",
+          "PEVS002",
+          "PEVS003",
+          "PEVS004"
+        ],
+        "Desinformação nas redes sociais e estratégias usadas nas Fake-News": [
+          "PEVS005",
+          "PEVS006",
+          "PEVS007",
+          "PEVS008"
+        ],
+        "Estratégias de prevenção e controlo": [
+          "PEVS009",
+          "PEVS010"
+        ]
+      },
+      "2. Evidência Científica em Saúde": {
+        "Pirâmide da evidência científica: evidência mais forte e mais fraca": [
+          "PEVS011",
+          "PEVS012",
+          "PEVS019",
+          "PEVS020"
+        ],
+        "Artigos Científicos: revisão de pares como fator de publicação": [
+          "PEVS013"
+        ],
+        "Prevalência e incidência": [
+          "PEVS014",
+          "PEVS015"
+        ],
+        "Correlações não são relações de causa-efeito": [
+          "PEVS016"
+        ],
+        "Guidelines de causalidade": [
+          "PEVS017",
+          "PEVS018"
+        ]
+      },
+      "3. Os Números da Atividade Física": {
+        "Diferenças para AF/comportamento sedentário entre países da UE e Portugal": [
+          "PEVS021",
+          "PEVS022",
+          "PEVS023",
+          "PEVS024"
+        ],
+        "Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa": [
+          "PEVS025",
+          "PEVS028"
+        ],
+        "Incentivos à prática de exercício físico/desporto em Portugal": [
+          "PEVS027"
+        ],
+        "Obstáculos à prática de exercício físico/desporto em Portugal": [
+          "PEVS026",
+          "PEVS028"
+        ]
+      },
+      "4. Conceitos de Saúde": {
+        "Saúde": [
+          "PEVS031"
+        ],
+        "Saúde Pública": [
+          "PEVS032"
+        ],
+        "Promoção da Saúde": [
+          "PEVS034"
+        ],
+        "Educação para a Saúde": [
+          "PEVS035"
+        ]
+      },
+      "5. Conceitos de Atividade Física e Comportamento Sedentário": {
+        "Atividade Física": [
+          "PEVS036"
+        ],
+        "Exercício Físico": [
+          "PEVS037"
+        ],
+        "Desporto e Aptidão Física": [
+          "PEVS038"
+        ],
+        "Comportamento sedentário — adultos e crianças <1 ano": [
+          "PEVS039"
+        ],
+        "Sedentarismo e Inatividade física; ativo-sedentário": [
+          "PEVS040"
+        ]
+      },
+      "6. Recomendações 24h por faixa etária": {
+        "Crianças 0–4: AF, comportamento sedentário e sono": [
+          "PEVS041",
+          "PEVS042",
+          "PEVS043"
+        ],
+        "Jovens 5–17: AF, comportamento sedentário e sono": [
+          "PEVS044"
+        ],
+        "Adultos 18–64: AF, comportamento sedentário e sono": [
+          "PEVS045"
+        ],
+        "Idosos ≥65: AF, comportamento sedentário e sono": [
+          "PEVS046"
+        ],
+        "Recomendações sobre comportamento sedentário": [
+          "PEVS047"
+        ],
+        "Recomendações sobre sono": [
+          "PEVS048"
+        ],
+        "Relação entre inatividade física, sedentarismo e saúde por faixa etária": [
+          "PEVS049",
+          "PEVS050"
+        ]
+      },
+      "7. Atividade Física Segura": {
+        "Lesões musculoesqueléticas — tipos": [
+          "PEVS051",
+          "PEVS052",
+          "PEVS053"
+        ],
+        "Lesões musculoesqueléticas/complicações cardiovasculares — prevenção": [
+          "PEVS054",
+          "PEVS055"
+        ],
+        "Vigorexia — definição": [
+          "PEVS056"
+        ],
+        "Vigorexia — consequências": [
+          "PEVS057"
+        ],
+        "Consumo de substâncias dopantes — definição": [
+          "PEVS058"
+        ],
+        "Consumo de substâncias dopantes — riscos para a saúde": [
+          "PEVS059",
+          "PEVS060"
+        ]
+      },
+      "8. Doenças Não-Transmissíveis": {
+        "DCV — definição": [
+          "PEVS061"
+        ],
+        "DCV — causas e sintomas": [
+          "PEVS062"
+        ],
+        "DCV — prevenção": [
+          "PEVS063"
+        ],
+        "DCV — tratamento/reabilitação e relação AF/sedentarismo": [
+          "PEVS064"
+        ],
+        "Hipertensão — definição e causas": [
+          "PEVS065"
+        ],
+        "Hipertensão — consequências e sintomas": [
+          "PEVS066"
+        ],
+        "Hipertensão — diagnóstico, valores e procedimentos": [
+          "PEVS067"
+        ],
+        "Hipertensão — prevenção/controlo e relação com AF": [
+          "PEVS068"
+        ],
+        "Diabetes — definição e causas": [
+          "PEVS069"
+        ],
+        "Diabetes — valores de referência para diagnóstico": [
+          "PEVS070"
+        ],
+        "Diabetes — sintomas e tipos": [
+          "PEVS071"
+        ],
+        "Diabetes — prevenção/tratamento e relação AF/sedentarismo": [
+          "PEVS072"
+        ],
+        "Excesso de peso/obesidade — definição e valores de referência": [
+          "PEVS073"
+        ],
+        "Excesso de peso/obesidade — causas e consequências": [
+          "PEVS074"
+        ],
+        "Excesso de peso/obesidade — prevenção/tratamento e relação com AF": [
+          "PEVS075"
+        ],
+        "Cancro — definição": [
+          "PEVS076"
+        ],
+        "Cancro — prevenção e tratamento": [
+          "PEVS077"
+        ],
+        "Cancro — relação AF/sedentarismo": [
+          "PEVS078"
+        ],
+        "Saúde mental — definição e tipos": [
+          "PEVS079"
+        ],
+        "Saúde mental — prevenção/tratamento e relação com AF": [
+          "PEVS080"
+        ]
+      }
+    }
   }
 }

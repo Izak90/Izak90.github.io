@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Simulações — Pedagogia do Exercício</title>
+
+    <meta id="theme-color-meta" name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg:'#090d16',
+                        darkcard:'#111827',
+                        accent:'#3b82f6'
+                    },
+                    fontFamily: {
+                        sans:['Inter','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;user-select:none;transition:background-color .3s ease,color .3s ease}
+        .touch-active:active{transform:scale(.97);transition:transform .1s cubic-bezier(.4,0,.2,1)}
+        button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
+        .pt-safe{padding-top:env(safe-area-inset-top)}
+        .pb-safe{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom))}
+        .hidden{display:none!important}
+
+        .hero{border:1px solid #e2e8f0;background:#fff;border-radius:1.5rem;padding:1.25rem}
+        .dark .hero{border-color:rgba(59,130,246,.3);background:linear-gradient(to bottom right,#0f172a,#0f172a,#172554cc)}
+        .eyebrow{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .55rem;border-radius:9999px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);color:#2563eb;font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+        .dark .eyebrow{color:#60a5fa}
+        .hero h2{font-size:1.25rem;line-height:1.2;margin:.75rem 0 .45rem;font-weight:900;color:#0f172a}
+        .dark .hero h2{color:#fff}
+        .hero p{margin:0;color:#475569;font-size:.75rem;line-height:1.55}
+        .dark .hero p{color:#cbd5e1}
+        .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:1rem}
+        .info{border:1px solid #e2e8f0;background:#f8fafc;border-radius:1rem;padding:.7rem}
+        .dark .info{border-color:#334155;background:rgba(15,23,42,.72)}
+        .info b{display:block;font-size:.9rem;color:#0f172a}
+        .dark .info b{color:#fff}
+        .info span{display:block;font-size:.55rem;color:#64748b;font-weight:800;text-transform:uppercase;margin-top:.1rem}
+        .section-title{margin:1.1rem .1rem .55rem;font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:900}
+
+        .exam-card,.question-card,.result-card,.review,.loading,.error{background:#fff;border:1px solid #e2e8f0;border-radius:1.15rem}
+        .dark .exam-card,.dark .question-card,.dark .result-card,.dark .review,.dark .loading,.dark .error{background:rgba(15,23,42,.6);border-color:#1e293b}
+        .exam-card{padding:1rem;margin-bottom:.65rem}
+        .exam-card-top{display:flex;justify-content:space-between;gap:.75rem;align-items:flex-start}
+        .exam-card h3{font-size:.85rem;margin:0 0 .25rem;font-weight:900;color:#0f172a}
+        .dark .exam-card h3{color:#fff}
+        .exam-card p{font-size:.68rem;color:#64748b;margin:0;line-height:1.45}
+        .pill{display:inline-flex;align-items:center;border-radius:9999px;padding:.22rem .5rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);color:#2563eb;font-size:.55rem;font-weight:900;white-space:nowrap}
+        .dark .pill{color:#60a5fa}
+
+        .primary{width:100%;margin-top:.8rem;border:0;border-radius:.8rem;padding:.7rem .8rem;background:#2563eb;color:#fff;font-weight:900;font-size:.72rem}
+        .secondary{border:1px solid #e2e8f0;background:#f8fafc;color:#334155;border-radius:.8rem;padding:.65rem .75rem;font-weight:800;font-size:.7rem}
+        .dark .secondary{border-color:#334155;background:#0f172a;color:#e2e8f0}
+
+        .exam-head{border:1px solid #e2e8f0;background:#fff;border-radius:1rem;padding:.85rem;position:sticky;top:124px;z-index:20;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+        .dark .exam-head{border-color:#1e293b;background:#0f172af2;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+        .exam-head-row{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+        .exam-meta{font-size:.58rem;color:#64748b;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+        .timer{font-size:1rem;font-weight:950;font-variant-numeric:tabular-nums;color:#0f172a}
+        .dark .timer{color:#fff}
+        .timer.low{color:#f43f5e}
+        .progress{height:6px;background:#e2e8f0;border-radius:9999px;overflow:hidden;margin-top:.55rem}
+        .dark .progress{background:#1f2937}
+        .progress>div{height:100%;background:#3b82f6;width:0%;transition:width .2s}
+        .qnav{display:flex;gap:.3rem;overflow:auto;padding:.55rem 0 .1rem;scrollbar-width:none}
+        .qnav::-webkit-scrollbar{display:none}
+        .qnav button{flex:0 0 30px;height:30px;border-radius:.6rem;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:.58rem;font-weight:900}
+        .dark .qnav button{border-color:#334155;background:#0b1220;color:#94a3b8}
+        .qnav button.done{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.35);color:#059669}
+        .qnav button.current{background:#2563eb;border-color:#2563eb;color:#fff}
+
+        .question-card{margin-top:.7rem;padding:1rem}
+        .question-count{font-size:.58rem;color:#2563eb;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+        .dark .question-count{color:#60a5fa}
+        .topic{font-size:.58rem;color:#64748b;margin-top:.15rem}
+        .question-card h2{font-size:.92rem;line-height:1.4;margin:.75rem 0;color:#0f172a;font-weight:900}
+        .dark .question-card h2{color:#fff}
+        .options{display:grid;gap:.45rem}
+        .option{display:flex;align-items:flex-start;gap:.6rem;border:1px solid #e2e8f0;border-radius:.8rem;background:#fff;padding:.7rem;transition:.15s}
+        .dark .option{border-color:#334155;background:#0b1220}
+        .option.selected{border-color:#3b82f6;background:rgba(59,130,246,.08)}
+        .option input{margin-top:.16rem;accent-color:#3b82f6}
+        .option-letter{width:22px;height:22px;flex:0 0 22px;border-radius:.5rem;background:#f1f5f9;display:grid;place-items:center;font-size:.58rem;font-weight:900;color:#475569}
+        .dark .option-letter{background:#172033;color:#cbd5e1}
+        .option.selected .option-letter{background:#2563eb;color:#fff}
+        .option-text{font-size:.72rem;line-height:1.45;color:#334155}
+        .dark .option-text{color:#e2e8f0}
+        .controls{display:flex;gap:.45rem;margin-top:.7rem}
+        .controls button{flex:1}
+        .submit{margin-top:.75rem;width:100%;border:1px solid rgba(244,63,94,.25);background:rgba(244,63,94,.08);color:#e11d48;border-radius:.8rem;padding:.7rem;font-weight:900;font-size:.7rem}
+        .dark .submit{color:#fda4af}
+
+        .score{font-size:2.2rem;font-weight:950;line-height:1;margin:.75rem 0 .3rem}
+        .score.pass{color:#10b981} .score.fail{color:#f43f5e}
+        .result-card{padding:1rem}
+        .result-card p{color:#475569;font-size:.72rem;line-height:1.5}
+        .dark .result-card p{color:#cbd5e1}
+        .result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem;margin:.8rem 0}
+        .result-stat{border:1px solid #e2e8f0;border-radius:.8rem;padding:.6rem;background:#f8fafc}
+        .dark .result-stat{border-color:#334155;background:#0b1220}
+        .result-stat b{display:block;font-size:.82rem;color:#0f172a}
+        .dark .result-stat b{color:#fff}
+        .result-stat span{font-size:.52rem;color:#64748b;text-transform:uppercase;font-weight:800}
+        .review-title{margin:1rem .1rem .55rem;font-size:.66rem;text-transform:uppercase;color:#64748b;letter-spacing:.05em}
+        .review{padding:.8rem;margin-bottom:.45rem}
+        .review.correct{border-left:4px solid #10b981}
+        .review.incorrect{border-left:4px solid #f43f5e}
+        .review .small{font-size:.56rem;color:#64748b}
+        .review h3{font-size:.72rem;line-height:1.4;margin:.45rem 0;color:#0f172a;font-weight:900}
+        .dark .review h3{color:#fff}
+        .review p{font-size:.66rem;line-height:1.5;margin:.3rem 0;color:#475569}
+        .dark .review p{color:#cbd5e1}
+        .review .answer{font-weight:800;color:#0f172a}
+        .dark .review .answer{color:#fff}
+        .notice{border:1px solid rgba(245,158,11,.3);background:rgba(245,158,11,.08);border-radius:.8rem;padding:.65rem .7rem;color:#b45309;font-size:.64rem;margin-top:.7rem}
+        .dark .notice{color:#fcd34d}
+        .loading,.error{padding:1rem;text-align:center;color:#64748b;font-size:.7rem}
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
+    <div class="max-w-2xl mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <a href="../index.html#estudo" class="flex items-center gap-3 min-w-0" aria-label="Voltar ao Centro de Estudo">
+                <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative touch-active shrink-0">
+                    <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png"
+                         alt="Logo Grupo Academy"
+                         class="w-full h-full object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
+                </div>
+                <div class="min-w-0">
+                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none truncate">CET_TEF_LIS_60</h1>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Pedagogia do Exercício</p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Alternar modo escuro ou claro">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                </button>
+                <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="relative">
+                <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                <input type="text" id="search-input" oninput="handleSimulationSearch()" placeholder="Pesquisar nesta página..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
+                <button onclick="clearSimulationSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1" aria-label="Limpar pesquisa">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="uc-local-nav" class="sticky top-[65px] z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2.5">
+        <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <a href="pedex_resumo.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-book-open-reader mr-1"></i> Resumo
+            </a>
+            <a href="pedex_treino.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-brain mr-1"></i> Treino
+            </a>
+            <a href="pedex_simulador.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center shadow-sm shadow-blue-500/20">
+                <i class="fa-solid fa-vial-circle-check mr-1"></i> Simulações
+            </a>
+        </div>
+    </div>
+</div>
+
+<main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+<div id="loading" class="loading">A carregar banco de questões…</div>
+
+    <section id="home" class="hidden">
+        <div class="hero">
+            <div class="eyebrow"><i class="fa-solid fa-vial-circle-check"></i> Preparação para avaliação</div>
+            <h2>Simulações da UC</h2>
+            <p>Aqui tens a simulação baseada no Workbook da UC e dois exames de estudo construídos a partir do banco desta unidade. Nos exames de estudo, a classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
+
+            <div class="info-grid">
+                <div class="info"><b>40</b><span>Questões</span></div>
+                <div class="info"><b>60 min</b><span>Duração</span></div>
+                <div class="info"><b>9,5</b><span>Aprovação</span></div>
+            </div>
+        </div>
+
+        <div class="section-title">Simulação da UC</div>
+
+        <article class="exam-card" style="border-color:rgba(59,130,246,.38)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Simulação UC — Workbook</h3>
+                    <p>Questões da secção de revisão do Workbook desta UC, mantendo o formato de escolha múltipla utilizado na formação.</p>
+                </div>
+                <span class="pill">Workbook</span>
+            </div>
+            <a href="../simuladores/uc02_pedagogia_do_exercicio.html"
+               class="primary touch-active"
+               style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                Abrir Simulação UC
+            </a>
+        </article>
+
+        <div class="section-title">Exames de Estudo</div>
+
+        <article class="exam-card">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame de Estudo 1</h3>
+                    <p>40 questões distribuídas pelos conteúdos da UC.</p>
+                </div>
+                <span class="pill">Exame 1</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('exam1')">Iniciar exame de estudo 1</button>
+        </article>
+
+        <article class="exam-card">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame de Estudo 2</h3>
+                    <p>40 questões diferentes, com a mesma lógica de avaliação.</p>
+                </div>
+                <span class="pill">Exame 2</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('exam2')">Iniciar exame de estudo 2</button>
+        </article>
+
+        <div class="notice">
+            Se o tempo terminar, a simulação é submetida automaticamente com as respostas existentes. Podes submeter antes do fim; se houver perguntas por responder, será pedida confirmação.
+        </div>
+    </section>
+
+    <section id="exam" class="hidden">
+        <div class="exam-head">
+            <div class="exam-head-row">
+                <div>
+                    <div id="examLabel" class="exam-meta">Simulação</div>
+                    <div id="answeredLabel" class="text-xs font-black text-slate-900 dark:text-white mt-0.5">0/40 respondidas</div>
+                </div>
+                <div id="timer" class="timer">60:00</div>
+            </div>
+            <div class="progress"><div id="progressBar"></div></div>
+            <div id="qnav" class="qnav"></div>
+        </div>
+
+        <article class="question-card">
+            <div id="qCount" class="question-count"></div>
+            <div id="qTopic" class="topic"></div>
+            <h2 id="qText"></h2>
+            <div id="options" class="options"></div>
+
+            <div class="controls">
+                <button id="prevBtn" class="secondary touch-active" onclick="goPrev()">Anterior</button>
+                <button id="nextBtn" class="primary touch-active" style="margin-top:0" onclick="goNext()">Seguinte</button>
+            </div>
+
+            <button class="submit touch-active" onclick="submitExam(false)">Submeter simulação</button>
+        </article>
+    </section>
+
+    <section id="result" class="hidden"></section>
+</main>
+
+<nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors" style="height:calc(56px + env(safe-area-inset-bottom));">
+    <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+        <a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-calendar-days text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Agenda</span>
+        </a>
+        <a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+            <i class="fa-solid fa-book-open-reader text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Estudo</span>
+        </a>
+        <a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-graduation-cap text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Curso</span>
+        </a>
+    </div>
+</nav>
+
+<script>
+function initTheme() {
+    const savedTheme = localStorage.getItem('cet_theme');
+    if (savedTheme === 'light') setLightMode();
+    else setDarkMode();
+}
+function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) setLightMode();
+    else setDarkMode();
+}
+function setDarkMode() {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('cet_theme','dark');
+    const icon=document.getElementById('theme-icon');
+    if(icon) icon.className='fa-solid fa-sun text-amber-400 text-xs';
+    document.getElementById('theme-color-meta')?.setAttribute('content','#090d16');
+}
+function setLightMode() {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('cet_theme','light');
+    const icon=document.getElementById('theme-icon');
+    if(icon) icon.className='fa-solid fa-moon text-slate-700 text-xs';
+    document.getElementById('theme-color-meta')?.setAttribute('content','#ffffff');
+}
+function toggleSearch() {
+    const box=document.getElementById('search-box');
+    const input=document.getElementById('search-input');
+    if(box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        input.focus();
+    } else {
+        box.classList.add('hidden');
+    }
+}
+function handleSimulationSearch() {
+    const q=document.getElementById('search-input').value.trim().toLocaleLowerCase('pt-PT');
+    if(!document.getElementById('home').classList.contains('hidden')) {
+        document.querySelectorAll('#home .exam-card').forEach(card => {
+            const match=!q || card.textContent.toLocaleLowerCase('pt-PT').includes(q);
+            card.style.display=match?'':'none';
+        });
+    }
+}
+function clearSimulationSearch() {
+    document.getElementById('search-input').value='';
+    document.querySelectorAll('#home .exam-card').forEach(card => card.style.display='');
+    document.getElementById('search-box').classList.add('hidden');
+}
+initTheme();
+
+
+
+
+let BANK = [];
+let EXAMS = {};
+let byId = {};
+let state = {
+  examKey: null,
+  ids: [],
+  answers: {},
+  current: 0,
+  seconds: 3600,
+  timerId: null,
+  submitted: false
+};
+
+async function init() {
+  try {
+    const res = await fetch('./pedex_banco_80_perguntas.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Falha ao carregar o banco de questões.');
+    const data = await res.json();
+
+    BANK = data.questions || [];
+    EXAMS = data.exams || {};
+    byId = Object.fromEntries(BANK.map(q => [q.id, q]));
+
+    if (!BANK.length || !EXAMS.exam1 || !EXAMS.exam2) {
+      throw new Error('O ficheiro JSON não contém a estrutura esperada.');
+    }
+
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('home').classList.remove('hidden');
+  } catch (err) {
+    const el = document.getElementById('loading');
+    el.className = 'error';
+    el.textContent = 'Não foi possível carregar as questões. Confirma que “pedex_banco_80_perguntas.json” está na mesma pasta desta página e que a app está a ser aberta por HTTP/HTTPS.';
+    console.error(err);
+  }
+}
+
+function startExam(examKey) {
+  clearInterval(state.timerId);
+
+  state = {
+    examKey,
+    ids: [...EXAMS[examKey]],
+    answers: {},
+    current: 0,
+    seconds: 3600,
+    timerId: null,
+    submitted: false
+  };
+
+  document.getElementById('home').classList.add('hidden');
+  document.getElementById('result').classList.add('hidden');
+  document.getElementById('exam').classList.remove('hidden');
+  document.getElementById('examLabel').textContent = examKey === 'exam1' ? 'Exame de Estudo 1' : 'Exame de Estudo 2';
+
+  renderQuestion();
+  renderNav();
+  updateStatus();
+  updateTimer();
+
+  state.timerId = setInterval(() => {
+    state.seconds -= 1;
+    updateTimer();
+    if (state.seconds <= 0) submitExam(true);
+  }, 1000);
+
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+function renderQuestion() {
+  const id = state.ids[state.current];
+  const q = byId[id];
+  if (!q) return;
+
+  document.getElementById('qCount').textContent = `Questão ${state.current + 1} de ${state.ids.length}`;
+  document.getElementById('qTopic').textContent = q.topic || '';
+  document.getElementById('qText').textContent = q.question;
+
+  const options = document.getElementById('options');
+  options.innerHTML = q.options.map((text, i) => {
+    const selected = state.answers[state.current] === i;
+    return `
+      <label class="option ${selected ? 'selected' : ''}">
+        <input type="radio" name="currentQuestion" value="${i}" ${selected ? 'checked' : ''} onchange="setAnswer(${i})">
+        <span class="option-letter">${'ABCD'[i] || (i + 1)}</span>
+        <span class="option-text">${escapeHtml(text)}</span>
+      </label>
+    `;
+  }).join('');
+
+  document.getElementById('prevBtn').disabled = state.current === 0;
+  document.getElementById('prevBtn').style.opacity = state.current === 0 ? '.45' : '1';
+  document.getElementById('nextBtn').textContent = state.current === state.ids.length - 1 ? 'Rever' : 'Seguinte';
+
+  renderNav();
+}
+
+function setAnswer(optionIndex) {
+  state.answers[state.current] = optionIndex;
+  renderQuestion();
+  updateStatus();
+}
+
+function goPrev() {
+  if (state.current > 0) {
+    state.current -= 1;
+    renderQuestion();
+    scrollExamTop();
+  }
+}
+
+function goNext() {
+  if (state.current < state.ids.length - 1) {
+    state.current += 1;
+    renderQuestion();
+    scrollExamTop();
+  } else {
+    const firstMissing = state.ids.findIndex((_, i) => state.answers[i] === undefined);
+    if (firstMissing >= 0) {
+      state.current = firstMissing;
+      renderQuestion();
+      scrollExamTop();
+    }
+  }
+}
+
+function goToQuestion(index) {
+  state.current = index;
+  renderQuestion();
+  scrollExamTop();
+}
+
+function scrollExamTop() {
+  const top = document.getElementById('exam').offsetTop;
+  window.scrollTo({ top: Math.max(0, top - 6), behavior: 'smooth' });
+}
+
+function renderNav() {
+  const nav = document.getElementById('qnav');
+  nav.innerHTML = state.ids.map((_, i) => {
+    const done = state.answers[i] !== undefined;
+    const current = i === state.current;
+    return `<button class="${done ? 'done' : ''} ${current ? 'current' : ''}" onclick="goToQuestion(${i})">${i + 1}</button>`;
+  }).join('');
+
+  requestAnimationFrame(() => {
+    const current = nav.children[state.current];
+    if (current) current.scrollIntoView({ block: 'nearest', inline: 'center' });
+  });
+}
+
+function updateStatus() {
+  const answered = Object.keys(state.answers).length;
+  document.getElementById('answeredLabel').textContent = `${answered}/${state.ids.length} respondidas`;
+  document.getElementById('progressBar').style.width = `${(answered / state.ids.length) * 100}%`;
+}
+
+function updateTimer() {
+  const timer = document.getElementById('timer');
+  const s = Math.max(0, state.seconds);
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  timer.textContent = `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
+  timer.classList.toggle('low', s <= 300);
+}
+
+function submitExam(auto) {
+  if (state.submitted) return;
+
+  const missingIndexes = state.ids
+    .map((_, i) => state.answers[i] === undefined ? i + 1 : null)
+    .filter(Boolean);
+
+  if (!auto && missingIndexes.length) {
+    const shown = missingIndexes.slice(0, 12).join(', ');
+    const more = missingIndexes.length > 12 ? ` e mais ${missingIndexes.length - 12}` : '';
+    const ok = confirm(`Tens ${missingIndexes.length} pergunta(s) por responder: ${shown}${more}.\n\nQueres submeter a simulação na mesma?`);
+    if (!ok) {
+      state.current = missingIndexes[0] - 1;
+      renderQuestion();
+      scrollExamTop();
+      return;
+    }
+  } else if (!auto) {
+    if (!confirm('Confirmas a submissão da simulação?')) return;
+  }
+
+  state.submitted = true;
+  clearInterval(state.timerId);
+  showResult(auto);
+}
+
+function showResult(auto) {
+  let correct = 0;
+  const reviews = [];
+
+  state.ids.forEach((id, i) => {
+    const q = byId[id];
+    const answer = state.answers[i];
+    if (answer === q.answer) correct += 1;
+    reviews.push({ q, answer, index: i });
+  });
+
+  const total = state.ids.length;
+  const score = Math.round(((correct / total) * 20) * 10) / 10;
+  const percent = Math.round((correct / total) * 1000) / 10;
+  const pass = score >= 9.5;
+  const unanswered = total - Object.keys(state.answers).length;
+
+  document.getElementById('exam').classList.add('hidden');
+  const result = document.getElementById('result');
+  result.classList.remove('hidden');
+
+  result.innerHTML = `
+    <div class="result-card">
+      <span class="pill">Resultado final</span>
+      <div class="score ${pass ? 'pass' : 'fail'}">${score.toFixed(1)} / 20</div>
+      <p><b>${pass ? 'Aprovado' : 'Não aprovado'}</b>${pass ? ' · classificação igual ou superior a 9,5 valores.' : ' · classificação inferior a 9,5 valores.'}</p>
+      ${auto ? '<div class="notice">O tempo terminou e a simulação foi submetida automaticamente.</div>' : ''}
+      <div class="result-stats">
+        <div class="result-stat"><b>${correct}/${total}</b><span>Corretas</span></div>
+        <div class="result-stat"><b>${percent.toFixed(1)}%</b><span>Percentagem</span></div>
+        <div class="result-stat"><b>${unanswered}</b><span>Em branco</span></div>
+      </div>
+      <div class="controls">
+        <button class="secondary" onclick="goHome()">Menu</button>
+        <button class="primary" style="margin-top:0" onclick="startExam(state.examKey)">Repetir</button>
+      </div>
+    </div>
+    <div class="review-title">Correção detalhada</div>
+    ${reviews.map(reviewHtml).join('')}
+  `;
+
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+function reviewHtml(item) {
+  const { q, answer, index } = item;
+  const ok = answer === q.answer;
+  const chosen = answer === undefined ? 'Sem resposta' : q.options[answer];
+
+  return `
+    <article class="review ${ok ? 'correct' : 'incorrect'}">
+      <div class="small">Questão ${index + 1} · ${escapeHtml(q.topic || '')}</div>
+      <h3>${escapeHtml(q.question)}</h3>
+      <p>Tua resposta: <span class="answer">${escapeHtml(chosen)}</span></p>
+      <p>Resposta correta: <span class="answer">${escapeHtml(q.options[q.answer])}</span></p>
+      ${q.explanation ? `<p>${escapeHtml(q.explanation)}</p>` : ''}
+    </article>
+  `;
+}
+
+function goHome() {
+  clearInterval(state.timerId);
+  state.submitted = true;
+  document.getElementById('result').classList.add('hidden');
+  document.getElementById('exam').classList.add('hidden');
+  document.getElementById('home').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, ch => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
+}
+
+window.addEventListener('beforeunload', (e) => {
+  const examVisible = !document.getElementById('exam').classList.contains('hidden');
+  if (examVisible && !state.submitted) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
+init();
+
+
+</script>
+</body>
+</html>

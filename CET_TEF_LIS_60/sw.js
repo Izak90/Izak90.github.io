@@ -35,7 +35,11 @@ const OPTIONAL_URLS = [
   './centro_estudo/pevs_resumo.html',
   './centro_estudo/pevs_treino.html',
   './centro_estudo/pevs_simulador.html',
-  './centro_estudo/pevs_banco_80_perguntas.json'
+  './centro_estudo/pevs_banco_80_perguntas.json',
+  './centro_estudo/pedex_resumo.html',
+  './centro_estudo/pedex_treino.html',
+  './centro_estudo/pedex_simulador.html',
+  './centro_estudo/pedex_banco_80_perguntas.json'
 ];
 
 self.addEventListener('install', event => {
