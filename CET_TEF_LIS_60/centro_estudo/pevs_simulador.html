@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="../assets/simulator.css">
 </head>
 
-<body data-bank-file="./pevs_banco_80_perguntas.json" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
+<body data-bank-file="./pevs_banco_80_perguntas.json" data-bank-file-hard="./pevs_banco_80_perguntas_dificil.json" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
 
 <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
     <div class="max-w-2xl mx-auto px-4 py-3">
@@ -99,7 +99,7 @@
         <div class="hero">
             <div class="eyebrow"><i class="fa-solid fa-vial-circle-check"></i> Preparação para avaliação</div>
             <h2>Simulações da UC</h2>
-            <p>Aqui tens a simulação baseada no Workbook da UC e dois exames de estudo construídos a partir do banco desta unidade. Nos exames de estudo, a classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
+            <p>Aqui tens a simulação baseada no Workbook e quatro exames de estudo: dois fáceis e dois difíceis. Os difíceis usam distratores mais semelhantes, pequenas variações de valores e maior exigência de interpretação. A classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
 
             <div class="info-grid">
                 <div class="info"><b>40</b><span>Questões</span></div>
@@ -124,30 +124,54 @@
                 Abrir Simulação UC
             </a>
         </article>
+        <div class="section-title">Exames de Estudo — Fácil</div>
 
-        <div class="section-title">Exames de Estudo</div>
-
-        <article class="exam-card">
+        <article class="exam-card" data-difficulty="easy">
             <div class="exam-card-top">
                 <div>
-                    <h3>Exame de Estudo 1</h3>
-                    <p>40 questões distribuídas pelos conteúdos da UC.</p>
+                    <h3>Exame Fácil 1</h3>
+                    <p>40 questões de revisão direta e consolidação dos conteúdos da UC.</p>
                 </div>
-                <span class="pill">Exame 1</span>
+                <span class="pill">Fácil · 1</span>
             </div>
-            <button class="primary touch-active" onclick="startExam('exam1')">Iniciar exame de estudo 1</button>
+            <button class="primary touch-active" onclick="startExam('easy','exam1')">Iniciar Exame Fácil 1</button>
         </article>
 
-        <article class="exam-card">
+        <article class="exam-card" data-difficulty="easy">
             <div class="exam-card-top">
                 <div>
-                    <h3>Exame de Estudo 2</h3>
-                    <p>40 questões diferentes, com a mesma lógica de avaliação.</p>
+                    <h3>Exame Fácil 2</h3>
+                    <p>40 questões diferentes do primeiro exame, mantendo dificuldade de consolidação.</p>
                 </div>
-                <span class="pill">Exame 2</span>
+                <span class="pill">Fácil · 2</span>
             </div>
-            <button class="primary touch-active" onclick="startExam('exam2')">Iniciar exame de estudo 2</button>
+            <button class="primary touch-active" onclick="startExam('easy','exam2')">Iniciar Exame Fácil 2</button>
         </article>
+
+        <div class="section-title">Exames de Estudo — Difícil</div>
+
+        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.38)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Difícil 1</h3>
+                    <p>40 questões com opções muito próximas, diferenças conceptuais pequenas e maior exigência de interpretação.</p>
+                </div>
+                <span class="pill">Difícil · 1</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('hard','exam1')">Iniciar Exame Difícil 1</button>
+        </article>
+
+        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.38)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Difícil 2</h3>
+                    <p>40 questões diferentes, com a mesma exigência e distribuição equilibrada das respostas A–D.</p>
+                </div>
+                <span class="pill">Difícil · 2</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('hard','exam2')">Iniciar Exame Difícil 2</button>
+        </article>
+
 
         <div class="notice">
             Se o tempo terminar, a simulação é submetida automaticamente com as respostas existentes. Podes submeter antes do fim; se houver perguntas por responder, será pedida confirmação.

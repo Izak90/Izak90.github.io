@@ -9,11 +9,11 @@
       "question": "Qual das opções define melhor “desinformação” no contexto apresentado nos slides?",
       "options": [
         "Informação falsa partilhada sem intenção de causar dano.",
-        "Informação falsa criada e partilhada deliberadamente com intenção de causar dano ou influenciar.",
+        "Informação científica ainda não revista por pares.",
         "Qualquer opinião com a qual o leitor discorda.",
-        "Informação científica ainda não revista por pares."
+        "Informação falsa criada e partilhada deliberadamente com intenção de causar dano ou influenciar."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Desinformação implica intencionalidade; misinformation corresponde a informação falsa partilhada sem intenção de causar dano.",
       "source": "Tema 1, 2, 3 — Desinformação"
     },
@@ -23,12 +23,12 @@
       "type": "multiple_choice",
       "question": "O que distingue principalmente misinformation de desinformação?",
       "options": [
-        "A misinformation só aparece em redes sociais.",
-        "A misinformation é sempre uma teoria da conspiração.",
         "A intenção de enganar/causar dano não está presente na misinformation.",
-        "A desinformação é sempre publicada por jornalistas."
+        "A desinformação é sempre publicada por jornalistas.",
+        "A misinformation só aparece em redes sociais.",
+        "A misinformation é sempre uma teoria da conspiração."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "Nos slides, misinformation é informação inadvertidamente falsa e partilhada sem intenção de causar dano.",
       "source": "Tema 1, 2, 3 — Desinformação"
     },
@@ -39,9 +39,9 @@
       "question": "Uma “fake news” é, de acordo com os conteúdos da UC:",
       "options": [
         "Informação falsa apresentada sob a forma de notícia, muitas vezes imitando órgãos de comunicação.",
-        "Qualquer notícia com um título sensacionalista.",
+        "Uma informação verdadeira que gera muita partilha.",
         "Uma notícia antiga que já não é atual.",
-        "Uma informação verdadeira que gera muita partilha."
+        "Qualquer notícia com um título sensacionalista."
       ],
       "answer": 0,
       "explanation": "Fake news é informação falsa apresentada com formato de notícia e frequentemente com aparência de fonte jornalística.",
@@ -54,11 +54,11 @@
       "question": "Qual das situações corresponde melhor a uma teoria da conspiração?",
       "options": [
         "Um erro estatístico num artigo científico.",
+        "Explicar um acontecimento importante como resultado de um complô secreto de grupos poderosos e mal-intencionados.",
         "Uma pessoa partilhar uma notícia antiga por engano.",
-        "Um relatório comparar dois países.",
-        "Explicar um acontecimento importante como resultado de um complô secreto de grupos poderosos e mal-intencionados."
+        "Um relatório comparar dois países."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "As teorias da conspiração explicam acontecimentos significativos como complôs secretos promovidos por instituições, grupos ou indivíduos poderosos.",
       "source": "Tema 1, 2, 3 — Desinformação"
     },
@@ -68,12 +68,12 @@
       "type": "multiple_choice",
       "question": "O termo “infodemia” refere-se a:",
       "options": [
+        "A publicação de guidelines de saúde.",
         "Uma epidemia causada por redes sociais.",
-        "Uma superabundância de informação, incluindo informação falsa ou enganadora, especialmente durante uma emergência.",
         "A revisão de artigos por especialistas.",
-        "A publicação de guidelines de saúde."
+        "Uma superabundância de informação, incluindo informação falsa ou enganadora, especialmente durante uma emergência."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "A OMS usa “infodemia” para a superabundância de informação, incluindo informação falsa ou enganadora.",
       "source": "Tema 1, 2, 3 — Desinformação"
     },
@@ -83,12 +83,12 @@
       "type": "multiple_choice",
       "question": "Qual conjunto apresenta estratégias usadas frequentemente em fake news, segundo os conteúdos da UC?",
       "options": [
-        "Impersonação, fabricação, linguagem emocional, conspiração, trolling e desacreditação.",
         "Revisão por pares, replicação, randomização e cegamento.",
+        "Impersonação, fabricação, linguagem emocional, conspiração, trolling e desacreditação.",
         "Prevalência, incidência, risco relativo e odds ratio.",
         "Triagem, diagnóstico, tratamento e reabilitação."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Os slides apresentam vários truques usados na desinformação, incluindo impersonação, fabricação, linguagem emocional, teorias da conspiração, trolling e desacreditação.",
       "source": "Tema 1 — Estratégias usadas nas Fake-News"
     },
@@ -98,12 +98,12 @@
       "type": "multiple_choice",
       "question": "Qual é uma estratégia adequada para avaliar informação de saúde online?",
       "options": [
-        "Confirmar autor, data, fontes, objetivo e eventual validação por organizações credíveis.",
+        "Aceitar a informação quando promete resultados rápidos.",
         "Partilhar primeiro e verificar depois.",
         "Confiar sobretudo em testemunhos pessoais.",
-        "Aceitar a informação quando promete resultados rápidos."
+        "Confirmar autor, data, fontes, objetivo e eventual validação por organizações credíveis."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Fact-checking inclui verificar autoria, data, fontes, objetivo, revisão e credibilidade da organização.",
       "source": "Tema 1, 2, 3 — Desinformação"
     },
@@ -114,8 +114,8 @@
       "question": "Qual dos seguintes é um sinal de alerta num conteúdo de saúde?",
       "options": [
         "Apresentar referências verificáveis.",
-        "Explicar riscos e benefícios.",
         "Indicar data de publicação e revisão.",
+        "Explicar riscos e benefícios.",
         "Prometer uma “cura milagrosa” enquanto tenta vender um produto."
       ],
       "answer": 3,
@@ -128,9 +128,9 @@
       "type": "multiple_choice",
       "question": "Segundo os slides, uma intervenção útil contra desinformação é:",
       "options": [
-        "Evitar qualquer correção para não aumentar a exposição.",
-        "Desmistificar a informação falsa e promover literacia da informação e dos media.",
         "Eliminar todas as redes sociais.",
+        "Desmistificar a informação falsa e promover literacia da informação e dos media.",
+        "Evitar qualquer correção para não aumentar a exposição.",
         "Usar apenas opiniões de celebridades."
       ],
       "answer": 1,
@@ -143,12 +143,12 @@
       "type": "multiple_choice",
       "question": "Qual combinação representa estratégias de prevenção e controlo da desinformação?",
       "options": [
-        "Refutar informação falsa com factos, melhorar literacia mediática, verificar fontes e reportar conteúdos enganosos.",
-        "Partilhar rapidamente conteúdos virais antes de os verificar.",
         "Confiar apenas no número de seguidores da fonte.",
+        "Partilhar rapidamente conteúdos virais antes de os verificar.",
+        "Refutar informação falsa com factos, melhorar literacia mediática, verificar fontes e reportar conteúdos enganosos.",
         "Aceitar informação quando confirma as nossas crenças."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A prevenção passa por fact-checking, literacia em informação/media, correção baseada em factos, partilha consciente e reporte de conteúdos falsos.",
       "source": "Tema 1 — Estratégias de prevenção e controlo"
     },
@@ -158,12 +158,12 @@
       "type": "multiple_choice",
       "question": "Na pirâmide de evidência apresentada, qual se encontra entre os níveis mais fortes?",
       "options": [
-        "Opinião de especialistas.",
-        "Relato de caso.",
+        "Estudo laboratorial isolado.",
         "Revisão sistemática.",
-        "Estudo laboratorial isolado."
+        "Opinião de especialistas.",
+        "Relato de caso."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "Revisões sistemáticas e guidelines de prática clínica aparecem no topo da pirâmide apresentada.",
       "source": "Tema 1, 2, 3 — Evidência científica"
     },
@@ -188,12 +188,12 @@
       "type": "multiple_choice",
       "question": "O que acontece na revisão por pares?",
       "options": [
+        "A revista apenas verifica a ortografia.",
         "O público vota se o artigo deve ser publicado.",
-        "Outros investigadores avaliam o manuscrito e fornecem feedback antes da decisão editorial.",
         "O autor publica o artigo sem avaliação externa.",
-        "A revista apenas verifica a ortografia."
+        "Outros investigadores avaliam o manuscrito e fornecem feedback antes da decisão editorial."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Na revisão por pares, investigadores analisam o artigo e dão feedback; depois o editor decide sobre publicação ou rejeição.",
       "source": "Tema 1, 2, 3 — Evidência científica"
     },
@@ -203,12 +203,12 @@
       "type": "multiple_choice",
       "question": "Prevalência corresponde a:",
       "options": [
-        "Número de novos casos que surgem durante um período.",
-        "Probabilidade de cura de uma doença.",
         "Número de estudos publicados sobre uma doença.",
-        "Casos existentes numa população num determinado momento/período."
+        "Probabilidade de cura de uma doença.",
+        "Casos existentes numa população num determinado momento/período.",
+        "Número de novos casos que surgem durante um período."
       ],
-      "answer": 3,
+      "answer": 2,
       "explanation": "Prevalência indica quão comum é uma condição, considerando os casos existentes.",
       "source": "Tema 1, 2, 3 — Inferência de causalidade"
     },
@@ -218,12 +218,12 @@
       "type": "multiple_choice",
       "question": "Incidência corresponde a:",
       "options": [
-        "Número de novos casos de uma condição numa população ao longo de um período.",
-        "Todos os casos antigos e novos existentes num momento.",
+        "Número de mortes por qualquer causa.",
         "Percentagem de pessoas tratadas.",
-        "Número de mortes por qualquer causa."
+        "Número de novos casos de uma condição numa população ao longo de um período.",
+        "Todos os casos antigos e novos existentes num momento."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Incidência foca os novos casos que aparecem entre momentos temporais.",
       "source": "Tema 1, 2, 3 — Inferência de causalidade"
     },
@@ -233,12 +233,12 @@
       "type": "multiple_choice",
       "question": "No exemplo dos slides, vendas de gelados e ataques de tubarão aumentam no verão. Qual é a interpretação correta?",
       "options": [
-        "Gelados causam ataques de tubarão.",
-        "Ataques de tubarão aumentam o consumo de gelados.",
+        "A correlação prova causalidade quando as duas curvas são semelhantes.",
         "Existe correlação, mas o bom tempo é uma variável que ajuda a explicar ambas; não se demonstra causalidade entre gelados e ataques.",
-        "A correlação prova causalidade quando as duas curvas são semelhantes."
+        "Gelados causam ataques de tubarão.",
+        "Ataques de tubarão aumentam o consumo de gelados."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "Correlação não implica causa-efeito; uma terceira variável pode explicar a associação.",
       "source": "Tema 1, 2, 3 — Inferência de causalidade"
     },
@@ -248,12 +248,12 @@
       "type": "multiple_choice",
       "question": "Qual dos seguintes pertence aos critérios de Bradford Hill apresentados?",
       "options": [
-        "Temporalidade.",
-        "Popularidade nas redes sociais.",
         "Número de seguidores dos autores.",
-        "Preço da revista científica."
+        "Popularidade nas redes sociais.",
+        "Preço da revista científica.",
+        "Temporalidade."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "A relação temporal é um dos critérios/guidelines de causalidade de Bradford Hill.",
       "source": "Tema 1, 2, 3 — Inferência de causalidade"
     },
@@ -263,12 +263,12 @@
       "type": "multiple_choice",
       "question": "Como devem ser usados os critérios de Bradford Hill segundo os slides?",
       "options": [
-        "Como uma checklist obrigatória em que todos têm de estar presentes.",
         "Como guidelines para apoiar a análise de causalidade, podendo alguns critérios não se verificar.",
         "Apenas para diagnosticar doença.",
-        "Só em estudos laboratoriais."
+        "Só em estudos laboratoriais.",
+        "Como uma checklist obrigatória em que todos têm de estar presentes."
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "Os slides dizem explicitamente que são guidelines de causalidade e não uma checklist obrigatória.",
       "source": "Tema 1, 2, 3 — Inferência de causalidade"
     },
@@ -278,12 +278,12 @@
       "type": "multiple_choice",
       "question": "Um estudo caso-controlo caracteriza-se por:",
       "options": [
-        "Acompanhar sempre indivíduos saudáveis durante décadas.",
-        "Testar obrigatoriamente um medicamento com placebo.",
         "Comparar retrospetivamente casos com indivíduos semelhantes sem o efeito/condição para procurar associações ou fatores de risco.",
-        "Ser uma revisão de todos os estudos publicados."
+        "Ser uma revisão de todos os estudos publicados.",
+        "Testar obrigatoriamente um medicamento com placebo.",
+        "Acompanhar sempre indivíduos saudáveis durante décadas."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "Os casos-controlo comparam casos de interesse com controlos semelhantes, habitualmente de forma retrospetiva.",
       "source": "Tema 1, 2, 3 — Evidência científica"
     },
@@ -293,12 +293,12 @@
       "type": "multiple_choice",
       "question": "Porque a opinião de peritos surge abaixo de estudos sistemáticos na pirâmide?",
       "options": [
-        "Porque especialistas não podem publicar artigos.",
-        "Porque só é válida em desporto.",
         "Porque nunca é útil.",
-        "Porque, apesar de poder orientar a prática, tem menor robustez científica do que métodos sistemáticos."
+        "Porque, apesar de poder orientar a prática, tem menor robustez científica do que métodos sistemáticos.",
+        "Porque especialistas não podem publicar artigos.",
+        "Porque só é válida em desporto."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "A experiência de peritos pode ser útil, mas é mais vulnerável a vieses do que evidência produzida por métodos sistemáticos.",
       "source": "Tema 1, 2, 3 — Evidência científica"
     },
@@ -308,10 +308,10 @@
       "type": "multiple_choice",
       "question": "No Eurobarómetro 2022 apresentado nos slides, que percentagem dos portugueses referiu nunca fazer exercício ou praticar desporto?",
       "options": [
+        "18%.",
         "31%.",
-        "49%.",
         "73%.",
-        "18%."
+        "49%."
       ],
       "answer": 2,
       "explanation": "Nos dados apresentados, 73% dos portugueses responderam «nunca» à prática de exercício/desporto.",
@@ -324,11 +324,11 @@
       "question": "A pergunta QB1 do Eurobarómetro apresentada nos slides refere-se sobretudo a:",
       "options": [
         "Sono.",
-        "Exercício ou prática de desporto.",
         "Alimentação.",
-        "Tabagismo."
+        "Tabagismo.",
+        "Exercício ou prática de desporto."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "QB1 pergunta com que frequência a pessoa faz exercício ou pratica desporto.",
       "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
     },
@@ -338,12 +338,12 @@
       "type": "multiple_choice",
       "question": "A pergunta QB2 do Eurobarómetro procura captar:",
       "options": [
-        "Apenas treino num ginásio.",
-        "Apenas desporto federado.",
         "Outras formas de atividade física, como bicicleta, dança ou jardinagem.",
-        "Só atividade física vigorosa."
+        "Só atividade física vigorosa.",
+        "Apenas treino num ginásio.",
+        "Apenas desporto federado."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "QB2 inclui outras formas de atividade física do quotidiano, além de exercício/desporto.",
       "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
     },
@@ -353,12 +353,12 @@
       "type": "multiple_choice",
       "question": "Nos slides, qual comparação está correta para «outra atividade física» no Eurobarómetro 2022?",
       "options": [
-        "Portugal: 72% nunca; UE27: 31% nunca.",
         "Portugal: 31% nunca; UE27: 72% nunca.",
+        "Portugal: 72% nunca; UE27: 31% nunca.",
         "Portugal: 4% nunca; UE27: 73% nunca.",
         "Portugal e UE27: 10% nunca."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Para «outra atividade física», os slides mostram 72% de respostas «nunca» em Portugal e 31% no total UE27.",
       "source": "Tema 3 — Eurobarómetro 2022: diferenças Portugal/UE"
     },
@@ -369,9 +369,9 @@
       "question": "Na comparação portuguesa 2022 vs 2017 para exercício/desporto, qual alteração aparece nos slides?",
       "options": [
         "A categoria «nunca» aumentou 5 pontos percentuais.",
-        "A categoria «nunca» diminuiu 20 pontos percentuais.",
         "A prática regular passou para 50%.",
-        "Todas as categorias melhoraram."
+        "Todas as categorias melhoraram.",
+        "A categoria «nunca» diminuiu 20 pontos percentuais."
       ],
       "answer": 0,
       "explanation": "Nos slides, a resposta «nunca» em exercício/desporto aumenta 5 pontos percentuais em 2022 face a 2017.",
@@ -384,11 +384,11 @@
       "question": "Qual surge nos slides como principal obstáculo à prática mais regular de desporto/atividade física em Portugal?",
       "options": [
         "Excesso de instalações desportivas.",
-        "Falta de tempo.",
         "Demasiada motivação.",
+        "Falta de tempo.",
         "Dormir mais de 8 horas."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "A falta de tempo aparece como a principal razão indicada nos slides do Eurobarómetro.",
       "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
     },
@@ -398,12 +398,12 @@
       "type": "multiple_choice",
       "question": "Qual conjunto inclui os principais incentivos à prática apresentados para Portugal?",
       "options": [
-        "Melhorar a saúde, relaxar e melhorar a preparação física.",
         "Aumentar tempo sentado, reduzir aptidão e evitar contacto social.",
+        "Melhorar a saúde, relaxar e melhorar a preparação física.",
         "Evitar exercício, dormir menos e competir.",
         "Apenas perder peso e ganhar prémios."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Nos slides, melhorar a saúde, relaxar e melhorar a preparação física surgem entre os principais incentivos.",
       "source": "Tema 3 — Incentivos à prática em Portugal"
     },
@@ -413,12 +413,12 @@
       "type": "multiple_choice",
       "question": "Qual conjunto inclui obstáculos à prática de exercício/desporto apresentados para Portugal?",
       "options": [
-        "Falta de tempo e falta de motivação/interesse.",
+        "Apenas falta de equipamento profissional.",
         "Excesso de tempo livre e excesso de motivação.",
-        "Demasiadas horas de sono e excesso de força muscular.",
-        "Apenas falta de equipamento profissional."
+        "Falta de tempo e falta de motivação/interesse.",
+        "Demasiadas horas de sono e excesso de força muscular."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A falta de tempo é o principal obstáculo apresentado, seguida da falta de motivação/interesse.",
       "source": "Tema 3 — Obstáculos à prática em Portugal"
     },
@@ -428,12 +428,12 @@
       "type": "multiple_choice",
       "question": "Qual das seguintes conclusões seria inadequada a partir do Eurobarómetro?",
       "options": [
-        "Existem barreiras percebidas à prática.",
-        "Há pessoas que fazem atividade física fora de contextos desportivos.",
         "O tempo sentado é relevante para caracterizar o comportamento sedentário.",
-        "Quem não pratica desporto é necessariamente sedentário."
+        "Há pessoas que fazem atividade física fora de contextos desportivos.",
+        "Quem não pratica desporto é necessariamente sedentário.",
+        "Existem barreiras percebidas à prática."
       ],
-      "answer": 3,
+      "answer": 2,
       "explanation": "Não praticar desporto não permite concluir automaticamente que alguém é sedentário; são dimensões distintas.",
       "source": "Tema 1, 2, 3 — Eurobarómetro 2022"
     },
@@ -443,12 +443,12 @@
       "type": "multiple_choice",
       "question": "Os dados epidemiológicos apresentados na UC servem sobretudo para:",
       "options": [
-        "Prescrever medicamentos.",
         "Substituir a avaliação individual.",
-        "Compreender a dimensão populacional da inatividade física e do comportamento sedentário.",
-        "Diagnosticar hipertensão num cliente."
+        "Prescrever medicamentos.",
+        "Diagnosticar hipertensão num cliente.",
+        "Compreender a dimensão populacional da inatividade física e do comportamento sedentário."
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "Dados epidemiológicos ajudam a perceber prevalências e padrões na população, orientando promoção de saúde.",
       "source": "Tema 1, 2, 3 — Números da AF"
     },
@@ -458,12 +458,12 @@
       "type": "multiple_choice",
       "question": "Segundo a definição clássica da OMS apresentada, saúde é:",
       "options": [
-        "Apenas ausência de doença.",
         "Um estado de completo bem-estar físico, mental e social, e não apenas ausência de doença.",
+        "Ausência de fatores de risco cardiovasculares.",
         "Capacidade de realizar exercício vigoroso.",
-        "Ausência de fatores de risco cardiovasculares."
+        "Apenas ausência de doença."
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "A definição da OMS inclui bem-estar físico, mental e social, não se limitando à ausência de doença.",
       "source": "Tema 4 — Saúde"
     },
@@ -473,12 +473,12 @@
       "type": "multiple_choice",
       "question": "Saúde Pública é apresentada como:",
       "options": [
-        "A arte e ciência de prevenir doença, prolongar a vida e promover saúde através de esforços organizados da sociedade.",
+        "Um conjunto de recomendações individuais de treino.",
         "Uma prática limitada ao tratamento hospitalar.",
-        "Apenas educação física escolar.",
-        "Um conjunto de recomendações individuais de treino."
+        "A arte e ciência de prevenir doença, prolongar a vida e promover saúde através de esforços organizados da sociedade.",
+        "Apenas educação física escolar."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A definição apresentada destaca prevenção, promoção da saúde, ação organizada da sociedade e redução de desigualdades.",
       "source": "Tema 4 — Saúde Pública"
     },
@@ -488,12 +488,12 @@
       "type": "multiple_choice",
       "question": "Qual associação entre níveis de intervenção em saúde está correta?",
       "options": [
-        "Primária: promoção/educação antes da doença; secundária: diagnóstico/tratamento precoce; terciária: minimizar progressão e maximizar qualidade de vida.",
         "Primária: cirurgia; secundária: prevenção; terciária: rastreio.",
+        "Primária: promoção/educação antes da doença; secundária: diagnóstico/tratamento precoce; terciária: minimizar progressão e maximizar qualidade de vida.",
         "Primária: reabilitação; secundária: promoção; terciária: vacinação.",
         "Os três níveis são equivalentes."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Os slides distinguem intervenção primária, secundária e terciária pela fase do processo de doença e objetivo da intervenção.",
       "source": "Tema 4 — Intervenção primária, secundária e terciária"
     },
@@ -503,12 +503,12 @@
       "type": "multiple_choice",
       "question": "Na Carta de Ottawa, promoção da saúde corresponde sobretudo a:",
       "options": [
-        "Capacitar as pessoas para melhorar e aumentar o controlo sobre a própria saúde e os seus determinantes.",
-        "Tratar doença apenas com medicação.",
         "Substituir prevenção por tratamento.",
-        "Aumentar exclusivamente o número de consultas médicas."
+        "Tratar doença apenas com medicação.",
+        "Aumentar exclusivamente o número de consultas médicas.",
+        "Capacitar as pessoas para melhorar e aumentar o controlo sobre a própria saúde e os seus determinantes."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Promoção da saúde é um processo de capacitação para aumentar o controlo sobre a saúde e os seus determinantes.",
       "source": "Tema 4 — Promoção da Saúde"
     },
@@ -518,12 +518,12 @@
       "type": "multiple_choice",
       "question": "Educação para a Saúde procura sobretudo:",
       "options": [
-        "Desenvolver conhecimentos, atitudes e valores que apoiem decisões adequadas à saúde e bem-estar.",
-        "Ensinar apenas regras de competição desportiva.",
         "Substituir todos os cuidados clínicos por atividade física.",
-        "Transmitir informação sem promover capacidade de decisão."
+        "Ensinar apenas regras de competição desportiva.",
+        "Transmitir informação sem promover capacidade de decisão.",
+        "Desenvolver conhecimentos, atitudes e valores que apoiem decisões adequadas à saúde e bem-estar."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "A educação para a saúde visa apoiar escolhas e decisões informadas através de conhecimentos, atitudes e valores.",
       "source": "Tema 4 — Educação para a Saúde"
     },
@@ -533,12 +533,12 @@
       "type": "multiple_choice",
       "question": "Atividade física é:",
       "options": [
-        "Qualquer movimento corporal produzido pelo sistema músculo-esquelético que aumente o dispêndio energético acima do repouso.",
-        "Apenas treino planeado em ginásio.",
         "Apenas atividade vigorosa.",
-        "Qualquer período sentado abaixo de 1,5 MET."
+        "Apenas treino planeado em ginásio.",
+        "Qualquer período sentado abaixo de 1,5 MET.",
+        "Qualquer movimento corporal produzido pelo sistema músculo-esquelético que aumente o dispêndio energético acima do repouso."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Atividade física inclui movimentos do quotidiano, trabalho e lazer, além de exercício e desporto.",
       "source": "Tema 5 — Atividade Física"
     },
@@ -548,12 +548,12 @@
       "type": "multiple_choice",
       "question": "Exercício físico distingue-se por ser:",
       "options": [
-        "Atividade física planeada, estruturada e repetitiva, com objetivo de manter ou melhorar aptidão física.",
-        "Qualquer movimento espontâneo.",
         "Sempre uma atividade competitiva.",
-        "Apenas treino de força."
+        "Qualquer movimento espontâneo.",
+        "Apenas treino de força.",
+        "Atividade física planeada, estruturada e repetitiva, com objetivo de manter ou melhorar aptidão física."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Exercício é uma subcategoria da atividade física com planeamento, estrutura, repetição e objetivo.",
       "source": "Tema 5 — Exercício Físico"
     },
@@ -563,12 +563,12 @@
       "type": "multiple_choice",
       "question": "Qual opção associa corretamente desporto e aptidão física?",
       "options": [
-        "Desporto: atividade física com regras/regulamentos orientada para competição; aptidão física: conjunto de parâmetros que caracterizam a capacidade para praticar AF.",
         "Desporto e aptidão física são sinónimos.",
+        "Aptidão física é apenas força máxima.",
         "Desporto é qualquer comportamento sentado; aptidão física é ausência de doença.",
-        "Aptidão física é apenas força máxima."
+        "Desporto: atividade física com regras/regulamentos orientada para competição; aptidão física: conjunto de parâmetros que caracterizam a capacidade para praticar AF."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Os slides distinguem desporto pela componente regulamentada/competitiva e aptidão física pela capacidade individual para praticar AF.",
       "source": "Tema 5 — Desporto e Aptidão Física"
     },
@@ -579,9 +579,9 @@
       "question": "Qual associação sobre comportamento sedentário está correta?",
       "options": [
         "Adultos: acordado, sentado/reclinado/deitado, ≤1,5 MET; crianças <1 ano: inclui baixo dispêndio quando confinadas ou sonolentas, mas tummy time não conta como sedentário.",
-        "Adultos: qualquer atividade <6 MET; bebés: todo o tempo de barriga para baixo é sedentário.",
+        "Comportamento sedentário é sinónimo de inatividade física em todas as idades.",
         "Adultos: dormir é comportamento sedentário; bebés: brincar no chão é sempre sedentário.",
-        "Comportamento sedentário é sinónimo de inatividade física em todas as idades."
+        "Adultos: qualquer atividade <6 MET; bebés: todo o tempo de barriga para baixo é sedentário."
       ],
       "answer": 0,
       "explanation": "A definição combina postura e baixo dispêndio; nos bebés existem especificidades, e o tempo em decúbito ventral não é classificado como sedentário.",
@@ -594,9 +594,9 @@
       "question": "Qual afirmação distingue corretamente inatividade física de comportamento sedentário?",
       "options": [
         "Inatividade significa não cumprir as recomendações de AF; comportamento sedentário refere-se a atividades acordadas de baixo dispêndio em posição sentada/reclinada/deitada.",
+        "Uma pessoa inativa passa obrigatoriamente todo o dia sentada.",
         "São exatamente o mesmo conceito.",
-        "Ser ativo impede acumular comportamento sedentário.",
-        "Uma pessoa inativa passa obrigatoriamente todo o dia sentada."
+        "Ser ativo impede acumular comportamento sedentário."
       ],
       "answer": 0,
       "explanation": "São dimensões diferentes: uma pessoa pode cumprir recomendações de AF e ainda acumular muito tempo sedentário.",
@@ -624,8 +624,8 @@
       "question": "Para crianças de 1–2 anos, qual conjunto está correto?",
       "options": [
         "≥180 min/dia de AF variada; evitar períodos prolongados restringidas; sono 11–14 h.",
-        "30 min/dia de AF; 4 h de ecrã; 6 h de sono.",
         "150 min/semana de AF; sem recomendações de sono.",
+        "30 min/dia de AF; 4 h de ecrã; 6 h de sono.",
         "Apenas AF vigorosa, sem atividade ligeira."
       ],
       "answer": 0,
@@ -639,9 +639,9 @@
       "question": "Para crianças de 3–4 anos, qual opção está correta?",
       "options": [
         "≥180 min/dia de AF, incluindo ≥60 min moderada-vigorosa; ecrã ≤1 h/dia; sono 10–13 h.",
+        "Sem limite de ecrã se cumprir a AF.",
         "60 min/semana de AF; 3 h de ecrã; 6 h de sono.",
-        "150 min/semana de AF vigorosa apenas.",
-        "Sem limite de ecrã se cumprir a AF."
+        "150 min/semana de AF vigorosa apenas."
       ],
       "answer": 0,
       "explanation": "A recomendação combina 180 min totais, dos quais 60 min moderada-vigorosa, baixo tempo de ecrã e sono adequado.",
@@ -653,12 +653,12 @@
       "type": "multiple_choice",
       "question": "Qual associação para jovens dos 5–17 anos está correta?",
       "options": [
-        "Média ≥60 min/dia de AF moderada-vigorosa; vigorosa e fortalecimento muscular/ósseo ≥3 dias/semana; limitar tempo sedentário/ecrã; sono adequado à idade.",
         "150 min de AF por mês; sem recomendações de sedentarismo.",
         "Apenas força 1 dia/semana; 6 h de sono.",
+        "Média ≥60 min/dia de AF moderada-vigorosa; vigorosa e fortalecimento muscular/ósseo ≥3 dias/semana; limitar tempo sedentário/ecrã; sono adequado à idade.",
         "Não existem recomendações de sono para jovens."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "As recomendações de 24 h para jovens integram atividade física, redução do sedentarismo/ecrã e sono.",
       "source": "Tema 6 — Jovens 5–17: recomendações 24 h"
     },
@@ -669,8 +669,8 @@
       "question": "Nos adultos 18–64 anos, qual conjunto resume melhor as recomendações?",
       "options": [
         "150–300 min/semana moderada ou 75–150 vigorosa, força ≥2 dias/semana, limitar sedentarismo e procurar 7–9 h de sono.",
-        "60 min de AF por mês e 5 h de sono.",
         "Apenas treino de força, sem atividade aeróbia.",
+        "60 min de AF por mês e 5 h de sono.",
         "Não interromper períodos prolongados sentados."
       ],
       "answer": 0,
@@ -685,8 +685,8 @@
       "options": [
         "Atividade multicomponente com equilíbrio/prevenção de quedas ≥3 dias/semana, redução do sedentarismo e cerca de 7–8 h de sono.",
         "Eliminar treino de força.",
-        "Evitar qualquer atividade física vigorosa em todos os casos.",
-        "Dormir obrigatoriamente mais de 12 h/dia."
+        "Dormir obrigatoriamente mais de 12 h/dia.",
+        "Evitar qualquer atividade física vigorosa em todos os casos."
       ],
       "answer": 0,
       "explanation": "Nos idosos, a recomendação acrescenta trabalho multicomponente/equilíbrio e mantém atenção ao sedentarismo e sono.",
@@ -698,12 +698,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação sobre comportamento sedentário nas recomendações de 24 h é correta?",
       "options": [
-        "Devem ser evitados períodos prolongados sentados e, quando possível, substituídos por movimento.",
-        "Cumprir a recomendação de AF torna irrelevante todo o tempo sentado.",
         "O sedentarismo só é relevante em idosos.",
-        "Tempo de ecrã recreativo não integra as recomendações."
+        "Tempo de ecrã recreativo não integra as recomendações.",
+        "Devem ser evitados períodos prolongados sentados e, quando possível, substituídos por movimento.",
+        "Cumprir a recomendação de AF torna irrelevante todo o tempo sentado."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "As recomendações procuram reduzir e interromper o comportamento sedentário, mesmo em pessoas fisicamente ativas.",
       "source": "Tema 6 — Recomendações sobre comportamento sedentário"
     },
@@ -714,8 +714,8 @@
       "question": "Qual associação de sono está correta?",
       "options": [
         "3–4 anos: 10–13 h; 5–13 anos: 9–11 h; 14–17 anos: 8–10 h; adultos: 7–9 h; idosos: 7–8 h.",
-        "Todas as idades: exatamente 8 h.",
         "Crianças 3–4 anos: 6 h; adultos: 12 h.",
+        "Todas as idades: exatamente 8 h.",
         "Sono não faz parte das recomendações de 24 h."
       ],
       "answer": 0,
@@ -729,9 +729,9 @@
       "question": "Qual afirmação descreve melhor a relação entre atividade física, sedentarismo e saúde ao longo das faixas etárias?",
       "options": [
         "Mais movimento e menos sedentarismo associam-se a benefícios de saúde; nos idosos, o trabalho multicomponente acrescenta benefícios funcionais e de prevenção de quedas.",
-        "A atividade física só produz benefícios em adultos jovens.",
+        "Nas crianças, atividade física não se relaciona com saúde óssea ou cardiometabólica.",
         "O sedentarismo não se relaciona com saúde se houver treino de força.",
-        "Nas crianças, atividade física não se relaciona com saúde óssea ou cardiometabólica."
+        "A atividade física só produz benefícios em adultos jovens."
       ],
       "answer": 0,
       "explanation": "Os slides relacionam maior AF e menor comportamento sedentário com benefícios específicos em diferentes fases da vida.",
@@ -743,12 +743,12 @@
       "type": "multiple_choice",
       "question": "Qual princípio transversal às recomendações de 24 horas é mais adequado?",
       "options": [
-        "Todos os movimentos contam e substituir parte do tempo sedentário por movimento é benéfico.",
-        "Apenas exercício vigoroso produz benefício.",
         "Só o exercício realizado num ginásio conta.",
-        "Se uma pessoa não atingir a recomendação completa, não obtém qualquer benefício."
+        "Todos os movimentos contam e substituir parte do tempo sedentário por movimento é benéfico.",
+        "Se uma pessoa não atingir a recomendação completa, não obtém qualquer benefício.",
+        "Apenas exercício vigoroso produz benefício."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Mesmo volumes abaixo da recomendação podem ser úteis; aumentar movimento e reduzir sedentarismo é benéfico.",
       "source": "Tema 6 — Princípios gerais das recomendações"
     },
@@ -758,12 +758,12 @@
       "type": "multiple_choice",
       "question": "Qual é o risco adverso mais comum associado à prática de atividade física referido nos slides?",
       "options": [
-        "Lesões musculoesqueléticas.",
+        "Demência.",
         "Cancro.",
-        "Diabetes tipo 1.",
-        "Demência."
+        "Lesões musculoesqueléticas.",
+        "Diabetes tipo 1."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Apesar dos benefícios superarem os riscos, as lesões musculoesqueléticas são o evento adverso mais comum.",
       "source": "Tema 7 — AF Segura"
     },
@@ -773,12 +773,12 @@
       "type": "multiple_choice",
       "question": "As lesões musculoesqueléticas relacionadas com AF são mais comuns em:",
       "options": [
-        "Mãos e dedos apenas.",
-        "Membros inferiores, como joelho, pé e tornozelo.",
         "Coluna cervical exclusivamente.",
-        "Mandíbula."
+        "Mandíbula.",
+        "Membros inferiores, como joelho, pé e tornozelo.",
+        "Mãos e dedos apenas."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Os slides destacam joelho, pé e tornozelo.",
       "source": "Tema 7 — AF Segura"
     },
@@ -788,12 +788,12 @@
       "type": "multiple_choice",
       "question": "O risco de lesão musculoesquelética tende a aumentar em atividades:",
       "options": [
+        "Vigorosas, de alto impacto e com contacto direto.",
         "Ligeiras e sem impacto.",
         "De respiração diafragmática.",
-        "Vigorosas, de alto impacto e com contacto direto.",
         "Apenas de mobilidade articular."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "Atividades vigorosas, de alto impacto e com contacto têm maior risco de lesões.",
       "source": "Tema 7 — AF Segura"
     },
@@ -803,12 +803,12 @@
       "type": "multiple_choice",
       "question": "Entre as complicações cardiovasculares agudas associadas a exercício vigoroso referidas estão:",
       "options": [
-        "Hipotermia e anemia apenas.",
         "Morte súbita cardíaca e enfarte agudo do miocárdio.",
-        "Diabetes tipo 1 e obesidade.",
-        "Artrite e osteoporose."
+        "Hipotermia e anemia apenas.",
+        "Artrite e osteoporose.",
+        "Diabetes tipo 1 e obesidade."
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "Os slides referem morte súbita cardíaca e EAM como potenciais complicações cardiovasculares.",
       "source": "Tema 7 — AF Segura"
     },
@@ -819,9 +819,9 @@
       "question": "Qual combinação ajuda a reduzir o risco na prática de exercício?",
       "options": [
         "Triagem pré-exercício, avaliação inicial e monitorização durante a prática.",
-        "Evitar recolher informação do praticante.",
+        "Ignorar sintomas durante o treino.",
         "Usar sempre intensidade máxima desde a primeira sessão.",
-        "Ignorar sintomas durante o treino."
+        "Evitar recolher informação do praticante."
       ],
       "answer": 0,
       "explanation": "Triagem, avaliação e monitorização são medidas de segurança destacadas.",
@@ -833,12 +833,12 @@
       "type": "multiple_choice",
       "question": "Vigorexia/dismorfia muscular envolve tipicamente:",
       "options": [
-        "Medo de ganhar qualquer massa muscular.",
-        "Crença de que o corpo é demasiado grande e musculado.",
         "Crença de que o corpo é demasiado pequeno ou insuficientemente musculoso.",
-        "Apenas preferência por treino de resistência."
+        "Medo de ganhar qualquer massa muscular.",
+        "Apenas preferência por treino de resistência.",
+        "Crença de que o corpo é demasiado grande e musculado."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "A dismorfia muscular centra-se na perceção de insuficiente muscularidade, apesar da realidade objetiva poder ser diferente.",
       "source": "Tema 7 — Vigorexia"
     },
@@ -848,12 +848,12 @@
       "type": "multiple_choice",
       "question": "Qual pode ser uma consequência da vigorexia?",
       "options": [
+        "Ausência de impacto ocupacional.",
         "Melhoria garantida da vida social.",
-        "Exercício excessivo, dietas muito restritivas e maior suscetibilidade ao uso de substâncias.",
         "Redução total da preocupação com a imagem corporal.",
-        "Ausência de impacto ocupacional."
+        "Exercício excessivo, dietas muito restritivas e maior suscetibilidade ao uso de substâncias."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Os slides referem sofrimento, impacto social/ocupacional e comportamentos de risco.",
       "source": "Tema 7 — Vigorexia"
     },
@@ -863,12 +863,12 @@
       "type": "multiple_choice",
       "question": "No contexto dos slides, «substâncias dopantes» refere-se a substâncias utilizadas para:",
       "options": [
-        "Alterar imagem corporal e/ou aumentar força e performance, podendo acarretar riscos para a saúde.",
         "Substituir alimentação saudável sem qualquer risco.",
+        "Reduzir massa muscular de forma terapêutica.",
         "Tratar automaticamente hipertensão e diabetes.",
-        "Reduzir massa muscular de forma terapêutica."
+        "Alterar imagem corporal e/ou aumentar força e performance, podendo acarretar riscos para a saúde."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "No contexto da UC, o consumo de substâncias dopantes é associado à alteração da imagem e/ou performance e a riscos importantes para a saúde.",
       "source": "Tema 7 — Consumo de substâncias dopantes: definição"
     },
@@ -910,8 +910,8 @@
       "options": [
         "Grupo de patologias do coração e dos vasos sanguíneos, incluindo doença coronária, cerebrovascular e arterial periférica.",
         "Apenas hipertensão arterial.",
-        "Qualquer lesão musculoesquelética.",
-        "Somente doenças infecciosas do coração."
+        "Somente doenças infecciosas do coração.",
+        "Qualquer lesão musculoesquelética."
       ],
       "answer": 0,
       "explanation": "As DCV incluem várias patologias que afetam coração e vasos sanguíneos.",
@@ -923,12 +923,12 @@
       "type": "multiple_choice",
       "question": "Qual associação sobre causas/mecanismos e sintomas de DCV está correta?",
       "options": [
-        "AVC isquémico envolve bloqueio e hemorrágico rutura vascular; EAM pode causar dor torácica com possível irradiação, dispneia e suor frio.",
-        "AVC isquémico resulta sempre de rutura; EAM nunca causa dor.",
         "DCV não se relaciona com aterosclerose.",
-        "AVC afeta apenas o coração."
+        "AVC afeta apenas o coração.",
+        "AVC isquémico resulta sempre de rutura; EAM nunca causa dor.",
+        "AVC isquémico envolve bloqueio e hemorrágico rutura vascular; EAM pode causar dor torácica com possível irradiação, dispneia e suor frio."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Os slides distinguem os mecanismos de AVC e apresentam sintomas típicos de eventos cardiovasculares agudos.",
       "source": "Tema 8 — DCV: causas e sintomas"
     },
@@ -938,12 +938,12 @@
       "type": "multiple_choice",
       "question": "Qual opção reúne medidas de prevenção/controlo de DCV?",
       "options": [
-        "Não fumar, ser fisicamente ativo, controlar peso, pressão arterial, lípidos, diabetes, álcool e alimentação.",
+        "Intervir apenas depois de ocorrer enfarte.",
         "Aumentar sedentarismo para poupar o coração.",
-        "Eliminar toda a atividade física.",
-        "Intervir apenas depois de ocorrer enfarte."
+        "Não fumar, ser fisicamente ativo, controlar peso, pressão arterial, lípidos, diabetes, álcool e alimentação.",
+        "Eliminar toda a atividade física."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A prevenção cardiovascular atua sobretudo nos fatores de risco modificáveis.",
       "source": "Tema 8 — DCV: prevenção"
     },
@@ -953,12 +953,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação sobre tratamento/reabilitação e relação entre AF, sedentarismo e DCV está correta?",
       "options": [
-        "O tratamento clínico depende da condição; o exercício integra programas de reabilitação cardíaca e maior AF associa-se a menor risco, enquanto mais sedentarismo se associa a maior risco.",
-        "A reabilitação cardíaca exclui exercício.",
         "O sedentarismo reduz a mortalidade cardiovascular.",
-        "A AF só é útil antes de existir qualquer DCV."
+        "A AF só é útil antes de existir qualquer DCV.",
+        "A reabilitação cardíaca exclui exercício.",
+        "O tratamento clínico depende da condição; o exercício integra programas de reabilitação cardíaca e maior AF associa-se a menor risco, enquanto mais sedentarismo se associa a maior risco."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "A AF tem papel preventivo e integra a reabilitação cardíaca; maior sedentarismo associa-se a pior risco cardiovascular.",
       "source": "Tema 8 — DCV: tratamento, AF e comportamento sedentário"
     },
@@ -968,12 +968,12 @@
       "type": "multiple_choice",
       "question": "Qual opção descreve corretamente a hipertensão arterial e alguns dos seus fatores de risco?",
       "options": [
-        "Pressão arterial persistentemente elevada; fatores modificáveis incluem excesso de sal, álcool, tabaco, inatividade e excesso de peso.",
         "É definida por uma única medição elevada durante exercício.",
-        "Não tem fatores modificáveis.",
-        "É sempre provocada por exercício físico."
+        "É sempre provocada por exercício físico.",
+        "Pressão arterial persistentemente elevada; fatores modificáveis incluem excesso de sal, álcool, tabaco, inatividade e excesso de peso.",
+        "Não tem fatores modificáveis."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "HTA é elevação persistente da PA e resulta de múltiplos fatores, alguns modificáveis.",
       "source": "Tema 8 — Hipertensão: definição e causas/fatores de risco"
     },
@@ -983,12 +983,12 @@
       "type": "multiple_choice",
       "question": "Qual associação sobre consequências e sintomas da hipertensão está correta?",
       "options": [
-        "Pode contribuir para EAM, AVC, insuficiência renal e cegueira; muitas pessoas são assintomáticas.",
-        "É sempre sintomática e não causa lesão de órgãos.",
+        "Não se relaciona com risco cardiovascular.",
         "Só afeta músculos esqueléticos.",
-        "Não se relaciona com risco cardiovascular."
+        "Pode contribuir para EAM, AVC, insuficiência renal e cegueira; muitas pessoas são assintomáticas.",
+        "É sempre sintomática e não causa lesão de órgãos."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A HTA pode ser silenciosa e causar complicações cardiovasculares e renais importantes.",
       "source": "Tema 8 — Hipertensão: consequências e sintomas"
     },
@@ -998,12 +998,12 @@
       "type": "multiple_choice",
       "question": "Qual opção sobre diagnóstico e valores de referência da pressão arterial está correta?",
       "options": [
-        "Normal <120/<80; HTA grau I 130–139 ou 80–89; grau II ≥140 ou ≥90; o diagnóstico é clínico e deve ser confirmado por profissional de saúde.",
-        "Qualquer valor >100/60 significa HTA.",
         "Uma única medição após exercício confirma diagnóstico.",
+        "Qualquer valor >100/60 significa HTA.",
+        "Normal <120/<80; HTA grau I 130–139 ou 80–89; grau II ≥140 ou ≥90; o diagnóstico é clínico e deve ser confirmado por profissional de saúde.",
         "HTA grau I começa apenas acima de 180/120."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Os slides apresentam os intervalos de PA e salientam que o diagnóstico não deve ser feito a partir de uma medição isolada pelo TEF.",
       "source": "Tema 8 — Hipertensão: diagnóstico, valores e procedimentos"
     },
@@ -1013,12 +1013,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação integra prevenção/controlo e relação da hipertensão com o exercício?",
       "options": [
-        "Reduzir sal, evitar tabaco/excesso de álcool, ser ativo e seguir tratamento médico; o exercício regular tende a reduzir PA e pode causar hipotensão pós-exercício.",
         "Pessoas com HTA devem evitar toda a atividade física.",
-        "O exercício aeróbio faz sempre a PAD subir muito.",
-        "A medicação deve ser alterada pelo TEF em função do treino."
+        "A medicação deve ser alterada pelo TEF em função do treino.",
+        "Reduzir sal, evitar tabaco/excesso de álcool, ser ativo e seguir tratamento médico; o exercício regular tende a reduzir PA e pode causar hipotensão pós-exercício.",
+        "O exercício aeróbio faz sempre a PAD subir muito."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A gestão inclui estilo de vida e cuidados médicos; a AF regular contribui para reduzir PA e existe hipotensão pós-exercício.",
       "source": "Tema 8 — Hipertensão: prevenção, controlo e relação com AF"
     },
@@ -1028,12 +1028,12 @@
       "type": "multiple_choice",
       "question": "Qual opção define melhor diabetes e apresenta causas/mecanismos relevantes?",
       "options": [
-        "Grupo de doenças metabólicas com hiperglicemia por défice de secreção de insulina e/ou incapacidade de a utilizar eficazmente.",
         "Doença causada exclusivamente por consumo de açúcar.",
-        "Apenas uma alteração transitória após exercício.",
-        "Doença infeciosa do pâncreas."
+        "Doença infeciosa do pâncreas.",
+        "Grupo de doenças metabólicas com hiperglicemia por défice de secreção de insulina e/ou incapacidade de a utilizar eficazmente.",
+        "Apenas uma alteração transitória após exercício."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A diabetes envolve hiperglicemia e alterações na produção e/ou utilização da insulina, com múltiplos mecanismos possíveis.",
       "source": "Tema 8 — Diabetes: definição e causas"
     },
@@ -1043,12 +1043,12 @@
       "type": "multiple_choice",
       "question": "Qual conjunto de valores está de acordo com os critérios apresentados para diabetes?",
       "options": [
-        "Glicemia em jejum ≥126 mg/dL e HbA1c ≥6,5%.",
         "Jejum 80 mg/dL e HbA1c 4%.",
+        "HbA1c 5,0% confirma diabetes.",
         "Jejum ≥100 mg/dL confirma sempre diabetes.",
-        "HbA1c 5,0% confirma diabetes."
+        "Glicemia em jejum ≥126 mg/dL e HbA1c ≥6,5%."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Os slides apresentam ≥126 mg/dL em jejum e HbA1c ≥6,5% como limiares de diabetes.",
       "source": "Tema 8 — Diabetes: valores de referência para diagnóstico"
     },
@@ -1058,12 +1058,12 @@
       "type": "multiple_choice",
       "question": "Qual opção associa corretamente tipos e sintomas de diabetes?",
       "options": [
+        "Diabetes gestacional ocorre apenas em homens.",
         "Tipo 1: défice marcado de insulina; tipo 2: resistência à insulina; sintomas podem incluir poliúria, polidipsia, polifagia, fadiga e visão turva.",
-        "Tipo 1 e tipo 2 são exatamente o mesmo mecanismo.",
         "Diabetes nunca provoca sede ou alteração urinária.",
-        "Diabetes gestacional ocorre apenas em homens."
+        "Tipo 1 e tipo 2 são exatamente o mesmo mecanismo."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Os slides distinguem os tipos e apresentam sintomas clássicos de hiperglicemia.",
       "source": "Tema 8 — Diabetes: sintomas e tipos"
     },
@@ -1074,8 +1074,8 @@
       "question": "Qual afirmação sobre prevenção, tratamento e relação entre diabetes e atividade física está correta?",
       "options": [
         "Alimentação saudável, AF e controlo do peso ajudam na prevenção/gestão; a AF regular reduz risco de DT2 e integra o seu tratamento, enquanto mais sedentarismo se associa a maior risco.",
-        "A AF aumenta obrigatoriamente o risco de DT2.",
         "O sedentarismo protege contra diabetes.",
+        "A AF aumenta obrigatoriamente o risco de DT2.",
         "O exercício substitui sempre medicação prescrita."
       ],
       "answer": 0,
@@ -1088,12 +1088,12 @@
       "type": "multiple_choice",
       "question": "Qual opção descreve corretamente excesso de peso/obesidade e os valores de IMC em adultos?",
       "options": [
-        "Excesso de peso: IMC 25–29,9; obesidade: ≥30 kg/m², sendo ≥40 obesidade grau III.",
+        "IMC não é utilizado nos adultos.",
         "Excesso de peso começa em IMC 18,5.",
         "Obesidade só existe acima de IMC 50.",
-        "IMC não é utilizado nos adultos."
+        "Excesso de peso: IMC 25–29,9; obesidade: ≥30 kg/m², sendo ≥40 obesidade grau III."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Os slides apresentam os intervalos de IMC para adultos, embora o IMC seja uma medida indireta.",
       "source": "Tema 8 — Excesso de peso e obesidade: definição e valores"
     },
@@ -1104,9 +1104,9 @@
       "question": "Qual associação sobre causas e consequências da obesidade está correta?",
       "options": [
         "É multifatorial, envolvendo genética, metabolismo, comportamento, ambiente e fatores socioeconómicos; aumenta risco de várias doenças crónicas.",
-        "É causada exclusivamente por falta de força de vontade e não tem consequências clínicas.",
         "É sempre causada por uma única doença genética.",
-        "Não se relaciona com DCV, diabetes ou saúde mental."
+        "Não se relaciona com DCV, diabetes ou saúde mental.",
+        "É causada exclusivamente por falta de força de vontade e não tem consequências clínicas."
       ],
       "answer": 0,
       "explanation": "A obesidade é uma doença multifatorial e crónica associada a diversas consequências para a saúde.",
@@ -1118,12 +1118,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação integra prevenção, tratamento e relação da obesidade com atividade física?",
       "options": [
-        "Alimentação saudável, AF regular, menor sedentarismo e sono adequado fazem parte da abordagem; a AF ajuda no controlo do peso e integra prevenção/tratamento.",
-        "A única intervenção possível é exercício vigoroso diário.",
         "A AF não tem relação com gestão do peso.",
-        "O tratamento nunca pode envolver acompanhamento clínico."
+        "A única intervenção possível é exercício vigoroso diário.",
+        "O tratamento nunca pode envolver acompanhamento clínico.",
+        "Alimentação saudável, AF regular, menor sedentarismo e sono adequado fazem parte da abordagem; a AF ajuda no controlo do peso e integra prevenção/tratamento."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "A abordagem é multifatorial e pode incluir intervenção no estilo de vida e, quando indicado, tratamento clínico.",
       "source": "Tema 8 — Obesidade: prevenção, tratamento e relação com AF"
     },
@@ -1133,12 +1133,12 @@
       "type": "multiple_choice",
       "question": "Qual opção define corretamente cancro?",
       "options": [
-        "Grupo de doenças caracterizado por crescimento anormal de células que podem invadir tecidos e disseminar-se para outros órgãos.",
         "Doença exclusivamente cardiovascular.",
-        "Qualquer aumento benigno de massa muscular.",
-        "Infeção que desaparece sempre sem tratamento."
+        "Infeção que desaparece sempre sem tratamento.",
+        "Grupo de doenças caracterizado por crescimento anormal de células que podem invadir tecidos e disseminar-se para outros órgãos.",
+        "Qualquer aumento benigno de massa muscular."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "O cancro envolve crescimento celular anormal e pode disseminar-se; essa disseminação é metastização.",
       "source": "Tema 8 — Cancro: definição"
     },
@@ -1148,12 +1148,12 @@
       "type": "multiple_choice",
       "question": "Qual conjunto está alinhado com prevenção e tratamento do cancro apresentados nos slides?",
       "options": [
-        "Não fumar, manter peso saudável, alimentação saudável, AF, reduzir álcool e realizar rastreios indicados; o tratamento pode incluir cirurgia, radioterapia, quimioterapia, imunoterapia e outras terapêuticas.",
-        "Apenas suplementação e repouso.",
+        "O tratamento é sempre exclusivamente cirúrgico.",
         "Evitar rastreios e toda a atividade física.",
-        "O tratamento é sempre exclusivamente cirúrgico."
+        "Apenas suplementação e repouso.",
+        "Não fumar, manter peso saudável, alimentação saudável, AF, reduzir álcool e realizar rastreios indicados; o tratamento pode incluir cirurgia, radioterapia, quimioterapia, imunoterapia e outras terapêuticas."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "A prevenção atua em fatores de risco e rastreio; o tratamento depende do tipo de cancro e pode incluir terapias locais e sistémicas.",
       "source": "Tema 8 — Cancro: prevenção e tratamento"
     },
@@ -1163,12 +1163,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação descreve corretamente a relação entre cancro, atividade física e comportamento sedentário?",
       "options": [
-        "AF associa-se a menor risco de vários cancros e benefícios após diagnóstico; mais sedentarismo associa-se a maior incidência de alguns cancros.",
         "AF aumenta obrigatoriamente o risco de todos os cancros.",
-        "Sedentarismo protege contra cancro.",
-        "Após diagnóstico, AF é sempre proibida."
+        "Após diagnóstico, AF é sempre proibida.",
+        "AF associa-se a menor risco de vários cancros e benefícios após diagnóstico; mais sedentarismo associa-se a maior incidência de alguns cancros.",
+        "Sedentarismo protege contra cancro."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Os slides apresentam benefícios da AF na prevenção e após diagnóstico, e associação desfavorável do sedentarismo com alguns cancros.",
       "source": "Tema 8 — Cancro: relação com AF e sedentarismo"
     },
@@ -1193,12 +1193,12 @@
       "type": "multiple_choice",
       "question": "Qual afirmação integra prevenção/tratamento e relação entre atividade física e saúde mental?",
       "options": [
-        "Promoção e prevenção exigem ambientes e apoio adequados; tratamento requer cuidados apropriados, e a AF associa-se a benefícios na ansiedade, depressão, sono, cognição e qualidade de vida.",
         "A AF substitui sempre acompanhamento psicológico ou médico.",
-        "Saúde mental não se relaciona com condições sociais ou ambientais.",
-        "A AF piora necessariamente todos os sintomas psicológicos."
+        "A AF piora necessariamente todos os sintomas psicológicos.",
+        "Promoção e prevenção exigem ambientes e apoio adequados; tratamento requer cuidados apropriados, e a AF associa-se a benefícios na ansiedade, depressão, sono, cognição e qualidade de vida.",
+        "Saúde mental não se relaciona com condições sociais ou ambientais."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A saúde mental exige promoção, prevenção e tratamento apropriado; a atividade física pode contribuir para vários resultados positivos.",
       "source": "Tema 8 — Saúde mental: prevenção, tratamento e relação com AF"
     }
@@ -1498,5 +1498,7 @@
         ]
       }
     }
-  }
+  },
+  "answer_order": "randomized_per_question",
+  "answer_distribution_policy": "random; no forced A/B/C/D balance"
 }
