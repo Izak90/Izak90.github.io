@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="../assets/simulator.css">
 </head>
 
-<body data-bank-file="./pevs_banco_80_perguntas.json" data-bank-file-hard="./pevs_banco_80_perguntas_dificil.json" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
+<body data-bank-file="./pevs_banco_80_perguntas.json" data-bank-file-medium="./pevs_banco_80_perguntas_medio.json" data-bank-file-hard="./pevs_banco_80_perguntas_dificil.json" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
 
 <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
     <div class="max-w-2xl mx-auto px-4 py-3">
@@ -99,7 +99,7 @@
         <div class="hero">
             <div class="eyebrow"><i class="fa-solid fa-vial-circle-check"></i> Preparação para avaliação</div>
             <h2>Simulações da UC</h2>
-            <p>Aqui tens a simulação baseada no Workbook e quatro exames de estudo: dois fáceis e dois difíceis. Os difíceis usam distratores mais semelhantes, pequenas variações de valores e maior exigência de interpretação. A classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
+            <p>Aqui tens a simulação baseada no Workbook e seis exames de estudo: dois fáceis, dois médios e dois difíceis. A classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
 
             <div class="info-grid">
                 <div class="info"><b>40</b><span>Questões</span></div>
@@ -148,29 +148,54 @@
             <button class="primary touch-active" onclick="startExam('easy','exam2')">Iniciar Exame Fácil 2</button>
         </article>
 
+        <div class="section-title">Exames de Estudo — Médio</div>
+
+        <article class="exam-card" data-difficulty="medium" style="border-color:rgba(59,130,246,.30)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Médio 1</h3>
+                    <p>40 questões com distratores próximos, pequenas variações de valores e maior necessidade de interpretação.</p>
+                </div>
+                <span class="pill">Médio · 1</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('medium','exam1')">Iniciar Exame Médio 1</button>
+        </article>
+
+        <article class="exam-card" data-difficulty="medium" style="border-color:rgba(59,130,246,.30)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Médio 2</h3>
+                    <p>40 questões diferentes, com exigência intermédia e ordem de respostas aleatória.</p>
+                </div>
+                <span class="pill">Médio · 2</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('medium','exam2')">Iniciar Exame Médio 2</button>
+        </article>
+
         <div class="section-title">Exames de Estudo — Difícil</div>
 
-        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.38)">
+        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.42)">
             <div class="exam-card-top">
                 <div>
                     <h3>Exame Difícil 1</h3>
-                    <p>40 questões com opções muito próximas, diferenças conceptuais pequenas e maior exigência de interpretação.</p>
+                    <p>40 questões de resposta única mais correta, com opções parcialmente verdadeiras, casos práticos e armadilhas conceptuais.</p>
                 </div>
                 <span class="pill">Difícil · 1</span>
             </div>
             <button class="primary touch-active" onclick="startExam('hard','exam1')">Iniciar Exame Difícil 1</button>
         </article>
 
-        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.38)">
+        <article class="exam-card" data-difficulty="hard" style="border-color:rgba(245,158,11,.42)">
             <div class="exam-card-top">
                 <div>
                     <h3>Exame Difícil 2</h3>
-                    <p>40 questões diferentes, com a mesma exigência e distribuição equilibrada das respostas A–D.</p>
+                    <p>40 questões diferentes, com foco em leitura crítica, precisão e seleção da resposta mais completa.</p>
                 </div>
                 <span class="pill">Difícil · 2</span>
             </div>
             <button class="primary touch-active" onclick="startExam('hard','exam2')">Iniciar Exame Difícil 2</button>
         </article>
+
 
 
         <div class="notice">

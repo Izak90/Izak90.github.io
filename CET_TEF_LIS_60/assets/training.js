@@ -3,6 +3,7 @@
 
   const body = document.body;
   const BANK_FILE_EASY = body.dataset.bankFile;
+  const BANK_FILE_MEDIUM = body.dataset.bankFileMedium || null;
   const BANK_FILE_HARD = body.dataset.bankFileHard || null;
   const STORAGE_PREFIX = body.dataset.storagePrefix;
 
@@ -18,7 +19,7 @@
   let wrongCount = 0;
   let sessionLabel = '';
 
-  const diffName = () => activeDifficulty === 'hard' ? 'Difícil' : 'Fácil';
+  const diffName = () => activeDifficulty === 'hard' ? 'Difícil' : activeDifficulty === 'medium' ? 'Médio' : 'Fácil';
   const errorKey = () => `${STORAGE_PREFIX}_${activeDifficulty}_active_recall_errors`;
   const lastKey = () => `${STORAGE_PREFIX}_${activeDifficulty}_active_recall_last`;
 
@@ -78,6 +79,7 @@
     try {
       if (!BANK_FILE_EASY || !STORAGE_PREFIX) throw new Error('Configuração incompleta');
       const jobs = [loadBank(BANK_FILE_EASY, 'easy')];
+      if (BANK_FILE_MEDIUM) jobs.push(loadBank(BANK_FILE_MEDIUM, 'medium'));
       if (BANK_FILE_HARD) jobs.push(loadBank(BANK_FILE_HARD, 'hard'));
       await Promise.all(jobs);
       setTrainingDifficulty('easy', false);
@@ -105,15 +107,21 @@
 
     const desc = document.getElementById('difficultyDescription');
     if (desc) desc.textContent = difficulty === 'hard'
-      ? 'Banco difícil · opções semelhantes, valores próximos e maior interpretação.'
-      : 'Banco fácil · consolidação e revisão direta.';
+      ? 'Banco difícil · resposta mais correta, casos práticos e armadilhas conceptuais.'
+      : difficulty === 'medium'
+        ? 'Banco médio · opções semelhantes, valores próximos e maior interpretação.'
+        : 'Banco fácil · consolidação e revisão direta.';
 
     const easy = document.getElementById('difficultyEasyBtn');
+    const medium = document.getElementById('difficultyMediumBtn');
     const hard = document.getElementById('difficultyHardBtn');
-    if (easy && hard) {
+    if (easy && medium && hard) {
       easy.className = difficulty === 'easy'
         ? 'p-3 rounded-2xl border border-blue-500 bg-blue-600 text-white text-left touch-active'
         : 'p-3 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-left touch-active';
+      medium.className = difficulty === 'medium'
+        ? 'p-3 rounded-2xl border border-sky-500 bg-sky-500 text-slate-950 text-left touch-active'
+        : 'p-3 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-700 dark:text-sky-300 text-left touch-active';
       hard.className = difficulty === 'hard'
         ? 'p-3 rounded-2xl border border-amber-500 bg-amber-500 text-slate-950 text-left touch-active'
         : 'p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-left touch-active';

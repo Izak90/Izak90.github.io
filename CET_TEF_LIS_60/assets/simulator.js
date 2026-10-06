@@ -2,6 +2,7 @@
   'use strict';
 
   const BANK_FILE_EASY = document.body.dataset.bankFile;
+  const BANK_FILE_MEDIUM = document.body.dataset.bankFileMedium || null;
   const BANK_FILE_HARD = document.body.dataset.bankFileHard || null;
   const BANKS = {};
   let activeDifficulty = 'easy';
@@ -59,6 +60,7 @@
     try {
       if (!BANK_FILE_EASY) throw new Error('Falta data-bank-file');
       const jobs = [loadBank(BANK_FILE_EASY, 'easy')];
+      if (BANK_FILE_MEDIUM) jobs.push(loadBank(BANK_FILE_MEDIUM, 'medium'));
       if (BANK_FILE_HARD) jobs.push(loadBank(BANK_FILE_HARD, 'hard'));
       await Promise.all(jobs);
       document.getElementById('loading').classList.add('hidden');
@@ -105,7 +107,7 @@
     document.getElementById('result').classList.add('hidden');
     document.getElementById('exam').classList.remove('hidden');
 
-    const diff = difficulty === 'hard' ? 'Difícil' : 'Fácil';
+    const diff = difficulty === 'hard' ? 'Difícil' : difficulty === 'medium' ? 'Médio' : 'Fácil';
     document.getElementById('examLabel').textContent = `Exame ${diff} ${examKey === 'exam1' ? '1' : '2'}`;
 
     renderQuestion();
@@ -247,7 +249,7 @@
     const percent = Math.round(correct / total * 1000) / 10;
     const pass = score >= 9.5;
     const unanswered = total - Object.keys(state.answers).length;
-    const diff = state.difficulty === 'hard' ? 'Difícil' : 'Fácil';
+    const diff = state.difficulty === 'hard' ? 'Difícil' : state.difficulty === 'medium' ? 'Médio' : 'Fácil';
 
     document.getElementById('exam').classList.add('hidden');
     const result = document.getElementById('result');

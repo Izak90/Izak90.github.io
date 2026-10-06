@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v17';
+const CACHE_NAME = 'cet-tef-v18';
 
 const CORE_URLS = [
   './',
@@ -45,6 +45,7 @@ const OPTIONAL_URLS = [
   './centro_estudo/pevs_treino.html',
   './centro_estudo/pevs_simulador.html',
   './centro_estudo/pevs_banco_80_perguntas.json',
+  './centro_estudo/pevs_banco_80_perguntas_medio.json',
   './centro_estudo/pevs_banco_80_perguntas_dificil.json',
 
   // Centro de Estudo — Pedagogia do Exercício
