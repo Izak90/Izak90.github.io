@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v18';
+const CACHE_NAME = 'cet-tef-v19';
 
 const CORE_URLS = [
   './',
@@ -61,6 +61,21 @@ const OPTIONAL_URLS = [
   './centro_estudo/cf_banco_80_perguntas.json'
 ];
 
+// Dependências visuais usadas pelas páginas estáticas; mantém Tailwind via CDN.
+const EXTERNAL_URLS = [
+  'https://cdn.tailwindcss.com/',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
+  'https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png'
+];
+
+function isExternalAsset(url) {
+  return EXTERNAL_URLS.includes(url.href) ||
+    (url.origin === 'https://fonts.gstatic.com' && url.pathname.startsWith('/s/inter/')) ||
+    (url.origin === 'https://cdnjs.cloudflare.com' &&
+      url.pathname.startsWith('/ajax/libs/font-awesome/6.4.0/webfonts/'));
+}
+
 self.addEventListener('install', event => {
   event.waitUntil(
     (async () => {
@@ -70,9 +85,20 @@ self.addEventListener('install', event => {
       await cache.addAll(CORE_URLS);
 
       // Um ficheiro opcional em falta não bloqueia a instalação do SW.
-      await Promise.allSettled(
-        OPTIONAL_URLS.map(url => cache.add(url))
-      );
+      const optional = [...OPTIONAL_URLS, ...EXTERNAL_URLS];
+      const results = await Promise.allSettled(optional.map(async url => {
+        if (EXTERNAL_URLS.includes(url)) {
+          const request = new Request(url, { mode: 'no-cors', cache: 'reload' });
+          const response = await fetch(request);
+          if (!response.ok && response.type !== 'opaque') throw new Error(`HTTP ${response.status}`);
+          await cache.put(request, response);
+        } else {
+          await cache.add(url);
+        }
+      }));
+      results.forEach((result, index) => {
+        if (result.status === 'rejected') console.warn('Precache indisponível:', optional[index], result.reason);
+      });
 
       await self.skipWaiting();
     })()
@@ -86,7 +112,7 @@ self.addEventListener('activate', event => {
 
       await Promise.all(
         keys
-          .filter(key => key !== CACHE_NAME)
+          .filter(key => key.startsWith('cet-tef-') && key !== CACHE_NAME)
           .map(key => caches.delete(key))
       );
 
@@ -104,6 +130,10 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  const url = new URL(request.url);
+  const sameOrigin = url.origin === self.location.origin;
+  if (!sameOrigin && !isExternalAsset(url)) return;
+
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
@@ -112,13 +142,15 @@ self.addEventListener('fetch', event => {
         // Network-first para receber alterações imediatamente quando há rede.
         const response = await fetch(request);
 
-        // Cache de runtime apenas para respostas válidas da mesma origem.
-        if (
-          response &&
-          response.status === 200 &&
-          response.type === 'basic'
-        ) {
-          cache.put(request, response.clone());
+        if (response.status >= 500) {
+          const cached = await cache.match(request);
+          if (cached) return cached;
+        }
+
+        // Mesma origem e lista explícita de recursos visuais externos.
+        if (response.ok || (!sameOrigin && response.type === 'opaque')) {
+          try { await cache.put(request, response.clone()); }
+          catch (error) { console.warn('Não foi possível guardar em cache:', request.url, error); }
         }
 
         return response;

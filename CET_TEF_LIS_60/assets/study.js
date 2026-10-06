@@ -6,6 +6,8 @@
   let navLeftBtn = null;
   let navRightBtn = null;
   let observedSections = [];
+  let topicObserver = null;
+  let observerGeometry = null;
 
   let selectedStudySection = null;
   let programmaticStudyScroll = false;
@@ -115,6 +117,8 @@
 
     if (localNav) localNav.style.top = `${headerH}px`;
     if (topicNav) topicNav.style.top = `${headerH + localH}px`;
+    document.documentElement.style.setProperty('--study-topic-offset', `${getStudyStickyOffset()}px`);
+    updateTopicObserver();
   }
 
   function updateStudyNavArrows() {
@@ -199,6 +203,31 @@
     });
   }
 
+  function updateTopicObserver() {
+    if (!('IntersectionObserver' in window) || !observedSections.length) return;
+    const offset = Math.min(getStudyStickyOffset(), Math.max(0, window.innerHeight - 1));
+    const bottom = Math.floor(Math.max(0, window.innerHeight - offset) * .45);
+    const geometry = `${offset}:${bottom}:${window.innerHeight}`;
+    if (geometry === observerGeometry) return;
+    observerGeometry = geometry;
+    topicObserver?.disconnect();
+    topicObserver = new IntersectionObserver(() => {
+      if (programmaticStudyScroll) return;
+      const visible = observedSections.filter(section => {
+        const rect = section.getBoundingClientRect();
+        return !section.classList.contains('study-search-hidden') &&
+          rect.bottom > offset && rect.top < window.innerHeight - bottom;
+      });
+      const active = visible[0];
+      if (active && active.id !== selectedStudySection) setActiveStudyNav(active.id, true);
+    }, {
+      root: null,
+      rootMargin: `-${offset}px 0px -${bottom}px 0px`,
+      threshold: [0, .05, .2, .5]
+    });
+    observedSections.forEach(section => topicObserver.observe(section));
+  }
+
   function initTopicNavigation() {
     studyNavScroll = document.getElementById('study-nav-scroll');
     studyNavLinks = [...document.querySelectorAll('.study-nav[data-section]')];
@@ -235,27 +264,7 @@
       .map(link => document.getElementById(link.dataset.section))
       .filter(Boolean);
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        // When navigation was initiated by a topic click, retain the clicked
-        // item highlight until the smooth scroll reaches the target.
-        if (programmaticStudyScroll) return;
-
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visible.length) {
-          setActiveStudyNav(visible[0].target.id, true);
-        }
-      }, {
-        root: null,
-        rootMargin: '-190px 0px -58% 0px',
-        threshold: [.05, .2, .5]
-      });
-
-      observedSections.forEach(section => observer.observe(section));
-    }
+    updateTopicObserver();
 
     // A genuine manual vertical interaction releases the click-scroll lock.
     ['wheel', 'touchstart'].forEach(eventName => {
@@ -289,6 +298,14 @@
   function init() {
     initTheme();
     initTopicNavigation();
+
+    if ('ResizeObserver' in window) {
+      const shellObserver = new ResizeObserver(updateStickyPositions);
+      ['body > header', '#uc-local-nav', '#topic-nav'].forEach(selector => {
+        const element = document.querySelector(selector);
+        if (element) shellObserver.observe(element);
+      });
+    }
 
     window.addEventListener('resize', () => {
       updateStickyPositions();

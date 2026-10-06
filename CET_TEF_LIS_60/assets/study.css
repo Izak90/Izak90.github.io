@@ -5,12 +5,12 @@
 
 .study-section {
   margin-bottom: 1.5rem;
-  scroll-margin-top: 220px;
+  scroll-margin-top: var(--study-topic-offset, 0px);
 }
 
 /* Main theme card */
 .study-card {
-  scroll-margin-top: 220px;
+  scroll-margin-top: var(--study-topic-offset, 0px);
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 1.25rem;

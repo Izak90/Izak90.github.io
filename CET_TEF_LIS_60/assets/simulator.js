@@ -14,6 +14,7 @@
     answers: {},
     current: 0,
     seconds: 3600,
+    deadline: null,
     timerId: null,
     submitted: false
   };
@@ -99,6 +100,7 @@
       answers: {},
       current: 0,
       seconds: 3600,
+      deadline: Date.now() + 3600 * 1000,
       timerId: null,
       submitted: false
     };
@@ -115,11 +117,7 @@
     updateStatus();
     updateTimer();
 
-    state.timerId = setInterval(() => {
-      state.seconds -= 1;
-      updateTimer();
-      if (state.seconds <= 0) submitExam(true);
-    }, 1000);
+    state.timerId = setInterval(syncExamTime, 1000);
 
     window.scrollTo({ top: 0, behavior: 'auto' });
   }
@@ -147,12 +145,14 @@
   }
 
   function setAnswer(i) {
+    if (!canContinueExam()) return;
     state.answers[state.current] = i;
     renderQuestion();
     updateStatus();
   }
 
   function goPrev() {
+    if (!canContinueExam()) return;
     if (state.current > 0) {
       state.current--;
       renderQuestion();
@@ -161,6 +161,7 @@
   }
 
   function goNext() {
+    if (!canContinueExam()) return;
     if (state.current < state.ids.length - 1) {
       state.current++;
       renderQuestion();
@@ -176,6 +177,7 @@
   }
 
   function goToQuestion(i) {
+    if (!canContinueExam()) return;
     state.current = i;
     renderQuestion();
     scrollExamTop();
@@ -203,6 +205,22 @@
     document.getElementById('progressBar').style.width = `${answered / state.ids.length * 100}%`;
   }
 
+  function syncExamTime() {
+    if (!state.examKey || state.submitted) return;
+    state.seconds = Math.max(0, Math.ceil((state.deadline - Date.now()) / 1000));
+    updateTimer();
+    if (state.seconds === 0) submitExam(true);
+  }
+
+  function canContinueExam() {
+    syncExamTime();
+    return Boolean(state.examKey) && !state.submitted;
+  }
+
+  document.addEventListener('visibilitychange', syncExamTime);
+  window.addEventListener('pageshow', syncExamTime);
+  window.addEventListener('focus', syncExamTime);
+
   function updateTimer() {
     const t = document.getElementById('timer');
     const s = Math.max(0, state.seconds);
@@ -211,22 +229,28 @@
   }
 
   function submitExam(auto) {
-    if (state.submitted) return;
+    if (!state.examKey || state.submitted) return;
+    if (Date.now() >= state.deadline) auto = true;
     const missing = state.ids.map((_,i) => state.answers[i] === undefined ? i + 1 : null).filter(Boolean);
 
     if (!auto && missing.length) {
       const shown = missing.slice(0,12).join(', ');
       const more = missing.length > 12 ? ` e mais ${missing.length - 12}` : '';
-      if (!confirm(`Tens ${missing.length} pergunta(s) por responder: ${shown}${more}.\n\nQueres submeter na mesma?`)) {
+      const confirmed = confirm(`Tens ${missing.length} pergunta(s) por responder: ${shown}${more}.\n\nQueres submeter na mesma?`);
+      if (!confirmed && Date.now() < state.deadline) {
         state.current = missing[0] - 1;
         renderQuestion();
         scrollExamTop();
         return;
       }
-    } else if (!auto && !confirm('Confirmas a submissão da simulação?')) {
+    } else if (!auto && !confirm('Confirmas a submissão da simulação?') && Date.now() < state.deadline) {
       return;
     }
 
+    // A confirmação pode manter o JavaScript suspenso até depois do prazo.
+    if (Date.now() >= state.deadline) auto = true;
+    state.seconds = Math.max(0, Math.ceil((state.deadline - Date.now()) / 1000));
+    updateTimer();
     state.submitted = true;
     clearInterval(state.timerId);
     showResult(auto);
