@@ -25,6 +25,10 @@ Extend PEDEx/CF only after source audit and only if useful.
 Estado inicial P3 (2026-10-07; histórico, conclusão abaixo): auditoria de entrada realizada sobre as duas Listas de Saberes e as Aulas 1–4 recuperadas das pastas públicas. Identificadas duplicações conceptuais em CF e cobertura parcial de saberes compostos em PEDEx; as declarações legadas de 100% passaram a não verificadas. Motores já suportam três dificuldades. Primeira correção da base aplicada: nove perguntas revistas e opções dos dois bancos baralhadas com recálculo das chaves, mantendo IDs/temas/exames. Novos bancos permanecem pendentes da revisão individual integral da base. Evidência e matriz: [auditoria P3](P3_SOURCE_AUDIT.md); [ExecPlan P3](../plans/p3-difficulties.md).
 
 ## P4 — Onboard remaining UCs
+Estrutura de estudo (2026-10-07): os 30 temas dos três resumos têm ideia principal, síntese e pergunta de recordação ativa, com listas, destaques seletivos, exemplos/alertas e comparação quando aplicável. Componentes partilhados documentados no design system. [ExecPlan](../plans/summary-study-format.md).
+
+Melhoria transversal (2026-10-07): formatação de leitura partilhada aplicada aos resumos PEVS/PEDEx/CF em `assets/study.css`, reutilizável pelas próximas UCs. Texto maior, espaçamento entre parágrafos, títulos e notas de fontes diferenciados. Validação estrutural sem erros/avisos, 15 testes de conteúdo e 74 verificações responsivas aprovados. Planos PEVS/P3 reconciliados; dispositivos reais continuam pendentes. [ExecPlan de leitura](../plans/summary-readability.md).
+
 For each UC:
 materials → Lista de Saberes → coverage matrix → summary → 80Q bank → 1:1 audit → training/simulator wiring → main index → SW → QA.
 

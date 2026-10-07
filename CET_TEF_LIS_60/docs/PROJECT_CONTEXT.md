@@ -52,6 +52,11 @@ Coaching, Pedagogia, PEVS, Psicologia, Comunicação, Inglês, Biomecânica, Apl
 Known UCs absent from source Workbook:
 Fisiologia, Aulas de Grupo, Avaliação e Prescrição, Populações Especiais, Outdoor, Hidroginástica, Body & Mind, Treino Personalizado, Colaborar em Equipa, Anatomia.
 
+## Summary readability
+PEVS, PEDEx and CF use the common reading format in `assets/study.css`: larger body text, paragraph spacing, clear concept headings, visible list markers and separate source notes (`study-source`). Future UC summaries inherit these rules through the same classes. Contract: [design system](DESIGN_SYSTEM.md); implementation: [ExecPlan](../plans/summary-readability.md).
+
+Learning structure applied to all 30 summary themes (8 PEVS, 12 CF, 10 PEDEx including the Aula 4 complement): main idea, full explanation with selective emphasis/lists, recap and a retrieval question with collapsed reference answer. Examples, cautions and comparisons have shared visual components. The PEDEx complement remains outside the question-bank scope. Evidence: [learning-format ExecPlan](../plans/summary-study-format.md).
+
 ## Assessment conventions
 40 questions; 60 min; 90 s/question equivalent; score 0–20; pass 9.5; no negative marking; timeout auto-submit.
 

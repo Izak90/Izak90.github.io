@@ -9,6 +9,10 @@ HTML/UI
 - search does not break offsets
 - light/dark readable
 - mobile controls tappable
+- summary body text, paragraph spacing and source notes follow assets/study.css
+- expanded details, long tables and lists remain readable at 320/390 px and in both themes
+- each summary theme has a main idea, recap and retrieval question; reference answers start collapsed and open with keyboard
+- emphasis, enumerations and source cautions preserve the original wording, values and coverage anchors
 
 Training
 - intended bank/difficulty loads

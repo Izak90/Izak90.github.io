@@ -281,3 +281,152 @@
 .study-subcard h3[id] {
   scroll-margin-top: var(--study-topic-offset, 0px);
 }
+
+/* Shared reading rhythm: applies to current and future UC summaries.
+   Scoped selectors take precedence over compact utility classes in the HTML. */
+.study-card {
+  padding: clamp(1rem, 3vw, 1.5rem);
+  overflow-wrap: anywhere;
+}
+
+.study-card > h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 1.1rem;
+}
+
+.study-card p,
+.study-card li,
+.study-card td,
+.study-card th,
+.study-card summary,
+.study-mini,
+.study-key {
+  font-size: .9375rem;
+  line-height: 1.8;
+}
+
+.study-card p {
+  margin: .85rem 0 0;
+  max-width: 65ch;
+}
+
+.study-card p:first-child { margin-top: 0; }
+
+.study-card strong,
+.study-card b { font-weight: 750; }
+
+.study-subcard,
+.study-mini {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.study-subcard h3,
+.study-mini h3 {
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  margin-bottom: .7rem;
+}
+
+.study-subcard + .study-subcard { margin-top: 1rem; }
+.study-grid > .study-subcard { margin-top: 0; }
+.study-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 1rem;
+}
+
+.study-card ul,
+.study-card ol {
+  margin: .85rem 0;
+  padding-left: 1.4rem;
+}
+.study-card ul { list-style-type: disc; }
+.study-card ol { list-style-type: decimal; }
+.study-card li + li { margin-top: .5rem; }
+.study-card li::marker { color: #2563eb; font-weight: 700; }
+.dark .study-card li::marker { color: #60a5fa; }
+
+.study-key { padding: 1rem; margin: 1rem 0; }
+.study-card th,
+.study-card td { padding: .75rem; line-height: 1.65; }
+
+.study-card details { padding: .85rem 1rem; margin: .8rem 0; }
+.study-card summary { min-height: 44px; padding: .3rem 0; }
+.study-card summary::marker { color: #2563eb; }
+.dark .study-card summary::marker { color: #60a5fa; }
+.study-card details[open] > summary {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: .75rem;
+  margin-bottom: .75rem;
+}
+.dark .study-card details[open] > summary { border-color: #334155; }
+.study-card summary:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: .25rem;
+}
+
+/* Source notes stay distinct while remaining readable on mobile. */
+.study-card .study-source {
+  font-size: .8125rem;
+  line-height: 1.65;
+  margin-top: 1.1rem;
+  padding-top: .65rem;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+}
+.dark .study-card .study-source {
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+/* Reusable learning blocks: meaning is always expressed by a text label. */
+.study-focus,
+.study-example,
+.study-caution,
+.study-recap,
+.study-retrieval {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: .9rem;
+}
+.study-focus { border-left: 4px solid #2563eb; background: #eff6ff; }
+.study-example { background: #f8fafc; }
+.study-caution { border-left: 4px solid #d97706; background: #fffbeb; }
+.study-recap { background: #eff6ff; }
+.study-retrieval { background: #f8fafc; }
+.study-card .study-label {
+  display: block;
+  font-size: .75rem;
+  line-height: 1.5;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin-bottom: .5rem;
+}
+.study-card .study-caution .study-label { color: #92400e; }
+.study-card .study-focus p { margin-top: 0; font-weight: 600; color: #1e3a8a; }
+.study-card .study-example p,
+.study-card .study-caution p { margin-top: 0; }
+.study-card .study-recap h3,
+.study-card .study-retrieval h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+  color: #0f172a;
+}
+.study-card .study-recap ul { margin-bottom: 0; }
+.study-card .study-retrieval details { margin-bottom: 0; }
+.dark .study-focus,
+.dark .study-recap { background: rgba(30, 64, 175, .12); border-color: #334155; }
+.dark .study-focus { border-left-color: #60a5fa; }
+.dark .study-example,
+.dark .study-retrieval { background: #0f172a; border-color: #334155; }
+.dark .study-caution { background: rgba(217, 119, 6, .10); border-color: #92400e; border-left-color: #fbbf24; }
+.dark .study-card .study-label { color: #93c5fd; }
+.dark .study-card .study-caution .study-label { color: #fcd34d; }
+.dark .study-card .study-focus p { color: #dbeafe; }
+.dark .study-card .study-recap h3,
+.dark .study-card .study-retrieval h3 { color: #f1f5f9; }

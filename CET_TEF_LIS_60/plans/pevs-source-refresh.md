@@ -15,10 +15,10 @@ Preservar nomes fixos dos bancos e IDs/partições quando possível, pt-PT, term
 Fixture literal da Lista, matriz com âncoras/fontes/IDs por nível, testes de conteúdo e validação estrutural. Chromium core/responsive/PWA.
 ## Progress
 - [x] Leitura de instruções, inspeção de caminhos e extração das sete fontes.
-- [ ] Auditoria individual e figuras.
-- [ ] Resumo, bancos e matriz.
-- [ ] QA e documentação final.
+- [x] Revisão de fontes registada em docs/PEVS_COVERAGE.md; não implica certificação semântica pelos testes.
+- [x] Resumo, bancos e matriz: 45 detalhes, 31 itens finais e três bancos de 80.
+- [x] QA estrutural e de conteúdo confirmado; documentação reconciliada em 2026-10-07.
 ## Decisions
 Não substituir valores dos materiais por recomendações atuais externas. Identificar data/âmbito das fontes e eventuais ambiguidades. A atualização de conteúdo de ficheiros existentes não requer mudar a lista de precache; verificar a estratégia network-first.
 ## Result
-Em curso.
+Implementação concluída e registada em docs/ROADMAP.md e docs/PROJECT_CONTEXT.md: sete PDFs, resumo com 45 detalhes, matriz dos 31 itens finais e 240 perguntas em seis exames. URLs, IDs e partições preservados; SW v22, sem alteração de precache. Validação atual: zero erros/avisos e 15 testes de conteúdo aprovados para PEVS/PEDEx/CF. A verificação em dispositivos Android/iOS reais continua pendente; testes estruturais não certificam todas as interpretações pedagógicas.

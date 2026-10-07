@@ -16,9 +16,9 @@ Validador estrutural, revisão de fontes e matriz por saber; testes de motores/o
 - [x] Inspeção dos motores e do registo.
 - [x] Pastas públicas e dez PDFs identificados (quatro aulas e uma Lista por UC).
 - [x] Dez fontes descarregadas; âmbito e matriz legada comparados; hashes e achados em docs/P3_SOURCE_AUDIT.md.
-- [ ] Auditoria individual integral, incluindo figuras e todos os subtópicos.
+- [x] Revisões de fontes concluídas nos planos pedex-source-refresh.md e cf-source-refresh.md (substituem a pendência inicial).
 - [x] Novos bancos diferidos até corrigir e verificar a base.
-- [ ] Implementação e validação conforme decisão.
+- [x] Implementação e validação concluídas nos planos específicos de PEDEx e CF.
 ## Decisions
 Sem duplicar motores; nenhuma declaração de cobertura passa a verificada apenas por existir no JSON.
 ## Result
