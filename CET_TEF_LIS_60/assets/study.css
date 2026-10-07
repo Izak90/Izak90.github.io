@@ -276,3 +276,8 @@
     overflow-x: auto;
   }
 }
+
+/* Deep links to detailed study headings use the measured shell height. */
+.study-subcard h3[id] {
+  scroll-margin-top: var(--study-topic-offset, 0px);
+}

@@ -1,6 +1,6 @@
 {
   "uc": "Coaching no Fitness",
-  "version": "2.0",
+  "version": "3.0-source-reviewed",
   "questions": [
     {
       "id": "CF001",
@@ -8,14 +8,14 @@
       "type": "multiple_choice",
       "question": "Segundo a definição apresentada, o coaching é sobretudo…",
       "options": [
-        "uma parceria/processo que estimula e capacita o cliente a maximizar o seu potencial.",
         "uma forma de terapia clínica.",
         "um método de dar instruções técnicas sem diálogo.",
+        "uma parceria/processo que estimula e capacita o cliente a maximizar o seu potencial.",
         "um processo de aconselhamento em que o coach decide pelo cliente."
       ],
-      "answer": 0,
-      "explanation": "uma parceria/processo que estimula e capacita o cliente a maximizar o seu potencial.",
-      "source": "Aula 1 — Essência do Coaching"
+      "answer": 2,
+      "explanation": "A parceria e a exploração pelo cliente distinguem coaching de formação, mentoria e terapia.",
+      "source": "Aula 1, p. 10"
     },
     {
       "id": "CF002",
@@ -23,14 +23,14 @@
       "type": "multiple_choice",
       "question": "Qual é a principal diferença entre um técnico com coaching e um técnico sem coaching?",
       "options": [
-        "O técnico com coaching evita definir objetivos.",
-        "O técnico sem coaching nunca corrige técnica.",
         "O técnico com coaching substitui a prescrição de exercício.",
-        "O técnico com coaching centra-se na pessoa e nos motivos, usando comunicação colaborativa."
+        "O técnico com coaching centra-se na pessoa e nos motivos, usando comunicação colaborativa.",
+        "O técnico sem coaching nunca corrige técnica.",
+        "O técnico com coaching evita definir objetivos."
       ],
-      "answer": 3,
-      "explanation": "O técnico com coaching centra-se na pessoa e nos motivos, usando comunicação colaborativa.",
-      "source": "Aula 1 — Técnico com/sem coaching"
+      "answer": 1,
+      "explanation": "A comparação dos slides valoriza objetivos cocriados, motivos e motivação interna.",
+      "source": "Aula 1, p. 9"
     },
     {
       "id": "CF003",
@@ -38,14 +38,14 @@
       "type": "multiple_choice",
       "question": "No coaching, quem é o “coach”?",
       "options": [
-        "O profissional que faz diagnóstico médico.",
-        "O observador externo que avalia a sessão.",
+        "O cliente que pretende atingir o objetivo.",
         "A pessoa que conduz a sessão/processo.",
-        "O cliente que pretende atingir o objetivo."
+        "O profissional que faz diagnóstico médico.",
+        "O observador externo que avalia a sessão."
       ],
-      "answer": 2,
-      "explanation": "A pessoa que conduz a sessão/processo.",
-      "source": "Aula 1 — Introdução ao Coaching"
+      "answer": 1,
+      "explanation": "Coach designa quem conduz; definir o próprio objetivo não transforma o coachee em coach.",
+      "source": "Aula 1, p. 9"
     },
     {
       "id": "CF004",
@@ -54,13 +54,13 @@
       "question": "No coaching, quem é o “coachee”?",
       "options": [
         "O avaliador do coach.",
-        "A pessoa conduzida na direção do objetivo que deseja alcançar.",
         "A pessoa que prescreve medicação.",
+        "A pessoa conduzida na direção do objetivo que deseja alcançar.",
         "O treinador que dá ordens."
       ],
-      "answer": 1,
-      "explanation": "A pessoa conduzida na direção do objetivo que deseja alcançar.",
-      "source": "Aula 1 — Introdução ao Coaching"
+      "answer": 2,
+      "explanation": "Coachee é a pessoa acompanhada, e não o facilitador ou observador.",
+      "source": "Aula 1, p. 9"
     },
     {
       "id": "CF005",
@@ -69,13 +69,13 @@
       "question": "Porque é que o coaching é descrito como um processo?",
       "options": [
         "Porque tem princípio, meio e fim.",
-        "Porque não necessita de objetivo.",
         "Porque deve durar indefinidamente.",
+        "Porque não necessita de objetivo.",
         "Porque depende apenas de motivação externa."
       ],
       "answer": 0,
-      "explanation": "Porque tem princípio, meio e fim.",
-      "source": "Aula 1 — Processo"
+      "explanation": "O processo tem estrutura temporal; não implica rigidez ou aconselhamento final.",
+      "source": "Aula 1, pp. 11–12"
     },
     {
       "id": "CF006",
@@ -83,14 +83,14 @@
       "type": "multiple_choice",
       "question": "No contexto apresentado, “atingir” significa…",
       "options": [
-        "formular o maior número possível de perguntas.",
+        "chegar ao fim do processo com um resultado/objetivo concretizado.",
         "evitar medir resultados.",
         "substituir o treino por conversas.",
-        "chegar ao fim do processo com um resultado/objetivo concretizado."
+        "formular o maior número possível de perguntas."
       ],
-      "answer": 3,
-      "explanation": "chegar ao fim do processo com um resultado/objetivo concretizado.",
-      "source": "Aula 1 — Atingir"
+      "answer": 0,
+      "explanation": "As ideias e modelos são meios; o foco dos slides é chegar a um resultado/objetivo.",
+      "source": "Aula 1, pp. 11–12"
     },
     {
       "id": "CF007",
@@ -98,14 +98,14 @@
       "type": "multiple_choice",
       "question": "Qual destas opções NÃO corresponde ao coaching segundo os slides?",
       "options": [
-        "Parceria com o cliente.",
         "Uso de perguntas.",
         "Terapia.",
+        "Parceria com o cliente.",
         "Processo estruturado."
       ],
-      "answer": 2,
-      "explanation": "Terapia.",
-      "source": "Aula 1 — O que não é coaching"
+      "answer": 1,
+      "explanation": "A Aula 1 separa coaching de terapia, psicoterapia, formação e mentoria.",
+      "source": "Aula 1, p. 10"
     },
     {
       "id": "CF008",
@@ -119,8 +119,8 @@
         "Usar apenas perguntas fechadas."
       ],
       "answer": 1,
-      "explanation": "Distinguir instrução técnica de coaching e usar perguntas/modelos estruturados para potenciar a prática de exercício.",
-      "source": "Aula 1 — Mensagem-chave"
+      "explanation": "A abordagem com coaching acrescenta compreensão da pessoa e dos seus motivos.",
+      "source": "Aula 1, pp. 9, 22–23"
     },
     {
       "id": "CF009",
@@ -128,14 +128,14 @@
       "type": "multiple_choice",
       "question": "Quais são os quatro papéis do coach apresentados?",
       "options": [
-        "Desenvolver, desafiar, apoiar e capacitar.",
         "Avaliar, diagnosticar, tratar e reabilitar.",
-        "Mandar, controlar, corrigir e punir.",
-        "Planear, vender, faturar e supervisionar."
+        "Planear, vender, faturar e supervisionar.",
+        "Desenvolver, desafiar, apoiar e capacitar.",
+        "Mandar, controlar, corrigir e punir."
       ],
-      "answer": 0,
-      "explanation": "Desenvolver, desafiar, apoiar e capacitar.",
-      "source": "Aula 1 — Papéis do Coach"
+      "answer": 2,
+      "explanation": "São os quatro papéis nomeados nos slides; diagnóstico e prescrição não pertencem a esta enumeração.",
+      "source": "Aula 1, pp. 15–17"
     },
     {
       "id": "CF010",
@@ -143,14 +143,14 @@
       "type": "multiple_choice",
       "question": "No papel de “desenvolver”, o coach procura…",
       "options": [
-        "dar uma competência clínica que não possui.",
-        "substituir a decisão do cliente.",
+        "potenciar competências que o cliente já possui.",
         "reduzir a autonomia do cliente.",
-        "potenciar competências que o cliente já possui."
+        "substituir a decisão do cliente.",
+        "dar uma competência clínica que não possui."
       ],
-      "answer": 3,
-      "explanation": "potenciar competências que o cliente já possui.",
-      "source": "Aula 1 — Desenvolver"
+      "answer": 0,
+      "explanation": "Desenvolver trabalha competências já presentes; capacitar acrescenta algo ainda ausente.",
+      "source": "Aula 1, p. 16"
     },
     {
       "id": "CF011",
@@ -158,14 +158,14 @@
       "type": "multiple_choice",
       "question": "No papel de “desafiar”, o coach procura…",
       "options": [
-        "dar respostas prontas.",
-        "decidir pelo cliente.",
         "ajudar o cliente a ir mais longe e criar novas possibilidades.",
-        "evitar qualquer desconforto."
+        "evitar qualquer desconforto.",
+        "decidir pelo cliente.",
+        "dar respostas prontas."
       ],
-      "answer": 2,
-      "explanation": "ajudar o cliente a ir mais longe e criar novas possibilidades.",
-      "source": "Aula 1 — Desafiar"
+      "answer": 0,
+      "explanation": "Desafiar ajuda a ir mais longe e a explorar novas possibilidades.",
+      "source": "Aula 1, p. 16"
     },
     {
       "id": "CF012",
@@ -173,14 +173,14 @@
       "type": "multiple_choice",
       "question": "No papel de “apoiar”, o coach deve…",
       "options": [
-        "assumir responsabilidade pelas decisões do cliente.",
         "estar presente nos momentos menos bons do processo.",
         "eliminar todos os desafios.",
-        "ignorar dificuldades emocionais."
+        "ignorar dificuldades emocionais.",
+        "assumir responsabilidade pelas decisões do cliente."
       ],
-      "answer": 1,
-      "explanation": "estar presente nos momentos menos bons do processo.",
-      "source": "Aula 1 — Apoiar"
+      "answer": 0,
+      "explanation": "Apoiar corresponde ao acompanhamento nos momentos difíceis.",
+      "source": "Aula 1, p. 17"
     },
     {
       "id": "CF013",
@@ -188,14 +188,14 @@
       "type": "multiple_choice",
       "question": "No papel de “capacitar”, o objetivo é…",
       "options": [
-        "facilitar uma nova competência ou forma de pensar útil ao objetivo.",
+        "substituir profissionais de saúde.",
         "criar dependência do coach.",
         "evitar aprendizagem autónoma.",
-        "substituir profissionais de saúde."
+        "facilitar uma nova competência ou forma de pensar útil ao objetivo."
       ],
-      "answer": 0,
-      "explanation": "facilitar uma nova competência ou forma de pensar útil ao objetivo.",
-      "source": "Aula 1 — Capacitar"
+      "answer": 3,
+      "explanation": "Capacitar acrescenta uma competência ou modo de pensar de que o cliente precisa.",
+      "source": "Aula 1, p. 17"
     },
     {
       "id": "CF014",
@@ -203,14 +203,14 @@
       "type": "multiple_choice",
       "question": "Porque são valorizadas as perguntas abertas?",
       "options": [
-        "Só admitem sim ou não.",
-        "Servem para confirmar uma resposta já decidida.",
         "Impedem a reflexão.",
-        "Permitem ao cliente desenvolver e partilhar a sua experiência com maior amplitude."
+        "Servem para confirmar uma resposta já decidida.",
+        "Permitem ao cliente desenvolver e partilhar a sua experiência com maior amplitude.",
+        "Só admitem sim ou não."
       ],
-      "answer": 3,
-      "explanation": "Permitem ao cliente desenvolver e partilhar a sua experiência com maior amplitude.",
-      "source": "Aula 1 — Tipos de perguntas"
+      "answer": 2,
+      "explanation": "A primeira permite respostas diversas; as restantes limitam as opções ou sugerem uma emoção.",
+      "source": "Aula 1, pp. 13–15"
     },
     {
       "id": "CF015",
@@ -218,14 +218,14 @@
       "type": "multiple_choice",
       "question": "O pressuposto “Perguntas” afirma que…",
       "options": [
-        "o cliente não deve questionar.",
         "as perguntas devem ser apenas fechadas.",
         "o coach tem as perguntas e o cliente tem as respostas.",
-        "o coach tem todas as respostas."
+        "o coach tem todas as respostas.",
+        "o cliente não deve questionar."
       ],
-      "answer": 2,
-      "explanation": "o coach tem as perguntas e o cliente tem as respostas.",
-      "source": "Aula 1 — Pressupostos internacionais"
+      "answer": 1,
+      "explanation": "O pressuposto coloca a exploração e as respostas no cliente.",
+      "source": "Aula 1, pp. 20–21"
     },
     {
       "id": "CF016",
@@ -233,14 +233,14 @@
       "type": "multiple_choice",
       "question": "“O mapa não é o território” está associado a que pressuposto?",
       "options": [
-        "Recursos.",
         "Respeito.",
+        "Feedback.",
         "Ação.",
-        "Feedback."
+        "Recursos."
       ],
-      "answer": 1,
-      "explanation": "Respeito.",
-      "source": "Aula 1 — Pressupostos internacionais"
+      "answer": 0,
+      "explanation": "Mapa refere-se à representação; respeitar a perspetiva não obriga a tratá-la como descrição absoluta.",
+      "source": "Aula 1, pp. 20–21"
     },
     {
       "id": "CF017",
@@ -249,13 +249,13 @@
       "question": "“Não há falha, só feedback” corresponde ao pressuposto de…",
       "options": [
         "Feedback.",
-        "Flexibilidade.",
         "Positivo.",
-        "Não imposição."
+        "Não imposição.",
+        "Flexibilidade."
       ],
       "answer": 0,
-      "explanation": "Feedback.",
-      "source": "Aula 1 — Pressupostos internacionais"
+      "explanation": "O enquadramento transforma o resultado em informação para aprendizagem.",
+      "source": "Aula 1, pp. 20–21"
     },
     {
       "id": "CF018",
@@ -263,14 +263,14 @@
       "type": "multiple_choice",
       "question": "Qual opção apresenta corretamente os pressupostos «Recursos» e «Melhor opção no momento»?",
       "options": [
-        "As pessoas têm ou podem adquirir recursos; e escolhem a melhor opção que têm disponível naquele contexto.",
-        "As pessoas não têm recursos internos; e escolhem sempre a pior opção.",
+        "Os recursos não podem ser desenvolvidos; e o contexto não influencia escolhas.",
         "Os recursos são definidos pelo coach; e a melhor opção é sempre a mais rápida.",
-        "Os recursos não podem ser desenvolvidos; e o contexto não influencia escolhas."
+        "As pessoas não têm recursos internos; e escolhem sempre a pior opção.",
+        "As pessoas têm ou podem adquirir recursos; e escolhem a melhor opção que têm disponível naquele contexto."
       ],
-      "answer": 0,
-      "explanation": "Nos slides, «Recursos» afirma que as pessoas têm os recursos dentro delas ou podem adquiri-los; «Melhor opção no momento» refere que escolhem a melhor opção disponível no contexto.",
-      "source": "Aula 1 — Pressupostos internacionais do Coaching"
+      "answer": 3,
+      "explanation": "Recursos podem estar presentes ou ser adquiridos. A melhor opção disponível é contextual: não significa a melhor para todas as situações futuras.",
+      "source": "Aula 1, pp. 20–21"
     },
     {
       "id": "CF019",
@@ -279,13 +279,13 @@
       "question": "Qual associação entre pressuposto e frase está correta?",
       "options": [
         "Causa-Efeito — «Cada pessoa cria a sua própria realidade».",
+        "Flexibilidade — «O mapa não é o território».",
         "Ação — «Todo o comportamento tem uma intenção positiva».",
-        "Positivo — «Se queres compreender, age».",
-        "Flexibilidade — «O mapa não é o território»."
+        "Positivo — «Se queres compreender, age»."
       ],
       "answer": 0,
-      "explanation": "O pressuposto Causa-Efeito é apresentado como «Cada pessoa cria a sua própria realidade».",
-      "source": "Aula 1 — Pressupostos internacionais do Coaching"
+      "explanation": "Causa-Efeito é apresentado como criação da própria realidade; aqui a aplicação explora escolhas e consequências.",
+      "source": "Aula 1, p. 21"
     },
     {
       "id": "CF020",
@@ -299,8 +299,8 @@
         "Não imposição."
       ],
       "answer": 0,
-      "explanation": "Nos slides, «Se queres compreender, age» corresponde ao pressuposto Ação.",
-      "source": "Aula 1 — Pressupostos internacionais do Coaching"
+      "explanation": "O pressuposto Ação liga compreensão à experiência, mantendo a participação do cliente.",
+      "source": "Aula 1, p. 21"
     },
     {
       "id": "CF021",
@@ -308,14 +308,14 @@
       "type": "multiple_choice",
       "question": "Qual combinação está correta?",
       "options": [
-        "Flexibilidade: «Se não estás a ter resultados, faz de outra forma»; Positivo: «Todo o comportamento tem por detrás uma intenção positiva»; Não imposição: os pressupostos não devem ser impostos ao cliente.",
-        "Flexibilidade: insistir sempre na mesma estratégia; Positivo: evitar mudanças; Não imposição: decidir pelo cliente.",
         "Flexibilidade: «O mapa não é o território»; Positivo: «Não há falha»; Não imposição: eliminar perguntas.",
-        "Flexibilidade: ausência de ação; Positivo: controlar o cliente; Não imposição: ignorar o contexto."
+        "Flexibilidade: ausência de ação; Positivo: controlar o cliente; Não imposição: ignorar o contexto.",
+        "Flexibilidade: insistir sempre na mesma estratégia; Positivo: evitar mudanças; Não imposição: decidir pelo cliente.",
+        "Flexibilidade: «Se não estás a ter resultados, faz de outra forma»; Positivo: «Todo o comportamento tem por detrás uma intenção positiva»; Não imposição: os pressupostos não devem ser impostos ao cliente."
       ],
-      "answer": 0,
-      "explanation": "Os três pressupostos aparecem explicitamente desta forma nos materiais.",
-      "source": "Aula 1 — Pressupostos internacionais do Coaching"
+      "answer": 3,
+      "explanation": "Flexibilidade implica fazer de outra forma; os próprios pressupostos não devem ser impostos.",
+      "source": "Aula 1, p. 21"
     },
     {
       "id": "CF022",
@@ -324,13 +324,13 @@
       "question": "Como são definidas as crenças nos materiais?",
       "options": [
         "Factos científicos imutáveis.",
-        "Emoções momentâneas sem impacto no comportamento.",
         "Objetivos mensuráveis.",
+        "Emoções momentâneas sem impacto no comportamento.",
         "Convicções, ideias ou suposições sobre o mundo e a vida que moldam perceções, atitudes e comportamentos."
       ],
       "answer": 3,
-      "explanation": "Convicções, ideias ou suposições sobre o mundo e a vida que moldam perceções, atitudes e comportamentos.",
-      "source": "Aula 2 — Crenças"
+      "explanation": "A crença é uma convicção/suposição que molda perceção e comportamento, não um facto por definição.",
+      "source": "Aula 2, p. 3"
     },
     {
       "id": "CF023",
@@ -339,13 +339,13 @@
       "question": "Qual destes fatores pode contribuir para a formação de crenças?",
       "options": [
         "Somente exercício físico.",
-        "Exclusivamente idade cronológica.",
         "Experiências pessoais.",
-        "Apenas genética."
+        "Apenas genética.",
+        "Exclusivamente idade cronológica."
       ],
-      "answer": 2,
-      "explanation": "Experiências pessoais.",
-      "source": "Aula 2 — Como se formam as crenças"
+      "answer": 1,
+      "explanation": "A Aula 2 inclui experiências e a interpretação/generalização entre as fontes de crenças.",
+      "source": "Aula 2, p. 3"
     },
     {
       "id": "CF024",
@@ -353,14 +353,14 @@
       "type": "multiple_choice",
       "question": "Os slides distinguem crenças em…",
       "options": [
-        "internas e externas apenas.",
-        "potenciadoras e limitadoras.",
         "abertas e fechadas.",
-        "verbais e não verbais."
+        "verbais e não verbais.",
+        "potenciadoras e limitadoras.",
+        "internas e externas apenas."
       ],
-      "answer": 1,
-      "explanation": "potenciadoras e limitadoras.",
-      "source": "Aula 2 — Crenças"
+      "answer": 2,
+      "explanation": "A potenciadora abre possibilidade de ação; a limitadora restringe-a.",
+      "source": "Aula 2, p. 4"
     },
     {
       "id": "CF025",
@@ -368,29 +368,29 @@
       "type": "multiple_choice",
       "question": "Qual é a primeira etapa do reenquadramento cognitivo apresentado?",
       "options": [
-        "Escuta ativa.",
-        "Nova lente.",
         "Ponte.",
+        "Nova lente.",
+        "Escuta ativa.",
         "Conclusão diretiva."
       ],
-      "answer": 0,
-      "explanation": "Escuta ativa.",
-      "source": "Aula 2 — Reenquadramento cognitivo"
+      "answer": 2,
+      "explanation": "A escada começa pela escuta e segue para pergunta, ponte e nova lente.",
+      "source": "Aula 2, p. 4"
     },
     {
       "id": "CF026",
       "topic": "4. Crenças e Reenquadramento",
       "type": "multiple_choice",
-      "question": "No reenquadramento cognitivo, após a escuta ativa surge…",
+      "question": "Qual é a sequência completa de reenquadramento cognitivo apresentada?",
       "options": [
-        "a punição.",
-        "a prescrição médica.",
-        "a decisão pelo cliente.",
-        "a pergunta poderosa."
+        "Nova lente → Pergunta poderosa → Ponte → Escuta ativa",
+        "Escuta ativa → Ponte → Pergunta poderosa → Nova lente",
+        "Escuta ativa → Pergunta poderosa → Ponte → Nova lente",
+        "Pergunta poderosa → Escuta ativa → Nova lente → Ponte"
       ],
-      "answer": 3,
-      "explanation": "a pergunta poderosa.",
-      "source": "Aula 2 — Reenquadramento cognitivo"
+      "answer": 2,
+      "explanation": "A Ponte é uma etapa explícita entre a pergunta poderosa e a nova lente.",
+      "source": "Aula 2, p. 4"
     },
     {
       "id": "CF027",
@@ -398,14 +398,14 @@
       "type": "multiple_choice",
       "question": "A finalidade de uma “nova lente” é…",
       "options": [
-        "eliminar a autonomia.",
         "evitar reflexão.",
+        "eliminar a autonomia.",
         "facilitar uma perspetiva alternativa sobre a situação.",
         "confirmar obrigatoriamente a crença inicial."
       ],
       "answer": 2,
-      "explanation": "facilitar uma perspetiva alternativa sobre a situação.",
-      "source": "Aula 2 — Reenquadramento cognitivo"
+      "explanation": "Nova lente corresponde a outra perspetiva; não é imposição ou diagnóstico.",
+      "source": "Aula 2, p. 4"
     },
     {
       "id": "CF028",
@@ -413,14 +413,14 @@
       "type": "multiple_choice",
       "question": "Segundo o modelo misto apresentado, quais são os quatro domínios?",
       "options": [
-        "Goal, Reality, Options e Will.",
-        "Autoconsciência, autorregulação, consciência social e gerir relacionamentos.",
+        "Certeza, variedade, importância e contribuição.",
         "Força, velocidade, resistência e flexibilidade.",
-        "Certeza, variedade, importância e contribuição."
+        "Goal, Reality, Options e Will.",
+        "Autoconsciência, autorregulação, consciência social e gerir relacionamentos."
       ],
-      "answer": 1,
-      "explanation": "Autoconsciência, autorregulação, consciência social e gerir relacionamentos.",
-      "source": "Aula 2 — Inteligência Emocional"
+      "answer": 3,
+      "explanation": "São os quatro domínios do modelo misto de Goleman apresentado.",
+      "source": "Aula 2, pp. 5–6"
     },
     {
       "id": "CF029",
@@ -428,14 +428,14 @@
       "type": "multiple_choice",
       "question": "Autoconsciência é a capacidade de…",
       "options": [
+        "resolver conflitos sem comunicação.",
         "reconhecer e compreender as próprias emoções e o seu impacto.",
-        "controlar as emoções dos outros.",
         "evitar sentir emoções negativas.",
-        "resolver conflitos sem comunicação."
+        "controlar as emoções dos outros."
       ],
-      "answer": 0,
-      "explanation": "reconhecer e compreender as próprias emoções e o seu impacto.",
-      "source": "Aula 2 — Autoconsciência"
+      "answer": 1,
+      "explanation": "O diário promove identificação e compreensão das próprias emoções; identificar não equivale automaticamente a regulá-las.",
+      "source": "Aula 2, pp. 5–6"
     },
     {
       "id": "CF030",
@@ -444,13 +444,13 @@
       "question": "Autorregulação refere-se a…",
       "options": [
         "suprimir sempre qualquer emoção.",
+        "gerir as próprias emoções de forma eficaz, sobretudo sob stress ou conflito.",
         "avaliar apenas emoções alheias.",
-        "motivar exclusivamente por recompensas.",
-        "gerir as próprias emoções de forma eficaz, sobretudo sob stress ou conflito."
+        "motivar exclusivamente por recompensas."
       ],
-      "answer": 3,
-      "explanation": "gerir as próprias emoções de forma eficaz, sobretudo sob stress ou conflito.",
-      "source": "Aula 2 — Autorregulação"
+      "answer": 1,
+      "explanation": "Gerir a resposta emocional, sobretudo sob stress, caracteriza autorregulação.",
+      "source": "Aula 2, p. 7"
     },
     {
       "id": "CF031",
@@ -458,14 +458,14 @@
       "type": "multiple_choice",
       "question": "Consciência social inclui…",
       "options": [
+        "apenas autoconhecimento.",
         "controlo sobre o cliente.",
-        "definição unilateral de objetivos.",
         "empatia e sensibilidade às emoções e necessidades dos outros.",
-        "apenas autoconhecimento."
+        "definição unilateral de objetivos."
       ],
       "answer": 2,
-      "explanation": "empatia e sensibilidade às emoções e necessidades dos outros.",
-      "source": "Aula 2 — Consciência social"
+      "explanation": "A empatia e compreensão do outro pertencem à consciência social.",
+      "source": "Aula 2, p. 7"
     },
     {
       "id": "CF032",
@@ -475,12 +475,12 @@
       "options": [
         "ignorar as emoções do cliente.",
         "influenciar, inspirar e gerir conflitos de forma positiva e colaborativa.",
-        "evitar desacordos a qualquer custo.",
-        "impor a solução do técnico."
+        "impor a solução do técnico.",
+        "evitar desacordos a qualquer custo."
       ],
       "answer": 1,
-      "explanation": "influenciar, inspirar e gerir conflitos de forma positiva e colaborativa.",
-      "source": "Aula 2 — Gerir relacionamentos"
+      "explanation": "O caminho do meio/win-win é a ferramenta de gestão colaborativa dos relacionamentos.",
+      "source": "Aula 2, p. 8"
     },
     {
       "id": "CF033",
@@ -489,13 +489,13 @@
       "question": "Qual ferramenta é sugerida como exemplo prático de consciência social?",
       "options": [
         "Escuta ativa.",
-        "SWOT.",
         "Road Map.",
+        "SWOT.",
         "Feedback Sandwich."
       ],
       "answer": 0,
-      "explanation": "Escuta ativa.",
-      "source": "Aula 2 — Consciência social"
+      "explanation": "A Aula 2 distingue ouvir para compreender de ouvir apenas para responder.",
+      "source": "Aula 2, p. 7"
     },
     {
       "id": "CF034",
@@ -503,14 +503,14 @@
       "type": "multiple_choice",
       "question": "No contexto do treino, porque importam as emoções?",
       "options": [
-        "Não têm qualquer relação com a prática.",
-        "Determinam diretamente a capacidade aeróbia.",
         "Substituem a avaliação física.",
-        "Podem influenciar comportamento, adesão, experiência e decisões relacionadas com o exercício."
+        "Não têm qualquer relação com a prática.",
+        "Podem influenciar comportamento, adesão, experiência e decisões relacionadas com o exercício.",
+        "Determinam diretamente a capacidade aeróbia."
       ],
-      "answer": 3,
-      "explanation": "Podem influenciar comportamento, adesão, experiência e decisões relacionadas com o exercício.",
-      "source": "Aula 2 — Emoções e prescrição"
+      "answer": 2,
+      "explanation": "Os slides exploram a influência das emoções na experiência e adesão, sem uma garantia individual.",
+      "source": "Aula 2, pp. 11–12"
     },
     {
       "id": "CF035",
@@ -519,13 +519,13 @@
       "question": "Quais são as seis necessidades humanas apresentadas segundo Tony Robbins?",
       "options": [
         "Goal, Reality, Options, Will, SWOT e SMART.",
-        "Laranja, vermelha, azul, verde, preta e branca.",
         "Certeza, variedade, importância, amor/conexão, crescimento e contribuição.",
+        "Laranja, vermelha, azul, verde, preta e branca.",
         "Segurança, força, potência, velocidade, equilíbrio e coordenação."
       ],
-      "answer": 2,
-      "explanation": "Certeza, variedade, importância, amor/conexão, crescimento e contribuição.",
-      "source": "Aula 2 — 6 necessidades humanas"
+      "answer": 1,
+      "explanation": "Não confundir as seis necessidades com os quatro pares associados ao LASEr.",
+      "source": "Aula 2, pp. 14–16"
     },
     {
       "id": "CF036",
@@ -533,14 +533,14 @@
       "type": "multiple_choice",
       "question": "O que varia de pessoa para pessoa relativamente às seis necessidades?",
       "options": [
-        "A ordem fixa definida pelo coach.",
-        "A prioridade atribuída e a forma de as satisfazer.",
         "A existência ou não das necessidades.",
-        "O número total de necessidades."
+        "A prioridade atribuída e a forma de as satisfazer.",
+        "O número total de necessidades.",
+        "A ordem fixa definida pelo coach."
       ],
       "answer": 1,
-      "explanation": "A prioridade atribuída e a forma de as satisfazer.",
-      "source": "Aula 2 — 6 necessidades humanas"
+      "explanation": "A Aula 2 distingue ter as necessidades da prioridade e maneira de as satisfazer.",
+      "source": "Aula 2, pp. 14–16"
     },
     {
       "id": "CF037",
@@ -554,8 +554,8 @@
         "Crescimento."
       ],
       "answer": 0,
-      "explanation": "Certeza.",
-      "source": "Aula 2 — 6 necessidades humanas"
+      "explanation": "A aplicação a previsibilidade e segurança ilustra certeza; não prova uma prioridade permanente.",
+      "source": "Aula 2, pp. 15–16"
     },
     {
       "id": "CF038",
@@ -563,14 +563,14 @@
       "type": "multiple_choice",
       "question": "Qual par corresponde às necessidades «Variedade» e «Amor & Conexão»?",
       "options": [
-        "Novidade/mudança e ligação/relacionamento.",
-        "Previsibilidade e reconhecimento.",
         "Crescimento e contribuição.",
-        "Controlo e competição."
+        "Novidade/mudança e ligação/relacionamento.",
+        "Controlo e competição.",
+        "Previsibilidade e reconhecimento."
       ],
-      "answer": 0,
-      "explanation": "Variedade relaciona-se com novidade/mudança; Amor & Conexão com vínculo, proximidade e relação.",
-      "source": "Aula 2 — 6 Necessidades Humanas"
+      "answer": 1,
+      "explanation": "Novidade liga-se a variedade; vínculo aos outros a amor/conexão.",
+      "source": "Aula 2, pp. 15–16"
     },
     {
       "id": "CF039",
@@ -579,28 +579,28 @@
       "question": "Qual associação está correta?",
       "options": [
         "Importância — sentir-se especial/reconhecido; Crescimento — desenvolver-se; Contribuição — dar para além de si próprio.",
-        "Importância — procurar apenas rotina; Crescimento — evitar aprender; Contribuição — isolar-se.",
         "Importância — dormir; Crescimento — certeza; Contribuição — variedade.",
+        "Importância — procurar apenas rotina; Crescimento — evitar aprender; Contribuição — isolar-se.",
         "As três necessidades significam exatamente o mesmo."
       ],
       "answer": 0,
-      "explanation": "Os slides distinguem Importância, Crescimento e Contribuição como necessidades diferentes.",
-      "source": "Aula 2 — 6 Necessidades Humanas"
+      "explanation": "A distinção evita confundir sentir-se reconhecido, evoluir e dar além de si.",
+      "source": "Aula 2, pp. 15–16"
     },
     {
       "id": "CF040",
       "topic": "6. Necessidades Humanas",
       "type": "multiple_choice",
-      "question": "Segundo os materiais, o que varia de pessoa para pessoa relativamente às seis necessidades humanas?",
+      "question": "Um aluno pede que lhe expliques antecipadamente a organização do treino porque valoriza previsibilidade e estabilidade. Qual necessidade humana está mais diretamente expressa?",
       "options": [
-        "A prioridade atribuída a cada necessidade e a forma escolhida para a satisfazer.",
-        "A existência ou não das seis necessidades.",
-        "O número de necessidades, que varia entre duas e dez.",
-        "A necessidade de certeza, que só existe em atletas."
+        "Certeza.",
+        "Variedade.",
+        "Importância.",
+        "Contribuição."
       ],
       "answer": 0,
-      "explanation": "Todos têm as seis necessidades; variam a prioridade e a forma de satisfação.",
-      "source": "Aula 2 — 6 Necessidades Humanas"
+      "explanation": "O motivo expresso é certeza; a aplicação deve partir do aluno e não de uma necessidade escolhida pelo PT.",
+      "source": "Aula 2, pp. 15–16"
     },
     {
       "id": "CF041",
@@ -608,14 +608,14 @@
       "type": "multiple_choice",
       "question": "Nos materiais, rapport está associado sobretudo a…",
       "options": [
-        "confiança e influência.",
-        "controlo e imposição.",
         "distância e silêncio.",
-        "competição e autoridade."
+        "controlo e imposição.",
+        "competição e autoridade.",
+        "confiança e influência."
       ],
-      "answer": 0,
-      "explanation": "confiança e influência.",
-      "source": "Aula 3 — Rapport"
+      "answer": 3,
+      "explanation": "Rapport é a ligação de compreensão, confiança e influência; as técnicas são meios de o construir.",
+      "source": "Aula 3, pp. 2–3"
     },
     {
       "id": "CF042",
@@ -624,13 +624,13 @@
       "question": "Qual é uma consequência esperada de um bom rapport?",
       "options": [
         "Comunicação mais aberta, maior confiança e abertura a novas perspetivas.",
+        "Redução da necessidade de compreender o aluno.",
         "Maior resistência automática à comunicação.",
-        "Comunicação exclusivamente unidirecional.",
-        "Redução da necessidade de compreender o aluno."
+        "Comunicação exclusivamente unidirecional."
       ],
       "answer": 0,
-      "explanation": "Os materiais relacionam rapport com confiança, comunicação aberta e abertura a novas perspetivas.",
-      "source": "Aula 3 — Importância do Rapport"
+      "explanation": "A confiança favorece abertura, sem implicar obediência ou acordo automático.",
+      "source": "Aula 3, pp. 2–3"
     },
     {
       "id": "CF043",
@@ -638,14 +638,14 @@
       "type": "multiple_choice",
       "question": "Na ausência de rapport, que resposta é associada nos slides a situações de stress ou desconforto?",
       "options": [
-        "Fight, flight ou freeze — lutar, fugir ou congelar.",
+        "Aumento automático da escuta ativa.",
         "Apenas aproximação e confiança.",
-        "Exclusivamente alegria.",
-        "Aumento automático da escuta ativa."
+        "Fight, flight ou freeze — lutar, fugir ou congelar.",
+        "Exclusivamente alegria."
       ],
-      "answer": 0,
-      "explanation": "Os slides associam ausência de rapport às respostas fight, flight e freeze.",
-      "source": "Aula 3 — Ausência de Rapport"
+      "answer": 2,
+      "explanation": "Fight, flight e freeze são apresentados como respostas ao stress; não constituem diagnóstico individual.",
+      "source": "Aula 3, p. 4"
     },
     {
       "id": "CF044",
@@ -653,14 +653,14 @@
       "type": "multiple_choice",
       "question": "Qual destas é uma forma indicada para criar rapport?",
       "options": [
-        "Evitar contacto com o cliente.",
-        "Escuta ativa.",
         "Interromper para acelerar a conversa.",
-        "Dar conselhos sem serem pedidos."
+        "Dar conselhos sem serem pedidos.",
+        "Escuta ativa.",
+        "Evitar contacto com o cliente."
       ],
-      "answer": 1,
-      "explanation": "Escuta ativa.",
-      "source": "Aula 3 — Como criar Rapport"
+      "answer": 2,
+      "explanation": "A escuta cria compreensão e confiança, ponto de partida destacado para construir rapport.",
+      "source": "Aula 3, pp. 5–6"
     },
     {
       "id": "CF045",
@@ -668,14 +668,14 @@
       "type": "multiple_choice",
       "question": "Escuta ativa significa…",
       "options": [
-        "ouvir e responder de forma a garantir compreensão mútua genuína, com presença e atenção.",
-        "ficar em silêncio sem processar a mensagem.",
+        "anotar tudo sem contacto com o falante.",
         "dar imediatamente uma solução.",
-        "anotar tudo sem contacto com o falante."
+        "ouvir e responder de forma a garantir compreensão mútua genuína, com presença e atenção.",
+        "ficar em silêncio sem processar a mensagem."
       ],
-      "answer": 0,
-      "explanation": "ouvir e responder de forma a garantir compreensão mútua genuína, com presença e atenção.",
-      "source": "Aula 3 — Escuta Ativa"
+      "answer": 2,
+      "explanation": "Escuta ativa implica atenção consciente e compreensão mútua, para além da receção sonora.",
+      "source": "Aula 3, pp. 5–6"
     },
     {
       "id": "CF046",
@@ -683,29 +683,29 @@
       "type": "multiple_choice",
       "question": "Na escuta ativa, a atenção deve abranger…",
       "options": [
-        "apenas as palavras.",
         "apenas o tom de voz.",
+        "apenas as palavras.",
         "apenas os gestos.",
         "palavras, gestos, expressão corporal e emoções."
       ],
       "answer": 3,
-      "explanation": "palavras, gestos, expressão corporal e emoções.",
-      "source": "Aula 3 — Escuta Ativa estruturada"
+      "explanation": "A Aula 3 descreve atenção ao falante nos quatro níveis.",
+      "source": "Aula 3, p. 7"
     },
     {
       "id": "CF047",
       "topic": "7. Rapport e Escuta Ativa",
       "type": "multiple_choice",
-      "question": "Qual comportamento prejudica a escuta ativa?",
+      "question": "Um aluno explica por que deixou de treinar. Para aplicar escuta ativa, qual deve ser a primeira conduta do técnico?",
       "options": [
-        "Observar linguagem não verbal.",
-        "Dar espaço ao falante.",
-        "Interromper ou terminar frequentemente as frases da outra pessoa.",
-        "Procurar compreender."
+        "Mudar a conversa para uma experiência pessoal do técnico.",
+        "Terminar as frases do aluno para mostrar que já conhece a situação.",
+        "Dar imediatamente conselhos antes de ouvir o relato completo.",
+        "Deixar o aluno concluir, prestar atenção às palavras e sinais não verbais e procurar compreender antes de responder."
       ],
-      "answer": 2,
-      "explanation": "Interromper ou terminar frequentemente as frases da outra pessoa.",
-      "source": "Aula 3 — Hábitos de escuta"
+      "answer": 3,
+      "explanation": "A resposta correta evita hábitos identificados como obstáculos e verifica compreensão.",
+      "source": "Aula 3, pp. 6–7"
     },
     {
       "id": "CF048",
@@ -713,14 +713,14 @@
       "type": "multiple_choice",
       "question": "Comunicação verbal é…",
       "options": [
-        "qualquer estímulo visual sem palavras.",
-        "comunicação através de linguagem falada ou escrita.",
+        "apenas expressões faciais.",
         "apenas linguagem corporal.",
-        "apenas expressões faciais."
+        "comunicação através de linguagem falada ou escrita.",
+        "qualquer estímulo visual sem palavras."
       ],
-      "answer": 1,
-      "explanation": "comunicação através de linguagem falada ou escrita.",
-      "source": "Aula 3 — Comunicação verbal"
+      "answer": 2,
+      "explanation": "Comunicação verbal inclui linguagem falada e escrita.",
+      "source": "Aula 3, pp. 9–10"
     },
     {
       "id": "CF049",
@@ -728,29 +728,29 @@
       "type": "multiple_choice",
       "question": "Qual opção descreve corretamente comunicação não verbal?",
       "options": [
-        "Inclui linguagem corporal, expressões faciais, postura, distância, movimentos, gestos e outros sinais não verbais.",
         "É apenas comunicação escrita.",
+        "Inclui linguagem corporal, expressões faciais, postura, distância, movimentos, gestos e outros sinais não verbais.",
         "É sinónimo de backtracking.",
         "Inclui exclusivamente as palavras escolhidas."
       ],
-      "answer": 0,
-      "explanation": "A comunicação não verbal vai além das palavras e inclui corpo, espaço, gestos, expressões e outros sinais.",
-      "source": "Aula 3 — Comunicação não verbal"
+      "answer": 1,
+      "explanation": "A não verbal inclui corpo e elementos visuais/simbólicos sem palavras.",
+      "source": "Aula 3, pp. 12–19"
     },
     {
       "id": "CF050",
       "topic": "8. Comunicação Verbal e Não Verbal",
       "type": "multiple_choice",
-      "question": "Backtracking consiste em…",
+      "question": "Um aluno diz: «Quero ganhar confiança, mas sinto receio de voltar ao ginásio.» Qual resposta exemplifica backtracking?",
       "options": [
-        "mudar de assunto para acelerar a sessão.",
-        "reformular sempre com palavras técnicas.",
-        "repetir tudo palavra por palavra sem síntese.",
-        "resumir pontos centrais usando as mesmas palavras da outra pessoa."
+        "«Queres perder peso e ainda não tens disciplina. Foi isso que disseste?»",
+        "«Vamos passar diretamente ao plano de treino sem retomar o que disseste.»",
+        "«Deves voltar já ao ginásio e deixar de pensar no receio.»",
+        "«Queres ganhar confiança e sentes receio de voltar ao ginásio. É isso ou queres acrescentar alguma coisa?»"
       ],
       "answer": 3,
-      "explanation": "resumir pontos centrais usando as mesmas palavras da outra pessoa.",
-      "source": "Aula 3 — Backtracking"
+      "explanation": "Usa as palavras do aluno e valida; interpretações ou conselhos não equivalem ao backtracking apresentado.",
+      "source": "Aula 3, pp. 10–11"
     },
     {
       "id": "CF051",
@@ -758,29 +758,29 @@
       "type": "multiple_choice",
       "question": "Qual é um benefício do backtracking?",
       "options": [
-        "Demonstra escuta e compreensão, ajuda a sintetizar e clarificar a conversa.",
-        "Permite mudar as palavras do cliente para as tornar mais convenientes.",
         "Substitui completamente a escuta ativa.",
+        "Permite mudar as palavras do cliente para as tornar mais convenientes.",
+        "Demonstra escuta e compreensão, ajuda a sintetizar e clarificar a conversa.",
         "Serve para corrigir tecnicamente o exercício."
       ],
-      "answer": 0,
-      "explanation": "O backtracking reflete os pontos centrais com as palavras do cliente, ajudando compreensão, síntese e clarificação.",
-      "source": "Aula 3 — Backtracking"
+      "answer": 2,
+      "explanation": "O backtracking demonstra escuta, facilita processamento e clarificação.",
+      "source": "Aula 3, pp. 10–11"
     },
     {
       "id": "CF052",
       "topic": "8. Comunicação Verbal e Não Verbal",
       "type": "multiple_choice",
-      "question": "Qual é a diferença entre mirroring e matching?",
+      "question": "Frente a frente com o aluno, o técnico adota primeiro a posição em espelho e, depois, a mesma posição em vez da simétrica. Como se designam, respetivamente, essas duas formas de adaptação?",
       "options": [
-        "Mirroring reproduz de forma simétrica/espelhada; matching adota a mesma posição.",
-        "Mirroring usa apenas palavras; matching usa apenas silêncio.",
-        "Mirroring é uma técnica de feedback; matching é uma técnica de SMART.",
-        "Não existe diferença entre os dois conceitos."
+        "Mirroring e backtracking.",
+        "Matching e mirroring.",
+        "Backtracking e matching.",
+        "Mirroring e matching."
       ],
-      "answer": 0,
-      "explanation": "Nos materiais, mirroring corresponde à imagem de espelho; matching à adoção da mesma posição.",
-      "source": "Aula 3 — Mirroring & Matching"
+      "answer": 3,
+      "explanation": "Mirroring é simétrico; matching adota a mesma posição, e não a imagem de espelho.",
+      "source": "Aula 3, p. 20"
     },
     {
       "id": "CF053",
@@ -789,28 +789,28 @@
       "question": "O que analisa a psicogeografia no contexto apresentado?",
       "options": [
         "O efeito do ambiente, espaço e geografia nas emoções e comportamentos.",
-        "A força muscular do aluno.",
         "A distribuição semanal do treino.",
-        "A ingestão alimentar."
+        "A ingestão alimentar.",
+        "A força muscular do aluno."
       ],
       "answer": 0,
-      "explanation": "A psicogeografia observa como o ambiente e a organização espacial influenciam emoções e comportamento.",
-      "source": "Aula 3 — Psicogeografia"
+      "explanation": "Psicogeografia trata do efeito do ambiente/espaço nas emoções e comportamentos.",
+      "source": "Aula 3, pp. 21–22"
     },
     {
       "id": "CF054",
       "topic": "8. Comunicação Verbal e Não Verbal",
       "type": "multiple_choice",
-      "question": "Segundo os materiais, qual deve ser a distância entre um Personal Trainer e um aluno?",
+      "question": "Durante uma conversa, o aluno indica que prefere um pouco mais de espaço entre si e o técnico. Como aplicar a orientação de psicogeografia apresentada?",
       "options": [
-        "A distância que for mais confortável para o aluno.",
-        "Sempre exatamente um metro.",
-        "Sempre menos de 30 centímetros.",
-        "A maior distância possível."
+        "Fixar a mesma distância para todos os alunos, sem atender ao contexto.",
+        "Manter a distância inicial porque o conforto do técnico é o único critério.",
+        "Ajustar a distância para aquela em que o aluno se sente mais confortável.",
+        "Aproximar-se ainda mais, independentemente da preferência expressa."
       ],
-      "answer": 0,
-      "explanation": "O slide responde explicitamente: a distância que for mais confortável para o aluno.",
-      "source": "Aula 3 — Psicogeografia e distância interpessoal"
+      "answer": 2,
+      "explanation": "Os slides privilegiam conforto individual, não um número universal.",
+      "source": "Aula 3, pp. 21–22"
     },
     {
       "id": "CF055",
@@ -818,14 +818,14 @@
       "type": "multiple_choice",
       "question": "O Método LASEr permite principalmente:",
       "options": [
-        "Identificar quatro estratégias comportamentais, ligá-las a necessidades psicológicas, criar relações empáticas e influenciar comportamentos.",
+        "Definir apenas objetivos SMART.",
         "Calcular a frequência cardíaca máxima.",
         "Classificar níveis de força muscular.",
-        "Definir apenas objetivos SMART."
+        "Identificar quatro estratégias comportamentais, ligá-las a necessidades psicológicas, criar relações empáticas e influenciar comportamentos."
       ],
-      "answer": 0,
-      "explanation": "O método é apresentado como ferramenta para reconhecer energias/estratégias, necessidades e ajustar a interação.",
-      "source": "Aula 3 — Método LASEr"
+      "answer": 3,
+      "explanation": "O método liga comportamentos e necessidades para criar relações e influenciar, sem definir diagnóstico.",
+      "source": "Aula 3, pp. 23–24"
     },
     {
       "id": "CF056",
@@ -833,14 +833,14 @@
       "type": "multiple_choice",
       "question": "A energia laranja associa-se mais a…",
       "options": [
-        "eficácia e decisão objetiva.",
         "movimento, ação, criatividade, mudança e experimentação.",
         "rotina, tradição e planeamento.",
+        "eficácia e decisão objetiva.",
         "silêncio e ligação a valores."
       ],
-      "answer": 1,
-      "explanation": "movimento, ação, criatividade, mudança e experimentação.",
-      "source": "Aula 3 — Energia Laranja"
+      "answer": 0,
+      "explanation": "Ação ocorre em mais de uma energia; novidade, expressão e experimentação distinguem a laranja.",
+      "source": "Aula 3, pp. 24–25, 33"
     },
     {
       "id": "CF057",
@@ -848,14 +848,14 @@
       "type": "multiple_choice",
       "question": "A energia vermelha associa-se mais a…",
       "options": [
-        "ação, eficácia, objetivo, decisão e assertividade.",
+        "tranquilidade e silêncio.",
         "novidade sensorial e multitasking.",
         "planeamento detalhado e rotina.",
-        "tranquilidade e silêncio."
+        "ação, eficácia, objetivo, decisão e assertividade."
       ],
-      "answer": 0,
-      "explanation": "ação, eficácia, objetivo, decisão e assertividade.",
-      "source": "Aula 3 — Energia Vermelha"
+      "answer": 3,
+      "explanation": "Objetivo, decisão, eficácia e assertividade apontam para vermelha.",
+      "source": "Aula 3, pp. 25, 34"
     },
     {
       "id": "CF058",
@@ -863,14 +863,14 @@
       "type": "multiple_choice",
       "question": "A energia azul associa-se mais a…",
       "options": [
+        "organização, planeamento, procedimentos, linguagem cuidada e rotina.",
         "risco e improvisação.",
         "assertividade e decisão rápida.",
-        "causas sociais e silêncio.",
-        "organização, planeamento, procedimentos, linguagem cuidada e rotina."
+        "causas sociais e silêncio."
       ],
-      "answer": 3,
-      "explanation": "organização, planeamento, procedimentos, linguagem cuidada e rotina.",
-      "source": "Aula 3 — Energia Azul"
+      "answer": 0,
+      "explanation": "Organização, análise, procedimentos e preparação distinguem azul.",
+      "source": "Aula 3, pp. 26, 34"
     },
     {
       "id": "CF059",
@@ -878,14 +878,14 @@
       "type": "multiple_choice",
       "question": "A energia verde associa-se mais a…",
       "options": [
-        "decisão rápida e autocentrada.",
-        "procedimentos e tradição.",
         "tranquilidade, valorização do outro, valores, pertença e silêncio.",
-        "multitasking e risco."
+        "decisão rápida e autocentrada.",
+        "multitasking e risco.",
+        "procedimentos e tradição."
       ],
-      "answer": 2,
-      "explanation": "tranquilidade, valorização do outro, valores, pertença e silêncio.",
-      "source": "Aula 3 — Energia Verde"
+      "answer": 0,
+      "explanation": "Valorização do outro, valores e ligação caracterizam verde.",
+      "source": "Aula 3, pp. 27, 35"
     },
     {
       "id": "CF060",
@@ -899,8 +899,8 @@
         "As energias não se relacionam com necessidades psicológicas."
       ],
       "answer": 0,
-      "explanation": "Os materiais ligam cada energia a um par específico de necessidades psicológicas.",
-      "source": "Aula 3 — LASEr e necessidades psicológicas"
+      "explanation": "As quatro ligações são laranja–experiência/novidade, vermelha–importância/reconhecimento, azul–conhecimento/segurança e verde–ligação/pertença.",
+      "source": "Aula 3, pp. 33–36"
     },
     {
       "id": "CF061",
@@ -908,29 +908,29 @@
       "type": "multiple_choice",
       "question": "Qual sequência é proposta para ativar intencionalmente uma energia?",
       "options": [
-        "Identificar a energia atual → definir a intenção/energia pretendida → ativação mental e física.",
         "Ativar primeiro → avaliar depois → ignorar o objetivo.",
         "Escolher uma cor ao acaso → repetir palavras → terminar.",
+        "Identificar a energia atual → definir a intenção/energia pretendida → ativação mental e física.",
         "Diagnosticar clinicamente → prescrever → avaliar."
       ],
-      "answer": 0,
-      "explanation": "Os slides apresentam três passos: identificação, intenção e ativação.",
-      "source": "Aula 3 — Como ativar as energias"
+      "answer": 2,
+      "explanation": "A sequência dos slides integra estado atual, objetivo e ativação mental/física.",
+      "source": "Aula 3, pp. 37–39"
     },
     {
       "id": "CF062",
       "topic": "9. Método LASEr",
       "type": "multiple_choice",
-      "question": "Para ativar uma energia, os materiais propõem primeiro…",
+      "question": "No LASEr, um aluno valoriza organização, planeamento e segurança. Para adaptar a comunicação a estas características, que energia deve o técnico procurar ativar?",
       "options": [
-        "imitar o cliente sem objetivo.",
-        "usar sempre a energia vermelha.",
-        "evitar alterações na fisiologia.",
-        "identificar a energia que estamos a utilizar, definir a intenção e depois ativar mental e fisicamente."
+        "Vermelha.",
+        "Laranja.",
+        "Azul.",
+        "Verde."
       ],
-      "answer": 3,
-      "explanation": "identificar a energia que estamos a utilizar, definir a intenção e depois ativar mental e fisicamente.",
-      "source": "Aula 3 — Como ativar as energias"
+      "answer": 2,
+      "explanation": "Organização, procedimentos e planeamento correspondem à energia azul e a conhecimento/segurança. Adaptar comunicação implica explicar etapas e permitir clarificação.",
+      "source": "Aula 3, pp. 26, 34, 40"
     },
     {
       "id": "CF063",
@@ -938,14 +938,14 @@
       "type": "multiple_choice",
       "question": "Quando é indicado o Feedback Sandwich?",
       "options": [
-        "Sempre que não existe nada positivo.",
-        "Apenas para elogiar.",
         "Quando existe bom desempenho com pontos a melhorar.",
-        "Apenas perante baixa performance grave."
+        "Apenas para elogiar.",
+        "Apenas perante baixa performance grave.",
+        "Sempre que não existe nada positivo."
       ],
-      "answer": 2,
-      "explanation": "Quando existe bom desempenho com pontos a melhorar.",
-      "source": "Aula 4 — Feedback Sandwich"
+      "answer": 0,
+      "explanation": "A escolha depende do padrão descrito: bom desempenho com pontos a melhorar corresponde a sandwich.",
+      "source": "Aula 4, p. 2"
     },
     {
       "id": "CF064",
@@ -953,14 +953,14 @@
       "type": "multiple_choice",
       "question": "Qual é a sequência do Feedback Sandwich?",
       "options": [
-        "Comportamento → efeito → alternativa → resultado.",
-        "Pontos positivos → aspetos a melhorar → palavras motivadoras/encorajamento.",
+        "Objetivo → realidade → opções.",
         "Crítica → punição → elogio.",
-        "Objetivo → realidade → opções."
+        "Comportamento → efeito → alternativa → resultado.",
+        "Pontos positivos → aspetos a melhorar → palavras motivadoras/encorajamento."
       ],
-      "answer": 1,
-      "explanation": "Pontos positivos → aspetos a melhorar → palavras motivadoras/encorajamento.",
-      "source": "Aula 4 — Feedback Sandwich"
+      "answer": 3,
+      "explanation": "O modelo combina reconhecimento, melhoria e fecho motivador; não elimina a correção.",
+      "source": "Aula 4, p. 2"
     },
     {
       "id": "CF065",
@@ -968,14 +968,14 @@
       "type": "multiple_choice",
       "question": "O Feedback Corretivo BEAR é indicado sobretudo para…",
       "options": [
-        "pessoas com baixa performance.",
         "clientes sem qualquer problema de desempenho.",
+        "pessoas com baixa performance.",
         "definição de objetivos SMART.",
         "análise de oportunidades."
       ],
-      "answer": 0,
-      "explanation": "pessoas com baixa performance.",
-      "source": "Aula 4 — Feedback BEAR"
+      "answer": 1,
+      "explanation": "BEAR é indicado na Aula 4 para baixa performance e aplicado ao cenário de faltas.",
+      "source": "Aula 4, pp. 3–4"
     },
     {
       "id": "CF066",
@@ -989,8 +989,8 @@
         "Baseline, Effect, Attention, Rapport."
       ],
       "answer": 0,
-      "explanation": "BEAR = Behaviour, Effect, Alternative, Result.",
-      "source": "Aula 4 — Feedback corretivo BEAR"
+      "explanation": "Behaviour descreve o comportamento; Effect explora quem é afetado e como; Alternative dá espaço para a solução do cliente; Result explora as consequências dessa solução. Effect e Result referem-se, respetivamente, ao comportamento e à solução.",
+      "source": "Aula 4, pp. 3–4"
     },
     {
       "id": "CF067",
@@ -998,14 +998,14 @@
       "type": "multiple_choice",
       "question": "Uma boa prática de feedback é…",
       "options": [
-        "descarregar frustração.",
         "ser genérico para evitar desconforto.",
         "ser descritivo, específico, orientado para as necessidades do recetor e validado no final.",
+        "descarregar frustração.",
         "usar julgamentos globais."
       ],
-      "answer": 2,
-      "explanation": "ser descritivo, específico, orientado para as necessidades do recetor e validado no final.",
-      "source": "Aula 4 — Dicas de feedback"
+      "answer": 1,
+      "explanation": "Feedback deve ser descritivo, específico, orientado ao recetor e validado.",
+      "source": "Aula 4, pp. 3–4"
     },
     {
       "id": "CF068",
@@ -1014,13 +1014,13 @@
       "question": "No GROW, G significa…",
       "options": [
         "Gain — o que ganhaste?",
+        "Guide — quem te guia?",
         "Goal — o que queres?",
-        "Growth — quanto cresceste?",
-        "Guide — quem te guia?"
+        "Growth — quanto cresceste?"
       ],
-      "answer": 1,
-      "explanation": "Goal — o que queres?",
-      "source": "Aula 4 — Modelo GROW"
+      "answer": 2,
+      "explanation": "Goal clarifica o resultado desejado; as restantes exploram realidade, possibilidades e compromisso.",
+      "source": "Aula 4, pp. 5–6"
     },
     {
       "id": "CF069",
@@ -1028,14 +1028,14 @@
       "type": "multiple_choice",
       "question": "No GROW, Reality procura responder a…",
       "options": [
-        "Onde estás agora?",
-        "O que vais fazer?",
+        "Qual é o prazo final?",
         "Que opções tens?",
-        "Qual é o prazo final?"
+        "O que vais fazer?",
+        "Onde estás agora?"
       ],
-      "answer": 0,
-      "explanation": "Onde estás agora?",
-      "source": "Aula 4 — Modelo GROW"
+      "answer": 3,
+      "explanation": "Reality identifica a situação atual e o grau de satisfação.",
+      "source": "Aula 4, pp. 7–8"
     },
     {
       "id": "CF070",
@@ -1043,14 +1043,14 @@
       "type": "multiple_choice",
       "question": "No GROW, Options procura…",
       "options": [
-        "avaliar apenas o passado.",
         "definir o objetivo pelo técnico.",
+        "avaliar apenas o passado.",
         "medir a satisfação final.",
         "gerar soluções/opções para atingir o objetivo."
       ],
       "answer": 3,
-      "explanation": "gerar soluções/opções para atingir o objetivo.",
-      "source": "Aula 4 — Modelo GROW"
+      "explanation": "Options expande possibilidades; Will seleciona a ação concreta.",
+      "source": "Aula 4, pp. 9–11"
     },
     {
       "id": "CF071",
@@ -1058,14 +1058,14 @@
       "type": "multiple_choice",
       "question": "No GROW, Will procura clarificar…",
       "options": [
-        "quem é o teu rival.",
         "qual a tua crença inicial.",
-        "o que vais fazer, quando, onde e com quem.",
-        "apenas o que sentes."
+        "apenas o que sentes.",
+        "quem é o teu rival.",
+        "o que vais fazer, quando, onde e com quem."
       ],
-      "answer": 2,
-      "explanation": "o que vais fazer, quando, onde e com quem.",
-      "source": "Aula 4 — Modelo GROW"
+      "answer": 3,
+      "explanation": "Will transforma possibilidades em compromisso e execução concreta.",
+      "source": "Aula 4, p. 11"
     },
     {
       "id": "CF072",
@@ -1073,14 +1073,14 @@
       "type": "multiple_choice",
       "question": "No modelo SMART apresentado para definir o Goal, o objetivo deve ser:",
       "options": [
+        "Social, Measurable, Ambitious, Random e Timeless.",
         "Specific, Measurable, Attainable, Relevant e Time-bound.",
         "Simple, Motivating, Automatic, Rapid e Technical.",
-        "Specific, Mental, Active, Real e Tested.",
-        "Social, Measurable, Ambitious, Random e Timeless."
+        "Specific, Mental, Active, Real e Tested."
       ],
-      "answer": 0,
-      "explanation": "SMART = específico, mensurável, atingível, relevante e com prazo.",
-      "source": "Aula 4 — SMART aplicado ao Goal"
+      "answer": 1,
+      "explanation": "Specific: preciso; Measurable: como medir; Attainable: possível/realista; Relevant: importante para a pessoa; Time-bound: com prazo. Frequência e data, por si, não provam possibilidade nem relevância.",
+      "source": "Aula 4, p. 6"
     },
     {
       "id": "CF073",
@@ -1088,14 +1088,14 @@
       "type": "multiple_choice",
       "question": "Em que fase do GROW é apresentada a Roda da Vida para explorar a situação atual?",
       "options": [
-        "Reality.",
-        "Goal.",
+        "Will.",
         "Options.",
-        "Will."
+        "Reality.",
+        "Goal."
       ],
-      "answer": 0,
-      "explanation": "A Roda da Vida é usada na fase Reality para refletir sobre o estado atual e grau de satisfação.",
-      "source": "Aula 4 — GROW: Reality e Roda da Vida"
+      "answer": 2,
+      "explanation": "A roda explora satisfação atual, não mede condição física nem escolhe automaticamente uma ação.",
+      "source": "Aula 4, pp. 7–8"
     },
     {
       "id": "CF074",
@@ -1103,14 +1103,14 @@
       "type": "multiple_choice",
       "question": "Na fase Options do GROW, a mudança de paradigma procura:",
       "options": [
-        "Romper padrões de pensamento limitadores e gerar novas opções/soluções.",
+        "Substituir o objetivo por instruções do coach.",
         "Definir o diagnóstico clínico do cliente.",
         "Reduzir o número de alternativas para uma única opção.",
-        "Substituir o objetivo por instruções do coach."
+        "Romper padrões de pensamento limitadores e gerar novas opções/soluções."
       ],
-      "answer": 0,
-      "explanation": "A mudança de paradigma é apresentada como forma de sair de pensamentos pré-formatados e gerar alternativas.",
-      "source": "Aula 4 — GROW: Options e mudança de paradigma"
+      "answer": 3,
+      "explanation": "A solução ultrapassa a fronteira assumida; o exercício ilustra libertar opções de pressupostos limitadores.",
+      "source": "Aula 4, pp. 9–11"
     },
     {
       "id": "CF075",
@@ -1119,13 +1119,13 @@
       "question": "Qual é a estrutura da análise SWOT?",
       "options": [
         "Strengths, Weaknesses, Opportunities e Threats.",
-        "Specific, Will, Options e Time.",
         "Strength, Work, Outcome e Training.",
-        "Safety, Wellness, Objective e Technique."
+        "Safety, Wellness, Objective e Technique.",
+        "Specific, Will, Options e Time."
       ],
       "answer": 0,
-      "explanation": "SWOT organiza Pontos Fortes, Pontos Fracos, Oportunidades e Ameaças.",
-      "source": "Aula 4 — SWOT"
+      "explanation": "São os quatro elementos da análise SWOT apresentada para apoiar decisões.",
+      "source": "Aula 4, p. 13"
     },
     {
       "id": "CF076",
@@ -1135,12 +1135,12 @@
       "options": [
         "Para comparar cenários, reconhecer forças/fraquezas, oportunidades/ameaças e apoiar uma decisão mais refletida.",
         "Para diagnosticar doença.",
-        "Para calcular zonas de frequência cardíaca.",
-        "Para substituir o modelo GROW em qualquer situação."
+        "Para substituir o modelo GROW em qualquer situação.",
+        "Para calcular zonas de frequência cardíaca."
       ],
       "answer": 0,
-      "explanation": "Nos slides, a SWOT apoia análise de cenários e tomada de decisão, incluindo possibilidade de plano B.",
-      "source": "Aula 4 — SWOT"
+      "explanation": "Os slides acrescentam pergunta de conclusão e de congruência, além de melhor/pior cenário e plano B.",
+      "source": "Aula 4, p. 13"
     },
     {
       "id": "CF077",
@@ -1149,13 +1149,13 @@
       "question": "Qual é a lógica central do Road Map apresentado?",
       "options": [
         "Definir objetivo e linha temporal, posicionar-se no futuro e recuar passo a passo até construir uma rota de ações.",
-        "Começar pelo treino do dia e ignorar o objetivo final.",
         "Listar apenas obstáculos sem definir ações.",
+        "Começar pelo treino do dia e ignorar o objetivo final.",
         "Definir o caminho exclusivamente pelo coach."
       ],
       "answer": 0,
-      "explanation": "O Road Map parte do objetivo futuro e reconstrói os passos necessários de trás para a frente.",
-      "source": "Aula 4 — Road Map"
+      "explanation": "Road Map constrói a rota do futuro realizado para os passos anteriores.",
+      "source": "Aula 4, p. 14"
     },
     {
       "id": "CF078",
@@ -1163,14 +1163,14 @@
       "type": "multiple_choice",
       "question": "No Road Map, que pergunta ajuda a construir os passos de trás para a frente?",
       "options": [
-        "«O que aconteceu um passo antes de o teu objetivo ser realidade? O que fizeste?»",
         "«Porque é que falhaste?»",
         "«Quem é culpado por ainda não teres chegado?»",
+        "«O que aconteceu um passo antes de o teu objetivo ser realidade? O que fizeste?»",
         "«Qual é o exercício mais difícil?»"
       ],
-      "answer": 0,
-      "explanation": "A ferramenta reconstrói a sequência de ações perguntando o que ocorreu imediatamente antes de cada marco.",
-      "source": "Aula 4 — Road Map"
+      "answer": 2,
+      "explanation": "A pergunta de um passo antes identifica ações e permite anotá-las na rota.",
+      "source": "Aula 4, p. 14"
     },
     {
       "id": "CF079",
@@ -1178,14 +1178,14 @@
       "type": "multiple_choice",
       "question": "Qual destes é um princípio ético e deontológico destacado nos materiais?",
       "options": [
-        "Confidencialidade e privacidade.",
-        "Impor objetivos ao cliente.",
         "Partilhar informação privada para motivar o grupo.",
-        "Discriminar com base no desempenho."
+        "Discriminar com base no desempenho.",
+        "Impor objetivos ao cliente.",
+        "Confidencialidade e privacidade."
       ],
-      "answer": 0,
-      "explanation": "Confidencialidade e privacidade são princípios explicitamente destacados.",
-      "source": "Aula 4 — Princípios Éticos e Deontológicos"
+      "answer": 3,
+      "explanation": "Trata-se de um princípio ético destacado, não de uma necessidade ou energia.",
+      "source": "Aula 4, pp. 15–17"
     },
     {
       "id": "CF080",
@@ -1193,14 +1193,14 @@
       "type": "multiple_choice",
       "question": "Qual conjunto reúne princípios éticos destacados na UC?",
       "options": [
-        "Confidencialidade/privacidade, não discriminação, informações verdadeiras e exatas, clareza, encorajamento para mudar e respeito pela liberdade do cliente.",
-        "Pressão, imposição, competição e exposição pública.",
         "Sigilo seletivo, discriminação e manipulação.",
+        "Pressão, imposição, competição e exposição pública.",
+        "Confidencialidade/privacidade, não discriminação, informações verdadeiras e exatas, clareza, encorajamento para mudar e respeito pela liberdade do cliente.",
         "Promessas de resultados, omissão de informação e controlo do cliente."
       ],
-      "answer": 0,
-      "explanation": "Estes seis princípios são apresentados explicitamente nos slides da Aula 4.",
-      "source": "Aula 4 — Princípios Éticos e Deontológicos"
+      "answer": 2,
+      "explanation": "Os seis princípios preservam informação verdadeira/clara e a liberdade do cliente.",
+      "source": "Aula 4, pp. 15–17"
     }
   ],
   "exams": {
@@ -1290,22 +1290,33 @@
     ]
   },
   "coverage_audit": {
-    "source": "Lista de Saberes — UC Aplicar técnicas de Coaching no treino de exercício físico",
-    "total_saberes": 22,
-    "covered_saberes": 22,
+    "source": "Lista de Saberes CF e Aulas 1–4 fornecidas pelo utilizador",
+    "status": "reviewed",
+    "review_date": "2026-10-07",
+    "total_saberes": 20,
+    "covered_saberes": 20,
     "coverage_percent": 100,
+    "scope": "20 itens finais da Lista original (17 entradas principais, uma com quatro subitens); cobertura temática explícita, não avaliação de cada frase dos slides nem previsão do exame. Casos adicionais são aplicações de estudo.",
+    "report": "docs/CF_COVERAGE.md",
+    "legacy_declared_saberes": 22,
     "map": {
-      "Definição de Coaching": [
+      "Definição Coaching": [
         "CF001",
+        "CF002",
+        "CF003",
+        "CF004",
         "CF005",
-        "CF007"
+        "CF006",
+        "CF007",
+        "CF008"
       ],
       "Papéis do Coach": [
         "CF009",
         "CF010",
         "CF011",
         "CF012",
-        "CF013"
+        "CF013",
+        "CF014"
       ],
       "Pressupostos do Coaching": [
         "CF015",
@@ -1333,7 +1344,7 @@
         "CF033",
         "CF034"
       ],
-      "6 necessidades humanas — Tony Robbins": [
+      "6 necessidades humanas Tony Robbins": [
         "CF035",
         "CF036",
         "CF037",
@@ -1344,7 +1355,7 @@
       "Definição de Rapport": [
         "CF041"
       ],
-      "Importância do Rapport e ausência de Rapport": [
+      "Reconhecer a importância do Rapport na comunicação e o que acontece na sua ausência": [
         "CF042",
         "CF043"
       ],
@@ -1354,18 +1365,14 @@
         "CF046",
         "CF047"
       ],
-      "Comunicação verbal — definição e Backtracking": [
+      "Comunicação verbal (Definição e Backtraking)": [
         "CF048",
         "CF050",
         "CF051"
       ],
-      "Comunicação não verbal — definição e linguagem corporal": [
-        "CF049"
-      ],
-      "Mirroring e Matching": [
-        "CF052"
-      ],
-      "Psicogeografia": [
+      "Comunicação não verbal (Definição, linguagem corporal, Mirroring e Matching e psicogeografia)": [
+        "CF049",
+        "CF052",
         "CF053",
         "CF054"
       ],
@@ -1379,7 +1386,7 @@
         "CF061",
         "CF062"
       ],
-      "Feedback — Sandwich e BEAR": [
+      "Feedback (modelo sandwich e BEAR)": [
         "CF063",
         "CF064",
         "CF065",
@@ -1392,13 +1399,13 @@
         "CF070",
         "CF071"
       ],
-      "Modelo SMART aplicado ao Goal": [
+      "modelo SMART (G)": [
         "CF072"
       ],
-      "Roda da Vida — Reality": [
+      "Roda da Vida (R)": [
         "CF073"
       ],
-      "Mudança de paradigma — Options": [
+      "Mudança de paradigma (O)": [
         "CF074"
       ],
       "SWOT": [
@@ -1414,5 +1421,6 @@
         "CF080"
       ]
     }
-  }
+  },
+  "difficulty": "easy"
 }

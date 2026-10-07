@@ -1,0 +1,1426 @@
+{
+  "uc": "Coaching no Fitness",
+  "version": "3.0-source-reviewed",
+  "questions": [
+    {
+      "id": "CFD001",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "O PT propõe uma sessão «de coaching», explica a solução e pede ao aluno que a aceite. Qual alteração mais completa restabelece a parceria descrita na Aula 1?",
+      "options": [
+        "Ouvir o objetivo e escolher sozinho a solução para ganhar tempo",
+        "Explorar por perguntas o objetivo e as possibilidades, envolvendo o aluno nas respostas e decisões",
+        "Trocar a explicação por uma lista de instruções técnicas personalizadas",
+        "Manter a solução e acrescentar uma pergunta de concordância"
+      ],
+      "answer": 1,
+      "explanation": "Perguntar apenas se o aluno concorda não garante parceria. A exploração e decisão participada aproximam o processo da definição dos slides.",
+      "source": "Aula 1, p. 10"
+    },
+    {
+      "id": "CFD002",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "Uma aluna falta; o PT propõe recompensas e um plano técnico melhor. Qual intervenção acrescenta o foco «com coaching»?",
+      "options": [
+        "Aperfeiçoar só a técnica porque o problema é necessariamente falta de vontade",
+        "Explorar os motivos, valores e crenças da aluna para cocriar objetivos e ajustar a estratégia",
+        "Dar liberdade para escolher horários sem explorar o sentido de treinar",
+        "Aumentar a recompensa externa e manter o objetivo escolhido pelo PT"
+      ],
+      "answer": 1,
+      "explanation": "Horários e técnica podem ajudar, mas motivos, crenças, valores e cocriação são os elementos distintivos apresentados.",
+      "source": "Aula 1, p. 9"
+    },
+    {
+      "id": "CFD003",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "Num exercício a três, o observador comenta e o cliente define a meta. Que critério identifica corretamente quem atua como coach?",
+      "options": [
+        "Quem conduz a exploração através do processo, mesmo sem escolher a meta pelo cliente",
+        "Quem fala durante mais tempo e domina a conversa",
+        "Quem define a meta, porque é dono da decisão",
+        "Quem avalia o diálogo e sugere a melhor resposta"
+      ],
+      "answer": 0,
+      "explanation": "A condução distingue o papel; nem definir a própria meta nem observar atribui o papel de coach.",
+      "source": "Aula 1, p. 9"
+    },
+    {
+      "id": "CFD004",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "A cliente responde às perguntas e decide um objetivo. O observador conclui que ela é agora o coach. Qual correção é mais precisa?",
+      "options": [
+        "Ela passa a coach sempre que encontra uma resposta",
+        "Ela continua coachee; ter as respostas e decidir o objetivo é compatível com ser acompanhada",
+        "Ela deixa de ser coachee se o PT não prescrever um objetivo",
+        "Ela é simultaneamente coach apenas por tomar decisões"
+      ],
+      "answer": 1,
+      "explanation": "A autonomia é esperada do coachee; o papel do coach refere-se à condução do processo.",
+      "source": "Aula 1, p. 9"
+    },
+    {
+      "id": "CFD005",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "Uma sessão tem começo e fim, mas não explora um resultado desejado. Qual avaliação melhor distingue forma e propósito?",
+      "options": [
+        "Basta começo e fim para demonstrar todos os elementos de coaching",
+        "A ausência de uma meta exige concluir com a solução do coach",
+        "Há estrutura temporal, mas falta clarificar o resultado que orienta o processo",
+        "A sessão só é processo se repetir perguntas padronizadas"
+      ],
+      "answer": 2,
+      "explanation": "Princípio/meio/fim explica processo; chegar a resultado é outro elemento, que não decorre apenas da duração.",
+      "source": "Aula 1, pp. 11–12"
+    },
+    {
+      "id": "CFD006",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "Uma conversa gera clareza e várias ideias, mas termina sem ligação à meta. Qual fecho melhor corresponde ao foco em resultado?",
+      "options": [
+        "Retomar o objetivo e verificar como a exploração se traduz em progressão ou próximo passo acordado",
+        "Elogiar a participação e deixar a meta sem discussão",
+        "Escolher o conselho mais rápido para garantir o resultado",
+        "Contar as novas ideias e considerar a meta automaticamente atingida"
+      ],
+      "answer": 0,
+      "explanation": "Clareza e ideias são úteis, mas precisam de ligação ao objetivo; não garantem realização nem justificam imposição.",
+      "source": "Aula 1, pp. 11–12"
+    },
+    {
+      "id": "CFD007",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "O PT pretende «curar» sofrimento por perguntas e chama ao processo coaching. Qual interpretação melhor respeita a delimitação do material?",
+      "options": [
+        "Qualquer processo com perguntas pertence ao coaching",
+        "A orientação para o futuro permite tratar qualquer problema em coaching",
+        "Coaching e mentoria são equivalentes se o PT tiver experiência",
+        "Perguntas não tornam tratamento clínico coaching; os slides distinguem-no de terapia, psicoterapia, formação e mentoria"
+      ],
+      "answer": 3,
+      "explanation": "A ferramenta pergunta não apaga a distinção de finalidade e de âmbito apresentada na Aula 1.",
+      "source": "Aula 1, p. 10"
+    },
+    {
+      "id": "CFD008",
+      "topic": "1. Essência do Coaching",
+      "type": "multiple_choice",
+      "question": "O PT melhora a técnica do aluno e pergunta qual o significado pessoal de treinar. Qual leitura é mais completa?",
+      "options": [
+        "Abandona o «o quê» porque coaching substitui a técnica",
+        "Usa apenas motivação externa porque existe correção técnica",
+        "Deixa de fazer coaching ao dar qualquer orientação técnica",
+        "Integra o trabalho técnico com atenção à pessoa e aos motivos, acrescentando o «para quê»"
+      ],
+      "answer": 3,
+      "explanation": "A comparação dos slides mostra uma mudança de foco comunicacional, não a eliminação das responsabilidades técnicas.",
+      "source": "Aula 1, pp. 9, 22–23"
+    },
+    {
+      "id": "CFD009",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "Uma aluna já tem capacidade de planear, enfrenta um momento difícil e precisa de nova forma de pensar. Que combinação de papéis é mais adequada?",
+      "options": [
+        "Capacitar em tudo, tratando competências existentes como inexistentes",
+        "Desafiar em tudo, independentemente do momento e dos recursos",
+        "Apoiar sempre, evitando qualquer desenvolvimento ou desafio",
+        "Desenvolver a capacidade presente, apoiar a dificuldade e capacitar no recurso ausente, calibrando o desafio"
+      ],
+      "answer": 3,
+      "explanation": "Os papéis são complementares e respondem a condições diferentes; não existe uma intervenção única para todos os aspetos.",
+      "source": "Aula 1, pp. 15–17"
+    },
+    {
+      "id": "CFD010",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "Um cliente organiza treinos com competência, mas quer aperfeiçoar a consistência. Qual interpretação evita confundir desenvolver e capacitar?",
+      "options": [
+        "Desenvolver só se aplica quando não existe competência",
+        "Apoiar e desenvolver são sinónimos de ensinar uma competência nova",
+        "Desenvolver parte da competência existente; capacitar seria pertinente se faltasse uma competência ou modo de pensar necessário",
+        "Capacitar é sempre o nome de qualquer melhoria"
+      ],
+      "answer": 2,
+      "explanation": "O critério decisivo é o recurso já existir ou precisar de ser adquirido, não apenas haver melhoria.",
+      "source": "Aula 1, p. 16"
+    },
+    {
+      "id": "CFD011",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "No diagrama Flow, o desafio excede muito a competência e surge ansiedade. Que ajuste melhor corresponde ao esquema?",
+      "options": [
+        "Aumentar competência e/ou reduzir desafio para aproximar a relação da zona Flow",
+        "Reduzir permanentemente qualquer desafio, evitando desenvolvimento",
+        "Aumentar sempre o desafio, porque desafiar é um papel do coach",
+        "Aumentar apoio sem observar o nível de desafio ou competência"
+      ],
+      "answer": 0,
+      "explanation": "O gráfico relaciona desafio e competência; ansiedade não se resolve pela regra de aumentar sempre exigência.",
+      "source": "Aula 1, pp. 16, 18"
+    },
+    {
+      "id": "CFD012",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "Uma cliente está num momento difícil e não se sente ouvida. O PT propõe imediatamente um desafio maior. Qual sequência é mais adequada aos papéis?",
+      "options": [
+        "Manter o desafio como resposta suficiente porque gera progresso",
+        "Ensinar uma competência nova sem explorar a dificuldade",
+        "Apoiar e compreender primeiro, ajustando depois o desafio ao contexto e aos recursos",
+        "Evitar todo o desafio futuro porque apoiar exclui desafiar"
+      ],
+      "answer": 2,
+      "explanation": "Apoio atende ao momento difícil; isso não elimina desafio, mas exige calibrá-lo e não presumir uma lacuna de competência.",
+      "source": "Aula 1, p. 17"
+    },
+    {
+      "id": "CFD013",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "O cliente quer avançar, mas não possui a competência necessária. Qual intervenção distingue capacitação de mera pressão?",
+      "options": [
+        "Exigir maior esforço mantendo a lacuna identificada",
+        "Ajudar a adquirir o recurso ou modo de pensar em falta e depois ajustar o desafio",
+        "Aperfeiçoar uma competência diferente que já possui",
+        "Oferecer apenas conforto sem desenvolver recursos"
+      ],
+      "answer": 1,
+      "explanation": "Capacitar atende à ausência de recurso; desafiar ou apoiar isoladamente não responde a essa lacuna.",
+      "source": "Aula 1, p. 17"
+    },
+    {
+      "id": "CFD014",
+      "topic": "2. Papéis do Coach e Perguntas Poderosas",
+      "type": "multiple_choice",
+      "question": "O PT quer explorar sentimentos sem sugerir uma resposta. Qual pergunta é mais adequada às distinções dos slides?",
+      "options": [
+        "«Estás frustrado ou desmotivado?»",
+        "«Que sentimentos te surgem e o que é importante para ti nesta situação?»",
+        "«Concordas que devias treinar mais?»",
+        "«Porque é que continuas a falhar?»"
+      ],
+      "answer": 1,
+      "explanation": "A primeira é aberta e exploratória. As outras restringem sentimentos, pressupõem falha ou procuram concordância com uma solução.",
+      "source": "Aula 1, pp. 13–15"
+    },
+    {
+      "id": "CFD015",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "«O cliente tem as respostas» é usado para justificar não fazer perguntas nem facilitar a reflexão. Qual leitura corrige essa aplicação?",
+      "options": [
+        "O cliente deve descobrir tudo sem qualquer processo",
+        "O coach pode fazer perguntas apenas para confirmar a sua própria resposta",
+        "O coach deve limitar-se ao silêncio durante toda a sessão",
+        "O pressuposto preserva a autoria das respostas, mas o coach conduz perguntas que ajudam a explorar e clarificar"
+      ],
+      "answer": 3,
+      "explanation": "Autoria da resposta não significa ausência de facilitação; o processo é uma parceria ativa.",
+      "source": "Aula 1, pp. 20–21"
+    },
+    {
+      "id": "CFD016",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "O aluno interpreta uma correção como humilhação; o PT considera-a neutra. Qual resposta aplica «o mapa não é o território» com respeito?",
+      "options": [
+        "Explorar como o aluno viveu a situação, distinguindo a sua representação sem impor o mapa do PT",
+        "Concordar que toda a interpretação do aluno descreve necessariamente os factos",
+        "Provar que a interpretação do PT é a realidade porque foi ele que falou",
+        "Ignorar o significado para o aluno e repetir a correção"
+      ],
+      "answer": 0,
+      "explanation": "Respeitar o mapa significa compreender a representação, não substituí-la pela do coach nem torná-la automaticamente facto absoluto.",
+      "source": "Aula 1, pp. 20–21"
+    },
+    {
+      "id": "CFD017",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "Após uma tentativa falhada, o PT diz «só feedback» e encerra o assunto. Qual aplicação é mais completa?",
+      "options": [
+        "Examinar a informação do resultado e adaptar a tentativa, preservando responsabilidade e aprendizagem",
+        "Concluir que não existem consequências porque só há feedback",
+        "Trocar a palavra falha por feedback sem analisar o ocorrido",
+        "Repetir o plano inalterado para mostrar confiança"
+      ],
+      "answer": 0,
+      "explanation": "O enquadramento pedagógico torna o resultado informação útil; não elimina consequências nem a necessidade de ajuste.",
+      "source": "Aula 1, pp. 20–21"
+    },
+    {
+      "id": "CFD018",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "Um cliente não tem hoje um recurso importante e a sua escolha passada parecia adequada ao contexto. Qual leitura integra os pressupostos?",
+      "options": [
+        "A escolha passada deve manter-se porque foi a melhor disponível",
+        "O coach deve substituir todas as escolhas porque faltou um recurso",
+        "Não pode progredir porque os recursos têm de estar todos presentes",
+        "Pode adquirir o recurso; compreender a escolha no contexto não a torna a melhor para todos os momentos"
+      ],
+      "answer": 3,
+      "explanation": "Recursos podem adquirir-se e escolhas são contextualizadas; nenhuma das ideias exige imobilidade ou imposição.",
+      "source": "Aula 1, pp. 20–21"
+    },
+    {
+      "id": "CFD019",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "O PT transforma «cada pessoa cria a sua realidade» em culpa por todas as dificuldades do aluno. Qual aplicação mais prudente preserva o sentido pedagógico?",
+      "options": [
+        "Impor a interpretação do coach para corrigir a realidade do aluno",
+        "Explorar a margem de ação e as consequências das escolhas sem converter o pressuposto numa acusação absoluta",
+        "Responsabilizar o aluno por todas as circunstâncias externas",
+        "Evitar qualquer exploração de escolhas porque existem limitações"
+      ],
+      "answer": 1,
+      "explanation": "Causa-Efeito é um pressuposto do curso para explorar ação e consequências, articulado com respeito e não imposição; não uma prova de culpa universal.",
+      "source": "Aula 1, p. 21"
+    },
+    {
+      "id": "CFD020",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "O aluno quer compreender se um novo horário ajuda, mas adia indefinidamente. Qual passo melhor concretiza «se queres compreender, age»?",
+      "options": [
+        "Substituir toda a reflexão por ação imposta",
+        "Combinar uma experiência escolhida pelo aluno e usar o resultado para aprender e ajustar",
+        "Exigir a mudança definitiva antes de explorar condições",
+        "Esperar certeza absoluta sem experimentar"
+      ],
+      "answer": 1,
+      "explanation": "Ação como aprendizagem pode combinar-se com feedback e autonomia; não exige imposição nem compromisso irreversível.",
+      "source": "Aula 1, p. 21"
+    },
+    {
+      "id": "CFD021",
+      "topic": "3. Pressupostos do Coaching",
+      "type": "multiple_choice",
+      "question": "Uma estratégia falha, embora o comportamento procure satisfazer uma intenção positiva. Qual resposta integra flexibilidade e não imposição?",
+      "options": [
+        "Justificar a manutenção da estratégia porque a intenção é positiva",
+        "Explorar a intenção com o cliente e cocriar uma estratégia diferente, sem impor os pressupostos",
+        "Exigir que o cliente aceite a teoria antes de mudar",
+        "Substituir o objetivo pela opção preferida do coach"
+      ],
+      "answer": 1,
+      "explanation": "Intenção positiva não prova eficácia nem justifica repetição; flexibilidade muda o meio e não imposição preserva a participação.",
+      "source": "Aula 1, p. 21"
+    },
+    {
+      "id": "CFD022",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "«Falhei duas vezes, por isso nunca vou conseguir» mistura experiência e convicção. Qual intervenção é mais precisa?",
+      "options": [
+        "Substituir imediatamente a frase por uma promessa de sucesso",
+        "Escutar a experiência e explorar a generalização que funciona como lente limitadora",
+        "Tratar «nunca» como facto confirmado pelas duas experiências",
+        "Negar que as experiências tenham ocorrido"
+      ],
+      "answer": 1,
+      "explanation": "Distinguir experiência da interpretação/generalização permite explorar a crença sem negar o vivido nem prometer resultados.",
+      "source": "Aula 2, p. 3"
+    },
+    {
+      "id": "CFD023",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "Um aluno repete a opinião de uma autoridade e generaliza a partir de uma experiência. Que análise respeita as origens de crenças da Aula 2?",
+      "options": [
+        "Há possíveis influências de autoridade/educação e de experiência/interpretação, que podem coexistir",
+        "Só uma origem é possível para cada crença",
+        "A opinião da autoridade elimina qualquer interpretação pessoal",
+        "Uma crença formada por experiência é necessariamente verdadeira"
+      ],
+      "answer": 0,
+      "explanation": "As origens listadas não são categorias mutuamente exclusivas e não certificam a verdade da convicção.",
+      "source": "Aula 2, p. 3"
+    },
+    {
+      "id": "CFD024",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "«Posso aprender» é dito pelo PT, mas o aluno não o sente como sua perspetiva. Qual estratégia respeita o reenquadramento?",
+      "options": [
+        "Abandonar a exploração porque crenças nunca mudam",
+        "Considerar toda a frase positiva automaticamente potenciadora para o aluno",
+        "Escutar, explorar por pergunta e construir a transição para uma nova lente com o aluno",
+        "Repetir a frase positiva até o aluno concordar"
+      ],
+      "answer": 2,
+      "explanation": "Reenquadramento é uma sequência de exploração, não apenas substituir palavras por uma afirmação imposta.",
+      "source": "Aula 2, p. 4"
+    },
+    {
+      "id": "CFD025",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "O PT ouve «não sou capaz» e salta logo para «és capaz». Que etapa inicial e qualidade do processo faltam?",
+      "options": [
+        "Will como condição para ouvir a crença",
+        "Result do BEAR como primeira etapa do reenquadramento",
+        "Definição da cor permanente antes da escuta",
+        "Escuta ativa do significado da crença antes da pergunta e da transição para outra perspetiva"
+      ],
+      "answer": 3,
+      "explanation": "A escada começa na escuta; uma afirmação imediata pode ignorar a experiência e saltar a exploração.",
+      "source": "Aula 2, p. 4"
+    },
+    {
+      "id": "CFD026",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "Numa auditoria, a sequência registada é «Escuta → Pergunta → Nova lente». Qual correção reproduz integralmente a figura?",
+      "options": [
+        "Inserir Ponte entre Pergunta poderosa e Nova lente",
+        "Inserir Ponte depois da Nova lente",
+        "Substituir Pergunta poderosa por um conselho direto",
+        "Inserir Ponte antes da Escuta ativa"
+      ],
+      "answer": 0,
+      "explanation": "A Ponte ocupa explicitamente o terceiro degrau, sem substituir a pergunta.",
+      "source": "Aula 2, p. 4"
+    },
+    {
+      "id": "CFD027",
+      "topic": "4. Crenças e Reenquadramento",
+      "type": "multiple_choice",
+      "question": "A figura mostra uma Ponte, mas não define um protocolo verbal detalhado para ela. Qual descrição é mais rigorosa?",
+      "options": [
+        "Atribuir ao slide um guião obrigatório de cinco frases",
+        "Eliminar a etapa porque não tem explicação textual extensa",
+        "Equiparar Ponte a uma interpretação clínica do coach",
+        "Preservar a etapa como transição para a nova lente e identificar exemplos adicionais como aplicação"
+      ],
+      "answer": 3,
+      "explanation": "É preciso conservar o que a fonte mostra e não inventar detalhes como se estivessem documentados.",
+      "source": "Aula 2, p. 4"
+    },
+    {
+      "id": "CFD028",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O PT identifica irritação, modera a resposta, compreende receios do aluno e negoceia um acordo. Qual leitura mais completa?",
+      "options": [
+        "Integra os quatro domínios; identificar, regular, compreender o outro e gerir a relação são operações distintas",
+        "Todo o processo é apenas consciência social porque envolve um aluno",
+        "Todo o processo é apenas autoconsciência porque começou por identificar irritação",
+        "Regulação e gestão de relacionamentos são a mesma operação sem distinção"
+      ],
+      "answer": 0,
+      "explanation": "O modelo diferencia os quatro domínios, embora possam ser mobilizados na mesma situação.",
+      "source": "Aula 2, pp. 5–6"
+    },
+    {
+      "id": "CFD029",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O PT regista emoções diariamente, mas continua a reagir impulsivamente. O que o registo permite concluir?",
+      "options": [
+        "Demonstra consciência social mesmo sem observar o aluno",
+        "Demonstra domínio completo dos quatro componentes",
+        "Trabalha autoconsciência; não demonstra por si que já regula eficazmente as respostas",
+        "Prova autorregulação porque existe um diário"
+      ],
+      "answer": 2,
+      "explanation": "Conhecer a emoção é distinto de gerir a resposta; o diário é exemplo de autoconsciência.",
+      "source": "Aula 2, pp. 5–6"
+    },
+    {
+      "id": "CFD030",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O PT usa a respiração exemplificada e procura reagir construtivamente. Qual descrição mantém a precisão do material?",
+      "options": [
+        "É uma prova de que nenhuma emoção negativa voltará a surgir",
+        "É um exemplo de autorregulação: inspirar 4, reter 7 e expirar 8 segundos, sem o apresentar como garantia individual",
+        "É uma ferramenta de autoconsciência que dispensa gerir a reação",
+        "É um teste de condição física com expiração de 4 e inspiração de 8 segundos"
+      ],
+      "answer": 1,
+      "explanation": "A Aula 2 apresenta 4-7-8 como exemplo de autorregulação; não como teste nem promessa de eliminação das emoções.",
+      "source": "Aula 2, p. 7"
+    },
+    {
+      "id": "CFD031",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O PT nota silêncio e tensão, mas presume saber exatamente o que o aluno sente. Qual resposta melhor aplica consciência social?",
+      "options": [
+        "Escutar e verificar a experiência do aluno, usando os sinais como informação contextual",
+        "Regular só a emoção do PT e dar o assunto por compreendido",
+        "Trocar o relato do aluno pela interpretação do PT",
+        "Rotular a emoção pela postura e dispensar perguntas"
+      ],
+      "answer": 0,
+      "explanation": "Empatia exige compreensão do outro; observar sinais não torna a interpretação automaticamente certa.",
+      "source": "Aula 2, p. 7"
+    },
+    {
+      "id": "CFD032",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "Num conflito, o PT identifica as prioridades de ambos, mas escolhe unilateralmente a solução. Que passo falta para o caminho do meio?",
+      "options": [
+        "Eliminar qualquer diferença antes de negociar",
+        "Garantir que o aluno abdica sempre da sua prioridade",
+        "Procurar e validar um acordo que respeite ambos, mantendo respeito mútuo",
+        "Escolher a prioridade tecnicamente mais fácil e encerrar"
+      ],
+      "answer": 2,
+      "explanation": "O win-win/caminho do meio envolve colaboração e respeito, não apenas recolher prioridades para decidir sozinho.",
+      "source": "Aula 2, p. 8"
+    },
+    {
+      "id": "CFD033",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O PT não interrompe, mas prepara mentalmente a resposta e ignora o corpo do aluno. Qual melhoria completa a escuta da Aula 2?",
+      "options": [
+        "Escutar para compreender e observar os sinais corporais, em vez de focar só a resposta",
+        "Dar o conselho preparado no primeiro intervalo",
+        "Tomar mais notas sem verificar o significado",
+        "Manter silêncio, que por si garante compreensão"
+      ],
+      "answer": 0,
+      "explanation": "Não interromper é um elemento; atenção e objetivo de compreender completam a ferramenta.",
+      "source": "Aula 2, p. 7"
+    },
+    {
+      "id": "CFD034",
+      "topic": "5. Inteligência Emocional",
+      "type": "multiple_choice",
+      "question": "O aluno assinala alta energia e baixa agradabilidade no Mood Meter. Qual leitura respeita os eixos e o papel emocional no treino?",
+      "options": [
+        "É uma posição dimensional de energia/agradabilidade; explorar a experiência antes de ajustar a interação",
+        "É condição física elevada e prova de boa adesão",
+        "É baixa energia e alta agradabilidade porque os eixos são invertidos",
+        "É diagnóstico de uma emoção única e de abandono inevitável"
+      ],
+      "answer": 0,
+      "explanation": "O gráfico usa energia e agradabilidade, não aptidão física nem previsão determinista de comportamento.",
+      "source": "Aula 2, pp. 11–12"
+    },
+    {
+      "id": "CFD035",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "Uma resposta confunde «conhecimento/segurança» com duas das seis necessidades de Robbins. Qual correção é mais completa?",
+      "options": [
+        "Separar as seis necessidades de Robbins dos quatro pares do LASEr, preservando os nomes de cada modelo",
+        "Fundir os modelos porque ambos referem necessidades",
+        "Substituir certeza por conhecimento e variedade por segurança",
+        "Reduzir as seis necessidades às quatro cores"
+      ],
+      "answer": 0,
+      "explanation": "Os modelos têm organizações e nomes distintos; uma associação temática não autoriza trocar a enumeração.",
+      "source": "Aula 2, pp. 14–16"
+    },
+    {
+      "id": "CFD036",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "O PT identifica preferência por rotina num aluno e declara que ele não tem necessidade de variedade. Qual interpretação corrige o erro?",
+      "options": [
+        "No modelo todos têm as seis necessidades; a prioridade e a forma de satisfação variam e devem ser exploradas",
+        "As prioridades não variam porque as seis necessidades são universais no modelo",
+        "A preferência por rotina elimina a necessidade de variedade",
+        "A prioridade por certeza exige o mesmo plano para todos"
+      ],
+      "answer": 0,
+      "explanation": "Uma prioridade observada não elimina as restantes necessidades nem fixa a forma de satisfação.",
+      "source": "Aula 2, pp. 14–16"
+    },
+    {
+      "id": "CFD037",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "A aluna quer previsibilidade e também aprender uma modalidade. Qual adaptação atende aos dois motivos?",
+      "options": [
+        "Manter só rotina porque certeza impede aprendizagem",
+        "Explicar o plano para apoiar certeza e combinar progressão que permita crescimento",
+        "Propor apenas competição porque aprender significa reconhecimento",
+        "Introduzir mudanças sem explicar porque crescimento dispensa certeza"
+      ],
+      "answer": 1,
+      "explanation": "Necessidades podem coexistir; previsibilidade e evolução não são necessariamente incompatíveis.",
+      "source": "Aula 2, pp. 15–16"
+    },
+    {
+      "id": "CFD038",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "Um aluno quer novidade sem perder o grupo com que se sente ligado. Qual plano melhor atende ao motivo expresso?",
+      "options": [
+        "Experimentar atividades novas com condições de continuidade do vínculo ao grupo",
+        "Mudar de grupo em todas as sessões para maximizar novidade",
+        "Destacar só metas individuais de reconhecimento",
+        "Manter atividade e grupo sem explorar a vontade de mudar"
+      ],
+      "answer": 0,
+      "explanation": "A combinação respeita variedade e amor/conexão; atender apenas a uma deixa a outra preferência sem resposta.",
+      "source": "Aula 2, pp. 15–16"
+    },
+    {
+      "id": "CFD039",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "Uma atividade permite aprender, ser reconhecido e ajudar colegas. Qual leitura distingue os motivos sem os reduzir a um só?",
+      "options": [
+        "Atende apenas a importância porque existe reconhecimento",
+        "Atende apenas a contribuição porque há colegas",
+        "Prova que todos valorizam igualmente os três motivos",
+        "Pode atender a crescimento, importância e contribuição, devendo explorar o que pesa para o aluno"
+      ],
+      "answer": 3,
+      "explanation": "Uma ação pode servir vários motivos; a sua prioridade não se deduz automaticamente da descrição.",
+      "source": "Aula 2, pp. 15–16"
+    },
+    {
+      "id": "CFD040",
+      "topic": "6. Necessidades Humanas",
+      "type": "multiple_choice",
+      "question": "O slide fala em satisfazer «3 das 4 necessidades» e em «vício». Qual tratamento é mais fiel e prudente?",
+      "options": [
+        "Criar uma regra clínica segundo a qual três necessidades provam dependência",
+        "Assinalar a formulação ambígua do slide, que enumera seis, sem a usar como critério diagnóstico",
+        "Apagar o enunciado e substituí-lo por uma teoria externa sem indicar",
+        "Afirmar que o slide especifica claramente quais são as quatro em causa"
+      ],
+      "answer": 1,
+      "explanation": "A fonte diz três das quatro mas não as identifica nessa frase; registar a limitação preserva a fonte sem inventar diagnóstico ou detalhe.",
+      "source": "Aula 2, p. 15"
+    },
+    {
+      "id": "CFD041",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "Um PT copia a postura, mas ignora os motivos do aluno. Qual avaliação melhor distingue técnica e rapport?",
+      "options": [
+        "A ausência de concordância com o plano prova ausência total de rapport",
+        "Rapport depende apenas de palavras iguais, não de compreensão",
+        "Copiar a postura comprova automaticamente rapport",
+        "A semelhança postural pode ser uma técnica, mas rapport envolve compreensão do mundo do aluno e confiança"
+      ],
+      "answer": 3,
+      "explanation": "Rapport é a relação de compreensão/confiança; técnicas isoladas não demonstram toda a qualidade da relação.",
+      "source": "Aula 3, pp. 2–3"
+    },
+    {
+      "id": "CFD042",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "O aluno confia no PT e comunica abertamente, mas rejeita uma proposta. Qual interpretação é mais adequada?",
+      "options": [
+        "A rejeição prova que a confiança relatada é falsa",
+        "A proposta deve ser imposta para preservar a relação",
+        "Rapport pode existir sem concordância; deve apoiar abertura e exploração de novas perspetivas",
+        "Rapport obriga a aceitar a influência sem discussão"
+      ],
+      "answer": 2,
+      "explanation": "Influência e abertura não equivalem a obediência; a liberdade do cliente mantém-se.",
+      "source": "Aula 3, pp. 2–3"
+    },
+    {
+      "id": "CFD043",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "Uma aluna fica imóvel e silenciosa diante de uma tarefa nova. Qual uso de fight/flight/freeze evita uma conclusão excessiva?",
+      "options": [
+        "Concluir que a aluna recusa voluntariamente qualquer relação",
+        "Reconhecer a possível relação com stress e explorar contexto e experiência, sem concluir a causa só pelo sinal",
+        "Presumir confiança elevada porque não houve oposição verbal",
+        "Diagnosticar ausência de rapport exclusivamente pela imobilidade"
+      ],
+      "answer": 1,
+      "explanation": "Os slides ligam estas respostas a stress/ausência de rapport, mas um sinal não determina sozinho causa ou relação.",
+      "source": "Aula 3, p. 4"
+    },
+    {
+      "id": "CFD044",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "O PT mantém contacto visual e acena, mas interrompe e dá conselhos não pedidos. Qual mudança responde melhor aos obstáculos listados?",
+      "options": [
+        "Aumentar o contacto visual mantendo os conselhos antecipados",
+        "Reduzir interrupções e conclusões precipitadas, escutar o relato e verificar compreensão",
+        "Copiar mais gestos para compensar as interrupções",
+        "Tomar notas continuamente para evitar ouvir detalhes"
+      ],
+      "answer": 1,
+      "explanation": "A linguagem corporal não compensa hábitos que interrompem compreensão e presença.",
+      "source": "Aula 3, pp. 5–6"
+    },
+    {
+      "id": "CFD045",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "O aluno diz «ouviste-me, mas não me compreendeste». Qual sequência melhor demonstra escuta ativa?",
+      "options": [
+        "Explicar a experiência semelhante do PT para substituir a do aluno",
+        "Repetir que o PT ouviu todas as palavras e seguir o plano",
+        "Dar espaço, atender às palavras/corpo/emoções e devolver o essencial para confirmar ou corrigir",
+        "Responder com a solução antes de pedir clarificação"
+      ],
+      "answer": 2,
+      "explanation": "Escuta ativa exige compreensão mútua; ouvir palavras ou apresentar a própria experiência não a verifica.",
+      "source": "Aula 3, pp. 5–6"
+    },
+    {
+      "id": "CFD046",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "O relato verbal indica entusiasmo, mas há mudanças corporais. Qual leitura é mais completa nos níveis de escuta?",
+      "options": [
+        "Ignorar o corpo porque a mensagem verbal é suficiente",
+        "Escolher uma emoção pela expressão e apresentá-la como facto",
+        "Atender a palavras, gestos, expressão corporal e emoções e explorar a possível incongruência em contexto",
+        "Ignorar as palavras porque o corpo revela sempre a verdade"
+      ],
+      "answer": 2,
+      "explanation": "Os níveis complementam-se; incongruência convida a observar e clarificar, não a hierarquizar de forma absoluta.",
+      "source": "Aula 3, p. 7"
+    },
+    {
+      "id": "CFD047",
+      "topic": "7. Rapport e Escuta Ativa",
+      "type": "multiple_choice",
+      "question": "O PT toma notas de todos os detalhes, mas perde a continuidade da conversa. Qual ajuste melhor aplica a lista de hábitos da Aula 3?",
+      "options": [
+        "Continuar o registo integral, pois garante compreensão por si",
+        "Equilibrar notas com presença e atenção, evitando que o registo compulsivo substitua escuta e compreensão",
+        "Eliminar sempre qualquer registo, porque toda a nota impede escuta",
+        "Pedir que o aluno encurte tudo para caber nas notas"
+      ],
+      "answer": 1,
+      "explanation": "A fonte aponta anotação compulsiva como obstáculo; não estabelece proibição absoluta de notas.",
+      "source": "Aula 3, pp. 6–7"
+    },
+    {
+      "id": "CFD048",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "O PT envia texto escrito e depois discute-o oralmente. Qual classificação distingue corretamente os canais?",
+      "options": [
+        "Ambos são comunicação verbal; escrita não se torna não verbal por não ter som",
+        "Só a conversa é verbal e todo o texto é não verbal",
+        "A escrita é psicogeografia e a conversa é LASEr",
+        "Texto é paraverbal e a conversa é exclusivamente corporal"
+      ],
+      "answer": 0,
+      "explanation": "Verbal inclui linguagem falada e escrita; o critério não é a presença de som.",
+      "source": "Aula 3, pp. 9–10"
+    },
+    {
+      "id": "CFD049",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "O aluno cruza os braços num espaço frio; o PT conclui que é resistente. Qual procedimento integra melhor os princípios de observação?",
+      "options": [
+        "Considerar contexto, baseline e outros sinais, verificar mudanças e explorar conforto sem concluir por um gesto",
+        "Ignorar qualquer linguagem corporal e observar só palavras",
+        "Atribuir uma energia permanente a partir desse gesto",
+        "Usar braços cruzados como prova universal de oposição"
+      ],
+      "answer": 0,
+      "explanation": "O contexto e o agrupamento de sinais evitam uma leitura isolada; a baseline e a subtilidade fazem parte dos princípios.",
+      "source": "Aula 3, pp. 12–19"
+    },
+    {
+      "id": "CFD050",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "O aluno diz «quero voltar a sentir-me capaz». O PT devolve «tens baixa autoestima». Qual correção melhor aplica backtracking?",
+      "options": [
+        "Repetir toda a conversa sem selecionar os pontos centrais nem validar",
+        "Trocar por «queres emagrecer», que é mais concreto",
+        "Resumir o essencial com «voltar a sentir-me capaz» e convidar o aluno a validar ou acrescentar",
+        "Manter o diagnóstico, mas dizê-lo com tom mais suave"
+      ],
+      "answer": 2,
+      "explanation": "Backtracking preserva palavras e pontos centrais do outro; não é interpretar, diagnosticar nem transcrever indiscriminadamente.",
+      "source": "Aula 3, pp. 10–11"
+    },
+    {
+      "id": "CFD051",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "O PT usa palavras exatas, mas acrescenta uma conclusão que o aluno não formulou. Qual avaliação é mais precisa?",
+      "options": [
+        "A síntese precisa de separar o que o aluno disse da interpretação e permitir correção para preservar clarificação",
+        "Backtracking exige apenas repetir substantivos, mesmo mudando o sentido",
+        "Palavras exatas tornam qualquer conclusão automaticamente válida",
+        "A conclusão do coach deve prevalecer porque organiza a sessão"
+      ],
+      "answer": 0,
+      "explanation": "Conservar palavras não autoriza mudar o significado; validação e fidelidade ao essencial são decisivas.",
+      "source": "Aula 3, pp. 10–11"
+    },
+    {
+      "id": "CFD052",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "Duas pessoas estão frente a frente. Uma inclina-se para a direita e a outra para a esquerda; o PT chama matching. Qual correção é mais precisa?",
+      "options": [
+        "É mirroring só se ambas se inclinarem para a direita",
+        "É backtracking porque reproduz uma mensagem corporal",
+        "É mirroring pela simetria; matching seria adotar a mesma posição, e ambas são técnicas de sintonia",
+        "É matching porque ambas inclinam o tronco"
+      ],
+      "answer": 2,
+      "explanation": "O critério é imagem de espelho versus mesma posição, não apenas semelhança genérica de gesto.",
+      "source": "Aula 3, p. 20"
+    },
+    {
+      "id": "CFD053",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "O PT aproxima a cadeira e o aluno mostra desconforto. Que intervenção integra psicogeografia e rapport?",
+      "options": [
+        "Aplicar só backtracking sem considerar o espaço",
+        "Escolher a distância habitual do PT sem perguntar",
+        "Explorar e ajustar a disposição/distância ao conforto do aluno, observando o efeito na interação",
+        "Manter a proximidade porque aproximação física garante confiança"
+      ],
+      "answer": 2,
+      "explanation": "Psicogeografia envolve o efeito do ambiente; a distância confortável para o aluno é o critério explícito.",
+      "source": "Aula 3, pp. 21–22"
+    },
+    {
+      "id": "CFD054",
+      "topic": "8. Comunicação Verbal e Não Verbal",
+      "type": "multiple_choice",
+      "question": "Uma equipa quer definir uma distância PT–aluno obrigatória em centímetros a partir da Aula 3. Qual recomendação é fiel à fonte?",
+      "options": [
+        "Não inventar um número: a referência fornecida é a distância mais confortável para o aluno, ajustada à situação",
+        "Fixar a menor distância possível para todos",
+        "Afirmar que a fonte proíbe ajustar a distância durante a sessão",
+        "Fixar o comprimento do braço do PT como valor do slide"
+      ],
+      "answer": 0,
+      "explanation": "A fonte dá um critério individual de conforto, não uma medida numérica universal.",
+      "source": "Aula 3, pp. 21–22"
+    },
+    {
+      "id": "CFD055",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "O PT atribui uma cor e recusa ajustar-se porque «a pessoa é sempre assim». Qual leitura corrige o uso do LASEr?",
+      "options": [
+        "As quatro energias estão disponíveis em intensidades diferentes e podem ser ativadas conforme objetivo/contexto",
+        "Cada pessoa tem só uma energia e deve mantê-la",
+        "LASEr determina o objetivo sem ouvir o cliente",
+        "A cor identifica um diagnóstico que não pode mudar"
+      ],
+      "answer": 0,
+      "explanation": "A Aula 3 apresenta disponibilidade das diferentes energias e ativação; não tipos clínicos fixos.",
+      "source": "Aula 3, pp. 23–24"
+    },
+    {
+      "id": "CFD056",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "Um aluno fala muito, quer experimentar e movimenta-se; outro quer decidir rapidamente o resultado. Como distinguir a ação nas energias?",
+      "options": [
+        "Toda a ação aponta necessariamente para vermelha",
+        "Novidade/expressão apontam para laranja; eficácia/objetivo/decisão para vermelha",
+        "Toda a ação aponta necessariamente para laranja",
+        "A diferença depende só da idade, não dos comportamentos descritos"
+      ],
+      "answer": 1,
+      "explanation": "A ação é partilhada; os restantes critérios distinguem laranja e vermelha.",
+      "source": "Aula 3, pp. 24–25, 33"
+    },
+    {
+      "id": "CFD057",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "O cliente quer um resultado claro e sentir-se reconhecido. Qual adaptação é mais coerente com a energia vermelha?",
+      "options": [
+        "Longa análise de procedimentos sem retomar o resultado",
+        "Propor apenas novidades sem critério de eficácia",
+        "Focar só silêncio e causas sociais, ignorando a meta",
+        "Comunicação simples e orientada ao objetivo, ligando decisão/eficácia a importância/reconhecimento"
+      ],
+      "answer": 3,
+      "explanation": "A resposta integra comportamento e necessidade associados; alternativas podem servir outros motivos, mas omitem os expressos.",
+      "source": "Aula 3, pp. 25, 34"
+    },
+    {
+      "id": "CFD058",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "A cliente pede procedimentos, linguagem cuidada e tempo para preparar. Qual adaptação melhor liga estratégia e necessidade?",
+      "options": [
+        "Organizar a explicação e clarificar etapas para apoiar conhecimento/segurança, sem tratar a cor como fixa",
+        "Focar apenas pertença e evitar informação",
+        "Aumentar novidade e multitasking como resposta principal",
+        "Pressionar uma decisão imediata para atender a importância/reconhecimento"
+      ],
+      "answer": 0,
+      "explanation": "Planeamento/procedimentos e conhecimento/segurança são ligações azuis; não exigem atribuir identidade permanente.",
+      "source": "Aula 3, pp. 26, 34"
+    },
+    {
+      "id": "CFD059",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "O aluno valoriza silêncio, bem-estar do grupo e causas sociais. Qual resposta combina energia e necessidade?",
+      "options": [
+        "Criar espaço tranquilo, explorar valores e ligação/pertença, respeitando a expressão do aluno",
+        "Focar apenas vitória individual e importância",
+        "Aumentar estímulos e fala constante para gerar novidade",
+        "Detalhar só procedimentos, sem considerar o vínculo"
+      ],
+      "answer": 0,
+      "explanation": "A combinação do mundo interior, outros/valores e ligação/pertença caracteriza verde.",
+      "source": "Aula 3, pp. 27, 35"
+    },
+    {
+      "id": "CFD060",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "Uma resposta liga laranja a reconhecimento, vermelha a novidade, azul a segurança e verde a pertença. Qual correção é necessária?",
+      "options": [
+        "Trocar azul e verde e manter as duas primeiras",
+        "Trocar as duas primeiras: laranja–experiência/novidade e vermelha–importância/reconhecimento; conservar azul e verde",
+        "Substituir os pares pelas seis necessidades de Robbins",
+        "Associar todas as cores à certeza porque as necessidades são comuns"
+      ],
+      "answer": 1,
+      "explanation": "Azul e verde estão adequados; o erro específico é a inversão de laranja e vermelha.",
+      "source": "Aula 3, pp. 33–36"
+    },
+    {
+      "id": "CFD061",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "O PT quer ativar laranja e passa a movimentar as mãos, sem identificar estado atual ou intenção. Qual sequência completa o método?",
+      "options": [
+        "Fixar laranja como cor pessoal permanente",
+        "Identificar energia atual, escolher energia segundo o objetivo e combinar ativação mental e física",
+        "Movimentar mais as mãos e declarar ativação garantida",
+        "Escolher palavras de qualquer cor e ignorar a fisiologia"
+      ],
+      "answer": 1,
+      "explanation": "A fisiologia é um recurso de ativação, mas não substitui identificação/intenção nem a componente mental.",
+      "source": "Aula 3, pp. 37–39"
+    },
+    {
+      "id": "CFD062",
+      "topic": "9. Método LASEr",
+      "type": "multiple_choice",
+      "question": "Um cliente azul receia avaliação física. O PT quer influenciá-lo com empatia e ética. Qual proposta é mais completa?",
+      "options": [
+        "Copiar postura e considerar consentimento automaticamente obtido",
+        "Garantir resultados que não consegue sustentar para reduzir incerteza",
+        "Oferecer só elogios e reconhecimento e pedir aceitação imediata",
+        "Explicar finalidade e procedimento com clareza, permitir perguntas e decisão livre, adaptando palavras/tom ao observado"
+      ],
+      "answer": 3,
+      "explanation": "Adaptação azul atende conhecimento/segurança; clareza, verdade e liberdade continuam obrigatórias.",
+      "source": "Aula 3, pp. 26, 34, 40"
+    },
+    {
+      "id": "CFD063",
+      "topic": "10. Feedback",
+      "type": "multiple_choice",
+      "question": "Uma aluna executa bem, com um aspeto concreto a melhorar. Qual feedback aplica sandwich sem ocultar a correção?",
+      "options": [
+        "Abrir com julgamento pessoal e terminar com elogio",
+        "Reconhecer o que está bem, descrever a melhoria e encorajar a aplicação, verificando compreensão",
+        "Aplicar BEAR porque qualquer detalhe significa baixa performance",
+        "Elogiar duas vezes e deixar implícito o que precisa de melhorar"
+      ],
+      "answer": 1,
+      "explanation": "Sandwich tem três etapas explícitas e aplica-se ao bom desempenho com melhoria; elogio sem correção fica incompleto.",
+      "source": "Aula 4, p. 2"
+    },
+    {
+      "id": "CFD064",
+      "topic": "10. Feedback",
+      "type": "multiple_choice",
+      "question": "O PT diz «o movimento está estável, mas...». Qual revisão respeita a recomendação lexical e a sequência da Aula 4?",
+      "options": [
+        "Trocar «mas» por «no entanto» para seguir a recomendação",
+        "Trocar «mas» por «só que» para seguir a recomendação",
+        "Eliminar a melhoria e manter só o elogio",
+        "Separar o reconhecimento, apresentar a melhoria sem o conector desvalorizador e fechar com encorajamento"
+      ],
+      "answer": 3,
+      "explanation": "Os três conectores são apontados como palavras a evitar; a correção deve manter-se na estrutura.",
+      "source": "Aula 4, p. 2"
+    },
+    {
+      "id": "CFD065",
+      "topic": "10. Feedback",
+      "type": "multiple_choice",
+      "question": "Um aluno falta e tem baixa performance. Qual aplicação de BEAR é mais completa?",
+      "options": [
+        "Descrever faltas, explorar impacto, dar espaço para a alternativa do aluno e discutir consequências da solução",
+        "Elogiar, julgar a personalidade e exigir uma promessa",
+        "Descrever faltas e escolher sozinho a alternativa, omitindo resultado",
+        "Explorar só sentimentos sem descrever o comportamento"
+      ],
+      "answer": 0,
+      "explanation": "BEAR integra as quatro etapas; alternativa não é imposição e Result não se confunde com o efeito do problema.",
+      "source": "Aula 4, pp. 3–4"
+    },
+    {
+      "id": "CFD066",
+      "topic": "10. Feedback",
+      "type": "multiple_choice",
+      "question": "No BEAR, o PT pergunta «quem é afetado pelas faltas?» e depois «o que muda se aplicares a solução?». Que distinção está correta?",
+      "options": [
+        "Ambas são Alternative porque o cliente responde",
+        "A primeira é Effect do comportamento; a segunda é Result da alternativa",
+        "Ambas são Effect porque falam de consequências",
+        "A primeira é Result e a segunda é Behaviour"
+      ],
+      "answer": 1,
+      "explanation": "Effect trata impacto do comportamento; Result explora consequências da solução, duas referências diferentes.",
+      "source": "Aula 4, pp. 3–4"
+    },
+    {
+      "id": "CFD067",
+      "topic": "10. Feedback",
+      "type": "multiple_choice",
+      "question": "«És irresponsável, tens de melhorar» é seguido de «percebeste?». Qual correção atende às quatro dicas de feedback?",
+      "options": [
+        "Descrever o ocorrido de modo específico, focar necessidades do recetor e validar a compreensão sem julgamento pessoal",
+        "Manter a avaliação pessoal e apenas falar mais baixo",
+        "Substituir a validação por uma ordem mais clara",
+        "Ser mais genérico para evitar mencionar acontecimentos"
+      ],
+      "answer": 0,
+      "explanation": "Validação final não compensa julgamento ou generalidade; as quatro qualidades devem coexistir.",
+      "source": "Aula 4, pp. 3–4"
+    },
+    {
+      "id": "CFD068",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "O cliente diz «não quero continuar sedentário». Qual intervenção melhor desenvolve Goal conforme a Aula 4?",
+      "options": [
+        "Registar a frase negativa sem clarificar resultado ou prazo",
+        "Explorar o que quer passar a fazer, formular pela positiva e verificar os cinco critérios SMART",
+        "Escolher o objetivo do PT e pedir concordância",
+        "Começar a linha do tempo sem saber o destino"
+      ],
+      "answer": 1,
+      "explanation": "Goal precisa de direção desejada, formulação positiva e SMART; as ferramentas seguintes não substituem essa clareza.",
+      "source": "Aula 4, pp. 5–6"
+    },
+    {
+      "id": "CFD069",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "O PT pede o futuro desejado quando pretende avaliar Reality. Qual pergunta corrige a fase e aprofunda a situação?",
+      "options": [
+        "«Que outras opções ainda não consideraste?»",
+        "«Que ação vais executar amanhã e com quem?»",
+        "«Onde estás agora, quão satisfeito estás e o que corre bem ou mal?»",
+        "«Que resultado final queres e quando?»"
+      ],
+      "answer": 2,
+      "explanation": "A primeira explora realidade atual; as restantes remetem a Goal, Options e Will.",
+      "source": "Aula 4, pp. 7–8"
+    },
+    {
+      "id": "CFD070",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "O aluno apresenta uma solução e o PT encerra Options. Qual intervenção mais completa amplia esta fase?",
+      "options": [
+        "Perguntar por outras possibilidades e usar perspetivas alternativas antes de selecionar a ação",
+        "Avaliar apenas satisfação atual de 0 a 10",
+        "Definir novamente a meta sem explorar caminhos",
+        "Passar logo para um cronograma da única opção"
+      ],
+      "answer": 0,
+      "explanation": "Options abre alternativas; cronograma e compromisso cabem depois, enquanto satisfação e meta pertencem a outras fases.",
+      "source": "Aula 4, pp. 9–11"
+    },
+    {
+      "id": "CFD071",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "O aluno diz «vou tentar treinar mais». Qual fecho melhor desenvolve Will?",
+      "options": [
+        "Clarificar exatamente o que fará, quando/onde/com quem e como se lembrará e comunicará que conseguiu",
+        "Impor um horário sem acordo para tornar a ação precisa",
+        "Aceitar a intenção vaga porque querer equivale a executar",
+        "Voltar só a enumerar opções sem escolher uma ação"
+      ],
+      "answer": 0,
+      "explanation": "Will precisa de compromisso concreto e acompanhamento; precisão sem autonomia ou intenção vaga ficam incompletas.",
+      "source": "Aula 4, p. 11"
+    },
+    {
+      "id": "CFD072",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "«Vou treinar duas vezes por semana até ao fim do mês» tem ação, frequência e prazo. O que falta verificar para declarar SMART completo?",
+      "options": [
+        "Apenas uma medida, porque frequência nunca é mensurável",
+        "Nada: número e data bastam sempre para SMART",
+        "Se é atingível na realidade do aluno e relevante para ele, além de confirmar clareza e medida",
+        "Apenas um prazo, que ainda não aparece"
+      ],
+      "answer": 2,
+      "explanation": "Frequência e prazo não comprovam possibilidade nem relevância; os cinco critérios têm de ser verificados.",
+      "source": "Aula 4, p. 6"
+    },
+    {
+      "id": "CFD073",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "A Roda da Vida mostra baixa satisfação numa área. Qual utilização respeita a ferramenta e Reality?",
+      "options": [
+        "Diagnosticar incapacidade pela nota e impor uma meta",
+        "Tratar a nota como medida objetiva de condição física",
+        "Passar diretamente a um plano sem ouvir a prioridade do aluno",
+        "Explorar o significado da classificação e a situação atual, sem assumir que a nota determina sozinha a ação"
+      ],
+      "answer": 3,
+      "explanation": "A roda representa satisfação atual de 0 a 10; não é diagnóstico nem prescrição automática.",
+      "source": "Aula 4, pp. 7–8"
+    },
+    {
+      "id": "CFD074",
+      "topic": "11. GROW, SMART e Ferramentas de Exploração",
+      "type": "multiple_choice",
+      "question": "No exercício dos nove círculos, o aluno insiste num quadrado que não foi imposto. Qual transferência mais adequada para Options?",
+      "options": [
+        "Repetir dentro do quadrado até mudar o objetivo",
+        "Usar o exercício apenas para medir satisfação",
+        "Concluir que todos os limites reais podem ser ignorados",
+        "Identificar o limite assumido e explorar soluções além dele, usando também outras perspetivas"
+      ],
+      "answer": 3,
+      "explanation": "O limite do exercício é presumido; a lição é rever pressupostos, não negar limitações efetivas da situação.",
+      "source": "Aula 4, pp. 9–11"
+    },
+    {
+      "id": "CFD075",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "O cliente compara cenários usando SWOT. Qual uso mais completo corresponde à Aula 4?",
+      "options": [
+        "Converter SWOT nos critérios de precisão, medida e prazo",
+        "Tratar oportunidades como metas e ameaças como emoções",
+        "Analisar fortes/fracos/oportunidades/ameaças, considerar melhor e pior cenário e desenvolver plano B",
+        "Escolher pelo maior número de pontos fortes e ignorar riscos"
+      ],
+      "answer": 2,
+      "explanation": "A análise estratégica apoia decisão e contingência; não se reduz a contagem nem substitui SMART.",
+      "source": "Aula 4, p. 13"
+    },
+    {
+      "id": "CFD076",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "Depois da SWOT, o cliente escolhe a solução com melhores vantagens, mas hesita sobre adequação pessoal. Qual fecho completa a análise?",
+      "options": [
+        "Verificar se a solução está adequada a ele e se quer acrescentar algo, além da conclusão da comparação",
+        "Considerar a hesitação irrelevante porque o quadro já decidiu",
+        "Repetir só pontos fortes sem abordar congruência",
+        "Escolher outra opção pelo gosto do coach"
+      ],
+      "answer": 0,
+      "explanation": "A pergunta de congruência é explícita e distinta da pergunta de conclusão; a adequação não resulta só do balanço.",
+      "source": "Aula 4, p. 13"
+    },
+    {
+      "id": "CFD077",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "O PT faz um cronograma a partir de hoje e chama-o Road Map dos slides. Que elemento distintivo deve acrescentar?",
+      "options": [
+        "Manter apenas uma lista de datas futuras escolhidas pelo PT",
+        "Classificar satisfação nas áreas de 0 a 10",
+        "Começar por avaliar cores antes de definir a meta",
+        "Posicionar o cliente no futuro realizado e recuar perguntando os passos anteriores, anotando a rota"
+      ],
+      "answer": 3,
+      "explanation": "O método apresentado parte do objetivo, constrói linha e recua do futuro para o início; um cronograma genérico não descreve toda a sequência.",
+      "source": "Aula 4, p. 14"
+    },
+    {
+      "id": "CFD078",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "No Road Map, o cliente imagina o objetivo concluído e dá um passo atrás. Qual pergunta produz o tipo de informação pretendido?",
+      "options": [
+        "«Qual o objetivo que queres atingir, antes de construirmos a linha do tempo?»",
+        "«Que opções alternativas poderias considerar, sem ordenar ainda os passos?»",
+        "«O que aconteceu um passo antes de isto ser realidade e o que fizeste?»",
+        "«O que poderias fazer a partir de hoje, sem regressar à data futura?»"
+      ],
+      "answer": 2,
+      "explanation": "O recuo a partir do futuro realizado exige perguntar o passo anterior e as ações que o produziram. Clarificar Goal, abrir Options ou avançar desde hoje são úteis noutros momentos, mas não concretizam esta etapa retrospetiva.",
+      "source": "Aula 4, p. 14"
+    },
+    {
+      "id": "CFD079",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "O PT quer usar num grupo uma história identificável que o cliente contou em privado para o motivar. Qual resposta melhor integra ética?",
+      "options": [
+        "Respeitar confidencialidade/privacidade e liberdade, sem usar a finalidade motivadora para justificar divulgação unilateral",
+        "Divulgar se a história for verdadeira, porque exatidão basta",
+        "Divulgar porque encorajar a mudança é um princípio",
+        "Divulgar com elogio porque não há intenção discriminatória"
+      ],
+      "answer": 0,
+      "explanation": "Os princípios coexistem; motivação, verdade e ausência de discriminação não substituem confidencialidade ou liberdade.",
+      "source": "Aula 4, pp. 15–17"
+    },
+    {
+      "id": "CFD080",
+      "topic": "12. SWOT, Road Map e Ética",
+      "type": "multiple_choice",
+      "question": "O PT adapta linguagem ao LASEr e promete um resultado certo para obter adesão. Qual avaliação é mais completa?",
+      "options": [
+        "A clareza de uma promessa torna-a automaticamente verdadeira",
+        "A adaptação pode apoiar empatia, mas a promessa precisa de verdade/exatidão e clareza, preservando respeito e liberdade",
+        "Conhecer a cor permite decidir pelo cliente sem explicar",
+        "A influência comportamental justifica prometer qualquer resultado"
+      ],
+      "answer": 1,
+      "explanation": "A ferramenta não suspende os princípios éticos; clareza sem verdade e influência sem liberdade ficam incompletas.",
+      "source": "Aula 4, pp. 15–17"
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "CFD001",
+      "CFD003",
+      "CFD005",
+      "CFD007",
+      "CFD009",
+      "CFD011",
+      "CFD013",
+      "CFD015",
+      "CFD017",
+      "CFD019",
+      "CFD021",
+      "CFD023",
+      "CFD025",
+      "CFD027",
+      "CFD029",
+      "CFD031",
+      "CFD033",
+      "CFD035",
+      "CFD037",
+      "CFD039",
+      "CFD041",
+      "CFD043",
+      "CFD045",
+      "CFD047",
+      "CFD049",
+      "CFD051",
+      "CFD053",
+      "CFD055",
+      "CFD057",
+      "CFD059",
+      "CFD061",
+      "CFD063",
+      "CFD065",
+      "CFD067",
+      "CFD069",
+      "CFD071",
+      "CFD073",
+      "CFD075",
+      "CFD077",
+      "CFD079"
+    ],
+    "exam2": [
+      "CFD002",
+      "CFD004",
+      "CFD006",
+      "CFD008",
+      "CFD010",
+      "CFD012",
+      "CFD014",
+      "CFD016",
+      "CFD018",
+      "CFD020",
+      "CFD022",
+      "CFD024",
+      "CFD026",
+      "CFD028",
+      "CFD030",
+      "CFD032",
+      "CFD034",
+      "CFD036",
+      "CFD038",
+      "CFD040",
+      "CFD042",
+      "CFD044",
+      "CFD046",
+      "CFD048",
+      "CFD050",
+      "CFD052",
+      "CFD054",
+      "CFD056",
+      "CFD058",
+      "CFD060",
+      "CFD062",
+      "CFD064",
+      "CFD066",
+      "CFD068",
+      "CFD070",
+      "CFD072",
+      "CFD074",
+      "CFD076",
+      "CFD078",
+      "CFD080"
+    ]
+  },
+  "coverage_audit": {
+    "source": "Lista de Saberes CF e Aulas 1–4 fornecidas pelo utilizador",
+    "status": "reviewed",
+    "review_date": "2026-10-07",
+    "total_saberes": 20,
+    "covered_saberes": 20,
+    "coverage_percent": 100,
+    "scope": "20 itens finais da Lista original (17 entradas principais, uma com quatro subitens); cobertura temática explícita, não avaliação de cada frase dos slides nem previsão do exame. Casos adicionais são aplicações de estudo.",
+    "report": "docs/CF_COVERAGE.md",
+    "legacy_declared_saberes": 22,
+    "map": {
+      "Definição Coaching": [
+        "CFD001",
+        "CFD002",
+        "CFD003",
+        "CFD004",
+        "CFD005",
+        "CFD006",
+        "CFD007",
+        "CFD008"
+      ],
+      "Papéis do Coach": [
+        "CFD009",
+        "CFD010",
+        "CFD011",
+        "CFD012",
+        "CFD013",
+        "CFD014"
+      ],
+      "Pressupostos do Coaching": [
+        "CFD015",
+        "CFD016",
+        "CFD017",
+        "CFD018",
+        "CFD019",
+        "CFD020",
+        "CFD021"
+      ],
+      "Crenças": [
+        "CFD022",
+        "CFD023",
+        "CFD024",
+        "CFD025",
+        "CFD026",
+        "CFD027"
+      ],
+      "Inteligência emocional": [
+        "CFD028",
+        "CFD029",
+        "CFD030",
+        "CFD031",
+        "CFD032",
+        "CFD033",
+        "CFD034"
+      ],
+      "6 necessidades humanas Tony Robbins": [
+        "CFD035",
+        "CFD036",
+        "CFD037",
+        "CFD038",
+        "CFD039",
+        "CFD040"
+      ],
+      "Definição de Rapport": [
+        "CFD041"
+      ],
+      "Reconhecer a importância do Rapport na comunicação e o que acontece na sua ausência": [
+        "CFD042",
+        "CFD043"
+      ],
+      "Escuta ativa": [
+        "CFD044",
+        "CFD045",
+        "CFD046",
+        "CFD047"
+      ],
+      "Comunicação verbal (Definição e Backtraking)": [
+        "CFD048",
+        "CFD050",
+        "CFD051"
+      ],
+      "Comunicação não verbal (Definição, linguagem corporal, Mirroring e Matching e psicogeografia)": [
+        "CFD049",
+        "CFD052",
+        "CFD053",
+        "CFD054"
+      ],
+      "Modelo LASEr": [
+        "CFD055",
+        "CFD056",
+        "CFD057",
+        "CFD058",
+        "CFD059",
+        "CFD060",
+        "CFD061",
+        "CFD062"
+      ],
+      "Feedback (modelo sandwich e BEAR)": [
+        "CFD063",
+        "CFD064",
+        "CFD065",
+        "CFD066",
+        "CFD067"
+      ],
+      "Modelo GROW": [
+        "CFD068",
+        "CFD069",
+        "CFD070",
+        "CFD071"
+      ],
+      "modelo SMART (G)": [
+        "CFD072"
+      ],
+      "Roda da Vida (R)": [
+        "CFD073"
+      ],
+      "Mudança de paradigma (O)": [
+        "CFD074"
+      ],
+      "SWOT": [
+        "CFD075",
+        "CFD076"
+      ],
+      "Road Map": [
+        "CFD077",
+        "CFD078"
+      ],
+      "Princípios Éticos e Deontológicos": [
+        "CFD079",
+        "CFD080"
+      ]
+    }
+  },
+  "difficulty": "hard"
+}

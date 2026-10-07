@@ -1,0 +1,1551 @@
+{
+  "uc": "Pedagogia do Exercício — Aplicar Técnicas Pedagógicas na Dinamização das Atividades de Exercício Físico",
+  "questions": [
+    {
+      "id": "PEDEXD001",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "Um aluno melhora a execução, mas continua dependente de ordens e não participa nas decisões. Qual avaliação é MAIS completa à luz da pedagogia dos slides?",
+      "options": [
+        "A participação deve substituir a aprendizagem da técnica.",
+        "A melhoria motora importa, mas também envolvimento, autonomia, atitudes e valores.",
+        "A melhoria motora basta para realizar todos os objetivos pedagógicos.",
+        "A autonomia dispensa planeamento e supervisão após qualquer melhoria."
+      ],
+      "answer": 1,
+      "explanation": "A pedagogia ultrapassa executar movimentos: autonomia e valores completam a intervenção, sem dispensar técnica e organização.",
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9"
+    },
+    {
+      "id": "PEDEXD002",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "O técnico domina a técnica e preparou o plano, mas os alunos continuam confusos. Qual decisão cumpre MAIS completamente o seu papel?",
+      "options": [
+        "Ouvir dúvidas sem modificar a intervenção apesar da incompreensão.",
+        "Manter o plano porque domínio técnico garante aprendizagem.",
+        "Verificar compreensão e adaptar orientação, tarefas e condições aos alunos.",
+        "Deixar os alunos decidir tudo, retirando supervisão."
+      ],
+      "answer": 2,
+      "explanation": "Competência e organização devem criar condições efetivas de aprendizagem; ouvir sem adaptar não resolve incompreensão confirmada.",
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9"
+    },
+    {
+      "id": "PEDEXD003",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "Uma instrução escrita é clara, mas apresentada apressadamente e com postura desinteressada. Qual análise distingue as vias?",
+      "options": [
+        "O tempo transforma palavras em comunicação olfativa.",
+        "Por estar escrita, toda a informação é exclusivamente verbal.",
+        "A postura transforma o texto em comunicação cinésica.",
+        "Conteúdo escrito é verbal; tempo e postura acrescentam dimensões não verbais."
+      ],
+      "answer": 3,
+      "explanation": "A escrita é verbal; aspetos temporais e corporais coexistem sem alterar a natureza linguística do conteúdo.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD004",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "Comparam-se formação do treinador, objetivos do plano e recursos do ginásio. Qual associação respeita o modelo?",
+      "options": [
+        "Treinador: preságio; objetivos: produto; recursos: processo.",
+        "Todos são processo porque influenciam o treino.",
+        "Treinador: produto; objetivos: contexto; recursos: preságio.",
+        "Treinador: preságio; objetivos/conteúdos: programa; recursos/nível dos alunos: contexto."
+      ],
+      "answer": 3,
+      "explanation": "O diagrama distingue preságio, programa e contexto; influência sobre o processo não os torna equivalentes.",
+      "source": "Aula 2, pp. 8–9"
+    },
+    {
+      "id": "PEDEXD005",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "Registam-se interações durante a aula e desempenho final. Qual afirmação é MAIS precisa?",
+      "options": [
+        "Interações integram programa e resultados integram contexto.",
+        "Ambos integram produto porque são observáveis.",
+        "Ambos integram preságio porque influenciam sessões posteriores.",
+        "Interações integram processo; aprendizagens e performances resultantes integram produto."
+      ],
+      "answer": 3,
+      "explanation": "Processo é a relação durante treino; produto são resultados. Observabilidade não determina a categoria.",
+      "source": "Aula 2, pp. 8–9"
+    },
+    {
+      "id": "PEDEXD006",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "Dois programas produzem resultados diferentes. Qual interpretação evita confundir componentes do modelo?",
+      "options": [
+        "Usar resultados para concluir que os contextos eram idênticos.",
+        "Atribuir diferenças apenas aos valores do treinador.",
+        "Tratar objetivos escritos como prova de aprendizagem efetiva.",
+        "Comparar produto considerando preságio, programa, contexto e interações."
+      ],
+      "answer": 3,
+      "explanation": "O produto relaciona-se com características iniciais, planeamento, contexto e processo; não explica sozinho as diferenças.",
+      "source": "Aula 2, pp. 8–9"
+    },
+    {
+      "id": "PEDEXD007",
+      "topic": "1. Pedagogia no Desporto",
+      "type": "multiple_choice",
+      "question": "O instrutor estabelece regras, mas um aluno discorda e a turma perde foco. Qual intervenção combina melhor as ações pedagógicas?",
+      "options": [
+        "Repetir a regra sem permitir esclarecimentos porque diálogo impede supervisão.",
+        "Ouvir a dúvida, clarificar a regra e gerir conflito mantendo objetivos.",
+        "Ouvir e eliminar todas as regras para evitar conflito.",
+        "Abandonar objetivos até existir concordância com tudo."
+      ],
+      "answer": 1,
+      "explanation": "Ouvir, dialogar, estabelecer regras e gerir conflitos podem combinar-se sem perder orientação.",
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9"
+    },
+    {
+      "id": "PEDEXD008",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "O técnico elogia, mas evita olhar e revela desinteresse corporal. Qual leitura é MAIS adequada?",
+      "options": [
+        "Os sinais corporais tornam-se conteúdo verbal ao acompanhar palavras.",
+        "Sinais corporais podem ser ignorados se o elogio for audível.",
+        "A incongruência verbal/não verbal pode comprometer credibilidade.",
+        "Um elogio garante sempre mensagem congruente."
+      ],
+      "answer": 2,
+      "explanation": "Os slides salientam congruência para credibilidade; elogiar não elimina sinais contraditórios.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD009",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O profissional justifica uma conduta dizendo «é habitual no ginásio». Qual análise distingue ética de habitualidade?",
+      "options": [
+        "Prática frequente torna-se automaticamente ética.",
+        "Habitualidade não substitui apreciação moral e princípios profissionais.",
+        "Só condutas que alteram técnica podem ser analisadas eticamente.",
+        "Boa aparência dispensa apreciação da conduta."
+      ],
+      "answer": 1,
+      "explanation": "Ética aprecia conduta; frequência de prática e aparência não dispensam os princípios do código.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD010",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "Uma proposta beneficia o instrutor, mas não corresponde às necessidades do cliente. Qual decisão é MAIS consistente com o código?",
+      "options": [
+        "Privilegiar conveniência comercial se o cliente não perguntar.",
+        "Reavaliar pelos interesses do cliente, com verdade, integridade e respeito.",
+        "Aceitar se a aparência profissional estiver assegurada.",
+        "Limitar informação para facilitar aceitação."
+      ],
+      "answer": 1,
+      "explanation": "Interesse do cliente, verdade e integridade orientam decisões; imagem não compensa inadequação.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD011",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O aluno comunica melhor com proximidade. Qual opção preserva MAIS completamente as orientações profissionais?",
+      "options": [
+        "Facilitar proximidade comunicativa mantendo fronteiras e responsabilidades.",
+        "Promover proximidade eliminando distinção entre papéis.",
+        "Manter fronteiras evitando toda a escuta.",
+        "Escutar apenas opiniões que coincidam com as do instrutor."
+      ],
+      "answer": 0,
+      "explanation": "Os slides articulam proximidade com distanciamento representativo das funções e responsabilidades.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD012",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O técnico reconhece uma condição que excede a preparação. Qual decisão é MAIS defensável pelo código?",
+      "options": [
+        "Reconhecer a limitação e assegurar competência adequada antes de assumir acompanhamento.",
+        "Cuidar da aparência e evitar discutir limitações.",
+        "Aceitar porque boa intenção substitui experiência.",
+        "Aceitar se houver consentimento, que cria competência."
+      ],
+      "answer": 0,
+      "explanation": "Intenção, consentimento e imagem não criam a educação/experiência necessárias exigidas pelo código.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD013",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O instrutor quer cumprir o plano, mas o aluno não compreendeu a tarefa. Qual prioridade é MAIS coerente com centralidade do aluno?",
+      "options": [
+        "Cumprir sem alterações porque o documento tem prioridade.",
+        "Alterar apenas para demonstrar habilidade pessoal.",
+        "Clarificar e adaptar intervenção mantendo objetivos e qualidade da experiência.",
+        "Abandonar todos os objetivos e limitar-se a agradar."
+      ],
+      "answer": 2,
+      "explanation": "Plano e competência devem apoiar o aluno; adaptação não significa ausência de orientação pedagógica.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD014",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O técnico veste bem, mas usa perfume intenso, interrompe e trata todos automaticamente por «tu». Qual conclusão é MAIS completa?",
+      "options": [
+        "Aparência é uma parte; perfumes leves, escuta e tratamento apropriado também importam.",
+        "Tratamento informal prova sempre interesse genuíno.",
+        "A farda compensa problemas de comunicação.",
+        "Perfume intenso é a principal orientação de primeira impressão."
+      ],
+      "answer": 0,
+      "explanation": "Os materiais conjugam imagem e relação; farda não substitui higiene, escuta e adequação ao interlocutor.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD015",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "O instrutor promete atenção, mas não cumpre compromissos. Qual melhoria é MAIS coerente com boas práticas?",
+      "options": [
+        "Reduzir oportunidades de o aluno colocar dúvidas.",
+        "Melhorar só aparência mantendo incumprimentos.",
+        "Acrescentar surpresas sem cumprir acordos.",
+        "Alinhar promessas e conduta, dar atenção e resolver problemas."
+      ],
+      "answer": 3,
+      "explanation": "Compromisso, atenção e resolução de problemas devem coexistir; novidades não compensam incoerência.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD016",
+      "topic": "2. Ética e Postura Profissional",
+      "type": "multiple_choice",
+      "question": "Boa aparência e capacidade motora coexistem com desrespeito por colegas e alunos. Qual avaliação é MAIS adequada?",
+      "options": [
+        "Postura assegurada por aparência e execução.",
+        "Postura comprometida: conduta, respeito e integridade também integram a profissão.",
+        "Competência motora dispensa fronteiras profissionais.",
+        "Respeito só importa fora do treino."
+      ],
+      "answer": 1,
+      "explanation": "O código exige respeito e imagem por conduta/aparência; competência motora não elimina outras exigências.",
+      "source": "Aula 2, pp. 29–32"
+    },
+    {
+      "id": "PEDEXD017",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno reproduz a tarefa com ajuda, mas ainda não a retém. Qual conclusão distingue desempenho e aprendizagem?",
+      "options": [
+        "Dependência de ajuda prova incapacidade definitiva.",
+        "Uma tentativa correta confirma retenção prolongada.",
+        "Houve desempenho inicial; retenção da competência ainda precisa de ser demonstrada.",
+        "Uma boa demonstração garante aprendizagem de todos."
+      ],
+      "answer": 2,
+      "explanation": "Uma tentativa pode resultar de orientação sem provar retenção; não se confunde desempenho imediato com aprendizagem consolidada.",
+      "source": "Aula 2, p. 10"
+    },
+    {
+      "id": "PEDEXD018",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "Após prática intensa a execução piora, mas noutra sessão o aluno recupera e retém competência. Qual interpretação é MAIS adequada?",
+      "options": [
+        "Desempenho posterior não importa se existiu erro inicial.",
+        "A pior tentativa prova ausência de qualquer aprendizagem.",
+        "Recuperação dispensa avaliar competência retida.",
+        "Fadiga pode afetar performance; aprendizagem aprecia-se pela retenção, não só por tentativa fatigada."
+      ],
+      "answer": 3,
+      "explanation": "Fadiga é concomitante pouco favorável; aprendizagem exige retenção relativamente longa, não perfeição instantânea.",
+      "source": "Aula 2, p. 10"
+    },
+    {
+      "id": "PEDEXD019",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno está motivado, pratica tarefa adequada e recebe retorno após tentar. Qual classificação integra os momentos?",
+      "options": [
+        "Motivação: posterior; prática: prévia; feedback: concomitante.",
+        "Todos são prévios porque podem ser planeados.",
+        "Motivação: prévia; prática: concomitante; feedback sobre resultado: posterior.",
+        "Todos são apenas resultados da aprendizagem."
+      ],
+      "answer": 2,
+      "explanation": "Planear previamente não altera a classificação funcional dos fatores antes, durante e após a ação.",
+      "source": "Aula 2, pp. 11–15"
+    },
+    {
+      "id": "PEDEXD020",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "A tarefa é adequada fisicamente, mas o aluno está ansioso e não percebe a utilidade. Qual preparação é MAIS completa?",
+      "options": [
+        "Considerar só condições físicas porque ansiedade é posterior.",
+        "Substituir preparação por feedback final.",
+        "Considerar motivação, ansiedade, aluno/tarefa e fatores sociais/culturais relevantes.",
+        "Aumentar apenas repetições sem explorar condições prévias."
+      ],
+      "answer": 2,
+      "explanation": "A adequação física não esgota os fatores prévios dos slides: motivação, antecipação, emoção/ansiedade, tarefa e fatores socioculturais.",
+      "source": "Aula 2, pp. 11–15"
+    },
+    {
+      "id": "PEDEXD021",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "O aluno refere «volume baixo», «gesto de desinteresse» e «distância excessiva». Qual associação é correta?",
+      "options": [
+        "Cronémica, imagem física e tacésica.",
+        "Cinésica, proxémica e paralinguagem.",
+        "Proxémica, paralinguagem e cronémica.",
+        "Paralinguagem, cinésica e proxémica."
+      ],
+      "answer": 3,
+      "explanation": "Volume pertence à voz, gesto ao corpo e distância à organização espacial.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD022",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "A farda, um gesto e uma frase escrita comunicam. Qual distinção é correta?",
+      "options": [
+        "Imagem/aparência, cinésica e verbal escrita.",
+        "Cinésica, verbal e imagem.",
+        "A frase escrita é não verbal porque não é pronunciada.",
+        "Os três são apenas imagem/aparência."
+      ],
+      "answer": 0,
+      "explanation": "Apresentação externa distingue-se de movimento corporal; escrita continua a transmitir conteúdo verbal.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD023",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "O técnico ajusta distância e comunica através de toque. Qual análise distingue as vias?",
+      "options": [
+        "Ambos são tacésica porque aproximam pessoas.",
+        "Distância: proxémica; toque: tacésica.",
+        "Ambos são proxémica porque ocorrem no espaço.",
+        "Toque é apenas visual, sem componente tátil."
+      ],
+      "answer": 1,
+      "explanation": "Proxémica refere-se à distância/posição; tacésica ao contacto ou auto-toque, mesmo quando coexistem.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD024",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno explica o objetivo, executa e coopera com colegas. Qual leitura abrange os domínios?",
+      "options": [
+        "Cognitivo apenas para cooperação.",
+        "Motor/Fazer para tudo porque ocorre no treino.",
+        "Cognitivo/Saber, motor/Fazer e afetivo/Estar.",
+        "Afetivo para execução e motor para explicação."
+      ],
+      "answer": 2,
+      "explanation": "Explicar envolve conhecimento, executar envolve atividade motora e cooperar envolve atitudes/valores.",
+      "source": "Aula 2, pp. 16–18"
+    },
+    {
+      "id": "PEDEXD025",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "A primeira impressão é afetada por apresentação externa, odor e tom de voz. Qual combinação corresponde?",
+      "options": [
+        "Apenas verbal porque influencia interação.",
+        "Cinésica, tacésica e verbal escrita.",
+        "Imagem/aparência, olfativa e paralinguagem.",
+        "Imagem/aparência, proxémica e cronémica."
+      ],
+      "answer": 2,
+      "explanation": "Estas vias não verbais têm critérios distintos: apresentação, aroma e características vocais.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD026",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno passa de imprecisão a controlo e depois coordenação da técnica. Qual leitura integra fases e processo?",
+      "options": [
+        "Autónoma desde a primeira tentativa porque existe prática.",
+        "Cognitiva → associativa → autónoma, com evolução gradual e repetição orientada.",
+        "Cognitiva → autónoma → associativa, sem orientação.",
+        "Associativa → cognitiva → autónoma, apenas pelo tempo."
+      ],
+      "answer": 1,
+      "explanation": "Sequência e progressão seguem os slides; presença e tempo por si sós não garantem a passagem.",
+      "source": "Aula 2, pp. 20–22"
+    },
+    {
+      "id": "PEDEXD027",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "A ficha tem desenho e nome, mas não critérios, progressões ou erros. Qual avaliação é MAIS precisa?",
+      "options": [
+        "Completa porque desenho substitui critérios.",
+        "Completa se o técnico conhece o equipamento.",
+        "Incompleta apenas por faltar duração do macrociclo.",
+        "Representação parcial: falta análise pedagógica para orientar aprendizagem/correção."
+      ],
+      "answer": 3,
+      "explanation": "Representação gráfica é útil, mas deve articular aspetos fundamentais, progressões e erros comuns.",
+      "source": "Aula 2, pp. 23–28"
+    },
+    {
+      "id": "PEDEXD028",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno ganha precisão e reduz movimentos parasitas, sem coordenação consolidada. Qual classificação é MAIS defensável?",
+      "options": [
+        "Autónoma porque qualquer melhoria implica domínio completo.",
+        "Não há aprendizagem até existir perfeição.",
+        "Cognitiva porque ainda existe algum erro.",
+        "Associativa/concentração, sem concluir ainda autonomia."
+      ],
+      "answer": 3,
+      "explanation": "Maior controlo caracteriza a associativa; autónoma pressupõe execução coordenada e domínio consolidado.",
+      "source": "Aula 2, pp. 20–22"
+    },
+    {
+      "id": "PEDEXD029",
+      "topic": "3. Processo de Ensino–Aprendizagem",
+      "type": "multiple_choice",
+      "question": "A execução está coordenada e o instrutor dispensa para sempre orientação/repetição. Qual correção é MAIS adequada?",
+      "options": [
+        "A descrição aproxima-se da fase autónoma, mas não justifica uma regra universal de dispensar acompanhamento.",
+        "Autonomia surge obrigatoriamente numa sessão.",
+        "Autonomia significa apenas explicar sem executar.",
+        "Coordenação completa corresponde à fase cognitiva."
+      ],
+      "answer": 0,
+      "explanation": "A fase autónoma é alcançada gradualmente com repetição orientada; uma observação não fundamenta dispensa absoluta.",
+      "source": "Aula 2, pp. 20–22"
+    },
+    {
+      "id": "PEDEXD030",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "O técnico executa bem, mas não identifica critérios nem erros. Qual lacuna é MAIS relevante para ensinar?",
+      "options": [
+        "Falta domínio analítico para decompor, reconhecer desvios e selecionar correções.",
+        "Não há lacuna porque execução garante ensino.",
+        "Basta demonstrar sem explicar aspetos fundamentais.",
+        "Falta apenas aumentar a carga do treino pessoal."
+      ],
+      "answer": 0,
+      "explanation": "Dominar para ensinar exige descrição, análise de partes, critérios, desvios e correções além da execução pessoal.",
+      "source": "Aula 2, pp. 23–28"
+    },
+    {
+      "id": "PEDEXD031",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "O técnico corrige antes de permitir qualquer tentativa. Qual alteração respeita melhor metodologia e observação?",
+      "options": [
+        "Trocar instrução por avaliação final do programa.",
+        "Retirar execução para prevenir todos os erros.",
+        "Antecipar todas as correções sem observar o aluno.",
+        "Articular instrução/modelo, permitir execução e selecionar correções após tentativas."
+      ],
+      "answer": 3,
+      "explanation": "Execução precede correção; tentativas razoáveis e observação permitem identificar erros significativos.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD032",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "A turma está posicionada, mas há ruído e dispersão. Qual intervenção completa as condições prévias?",
+      "options": [
+        "Prolongar a explicação para competir com ruído.",
+        "Manter só posicionamento porque basta.",
+        "Passar logo a correções individuais.",
+        "Melhorar ambiente e captar atenção com voz e expressão corporal."
+      ],
+      "answer": 3,
+      "explanation": "Posicionamento, ambiente calmo e atenção são condições complementares antes da instrução.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD033",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "O aluno conhece o nome, mas não finalidade nem pontos essenciais. Qual explicação é MAIS adequada?",
+      "options": [
+        "Repetir apenas o nome com mais volume.",
+        "Acrescentar critérios sem observar confusão.",
+        "Clarificar utilidade e aspetos fundamentais de forma simples/breve, verificando reação.",
+        "Enumerar todos os detalhes sem selecionar."
+      ],
+      "answer": 2,
+      "explanation": "A explicação deve indicar finalidade, selecionar o essencial e verificar compreensão perante atenção limitada.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD034",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "Uma tarefa muito complexa não é compreendida à velocidade real. Qual leitura reconcilia os slides?",
+      "options": [
+        "Velocidade real é orientação geral; complexidade pode justificar adaptação, mantendo visibilidade e pontos essenciais.",
+        "Lentidão é obrigatória em todas as demonstrações.",
+        "Adaptar velocidade dispensa ângulos adequados.",
+        "Velocidade real é obrigatória sem exceções."
+      ],
+      "answer": 0,
+      "explanation": "Aula 2 dá orientação global/normal; Aula 3 admite exceção para elevada complexidade, sem eliminar outras variáveis.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD035",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "Após tentativas, há um erro comum à turma e desvios individuais. Qual intervenção é MAIS completa?",
+      "options": [
+        "Corrigir só o grupo e dispensar necessidades individuais.",
+        "Priorizar erro comum significativo e depois individualizar, evitando todos os detalhes simultâneos.",
+        "Corrigir todos os detalhes antes de nova repetição.",
+        "Aguardar indefinidamente porque errar faz parte da aprendizagem."
+      ],
+      "answer": 1,
+      "explanation": "Os slides articulam tentativas, prioridade, correção ao todo e individualização; tolerância não é ausência de orientação.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD036",
+      "topic": "4. Ensino da Técnica",
+      "type": "multiple_choice",
+      "question": "O aluno domina partes, mas falha com maior complexidade. Qual estratégia é MAIS adequada?",
+      "options": [
+        "Trabalhar partes sem voltar a considerar o todo.",
+        "Consolidar repetição, trabalhar partes relevantes e graduar complexidade/condições.",
+        "Evitar repetições para não influenciar aprendizagem.",
+        "Manter só a tarefa mais complexa."
+      ],
+      "answer": 1,
+      "explanation": "Melhoria técnica conjuga repetição, progressão, variação e componentes, sem reduzir tudo a um recurso.",
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25"
+    },
+    {
+      "id": "PEDEXD037",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "O plano é detalhado, mas não permite comparar partida e resultado desejado. O que falta MAIS diretamente?",
+      "options": [
+        "Objetivos claros em qualidade/quantidade para orientar decisões e avaliação.",
+        "Só mais exercícios.",
+        "Apenas demonstração mais rápida.",
+        "Apenas mais tempo de sessão."
+      ],
+      "answer": 0,
+      "explanation": "Planeamento exige objetivos definidos e comparação entre realidade inicial/final para controlar desvios.",
+      "source": "Aula 1, pp. 9–12"
+    },
+    {
+      "id": "PEDEXD038",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "O aluno tem atividades preferidas e necessidades essenciais. Qual aplicação é MAIS fiel ao 80/20 dos slides?",
+      "options": [
+        "Inverter automaticamente para 80% do que precisa por ser regra universal.",
+        "Conciliar 80% do que gosta e 20% do que precisa, considerando objetivos e necessidades.",
+        "Dividir obrigatoriamente descanso e treino em 80/20.",
+        "Usar só preferências e excluir necessidades."
+      ],
+      "answer": 1,
+      "explanation": "A formulação específica refere preferências/necessidades; não a substituir por Pareto genérico nem excluir o essencial.",
+      "source": "Aula 1, pp. 9–12"
+    },
+    {
+      "id": "PEDEXD039",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "Há dados sobre capacidades/preferências, mas o técnico fixa a meta sem entender motivação. Qual passo deve rever?",
+      "options": [
+        "Dispensar dados iniciais porque motivação importa.",
+        "Compreender o porquê antes de estruturar objetivo e caminho.",
+        "Substituir motivação pela duração do mesociclo.",
+        "Fixar meta padrão e perguntar motivo apenas depois."
+      ],
+      "answer": 1,
+      "explanation": "Dados, necessidades e motivação articulam-se; compreender o porquê não elimina a avaliação inicial.",
+      "source": "Aula 1, pp. 9–12"
+    },
+    {
+      "id": "PEDEXD040",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "O aluno diz «quero melhorar». Que recolha torna a intenção MAIS específica?",
+      "options": [
+        "O quê, zona alvo/onde, quantidade, prazo e porquê.",
+        "Fixar só prazo, mantendo resultado indefinido.",
+        "Perguntar só o exercício preferido.",
+        "Escolher só quantidade, omitindo prazo/motivo."
+      ],
+      "answer": 0,
+      "explanation": "A estrutura combina cinco elementos; acrescentar apenas um deixa dimensões do objetivo por definir.",
+      "source": "Aula 1, pp. 9–12"
+    },
+    {
+      "id": "PEDEXD041",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "Há objetivos escritos, mas decisões incoerentes e ausência de controlo dos desvios. Qual revisão é MAIS completa?",
+      "options": [
+        "Articular operações com objetivos/previsões, comparar evolução e manter controlo/correção.",
+        "Manter decisões incoerentes se existir calendário.",
+        "Acrescentar exercícios sem rever objetivos.",
+        "Avaliar só no fim e impedir retroação."
+      ],
+      "answer": 0,
+      "explanation": "Planeamento inclui sistematização, decisões coerentes e interligação permanente entre controlo e correção.",
+      "source": "Aula 1, pp. 14–15"
+    },
+    {
+      "id": "PEDEXD042",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "O técnico segue dados → objetivos → plano e para aí. Qual complemento torna o processo MAIS completo?",
+      "options": [
+        "Supervisionar, avaliar e reajustar quando necessário.",
+        "Recolher objetivos sem observar execução.",
+        "Manter plano invariável para demonstrar consistência.",
+        "Substituir supervisão por mais escrita do plano."
+      ],
+      "answer": 0,
+      "explanation": "A pirâmide continua em supervisão, avaliação e reajuste, permitindo responder aos resultados observados.",
+      "source": "Aula 1, pp. 14–15"
+    },
+    {
+      "id": "PEDEXD043",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "Há um plano de 6 meses, bloco de 6 semanas e unidade de 10 dias. Qual leitura respeita os limites dos slides?",
+      "options": [
+        "Macrociclo, microciclo e sessão, porque 10 dias nunca são microciclo.",
+        "Macrociclo, mesociclo e microciclo, incluindo a ressalva de 5–10 dias para o último.",
+        "Mesociclo, macrociclo e microciclo.",
+        "Só 6 semanas podem ser classificadas."
+      ],
+      "answer": 1,
+      "explanation": "Os valores são 6–12 meses, 2–6 semanas e cerca de uma semana, com 5–10 dias conforme o modelo.",
+      "source": "Aula 1, pp. 16–17"
+    },
+    {
+      "id": "PEDEXD044",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "O programa anual define objetivos, mas hoje é preciso decidir tarefas concretas. Que nível operacionaliza o dia?",
+      "options": [
+        "Sessão de treino, integrada nos ciclos.",
+        "Macrociclo sem plano específico diário.",
+        "Avaliação final antes de executar tarefas.",
+        "Mesociclo como nome do programa anual."
+      ],
+      "answer": 0,
+      "explanation": "Sessão traduz o que será feito num dia, sem substituir organização a longo/médio prazo.",
+      "source": "Aula 1, pp. 16–17"
+    },
+    {
+      "id": "PEDEXD045",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "Qual afirmação reproduz o enquadramento da supervisão nos materiais?",
+      "options": [
+        "Só grupos podem ter supervisão de longo prazo.",
+        "Longo/médio prazo individual por ficha programa; curto prazo em grupo nas próprias aulas.",
+        "Individual só se supervisiona no fim.",
+        "A ficha dispensa acompanhamento e avaliação."
+      ],
+      "answer": 1,
+      "explanation": "A distinção refere formato/prazo; não é dispensa de controlo nem torna avaliação exclusivamente final.",
+      "source": "Aula 1, p. 18"
+    },
+    {
+      "id": "PEDEXD046",
+      "topic": "5. Objetivos e Planeamento",
+      "type": "multiple_choice",
+      "question": "Avaliações periódicas mostram ausência de progresso. Qual resposta usa avaliação como pilar do controlo?",
+      "options": [
+        "Acrescentar avaliações mantendo obrigatoriamente todas as decisões.",
+        "Analisar adequação do plano e reajustar decisões pelos objetivos/dados.",
+        "Mudar objetivos apenas para tornar resultados positivos.",
+        "Esperar fim do macrociclo ignorando os dados atuais."
+      ],
+      "answer": 1,
+      "explanation": "Avaliação serve para verificar adequação e corrigir; medir sem usar dados não completa o processo.",
+      "source": "Aula 1, p. 19"
+    },
+    {
+      "id": "PEDEXD047",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "Materiais estão prontos, mas deslocações e explicações consomem a aula. Qual leitura da gestão é MAIS completa?",
+      "options": [
+        "Rever tempo, tarefas, conduta, materiais e espaço em conjunto.",
+        "Retirar toda a instrução para aumentar prática.",
+        "Resolver só conduta, ignorando deslocações e informação.",
+        "Considerar gestão completa porque materiais estão preparados."
+      ],
+      "answer": 0,
+      "explanation": "A gestão regula vários elementos; equipamento preparado não basta para otimizar sessão.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD048",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "A aula está silenciosa e organizada, mas pouco tempo sobra para atividade. Qual critério avalia melhor a organização?",
+      "options": [
+        "Ausência de perguntas, independentemente da prática.",
+        "Número de materiais arrumados, independentemente da participação.",
+        "Quantidade de regras mesmo ocupando toda a aula.",
+        "Tempo disponível para prática, considerando custos de organização."
+      ],
+      "answer": 3,
+      "explanation": "Organização visa otimizar prática; aparência de ordem não prova tempo útil e participação.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD049",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "O TEF prepara equipamento, mas não circulação, posições ou informação. Qual revisão é MAIS adequada?",
+      "options": [
+        "Integrar deslocações, disposição dos alunos e instrução na preparação.",
+        "Acrescentar equipamento sem rever omissões.",
+        "Aguardar fim da aula para decidir posições.",
+        "Suprimir informação técnica para evitar organização."
+      ],
+      "answer": 0,
+      "explanation": "Os slides identificam os quatro elementos; eliminar instrução não equivale a planear melhor.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD050",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "Há 24 minutos previstos. Organização diminui de 7 para 4, mantendo o resto igual. Qual conclusão é correta?",
+      "options": [
+        "Tempo disponível passa de 17 para 20 minutos, ganhando 3.",
+        "Permanece 24 porque a previsão não mudou.",
+        "Passa de 31 para 28 minutos.",
+        "O ganho é 4 por ser o novo tempo de organização."
+      ],
+      "answer": 0,
+      "explanation": "Tempo disponível é previsto menos organização: 24−7 e 24−4. Diferença: 3 minutos.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD051",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "O técnico quer reduzir fala sem perder informação necessária. Qual solução equilibra tempo e aprendizagem?",
+      "options": [
+        "Manter todos os detalhes mesmo irrelevantes.",
+        "Retirar todas as explicações porque menos fala é sempre melhor.",
+        "Selecionar mensagens essenciais e claras sem omitir instrução relevante.",
+        "Falar menos sem verificar compreensão."
+      ],
+      "answer": 2,
+      "explanation": "Reduzir excesso verbal deve coexistir com informação suficiente, clara e adaptada à atenção.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD052",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "Cada mudança de atividade exige ordens longas e perde tempo. Qual intervenção atua melhor nas causas?",
+      "options": [
+        "Eliminar aprendizagem para conservar ordens.",
+        "Aumentar ordens sem treinar rotinas.",
+        "Treinar transições e reduzir informação repetitiva desnecessária.",
+        "Alterar todas as regras a cada sessão."
+      ],
+      "answer": 2,
+      "explanation": "Rotinas reduzem mudanças; selecionar informação complementa organização e liberta prática.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD053",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "Todos veem o técnico, mas alguns não observam o ponto crítico. Qual ajuste é MAIS adequado?",
+      "options": [
+        "Escolher ângulos para tornar aspetos principais visíveis e observar o grupo.",
+        "Manter sempre o mesmo ângulo mesmo ocultando componentes.",
+        "Considerar visibilidade geral suficiente.",
+        "Aumentar só o volume para substituir o modelo."
+      ],
+      "answer": 0,
+      "explanation": "Ver o técnico não garante ver o elemento necessário; ângulos devem evidenciar aspetos fundamentais.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD054",
+      "topic": "6. Gestão da Sessão",
+      "type": "multiple_choice",
+      "question": "Montagem demora e os alunos desconhecem rotinas. Qual solução favorece melhor tempo útil e participação?",
+      "options": [
+        "Substituir tarefas por discursos sobre organização.",
+        "Fazer toda a montagem durante explicações, sem ensinar rotinas.",
+        "Ensinar manipulação, preparar organização e treinar rotinas.",
+        "Reduzir prática para manter improvisação."
+      ],
+      "answer": 2,
+      "explanation": "Preparação, manipulação aprendida e rotinas diminuem tempos mortos e apoiam dinamismo.",
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25"
+    },
+    {
+      "id": "PEDEXD055",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "Mensagem certa e compreensível chega depois de o aluno tentar sem orientação. Qual análise é MAIS completa?",
+      "options": [
+        "Mudar canal resolve sempre qualquer dificuldade.",
+        "Compreensão elimina a necessidade de oportunidade.",
+        "Conteúdo correto garante boa comunicação a qualquer momento.",
+        "Faltou oportunidade: conteúdo, compreensão e momento devem ser adequados."
+      ],
+      "answer": 3,
+      "explanation": "A definição inclui momento oportuno; conteúdo/linguagem corretos não compensam necessariamente atraso.",
+      "source": "Aula 3, pp. 6–11"
+    },
+    {
+      "id": "PEDEXD056",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "O técnico usa termos desconhecidos presencialmente numa piscina. Qual associação distingue elementos e causa?",
+      "options": [
+        "Técnico: emissor; aluno: recetor; conteúdo: mensagem; palavras: código; presencial: canal; piscina: contexto. Código desconhecido pode ser ruído; resposta do aluno é feedback.",
+        "Feedback é dificuldade de descodificação e ruído é resposta.",
+        "Piscina: código; palavras: canal; presencial: contexto.",
+        "Ruído só pode ser som, nunca código desconhecido."
+      ],
+      "answer": 0,
+      "explanation": "Código, canal e contexto têm funções distintas; ruído inclui signos desconhecidos do recetor. A associação completa distingue ainda emissor, recetor, mensagem e resposta de retorno.",
+      "source": "Aula 3, pp. 6–11"
+    },
+    {
+      "id": "PEDEXD057",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "A sala está silenciosa, mas o aluno não compreende o código. Qual conclusão é MAIS adequada?",
+      "options": [
+        "Pode existir ruído comunicacional sem barulho físico.",
+        "Ruído surge apenas após resposta do aluno.",
+        "Silêncio garante descodificação correta.",
+        "A dificuldade é só produto final da aprendizagem."
+      ],
+      "answer": 0,
+      "explanation": "Código desconhecido e voz baixa constam entre os exemplos de ruído; a categoria não é só acústica.",
+      "source": "Aula 3, pp. 6–11"
+    },
+    {
+      "id": "PEDEXD058",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "O aluno reformula a indicação e recebe comentário sobre a execução. Qual distinção é MAIS precisa?",
+      "options": [
+        "Reformulação é ruído e comentário é contexto.",
+        "Ambos são obrigatoriamente avaliativos positivos.",
+        "Só há feedback se o técnico perguntar.",
+        "Reformulação informa compreensão da mensagem; comentário motor é feedback pedagógico."
+      ],
+      "answer": 3,
+      "explanation": "Feedback comunicacional e pedagógico têm focos distintos e não se limitam a elogios ou perguntas.",
+      "source": "Aula 3, pp. 6–11"
+    },
+    {
+      "id": "PEDEXD059",
+      "topic": "7. Comunicação",
+      "type": "multiple_choice",
+      "question": "O técnico envolve alunos nas decisões, mas ignora dúvidas. Qual revisão completa melhor a comunicação?",
+      "options": [
+        "Retirar participação porque escuta exige decisão exclusiva do técnico.",
+        "Responder sempre com terminologia mais complexa.",
+        "Manter participação/proximidade apropriada, acrescentando escuta e linguagem ajustada.",
+        "Considerar escuta dispensável quando há proximidade."
+      ],
+      "answer": 2,
+      "explanation": "As orientações conjugam escuta, participação, linguagem e equilíbrio entre proximidade e responsabilidades.",
+      "source": "Aula 3, pp. 6–11"
+    },
+    {
+      "id": "PEDEXD060",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "Distância, posição dos objetos e duração de uma pausa são analisadas. Qual distinção é correta?",
+      "options": [
+        "Distância é verbal por acompanhar fala.",
+        "Distância/posições: proxémica; duração: cronémica.",
+        "Tudo é proxémica por ocorrer no espaço.",
+        "Pausa é olfativa e objetos são paralinguagem."
+      ],
+      "answer": 1,
+      "explanation": "Proxémica refere-se a espaço; cronémica a tempo, ainda que coexistam na interação.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD061",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "O instrutor muda postura e olhar sem alterar palavras. Qual interpretação é MAIS precisa?",
+      "options": [
+        "Mudou necessariamente o código das palavras.",
+        "Gestos tornam-se paralinguagem por acompanhar voz.",
+        "Mudou só duração temporal.",
+        "Mudaram sinais cinésicos; conteúdo verbal pode manter-se mas mensagem global mudar."
+      ],
+      "answer": 3,
+      "explanation": "Cinésica inclui corpo e olhar; pode alterar a perceção sem substituir conteúdo linguístico.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD062",
+      "topic": "8. Técnicas de Comunicação Não Verbal",
+      "type": "multiple_choice",
+      "question": "Uma pausa é analisada como silêncio intencional da voz e pela duração na sequência. Qual leitura reconhece ambos os critérios?",
+      "options": [
+        "As duas análises são incompatíveis e uma tem de estar errada.",
+        "É exclusivamente proxémica por ocorrer entre pessoas.",
+        "Paralinguagem quanto ao uso vocal do silêncio; cronémica quanto a tempo/sequência.",
+        "É olfativa porque não há palavras."
+      ],
+      "answer": 2,
+      "explanation": "Os slides incluem silêncio intencional na paralinguagem e duração/sequência na cronémica; o critério deve ser explícito.",
+      "source": "Aula 3, pp. 12–16"
+    },
+    {
+      "id": "PEDEXD063",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "Explica-se como executar, mas não objetivo nem critérios. Qual revisão completa melhor a instrução?",
+      "options": [
+        "Substituir informação por elogio.",
+        "Acrescentar finalidade e critérios/componentes críticas mantendo seleção e clareza.",
+        "Acrescentar máximo de detalhes irrelevantes.",
+        "Retirar forma de realização para evitar excesso."
+      ],
+      "answer": 1,
+      "explanation": "Instrução inclui tarefa, objetivo, forma e critérios; completá-la não exige sobrecarregar atenção.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD064",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "O aluno vê o modelo, mas não sabe quais componentes comparar. Qual melhoria é MAIS adequada?",
+      "options": [
+        "Destacar componentes relevantes e articular modelo com instrução/critérios.",
+        "Dar feedback final antes de qualquer tentativa.",
+        "Dispensar modelo por haver palavras.",
+        "Repetir sem seleção de aspetos."
+      ],
+      "answer": 0,
+      "explanation": "Modelo representativo facilita comparação quando articulado com componentes críticas e instrução.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD065",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "A instrução explica, mas dispersa atenção e não mantém interesse. Que funções ficaram por assegurar?",
+      "options": [
+        "Só afetividade sem relação com interesse.",
+        "Atenção e motivação apesar de existir informação.",
+        "Direção e forma porque toda a instrução é feedback.",
+        "Apenas informação, pois atenção não é função."
+      ],
+      "answer": 1,
+      "explanation": "Transmitir conteúdo não garante foco seletivo ou interesse; informação, atenção e motivação são distintas.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD066",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "Explica-se «o quê» e «como», mas não o objetivo. O que falta?",
+      "options": [
+        "O porquê, que esclarece finalidade e completa informação.",
+        "Resultado anual que dispensa a tarefa atual.",
+        "Canal olfativo que substitui objetivo.",
+        "Direção turma que garante motivação individual."
+      ],
+      "answer": 0,
+      "explanation": "Informação inclui tarefa, objetivo e forma; o porquê clarifica finalidade do que se realiza.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD067",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "A pista é curta, mas desligada da tarefa e da experiência do aluno. Qual melhoria é MAIS completa?",
+      "options": [
+        "Mantê-la curta mesmo sem significado.",
+        "Usar sempre a mesma analogia desconhecida.",
+        "Torná-la clara/pertinente e ligá-la a aprendizagens anteriores quando possível.",
+        "Substituir por discurso com mudanças de tema."
+      ],
+      "answer": 2,
+      "explanation": "Brevidade não basta: pertinência e compreensão importam; experiências anteriores podem favorecer transfer.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD068",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "Há boa explicação/modelo, mas a primeira tentativa ocorre muito depois. Qual ajuste é MAIS adequado?",
+      "options": [
+        "Retirar instrução porque modelo foi bom.",
+        "Dar feedback antes de observar execução.",
+        "Articular as técnicas e reduzir intervalo entre modelo e tentativa.",
+        "Aumentar intervalo para impedir comparação."
+      ],
+      "answer": 2,
+      "explanation": "Instrução/modelo complementam-se; timing dos slides recomenda evitar grandes intervalos antes da primeira tentativa.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD069",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "Depois da execução, o instrutor repete o modelo para rever a habilidade. Qual leitura é MAIS precisa?",
+      "options": [
+        "Demonstração posterior com revisão/reforço, complementando momentos anteriores/intermédios.",
+        "Revisão final dispensa sempre o modelo inicial.",
+        "Demonstração só pode ocorrer antes.",
+        "Repetição posterior torna o modelo comunicação escrita."
+      ],
+      "answer": 0,
+      "explanation": "Os três momentos têm funções diferentes; demonstração não está limitada à apresentação inicial.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD070",
+      "topic": "9. Instrução e Demonstração",
+      "type": "multiple_choice",
+      "question": "A demonstração falha apesar de um modelo tecnicamente bom. Qual análise é MAIS completa?",
+      "options": [
+        "Examinar observador/tarefa, timing, frequência e velocidade além do modelo.",
+        "Examinar só o modelo porque observadores não influenciam.",
+        "Concluir que instrução e modelo nunca se complementam.",
+        "Examinar só roupa e ignorar os outros fatores."
+      ],
+      "answer": 0,
+      "explanation": "O nível do modelo é uma variável, não condição suficiente; processamento, complexidade e apresentação também importam.",
+      "source": "Aula 3, pp. 18–25"
+    },
+    {
+      "id": "PEDEXD071",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "O TEF descreve execução e pergunta o que o aluno sentiu. Qual leitura é MAIS completa?",
+      "options": [
+        "Descrição/pergunta são necessariamente instrução inicial.",
+        "Feedback pode combinar objetivos descritivo e interrogativo.",
+        "Feedback é sempre só apreciação positiva.",
+        "Perguntar sobre prestação deixa de ser feedback."
+      ],
+      "answer": 1,
+      "explanation": "Retorno sobre prestação pode avaliar, prescrever, descrever e interrogar; segmentos distintos podem coexistir.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD072",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "O técnico vê um erro e reage sem decidir que informação seria útil. Qual melhoria respeita melhor o modelo?",
+      "options": [
+        "Dispensar decisão porque qualquer retorno tem igual efeito.",
+        "Dar sempre o mesmo retorno e observar depois.",
+        "Deixar de observar para evitar julgamento.",
+        "Observar e decidir se/como intervir antes de fornecer retorno ajustado."
+      ],
+      "answer": 3,
+      "explanation": "A sequência observa–decide–feedback seleciona intervenção útil sem abandonar acompanhamento.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD073",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "«Muito bem, João!» é dito só em voz alta ao aluno identificado. Qual classificação completa é MAIS adequada?",
+      "options": [
+        "Avaliativo; individual; auditivo; positivo.",
+        "Avaliativo; turma; visual; positivo.",
+        "Descritivo; individual; misto; negativo.",
+        "Prescritivo; individual; auditivo; positivo."
+      ],
+      "answer": 0,
+      "explanation": "Aprecia sem indicar como fazer, dirige-se a João, usa voz e encoraja: quatro dimensões distintas.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD074",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "Diz-se «o tronco inclinou-se», «mantém-no alinhado» e «o que sentiste?». Qual sequência de objetivos é correta?",
+      "options": [
+        "Avaliativo → descritivo → prescritivo.",
+        "Prescritivo → avaliativo → descritivo.",
+        "Interrogativo → prescritivo → avaliativo.",
+        "Descritivo → prescritivo → interrogativo."
+      ],
+      "answer": 3,
+      "explanation": "Relatar é descritivo; orientar próxima execução é prescritivo; questionar prestação é interrogativo.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD075",
+      "topic": "11. O Erro no Processo de Aprendizagem",
+      "type": "multiple_choice",
+      "question": "Surge um erro durante aprendizagem. Qual resposta evita humilhação e ausência de orientação?",
+      "options": [
+        "Concluir incapacidade pela primeira falha.",
+        "Interpretar como informação, selecionar correção útil e permitir tentativas com confiança.",
+        "Ignorar todos os desvios porque errar faz parte.",
+        "Corrigir todos os detalhes de uma vez."
+      ],
+      "answer": 1,
+      "explanation": "Tolerância apoia correções e novas tentativas, sem omitir orientação nem impor perfeição imediata.",
+      "source": "Aula 3, pp. 37–39"
+    },
+    {
+      "id": "PEDEXD076",
+      "topic": "11. O Erro no Processo de Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno considera um erro fracasso definitivo. Qual explicação é MAIS fiel aos slides?",
+      "options": [
+        "Aprendizagem envolve variações/erros que podem apoiar tentativas e correções.",
+        "Aprender significa nunca precisar de corrigir.",
+        "Basta repetir sem observar ou orientar.",
+        "Todo o erro prova impossibilidade de adquirir competência."
+      ],
+      "answer": 0,
+      "explanation": "Os slides propõem tolerância e confiança para aceitar correções e usar o erro na aprendizagem.",
+      "source": "Aula 3, pp. 37–39"
+    },
+    {
+      "id": "PEDEXD077",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "O técnico fala e demonstra a um pequeno grupo como fazer a próxima execução. Qual classificação é MAIS completa?",
+      "options": [
+        "Prescritivo; grupo; misto áudio-visual.",
+        "Descritivo; turma; só auditivo.",
+        "Avaliativo; individual; só visual.",
+        "Interrogativo; grupo; quinestésico."
+      ],
+      "answer": 0,
+      "explanation": "Orienta execução seguinte, dirige-se ao grupo e combina voz/modelo; não há pergunta ou toque indicado.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD078",
+      "topic": "10. Feedback Pedagógico",
+      "type": "multiple_choice",
+      "question": "Após feedback, o técnico sai antes de verificar a nova tentativa. Qual melhoria concretiza melhor o retorno?",
+      "options": [
+        "Considerar aprendizagem garantida porque houve feedback.",
+        "Continuar a observar, verificar resposta e fornecer novo retorno se necessário.",
+        "Terminar observação quando o aluno ouve.",
+        "Dar sempre mais informação sem observar efeitos."
+      ],
+      "answer": 1,
+      "explanation": "A Aula 3 recomenda observar execução seguinte e ajustar novo feedback; emitir informação não garante aprendizagem.",
+      "source": "Aula 3, pp. 27–36"
+    },
+    {
+      "id": "PEDEXD079",
+      "topic": "11. O Erro no Processo de Aprendizagem",
+      "type": "multiple_choice",
+      "question": "O aluno evita tentar por medo de ridicularização. Qual intervenção é MAIS coerente?",
+      "options": [
+        "Eliminar todas as correções para não haver avaliação.",
+        "Exigir técnica perfeita antes de autorizar prática.",
+        "Criar confiança/tolerância mantendo correções específicas e úteis.",
+        "Ridicularizar para aumentar motivação."
+      ],
+      "answer": 2,
+      "explanation": "Clima tolerante favorece experimentar e aceitar correções; confiança e orientação devem coexistir.",
+      "source": "Aula 3, pp. 37–39"
+    },
+    {
+      "id": "PEDEXD080",
+      "topic": "11. O Erro no Processo de Aprendizagem",
+      "type": "multiple_choice",
+      "question": "Há erro comum e pormenores menores, com sobrecarga de instruções. Qual decisão sintetiza melhor «repensar o erro»?",
+      "options": [
+        "Priorizar erro significativo, dar informação específica e observar tentativas sem sobrecarga.",
+        "Adicionar todas as correções porque mais informação é sempre melhor.",
+        "Parar aprendizagem porque erros são fracasso permanente.",
+        "Ignorar erro principal e corrigir detalhes menores."
+      ],
+      "answer": 0,
+      "explanation": "A intervenção combina prioridade, especificidade, atenção à quantidade de informação e acompanhamento após retorno.",
+      "source": "Aula 3, pp. 37–39"
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "PEDEXD001",
+      "PEDEXD004",
+      "PEDEXD006",
+      "PEDEXD009",
+      "PEDEXD011",
+      "PEDEXD013",
+      "PEDEXD015",
+      "PEDEXD017",
+      "PEDEXD019",
+      "PEDEXD024",
+      "PEDEXD027",
+      "PEDEXD029",
+      "PEDEXD031",
+      "PEDEXD033",
+      "PEDEXD035",
+      "PEDEXD037",
+      "PEDEXD039",
+      "PEDEXD041",
+      "PEDEXD043",
+      "PEDEXD045",
+      "PEDEXD047",
+      "PEDEXD049",
+      "PEDEXD051",
+      "PEDEXD053",
+      "PEDEXD003",
+      "PEDEXD021",
+      "PEDEXD023",
+      "PEDEXD055",
+      "PEDEXD057",
+      "PEDEXD059",
+      "PEDEXD061",
+      "PEDEXD063",
+      "PEDEXD065",
+      "PEDEXD067",
+      "PEDEXD069",
+      "PEDEXD071",
+      "PEDEXD073",
+      "PEDEXD075",
+      "PEDEXD077",
+      "PEDEXD079"
+    ],
+    "exam2": [
+      "PEDEXD002",
+      "PEDEXD005",
+      "PEDEXD007",
+      "PEDEXD010",
+      "PEDEXD012",
+      "PEDEXD014",
+      "PEDEXD016",
+      "PEDEXD018",
+      "PEDEXD020",
+      "PEDEXD026",
+      "PEDEXD028",
+      "PEDEXD030",
+      "PEDEXD032",
+      "PEDEXD034",
+      "PEDEXD036",
+      "PEDEXD038",
+      "PEDEXD040",
+      "PEDEXD042",
+      "PEDEXD044",
+      "PEDEXD046",
+      "PEDEXD048",
+      "PEDEXD050",
+      "PEDEXD052",
+      "PEDEXD054",
+      "PEDEXD008",
+      "PEDEXD022",
+      "PEDEXD025",
+      "PEDEXD056",
+      "PEDEXD058",
+      "PEDEXD060",
+      "PEDEXD062",
+      "PEDEXD064",
+      "PEDEXD066",
+      "PEDEXD068",
+      "PEDEXD070",
+      "PEDEXD072",
+      "PEDEXD074",
+      "PEDEXD076",
+      "PEDEXD078",
+      "PEDEXD080"
+    ]
+  },
+  "version": "2026-10-07-pedex-r2",
+  "difficulty": "hard",
+  "coverage_audit": {
+    "source": "Lista de Saberes PEDEx fornecida pelo utilizador; Aulas 1–4 de 13/03/2026",
+    "status": "reviewed",
+    "review_date": "2026-10-07",
+    "total_saberes": 71,
+    "covered_saberes": 71,
+    "coverage_percent": 100,
+    "scope": "71 subtópicos da Lista; cobertura temática explícita, não previsão das perguntas reais nem avaliação exaustiva de cada frase dos slides. Spotting é complemento fora dos bancos.",
+    "report": "docs/PEDEX_COVERAGE.md",
+    "map": {
+      "Pedagogia no Desporto": {
+        "Pedagogia no Desporto": [
+          "PEDEXD001"
+        ],
+        "Características inerentes à pedagogia no desporto": [
+          "PEDEXD007"
+        ],
+        "Modelo de análise da relação pedagógica em desporto (Antes, Durante, Depois)": [
+          "PEDEXD004",
+          "PEDEXD005",
+          "PEDEXD006"
+        ],
+        "Papel do profissional no processo pedagógico": [
+          "PEDEXD002"
+        ]
+      },
+      "Ética e Postura Profissional": {
+        "Ética – conceito e definição": [
+          "PEDEXD009"
+        ],
+        "Código de ética": [
+          "PEDEXD010"
+        ],
+        "Postura profissional do instrutor e do personal trainer": [
+          "PEDEXD016"
+        ],
+        "Situações éticas em contexto profissional": [
+          "PEDEXD012"
+        ],
+        "Boas práticas profissionais": [
+          "PEDEXD015"
+        ],
+        "Imagem, comunicação e primeira impressão": [
+          "PEDEXD014"
+        ],
+        "Centralidade do aluno na intervenção profissional": [
+          "PEDEXD013"
+        ]
+      },
+      "Processo de Ensino–Aprendizagem": {
+        "Processo de ensino–aprendizagem": [
+          "PEDEXD017"
+        ],
+        "Conceito de aprendizagem": [
+          "PEDEXD018"
+        ],
+        "Fatores influenciadores da aprendizagem": [
+          "PEDEXD019"
+        ],
+        "Fatores prévios da aprendizagem": [
+          "PEDEXD020"
+        ],
+        "Domínios da aprendizagem (Fazer, Saber, Estar)": [
+          "PEDEXD024"
+        ],
+        "Fases da aprendizagem motora": [
+          "PEDEXD026",
+          "PEDEXD028",
+          "PEDEXD029"
+        ]
+      },
+      "Ensino da Técnica": {
+        "Conhecimento e domínio das técnicas a ensinar": [
+          "PEDEXD030"
+        ],
+        "Metodologia do ensino da técnica": [
+          "PEDEXD031"
+        ],
+        "Ensino da técnica: antes da instrução": [
+          "PEDEXD032"
+        ],
+        "Ensino da técnica: durante a explicação": [
+          "PEDEXD033"
+        ],
+        "Ensino da técnica: durante a demonstração": [
+          "PEDEXD034"
+        ],
+        "Ensino da técnica: durante a correção": [
+          "PEDEXD035"
+        ],
+        "Estratégias para melhorar a execução técnica": [
+          "PEDEXD036"
+        ],
+        "Descrição e análise de exercícios": [
+          "PEDEXD027"
+        ]
+      },
+      "Objetivos e Planeamento": {
+        "Importância da definição de objetivos": [
+          "PEDEXD037"
+        ],
+        "Estruturação de objetivos (O quê, Quanto, Até quando, Porquê)": [
+          "PEDEXD040"
+        ],
+        "Regra 80/20 na definição de objetivos": [
+          "PEDEXD038"
+        ],
+        "Processo de definição de objetivos": [
+          "PEDEXD039"
+        ],
+        "Planeamento no fitness": [
+          "PEDEXD041"
+        ],
+        "Passos do planeamento": [
+          "PEDEXD042"
+        ],
+        "Fases do planeamento (longo, médio e curto prazo)": [
+          "PEDEXD043"
+        ],
+        "Supervisão no processo de planeamento": [
+          "PEDEXD045"
+        ],
+        "Avaliação, reavaliação e ajuste": [
+          "PEDEXD046"
+        ]
+      },
+      "Gestão da Sessão": {
+        "Gestão da sessão de treino/aula": [
+          "PEDEXD047"
+        ],
+        "Estratégias de organização da sessão": [
+          "PEDEXD049"
+        ],
+        "Posicionamento do professor/instrutor": [
+          "PEDEXD053"
+        ],
+        "Gestão do tempo e das transições": [
+          "PEDEXD052"
+        ],
+        "Tempo útil da sessão": [
+          "PEDEXD050"
+        ],
+        "Estratégias para maximizar o tempo útil e o envolvimento dos alunos": [
+          "PEDEXD051"
+        ]
+      },
+      "Comunicação": {
+        "Conceito de comunicação": [
+          "PEDEXD055"
+        ],
+        "Elementos do processo de comunicação": [
+          "PEDEXD003",
+          "PEDEXD056",
+          "PEDEXD057",
+          "PEDEXD058"
+        ],
+        "Ruído no processo comunicacional": [
+          "PEDEXD057"
+        ],
+        "Feedback como elemento da comunicação": [
+          "PEDEXD058"
+        ],
+        "Regras e orientações para uma boa comunicação": [
+          "PEDEXD059"
+        ],
+        "Comunicação verbal": [
+          "PEDEXD003"
+        ],
+        "Comunicação não verbal": [
+          "PEDEXD008"
+        ]
+      },
+      "Técnicas de Comunicação Não Verbal": {
+        "Proxémica": [
+          "PEDEXD060"
+        ],
+        "Cinésica (linguagem corporal)": [
+          "PEDEXD061"
+        ],
+        "Paralinguagem": [
+          "PEDEXD021"
+        ],
+        "Cronémica": [
+          "PEDEXD062"
+        ],
+        "Imagem e aparência física": [
+          "PEDEXD022"
+        ],
+        "Tacésica": [
+          "PEDEXD023"
+        ],
+        "Comunicação olfativa": [
+          "PEDEXD025"
+        ]
+      },
+      "Instrução e Demonstração": {
+        "Conceito de instrução": [
+          "PEDEXD063"
+        ],
+        "Conceito de demonstração": [
+          "PEDEXD064"
+        ],
+        "Relação entre instrução e demonstração": [
+          "PEDEXD068"
+        ],
+        "Funções da instrução": [
+          "PEDEXD065"
+        ],
+        "Pistas verbais": [
+          "PEDEXD067"
+        ],
+        "Variáveis da demonstração": [
+          "PEDEXD070"
+        ],
+        "Momentos de apresentação do modelo": [
+          "PEDEXD069"
+        ]
+      },
+      "Feedback Pedagógico": {
+        "Conceito de feedback pedagógico": [
+          "PEDEXD071"
+        ],
+        "Importância do feedback na aprendizagem motora": [
+          "PEDEXD078"
+        ],
+        "Modelo de aplicação do feedback": [
+          "PEDEXD072"
+        ],
+        "Dimensões do feedback pedagógico": [
+          "PEDEXD073",
+          "PEDEXD077"
+        ],
+        "Tipos de feedback": [
+          "PEDEXD073",
+          "PEDEXD074"
+        ],
+        "Classificação do feedback": [
+          "PEDEXD073",
+          "PEDEXD074",
+          "PEDEXD077"
+        ]
+      },
+      "O Erro no Processo de Aprendizagem": {
+        "Conceito de erro": [
+          "PEDEXD075"
+        ],
+        "O erro como parte do processo de aprendizagem": [
+          "PEDEXD076"
+        ],
+        "Clima de aprendizagem e tolerância ao erro": [
+          "PEDEXD079"
+        ],
+        "Repensar o erro na intervenção pedagógica": [
+          "PEDEXD080"
+        ]
+      }
+    }
+  }
+}

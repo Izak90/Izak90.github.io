@@ -1,8 +1,8 @@
 {
   "uc": "Promoção de Estilos de Vida Saudável",
-  "bank_name": "Banco Muito Difícil",
-  "version": "4.0-very-hard",
-  "difficulty": "very_hard",
+  "bank_name": "Banco Difícil",
+  "version": "5.0-source-reviewed",
+  "difficulty": "hard",
   "design_notes": {
     "principle": "single best answer",
     "description": "Algumas opções são parcialmente verdadeiras; a tarefa é selecionar a opção mais completa, rigorosa e adequada ao contexto.",
@@ -22,1129 +22,1129 @@
     {
       "id": "PEVSX001",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma publicação afirma que um suplemento «cura diabetes». O autor acredita genuinamente na afirmação, mas usa o logótipo de uma entidade científica sem autorização. Qual classificação é MAIS correta?",
       "options": [
-        "É desinformação, porque o uso indevido de um logótipo prova intenção de enganar também quanto ao conteúdo clínico.",
         "É teoria da conspiração, porque apropriação de identidade institucional implica necessariamente narrativa de complô.",
-        "É apenas fake news, porque qualquer conteúdo falso com aparência institucional pertence exclusivamente a essa categoria.",
-        "Existe misinformation quanto à alegação falsa, combinada com uma estratégia de impersonação que aumenta artificialmente a credibilidade."
+        "É desinformação, porque o uso indevido de um logótipo prova intenção de enganar também quanto ao conteúdo clínico.",
+        "Existe misinformation quanto à alegação falsa, combinada com uma estratégia de impersonação que aumenta artificialmente a credibilidade.",
+        "É apenas fake news, porque qualquer conteúdo falso com aparência institucional pertence exclusivamente a essa categoria."
       ],
-      "answer": 3,
+      "answer": 2,
       "explanation": "A falsidade partilhada sem intenção de enganar enquadra-se em misinformation; a impersonação é uma técnica distinta.",
-      "source": "Tema 1 — Conceitos e estratégias"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX002",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual opção distingue com maior precisão desinformação de misinformation?",
       "options": [
-        "A diferença central é o meio: desinformação ocorre nas redes sociais; misinformation ocorre fora delas.",
-        "Misinformation é sempre menos prejudicial, porque não existe intenção de enganar.",
         "Desinformação é necessariamente falsa; misinformation pode ser verdadeira desde que incompleta.",
-        "A diferença central é a intenção: na desinformação existe intenção deliberada de enganar; na misinformation a informação falsa é partilhada sem essa intenção."
+        "A diferença central é o meio: desinformação ocorre nas redes sociais; misinformation ocorre fora delas.",
+        "A diferença central é a intenção: na desinformação existe intenção deliberada de enganar; na misinformation a informação falsa é partilhada sem essa intenção.",
+        "Misinformation é sempre menos prejudicial, porque não existe intenção de enganar."
       ],
-      "answer": 3,
+      "answer": 2,
       "explanation": "A intenção é o critério central; impacto e meio de divulgação não definem, por si só, a distinção.",
-      "source": "Tema 1 — Desinformação vs misinformation"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX003",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma narrativa afirma que «um pequeno grupo secreto controla toda a informação sobre vacinas» e trata qualquer evidência contrária como prova adicional do encobrimento. Qual é a interpretação MAIS adequada?",
       "options": [
-        "É desinformação apenas se incluir números falsos; sem números não existe desinformação.",
-        "É apenas fake news, porque teorias da conspiração exigem sempre uma notícia fabricada com autor falso.",
         "É misinformation, desde que quem partilha a narrativa acredite nela, pelo que deixa de poder ser classificada como teoria da conspiração.",
-        "Apresenta características típicas de uma teoria da conspiração, incluindo explicação por complô e resistência a evidência contraditória."
+        "É desinformação apenas se incluir números falsos; sem números não existe desinformação.",
+        "Apresenta características típicas de uma teoria da conspiração, incluindo explicação por complô e resistência a evidência contraditória.",
+        "É apenas fake news, porque teorias da conspiração exigem sempre uma notícia fabricada com autor falso."
       ],
-      "answer": 3,
+      "answer": 2,
       "explanation": "A estrutura narrativa pode ser conspirativa independentemente da intenção individual de quem a partilha.",
-      "source": "Tema 1 — Teorias da conspiração"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX004",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
-      "question_style": "except",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual dos seguintes sinais, isoladamente, é o MENOS suficiente para concluir que um conteúdo é desinformação?",
       "options": [
-        "Fabricar deliberadamente dados para levar o público a uma conclusão falsa.",
-        "Atribuir conscientemente uma declaração falsa a um especialista real.",
         "Usar linguagem emocional e alarmista.",
-        "Criar deliberadamente um falso documento oficial para influenciar comportamento."
+        "Fabricar deliberadamente dados para levar o público a uma conclusão falsa.",
+        "Criar deliberadamente um falso documento oficial para influenciar comportamento.",
+        "Atribuir conscientemente uma declaração falsa a um especialista real."
       ],
-      "answer": 2,
+      "answer": 0,
       "explanation": "Linguagem emocional pode surgir também em conteúdo verdadeiro; os outros exemplos incluem intenção explícita de enganar.",
-      "source": "Tema 1 — Estratégias usadas em fake news"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX005",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um conteúdo é muito partilhado, inclui gráficos e cita um «estudo». Qual é a primeira abordagem MAIS robusta?",
       "options": [
         "Localizar a fonte primária, confirmar autoria/data/contexto e verificar se os dados sustentam efetivamente a conclusão apresentada.",
         "Verificar se o gráfico tem aspeto profissional e se a publicação possui muitos comentários positivos.",
-        "Assumir credibilidade provisória se o conteúdo citar pelo menos um estudo científico.",
-        "Confirmar se outros influenciadores repetem a mesma conclusão; convergência social aumenta a validade."
+        "Confirmar se outros influenciadores repetem a mesma conclusão; convergência social aumenta a validade.",
+        "Assumir credibilidade provisória se o conteúdo citar pelo menos um estudo científico."
       ],
       "answer": 0,
       "explanation": "A existência de gráficos ou referências não garante que a evidência tenha sido representada corretamente.",
-      "source": "Tema 1 — Fact-checking"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX006",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
-      "question_style": "statements",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Sobre uma infodemia, considere: I) pode incluir informação verdadeira; II) pode incluir informação falsa; III) o problema central é apenas a intenção maliciosa. Qual opção é MAIS correta?",
       "options": [
         "I, II e III são verdadeiras.",
         "I e II são verdadeiras; III é falsa.",
-        "Apenas II é verdadeira.",
-        "Apenas I é verdadeira."
+        "Apenas I é verdadeira.",
+        "Apenas II é verdadeira."
       ],
       "answer": 1,
       "explanation": "Infodemia refere-se a excesso de informação de qualidade variável; não exige intenção maliciosa.",
-      "source": "Tema 1 — Infodemia"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX007",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual correção tem maior probabilidade de melhorar literacia sem reforçar a mensagem falsa?",
       "options": [
-        "Ridicularizar quem acreditou, porque o constrangimento reduz futuras partilhas.",
-        "Apresentar o facto correto, explicar brevemente onde está o erro e indicar uma fonte verificável.",
         "Responder apenas «isso é falso», sem explicar porquê nem oferecer alternativa verificável.",
-        "Repetir a alegação falsa várias vezes antes de a refutar, para garantir que o público a memoriza."
+        "Ridicularizar quem acreditou, porque o constrangimento reduz futuras partilhas.",
+        "Repetir a alegação falsa várias vezes antes de a refutar, para garantir que o público a memoriza.",
+        "Apresentar o facto correto, explicar brevemente onde está o erro e indicar uma fonte verificável."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "A correção deve fornecer substituição factual e contexto verificável.",
-      "source": "Tema 1 — Prevenção e controlo"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX008",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um utilizador diz: «Vi dez testemunhos iguais, por isso deve ser verdade». Qual resposta identifica MELHOR o erro?",
       "options": [
+        "Se os relatos forem independentes entre si, deixam de estar sujeitos a enviesamentos.",
         "Testemunhos são inválidos apenas quando contradizem guidelines oficiais.",
         "Vários testemunhos podem aumentar a impressão de plausibilidade, mas continuam a não substituir evidência sistemática nem controlo de vieses.",
-        "Dez testemunhos equivalem a um estudo observacional e já permitem inferir causalidade.",
-        "Se os relatos forem independentes entre si, deixam de estar sujeitos a enviesamentos."
+        "Dez testemunhos equivalem a um estudo observacional e já permitem inferir causalidade."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Multiplicar relatos anedóticos não os transforma em evidência causal robusta.",
-      "source": "Tema 1 — Literacia da informação"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX009",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual situação exemplifica melhor «fabrication» e não apenas «misleading content»?",
+      "question": "Uma publicação explora divisões entre grupos e exige que o leitor «escolha um lado». Qual dos seis truques descreve mais diretamente esse mecanismo?",
       "options": [
-        "Inventar resultados laboratoriais que nunca existiram e apresentá-los como dados reais.",
-        "Apresentar uma associação verdadeira como se provasse causalidade.",
-        "Selecionar apenas os resultados favoráveis de um estudo verdadeiro e omitir os restantes.",
-        "Usar um título mais alarmista do que o conteúdo do artigo original."
+        "Trolling, porque qualquer divergência entre grupos implica mensagens provocatórias dirigidas a indivíduos.",
+        "Impersonação, porque acentuar posições opostas equivale necessariamente a assumir outra identidade.",
+        "Polarização, porque procura acentuar posições opostas entre grupos.",
+        "Desacreditação, porque dividir grupos exige necessariamente atacar a competência de um especialista."
       ],
-      "answer": 0,
-      "explanation": "Fabrication implica criar informação ou evidência inexistente; as restantes envolvem distorção de material real.",
-      "source": "Tema 1 — Estratégias de fake news"
+      "answer": 2,
+      "explanation": "A figura inclui polarização. Imitação de identidade, provocação e ataque à credibilidade podem coexistir, mas não são demonstrados no enunciado; a exploração de divisões é a característica descrita.",
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX010",
       "topic": "1. Desinformação em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual decisão de um TEF é MAIS adequada perante informação de saúde viral cuja validade não consegue confirmar?",
       "options": [
-        "Partilhá-la com uma nota de que «pode ser verdade», porque assim não assume responsabilidade.",
         "Esperar que o cliente decida, sem comentar a credibilidade, porque neutralidade significa não avaliar fontes.",
+        "Não a utilizar como base de aconselhamento; procurar fontes fiáveis e, se necessário, encaminhar questões clínicas para profissional competente.",
         "Aplicá-la apenas a clientes saudáveis, porque o risco de desinformação é menor.",
-        "Não a utilizar como base de aconselhamento; procurar fontes fiáveis e, se necessário, encaminhar questões clínicas para profissional competente."
+        "Partilhá-la com uma nota de que «pode ser verdade», porque assim não assume responsabilidade."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "O TEF deve usar informação credível e respeitar limites profissionais.",
-      "source": "Tema 1 — Aplicação profissional"
+      "source": "Tema 1, 2, 3, pp. 3–9"
     },
     {
       "id": "PEVSX011",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma revisão sistemática inclui estudos muito heterogéneos e de baixa qualidade. Um ensaio clínico randomizado isolado é metodologicamente excelente. Qual afirmação é MAIS correta?",
       "options": [
-        "O ensaio clínico isolado é sempre superior a qualquer revisão sistemática.",
-        "A posição na pirâmide orienta a força típica da evidência, mas a qualidade concreta dos estudos continua a importar; não basta o rótulo «revisão sistemática».",
         "A heterogeneidade elimina por definição qualquer utilidade de uma revisão sistemática.",
-        "A revisão sistemática é automaticamente superior em qualquer circunstância, independentemente da qualidade dos estudos incluídos."
+        "A posição na pirâmide orienta a força típica da evidência, mas a qualidade concreta dos estudos continua a importar; não basta o rótulo «revisão sistemática».",
+        "A revisão sistemática é automaticamente superior em qualquer circunstância, independentemente da qualidade dos estudos incluídos.",
+        "O ensaio clínico isolado é sempre superior a qualquer revisão sistemática."
       ],
       "answer": 1,
       "explanation": "A hierarquia é uma orientação; qualidade metodológica e consistência também contam.",
-      "source": "Tema 2 — Hierarquia da evidência"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX012",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre revisão por pares é MAIS rigorosa?",
       "options": [
-        "Substitui a necessidade de replicação por outros grupos.",
-        "É um mecanismo de controlo de qualidade editorial, mas não garante que o artigo esteja correto ou livre de vieses.",
+        "É usada apenas em revisões sistemáticas e meta-análises.",
         "É uma certificação de que as conclusões foram provadas definitivamente.",
-        "É usada apenas em revisões sistemáticas e meta-análises."
+        "Substitui a necessidade de replicação por outros grupos.",
+        "É um mecanismo de controlo de qualidade editorial, mas não garante que o artigo esteja correto ou livre de vieses."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Peer review melhora escrutínio, mas não torna a evidência infalível.",
-      "source": "Tema 2 — Revisão por pares"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX013",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Num estudo transversal observa-se que pessoas mais ativas têm menos sintomas depressivos. Qual conclusão é a MAIS defensável apenas com este desenho?",
       "options": [
         "A depressão causou necessariamente menor atividade física, porque causalidade reversa é sempre a explicação principal.",
-        "A atividade física causou a redução dos sintomas, porque as duas variáveis foram medidas na mesma população.",
         "Existe uma associação observada; o desenho não estabelece sozinho a direção causal nem exclui confundimento.",
+        "A atividade física causou a redução dos sintomas, porque as duas variáveis foram medidas na mesma população.",
         "Não existe qualquer relação útil, porque estudos transversais não conseguem detetar associações."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "O desenho transversal permite observar associação, não resolver causalidade.",
-      "source": "Tema 2 — Correlação e causalidade"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX014",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
-      "question_style": "statements",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Considere: I) causa deve preceder o efeito; II) maior exposição associada a maior efeito pode apoiar causalidade; III) uma associação forte prova causalidade mesmo sem temporalidade. Qual opção é MAIS correta?",
       "options": [
         "Apenas I é verdadeira.",
+        "Apenas III é verdadeira.",
         "I e II são verdadeiras; III é falsa.",
-        "I, II e III são verdadeiras.",
-        "Apenas III é verdadeira."
+        "I, II e III são verdadeiras."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Temporalidade é essencial; gradiente e força apoiam a inferência, mas não provam isoladamente.",
-      "source": "Tema 2 — Bradford Hill"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX015",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma doença passa a ter tratamentos que prolongam muito a sobrevivência, sem alteração relevante do número de novos casos anuais. O que pode acontecer à prevalência?",
       "options": [
         "Tem obrigatoriamente de diminuir, porque sobrevivência maior reduz o número de casos.",
         "Pode aumentar, mesmo com incidência semelhante, porque as pessoas vivem mais tempo com a doença.",
-        "Passa a medir apenas casos novos.",
-        "Fica necessariamente igual, porque prevalência depende apenas da incidência."
+        "Fica necessariamente igual, porque prevalência depende apenas da incidência.",
+        "Passa a medir apenas casos novos."
       ],
       "answer": 1,
       "explanation": "A duração da doença influencia prevalência.",
-      "source": "Tema 2 — Prevalência e incidência"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX016",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual exemplo corresponde MELHOR a incidência?",
       "options": [
-        "Número total de pessoas com diabetes numa população num determinado momento.",
         "Proporção de pessoas com hipertensão que também têm diabetes.",
-        "Número de novos casos de diabetes que surgem numa população sem a doença durante um período definido.",
-        "Número acumulado de consultas de diabetes num centro de saúde."
+        "Número acumulado de consultas de diabetes num centro de saúde.",
+        "Número total de pessoas com diabetes numa população num determinado momento.",
+        "Número de novos casos de diabetes que surgem numa população sem a doença durante um período definido."
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "Incidência refere-se ao aparecimento de casos novos.",
-      "source": "Tema 2 — Incidência"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX017",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Num estudo observacional, maior consumo de café associa-se a menor mortalidade. Qual argumento enfraquece MAIS uma interpretação causal imediata?",
       "options": [
-        "Os consumidores de café diferem também noutros comportamentos e características que podem atuar como confundidores.",
-        "A associação é estatisticamente significativa.",
         "O estudo foi publicado numa revista com revisão por pares.",
-        "A amostra é grande."
+        "A amostra é grande.",
+        "Os consumidores de café diferem também noutros comportamentos e características que podem atuar como confundidores.",
+        "A associação é estatisticamente significativa."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Confundimento é uma limitação central para inferência causal observacional.",
-      "source": "Tema 2 — Confundimento"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX018",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual opção descreve melhor um estudo caso-controlo?",
       "options": [
-        "Mede apenas prevalência num único grupo sem comparação.",
+        "Seleciona participantes com e sem um desfecho e compara retrospectivamente exposições anteriores.",
         "Seleciona participantes pela exposição e acompanha prospectivamente o aparecimento do desfecho.",
-        "Atribui aleatoriamente uma intervenção e compara resultados.",
-        "Seleciona participantes com e sem um desfecho e compara retrospectivamente exposições anteriores."
+        "Mede apenas prevalência num único grupo sem comparação.",
+        "Atribui aleatoriamente uma intervenção e compara resultados."
       ],
-      "answer": 3,
+      "answer": 0,
       "explanation": "O desenho parte do desfecho e procura exposição passada.",
-      "source": "Tema 2 — Tipos de estudo"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX019",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Se dois resultados estão correlacionados e a relação é biologicamente plausível, qual afirmação é MAIS correta?",
       "options": [
-        "Se a associação for plausível, não é necessário replicá-la.",
-        "A plausibilidade reforça a hipótese causal, mas ainda é necessário considerar temporalidade, consistência, confundimento e outras evidências.",
         "A plausibilidade transforma automaticamente correlação em causalidade.",
-        "A correlação deixa de ser relevante quando existe plausibilidade."
+        "A correlação deixa de ser relevante quando existe plausibilidade.",
+        "A plausibilidade reforça a hipótese causal, mas ainda é necessário considerar temporalidade, consistência, confundimento e outras evidências.",
+        "Se a associação for plausível, não é necessário replicá-la."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Bradford Hill é um quadro de conjunto, não um teste binário.",
-      "source": "Tema 2 — Inferência causal"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX020",
       "topic": "2. Evidência Científica em Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual sequência representa MELHOR uma leitura crítica da evidência?",
       "options": [
         "Prestígio da revista → aceitar conclusão → ignorar limitações.",
-        "Pergunta → desenho do estudo → qualidade/método → resultados → limitações → consistência com outras evidências → conclusão proporcional à força dos dados.",
         "Resultado → conclusão causal → procurar depois um estudo que a confirme.",
+        "Pergunta → desenho do estudo → qualidade/método → resultados → limitações → consistência com outras evidências → conclusão proporcional à força dos dados.",
         "Tamanho da amostra → assumir causalidade → dispensar desenho e contexto."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "A interpretação deve ser proporcional ao desenho, qualidade e conjunto da evidência.",
-      "source": "Tema 2 — Leitura crítica"
+      "source": "Tema 1, 2, 3, pp. 11–18"
     },
     {
       "id": "PEVSX021",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Portugal apresenta 73% de respostas «nunca» para exercício/desporto e 72% para «outra atividade física». Qual inferência é MAIS correta?",
       "options": [
-        "Os dois indicadores mostram baixa participação declarada, mas medem categorias diferentes e não devem ser fundidos num único valor de «inatividade».",
-        "72% e 73% permitem concluir que praticamente toda a população é sedentária.",
+        "O valor de «outra atividade física» substitui o de exercício/desporto por ser mais abrangente.",
         "Como diferem apenas 1 ponto percentual, medem exatamente o mesmo comportamento.",
-        "O valor de «outra atividade física» substitui o de exercício/desporto por ser mais abrangente."
+        "Os dois indicadores mostram baixa participação declarada, mas medem categorias diferentes e não devem ser fundidos num único valor de «inatividade».",
+        "72% e 73% permitem concluir que praticamente toda a população é sedentária."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "Os indicadores são relacionados, mas não equivalentes.",
-      "source": "Tema 3 — Eurobarómetro 2022"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX022",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Em exercício/desporto, a categoria «nunca» sobe 5 pp entre 2017 e 2022. Qual leitura é MAIS correta?",
       "options": [
+        "Houve aumento de 5% no número absoluto de portugueses inativos.",
         "Houve aumento da proporção que declarou nunca praticar; isto descreve mudança populacional, não explica a causa.",
-        "O aumento prova que o comportamento sedentário subiu exatamente 5 pp.",
         "A causa foi necessariamente falta de tempo, porque esse é um obstáculo frequente.",
-        "Houve aumento de 5% no número absoluto de portugueses inativos."
+        "O aumento prova que o comportamento sedentário subiu exatamente 5 pp."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Pontos percentuais descrevem diferença de proporções; não demonstram causa nem equivalência com sedentarismo.",
-      "source": "Tema 3 — Interpretação de tendências"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX023",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual par de alterações pertence a «outra atividade física» e NÃO a exercício/desporto?",
       "options": [
         "«Nunca» +8 pp e «raramente» −4 pp.",
-        "«Nunca» +5 pp e «com alguma regularidade» −3 pp.",
         "«Regularmente» −1 pp e «nunca» +5 pp.",
+        "«Nunca» +5 pp e «com alguma regularidade» −3 pp.",
         "«Nunca» +5 pp e «raramente» −1 pp."
       ],
       "answer": 0,
       "explanation": "A alteração +8/−4 é a combinação específica da outra AF.",
-      "source": "Tema 3 — 2017 vs 2022"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX024",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Se 4% praticam exercício/desporto regularmente e 18% com alguma regularidade, qual afirmação é MAIS rigorosa?",
       "options": [
-        "22% pertencem às duas categorias somadas, mas isso não permite concluir automaticamente que cumprem as recomendações de AF.",
-        "22% cumprem as recomendações, porque qualquer regularidade equivale a dose suficiente.",
         "18% são fisicamente ativos e os 4% regulares devem ser excluídos para evitar dupla contagem.",
-        "73% nunca praticam, logo os restantes 27% cumprem recomendações."
+        "22% cumprem as recomendações, porque qualquer regularidade equivale a dose suficiente.",
+        "73% nunca praticam, logo os restantes 27% cumprem recomendações.",
+        "22% pertencem às duas categorias somadas, mas isso não permite concluir automaticamente que cumprem as recomendações de AF."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Frequência declarada no Eurobarómetro não equivale diretamente a cumprir guidelines.",
-      "source": "Tema 3 — Interpretação dos dados"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX025",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual comparação Portugal–UE27 para «outra atividade física: nunca» está correta e qual conclusão NÃO deve ser acrescentada?",
       "options": [
-        "Portugal 31% vs UE27 72%; a diferença prova menor sedentarismo em Portugal.",
-        "Portugal 73% vs UE27 31%; estes valores referem-se a exercício/desporto.",
         "Portugal 72% vs UE27 31%; a causa é necessariamente falta de instalações.",
-        "Portugal 72% vs UE27 31%; não se pode concluir apenas daí que a diferença é causada por falta de instalações."
+        "Portugal 72% vs UE27 31%; não se pode concluir apenas daí que a diferença é causada por falta de instalações.",
+        "Portugal 73% vs UE27 31%; estes valores referem-se a exercício/desporto.",
+        "Portugal 31% vs UE27 72%; a diferença prova menor sedentarismo em Portugal."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "Os dados descrevem diferença; causalidade exige evidência adicional.",
-      "source": "Tema 3 — Portugal vs UE"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX026",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma pessoa diz: «A falta de tempo é o principal obstáculo, logo se dermos mais tempo livre a todos, a prática aumenta necessariamente». Qual resposta é MAIS correta?",
       "options": [
         "A conclusão só é incorreta porque motivação é sempre mais importante que tempo.",
-        "Dados de obstáculos nunca têm utilidade para intervenção.",
         "A conclusão está correta porque obstáculo e causa são sinónimos.",
+        "Dados de obstáculos nunca têm utilidade para intervenção.",
         "Identificar um obstáculo frequente não prova que removê-lo, isoladamente, cause aumento de prática em todos os indivíduos."
       ],
       "answer": 3,
       "explanation": "Barreiras autorreportadas são úteis, mas não garantem efeito causal individual.",
-      "source": "Tema 3 — Obstáculos"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX027",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual utilização dos incentivos à prática é MAIS adequada numa entrevista inicial?",
       "options": [
-        "Prescrever intensidade com base no incentivo referido.",
         "Excluir motivos estéticos porque não aparecem entre os mais frequentes.",
-        "Assumir que melhorar a saúde é o motivo principal de todos os portugueses.",
-        "Explorar quais dos motivos populacionais também são relevantes para aquele cliente, sem presumir que a média populacional descreve a pessoa."
+        "Explorar quais dos motivos populacionais também são relevantes para aquele cliente, sem presumir que a média populacional descreve a pessoa.",
+        "Prescrever intensidade com base no incentivo referido.",
+        "Assumir que melhorar a saúde é o motivo principal de todos os portugueses."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "Dados populacionais ajudam a formular perguntas, não substituem avaliação individual.",
-      "source": "Tema 3 — Incentivos"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX028",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
-      "question_style": "except",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual afirmação contém uma confusão conceptual?",
+      "question": "No gráfico português QB9, a categoria 2h31–5h30 sentado/dia tem 47% em 2022 e +8 p.p. face a 2017. Qual inferência é justificada?",
       "options": [
-        "«Portugal tem elevada percentagem de pessoas que nunca praticam exercício/desporto; logo, essa percentagem é igual à prevalência de comportamento sedentário.»",
-        "«A tendência 2017–2022 pode orientar políticas de promoção de AF.»",
-        "«Obstáculos autorreportados podem ajudar a compreender aderência.»",
-        "«Os dados sugerem baixa participação em exercício/desporto.»"
+        "Em 2017 essa categoria tinha 39%; os dados agregados não mostram quais pessoas mudaram de categoria nem a sua AF semanal.",
+        "Em 2017 tinha 55%; a descida prova que o exercício regular aumentou na população.",
+        "Em 2017 tinha 39%; o aumento prova que cada pessoa nessa categoria passou a sentar-se mais 8% do tempo.",
+        "Em 2017 tinha 43,2%, porque o aumento foi de 8% relativos; as mesmas pessoas reduziram AF semanal."
       ],
       "answer": 0,
-      "explanation": "Exercício/desporto e comportamento sedentário são dimensões distintas.",
-      "source": "Tema 3 — Erro conceptual"
+      "explanation": "Pontos percentuais subtraem-se diretamente: 47−8=39. Uma mudança de distribuição agregada não descreve trajetórias individuais, dose de AF ou aumento proporcional de horas.",
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX029",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma campanha decide focar apenas «melhorar a saúde» porque é um incentivo frequente. Qual melhoria é MAIS coerente com os dados?",
       "options": [
+        "Combinar mensagens de saúde com outros motivos relevantes, como relaxamento/preparação física, e atuar também sobre barreiras como falta de tempo e motivação.",
         "Eliminar todos os outros motivos para tornar a mensagem uniforme.",
         "Usar apenas informação sobre risco de doença porque medo é sempre o incentivo mais eficaz.",
-        "Evitar adaptar mensagens a grupos diferentes.",
-        "Combinar mensagens de saúde com outros motivos relevantes, como relaxamento/preparação física, e atuar também sobre barreiras como falta de tempo e motivação."
+        "Evitar adaptar mensagens a grupos diferentes."
       ],
-      "answer": 3,
+      "answer": 0,
       "explanation": "A adesão pode depender de múltiplos motivos e barreiras.",
-      "source": "Tema 3 — Aplicação"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX030",
       "topic": "3. Os Números da Atividade Física",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre percentagens e pontos percentuais é MAIS correta?",
       "options": [
         "Uma subida de 68% para 73% é sempre exatamente +5% relativo.",
+        "Uma subida de 68% para 73% corresponde a +5 pontos percentuais, não a +5% em termos relativos.",
         "Pontos percentuais e percentagem relativa são sinónimos.",
-        "A diferença só pode ser expressa como número absoluto de pessoas.",
-        "Uma subida de 68% para 73% corresponde a +5 pontos percentuais, não a +5% em termos relativos."
+        "A diferença só pode ser expressa como número absoluto de pessoas."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "É importante distinguir variação em pontos percentuais de variação relativa.",
-      "source": "Tema 3 — Leitura quantitativa"
+      "source": "Tema 1, 2, 3, pp. 19–25"
     },
     {
       "id": "PEVSX031",
       "topic": "4. Conceitos de Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual opção é a MAIS completa para distinguir Saúde Pública de Promoção da Saúde?",
       "options": [
         "Saúde Pública é o campo amplo de ação coletiva para prevenir doença, prolongar vida e promover saúde; Promoção da Saúde é um processo de capacitação para aumentar controlo sobre saúde e determinantes.",
         "Promoção da Saúde é mais ampla do que Saúde Pública e inclui toda a organização dos sistemas de saúde.",
-        "Saúde Pública atua apenas sobre doença; Promoção da Saúde apenas sobre bem-estar.",
-        "Saúde Pública e Promoção da Saúde são equivalentes; apenas diferem no nome institucional."
+        "Saúde Pública e Promoção da Saúde são equivalentes; apenas diferem no nome institucional.",
+        "Saúde Pública atua apenas sobre doença; Promoção da Saúde apenas sobre bem-estar."
       ],
       "answer": 0,
       "explanation": "A promoção da saúde integra-se numa abordagem mais ampla de saúde pública.",
-      "source": "Tema 4 — Conceitos"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–16"
     },
     {
       "id": "PEVSX032",
       "topic": "4. Conceitos de Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual intervenção é MAIS claramente de prevenção secundária?",
       "options": [
-        "Alterar políticas urbanas para favorecer mobilidade ativa.",
-        "Rastrear uma condição para a detetar precocemente antes de complicações.",
         "Reabilitar funcionalmente após complicações estabelecidas.",
+        "Rastrear uma condição para a detetar precocemente antes de complicações.",
+        "Alterar políticas urbanas para favorecer mobilidade ativa.",
         "Promover atividade física numa população saudável."
       ],
       "answer": 1,
       "explanation": "Secundária centra-se em deteção/diagnóstico precoce.",
-      "source": "Tema 4 — Níveis de prevenção"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–16"
     },
     {
       "id": "PEVSX033",
       "topic": "4. Conceitos de Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual frase descreve melhor Educação para a Saúde sem a confundir com mera transmissão de informação?",
       "options": [
         "É sinónimo de tratamento clínico preventivo.",
-        "Consiste apenas em fornecer folhetos com informação correta.",
+        "Tem como objetivo garantir que todas as pessoas fazem a mesma escolha.",
         "Procura desenvolver conhecimentos, atitudes e competências que apoiem decisões informadas e comportamentos favoráveis à saúde.",
-        "Tem como objetivo garantir que todas as pessoas fazem a mesma escolha."
+        "Consiste apenas em fornecer folhetos com informação correta."
       ],
       "answer": 2,
       "explanation": "Educação para a saúde visa capacidade de decisão, não apenas exposição a informação.",
-      "source": "Tema 4 — Educação para a Saúde"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–16"
     },
     {
       "id": "PEVSX034",
       "topic": "4. Conceitos de Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma autarquia cria ciclovias, melhora segurança e lança programas comunitários. Qual conceito é MAIS abrangente para descrever a estratégia?",
       "options": [
+        "Prevenção terciária, porque muda o ambiente.",
         "Promoção da Saúde, porque atua também sobre determinantes ambientais e capacidade de escolha.",
         "Tratamento populacional.",
-        "Educação para a Saúde apenas, porque qualquer mudança de comportamento começa por informação.",
-        "Prevenção terciária, porque muda o ambiente."
+        "Educação para a Saúde apenas, porque qualquer mudança de comportamento começa por informação."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "A promoção da saúde inclui intervenção sobre determinantes e ambientes.",
-      "source": "Tema 4 — Promoção da Saúde"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–16"
     },
     {
       "id": "PEVSX035",
       "topic": "4. Conceitos de Saúde",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre a definição clássica de saúde da OMS é MAIS correta?",
       "options": [
+        "Exclui dimensões sociais porque pertencem à Saúde Pública.",
         "Exige desempenho físico elevado para considerar alguém saudável.",
         "Define saúde como ausência completa de qualquer fator de risco.",
-        "Exclui dimensões sociais porque pertencem à Saúde Pública.",
         "Vai além da ausência de doença ao incluir bem-estar físico, mental e social."
       ],
       "answer": 3,
       "explanation": "A definição é multidimensional.",
-      "source": "Tema 4 — Saúde"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–16"
     },
     {
       "id": "PEVSX036",
       "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um cliente cumpre 180 min/semana de AF moderada, mas trabalha 9 h/dia sentado. Qual descrição é MAIS precisa?",
       "options": [
         "Não pode ser sedentário porque cumpre a recomendação de AF.",
-        "É fisicamente inativo porque supera 8 h/dia sentado.",
         "É fisicamente ativo segundo a recomendação aeróbia, mas pode acumular elevado comportamento sedentário.",
+        "É fisicamente inativo porque supera 8 h/dia sentado.",
         "É simultaneamente ativo e inativo, porque os conceitos são opostos da mesma variável."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "AF insuficiente e comportamento sedentário são dimensões distintas.",
-      "source": "Tema 5 — Inatividade vs sedentarismo"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17–31"
     },
     {
       "id": "PEVSX037",
       "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual atividade é exercício físico, mas NÃO necessariamente desporto?",
       "options": [
         "Levantar uma caixa uma vez em contexto laboral.",
-        "Participar numa competição de atletismo oficial.",
         "Uma sessão planeada e repetitiva de treino de força destinada a melhorar aptidão física, sem competição.",
-        "Deslocar-se a pé casualmente para o trabalho."
+        "Deslocar-se a pé casualmente para o trabalho.",
+        "Participar numa competição de atletismo oficial."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "Exercício é planeado/estruturado; desporto acrescenta regras/competição.",
-      "source": "Tema 5 — Exercício vs desporto"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17–31"
     },
     {
       "id": "PEVSX038",
       "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre aptidão física é MAIS correta?",
       "options": [
-        "É necessariamente resultado de exercício estruturado.",
         "É qualquer movimento corporal que aumenta dispêndio energético.",
-        "É um conjunto de atributos/capacidades relacionados com a possibilidade de realizar atividade física; não é sinónimo da própria atividade.",
-        "É apenas força e resistência cardiorrespiratória."
+        "É apenas força e resistência cardiorrespiratória.",
+        "É necessariamente resultado de exercício estruturado.",
+        "É um conjunto de atributos/capacidades relacionados com a possibilidade de realizar atividade física; não é sinónimo da própria atividade."
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "Aptidão é atributo/capacidade, distinta do comportamento AF.",
-      "source": "Tema 5 — Aptidão física"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17–31"
     },
     {
       "id": "PEVSX039",
       "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Porque dormir não é classificado como comportamento sedentário apesar do baixo dispêndio energético?",
       "options": [
-        "Porque qualquer posição deitada deixa de ser sedentária.",
+        "Porque durante o sono o dispêndio é sempre superior a 1,5 MET.",
         "A definição de comportamento sedentário exige estar acordado, além da postura e baixo dispêndio.",
         "Porque o sono é considerado atividade física ligeira.",
-        "Porque durante o sono o dispêndio é sempre superior a 1,5 MET."
+        "Porque qualquer posição deitada deixa de ser sedentária."
       ],
       "answer": 1,
       "explanation": "O estado acordado faz parte da definição.",
-      "source": "Tema 5 — Comportamento sedentário"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17–31"
     },
     {
       "id": "PEVSX040",
       "topic": "5. Conceitos de Atividade Física e Comportamento Sedentário",
-      "difficulty": "very_hard",
-      "question_style": "except",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Num bebé que ainda não anda, qual situação NÃO deve ser classificada simplesmente como comportamento sedentário?",
       "options": [
         "Tempo acordado de barriga para baixo no chão, porque é uma forma recomendada de atividade física.",
         "Estar acordado e confinado sem movimento relevante.",
-        "Estar acordado e restrito num carrinho durante longo período.",
-        "Tempo de ecrã enquanto está acordado e passivo."
+        "Tempo de ecrã enquanto está acordado e passivo.",
+        "Estar acordado e restrito num carrinho durante longo período."
       ],
       "answer": 0,
       "explanation": "Tummy time é movimento/AF recomendada.",
-      "source": "Tema 5 — Crianças <1 ano"
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17–31"
     },
     {
       "id": "PEVSX041",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma criança de 3 anos faz 180 min/dia de movimento, dos quais 55 min são moderados-vigorosos, dorme 11 h e usa ecrã 45 min. Qual é a avaliação MAIS correta?",
       "options": [
-        "O volume total, sono e ecrã estão alinhados, mas faltam 5 min para atingir os ≥60 min de AF moderada-vigorosa.",
         "Cumpre tudo porque 180 min totais tornam irrelevante a intensidade.",
-        "Falha o ecrã, porque aos 3 anos não é recomendado qualquer tempo de ecrã.",
-        "Falha apenas o sono, porque aos 3 anos são necessárias 11–14 h."
+        "O volume total, sono e ecrã estão alinhados, mas faltam 5 min para atingir os ≥60 min de AF moderada-vigorosa.",
+        "Falha apenas o sono, porque aos 3 anos são necessárias 11–14 h.",
+        "Falha o ecrã, porque aos 3 anos não é recomendado qualquer tempo de ecrã."
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "Para 3–4 anos: 180 min totais, ≥60 min AFMV, 10–13 h sono e ≤1 h de ecrã.",
-      "source": "Tema 6 — Crianças 3–4"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX042",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma criança de 18 meses acumula 180 min de AF, tem 20 min de ecrã e dorme 12 h. Qual é a conclusão MAIS correta?",
       "options": [
-        "Cumpre tudo porque 20 min de ecrã é inferior a 1 h.",
         "Falha a AF porque precisa de 60 min moderada-vigorosa dentro dos 180 min.",
         "AF e sono estão adequados; o ecrã não está, porque abaixo dos 2 anos não é recomendado qualquer tempo de ecrã.",
+        "Cumpre tudo porque 20 min de ecrã é inferior a 1 h.",
         "Falha o sono porque deveria dormir 14–17 h."
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "Nos 1–2 anos: ≥180 min, 11–14 h e sem ecrã até aos 2 anos.",
-      "source": "Tema 6 — Crianças 1–2"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX043",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual combinação diferencia melhor 1–2 anos de 3–4 anos?",
+      "question": "Qual síntese mantém as diferenças de AF e sono das três faixas até aos 4 anos sem resolver arbitrariamente os limites de ecrã divergentes dos slides?",
       "options": [
-        "1–2 anos têm limite de ecrã <2 h; 3–4 anos sem ecrã.",
-        "Ambos ≥180 min/dia; 3–4 anos acrescenta ≥60 min de AFMV e o intervalo de sono desce para 10–13 h.",
-        "Os dois grupos têm exatamente as mesmas recomendações.",
-        "1–2 anos precisam de 60 min AFMV; 3–4 anos não têm requisito de intensidade."
+        "<1 ano: ≥180 min e 11–14 h; 1–2: ≥60 AFMV e 10–13 h; 3–4: AF várias vezes e 14–17 h.",
+        "<1 ano: decúbito ventral conta como CS; 1–2 e 3–4: ≥180 min sem qualquer diferença de intensidade ou sono.",
+        "<1 ano: AF várias vezes e ≥30 min de decúbito ventral se ainda não andar, sono 14–17 h; 1–2: ≥180 min e 11–14 h; 3–4: ≥180 min incluindo ≥60 AFMV e 10–13 h.",
+        "<1 ano: ≥30 min apenas se já andar, sono 14–17 h; 1–2: ≥180 min e 10–13 h; 3–4: sem requisito de intensidade e 11–14 h."
       ],
-      "answer": 1,
-      "explanation": "As diferenças principais incluem AFMV e sono.",
-      "source": "Tema 6 — Comparação idades"
+      "answer": 2,
+      "explanation": "O Tema 6 apresenta estas recomendações por faixa. Os valores de sono do primeiro grupo são os do material; há divergências texto/quadro no ecrã, que não são usadas para decidir esta resposta.",
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX044",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um jovem de 16 anos faz 60 min/dia de AFMV, força 2 dias/semana, ecrã recreativo 1h30 e dorme 8h30. Qual componente fica abaixo da recomendação apresentada?",
       "options": [
-        "Fortalecimento muscular/ósseo, que deve ocorrer ≥3 dias/semana.",
         "Sono, porque aos 16 anos precisa de 9–11 h.",
         "AF aeróbia, porque precisa de 150–300 min/semana além dos 60 min/dia.",
-        "Ecrã, porque o máximo é 1 h/dia."
+        "Ecrã, porque o máximo é 1 h/dia.",
+        "Fortalecimento muscular/ósseo, que deve ocorrer ≥3 dias/semana."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Jovens 5–17: ≥60 min/dia AFMV e força/ósseo ≥3 dias/semana.",
-      "source": "Tema 6 — Jovens"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX045",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual opção exprime MAIS corretamente a equivalência das recomendações aeróbias em adultos?",
       "options": [
+        "150–300 min moderada E 75–150 min vigorosa obrigatoriamente na mesma semana.",
         "150 min moderada OU 150 min vigorosa, porque as intensidades têm peso igual.",
         "300 min moderada é o mínimo necessário para obter qualquer benefício.",
-        "150–300 min/semana moderada OU 75–150 min vigorosa OU combinação equivalente.",
-        "150–300 min moderada E 75–150 min vigorosa obrigatoriamente na mesma semana."
+        "150–300 min/semana moderada OU 75–150 min vigorosa OU combinação equivalente."
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "As alternativas são equivalentes, não cumulativas obrigatórias.",
-      "source": "Tema 6 — Adultos"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX046",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um adulto faz 300 min/semana moderada, força 1 dia/semana, passa 7h30 sentado, usa ecrã recreativo 2h30 e dorme 8h. Qual melhoria é MAIS diretamente exigida pelas recomendações?",
       "options": [
+        "Reduzir AF aeróbia para 150 min, porque 300 min é excesso.",
         "Eliminar totalmente o ecrã recreativo.",
-        "Reduzir o sono para 7 h exatamente.",
         "Aumentar o fortalecimento muscular para pelo menos 2 dias/semana.",
-        "Reduzir AF aeróbia para 150 min, porque 300 min é excesso."
+        "Reduzir o sono para 7 h exatamente."
       ],
       "answer": 2,
       "explanation": "O único componente abaixo do recomendado é força.",
-      "source": "Tema 6 — Adultos"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX047",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um idoso cumpre a recomendação aeróbia e força 2 dias/semana, mas não realiza treino de equilíbrio. Qual é a opção MAIS correta?",
       "options": [
-        "Precisa de 60 min diários de AFMV como os jovens.",
-        "Deve substituir força por equilíbrio.",
+        "Falta a componente multicomponente/equilíbrio e prevenção de quedas ≥3 dias/semana.",
         "Cumpre integralmente, porque equilíbrio substitui apenas aeróbio quando existe risco de queda.",
-        "Falta a componente multicomponente/equilíbrio e prevenção de quedas ≥3 dias/semana."
+        "Precisa de 60 min diários de AFMV como os jovens.",
+        "Deve substituir força por equilíbrio."
       ],
-      "answer": 3,
+      "answer": 0,
       "explanation": "O equilíbrio é uma recomendação adicional nos ≥65 anos.",
-      "source": "Tema 6 — Idosos"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX048",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre comportamento sedentário em adultos é MAIS correta segundo os slides?",
       "options": [
-        "Deve limitar-se o tempo total e interromper períodos prolongados, substituindo-os quando possível por AF de qualquer intensidade, incluindo ligeira.",
         "Apenas AF moderada-vigorosa é suficientemente intensa para «quebrar» sedentarismo.",
-        "Se a pessoa cumpre 150 min/semana, não é necessário reduzir tempo sentado.",
-        "O limite de <8 h torna automaticamente seguro qualquer padrão de sedentarismo abaixo desse valor."
+        "O limite de <8 h torna automaticamente seguro qualquer padrão de sedentarismo abaixo desse valor.",
+        "Deve limitar-se o tempo total e interromper períodos prolongados, substituindo-os quando possível por AF de qualquer intensidade, incluindo ligeira.",
+        "Se a pessoa cumpre 150 min/semana, não é necessário reduzir tempo sentado."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A recomendação inclui reduzir e interromper sedentarismo, não apenas cumprir um limiar.",
-      "source": "Tema 6 — Sedentarismo adultos"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX049",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual sequência de sono está correta do MAIS novo para o MAIS velho?",
       "options": [
-        "<1 ano 14–17 h → 1–2 anos 11–14 h → 3–4 anos 10–13 h → 5–13 anos 9–11 h → 14–17 anos 8–10 h → adultos 7–9 h → idosos 7–8 h.",
-        "<1 ano 14–17 h → 1–2 anos 10–13 h → 3–4 anos 11–14 h → 5–13 anos 8–10 h → adultos 7–9 h.",
         "Todas as faixas após os 5 anos têm recomendação universal de 8 h.",
-        "<1 ano 11–14 h → 1–2 anos 14–17 h → 3–4 anos 10–13 h → adultos 8–10 h."
+        "<1 ano 14–17 h → 1–2 anos 10–13 h → 3–4 anos 11–14 h → 5–13 anos 8–10 h → adultos 7–9 h.",
+        "<1 ano 11–14 h → 1–2 anos 14–17 h → 3–4 anos 10–13 h → adultos 8–10 h.",
+        "<1 ano 14–17 h → 1–2 anos 11–14 h → 3–4 anos 10–13 h → 5–13 anos 9–11 h → 14–17 anos 8–10 h → adultos 7–9 h → idosos 7–8 h."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "Esta é a sequência apresentada nos materiais.",
-      "source": "Tema 6 — Sono"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX050",
       "topic": "6. Recomendações 24h",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual recomendação traduz melhor a lógica «todos os movimentos contam» sem a exagerar?",
       "options": [
+        "Mesmo abaixo da dose-alvo, aumentar movimento e substituir parte do tempo sedentário por AF, inclusive ligeira, pode trazer benefício; alcançar as recomendações continua desejável.",
         "Como todos os movimentos contam, intensidade e volume deixam de importar.",
         "Atividade ligeira substitui integralmente a necessidade de força e AFMV em qualquer idade.",
-        "Qualquer movimento mínimo equivale a cumprir integralmente as recomendações.",
-        "Mesmo abaixo da dose-alvo, aumentar movimento e substituir parte do tempo sedentário por AF, inclusive ligeira, pode trazer benefício; alcançar as recomendações continua desejável."
+        "Qualquer movimento mínimo equivale a cumprir integralmente as recomendações."
       ],
-      "answer": 3,
+      "answer": 0,
       "explanation": "A mensagem encoraja progressão e redução de inatividade, não elimina metas.",
-      "source": "Tema 6 — Princípios gerais"
+      "source": "Tema 6, pp. 3–20"
     },
     {
       "id": "PEVSX051",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual frase é MAIS correta sobre risco de exercício?",
       "options": [
         "A prática tem potenciais riscos agudos, mas uma progressão apropriada e adaptação individual preservam uma relação benefício-risco globalmente favorável.",
-        "O risco desaparece totalmente após algumas semanas de treino.",
+        "Eventos cardiovasculares durante exercício são frequentes na população geral e superam benefícios.",
         "Como existe risco musculoesquelético, a opção mais segura para pessoas pouco ativas é permanecer inativa.",
-        "Eventos cardiovasculares durante exercício são frequentes na população geral e superam benefícios."
+        "O risco desaparece totalmente após algumas semanas de treino."
       ],
       "answer": 0,
       "explanation": "Segurança significa gerir risco, não prometer risco zero.",
-      "source": "Tema 7 — Risco-benefício"
+      "source": "Tema 7, pp. 3–4"
     },
     {
       "id": "PEVSX052",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Um iniciante sedentário começa treino pliométrico intenso 6 dias/semana. Qual fator é MAIS diretamente modificável pelo TEF para reduzir risco?",
+      "question": "Um iniciante pretende começar exercício vigoroso de impacto. Qual resposta articula melhor a prevenção descrita na UC?",
       "options": [
-        "Progressão de volume/intensidade e adequação da seleção de exercícios ao nível atual.",
-        "Genética individual.",
-        "História familiar do praticante.",
-        "Idade cronológica."
+        "Monitorizar a primeira sessão vigorosa, usando a ausência de problemas como substituto de triagem e avaliação.",
+        "Fazer triagem e avaliação inicial, dispensando monitorização se ambas não identificarem alterações.",
+        "Avaliar a aptidão e começar pelo programa pretendido, deixando a triagem para caso apareçam sintomas.",
+        "Recolher informação na triagem pré-participação, avaliar para adequar a prescrição e monitorizar as respostas ao treino."
       ],
-      "answer": 0,
-      "explanation": "A gestão da carga e progressão é modificável e diretamente controlável na prescrição.",
-      "source": "Tema 7 — Prevenção de lesão"
+      "answer": 3,
+      "explanation": "A prevenção tem três etapas complementares. Intensidade elevada, impacto e contacto podem aumentar risco; aparência saudável ou uma sessão sem sintomas não substituem o processo.",
+      "source": "Tema 7, pp. 3–4"
     },
     {
       "id": "PEVSX053",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre complicações cardiovasculares agudas é MAIS rigorosa?",
       "options": [
-        "Podem ocorrer, sobretudo em pessoas suscetíveis, mas são raras e não anulam o benefício da prática regular quando bem prescrita.",
-        "São inevitáveis em exercício vigoroso.",
         "São inexistentes em qualquer pessoa sem diagnóstico conhecido.",
-        "Justificam excluir toda AF vigorosa da população geral."
+        "Justificam excluir toda AF vigorosa da população geral.",
+        "São inevitáveis em exercício vigoroso.",
+        "Podem ocorrer, sobretudo em pessoas suscetíveis, e não anulam o benefício da prática regular quando bem prescrita."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "O risco existe mas deve ser contextualizado.",
-      "source": "Tema 7 — Complicações cardiovasculares"
+      "source": "Tema 7, pp. 3–4"
     },
     {
       "id": "PEVSX054",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual conjunto contém apenas estratégias coerentes com prevenção de lesões?",
+      "question": "Um plano já inclui triagem e avaliação inicial. Qual alteração fecha a lacuna de prevenção que ainda subsiste?",
       "options": [
-        "Manter a mesma carga independentemente da resposta e usar fadiga máxima como critério.",
-        "Progressão gradual, técnica adequada, recuperação suficiente e seleção de carga compatível com experiência.",
-        "Aumentar volume e intensidade simultaneamente, ignorar dor transitória e reduzir recuperação.",
-        "Evitar qualquer exercício com impacto, mesmo em pessoas adaptadas."
+        "Aumentar a intensidade até surgir um sintoma, porque só então é possível monitorizar respostas.",
+        "Substituir avaliação inicial por aconselhamento geral, pois dois procedimentos iniciais já são suficientes.",
+        "Monitorizar o treino e adequar a prescrição às respostas observadas.",
+        "Repetir apenas a informação de triagem, mantendo a prescrição fixa durante todo o programa."
       ],
-      "answer": 1,
-      "explanation": "Prevenção envolve gestão do estímulo e da recuperação.",
-      "source": "Tema 7 — Prevenção"
+      "answer": 2,
+      "explanation": "A terceira etapa é monitorização do treino. Repetir etapas iniciais sem acompanhar a resposta não cobre esta função; gestão da prática decorre da informação observada.",
+      "source": "Tema 7, pp. 3–4"
     },
     {
       "id": "PEVSX055",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual situação sugere MAIS vigorexia e não apenas um objetivo de hipertrofia?",
       "options": [
-        "Apesar de elevada muscularidade, a pessoa sente-se persistentemente «pequena», treina compulsivamente, evita atividades sociais e mantém comportamento apesar de consequências negativas.",
         "Quer ganhar 3 kg de massa muscular e segue um programa estruturado sem prejuízo social.",
+        "Acompanha medidas corporais mensalmente para avaliar progressão.",
         "Prefere treino de força a corrida.",
-        "Acompanha medidas corporais mensalmente para avaliar progressão."
+        "Apesar de elevada muscularidade, a pessoa sente-se persistentemente «pequena», treina compulsivamente, evita atividades sociais e mantém comportamento apesar de consequências negativas."
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "O prejuízo, obsessão e distorção da imagem são centrais.",
-      "source": "Tema 7 — Vigorexia"
+      "source": "Tema 7, pp. 5–6"
     },
     {
       "id": "PEVSX056",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual resposta do TEF é MAIS apropriada perante sinais fortes de dismorfia muscular?",
       "options": [
-        "Ignorar o tema por não fazer parte da área do exercício.",
+        "Diagnosticar formalmente vigorexia e iniciar psicoterapia.",
         "Reconhecer limites profissionais, evitar reforçar a obsessão e encorajar procura de apoio especializado adequado.",
-        "Prescrever mais volume para satisfazer a perceção corporal do cliente.",
-        "Diagnosticar formalmente vigorexia e iniciar psicoterapia."
+        "Ignorar o tema por não fazer parte da área do exercício.",
+        "Prescrever mais volume para satisfazer a perceção corporal do cliente."
       ],
       "answer": 1,
       "explanation": "O TEF pode reconhecer sinais e encaminhar, mas não diagnosticar/tratar psicologicamente.",
-      "source": "Tema 7 — Limites profissionais"
+      "source": "Tema 7, pp. 5–6"
     },
     {
       "id": "PEVSX057",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Um utilizador afirma que esteroides anabolizantes são «seguros se houver monitorização». Qual resposta é MAIS correta?",
       "options": [
-        "Os únicos riscos relevantes são hepáticos.",
-        "Monitorização pode identificar alguns problemas, mas não elimina riscos cardiovasculares, endócrinos, hepáticos, renais, reprodutivos e psicológicos.",
         "A monitorização transforma o uso em seguro desde que as análises estejam normais.",
-        "Riscos existem apenas em atletas de competição."
+        "Os únicos riscos relevantes são hepáticos.",
+        "Riscos existem apenas em atletas de competição.",
+        "Monitorização pode identificar alguns problemas, mas não elimina riscos cardiovasculares, endócrinos, hepáticos, renais, reprodutivos e psicológicos."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Monitorizar não equivale a eliminar risco.",
-      "source": "Tema 7 — Dopagem"
+      "source": "Tema 7, pp. 8–10"
     },
     {
       "id": "PEVSX058",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual mecanismo/efeito é MAIS compatível com esteroides anabolizantes androgénicos?",
+      "question": "Uma utilizadora pergunta se todas as alterações causadas por EAA desaparecem ao suspender o consumo. Qual resposta distingue melhor os riscos apresentados?",
       "options": [
-        "Supressão do eixo hormonal endógeno, podendo afetar função gonadal e fertilidade.",
-        "Aumento garantido e permanente da produção natural de testosterona.",
-        "Proteção cardiovascular por aumento de massa muscular.",
-        "Ausência de alterações psicológicas porque os efeitos são apenas periféricos."
+        "Os materiais referem alterações da voz e hipertrofia do clitóris potencialmente irreversíveis, além de outros riscos; suspensão não garante reversão completa.",
+        "Os riscos reprodutivos limitam-se aos homens; nas mulheres a alteração é apenas aumento reversível de massa muscular.",
+        "Qualquer efeito feminino desaparece ao suspender EAA, desde que haja monitorização laboratorial normal.",
+        "As alterações da voz podem ocorrer, mas são sempre reversíveis; só as alterações hepáticas exigem preocupação."
       ],
       "answer": 0,
-      "explanation": "EAA podem suprimir produção hormonal endógena.",
-      "source": "Tema 7 — EAA"
+      "explanation": "Os slides destacam androgenização nas mulheres, incluindo voz, clitóris, pelos e alterações menstruais. Não se pode prometer reversibilidade, nem limitar o risco a um órgão ou sexo.",
+      "source": "Tema 7, pp. 6–10"
     },
     {
       "id": "PEVSX059",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual opção contém uma afirmação PARCIALMENTE verdadeira, mas insuficiente como avaliação de risco de dopagem?",
+      "question": "Uma pessoa justifica dopantes por poderem melhorar desempenho. Qual resposta avalia mais completamente o argumento?",
       "options": [
-        "«Podem afetar fígado», porque apenas o rim é afetado.",
-        "«Podem ter riscos cardiovasculares e endócrinos», porque isto é falso.",
-        "«Podem melhorar desempenho», porque isso pode ocorrer, mas omite riscos sistémicos e consequências associadas.",
-        "«Podem afetar saúde mental», porque os slides excluem efeitos psicológicos."
+        "A monitorização do fígado cobre os riscos relevantes, porque as restantes alterações são apenas efeitos desejados do desempenho.",
+        "Fora da competição, a finalidade de melhorar desempenho exclui o problema de saúde descrito para substâncias dopantes.",
+        "Melhoria de desempenho constitui evidência de que os efeitos benéficos compensam riscos se o praticante aceitar o consumo.",
+        "A finalidade de melhorar desempenho enquadra o consumo referido, mas benefício pretendido não elimina riscos multissistémicos, dependência ou consequências psicológicas."
       ],
-      "answer": 2,
-      "explanation": "A opção é verdadeira mas incompleta — exatamente o tipo de leitura crítica pretendida.",
-      "source": "Tema 7 — Avaliação crítica"
+      "answer": 3,
+      "explanation": "A definição apresentada associa consumo à melhoria do desempenho. A análise deve incluir riscos cardiovasculares, hepáticos, renais, endócrinos/reprodutivos e psicológicos; ganho pretendido não comprova segurança.",
+      "source": "Tema 7, pp. 8–10"
     },
     {
       "id": "PEVSX060",
       "topic": "7. Atividade Física Segura",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual princípio é MAIS útil ao comunicar risco a um cliente que procura resultados rápidos?",
       "options": [
-        "Usar medo extremo para garantir adesão.",
-        "Explicar benefício pretendido e riscos reais, evitar moralismo e reforçar alternativas seguras dentro das competências profissionais.",
+        "Evitar o assunto para não influenciar a decisão.",
         "Prometer que treino natural produz exatamente os mesmos resultados no mesmo prazo.",
-        "Evitar o assunto para não influenciar a decisão."
+        "Explicar benefício pretendido e riscos reais, evitar moralismo e reforçar alternativas seguras dentro das competências profissionais.",
+        "Usar medo extremo para garantir adesão."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Comunicação deve ser factual, profissional e orientada para decisão informada.",
-      "source": "Tema 7 — Aplicação profissional"
+      "source": "Tema 7, pp. 8–10"
     },
     {
       "id": "PEVSX061",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual definição de DCV é MAIS completa?",
       "options": [
-        "Qualquer doença que aumente pressão arterial.",
         "Grupo de patologias do coração e vasos sanguíneos, incluindo doença coronária, cerebrovascular, arterial periférica, entre outras.",
         "Doenças metabólicas que secundariamente podem afetar o coração.",
-        "Apenas doença coronária e AVC."
+        "Apenas doença coronária e AVC.",
+        "Qualquer doença que aumente pressão arterial."
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "DCV é uma categoria ampla de doenças cardíacas e vasculares.",
-      "source": "Tema 8 — DCV"
+      "source": "Tema 8, pp. 3–7"
     },
     {
       "id": "PEVSX062",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Num AVC, qual distinção é MAIS correta?",
+      "question": "Uma pessoa apresenta fraqueza súbita num lado e dificuldade em falar; outra tem dor torácica com suor frio. Qual leitura distingue os sinais e mecanismos apresentados?",
       "options": [
-        "Isquémico e hemorrágico diferem apenas na gravidade.",
-        "Hemorrágico envolve bloqueio; isquémico envolve rutura.",
-        "Isquémico envolve bloqueio do fornecimento sanguíneo; hemorrágico envolve rutura de vaso cerebral.",
-        "Todo AVC decorre obrigatoriamente de placa de ateroma."
+        "O primeiro indica necessariamente AVC hemorrágico e o segundo exclui EAM; sintomas distinguem por si só o mecanismo do AVC.",
+        "O primeiro conjunto é compatível com AVC e o segundo com EAM; AVC isquémico envolve bloqueio e hemorrágico rutura, sem permitir ao TEF diagnosticar pelo sintoma.",
+        "Ambos indicam apenas HTA assintomática; bloqueio e rutura são mecanismos exclusivos do EAM.",
+        "O primeiro indica EAM e o segundo AVC isquémico; a presença de suor frio confirma o bloqueio cerebral."
       ],
-      "answer": 2,
-      "explanation": "A distinção principal é bloqueio versus rutura.",
-      "source": "Tema 8 — AVC"
+      "answer": 1,
+      "explanation": "Fraqueza/fala alterada são sinais apresentados de AVC; dor torácica e suor frio podem surgir no EAM. Os mecanismos distinguem tipos de AVC, mas os sintomas não autorizam diagnóstico autónomo.",
+      "source": "Tema 8, pp. 3–7"
     },
     {
       "id": "PEVSX063",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
-      "question_style": "except",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual fator é NÃO modificável no quadro apresentado para risco cardiovascular?",
+      "question": "Um quadro de risco cardiovascular usa jejum ≥100 mg/dL; o quadro de diabetes usa ≥126. Como interpretar 110 mg/dL sem confundir as fontes?",
       "options": [
-        "Consumo excessivo de sal.",
-        "Inatividade física.",
-        "Idade.",
-        "Tabagismo."
+        "É normal nos dois quadros, porque só os valores ≥126 têm relevância para risco cardiovascular.",
+        "Ultrapassa o marcador de risco do primeiro quadro e enquadra o intervalo de pré-diabetes do segundo; não atinge por si o limiar de diabetes nem constitui diagnóstico pelo TEF.",
+        "Confirma diabetes, porque todo valor que conta como risco cardiovascular é um limiar diagnóstico de diabetes.",
+        "Mostra que o quadro de diabetes deve ser substituído pelo de risco, pois ambos medem a mesma decisão clínica."
       ],
-      "answer": 2,
-      "explanation": "Idade não é modificável; os restantes são alvos de intervenção.",
-      "source": "Tema 8 — Fatores de risco"
+      "answer": 1,
+      "explanation": "Tema 8 p. 5 e p. 16 têm finalidades diferentes: identificar risco versus apresentar valores de diagnóstico. Os intervalos 100–125 e ≥126 não são intercambiáveis; avaliação clínica mantém-se necessária.",
+      "source": "Tema 8, pp. 3–7"
     },
     {
       "id": "PEVSX064",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre AF e DCV é MAIS correta?",
       "options": [
+        "Sedentarismo só aumenta risco em pessoas fisicamente inativas.",
         "Após doença cardíaca, AF deixa de ter papel por questões de segurança.",
         "Qualquer volume de AF tende a ser melhor do que nenhum; cumprir recomendações associa-se a menor risco e exercício integra reabilitação cardíaca em contextos apropriados.",
-        "Sedentarismo só aumenta risco em pessoas fisicamente inativas.",
         "Só volumes acima das recomendações reduzem risco cardiovascular."
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "Os materiais defendem benefício progressivo e papel na reabilitação.",
-      "source": "Tema 8 — DCV e AF"
+      "source": "Tema 8, pp. 3–7"
     },
     {
       "id": "PEVSX065",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma pessoa apresenta 128/82 mmHg. Pela tabela usada na UC, qual categoria é MAIS correta?",
       "options": [
-        "Normal, porque PAS é <130.",
-        "Hipertensão Grau I, porque PAD 80–89 é suficiente mesmo com PAS <130.",
+        "Hipertensão Grau II, porque qualquer PAD >80 é grau II.",
         "Pressão arterial elevada, porque PAS está entre 120–129.",
-        "Hipertensão Grau II, porque qualquer PAD >80 é grau II."
+        "Normal, porque PAS é <130.",
+        "Hipertensão Grau I, porque PAD 80–89 é suficiente mesmo com PAS <130."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "A classificação usa «ou»: PAD 80–89 enquadra Grau I.",
-      "source": "Tema 8 — HTA classificação"
+      "source": "Tema 8, pp. 8–14"
     },
     {
       "id": "PEVSX066",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma pessoa apresenta 142/78 mmHg. Qual interpretação é MAIS correta?",
       "options": [
         "Hipertensão Grau II pela PAS ≥140, embora a PAD esteja normal.",
-        "Hipertensão Grau I porque apenas um valor está elevado.",
         "Pressão elevada porque a PAD é <80.",
+        "Hipertensão Grau I porque apenas um valor está elevado.",
         "Normal porque a média diastólica é normal."
       ],
       "answer": 0,
       "explanation": "Grau II pode ser definido por PAS ≥140 OU PAD ≥90.",
-      "source": "Tema 8 — HTA classificação"
+      "source": "Tema 8, pp. 8–14"
     },
     {
       "id": "PEVSX067",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre sintomas de hipertensão é MAIS correta?",
@@ -1156,47 +1156,47 @@
       ],
       "answer": 3,
       "explanation": "A HTA é frequentemente assintomática.",
-      "source": "Tema 8 — HTA sintomas"
+      "source": "Tema 8, pp. 8–14"
     },
     {
       "id": "PEVSX068",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual atuação está dentro das competências do TEF perante PA muito elevada e sintomas preocupantes?",
+      "question": "Um cliente com HTA pergunta como pode a AF ajudar se a PA sobe durante exercício. Qual explicação é mais completa?",
       "options": [
-        "Confirmar diagnóstico e prescrever terapêutica.",
-        "Ajustar medicação anti-hipertensiva.",
-        "Interromper exercício, reconhecer situação de risco e encaminhar/procurar avaliação clínica urgente conforme gravidade.",
-        "Continuar exercício ligeiro para testar se a PA desce."
+        "A descida após uma sessão confirma cura e autoriza o TEF a suspender medicação antes do próximo treino.",
+        "Como a PA sobe durante esforço, a AF não contribui para prevenção nem controlo da HTA, mesmo quando adaptada.",
+        "A subida aguda é a redução crónica da PA, pelo que não é necessário distinguir exercício e repouso nem avaliar risco.",
+        "A subida aguda acompanha o esforço; após a sessão pode ocorrer descida e o treino regular pode reduzir PA de repouso, complementando hábitos e cuidados clínicos sem ajuste de medicação pelo TEF."
       ],
-      "answer": 2,
-      "explanation": "O TEF não diagnostica nem altera medicação; deve priorizar segurança e encaminhamento.",
-      "source": "Tema 8 — HTA procedimentos"
+      "answer": 3,
+      "explanation": "Os materiais distinguem aumento durante esforço, hipotensão pós-exercício e adaptação crónica. Prevenção/controlo inclui alimentação, peso, álcool/tabaco e AF; diagnóstico e medicação são responsabilidade clínica.",
+      "source": "Tema 8, pp. 8–14"
     },
     {
       "id": "PEVSX069",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual diferença entre diabetes tipo 1 e tipo 2 é MAIS correta?",
+      "question": "Qual comparação evita atribuir a todos os tipos de diabetes o mesmo mecanismo e prevenção?",
       "options": [
-        "Ambas resultam exclusivamente de ingestão elevada de açúcar.",
-        "Tipo 1 é sempre causada por obesidade; tipo 2 por autoimunidade.",
-        "Tipo 1 envolve défice acentuado de insulina, geralmente por destruição das células beta; tipo 2 envolve resistência à insulina e disfunção progressiva.",
-        "Tipo 1 envolve células alfa; tipo 2 células beta apenas."
+        "Tipo 1 e tipo 2 resultam de resistência à insulina, e a gestacional só existe com diabetes anterior à gravidez; todas são prevenidas por perda de peso.",
+        "Tipo 1 envolve destruição de células beta/défice de insulina, tipo 2 resistência e disfunção progressiva, gestacional identificação na gravidez; a prevenção por hábitos apresentada não é uma prevenção comprovada de tipo 1.",
+        "Tipo 1 envolve destruição das células beta, mas a AF previne esse mecanismo; a gestacional só é identificada após parto.",
+        "Tipo 2 é autoimune e tipo 1 decorre de excesso alimentar; a gestacional tem o mesmo enquadramento que os valores gerais sem qualquer quadro próprio."
       ],
-      "answer": 2,
-      "explanation": "Os mecanismos são diferentes e não se reduzem à dieta.",
-      "source": "Tema 8 — Diabetes tipos"
+      "answer": 1,
+      "explanation": "A UC apresenta três tipos e valores específicos para gestacional, que devem ser lidos como material de estudo. A prevenção comportamental descrita centra-se em tipo 2; cuidados são adaptados ao contexto clínico.",
+      "source": "Tema 8, pp. 15–22"
     },
     {
       "id": "PEVSX070",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
-      "question_style": "case",
+      "difficulty": "hard",
+      "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Uma glicemia em jejum de 125 mg/dL e HbA1c de 6,4% permitem qual conclusão MAIS correta face aos limiares apresentados?",
       "options": [
@@ -1207,177 +1207,177 @@
       ],
       "answer": 0,
       "explanation": "Os limiares apresentados são ≥126 mg/dL e ≥6,5%; diagnóstico pertence ao âmbito clínico.",
-      "source": "Tema 8 — Diabetes diagnóstico"
+      "source": "Tema 8, pp. 15–22"
     },
     {
       "id": "PEVSX071",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual tríade é MAIS característica de hiperglicemia/diabetes?",
       "options": [
-        "Poliúria, polidipsia e polifagia.",
+        "Hemiparesia, afasia e ataxia.",
         "Epistaxis, tinnitus e dor torácica.",
-        "Dor torácica, palidez e sudorese fria.",
-        "Hemiparesia, afasia e ataxia."
+        "Poliúria, polidipsia e polifagia.",
+        "Dor torácica, palidez e sudorese fria."
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "A tríade clássica é urinar, sede e fome excessivas.",
-      "source": "Tema 8 — Diabetes sintomas"
+      "source": "Tema 8, pp. 15–22"
     },
     {
       "id": "PEVSX072",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre AF e diabetes tipo 2 é MAIS correta?",
       "options": [
-        "Sedentarismo não altera risco se o peso corporal for normal.",
-        "Somente exercício vigoroso produz benefício metabólico.",
         "A AF substitui sempre medicação quando o cliente é aderente.",
-        "A AF regular ajuda na prevenção e gestão, melhora controlo metabólico e não deve ser apresentada como substituto universal de medicação ou cuidados clínicos."
+        "A AF regular ajuda na prevenção e gestão, melhora controlo metabólico e não deve ser apresentada como substituto universal de medicação ou cuidados clínicos.",
+        "Sedentarismo não altera risco se o peso corporal for normal.",
+        "Somente exercício vigoroso produz benefício metabólico."
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "A intervenção é complementar e individualizada.",
-      "source": "Tema 8 — Diabetes e AF"
+      "source": "Tema 8, pp. 15–22"
     },
     {
       "id": "PEVSX073",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual classificação de IMC está MAIS correta para adultos?",
       "options": [
-        "25,0–29,9 obesidade I; 30,0–34,9 excesso de peso; ≥35 obesidade III.",
+        "≥30 excesso de peso; ≥40 obesidade.",
         "18,5–24,9 excesso de peso; 25,0–29,9 obesidade.",
         "25,0–29,9 excesso de peso; 30,0–34,9 obesidade I; 35,0–39,9 obesidade II; ≥40 obesidade III.",
-        "≥30 excesso de peso; ≥40 obesidade."
+        "25,0–29,9 obesidade I; 30,0–34,9 excesso de peso; ≥35 obesidade III."
       ],
       "answer": 2,
       "explanation": "Os intervalos apresentados distinguem excesso de peso e graus de obesidade.",
-      "source": "Tema 8 — Obesidade valores"
+      "source": "Tema 8, pp. 26–33"
     },
     {
       "id": "PEVSX074",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual afirmação sobre causas da obesidade é MAIS correta?",
+      "question": "Qual explicação de obesidade integra causas e consequências sem transformar uma associação numa causa única?",
       "options": [
-        "É multifatorial; comportamento individual interage com fatores biológicos, ambientais e socioeconómicos.",
-        "É causada essencialmente por falta de disciplina, sendo fatores ambientais secundários.",
-        "É sempre consequência de uma doença hormonal.",
-        "Pode ser explicada apenas por balanço energético, sem considerar contexto."
+        "O balanço energético interage com biologia, comportamento e ambiente; há consequências metabólicas, cardiovasculares, musculoesqueléticas e psicossociais, sem reduzir o problema a disciplina individual.",
+        "Fatores genéticos explicam todos os casos, pelo que alimentação e AF têm valor apenas para aptidão, sem influência na prevenção.",
+        "O balanço energético exclui fatores ambientais como causas; as consequências são apenas metabólicas e desaparecem se não existir diabetes.",
+        "A responsabilidade individual é suficiente para explicar causas e tratamento; consequências psicossociais demonstram falta de motivação como causa única."
       ],
       "answer": 0,
-      "explanation": "A UC enfatiza uma visão multifatorial e integrada.",
-      "source": "Tema 8 — Obesidade causas"
+      "explanation": "Os materiais enumeram determinantes e consequências múltiplas. Uma explicação centrada num único fator omite ambiente e contexto social, e uma consequência não prova a causa individual.",
+      "source": "Tema 8, pp. 26–33"
     },
     {
       "id": "PEVSX075",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual estratégia de prevenção da obesidade é MAIS coerente com os materiais?",
+      "question": "Qual plano integra prevenção, tratamento e relação com AF na obesidade segundo os materiais?",
       "options": [
-        "Combinar alimentação saudável, AF, menos sedentarismo, sono adequado e condições ambientais/políticas que tornem escolhas saudáveis acessíveis.",
-        "Eliminar hidratos de carbono em toda a população.",
-        "Focar exclusivamente responsabilidade individual.",
-        "Usar medicação como primeira e única intervenção populacional."
+        "Considerar os determinantes sociais, mas excluir AF do tratamento porque só contribui para prevenção e não para gestão da obesidade.",
+        "Combinar alimentação e AF, usando 150 min como garantia de perda de peso para qualquer pessoa e dispensando avaliação das outras causas.",
+        "Combinar alimentação, AF, menos CS, sono e ambiente favorável; AF tem relação forte, com maior evidência acima de 150 min/semana; fármacos e cirurgia são opções clínicas quando indicadas.",
+        "Usar fármacos como única prevenção populacional, cabendo ao TEF escolher medicação se a pessoa não perder peso com treino."
       ],
-      "answer": 0,
-      "explanation": "Os materiais incluem comportamento individual e contexto social.",
-      "source": "Tema 8 — Obesidade prevenção"
+      "answer": 2,
+      "explanation": "A UC articula mudança comportamental, contexto e opções clínicas. O volume referido descreve evidência de relação, não resultado garantido; seleção de terapêutica não pertence ao TEF.",
+      "source": "Tema 8, pp. 26–33"
     },
     {
       "id": "PEVSX076",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre cancro é MAIS correta?",
       "options": [
         "A metastização é a disseminação de células malignas para outros locais; nem todo crescimento celular rápido constitui cancro.",
         "Todo o cancro tem uma única causa genética hereditária.",
-        "Um tumor só é maligno se causar dor.",
-        "Metastização é o crescimento inicial do tumor no tecido de origem."
+        "Metastização é o crescimento inicial do tumor no tecido de origem.",
+        "Um tumor só é maligno se causar dor."
       ],
       "answer": 0,
       "explanation": "A capacidade de invasão/disseminação é central na definição.",
-      "source": "Tema 8 — Cancro definição"
+      "source": "Tema 8, pp. 37–42"
     },
     {
       "id": "PEVSX077",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual conjunto reúne apenas fatores/estratégias de prevenção do cancro apresentados?",
+      "question": "Qual associação entre prevenção e modalidades de tratamento do cancro é mais precisa nos slides?",
       "options": [
-        "Usar apenas diagnóstico precoce, porque prevenção primária não altera risco.",
-        "Não fumar, manter peso saudável, alimentação saudável, ser fisicamente ativo, reduzir álcool e usar vacinação/rastreio quando indicado.",
-        "Praticar AF apenas após os 40 anos e evitar rastreios para reduzir sobrediagnóstico.",
-        "Evitar toda exposição solar, eliminar atividade vigorosa e usar suplementos antioxidantes."
+        "Vacinação previne qualquer cancro; tratamento sistémico significa apenas remover cirurgicamente o tumor antes de adaptar AF.",
+        "Hábitos dispensam vacinação e rastreio; cirurgia e quimioterapia são locais, enquanto toda radioterapia é sistémica.",
+        "Hábitos, vacinação e rastreio quando indicados integram prevenção; cirurgia/radioterapia são locais e quimioterapia/terapêuticas sistémicas atuam de forma distinta, escolhidas conforme tipo, estádio e pessoa.",
+        "Rastreio substitui prevenção de fatores de risco; todas as modalidades atuam localmente e são escolhidas pelo mesmo protocolo para todos."
       ],
-      "answer": 1,
-      "explanation": "Os materiais incluem hábitos, vacinação e rastreio/diagnóstico precoce.",
-      "source": "Tema 8 — Cancro prevenção"
+      "answer": 2,
+      "explanation": "Os materiais distinguem prevenção e tratamento, bem como terapias locais e sistémicas. Uma modalidade não tem indicação universal; a decisão clínica considera doença e pessoa.",
+      "source": "Tema 8, pp. 37–42"
     },
     {
       "id": "PEVSX078",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
       "question": "Qual afirmação sobre AF após diagnóstico de cancro é MAIS correta segundo os materiais?",
       "options": [
-        "Serve apenas para manutenção de peso, sem outros benefícios.",
-        "A AF é recomendada em todas as fases, com adaptação ao contexto, podendo melhorar qualidade de vida e ajudar no controlo de efeitos adversos.",
+        "É útil apenas para prevenção primária, não após diagnóstico.",
         "Deve ser suspensa em todos os casos até ao fim de qualquer tratamento.",
-        "É útil apenas para prevenção primária, não após diagnóstico."
+        "Serve apenas para manutenção de peso, sem outros benefícios.",
+        "A AF é recomendada em todas as fases, com adaptação ao contexto, podendo melhorar qualidade de vida e ajudar no controlo de efeitos adversos."
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "Os slides referem benefício também após diagnóstico.",
-      "source": "Tema 8 — Cancro e AF"
+      "source": "Tema 8, pp. 37–42"
     },
     {
       "id": "PEVSX079",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual definição de saúde mental é MAIS completa?",
+      "question": "Qual formulação integra definição, tipos e determinantes de saúde mental?",
       "options": [
-        "Capacidade de manter produtividade laboral, independentemente das restantes dimensões.",
-        "Estado de bem-estar mental que permite lidar com stress, reconhecer capacidades, aprender/trabalhar e contribuir para a comunidade, existindo num continuum.",
-        "Ausência permanente de emoções negativas.",
-        "Ausência de diagnóstico psiquiátrico."
+        "É ausência de emoções negativas; os tipos apresentados deixam de ser perturbações quando a pessoa pratica AF regular.",
+        "É ausência de diagnóstico; ansiedade e depressão são equivalentes e os determinantes são exclusivamente individuais.",
+        "É produtividade permanente; bipolaridade e esquizofrenia são variações de humor normais determinadas só por hábitos.",
+        "É bem-estar num continuum, incluindo enfrentar stress e participar; ansiedade, depressão, bipolaridade e esquizofrenia são tipos distintos, influenciados por determinantes individuais, sociais e estruturais."
       ],
-      "answer": 1,
-      "explanation": "A definição vai além da ausência de perturbação.",
-      "source": "Tema 8 — Saúde mental"
+      "answer": 3,
+      "explanation": "A definição positiva vai além de ausência de doença. Os slides enumeram vários tipos e determinantes, sem permitir diagnóstico pelo TEF nem atribuir todos os quadros a hábitos individuais.",
+      "source": "Tema 8, pp. 43–49"
     },
     {
       "id": "PEVSX080",
       "topic": "8. Doenças Não-Transmissíveis",
-      "difficulty": "very_hard",
+      "difficulty": "hard",
       "question_style": "single_best",
       "type": "multiple_choice",
-      "question": "Qual afirmação integra melhor AF e saúde mental?",
+      "question": "Qual estratégia integra melhor AF com promoção, prevenção e tratamento de saúde mental?",
       "options": [
-        "Benefícios psicológicos existem apenas em pessoas sem diagnóstico.",
-        "A intensidade deve ser sempre máxima para aumentar benefício psicológico.",
-        "A AF associa-se a benefícios em ansiedade, humor depressivo, sono, cognição e qualidade de vida, mas não substitui avaliação/tratamento clínico quando necessário.",
-        "A AF é tratamento suficiente para qualquer perturbação mental ligeira ou grave."
+        "Proteger direitos e condições de vida, articular setores e cuidados clínicos; AF adaptada pode apoiar sono, cognição, ansiedade e sintomas depressivos, sem substituir avaliação ou tratamento necessário.",
+        "Garantir cuidados clínicos, excluindo políticas sociais da prevenção e usando sempre intensidade máxima para potenciar prazer e adesão.",
+        "Promover condições de vida, mas reservar AF a pessoas sem perturbação porque os benefícios referidos não se aplicam após diagnóstico.",
+        "Proteger direitos e promover AF, considerando os benefícios suficientes para dispensar cuidados clínicos quando o cliente prefere exercício."
       ],
-      "answer": 2,
-      "explanation": "Os materiais mostram benefícios amplos, sem colocar o TEF no papel de terapeuta.",
-      "source": "Tema 8 — Saúde mental e AF"
+      "answer": 0,
+      "explanation": "A fonte apresenta prevenção e promoção intersetoriais e diferentes cuidados. Há evidência de benefícios em vários resultados, mas intensidade e contexto importam e a AF não equivale a tratamento universal.",
+      "source": "Tema 8, pp. 43–49"
     }
   ],
   "exams": {
@@ -1467,17 +1467,174 @@
     ]
   },
   "coverage_audit": {
-    "source": "Lista de Saberes — Promoção de Estilos de Vida Saudável",
+    "status": "source_reviewed",
+    "review_date": "2026-10-07",
+    "scope": "31 itens finais da Lista original em oito grupos. Resumo explícito e referências temáticas nos três bancos; não avaliação de cada frase/componente em cada exame nem previsão do exame.",
+    "total_saberes": 31,
+    "covered_saberes": 31,
     "coverage_percent": 100,
-    "topics": {
-      "1. Desinformação em Saúde": 10,
-      "2. Evidência Científica em Saúde": 10,
-      "3. Os Números da Atividade Física": 10,
-      "4. Conceitos de Saúde": 5,
-      "5. Conceitos de Atividade Física e Comportamento Sedentário": 5,
-      "6. Recomendações 24h": 10,
-      "7. Atividade Física Segura": 10,
-      "8. Doenças Não-Transmissíveis": 20
-    }
-  }
+    "matrix": "docs/PEVS_COVERAGE.json",
+    "map": {
+      "Conceitos: desinformação, misinformation, fake news e teorias da conspiração": [
+        "PEVSX001",
+        "PEVSX002",
+        "PEVSX003",
+        "PEVSX004"
+      ],
+      "Desinformação nas redes sociais e estratégias usadas nas Fake-News": [
+        "PEVSX005",
+        "PEVSX006",
+        "PEVSX007",
+        "PEVSX009"
+      ],
+      "Estratégias de prevenção e controlo": [
+        "PEVSX008",
+        "PEVSX010"
+      ],
+      "Pirâmide da evidência científica: tipos de estudos com evidência mais forte e mais fraca": [
+        "PEVSX011",
+        "PEVSX012",
+        "PEVSX020"
+      ],
+      "Artigos Científicos: revisão de pares como fator de publicação": [
+        "PEVSX012"
+      ],
+      "Inferência de Causalidade / Prevalência, incidência": [
+        "PEVSX013",
+        "PEVSX015"
+      ],
+      "Inferência de Causalidade / Correlações não são relações de causa-efeito": [
+        "PEVSX016",
+        "PEVSX018"
+      ],
+      "Inferência de Causalidade / Guidelines de causalidade": [
+        "PEVSX014",
+        "PEVSX017",
+        "PEVSX019"
+      ],
+      "Dados do Eurobarómetro 2022: / Diferenças para a AF e comportamento sedentário entre países da UE e Portugal": [
+        "PEVSX021",
+        "PEVSX022",
+        "PEVSX023",
+        "PEVSX024",
+        "PEVSX028"
+      ],
+      "Dados do Eurobarómetro 2022: / Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa": [
+        "PEVSX025",
+        "PEVSX026",
+        "PEVSX028"
+      ],
+      "Dados do Eurobarómetro 2022: / Incentivos e obstáculos à prática de exercício físico e desporto na população portuguesa": [
+        "PEVSX027",
+        "PEVSX029",
+        "PEVSX030"
+      ],
+      "Saúde, Saúde Pública, Promoção de Saúde e Educação para a Saúde": [
+        "PEVSX031",
+        "PEVSX032",
+        "PEVSX033",
+        "PEVSX034",
+        "PEVSX035"
+      ],
+      "Atividade Física, Exercício Físico, Desporto e Aptidão Física": [
+        "PEVSX037",
+        "PEVSX038"
+      ],
+      "Comportamento sedentário (Adultos e Crianças < 1 ano)": [
+        "PEVSX039",
+        "PEVSX040"
+      ],
+      "Sedentarismo e Inatividade física (Inativo e Sedentário)": [
+        "PEVSX036"
+      ],
+      "Recomendações para a prática de Atividade Física": [
+        "PEVSX041",
+        "PEVSX042",
+        "PEVSX043",
+        "PEVSX044",
+        "PEVSX045",
+        "PEVSX046"
+      ],
+      "Recomendações sobre o Comportamento Sedentário": [
+        "PEVSX041",
+        "PEVSX042",
+        "PEVSX044",
+        "PEVSX045",
+        "PEVSX047"
+      ],
+      "Recomendações sobre o Sono": [
+        "PEVSX049"
+      ],
+      "Relação entre inatividade física, comportamento sedentário e várias condições de saúde, por faixa etária": [
+        "PEVSX048",
+        "PEVSX050"
+      ],
+      "Lesões musculoesqueléticas e complicações cardiovasculares / Tipos": [
+        "PEVSX051",
+        "PEVSX052",
+        "PEVSX053"
+      ],
+      "Lesões musculoesqueléticas e complicações cardiovasculares / Prevenção": [
+        "PEVSX052",
+        "PEVSX054"
+      ],
+      "Vigorexia – dismorfia muscular / Definição": [
+        "PEVSX055",
+        "PEVSX056"
+      ],
+      "Vigorexia – dismorfia muscular / Consequências": [
+        "PEVSX055"
+      ],
+      "Consumo de substâncias dopantes / Definição": [
+        "PEVSX059"
+      ],
+      "Consumo de substâncias dopantes / Riscos para a saúde": [
+        "PEVSX057",
+        "PEVSX058",
+        "PEVSX059",
+        "PEVSX060"
+      ],
+      "Doenças Cardiovasculares – Definição, causas, sintomas, prevenção, Tratamento, Relação Atividade Física e Comportamento Sedentário": [
+        "PEVSX061",
+        "PEVSX062",
+        "PEVSX063",
+        "PEVSX064"
+      ],
+      "Hipertensão – definição, causas, consequências, sintomas, diagnostico e valores de referência, procedimentos de diagnostico, prevenção e controlo e relação com atividade física": [
+        "PEVSX065",
+        "PEVSX066",
+        "PEVSX067",
+        "PEVSX068"
+      ],
+      "Diabetes – Definição, causas, valores de referência para diagnóstico, sintomas, tipos, prevenção, tratamento, relação Atividade Física e Comportamento Sedentário": [
+        "PEVSX069",
+        "PEVSX070",
+        "PEVSX071",
+        "PEVSX072"
+      ],
+      "Excesso de peso e obesidade – definição, valores de referência (adultos), causas, consequências, prevenção e tratamento, e relação com atividade física": [
+        "PEVSX073",
+        "PEVSX074",
+        "PEVSX075"
+      ],
+      "Cancro - definição, prevenção e tratamento, relação com atividade física e comportamento sedentário": [
+        "PEVSX076",
+        "PEVSX077",
+        "PEVSX078"
+      ],
+      "Saúde mental – definição, tipos, prevenção e tratamento e relação com atividade física": [
+        "PEVSX079",
+        "PEVSX080"
+      ]
+    },
+    "limitations": [
+      "Divergências no ecrã e limite exato de 2 anos no Tema 6: não usados como única distinção da chave.",
+      "Valores históricos e quadros clínicos são os fornecidos, não recomendações clínicas universais.",
+      "Questões aplicadas distinguem interpretação/inferência dos dados de afirmações expressas nos slides.",
+      "Projeto comunitário e enquadramento do Tema 0 são complementos no resumo, não novos temas do banco."
+    ],
+    "exam_scope": "Cada exame cobre os oito temas; não necessariamente cada item composto da Lista."
+  },
+  "answer_order": "shuffled_in_stored_json",
+  "answer_distribution_policy": "Randomização sem equilíbrio imposto; índices recalculados."
 }

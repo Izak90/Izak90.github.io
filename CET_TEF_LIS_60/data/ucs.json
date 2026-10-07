@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "ucs": [
+    {
+      "slug": "pevs",
+      "title": "Promoção de Estilos de Vida Saudável",
+      "order": 1,
+      "summary": "./centro_estudo/pevs_resumo.html",
+      "training": "./centro_estudo/pevs_treino.html",
+      "simulator": "./centro_estudo/pevs_simulador.html",
+      "workbook": "./simuladores/uc03_promocao_de_estilos_de_vida_saudavel.html",
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/pevs_banco_80_perguntas.json"
+        },
+        {
+          "id": "medium",
+          "label": "Médio",
+          "bank": "./centro_estudo/pevs_banco_80_perguntas_medio.json"
+        },
+        {
+          "id": "hard",
+          "label": "Difícil",
+          "bank": "./centro_estudo/pevs_banco_80_perguntas_dificil.json"
+        }
+      ],
+      "trainer": "Inês Nobre",
+      "driveUrl": "https://drive.google.com/drive/folders/1-s7tqNJBE_OCEZB0HLnrL8f-BhesHY2M",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/",
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "source_reviewed",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "cf",
+      "title": "Coaching no Fitness",
+      "order": 2,
+      "summary": "./centro_estudo/cf_resumo.html",
+      "training": "./centro_estudo/cf_treino.html",
+      "simulator": "./centro_estudo/cf_simulador.html",
+      "workbook": "./simuladores/uc01_coaching_no_fitness.html",
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/cf_banco_80_perguntas.json"
+        },
+        {
+          "id": "medium",
+          "label": "Médio",
+          "bank": "./centro_estudo/cf_banco_80_perguntas_medio.json"
+        },
+        {
+          "id": "hard",
+          "label": "Difícil",
+          "bank": "./centro_estudo/cf_banco_80_perguntas_dificil.json"
+        }
+      ],
+      "trainer": "Ricardo Costa",
+      "driveUrl": "https://drive.google.com/drive/folders/1wGJjtKQaki0lBI_GjmGjSovVq5i_QDrq",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-9-2-4/",
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "source_reviewed",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "pedex",
+      "title": "Pedagogia do Exercício",
+      "order": 3,
+      "summary": "./centro_estudo/pedex_resumo.html",
+      "training": "./centro_estudo/pedex_treino.html",
+      "simulator": "./centro_estudo/pedex_simulador.html",
+      "workbook": "./simuladores/uc02_pedagogia_do_exercicio.html",
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/pedex_banco_80_perguntas.json"
+        },
+        {
+          "id": "medium",
+          "label": "Médio",
+          "bank": "./centro_estudo/pedex_banco_80_perguntas_medio.json"
+        },
+        {
+          "id": "hard",
+          "label": "Difícil",
+          "bank": "./centro_estudo/pedex_banco_80_perguntas_dificil.json"
+        }
+      ],
+      "trainer": "Miguel Leitão",
+      "driveUrl": "https://drive.google.com/drive/folders/1HXe8U5CjuvrZRTXPH5TdEO-Cec8RRE5f",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-7-2-4/",
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "source_reviewed",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "fisiologia-do-exercicio",
+      "title": "Fisiologia do Exercício",
+      "order": 4,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "psicologia-do-exercicio",
+      "title": "Psicologia do Exercício",
+      "order": 5,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc04_psicologia_do_exercicio.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "aulas-de-grupo",
+      "title": "Aulas de Grupo",
+      "order": 6,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1koNxUo0LOSevh5yoFJeVwA1Qnggx_MKN",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "comunicacao-no-fitness",
+      "title": "Comunicação no Fitness",
+      "order": 7,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc05_comunicacao_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "etica-e-deontologia-no-fitness",
+      "title": "Ética e Deontologia no Fitness",
+      "order": 8,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc15_etica_e_deontologia_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "marketing-no-fitness",
+      "title": "Marketing no Fitness",
+      "order": 9,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc11_marketing_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "aplicacoes-digitais",
+      "title": "Aplicações Digitais",
+      "order": 10,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc08_aplicacoes_digitais.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/19HIntsUWz6nIi_UXf9u5T8dxxelw4Nsa",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "avaliacao-e-prescricao-de-exercicio",
+      "title": "Avaliação e Prescrição de Exercício",
+      "order": 11,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1STB8DlSCWoexUqjZCLcNRrLor8mJKltz",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "treino-de-fitness-online",
+      "title": "Treino de Fitness Online",
+      "order": 12,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc14_treino_de_fitness_online.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1aO6NZIhWlpDsf0Mfj1SK4YSR4HumXL1Y",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "ingles-no-fitness",
+      "title": "Inglês no Fitness",
+      "order": 13,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc06_ingles_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1WAntr141CDbdlYTeYqy_HDcDTzzTAQ0I",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "satisfacao-de-clientes-no-fitness",
+      "title": "Satisfação de Clientes no Fitness",
+      "order": 14,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc13_satisfacao_de_clientes_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1JnqT343qguHvMltZ2avt7iQXbH7cySx0",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "treino-para-populacoes-especiais",
+      "title": "Treino para Populações Especiais",
+      "order": 15,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1oWf0EgGwClFFoLcsx6ZLrDzmTny7HRDb",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "treino-outdoor",
+      "title": "Treino Outdoor",
+      "order": 16,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1IFS9MQB80AKBs9yacOdIiVoJ0cWnLhOo",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "hidroginastica",
+      "title": "Hidroginástica",
+      "order": 17,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1UWVEQ1ka7FR2Kz_Sa_guw0_x5_xru1L2",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "body-e-mind",
+      "title": "Body & Mind",
+      "order": 18,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1nDYudGDNsyqBNhv3Zk2NgHl47ITchuYU",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "empreendedorismo-no-fitness",
+      "title": "Empreendedorismo no Fitness",
+      "order": 19,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc17_empreendedorismo_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1eejDdjB81Ucqui9RNXLiu3dvHMwKPR-Q",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "treino-personalizado",
+      "title": "Treino personalizado",
+      "order": 20,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1MfS0FaLqt8Mz_ByMS7aDI9gETolgRZsL",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "colaborar-em-equipa",
+      "title": "Colaborar em equipa",
+      "order": 21,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1qjZohG48ioeB1BGJTt-rwGyQUD0KBn_C",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "nutricao-e-suplementacao",
+      "title": "Nutrição e Suplementação",
+      "order": 22,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc10_nutricao_e_suplementacao.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/10jymW79m4k41FhwukS6bVBSpd-qrBabV",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "primeiros-socorros-no-exercicio",
+      "title": "Primeiros Socorros no Exercício",
+      "order": 23,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc09_primeiros_socorros_no_exercicio.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1LFLqdf_OopIIsvecJ7yyUi9F16y_ii12",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "biomecanica-do-exercicio",
+      "title": "Biomecânica do Exercício",
+      "order": 24,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc07_biomecanica_do_exercicio.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1QJoLZ1g4qQA6H7ofjocnquB8uu3vqzgX",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "gestao-de-clientes-no-fitness",
+      "title": "Gestão de clientes no Fitness",
+      "order": 25,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc12_gestao_de_clientes_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1bXaywTML2ptFiMdw2FH3zpnXhXguy9cd",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    },
+    {
+      "slug": "anatomia-do-movimento",
+      "title": "Anatomia do movimento",
+      "order": 26,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": null,
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1jQAF4Rl-xTGR-OIBODnj0i74SW1_38cf",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "no_exercises_reported"
+      }
+    },
+    {
+      "slug": "gestao-no-fitness",
+      "title": "Gestão no Fitness",
+      "order": 27,
+      "summary": null,
+      "training": null,
+      "simulator": null,
+      "workbook": "./simuladores/uc16_gestao_no_fitness.html",
+      "difficulties": [],
+      "trainer": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1IQVKz-y0_zF2aRJyo-CzSPmUqdfGPxL9",
+      "asynchronousClass": null,
+      "sourceStatus": {
+        "materials": "linked_not_imported",
+        "coverage": "not_audited",
+        "workbook": "transcribed_unverified_key"
+      }
+    }
+  ]
+}

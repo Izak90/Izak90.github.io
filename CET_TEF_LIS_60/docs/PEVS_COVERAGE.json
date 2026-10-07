@@ -1,0 +1,1104 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "scope": "31 itens finais da Lista original em oito grupos. Resumo explícito e referências temáticas nos três bancos; não avaliação de cada frase/componente em cada exame nem previsão do exame.",
+  "groups": [
+    {
+      "title": "1. Desinformação em Saúde",
+      "nodes": [
+        {
+          "saber": "Conceitos: desinformação, misinformation, fake news e teorias da conspiração",
+          "children": []
+        },
+        {
+          "saber": "Desinformação nas redes sociais e estratégias usadas nas Fake-News",
+          "children": []
+        },
+        {
+          "saber": "Estratégias de prevenção e controlo",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "2. Evidência Científica em Saúde",
+      "nodes": [
+        {
+          "saber": "Pirâmide da evidência científica: tipos de estudos com evidência mais forte e mais fraca",
+          "children": []
+        },
+        {
+          "saber": "Artigos Científicos: revisão de pares como fator de publicação",
+          "children": []
+        },
+        {
+          "saber": "Inferência de Causalidade",
+          "children": [
+            "Prevalência, incidência",
+            "Correlações não são relações de causa-efeito",
+            "Guidelines de causalidade"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Os Números da Atividade Física",
+      "nodes": [
+        {
+          "saber": "Dados do Eurobarómetro 2022:",
+          "children": [
+            "Diferenças para a AF e comportamento sedentário entre países da UE e Portugal",
+            "Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa",
+            "Incentivos e obstáculos à prática de exercício físico e desporto na população portuguesa"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Conceitos de Saúde",
+      "nodes": [
+        {
+          "saber": "Saúde, Saúde Pública, Promoção de Saúde e Educação para a Saúde",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "nodes": [
+        {
+          "saber": "Atividade Física, Exercício Físico, Desporto e Aptidão Física",
+          "children": []
+        },
+        {
+          "saber": "Comportamento sedentário (Adultos e Crianças < 1 ano)",
+          "children": []
+        },
+        {
+          "saber": "Sedentarismo e Inatividade física (Inativo e Sedentário)",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "nodes": [
+        {
+          "saber": "Recomendações para a prática de Atividade Física",
+          "children": []
+        },
+        {
+          "saber": "Recomendações sobre o Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Recomendações sobre o Sono",
+          "children": []
+        },
+        {
+          "saber": "Relação entre inatividade física, comportamento sedentário e várias condições de saúde, por faixa etária",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "nodes": [
+        {
+          "saber": "Lesões musculoesqueléticas e complicações cardiovasculares",
+          "children": [
+            "Tipos",
+            "Prevenção"
+          ]
+        },
+        {
+          "saber": "Vigorexia – dismorfia muscular",
+          "children": [
+            "Definição",
+            "Consequências"
+          ]
+        },
+        {
+          "saber": "Consumo de substâncias dopantes",
+          "children": [
+            "Definição",
+            "Riscos para a saúde"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "nodes": [
+        {
+          "saber": "Doenças Cardiovasculares – Definição, causas, sintomas, prevenção, Tratamento, Relação Atividade Física e Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Hipertensão – definição, causas, consequências, sintomas, diagnostico e valores de referência, procedimentos de diagnostico, prevenção e controlo e relação com atividade física",
+          "children": []
+        },
+        {
+          "saber": "Diabetes – Definição, causas, valores de referência para diagnóstico, sintomas, tipos, prevenção, tratamento, relação Atividade Física e Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Excesso de peso e obesidade – definição, valores de referência (adultos), causas, consequências, prevenção e tratamento, e relação com atividade física",
+          "children": []
+        },
+        {
+          "saber": "Cancro - definição, prevenção e tratamento, relação com atividade física e comportamento sedentário",
+          "children": []
+        },
+        {
+          "saber": "Saúde mental – definição, tipos, prevenção e tratamento e relação com atividade física",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Conceitos: desinformação, misinformation, fake news e teorias da conspiração",
+      "summary": [
+        "pevs-detail-001"
+      ],
+      "section": "desinfo",
+      "source": "Tema 1, 2, 3, pp. 3–5",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS001",
+          "PEVS002",
+          "PEVS003",
+          "PEVS004",
+          "PEVS005"
+        ],
+        "medium": [
+          "PEVSH001",
+          "PEVSH002",
+          "PEVSH003",
+          "PEVSH004"
+        ],
+        "hard": [
+          "PEVSX001",
+          "PEVSX002",
+          "PEVSX003",
+          "PEVSX004"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Desinformação nas redes sociais e estratégias usadas nas Fake-News",
+      "summary": [
+        "pevs-detail-002"
+      ],
+      "section": "desinfo",
+      "source": "Tema 1, 2, 3, pp. 6, 8",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS006"
+        ],
+        "medium": [
+          "PEVSH005",
+          "PEVSH006",
+          "PEVSH007"
+        ],
+        "hard": [
+          "PEVSX005",
+          "PEVSX006",
+          "PEVSX007",
+          "PEVSX009"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Estratégias de prevenção e controlo",
+      "summary": [
+        "pevs-detail-003"
+      ],
+      "section": "desinfo",
+      "source": "Tema 1, 2, 3, pp. 7–9",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS007",
+          "PEVS008",
+          "PEVS009",
+          "PEVS010"
+        ],
+        "medium": [
+          "PEVSH008",
+          "PEVSH009",
+          "PEVSH010"
+        ],
+        "hard": [
+          "PEVSX008",
+          "PEVSX010"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": null,
+      "saber": "Pirâmide da evidência científica: tipos de estudos com evidência mais forte e mais fraca",
+      "summary": [
+        "pevs-detail-004"
+      ],
+      "section": "evidencia",
+      "source": "Tema 1, 2, 3, p. 11",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS011",
+          "PEVS012",
+          "PEVS019",
+          "PEVS020"
+        ],
+        "medium": [
+          "PEVSH011",
+          "PEVSH012",
+          "PEVSH020"
+        ],
+        "hard": [
+          "PEVSX011",
+          "PEVSX012",
+          "PEVSX020"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": null,
+      "saber": "Artigos Científicos: revisão de pares como fator de publicação",
+      "summary": [
+        "pevs-detail-005"
+      ],
+      "section": "evidencia",
+      "source": "Tema 1, 2, 3, pp. 11–13",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS013"
+        ],
+        "medium": [
+          "PEVSH013"
+        ],
+        "hard": [
+          "PEVSX012"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Prevalência, incidência",
+      "summary": [
+        "pevs-detail-006"
+      ],
+      "section": "evidencia",
+      "source": "Tema 1, 2, 3, p. 16",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS014",
+          "PEVS015"
+        ],
+        "medium": [
+          "PEVSH014",
+          "PEVSH015"
+        ],
+        "hard": [
+          "PEVSX013",
+          "PEVSX015"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Correlações não são relações de causa-efeito",
+      "summary": [
+        "pevs-detail-007"
+      ],
+      "section": "evidencia",
+      "source": "Tema 1, 2, 3, pp. 17–18",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS016"
+        ],
+        "medium": [
+          "PEVSH016",
+          "PEVSH018"
+        ],
+        "hard": [
+          "PEVSX016",
+          "PEVSX018"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Guidelines de causalidade",
+      "summary": [
+        "pevs-detail-007"
+      ],
+      "section": "evidencia",
+      "source": "Tema 1, 2, 3, pp. 17–18",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS017",
+          "PEVS018"
+        ],
+        "medium": [
+          "PEVSH017",
+          "PEVSH019"
+        ],
+        "hard": [
+          "PEVSX014",
+          "PEVSX017",
+          "PEVSX019"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Diferenças para a AF e comportamento sedentário entre países da UE e Portugal",
+      "summary": [
+        "pevs-detail-008",
+        "pevs-detail-010"
+      ],
+      "section": "numeros",
+      "source": "Tema 1, 2, 3, pp. 19–23; Tema 1, 2, 3, pp. 22–24",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS021",
+          "PEVS022",
+          "PEVS023",
+          "PEVS024"
+        ],
+        "medium": [
+          "PEVSH021",
+          "PEVSH022",
+          "PEVSH023",
+          "PEVSH024",
+          "PEVSH028"
+        ],
+        "hard": [
+          "PEVSX021",
+          "PEVSX022",
+          "PEVSX023",
+          "PEVSX024",
+          "PEVSX028"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa",
+      "summary": [
+        "pevs-detail-009",
+        "pevs-detail-010"
+      ],
+      "section": "numeros",
+      "source": "Tema 1, 2, 3, pp. 22–23; Tema 1, 2, 3, pp. 22–24",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS025",
+          "PEVS028",
+          "PEVS030"
+        ],
+        "medium": [
+          "PEVSH025",
+          "PEVSH026",
+          "PEVSH028"
+        ],
+        "hard": [
+          "PEVSX025",
+          "PEVSX026",
+          "PEVSX028"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Incentivos e obstáculos à prática de exercício físico e desporto na população portuguesa",
+      "summary": [
+        "pevs-detail-011"
+      ],
+      "section": "numeros",
+      "source": "Tema 1, 2, 3, pp. 24–25",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS026",
+          "PEVS027"
+        ],
+        "medium": [
+          "PEVSH027",
+          "PEVSH030"
+        ],
+        "hard": [
+          "PEVSX027",
+          "PEVSX029",
+          "PEVSX030"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "4. Conceitos de Saúde",
+      "parent": null,
+      "saber": "Saúde, Saúde Pública, Promoção de Saúde e Educação para a Saúde",
+      "summary": [
+        "pevs-detail-012",
+        "pevs-detail-013",
+        "pevs-detail-014"
+      ],
+      "section": "saude",
+      "source": "Tema 4.5_Aula Assíncrona, pp. 3–6; Tema 4.5_Aula Assíncrona, pp. 7–13; Tema 4.5_Aula Assíncrona, pp. 14–16",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS031",
+          "PEVS032",
+          "PEVS033",
+          "PEVS034",
+          "PEVS035"
+        ],
+        "medium": [
+          "PEVSH031",
+          "PEVSH032",
+          "PEVSH033",
+          "PEVSH034",
+          "PEVSH035"
+        ],
+        "hard": [
+          "PEVSX031",
+          "PEVSX032",
+          "PEVSX033",
+          "PEVSX034",
+          "PEVSX035"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Atividade Física, Exercício Físico, Desporto e Aptidão Física",
+      "summary": [
+        "pevs-detail-015"
+      ],
+      "section": "conceitos",
+      "source": "Tema 4.5_Aula Assíncrona, pp. 17, 21–23",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS036",
+          "PEVS037",
+          "PEVS038"
+        ],
+        "medium": [
+          "PEVSH036",
+          "PEVSH037",
+          "PEVSH038"
+        ],
+        "hard": [
+          "PEVSX037",
+          "PEVSX038"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Comportamento sedentário (Adultos e Crianças < 1 ano)",
+      "summary": [
+        "pevs-detail-017"
+      ],
+      "section": "conceitos",
+      "source": "Tema 4.5_Aula Assíncrona, pp. 24–25",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS039"
+        ],
+        "medium": [
+          "PEVSH040"
+        ],
+        "hard": [
+          "PEVSX039",
+          "PEVSX040"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Sedentarismo e Inatividade física (Inativo e Sedentário)",
+      "summary": [
+        "pevs-detail-018"
+      ],
+      "section": "conceitos",
+      "source": "Tema 4.5_Aula Assíncrona, pp. 26–31",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS040"
+        ],
+        "medium": [
+          "PEVSH039"
+        ],
+        "hard": [
+          "PEVSX036"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações para a prática de Atividade Física",
+      "summary": [
+        "pevs-detail-019",
+        "pevs-detail-020",
+        "pevs-detail-021",
+        "pevs-detail-022"
+      ],
+      "section": "rec24",
+      "source": "Tema 6, pp. 3–5, 14; Tema 6, pp. 6–8, 14; Tema 6, pp. 9–11, 14; Tema 6, pp. 12–14",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS041",
+          "PEVS042",
+          "PEVS043",
+          "PEVS044",
+          "PEVS045",
+          "PEVS046"
+        ],
+        "medium": [
+          "PEVSH041",
+          "PEVSH042",
+          "PEVSH043",
+          "PEVSH044",
+          "PEVSH045",
+          "PEVSH046"
+        ],
+        "hard": [
+          "PEVSX041",
+          "PEVSX042",
+          "PEVSX043",
+          "PEVSX044",
+          "PEVSX045",
+          "PEVSX046"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações sobre o Comportamento Sedentário",
+      "summary": [
+        "pevs-detail-019",
+        "pevs-detail-020",
+        "pevs-detail-021",
+        "pevs-detail-022"
+      ],
+      "section": "rec24",
+      "source": "Tema 6, pp. 3–5, 14; Tema 6, pp. 6–8, 14; Tema 6, pp. 9–11, 14; Tema 6, pp. 12–14",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS041",
+          "PEVS042",
+          "PEVS043",
+          "PEVS047"
+        ],
+        "medium": [
+          "PEVSH040",
+          "PEVSH041",
+          "PEVSH042",
+          "PEVSH043",
+          "PEVSH044",
+          "PEVSH047"
+        ],
+        "hard": [
+          "PEVSX041",
+          "PEVSX042",
+          "PEVSX044",
+          "PEVSX045",
+          "PEVSX047"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações sobre o Sono",
+      "summary": [
+        "pevs-detail-019",
+        "pevs-detail-020",
+        "pevs-detail-021",
+        "pevs-detail-022"
+      ],
+      "section": "rec24",
+      "source": "Tema 6, pp. 3–5, 14; Tema 6, pp. 6–8, 14; Tema 6, pp. 9–11, 14; Tema 6, pp. 12–14",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS048"
+        ],
+        "medium": [
+          "PEVSH048"
+        ],
+        "hard": [
+          "PEVSX049"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Relação entre inatividade física, comportamento sedentário e várias condições de saúde, por faixa etária",
+      "summary": [
+        "pevs-detail-019",
+        "pevs-detail-020",
+        "pevs-detail-021",
+        "pevs-detail-022",
+        "pevs-detail-023"
+      ],
+      "section": "rec24",
+      "source": "Tema 6, pp. 3–5, 14; Tema 6, pp. 6–8, 14; Tema 6, pp. 9–11, 14; Tema 6, pp. 12–14; Tema 6, pp. 14–20",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS049",
+          "PEVS050"
+        ],
+        "medium": [
+          "PEVSH049",
+          "PEVSH050"
+        ],
+        "hard": [
+          "PEVSX048",
+          "PEVSX050"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Lesões musculoesqueléticas e complicações cardiovasculares",
+      "saber": "Tipos",
+      "summary": [
+        "pevs-detail-024"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 3–4",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS051",
+          "PEVS052",
+          "PEVS053",
+          "PEVS054"
+        ],
+        "medium": [
+          "PEVSH051",
+          "PEVSH052",
+          "PEVSH053",
+          "PEVSH054"
+        ],
+        "hard": [
+          "PEVSX051",
+          "PEVSX052",
+          "PEVSX053"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Lesões musculoesqueléticas e complicações cardiovasculares",
+      "saber": "Prevenção",
+      "summary": [
+        "pevs-detail-024"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 3–4",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS055"
+        ],
+        "medium": [
+          "PEVSH055"
+        ],
+        "hard": [
+          "PEVSX052",
+          "PEVSX054"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Vigorexia – dismorfia muscular",
+      "saber": "Definição",
+      "summary": [
+        "pevs-detail-025"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 5–6",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS056"
+        ],
+        "medium": [
+          "PEVSH056"
+        ],
+        "hard": [
+          "PEVSX055",
+          "PEVSX056"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Vigorexia – dismorfia muscular",
+      "saber": "Consequências",
+      "summary": [
+        "pevs-detail-025"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 5–6",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS057"
+        ],
+        "medium": [
+          "PEVSH057"
+        ],
+        "hard": [
+          "PEVSX055"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Consumo de substâncias dopantes",
+      "saber": "Definição",
+      "summary": [
+        "pevs-detail-026"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 6–7",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS058"
+        ],
+        "medium": [
+          "PEVSH058"
+        ],
+        "hard": [
+          "PEVSX059"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Consumo de substâncias dopantes",
+      "saber": "Riscos para a saúde",
+      "summary": [
+        "pevs-detail-027"
+      ],
+      "section": "segura",
+      "source": "Tema 7, pp. 8–10",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS059",
+          "PEVS060"
+        ],
+        "medium": [
+          "PEVSH059",
+          "PEVSH060"
+        ],
+        "hard": [
+          "PEVSX057",
+          "PEVSX058",
+          "PEVSX059",
+          "PEVSX060"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Doenças Cardiovasculares – Definição, causas, sintomas, prevenção, Tratamento, Relação Atividade Física e Comportamento Sedentário",
+      "summary": [
+        "pevs-detail-029",
+        "pevs-detail-030",
+        "pevs-detail-031"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 3–4; Tema 8, p. 5; Tema 8, pp. 5–7",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS061",
+          "PEVS062",
+          "PEVS063",
+          "PEVS064"
+        ],
+        "medium": [
+          "PEVSH061",
+          "PEVSH062",
+          "PEVSH063",
+          "PEVSH064"
+        ],
+        "hard": [
+          "PEVSX061",
+          "PEVSX062",
+          "PEVSX063",
+          "PEVSX064"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Hipertensão – definição, causas, consequências, sintomas, diagnostico e valores de referência, procedimentos de diagnostico, prevenção e controlo e relação com atividade física",
+      "summary": [
+        "pevs-detail-032",
+        "pevs-detail-033",
+        "pevs-detail-034"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 8, 10–12; Tema 8, pp. 9–10; Tema 8, pp. 12–14",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS065",
+          "PEVS066",
+          "PEVS067",
+          "PEVS068"
+        ],
+        "medium": [
+          "PEVSH065",
+          "PEVSH066",
+          "PEVSH067",
+          "PEVSH068",
+          "PEVSH069"
+        ],
+        "hard": [
+          "PEVSX065",
+          "PEVSX066",
+          "PEVSX067",
+          "PEVSX068"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Diabetes – Definição, causas, valores de referência para diagnóstico, sintomas, tipos, prevenção, tratamento, relação Atividade Física e Comportamento Sedentário",
+      "summary": [
+        "pevs-detail-035",
+        "pevs-detail-036",
+        "pevs-detail-037"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 15–16; Tema 8, pp. 17–19; Tema 8, pp. 20–22",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS069",
+          "PEVS070",
+          "PEVS071",
+          "PEVS072"
+        ],
+        "medium": [
+          "PEVSH070",
+          "PEVSH071",
+          "PEVSH072",
+          "PEVSH073"
+        ],
+        "hard": [
+          "PEVSX069",
+          "PEVSX070",
+          "PEVSX071",
+          "PEVSX072"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Excesso de peso e obesidade – definição, valores de referência (adultos), causas, consequências, prevenção e tratamento, e relação com atividade física",
+      "summary": [
+        "pevs-detail-038",
+        "pevs-detail-039",
+        "pevs-detail-040"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 26–28; Tema 8, pp. 29–31; Tema 8, pp. 31–33",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS073",
+          "PEVS074",
+          "PEVS075"
+        ],
+        "medium": [
+          "PEVSH074",
+          "PEVSH075",
+          "PEVSH076"
+        ],
+        "hard": [
+          "PEVSX073",
+          "PEVSX074",
+          "PEVSX075"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Cancro - definição, prevenção e tratamento, relação com atividade física e comportamento sedentário",
+      "summary": [
+        "pevs-detail-041",
+        "pevs-detail-042",
+        "pevs-detail-043"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 37–39; Tema 8, pp. 40–41; Tema 8, pp. 41–42",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS076",
+          "PEVS077",
+          "PEVS078"
+        ],
+        "medium": [
+          "PEVSH077",
+          "PEVSH078"
+        ],
+        "hard": [
+          "PEVSX076",
+          "PEVSX077",
+          "PEVSX078"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Saúde mental – definição, tipos, prevenção e tratamento e relação com atividade física",
+      "summary": [
+        "pevs-detail-044",
+        "pevs-detail-045"
+      ],
+      "section": "dnt",
+      "source": "Tema 8, pp. 43–45; Tema 8, pp. 46–49",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "PEVS079",
+          "PEVS080"
+        ],
+        "medium": [
+          "PEVSH079",
+          "PEVSH080"
+        ],
+        "hard": [
+          "PEVSX079",
+          "PEVSX080"
+        ]
+      },
+      "bank_scope": "Referências temáticas: perguntas amostram o item; entradas compostas não significam que cada componente é perguntado isoladamente."
+    }
+  ],
+  "summary_detail_count": 45,
+  "question_count": 240,
+  "source_documents": [
+    {
+      "file": "Tema 0.pdf",
+      "sha256": "ba4afd9e7a300264675db742e0fb42b0fd269ba6b8dc0e59d742653c5bce34ad"
+    },
+    {
+      "file": "Tema 1, 2, 3.pdf",
+      "sha256": "3242aac11c4e8c855dd5acf907b1a6f2baf75c9801eb9e29f3819a0aa45545c7"
+    },
+    {
+      "file": "Tema 4.5_Aula Assíncrona.pdf",
+      "sha256": "c17a62a67827ae128ac81174e6df252799db6616d45a33476df9f3835f83ef98"
+    },
+    {
+      "file": "Tema 6.pdf",
+      "sha256": "7e86de459a8e0d7b943baf6238f51fdd25b3d93c97986f9171845f38e439c304"
+    },
+    {
+      "file": "Tema 7.pdf",
+      "sha256": "73780ba09a8776c36880e379e287f9dce58eae7290f727c413772d4ea00e72c3"
+    },
+    {
+      "file": "Tema 8.pdf",
+      "sha256": "10667d6d9612da873ba390b6404bf5dca0a82cd01f9ca4cd6f3ff721f7a371d8"
+    },
+    {
+      "file": "Lista de saberes.pdf",
+      "sha256": "28b2bab9cbb67ae89134a2d96e0b4f04d7aa25eab7aaba27301af4b4c607d8ff"
+    }
+  ],
+  "limitations": [
+    "Divergências no ecrã e limite exato de 2 anos no Tema 6: não usados como única distinção da chave.",
+    "Valores históricos e quadros clínicos são os fornecidos, não recomendações clínicas universais.",
+    "Questões aplicadas distinguem interpretação/inferência dos dados de afirmações expressas nos slides.",
+    "Projeto comunitário e enquadramento do Tema 0 são complementos no resumo, não novos temas do banco."
+  ]
+}

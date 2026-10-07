@@ -6,8 +6,10 @@ const os = require('node:os');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..');
 const mount = '/CET_TEF_LIS_60';
-// Simula o cache v18 sem editar ficheiros.
-const previousSW = fs.readFileSync(path.join(root,'sw.js'),'utf8').replace("'cet-tef-v19'", "'cet-tef-v18'");
+const registry = JSON.parse(fs.readFileSync(path.join(root, 'data/ucs.json'), 'utf8'));
+const difficulties = uc => registry.ucs.find(item => item.slug === uc).difficulties.map(item => item.id);
+// Simula o cache v21 sem editar ficheiros.
+const previousSW = fs.readFileSync(path.join(root,'sw.js'),'utf8').replace("'cet-tef-v22'", "'cet-tef-v21'");
 let servePreviousSW = false;
 const report = { checks: [], errors: [], warnings: [] };
 const check = (name, value) => { assert.ok(value, name); report.checks.push(name); if(report.checks.length % 25 === 0) console.log(`${report.checks.length} checks passed`); };
@@ -67,7 +69,7 @@ async function summaries() {
     }
     const manualTarget = await links.nth(2).getAttribute('data-section');
     await page.evaluate(id=>{window.dispatchEvent(new WheelEvent('wheel',{deltaY:50}));const offset=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--study-topic-offset'));window.scrollTo({top:document.getElementById(id).getBoundingClientRect().top+scrollY-offset+1,behavior:'instant'});},manualTarget);
-    await page.waitForTimeout(150);
+    await page.waitForFunction(id=>document.querySelector(`.study-nav[data-section="${id}"]`)?.classList.contains('is-active'),manualTarget,{timeout:5000});
     check(uc + ': manual scroll selects topic', await links.nth(2).evaluate(el=>el.classList.contains('is-active')));
     await page.locator('#uc-local-nav a').filter({hasText:'Treino'}).click();
     await page.waitForSelector('#setup:not(.hidden)');
@@ -83,7 +85,7 @@ async function training() {
   for (const uc of ['pevs', 'pedex', 'cf']) {
     await open(`/centro_estudo/${uc}_treino.html`);
     await page.waitForSelector('#setup:not(.hidden)');
-    for (const diff of uc === 'pevs' ? ['easy','medium','hard'] : ['easy']) {
+    for (const diff of difficulties(uc)) {
       const bank = readBank(uc,diff);
       await page.evaluate(d => setTrainingDifficulty(d, false), diff);
       await page.evaluate(() => startRandom(10));
@@ -120,7 +122,7 @@ async function exams() {
   for(const uc of ['pevs','pedex','cf']) {
     await open(`/centro_estudo/${uc}_simulador.html`);
     await page.waitForSelector('#home:not(.hidden)');
-    for(const diff of uc==='pevs'?['easy','medium','hard']:['easy']) for(const key of ['exam1','exam2']) {
+    for(const diff of difficulties(uc)) for(const key of ['exam1','exam2']) {
       const bank=readBank(uc,diff), by=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
       await page.evaluate(({diff,key})=>startExam(diff,key),{diff,key});
       check(`${uc}/${diff}/${key}: 40 questions`, await page.evaluate(()=>simulatorState.ids.length===40));
@@ -204,6 +206,38 @@ async function responsive() {
   await page.waitForTimeout(100);
   await layout('search open after resize');
   await page.screenshot({path:path.join(os.tmpdir(),'academy-p0-search.png'),fullPage:false});
+  await open('/centro_estudo/pevs_resumo.html#pevs-detail-033');
+  await layout('PEVS detailed summary / 390');
+  check('PEVS: initial deep link selects containing topic',await page.locator('.study-nav[data-section="dnt"]').evaluate(el=>el.classList.contains('is-active')));
+  check('PEVS: initial deep link clears sticky shell',await page.evaluate(()=>document.getElementById('pevs-detail-033').getBoundingClientRect().top>=document.getElementById('topic-nav').getBoundingClientRect().bottom-1));
+  await page.waitForTimeout(500);
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-pevs-detail.png'),fullPage:false});
+  await page.evaluate(()=>toggleTheme());
+  await layout('PEVS detailed summary alternate theme / 390');
+  await page.waitForTimeout(500);
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-pevs-detail-theme.png'),fullPage:false});
+  await open('/centro_estudo/pedex_resumo.html');
+  await layout('PEDEx detailed summary / 390');
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-pedex-summary.png'),fullPage:false});
+  await page.evaluate(()=>document.getElementById('pedex-detail-077').scrollIntoView({block:'start'}));
+  await page.waitForTimeout(100);
+  check('PEDEx: deep heading link clears sticky shell',await page.evaluate(()=>{const heading=document.getElementById('pedex-detail-077');const nav=document.getElementById('topic-nav');return heading.getBoundingClientRect().top>=nav.getBoundingClientRect().bottom-1;}));
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-pedex-feedback.png'),fullPage:false});
+  await open('/centro_estudo/pedex_resumo.html#pedex-detail-077');
+  check('PEDEx: initial deep link selects containing topic',await page.locator('.study-nav[data-section="s9"]').evaluate(el=>el.classList.contains('is-active')));
+  check('PEDEx: initial deep link clears sticky shell',await page.evaluate(()=>document.getElementById('pedex-detail-077').getBoundingClientRect().top>=document.getElementById('topic-nav').getBoundingClientRect().bottom-1));
+  await open('/centro_estudo/cf_resumo.html');
+  await layout('CF detailed summary / 390');
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-cf-summary.png'),fullPage:false});
+  await open('/centro_estudo/cf_resumo.html#cf-detail-013');
+  check('CF: initial deep link selects containing topic',await page.locator('.study-nav[data-section="s10"]').evaluate(el=>el.classList.contains('is-active')));
+  check('CF: initial deep link clears sticky shell',await page.evaluate(()=>document.getElementById('cf-detail-013').getBoundingClientRect().top>=document.getElementById('topic-nav').getBoundingClientRect().bottom-1));
+  await page.waitForTimeout(500); // Permite concluir a animação da navegação antes da captura.
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-cf-feedback.png'),fullPage:false});
+  await page.evaluate(()=>toggleTheme());
+  await layout('CF detailed summary alternate theme / 390');
+  await page.waitForTimeout(500); // Tailwind CDN recompõe as classes ao alternar o tema.
+  await page.screenshot({path:path.join(os.tmpdir(),'academy-cf-theme.png'),fullPage:false});
 }
 
 async function completeExamDeadline() {
@@ -229,20 +263,20 @@ async function pwa() {
   const errors=[];p.on('pageerror',e=>errors.push(e.message));
   servePreviousSW=true;
   await p.goto(origin+'/index.html',{waitUntil:'networkidle'});
-  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;return reg.active?.state==='activated'&&!!navigator.serviceWorker.controller&&(await caches.keys()).includes('cet-tef-v18');});
+  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;return reg.active?.state==='activated'&&!!navigator.serviceWorker.controller&&(await caches.keys()).includes('cet-tef-v21');});
   await p.evaluate(()=>caches.open('unrelated-cache'));
   servePreviousSW=false;
   await p.evaluate(async()=>{const reg=await navigator.serviceWorker.ready;await reg.update();});
-  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;const keys=await caches.keys();return reg.active?.state==='activated'&&!reg.installing&&!reg.waiting&&keys.includes('cet-tef-v19')&&!keys.includes('cet-tef-v18')&&!!navigator.serviceWorker.controller;});
-  check('PWA: v18 -> v19 and old-cache cleanup',true);
+  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;const keys=await caches.keys();return reg.active?.state==='activated'&&!reg.installing&&!reg.waiting&&keys.includes('cet-tef-v22')&&!keys.includes('cet-tef-v21')&&!!navigator.serviceWorker.controller;});
+  check('PWA: v21 -> v22 and old-cache cleanup',true);
   check('PWA: unrelated cache preserved',await p.evaluate(async()=>(await caches.keys()).includes('unrelated-cache')));
   const localURLs = [...new Set([...fs.readFileSync(path.join(root,'sw.js'),'utf8').matchAll(/'((?:\.\/)[^']*)'/g)].map(m=>m[1]))];
-  await waitForAsync(p, async urls=>{const c=await caches.open('cet-tef-v19');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean);},localURLs,{timeout:30000});
-  const missingPrecache = await p.evaluate(async urls=>{const c=await caches.open('cet-tef-v19');const results=await Promise.all(urls.map(u=>c.match(u)));return urls.filter((u,i)=>!results[i]);},localURLs);
+  await waitForAsync(p, async urls=>{const c=await caches.open('cet-tef-v22');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean);},localURLs,{timeout:30000});
+  const missingPrecache = await p.evaluate(async urls=>{const c=await caches.open('cet-tef-v22');const results=await Promise.all(urls.map(u=>c.match(u)));return urls.filter((u,i)=>!results[i]);},localURLs);
   check('PWA: every local precache response exists: '+JSON.stringify(missingPrecache),missingPrecache.length===0);
   await p.reload({waitUntil:'networkidle'});
-  await waitForAsync(p, async()=>{const c=await caches.open('cet-tef-v19');return (await c.keys()).some(r=>r.url.startsWith('https://fonts.gstatic.com/'));});
-  check('PWA: Tailwind, icons and fonts cached',await p.evaluate(async()=>{const c=await caches.open('cet-tef-v19');return !!await c.match('https://cdn.tailwindcss.com/')&&!!await c.match('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');}));
+  await waitForAsync(p, async()=>{const c=await caches.open('cet-tef-v22');return (await c.keys()).some(r=>r.url.startsWith('https://fonts.gstatic.com/'));});
+  check('PWA: Tailwind, icons and fonts cached',await p.evaluate(async()=>{const c=await caches.open('cet-tef-v22');return !!await c.match('https://cdn.tailwindcss.com/')&&!!await c.match('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');}));
   const cdp=await context.newCDPSession(p);await cdp.send('Network.clearBrowserCache');await cdp.detach();
   await context.setOffline(true);
   for (const uc of ['pevs','pedex','cf']) for(const mode of ['resumo','treino','simulador']) {
@@ -250,7 +284,7 @@ async function pwa() {
     check(`${uc}/${mode}: offline styling`,await p.evaluate(()=>typeof tailwind!=='undefined'&&getComputedStyle(document.querySelector('header')).position==='sticky'));
     if(mode==='treino'){
       await p.waitForSelector('#setup:not(.hidden)');
-      for(const diff of uc==='pevs'?['easy','medium','hard']:['easy']){
+      for(const diff of difficulties(uc)){
         await p.evaluate(d=>{setTrainingDifficulty(d,false);startRandom(10);},diff);
         check(`${uc}/${diff}: offline training`,await p.locator('#options button').count()===4);
         await p.evaluate(()=>backToSetup());
@@ -258,7 +292,7 @@ async function pwa() {
     }
     if(mode==='simulador'){
       await p.waitForSelector('#home:not(.hidden)');
-      for(const diff of uc==='pevs'?['easy','medium','hard']:['easy'])for(const key of ['exam1','exam2']){
+      for(const diff of difficulties(uc))for(const key of ['exam1','exam2']){
         await p.evaluate(({diff,key})=>startExam(diff,key),{diff,key});
         check(`${uc}/${diff}/${key}: offline exam`,await p.locator('#qnav button').count()===40);
         await p.evaluate(()=>goHome());

@@ -164,6 +164,7 @@
             </div>
         </div>
     </header>
+    <div id="uc-registry-status" role="status" aria-live="polite" class="hidden max-w-2xl mx-auto px-4 py-3 text-xs text-slate-700 dark:text-slate-300"></div>
 
     <!-- Swipe Container para as Abas Principais -->
     <main id="swipe-container" class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
@@ -297,7 +298,7 @@
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4">
                     <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
-                        <div id="study-ready-count" class="font-black text-base text-slate-900 dark:text-white">0 / 27</div>
+                        <div id="study-ready-count" class="font-black text-base text-slate-900 dark:text-white">—</div>
                         <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Disponíveis</div>
                     </div>
                     <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
@@ -337,7 +338,7 @@
                         <i class="fa-solid fa-graduation-cap text-slate-400 dark:text-slate-500"></i>
                         <span>Unidades de Competência</span>
                     </div>
-                    <span id="study-visible-count" class="text-xs text-slate-500 font-medium">27 UCs</span>
+                    <span id="study-visible-count" class="text-xs text-slate-500 font-medium">—</span>
                 </div>
 
                 <div id="study-uc-list" class="space-y-2.5"></div>
@@ -406,12 +407,12 @@
                 </a>
                 </div>
             </section>
-            <!-- Painel de Progresso do Curso (27 UC) -->
+            <!-- Painel de Progresso do Curso (<span id="course-uc-total">—</span> UC) -->
             <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div class="flex items-center justify-between mb-4">
                     <div>
                         <h2 class="font-black text-base text-slate-900 dark:text-white flex items-center gap-2">
-                            <i class="fa-solid fa-graduation-cap text-blue-500"></i> Progresso do Curso (27 UC)
+                            <i class="fa-solid fa-graduation-cap text-blue-500"></i> Progresso do Curso (<span id="course-uc-total">—</span> UC)
                         </h2>
                         <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Acompanhamento detalhado das Unidades de Competência.</p>
                     </div>
@@ -435,7 +436,7 @@
                         <div class="font-semibold text-[10px] opacity-90 mt-0.5">Em Progresso</div>
                     </button>
                     <button onclick="toggleUcList('pending')" id="uc-btn-pending-main" class="p-3 min-h-[44px] rounded-2xl bg-slate-200/60 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-300/60 dark:hover:bg-slate-700/60 transition touch-active flex flex-col items-center justify-center">
-                        <div id="uc-count-pending-main" class="text-sm font-black">27</div>
+                        <div id="uc-count-pending-main" class="text-sm font-black">—</div>
                         <div class="font-semibold text-[10px] opacity-90 mt-0.5">Não Iniciadas</div>
                     </button>
                 </div>
@@ -606,150 +607,38 @@
         </div>
     </div>
 
+    <script src="./assets/uc-registry.js"></script>
     <script>
-        // Lista Master das 27 Unidades de Competência (UC)
-        const all27UC = [
-            'Promoção de Estilos de Vida Saudável', 'Coaching no Fitness', 'Pedagogia do Exercício',
-            'Fisiologia do Exercício', 'Psicologia do Exercício', 'Aulas de Grupo',
-            'Comunicação no Fitness', 'Ética e Deontologia no Fitness', 'Marketing no Fitness',
-            'Aplicações Digitais', 'Avaliação e Prescrição de Exercício', 'Treino de Fitness Online',
-            'Inglês no Fitness', 'Satisfação de Clientes no Fitness', 'Treino para Populações Especiais',
-            'Treino Outdoor', 'Hidroginástica', 'Body & Mind', 'Empreendedorismo no Fitness',
-            'Treino personalizado', 'Colaborar em equipa', 'Nutrição e Suplementação',
-            'Primeiros Socorros no Exercício', 'Biomecânica do Exercício', 'Gestão de clientes no Fitness',
-            'Anatomia do movimento', 'Gestão no Fitness'
-        ];
+        // Adaptadores derivados exclusivamente de data/ucs.json.
+        const all27UC = [];
+        const simulatorUrls = {}, studyCenterUrls = {}, studyCenterTrainingUrls = {}, studyCenterSimulatorUrls = {}, moduleConfig = {};
+        let ucRegistryReady = false;
+        let ucRegistryLoading = false;
 
-
-        // Simuladores locais disponíveis por Unidade de Competência
-        const simulatorUrls = {
-            'Coaching no Fitness': './simuladores/uc01_coaching_no_fitness.html',
-            'Pedagogia do Exercício': './simuladores/uc02_pedagogia_do_exercicio.html',
-            'Promoção de Estilos de Vida Saudável': './simuladores/uc03_promocao_de_estilos_de_vida_saudavel.html',
-            'Psicologia do Exercício': './simuladores/uc04_psicologia_do_exercicio.html',
-            'Comunicação no Fitness': './simuladores/uc05_comunicacao_no_fitness.html',
-            'Inglês no Fitness': './simuladores/uc06_ingles_no_fitness.html',
-            'Biomecânica do Exercício': './simuladores/uc07_biomecanica_do_exercicio.html',
-            'Aplicações Digitais': './simuladores/uc08_aplicacoes_digitais.html',
-            'Primeiros Socorros no Exercício': './simuladores/uc09_primeiros_socorros_no_exercicio.html',
-            'Nutrição e Suplementação': './simuladores/uc10_nutricao_e_suplementacao.html',
-            'Marketing no Fitness': './simuladores/uc11_marketing_no_fitness.html',
-            'Gestão de clientes no Fitness': './simuladores/uc12_gestao_de_clientes_no_fitness.html',
-            'Satisfação de Clientes no Fitness': './simuladores/uc13_satisfacao_de_clientes_no_fitness.html',
-            'Treino de Fitness Online': './simuladores/uc14_treino_de_fitness_online.html',
-            'Ética e Deontologia no Fitness': './simuladores/uc15_etica_e_deontologia_no_fitness.html',
-            'Gestão no Fitness': './simuladores/uc16_gestao_no_fitness.html',
-            'Empreendedorismo no Fitness': './simuladores/uc17_empreendedorismo_no_fitness.html'
-        };
-
-        const studyCenterUrls = {
-            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_resumo.html',
-            'Pedagogia do Exercício': './centro_estudo/pedex_resumo.html',
-            'Coaching no Fitness': './centro_estudo/cf_resumo.html'
-        };
-
-        const studyCenterTrainingUrls = {
-            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_treino.html',
-            'Pedagogia do Exercício': './centro_estudo/pedex_treino.html',
-            'Coaching no Fitness': './centro_estudo/cf_treino.html'
-        };
-
-        const studyCenterSimulatorUrls = {
-            'Promoção de Estilos de Vida Saudável': './centro_estudo/pevs_simulador.html',
-            'Pedagogia do Exercício': './centro_estudo/pedex_simulador.html',
-            'Coaching no Fitness': './centro_estudo/cf_simulador.html'
-        };
-
-        // Module Repositories and Trainers Master Config
-        const moduleConfig = {
-            'Promoção de Estilos de Vida Saudável': {
-                trainer: 'Inês Nobre',
-                driveUrl: 'https://drive.google.com/drive/folders/1-s7tqNJBE_OCEZB0HLnrL8f-BhesHY2M',
-                asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/'
-            },
-            'Coaching no Fitness': {
-                trainer: 'Ricardo Costa',
-                driveUrl: 'https://drive.google.com/drive/folders/1wGJjtKQaki0lBI_GjmGjSovVq5i_QDrq',
-                asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-9-2-4/'
-            },
-            'Pedagogia do Exercício': {
-                trainer: 'Miguel Leitão',
-                driveUrl: 'https://drive.google.com/drive/folders/1HXe8U5CjuvrZRTXPH5TdEO-Cec8RRE5f',
-                asynchronousClass: 'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-7-2-4/'
-            },
-            'Fisiologia do Exercício': {
-                driveUrl: 'https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO'
-            },
-            'Psicologia do Exercício': {
-                driveUrl: 'https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB'
-            },
-            'Aulas de Grupo': {
-                driveUrl: 'https://drive.google.com/drive/folders/1koNxUo0LOSevh5yoFJeVwA1Qnggx_MKN'
-            },
-            'Comunicação no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa'
-            },
-            'Ética e Deontologia no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c'
-            },
-            'Marketing no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE'
-            },
-            'Aplicações Digitais': {
-                driveUrl: 'https://drive.google.com/drive/folders/19HIntsUWz6nIi_UXf9u5T8dxxelw4Nsa'
-            },
-            'Avaliação e Prescrição de Exercício': {
-                driveUrl: 'https://drive.google.com/drive/folders/1STB8DlSCWoexUqjZCLcNRrLor8mJKltz'
-            },
-            'Treino de Fitness Online': {
-                driveUrl: 'https://drive.google.com/drive/folders/1aO6NZIhWlpDsf0Mfj1SK4YSR4HumXL1Y'
-            },
-            'Inglês no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1WAntr141CDbdlYTeYqy_HDcDTzzTAQ0I'
-            },
-            'Satisfação de Clientes no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1JnqT343qguHvMltZ2avt7iQXbH7cySx0'
-            },
-            'Treino para Populações Especiais': {
-                driveUrl: 'https://drive.google.com/drive/folders/1oWf0EgGwClFFoLcsx6ZLrDzmTny7HRDb'
-            },
-            'Treino Outdoor': {
-                driveUrl: 'https://drive.google.com/drive/folders/1IFS9MQB80AKBs9yacOdIiVoJ0cWnLhOo'
-            },
-            'Hidroginástica': {
-                driveUrl: 'https://drive.google.com/drive/folders/1UWVEQ1ka7FR2Kz_Sa_guw0_x5_xru1L2'
-            },
-            'Body & Mind': {
-                driveUrl: 'https://drive.google.com/drive/folders/1nDYudGDNsyqBNhv3Zk2NgHl47ITchuYU'
-            },
-            'Empreendedorismo no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1eejDdjB81Ucqui9RNXLiu3dvHMwKPR-Q'
-            },
-            'Treino personalizado': {
-                driveUrl: 'https://drive.google.com/drive/folders/1MfS0FaLqt8Mz_ByMS7aDI9gETolgRZsL'
-            },
-            'Colaborar em equipa': {
-                driveUrl: 'https://drive.google.com/drive/folders/1qjZohG48ioeB1BGJTt-rwGyQUD0KBn_C'
-            },
-            'Nutrição e Suplementação': {
-                driveUrl: 'https://drive.google.com/drive/folders/10jymW79m4k41FhwukS6bVBSpd-qrBabV'
-            },
-            'Primeiros Socorros no Exercício': {
-                driveUrl: 'https://drive.google.com/drive/folders/1LFLqdf_OopIIsvecJ7yyUi9F16y_ii12'
-            },
-            'Biomecânica do Exercício': {
-                driveUrl: 'https://drive.google.com/drive/folders/1QJoLZ1g4qQA6H7ofjocnquB8uu3vqzgX'
-            },
-            'Gestão de clientes no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1bXaywTML2ptFiMdw2FH3zpnXhXguy9cd'
-            },
-            'Anatomia do movimento': {
-                driveUrl: 'https://drive.google.com/drive/folders/1jQAF4Rl-xTGR-OIBODnj0i74SW1_38cf'
-            },
-            'Gestão no Fitness': {
-                driveUrl: 'https://drive.google.com/drive/folders/1IQVKz-y0_zF2aRJyo-CzSPmUqdfGPxL9'
+        async function loadUCRegistry() {
+            if (ucRegistryLoading) return;
+            ucRegistryLoading = true;
+            const status = document.getElementById('uc-registry-status');
+            status.classList.remove('hidden');
+            status.innerHTML = '<span>A carregar as unidades do curso…</span>';
+            try {
+                const registry = await AcademyUCRegistry.load('./data/ucs.json');
+                const maps = AcademyUCRegistry.toMaps(registry);
+                all27UC.splice(0, all27UC.length, ...maps.all27UC);
+                for (const [name, target] of Object.entries({simulatorUrls, studyCenterUrls, studyCenterTrainingUrls, studyCenterSimulatorUrls, moduleConfig})) {
+                    Object.keys(target).forEach(key => delete target[key]);
+                    Object.assign(target, maps[name]);
+                }
+                ucRegistryReady = true;
+                status.classList.add('hidden');
+            } catch (error) {
+                console.warn('Registo de UCs indisponível:', error);
+                status.innerHTML = '<span>Não foi possível carregar as unidades do curso.</span> <button type="button" onclick="loadUCRegistry()" class="font-bold underline ml-2">Tentar novamente</button>';
+            } finally {
+                ucRegistryLoading = false;
+                renderApp();
             }
-        };
+        }
 
         // Master Dataset for CET_TEF_LIS_60
         const rawSchedule = [
@@ -1115,6 +1004,7 @@
             switchMainTab(currentMainTab, false);
             syncGlobalSearchWithCurrentTab();
             renderApp();
+            loadUCRegistry();
             updateHeaderHeightVar();
         });
 
@@ -1159,6 +1049,7 @@
         function renderStudyCenter() {
             const listEl = document.getElementById('study-uc-list');
             if (!listEl) return;
+            if (!ucRegistryReady) { ['study-ready-count','study-summary-count','study-training-count','study-sim-count'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; }); listEl.innerHTML = '<p class="text-xs text-slate-500">As unidades serão apresentadas quando o carregamento terminar.</p>'; return; }
 
             const query = searchQuery.trim().toLocaleLowerCase('pt-PT');
 
@@ -1278,8 +1169,10 @@
         }
 
         function renderUcStatus() {
+            document.getElementById('course-uc-total').textContent = ucRegistryReady ? all27UC.length : '—';
+            if (!ucRegistryReady) { ['uc-count-completed-main','uc-count-progress-main','uc-count-pending-main','uc-progress-percent-main'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; }); return; }
             const { completed, inProgress, pending } = getCategorizedUCs();
-            const TOTAL_UC = 27;
+            const TOTAL_UC = all27UC.length;
             const compCount = completed.length, progCount = inProgress.length, pendCount = pending.length;
             const compPct = Math.round((compCount / TOTAL_UC) * 100);
             const progPct = Math.round((progCount / TOTAL_UC) * 100);

@@ -1,0 +1,588 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "scope": "20 itens finais da Lista original (17 entradas principais, uma com quatro subitens); cobertura temática explícita, não avaliação de cada frase dos slides nem previsão do exame. Casos adicionais são aplicações de estudo.",
+  "rapport_parent": "Reconhecer e implementar técnicas nos vários níveis de Rapport:",
+  "items": [
+    {
+      "saber": "Definição Coaching",
+      "summary": [
+        "cf-detail-001"
+      ],
+      "section": "s1",
+      "source": "Aula 1, pp. 8–13, 19, 22–23",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF001",
+          "CF002",
+          "CF003",
+          "CF004",
+          "CF005",
+          "CF006",
+          "CF007",
+          "CF008"
+        ],
+        "medium": [
+          "CFM001",
+          "CFM002",
+          "CFM003",
+          "CFM004",
+          "CFM005",
+          "CFM006",
+          "CFM007",
+          "CFM008"
+        ],
+        "hard": [
+          "CFD001",
+          "CFD002",
+          "CFD003",
+          "CFD004",
+          "CFD005",
+          "CFD006",
+          "CFD007",
+          "CFD008"
+        ]
+      }
+    },
+    {
+      "saber": "Papéis do Coach",
+      "summary": [
+        "cf-detail-002"
+      ],
+      "section": "s2",
+      "source": "Aula 1, pp. 11–18",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF009",
+          "CF010",
+          "CF011",
+          "CF012",
+          "CF013",
+          "CF014"
+        ],
+        "medium": [
+          "CFM009",
+          "CFM010",
+          "CFM011",
+          "CFM012",
+          "CFM013",
+          "CFM014"
+        ],
+        "hard": [
+          "CFD009",
+          "CFD010",
+          "CFD011",
+          "CFD012",
+          "CFD013",
+          "CFD014"
+        ]
+      }
+    },
+    {
+      "saber": "Pressupostos do Coaching",
+      "summary": [
+        "cf-detail-003"
+      ],
+      "section": "s3",
+      "source": "Aula 1, pp. 20–21",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF015",
+          "CF016",
+          "CF017",
+          "CF018",
+          "CF019",
+          "CF020",
+          "CF021"
+        ],
+        "medium": [
+          "CFM015",
+          "CFM016",
+          "CFM017",
+          "CFM018",
+          "CFM019",
+          "CFM020",
+          "CFM021"
+        ],
+        "hard": [
+          "CFD015",
+          "CFD016",
+          "CFD017",
+          "CFD018",
+          "CFD019",
+          "CFD020",
+          "CFD021"
+        ]
+      }
+    },
+    {
+      "saber": "Crenças",
+      "summary": [
+        "cf-detail-004"
+      ],
+      "section": "s4",
+      "source": "Aula 2, pp. 3–4",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF022",
+          "CF023",
+          "CF024",
+          "CF025",
+          "CF026",
+          "CF027"
+        ],
+        "medium": [
+          "CFM022",
+          "CFM023",
+          "CFM024",
+          "CFM025",
+          "CFM026",
+          "CFM027"
+        ],
+        "hard": [
+          "CFD022",
+          "CFD023",
+          "CFD024",
+          "CFD025",
+          "CFD026",
+          "CFD027"
+        ]
+      }
+    },
+    {
+      "saber": "Inteligência emocional",
+      "summary": [
+        "cf-detail-005"
+      ],
+      "section": "s5",
+      "source": "Aula 2, pp. 5–13",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF028",
+          "CF029",
+          "CF030",
+          "CF031",
+          "CF032",
+          "CF033",
+          "CF034"
+        ],
+        "medium": [
+          "CFM028",
+          "CFM029",
+          "CFM030",
+          "CFM031",
+          "CFM032",
+          "CFM033",
+          "CFM034"
+        ],
+        "hard": [
+          "CFD028",
+          "CFD029",
+          "CFD030",
+          "CFD031",
+          "CFD032",
+          "CFD033",
+          "CFD034"
+        ]
+      }
+    },
+    {
+      "saber": "6 necessidades humanas Tony Robbins",
+      "summary": [
+        "cf-detail-006"
+      ],
+      "section": "s6",
+      "source": "Aula 2, pp. 14–16",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF035",
+          "CF036",
+          "CF037",
+          "CF038",
+          "CF039",
+          "CF040"
+        ],
+        "medium": [
+          "CFM035",
+          "CFM036",
+          "CFM037",
+          "CFM038",
+          "CFM039",
+          "CFM040"
+        ],
+        "hard": [
+          "CFD035",
+          "CFD036",
+          "CFD037",
+          "CFD038",
+          "CFD039",
+          "CFD040"
+        ]
+      }
+    },
+    {
+      "saber": "Definição de Rapport",
+      "summary": [
+        "cf-detail-007"
+      ],
+      "section": "s7",
+      "source": "Aula 3, pp. 2–3",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF041"
+        ],
+        "medium": [
+          "CFM041"
+        ],
+        "hard": [
+          "CFD041"
+        ]
+      }
+    },
+    {
+      "saber": "Reconhecer a importância do Rapport na comunicação e o que acontece na sua ausência",
+      "summary": [
+        "cf-detail-008"
+      ],
+      "section": "s7",
+      "source": "Aula 3, pp. 2–4",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF042",
+          "CF043"
+        ],
+        "medium": [
+          "CFM042",
+          "CFM043"
+        ],
+        "hard": [
+          "CFD042",
+          "CFD043"
+        ]
+      }
+    },
+    {
+      "saber": "Escuta ativa",
+      "summary": [
+        "cf-detail-009"
+      ],
+      "section": "s7",
+      "source": "Aula 3, pp. 5–8, 11",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF044",
+          "CF045",
+          "CF046",
+          "CF047"
+        ],
+        "medium": [
+          "CFM044",
+          "CFM045",
+          "CFM046",
+          "CFM047"
+        ],
+        "hard": [
+          "CFD044",
+          "CFD045",
+          "CFD046",
+          "CFD047"
+        ]
+      }
+    },
+    {
+      "saber": "Comunicação verbal (Definição e Backtraking)",
+      "summary": [
+        "cf-detail-010"
+      ],
+      "section": "s8",
+      "source": "Aula 3, pp. 9–11",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF048",
+          "CF050",
+          "CF051"
+        ],
+        "medium": [
+          "CFM048",
+          "CFM050",
+          "CFM051"
+        ],
+        "hard": [
+          "CFD048",
+          "CFD050",
+          "CFD051"
+        ]
+      }
+    },
+    {
+      "saber": "Comunicação não verbal (Definição, linguagem corporal, Mirroring e Matching e psicogeografia)",
+      "summary": [
+        "cf-detail-011"
+      ],
+      "section": "s8",
+      "source": "Aula 3, pp. 12–22",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF049",
+          "CF052",
+          "CF053",
+          "CF054"
+        ],
+        "medium": [
+          "CFM049",
+          "CFM052",
+          "CFM053",
+          "CFM054"
+        ],
+        "hard": [
+          "CFD049",
+          "CFD052",
+          "CFD053",
+          "CFD054"
+        ]
+      }
+    },
+    {
+      "saber": "Modelo LASEr",
+      "summary": [
+        "cf-detail-012"
+      ],
+      "section": "s9",
+      "source": "Aula 3, pp. 23–41",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF055",
+          "CF056",
+          "CF057",
+          "CF058",
+          "CF059",
+          "CF060",
+          "CF061",
+          "CF062"
+        ],
+        "medium": [
+          "CFM055",
+          "CFM056",
+          "CFM057",
+          "CFM058",
+          "CFM059",
+          "CFM060",
+          "CFM061",
+          "CFM062"
+        ],
+        "hard": [
+          "CFD055",
+          "CFD056",
+          "CFD057",
+          "CFD058",
+          "CFD059",
+          "CFD060",
+          "CFD061",
+          "CFD062"
+        ]
+      }
+    },
+    {
+      "saber": "Feedback (modelo sandwich e BEAR)",
+      "summary": [
+        "cf-detail-013"
+      ],
+      "section": "s10",
+      "source": "Aula 4, pp. 2–4",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF063",
+          "CF064",
+          "CF065",
+          "CF066",
+          "CF067"
+        ],
+        "medium": [
+          "CFM063",
+          "CFM064",
+          "CFM065",
+          "CFM066",
+          "CFM067"
+        ],
+        "hard": [
+          "CFD063",
+          "CFD064",
+          "CFD065",
+          "CFD066",
+          "CFD067"
+        ]
+      }
+    },
+    {
+      "saber": "Modelo GROW",
+      "summary": [
+        "cf-detail-014"
+      ],
+      "section": "s11",
+      "source": "Aula 1, p. 23; Aula 4, pp. 5–12",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF068",
+          "CF069",
+          "CF070",
+          "CF071"
+        ],
+        "medium": [
+          "CFM068",
+          "CFM069",
+          "CFM070",
+          "CFM071"
+        ],
+        "hard": [
+          "CFD068",
+          "CFD069",
+          "CFD070",
+          "CFD071"
+        ]
+      }
+    },
+    {
+      "saber": "modelo SMART (G)",
+      "summary": [
+        "cf-detail-015"
+      ],
+      "section": "s11",
+      "source": "Aula 4, pp. 5–6",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF072"
+        ],
+        "medium": [
+          "CFM072"
+        ],
+        "hard": [
+          "CFD072"
+        ]
+      }
+    },
+    {
+      "saber": "Roda da Vida (R)",
+      "summary": [
+        "cf-detail-016"
+      ],
+      "section": "s11",
+      "source": "Aula 4, pp. 7–8",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF073"
+        ],
+        "medium": [
+          "CFM073"
+        ],
+        "hard": [
+          "CFD073"
+        ]
+      }
+    },
+    {
+      "saber": "Mudança de paradigma (O)",
+      "summary": [
+        "cf-detail-017"
+      ],
+      "section": "s11",
+      "source": "Aula 4, pp. 9–11",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF074"
+        ],
+        "medium": [
+          "CFM074"
+        ],
+        "hard": [
+          "CFD074"
+        ]
+      }
+    },
+    {
+      "saber": "SWOT",
+      "summary": [
+        "cf-detail-018"
+      ],
+      "section": "s12",
+      "source": "Aula 4, p. 13",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF075",
+          "CF076"
+        ],
+        "medium": [
+          "CFM075",
+          "CFM076"
+        ],
+        "hard": [
+          "CFD075",
+          "CFD076"
+        ]
+      }
+    },
+    {
+      "saber": "Road Map",
+      "summary": [
+        "cf-detail-019"
+      ],
+      "section": "s12",
+      "source": "Aula 4, p. 14",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF077",
+          "CF078"
+        ],
+        "medium": [
+          "CFM077",
+          "CFM078"
+        ],
+        "hard": [
+          "CFD077",
+          "CFD078"
+        ]
+      }
+    },
+    {
+      "saber": "Princípios Éticos e Deontológicos",
+      "summary": [
+        "cf-detail-020"
+      ],
+      "section": "s12",
+      "source": "Aula 4, pp. 15–17",
+      "status": "explicit",
+      "questions": {
+        "easy": [
+          "CF079",
+          "CF080"
+        ],
+        "medium": [
+          "CFM079",
+          "CFM080"
+        ],
+        "hard": [
+          "CFD079",
+          "CFD080"
+        ]
+      }
+    }
+  ]
+}

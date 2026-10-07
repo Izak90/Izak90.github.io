@@ -1,0 +1,316 @@
+{
+  "source": "Lista de saberes.pdf, p. 1",
+  "normalization": "NFKC (ligaturas tipográficas) e junção de linhas; palavras preservadas",
+  "groups": [
+    {
+      "title": "1. Desinformação em Saúde",
+      "nodes": [
+        {
+          "saber": "Conceitos: desinformação, misinformation, fake news e teorias da conspiração",
+          "children": []
+        },
+        {
+          "saber": "Desinformação nas redes sociais e estratégias usadas nas Fake-News",
+          "children": []
+        },
+        {
+          "saber": "Estratégias de prevenção e controlo",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "2. Evidência Científica em Saúde",
+      "nodes": [
+        {
+          "saber": "Pirâmide da evidência científica: tipos de estudos com evidência mais forte e mais fraca",
+          "children": []
+        },
+        {
+          "saber": "Artigos Científicos: revisão de pares como fator de publicação",
+          "children": []
+        },
+        {
+          "saber": "Inferência de Causalidade",
+          "children": [
+            "Prevalência, incidência",
+            "Correlações não são relações de causa-efeito",
+            "Guidelines de causalidade"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Os Números da Atividade Física",
+      "nodes": [
+        {
+          "saber": "Dados do Eurobarómetro 2022:",
+          "children": [
+            "Diferenças para a AF e comportamento sedentário entre países da UE e Portugal",
+            "Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa",
+            "Incentivos e obstáculos à prática de exercício físico e desporto na população portuguesa"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Conceitos de Saúde",
+      "nodes": [
+        {
+          "saber": "Saúde, Saúde Pública, Promoção de Saúde e Educação para a Saúde",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "nodes": [
+        {
+          "saber": "Atividade Física, Exercício Físico, Desporto e Aptidão Física",
+          "children": []
+        },
+        {
+          "saber": "Comportamento sedentário (Adultos e Crianças < 1 ano)",
+          "children": []
+        },
+        {
+          "saber": "Sedentarismo e Inatividade física (Inativo e Sedentário)",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "nodes": [
+        {
+          "saber": "Recomendações para a prática de Atividade Física",
+          "children": []
+        },
+        {
+          "saber": "Recomendações sobre o Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Recomendações sobre o Sono",
+          "children": []
+        },
+        {
+          "saber": "Relação entre inatividade física, comportamento sedentário e várias condições de saúde, por faixa etária",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "nodes": [
+        {
+          "saber": "Lesões musculoesqueléticas e complicações cardiovasculares",
+          "children": [
+            "Tipos",
+            "Prevenção"
+          ]
+        },
+        {
+          "saber": "Vigorexia – dismorfia muscular",
+          "children": [
+            "Definição",
+            "Consequências"
+          ]
+        },
+        {
+          "saber": "Consumo de substâncias dopantes",
+          "children": [
+            "Definição",
+            "Riscos para a saúde"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "nodes": [
+        {
+          "saber": "Doenças Cardiovasculares – Definição, causas, sintomas, prevenção, Tratamento, Relação Atividade Física e Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Hipertensão – definição, causas, consequências, sintomas, diagnostico e valores de referência, procedimentos de diagnostico, prevenção e controlo e relação com atividade física",
+          "children": []
+        },
+        {
+          "saber": "Diabetes – Definição, causas, valores de referência para diagnóstico, sintomas, tipos, prevenção, tratamento, relação Atividade Física e Comportamento Sedentário",
+          "children": []
+        },
+        {
+          "saber": "Excesso de peso e obesidade – definição, valores de referência (adultos), causas, consequências, prevenção e tratamento, e relação com atividade física",
+          "children": []
+        },
+        {
+          "saber": "Cancro - definição, prevenção e tratamento, relação com atividade física e comportamento sedentário",
+          "children": []
+        },
+        {
+          "saber": "Saúde mental – definição, tipos, prevenção e tratamento e relação com atividade física",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Conceitos: desinformação, misinformation, fake news e teorias da conspiração"
+    },
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Desinformação nas redes sociais e estratégias usadas nas Fake-News"
+    },
+    {
+      "group": "1. Desinformação em Saúde",
+      "parent": null,
+      "saber": "Estratégias de prevenção e controlo"
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": null,
+      "saber": "Pirâmide da evidência científica: tipos de estudos com evidência mais forte e mais fraca"
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": null,
+      "saber": "Artigos Científicos: revisão de pares como fator de publicação"
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Prevalência, incidência"
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Correlações não são relações de causa-efeito"
+    },
+    {
+      "group": "2. Evidência Científica em Saúde",
+      "parent": "Inferência de Causalidade",
+      "saber": "Guidelines de causalidade"
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Diferenças para a AF e comportamento sedentário entre países da UE e Portugal"
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Comparação dos níveis de AF entre 2022 e 2017 na população portuguesa"
+    },
+    {
+      "group": "3. Os Números da Atividade Física",
+      "parent": "Dados do Eurobarómetro 2022:",
+      "saber": "Incentivos e obstáculos à prática de exercício físico e desporto na população portuguesa"
+    },
+    {
+      "group": "4. Conceitos de Saúde",
+      "parent": null,
+      "saber": "Saúde, Saúde Pública, Promoção de Saúde e Educação para a Saúde"
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Atividade Física, Exercício Físico, Desporto e Aptidão Física"
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Comportamento sedentário (Adultos e Crianças < 1 ano)"
+    },
+    {
+      "group": "5. Conceitos de Atividade Física e Comportamento Sedentário",
+      "parent": null,
+      "saber": "Sedentarismo e Inatividade física (Inativo e Sedentário)"
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações para a prática de Atividade Física"
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações sobre o Comportamento Sedentário"
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Recomendações sobre o Sono"
+    },
+    {
+      "group": "6. Recomendações 24h – por faixa etária: Crianças [0-4], Jovens [5-17], Adultos [18-64] e Idosos [+65]",
+      "parent": null,
+      "saber": "Relação entre inatividade física, comportamento sedentário e várias condições de saúde, por faixa etária"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Lesões musculoesqueléticas e complicações cardiovasculares",
+      "saber": "Tipos"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Lesões musculoesqueléticas e complicações cardiovasculares",
+      "saber": "Prevenção"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Vigorexia – dismorfia muscular",
+      "saber": "Definição"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Vigorexia – dismorfia muscular",
+      "saber": "Consequências"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Consumo de substâncias dopantes",
+      "saber": "Definição"
+    },
+    {
+      "group": "7. Atividade Física Segura: potenciais riscos associados à prática de atividade física",
+      "parent": "Consumo de substâncias dopantes",
+      "saber": "Riscos para a saúde"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Doenças Cardiovasculares – Definição, causas, sintomas, prevenção, Tratamento, Relação Atividade Física e Comportamento Sedentário"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Hipertensão – definição, causas, consequências, sintomas, diagnostico e valores de referência, procedimentos de diagnostico, prevenção e controlo e relação com atividade física"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Diabetes – Definição, causas, valores de referência para diagnóstico, sintomas, tipos, prevenção, tratamento, relação Atividade Física e Comportamento Sedentário"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Excesso de peso e obesidade – definição, valores de referência (adultos), causas, consequências, prevenção e tratamento, e relação com atividade física"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Cancro - definição, prevenção e tratamento, relação com atividade física e comportamento sedentário"
+    },
+    {
+      "group": "8. Doenças Não-Transmissíveis e Atividade Física",
+      "parent": null,
+      "saber": "Saúde mental – definição, tipos, prevenção e tratamento e relação com atividade física"
+    }
+  ]
+}

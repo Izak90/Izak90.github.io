@@ -280,16 +280,14 @@
       updateStickyPositions();
       updateStudyNavArrows();
 
-      const initial =
-        location.hash && document.getElementById(location.hash.slice(1))
-          ? location.hash.slice(1)
-          : (observedSections[0]?.id || '');
+      const hashTarget = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+      const initial = hashTarget?.closest('.study-section')?.id || observedSections[0]?.id || '';
 
       if (initial) {
         setActiveStudyNav(initial, true);
 
-        if (location.hash) {
-          requestAnimationFrame(() => scrollToStudySection(initial, false));
+        if (hashTarget) {
+          requestAnimationFrame(() => scrollToStudySection(hashTarget.id, false));
         }
       }
     });

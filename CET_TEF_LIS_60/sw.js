@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v19';
+const CACHE_NAME = 'cet-tef-v22';
 
 const CORE_URLS = [
   './',
@@ -12,6 +12,8 @@ const OPTIONAL_URLS = [
   './plano.html',
 
   // Design partilhado do Centro de Estudo
+  './data/ucs.json',
+  './assets/uc-registry.js',
   './assets/app.css',
   './assets/study.css',
   './assets/study.js',
@@ -53,12 +55,16 @@ const OPTIONAL_URLS = [
   './centro_estudo/pedex_treino.html',
   './centro_estudo/pedex_simulador.html',
   './centro_estudo/pedex_banco_80_perguntas.json',
+  './centro_estudo/pedex_banco_80_perguntas_medio.json',
+  './centro_estudo/pedex_banco_80_perguntas_dificil.json',
 
   // Centro de Estudo — Coaching no Fitness
   './centro_estudo/cf_resumo.html',
   './centro_estudo/cf_treino.html',
   './centro_estudo/cf_simulador.html',
-  './centro_estudo/cf_banco_80_perguntas.json'
+  './centro_estudo/cf_banco_80_perguntas.json',
+  './centro_estudo/cf_banco_80_perguntas_medio.json',
+  './centro_estudo/cf_banco_80_perguntas_dificil.json'
 ];
 
 // Dependências visuais usadas pelas páginas estáticas; mantém Tailwind via CDN.

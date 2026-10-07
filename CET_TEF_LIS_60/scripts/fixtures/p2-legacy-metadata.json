@@ -1,0 +1,154 @@
+{
+  "all27UC": [
+    "Promoção de Estilos de Vida Saudável",
+    "Coaching no Fitness",
+    "Pedagogia do Exercício",
+    "Fisiologia do Exercício",
+    "Psicologia do Exercício",
+    "Aulas de Grupo",
+    "Comunicação no Fitness",
+    "Ética e Deontologia no Fitness",
+    "Marketing no Fitness",
+    "Aplicações Digitais",
+    "Avaliação e Prescrição de Exercício",
+    "Treino de Fitness Online",
+    "Inglês no Fitness",
+    "Satisfação de Clientes no Fitness",
+    "Treino para Populações Especiais",
+    "Treino Outdoor",
+    "Hidroginástica",
+    "Body & Mind",
+    "Empreendedorismo no Fitness",
+    "Treino personalizado",
+    "Colaborar em equipa",
+    "Nutrição e Suplementação",
+    "Primeiros Socorros no Exercício",
+    "Biomecânica do Exercício",
+    "Gestão de clientes no Fitness",
+    "Anatomia do movimento",
+    "Gestão no Fitness"
+  ],
+  "simulatorUrls": {
+    "Coaching no Fitness": "./simuladores/uc01_coaching_no_fitness.html",
+    "Pedagogia do Exercício": "./simuladores/uc02_pedagogia_do_exercicio.html",
+    "Promoção de Estilos de Vida Saudável": "./simuladores/uc03_promocao_de_estilos_de_vida_saudavel.html",
+    "Psicologia do Exercício": "./simuladores/uc04_psicologia_do_exercicio.html",
+    "Comunicação no Fitness": "./simuladores/uc05_comunicacao_no_fitness.html",
+    "Inglês no Fitness": "./simuladores/uc06_ingles_no_fitness.html",
+    "Biomecânica do Exercício": "./simuladores/uc07_biomecanica_do_exercicio.html",
+    "Aplicações Digitais": "./simuladores/uc08_aplicacoes_digitais.html",
+    "Primeiros Socorros no Exercício": "./simuladores/uc09_primeiros_socorros_no_exercicio.html",
+    "Nutrição e Suplementação": "./simuladores/uc10_nutricao_e_suplementacao.html",
+    "Marketing no Fitness": "./simuladores/uc11_marketing_no_fitness.html",
+    "Gestão de clientes no Fitness": "./simuladores/uc12_gestao_de_clientes_no_fitness.html",
+    "Satisfação de Clientes no Fitness": "./simuladores/uc13_satisfacao_de_clientes_no_fitness.html",
+    "Treino de Fitness Online": "./simuladores/uc14_treino_de_fitness_online.html",
+    "Ética e Deontologia no Fitness": "./simuladores/uc15_etica_e_deontologia_no_fitness.html",
+    "Gestão no Fitness": "./simuladores/uc16_gestao_no_fitness.html",
+    "Empreendedorismo no Fitness": "./simuladores/uc17_empreendedorismo_no_fitness.html"
+  },
+  "studyCenterUrls": {
+    "Promoção de Estilos de Vida Saudável": "./centro_estudo/pevs_resumo.html",
+    "Pedagogia do Exercício": "./centro_estudo/pedex_resumo.html",
+    "Coaching no Fitness": "./centro_estudo/cf_resumo.html"
+  },
+  "studyCenterTrainingUrls": {
+    "Promoção de Estilos de Vida Saudável": "./centro_estudo/pevs_treino.html",
+    "Pedagogia do Exercício": "./centro_estudo/pedex_treino.html",
+    "Coaching no Fitness": "./centro_estudo/cf_treino.html"
+  },
+  "studyCenterSimulatorUrls": {
+    "Promoção de Estilos de Vida Saudável": "./centro_estudo/pevs_simulador.html",
+    "Pedagogia do Exercício": "./centro_estudo/pedex_simulador.html",
+    "Coaching no Fitness": "./centro_estudo/cf_simulador.html"
+  },
+  "moduleConfig": {
+    "Promoção de Estilos de Vida Saudável": {
+      "trainer": "Inês Nobre",
+      "driveUrl": "https://drive.google.com/drive/folders/1-s7tqNJBE_OCEZB0HLnrL8f-BhesHY2M",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-5-2-4/"
+    },
+    "Coaching no Fitness": {
+      "trainer": "Ricardo Costa",
+      "driveUrl": "https://drive.google.com/drive/folders/1wGJjtKQaki0lBI_GjmGjSovVq5i_QDrq",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-9-2-4/"
+    },
+    "Pedagogia do Exercício": {
+      "trainer": "Miguel Leitão",
+      "driveUrl": "https://drive.google.com/drive/folders/1HXe8U5CjuvrZRTXPH5TdEO-Cec8RRE5f",
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-7-2-4/"
+    },
+    "Fisiologia do Exercício": {
+      "driveUrl": "https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO"
+    },
+    "Psicologia do Exercício": {
+      "driveUrl": "https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB"
+    },
+    "Aulas de Grupo": {
+      "driveUrl": "https://drive.google.com/drive/folders/1koNxUo0LOSevh5yoFJeVwA1Qnggx_MKN"
+    },
+    "Comunicação no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa"
+    },
+    "Ética e Deontologia no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c"
+    },
+    "Marketing no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE"
+    },
+    "Aplicações Digitais": {
+      "driveUrl": "https://drive.google.com/drive/folders/19HIntsUWz6nIi_UXf9u5T8dxxelw4Nsa"
+    },
+    "Avaliação e Prescrição de Exercício": {
+      "driveUrl": "https://drive.google.com/drive/folders/1STB8DlSCWoexUqjZCLcNRrLor8mJKltz"
+    },
+    "Treino de Fitness Online": {
+      "driveUrl": "https://drive.google.com/drive/folders/1aO6NZIhWlpDsf0Mfj1SK4YSR4HumXL1Y"
+    },
+    "Inglês no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1WAntr141CDbdlYTeYqy_HDcDTzzTAQ0I"
+    },
+    "Satisfação de Clientes no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1JnqT343qguHvMltZ2avt7iQXbH7cySx0"
+    },
+    "Treino para Populações Especiais": {
+      "driveUrl": "https://drive.google.com/drive/folders/1oWf0EgGwClFFoLcsx6ZLrDzmTny7HRDb"
+    },
+    "Treino Outdoor": {
+      "driveUrl": "https://drive.google.com/drive/folders/1IFS9MQB80AKBs9yacOdIiVoJ0cWnLhOo"
+    },
+    "Hidroginástica": {
+      "driveUrl": "https://drive.google.com/drive/folders/1UWVEQ1ka7FR2Kz_Sa_guw0_x5_xru1L2"
+    },
+    "Body & Mind": {
+      "driveUrl": "https://drive.google.com/drive/folders/1nDYudGDNsyqBNhv3Zk2NgHl47ITchuYU"
+    },
+    "Empreendedorismo no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1eejDdjB81Ucqui9RNXLiu3dvHMwKPR-Q"
+    },
+    "Treino personalizado": {
+      "driveUrl": "https://drive.google.com/drive/folders/1MfS0FaLqt8Mz_ByMS7aDI9gETolgRZsL"
+    },
+    "Colaborar em equipa": {
+      "driveUrl": "https://drive.google.com/drive/folders/1qjZohG48ioeB1BGJTt-rwGyQUD0KBn_C"
+    },
+    "Nutrição e Suplementação": {
+      "driveUrl": "https://drive.google.com/drive/folders/10jymW79m4k41FhwukS6bVBSpd-qrBabV"
+    },
+    "Primeiros Socorros no Exercício": {
+      "driveUrl": "https://drive.google.com/drive/folders/1LFLqdf_OopIIsvecJ7yyUi9F16y_ii12"
+    },
+    "Biomecânica do Exercício": {
+      "driveUrl": "https://drive.google.com/drive/folders/1QJoLZ1g4qQA6H7ofjocnquB8uu3vqzgX"
+    },
+    "Gestão de clientes no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1bXaywTML2ptFiMdw2FH3zpnXhXguy9cd"
+    },
+    "Anatomia do movimento": {
+      "driveUrl": "https://drive.google.com/drive/folders/1jQAF4Rl-xTGR-OIBODnj0i74SW1_38cf"
+    },
+    "Gestão no Fitness": {
+      "driveUrl": "https://drive.google.com/drive/folders/1IQVKz-y0_zF2aRJyo-CzSPmUqdfGPxL9"
+    }
+  }
+}

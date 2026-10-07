@@ -1,0 +1,1467 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "sources": "Ficheiros locais fornecidos pelo utilizador; hashes em PEDEX_COVERAGE.md",
+  "scope": "71 subtópicos/11 blocos da Lista; spotting complementar fora dos bancos",
+  "items": [
+    {
+      "group": "Pedagogia no Desporto",
+      "saber": "Pedagogia no Desporto",
+      "summary": [
+        "pedex-detail-001"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX001"
+        ],
+        "medium": [
+          "PEDEXM001"
+        ],
+        "hard": [
+          "PEDEXD001"
+        ]
+      },
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9",
+      "status": "explicit"
+    },
+    {
+      "group": "Pedagogia no Desporto",
+      "saber": "Características inerentes à pedagogia no desporto",
+      "summary": [
+        "pedex-detail-002"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX007"
+        ],
+        "medium": [
+          "PEDEXM007"
+        ],
+        "hard": [
+          "PEDEXD007"
+        ]
+      },
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9",
+      "status": "explicit"
+    },
+    {
+      "group": "Pedagogia no Desporto",
+      "saber": "Modelo de análise da relação pedagógica em desporto (Antes, Durante, Depois)",
+      "summary": [
+        "pedex-detail-003",
+        "pedex-detail-004",
+        "pedex-detail-005"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX004",
+          "PEDEX005",
+          "PEDEX006"
+        ],
+        "medium": [
+          "PEDEXM004",
+          "PEDEXM005",
+          "PEDEXM006"
+        ],
+        "hard": [
+          "PEDEXD004",
+          "PEDEXD005",
+          "PEDEXD006"
+        ]
+      },
+      "source": "Aula 2, pp. 8–9",
+      "status": "explicit"
+    },
+    {
+      "group": "Pedagogia no Desporto",
+      "saber": "Papel do profissional no processo pedagógico",
+      "summary": [
+        "pedex-detail-006"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX002"
+        ],
+        "medium": [
+          "PEDEXM002"
+        ],
+        "hard": [
+          "PEDEXD002"
+        ]
+      },
+      "source": "Aula 1, pp. 6–7; Aula 2, pp. 6–9",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Ética – conceito e definição",
+      "summary": [
+        "pedex-detail-008"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX009"
+        ],
+        "medium": [
+          "PEDEXM009"
+        ],
+        "hard": [
+          "PEDEXD009"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Código de ética",
+      "summary": [
+        "pedex-detail-009"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX010"
+        ],
+        "medium": [
+          "PEDEXM010"
+        ],
+        "hard": [
+          "PEDEXD010"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Postura profissional do instrutor e do personal trainer",
+      "summary": [
+        "pedex-detail-010"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX016"
+        ],
+        "medium": [
+          "PEDEXM016"
+        ],
+        "hard": [
+          "PEDEXD016"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Situações éticas em contexto profissional",
+      "summary": [
+        "pedex-detail-011"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX012"
+        ],
+        "medium": [
+          "PEDEXM012"
+        ],
+        "hard": [
+          "PEDEXD012"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Boas práticas profissionais",
+      "summary": [
+        "pedex-detail-012"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX015"
+        ],
+        "medium": [
+          "PEDEXM015"
+        ],
+        "hard": [
+          "PEDEXD015"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Imagem, comunicação e primeira impressão",
+      "summary": [
+        "pedex-detail-013"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX014"
+        ],
+        "medium": [
+          "PEDEXM014"
+        ],
+        "hard": [
+          "PEDEXD014"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Ética e Postura Profissional",
+      "saber": "Centralidade do aluno na intervenção profissional",
+      "summary": [
+        "pedex-detail-014"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX013"
+        ],
+        "medium": [
+          "PEDEXM013"
+        ],
+        "hard": [
+          "PEDEXD013"
+        ]
+      },
+      "source": "Aula 2, pp. 29–32",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Processo de ensino–aprendizagem",
+      "summary": [
+        "pedex-detail-015"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX017"
+        ],
+        "medium": [
+          "PEDEXM017"
+        ],
+        "hard": [
+          "PEDEXD017"
+        ]
+      },
+      "source": "Aula 2, p. 10",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Conceito de aprendizagem",
+      "summary": [
+        "pedex-detail-016"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX018"
+        ],
+        "medium": [
+          "PEDEXM018"
+        ],
+        "hard": [
+          "PEDEXD018"
+        ]
+      },
+      "source": "Aula 2, p. 10",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Fatores influenciadores da aprendizagem",
+      "summary": [
+        "pedex-detail-017"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX019"
+        ],
+        "medium": [
+          "PEDEXM019"
+        ],
+        "hard": [
+          "PEDEXD019"
+        ]
+      },
+      "source": "Aula 2, pp. 11–15",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Fatores prévios da aprendizagem",
+      "summary": [
+        "pedex-detail-018",
+        "pedex-detail-019",
+        "pedex-detail-020"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX020"
+        ],
+        "medium": [
+          "PEDEXM020"
+        ],
+        "hard": [
+          "PEDEXD020"
+        ]
+      },
+      "source": "Aula 2, pp. 11–15",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Domínios da aprendizagem (Fazer, Saber, Estar)",
+      "summary": [
+        "pedex-detail-022"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX024"
+        ],
+        "medium": [
+          "PEDEXM024"
+        ],
+        "hard": [
+          "PEDEXD024"
+        ]
+      },
+      "source": "Aula 2, pp. 16–18",
+      "status": "explicit"
+    },
+    {
+      "group": "Processo de Ensino–Aprendizagem",
+      "saber": "Fases da aprendizagem motora",
+      "summary": [
+        "pedex-detail-023"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX026",
+          "PEDEX028",
+          "PEDEX029"
+        ],
+        "medium": [
+          "PEDEXM026",
+          "PEDEXM028",
+          "PEDEXM029"
+        ],
+        "hard": [
+          "PEDEXD026",
+          "PEDEXD028",
+          "PEDEXD029"
+        ]
+      },
+      "source": "Aula 2, pp. 20–22",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Conhecimento e domínio das técnicas a ensinar",
+      "summary": [
+        "pedex-detail-024"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX030"
+        ],
+        "medium": [
+          "PEDEXM030"
+        ],
+        "hard": [
+          "PEDEXD030"
+        ]
+      },
+      "source": "Aula 2, pp. 23–28",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Metodologia do ensino da técnica",
+      "summary": [
+        "pedex-detail-025"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX031"
+        ],
+        "medium": [
+          "PEDEXM031"
+        ],
+        "hard": [
+          "PEDEXD031"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Ensino da técnica: antes da instrução",
+      "summary": [
+        "pedex-detail-026"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX032"
+        ],
+        "medium": [
+          "PEDEXM032"
+        ],
+        "hard": [
+          "PEDEXD032"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Ensino da técnica: durante a explicação",
+      "summary": [
+        "pedex-detail-027"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX033"
+        ],
+        "medium": [
+          "PEDEXM033"
+        ],
+        "hard": [
+          "PEDEXD033"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Ensino da técnica: durante a demonstração",
+      "summary": [
+        "pedex-detail-028"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX034"
+        ],
+        "medium": [
+          "PEDEXM034"
+        ],
+        "hard": [
+          "PEDEXD034"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Ensino da técnica: durante a correção",
+      "summary": [
+        "pedex-detail-029"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX035"
+        ],
+        "medium": [
+          "PEDEXM035"
+        ],
+        "hard": [
+          "PEDEXD035"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Estratégias para melhorar a execução técnica",
+      "summary": [
+        "pedex-detail-030"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX036"
+        ],
+        "medium": [
+          "PEDEXM036"
+        ],
+        "hard": [
+          "PEDEXD036"
+        ]
+      },
+      "source": "Aula 2, pp. 25–27; Aula 3, pp. 24–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Ensino da Técnica",
+      "saber": "Descrição e análise de exercícios",
+      "summary": [
+        "pedex-detail-031"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX027"
+        ],
+        "medium": [
+          "PEDEXM027"
+        ],
+        "hard": [
+          "PEDEXD027"
+        ]
+      },
+      "source": "Aula 2, pp. 23–28",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Importância da definição de objetivos",
+      "summary": [
+        "pedex-detail-032"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX037"
+        ],
+        "medium": [
+          "PEDEXM037"
+        ],
+        "hard": [
+          "PEDEXD037"
+        ]
+      },
+      "source": "Aula 1, pp. 9–12",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Estruturação de objetivos (O quê, Quanto, Até quando, Porquê)",
+      "summary": [
+        "pedex-detail-034"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX040"
+        ],
+        "medium": [
+          "PEDEXM040"
+        ],
+        "hard": [
+          "PEDEXD040"
+        ]
+      },
+      "source": "Aula 1, pp. 9–12",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Regra 80/20 na definição de objetivos",
+      "summary": [
+        "pedex-detail-035"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX038"
+        ],
+        "medium": [
+          "PEDEXM038"
+        ],
+        "hard": [
+          "PEDEXD038"
+        ]
+      },
+      "source": "Aula 1, pp. 9–12",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Processo de definição de objetivos",
+      "summary": [
+        "pedex-detail-036"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX039"
+        ],
+        "medium": [
+          "PEDEXM039"
+        ],
+        "hard": [
+          "PEDEXD039"
+        ]
+      },
+      "source": "Aula 1, pp. 9–12",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Planeamento no fitness",
+      "summary": [
+        "pedex-detail-037"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX041"
+        ],
+        "medium": [
+          "PEDEXM041"
+        ],
+        "hard": [
+          "PEDEXD041"
+        ]
+      },
+      "source": "Aula 1, pp. 14–15",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Passos do planeamento",
+      "summary": [
+        "pedex-detail-038"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX042"
+        ],
+        "medium": [
+          "PEDEXM042"
+        ],
+        "hard": [
+          "PEDEXD042"
+        ]
+      },
+      "source": "Aula 1, pp. 14–15",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Fases do planeamento (longo, médio e curto prazo)",
+      "summary": [
+        "pedex-detail-039"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX043"
+        ],
+        "medium": [
+          "PEDEXM043"
+        ],
+        "hard": [
+          "PEDEXD043"
+        ]
+      },
+      "source": "Aula 1, pp. 16–17",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Supervisão no processo de planeamento",
+      "summary": [
+        "pedex-detail-040"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX045"
+        ],
+        "medium": [
+          "PEDEXM045"
+        ],
+        "hard": [
+          "PEDEXD045"
+        ]
+      },
+      "source": "Aula 1, p. 18",
+      "status": "explicit"
+    },
+    {
+      "group": "Objetivos e Planeamento",
+      "saber": "Avaliação, reavaliação e ajuste",
+      "summary": [
+        "pedex-detail-041"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX046"
+        ],
+        "medium": [
+          "PEDEXM046"
+        ],
+        "hard": [
+          "PEDEXD046"
+        ]
+      },
+      "source": "Aula 1, p. 19",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Gestão da sessão de treino/aula",
+      "summary": [
+        "pedex-detail-042"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX047"
+        ],
+        "medium": [
+          "PEDEXM047"
+        ],
+        "hard": [
+          "PEDEXD047"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Estratégias de organização da sessão",
+      "summary": [
+        "pedex-detail-044"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX049"
+        ],
+        "medium": [
+          "PEDEXM049"
+        ],
+        "hard": [
+          "PEDEXD049"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Posicionamento do professor/instrutor",
+      "summary": [
+        "pedex-detail-045"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX053"
+        ],
+        "medium": [
+          "PEDEXM053"
+        ],
+        "hard": [
+          "PEDEXD053"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Gestão do tempo e das transições",
+      "summary": [
+        "pedex-detail-046"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX052"
+        ],
+        "medium": [
+          "PEDEXM052"
+        ],
+        "hard": [
+          "PEDEXD052"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Tempo útil da sessão",
+      "summary": [
+        "pedex-detail-047"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX050"
+        ],
+        "medium": [
+          "PEDEXM050"
+        ],
+        "hard": [
+          "PEDEXD050"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Gestão da Sessão",
+      "saber": "Estratégias para maximizar o tempo útil e o envolvimento dos alunos",
+      "summary": [
+        "pedex-detail-048"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX051"
+        ],
+        "medium": [
+          "PEDEXM051"
+        ],
+        "hard": [
+          "PEDEXD051"
+        ]
+      },
+      "source": "Aula 1, pp. 21–23; Aula 3, p. 25",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Conceito de comunicação",
+      "summary": [
+        "pedex-detail-049"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX055"
+        ],
+        "medium": [
+          "PEDEXM055"
+        ],
+        "hard": [
+          "PEDEXD055"
+        ]
+      },
+      "source": "Aula 3, pp. 6–11",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Elementos do processo de comunicação",
+      "summary": [
+        "pedex-detail-050"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX003",
+          "PEDEX056",
+          "PEDEX057",
+          "PEDEX058"
+        ],
+        "medium": [
+          "PEDEXM003",
+          "PEDEXM056",
+          "PEDEXM057",
+          "PEDEXM058"
+        ],
+        "hard": [
+          "PEDEXD003",
+          "PEDEXD056",
+          "PEDEXD057",
+          "PEDEXD058"
+        ]
+      },
+      "source": "Aula 3, pp. 6–11",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Ruído no processo comunicacional",
+      "summary": [
+        "pedex-detail-051"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX057"
+        ],
+        "medium": [
+          "PEDEXM057"
+        ],
+        "hard": [
+          "PEDEXD057"
+        ]
+      },
+      "source": "Aula 3, pp. 6–11",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Feedback como elemento da comunicação",
+      "summary": [
+        "pedex-detail-052"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX058"
+        ],
+        "medium": [
+          "PEDEXM058"
+        ],
+        "hard": [
+          "PEDEXD058"
+        ]
+      },
+      "source": "Aula 3, pp. 6–11",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Regras e orientações para uma boa comunicação",
+      "summary": [
+        "pedex-detail-053"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX059"
+        ],
+        "medium": [
+          "PEDEXM059"
+        ],
+        "hard": [
+          "PEDEXD059"
+        ]
+      },
+      "source": "Aula 3, pp. 6–11",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Comunicação verbal",
+      "summary": [
+        "pedex-detail-054"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX003"
+        ],
+        "medium": [
+          "PEDEXM003"
+        ],
+        "hard": [
+          "PEDEXD003"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Comunicação",
+      "saber": "Comunicação não verbal",
+      "summary": [
+        "pedex-detail-055"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX008"
+        ],
+        "medium": [
+          "PEDEXM008"
+        ],
+        "hard": [
+          "PEDEXD008"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Proxémica",
+      "summary": [
+        "pedex-detail-056"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX060"
+        ],
+        "medium": [
+          "PEDEXM060"
+        ],
+        "hard": [
+          "PEDEXD060"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Cinésica (linguagem corporal)",
+      "summary": [
+        "pedex-detail-057"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX061"
+        ],
+        "medium": [
+          "PEDEXM061"
+        ],
+        "hard": [
+          "PEDEXD061"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Paralinguagem",
+      "summary": [
+        "pedex-detail-058"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX021"
+        ],
+        "medium": [
+          "PEDEXM021"
+        ],
+        "hard": [
+          "PEDEXD021"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Cronémica",
+      "summary": [
+        "pedex-detail-059"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX062"
+        ],
+        "medium": [
+          "PEDEXM062"
+        ],
+        "hard": [
+          "PEDEXD062"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Imagem e aparência física",
+      "summary": [
+        "pedex-detail-060"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX022"
+        ],
+        "medium": [
+          "PEDEXM022"
+        ],
+        "hard": [
+          "PEDEXD022"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Tacésica",
+      "summary": [
+        "pedex-detail-061"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX023"
+        ],
+        "medium": [
+          "PEDEXM023"
+        ],
+        "hard": [
+          "PEDEXD023"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Técnicas de Comunicação Não Verbal",
+      "saber": "Comunicação olfativa",
+      "summary": [
+        "pedex-detail-062"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX025"
+        ],
+        "medium": [
+          "PEDEXM025"
+        ],
+        "hard": [
+          "PEDEXD025"
+        ]
+      },
+      "source": "Aula 3, pp. 12–16",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Conceito de instrução",
+      "summary": [
+        "pedex-detail-063"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX063"
+        ],
+        "medium": [
+          "PEDEXM063"
+        ],
+        "hard": [
+          "PEDEXD063"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Conceito de demonstração",
+      "summary": [
+        "pedex-detail-064"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX064"
+        ],
+        "medium": [
+          "PEDEXM064"
+        ],
+        "hard": [
+          "PEDEXD064"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Relação entre instrução e demonstração",
+      "summary": [
+        "pedex-detail-065"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX068"
+        ],
+        "medium": [
+          "PEDEXM068"
+        ],
+        "hard": [
+          "PEDEXD068"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Funções da instrução",
+      "summary": [
+        "pedex-detail-066"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX065"
+        ],
+        "medium": [
+          "PEDEXM065"
+        ],
+        "hard": [
+          "PEDEXD065"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Pistas verbais",
+      "summary": [
+        "pedex-detail-068"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX067"
+        ],
+        "medium": [
+          "PEDEXM067"
+        ],
+        "hard": [
+          "PEDEXD067"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Variáveis da demonstração",
+      "summary": [
+        "pedex-detail-072"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX070"
+        ],
+        "medium": [
+          "PEDEXM070"
+        ],
+        "hard": [
+          "PEDEXD070"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Instrução e Demonstração",
+      "saber": "Momentos de apresentação do modelo",
+      "summary": [
+        "pedex-detail-073"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX069"
+        ],
+        "medium": [
+          "PEDEXM069"
+        ],
+        "hard": [
+          "PEDEXD069"
+        ]
+      },
+      "source": "Aula 3, pp. 18–25",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Conceito de feedback pedagógico",
+      "summary": [
+        "pedex-detail-074"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX071"
+        ],
+        "medium": [
+          "PEDEXM071"
+        ],
+        "hard": [
+          "PEDEXD071"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Importância do feedback na aprendizagem motora",
+      "summary": [
+        "pedex-detail-075"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX078"
+        ],
+        "medium": [
+          "PEDEXM078"
+        ],
+        "hard": [
+          "PEDEXD078"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Modelo de aplicação do feedback",
+      "summary": [
+        "pedex-detail-076"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX072"
+        ],
+        "medium": [
+          "PEDEXM072"
+        ],
+        "hard": [
+          "PEDEXD072"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Dimensões do feedback pedagógico",
+      "summary": [
+        "pedex-detail-077"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX073",
+          "PEDEX077"
+        ],
+        "medium": [
+          "PEDEXM073",
+          "PEDEXM077"
+        ],
+        "hard": [
+          "PEDEXD073",
+          "PEDEXD077"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Tipos de feedback",
+      "summary": [
+        "pedex-detail-078"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX073",
+          "PEDEX074"
+        ],
+        "medium": [
+          "PEDEXM073",
+          "PEDEXM074"
+        ],
+        "hard": [
+          "PEDEXD073",
+          "PEDEXD074"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "Feedback Pedagógico",
+      "saber": "Classificação do feedback",
+      "summary": [
+        "pedex-detail-079",
+        "pedex-detail-080",
+        "pedex-detail-081"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX073",
+          "PEDEX074",
+          "PEDEX077"
+        ],
+        "medium": [
+          "PEDEXM073",
+          "PEDEXM074",
+          "PEDEXM077"
+        ],
+        "hard": [
+          "PEDEXD073",
+          "PEDEXD074",
+          "PEDEXD077"
+        ]
+      },
+      "source": "Aula 3, pp. 27–36",
+      "status": "explicit"
+    },
+    {
+      "group": "O Erro no Processo de Aprendizagem",
+      "saber": "Conceito de erro",
+      "summary": [
+        "pedex-detail-083"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX075"
+        ],
+        "medium": [
+          "PEDEXM075"
+        ],
+        "hard": [
+          "PEDEXD075"
+        ]
+      },
+      "source": "Aula 3, pp. 37–39",
+      "status": "explicit"
+    },
+    {
+      "group": "O Erro no Processo de Aprendizagem",
+      "saber": "O erro como parte do processo de aprendizagem",
+      "summary": [
+        "pedex-detail-084"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX076"
+        ],
+        "medium": [
+          "PEDEXM076"
+        ],
+        "hard": [
+          "PEDEXD076"
+        ]
+      },
+      "source": "Aula 3, pp. 37–39",
+      "status": "explicit"
+    },
+    {
+      "group": "O Erro no Processo de Aprendizagem",
+      "saber": "Clima de aprendizagem e tolerância ao erro",
+      "summary": [
+        "pedex-detail-085"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX079"
+        ],
+        "medium": [
+          "PEDEXM079"
+        ],
+        "hard": [
+          "PEDEXD079"
+        ]
+      },
+      "source": "Aula 3, pp. 37–39",
+      "status": "explicit"
+    },
+    {
+      "group": "O Erro no Processo de Aprendizagem",
+      "saber": "Repensar o erro na intervenção pedagógica",
+      "summary": [
+        "pedex-detail-086"
+      ],
+      "questions": {
+        "easy": [
+          "PEDEX080"
+        ],
+        "medium": [
+          "PEDEXM080"
+        ],
+        "hard": [
+          "PEDEXD080"
+        ]
+      },
+      "source": "Aula 3, pp. 37–39",
+      "status": "explicit"
+    }
+  ]
+}
