@@ -45,6 +45,11 @@ Do not add a redundant Centro de Estudo tool card.
 - cf_banco_80_perguntas_dificil.json = Difícil
 240 perguntas / seis exames, 12 temas e 20 itens finais da Lista original (17 entradas principais). Resumo detalhado e fontes revistas: [cobertura CF](CF_COVERAGE.md).
 
+### Psicologia do Exercício
+- centro_estudo/psiex_resumo.html, psiex_treino.html, psiex_simulador.html
+- psicologia-do-exercicio_banco_80_perguntas.json = Fácil
+80 perguntas / dois exames; 11 temas e 51 itens específicos da Lista. Fontes fornecidas: slides (89 páginas, versão 29/06/2026) e Lista (3 páginas). Matriz e limites: [cobertura Psicologia](PSIEX_COVERAGE.md). Workbook anterior preservado.
+
 ## Workbook simulators
 simuladores/ contains UC01–UC17 local Workbook-based simulators:
 Coaching, Pedagogia, PEVS, Psicologia, Comunicação, Inglês, Biomecânica, Aplicações Digitais, Primeiros Socorros, Nutrição, Marketing, Gestão de Clientes, Satisfação de Clientes, Fitness Online, Ética, Gestão, Empreendedorismo.
@@ -53,18 +58,20 @@ Known UCs absent from source Workbook:
 Fisiologia, Aulas de Grupo, Avaliação e Prescrição, Populações Especiais, Outdoor, Hidroginástica, Body & Mind, Treino Personalizado, Colaborar em Equipa, Anatomia.
 
 ## Summary readability
-PEVS, PEDEx and CF use the common reading format in `assets/study.css`: larger body text, paragraph spacing, clear concept headings, visible list markers and separate source notes (`study-source`). Future UC summaries inherit these rules through the same classes. Contract: [design system](DESIGN_SYSTEM.md); implementation: [ExecPlan](../plans/summary-readability.md).
+PEVS, PEDEx, CF and Psicologia use the common reading format in `assets/study.css`: larger body text, paragraph spacing, clear concept headings, visible list markers and separate source notes (`study-source`). Future UC summaries inherit these rules through the same classes. Contract: [design system](DESIGN_SYSTEM.md); implementation: [ExecPlan](../plans/summary-readability.md).
 
-Learning structure applied to all 30 summary themes (8 PEVS, 12 CF, 10 PEDEx including the Aula 4 complement): main idea, full explanation with selective emphasis/lists, recap and a retrieval question with collapsed reference answer. Examples, cautions and comparisons have shared visual components. The PEDEx complement remains outside the question-bank scope. Evidence: [learning-format ExecPlan](../plans/summary-study-format.md).
+Learning structure applied to all 41 summary themes (8 PEVS, 12 CF, 10 PEDEx including the Aula 4 complement, 11 Psicologia): main idea, full explanation with selective emphasis/lists, recap and a retrieval question with collapsed reference answer. Examples, cautions and comparisons have shared visual components. The PEDEx complement remains outside the question-bank scope. Evidence: [learning-format ExecPlan](../plans/summary-study-format.md).
 
 ## Assessment conventions
 40 questions; 60 min; 90 s/question equivalent; score 0–20; pass 9.5; no negative marking; timeout auto-submit.
 
 ## PWA
-Current implemented SW cache version: v22 (três dificuldades PEDEx e CF, 2026-10-07).
+Current implemented SW cache version: v23 (Psicologia do Exercício, 2026-10-08; 55 ficheiros locais).
 Strategy: network-first, same-origin runtime cache plus an explicit allowlist of visual CDN dependencies (Tailwind, Font Awesome, Inter and logo), offline cache fallback, app-shell navigation fallback, cleanup of old cet-tef caches. Fonts are cached when requested by a controlled page.
 Offline use requires an initial online installation. P0 evidence and remaining device checks: ../plans/p0-stabilisation.md.
 
 ## Central UC registry (P2)
 `data/ucs.json` is the source for all 27 UC titles/order, native study URLs, Workbook URLs, difficulties/banks, trainer/Drive/Campus metadata and declared source status. `assets/uc-registry.js` validates and derives the compatibility maps used by the main index. Loading failure offers retry; Agenda remains usable, and UC counts stay unknown until loaded.
-Source-status metadata distinguishes legacy claims from documented source review (PEVS/PEDEx/CF: source_reviewed, evidence in PEVS_COVERAGE.md, PEDEX_COVERAGE.md and CF_COVERAGE.md). It does not mean external trainer certification. Standalone UC pages and the Workbook index retain their current configuration and URLs. Precache remains a manual literal list, validated by P1.
+Source-status metadata distinguishes legacy claims from documented source review (PEVS/PEDEx/CF/Psicologia: source_reviewed, evidence in PEVS_COVERAGE.md, PEDEX_COVERAGE.md and CF_COVERAGE.md). It does not mean external trainer certification. Standalone UC pages and the Workbook index retain their current configuration and URLs. Precache remains a manual literal list, validated by P1.
+
+Centro de Estudo: filtro de estado Todas/Disponíveis/Em Progresso/Por preparar e filtro independente de avaliação Todas/Teóricas/Práticas. Em Progresso exclui concluídas pelo calendário e inclui não iniciadas. A presença de Workbook determina avaliação teórica; restantes UC são práticas.

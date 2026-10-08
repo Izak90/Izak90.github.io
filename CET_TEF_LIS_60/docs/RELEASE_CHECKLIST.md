@@ -67,3 +67,6 @@ PEDEx: `node --test scripts/pedex-content.test.cjs`; verificar as três dificuld
 CF: `node --test scripts/cf-content.test.cjs`; conferir as três dificuldades, os seis exames e as âncoras dos 20 itens. Confirmar atualização v21→v22 e offline dos dois novos bancos. A lista inclui 51 ficheiros locais.
 
 PEVS: `node --test scripts/pevs-content.test.cjs`; conferir 31 itens literais/45 âncoras, três dificuldades e seis exames. Testar o acesso profundo a classificação HTA em móvel e offline. Conteúdo de ficheiros existentes atualizado sem alteração de precache/cache v22.
+
+Psicologia: `node --test scripts/psiex-content.test.cjs`; conferir 51 itens e 11 temas, um banco de 80 perguntas, exames 40/40 e Workbook preservado. Testar atualização v22→v23 e acesso offline às três páginas e banco (55 ficheiros locais). `P0_UCS=psiex` permite focar os fluxos nativos no smoke P0.
+Centro de Estudo: verificar Teóricas/Práticas com disponibilidade, Em Progresso e pesquisa, incluindo resultados vazios.

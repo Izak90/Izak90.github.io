@@ -7,9 +7,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..');
 const mount = '/CET_TEF_LIS_60';
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'data/ucs.json'), 'utf8'));
-const difficulties = uc => registry.ucs.find(item => item.slug === uc).difficulties.map(item => item.id);
-// Simula o cache v21 sem editar ficheiros.
-const previousSW = fs.readFileSync(path.join(root,'sw.js'),'utf8').replace("'cet-tef-v22'", "'cet-tef-v21'");
+const nativeUCs = process.env.P0_UCS ? process.env.P0_UCS.split(',') : ['pevs','pedex','cf','psiex'];
+const registeredUC = uc => registry.ucs.find(item => item.slug === (uc === 'psiex' ? 'psicologia-do-exercicio' : uc));
+const difficulties = uc => registeredUC(uc).difficulties.map(item => item.id);
+// Simula o cache v22 sem editar ficheiros.
+const previousSW = fs.readFileSync(path.join(root,'sw.js'),'utf8').replace("'cet-tef-v23'", "'cet-tef-v22'");
 let servePreviousSW = false;
 const report = { checks: [], errors: [], warnings: [] };
 const check = (name, value) => { assert.ok(value, name); report.checks.push(name); if(report.checks.length % 25 === 0) console.log(`${report.checks.length} checks passed`); };
@@ -24,7 +26,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   res.end(pathname === '/sw.js' && servePreviousSW ? previousSW : fs.readFileSync(file));
 });
-const bankFile = (uc, diff) => `${uc}_banco_80_perguntas${diff === 'medium' ? '_medio' : diff === 'hard' ? '_dificil' : ''}.json`;
+const bankFile = (uc, diff) => path.basename(registeredUC(uc).difficulties.find(item => item.id === diff).bank);
 const readBank = (uc, diff) => JSON.parse(fs.readFileSync(path.join(root, 'centro_estudo', bankFile(uc, diff)), 'utf8'));
 let browser, origin, page;
 async function waitForAsync(p, predicate, arg, options = {}) {
@@ -46,7 +48,7 @@ async function layout(label) {
   if (result.navTop !== null) check(label + ': local nav follows header', Math.abs(result.header - result.navTop) <= 1);
 }
 async function summaries() {
-  for (const uc of ['pevs', 'pedex', 'cf']) {
+  for (const uc of nativeUCs) {
     await open(`/centro_estudo/${uc}_resumo.html`);
     await layout(uc + ' summary');
     const old = await page.evaluate(() => document.documentElement.classList.contains('dark'));
@@ -82,7 +84,7 @@ async function summaries() {
   }
 }
 async function training() {
-  for (const uc of ['pevs', 'pedex', 'cf']) {
+  for (const uc of nativeUCs) {
     await open(`/centro_estudo/${uc}_treino.html`);
     await page.waitForSelector('#setup:not(.hidden)');
     for (const diff of difficulties(uc)) {
@@ -119,7 +121,7 @@ async function training() {
   }
 }
 async function exams() {
-  for(const uc of ['pevs','pedex','cf']) {
+  for(const uc of nativeUCs) {
     await open(`/centro_estudo/${uc}_simulador.html`);
     await page.waitForSelector('#home:not(.hidden)');
     for(const diff of difficulties(uc)) for(const key of ['exam1','exam2']) {
@@ -192,7 +194,7 @@ async function workbook() {
 async function responsive() {
   for (const width of [320,768,1280]) {
     await page.setViewportSize({width,height:844});
-    for (const uc of ['pevs','pedex','cf']) for(const mode of ['resumo','treino','simulador']) {
+    for (const uc of ['pevs','pedex','cf','psiex']) for(const mode of ['resumo','treino','simulador']) {
       await open(`/centro_estudo/${uc}_${mode}.html`);
       await layout(`${uc}/${mode}/${width}`);
     }
@@ -241,7 +243,7 @@ async function responsive() {
 }
 
 async function completeExamDeadline() {
-  for (const uc of ['pevs','pedex','cf']) {
+  for (const uc of ['pevs','pedex','cf','psiex']) {
     await open(`/centro_estudo/${uc}_simulador.html`);
     await page.waitForSelector('#home:not(.hidden)');
     const bank=readBank(uc,'easy');
@@ -263,23 +265,23 @@ async function pwa() {
   const errors=[];p.on('pageerror',e=>errors.push(e.message));
   servePreviousSW=true;
   await p.goto(origin+'/index.html',{waitUntil:'networkidle'});
-  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;return reg.active?.state==='activated'&&!!navigator.serviceWorker.controller&&(await caches.keys()).includes('cet-tef-v21');});
+  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;return reg.active?.state==='activated'&&!!navigator.serviceWorker.controller&&(await caches.keys()).includes('cet-tef-v22');});
   await p.evaluate(()=>caches.open('unrelated-cache'));
   servePreviousSW=false;
   await p.evaluate(async()=>{const reg=await navigator.serviceWorker.ready;await reg.update();});
-  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;const keys=await caches.keys();return reg.active?.state==='activated'&&!reg.installing&&!reg.waiting&&keys.includes('cet-tef-v22')&&!keys.includes('cet-tef-v21')&&!!navigator.serviceWorker.controller;});
-  check('PWA: v21 -> v22 and old-cache cleanup',true);
+  await waitForAsync(p, async()=>{const reg=await navigator.serviceWorker.ready;const keys=await caches.keys();return reg.active?.state==='activated'&&!reg.installing&&!reg.waiting&&keys.includes('cet-tef-v23')&&!keys.includes('cet-tef-v22')&&!!navigator.serviceWorker.controller;});
+  check('PWA: v22 -> v23 and old-cache cleanup',true);
   check('PWA: unrelated cache preserved',await p.evaluate(async()=>(await caches.keys()).includes('unrelated-cache')));
   const localURLs = [...new Set([...fs.readFileSync(path.join(root,'sw.js'),'utf8').matchAll(/'((?:\.\/)[^']*)'/g)].map(m=>m[1]))];
-  await waitForAsync(p, async urls=>{const c=await caches.open('cet-tef-v22');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean);},localURLs,{timeout:30000});
-  const missingPrecache = await p.evaluate(async urls=>{const c=await caches.open('cet-tef-v22');const results=await Promise.all(urls.map(u=>c.match(u)));return urls.filter((u,i)=>!results[i]);},localURLs);
+  await waitForAsync(p, async urls=>{const c=await caches.open('cet-tef-v23');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean);},localURLs,{timeout:30000});
+  const missingPrecache = await p.evaluate(async urls=>{const c=await caches.open('cet-tef-v23');const results=await Promise.all(urls.map(u=>c.match(u)));return urls.filter((u,i)=>!results[i]);},localURLs);
   check('PWA: every local precache response exists: '+JSON.stringify(missingPrecache),missingPrecache.length===0);
   await p.reload({waitUntil:'networkidle'});
-  await waitForAsync(p, async()=>{const c=await caches.open('cet-tef-v22');return (await c.keys()).some(r=>r.url.startsWith('https://fonts.gstatic.com/'));});
-  check('PWA: Tailwind, icons and fonts cached',await p.evaluate(async()=>{const c=await caches.open('cet-tef-v22');return !!await c.match('https://cdn.tailwindcss.com/')&&!!await c.match('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');}));
+  await waitForAsync(p, async()=>{const c=await caches.open('cet-tef-v23');return (await c.keys()).some(r=>r.url.startsWith('https://fonts.gstatic.com/'));});
+  check('PWA: Tailwind, icons and fonts cached',await p.evaluate(async()=>{const c=await caches.open('cet-tef-v23');return !!await c.match('https://cdn.tailwindcss.com/')&&!!await c.match('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');}));
   const cdp=await context.newCDPSession(p);await cdp.send('Network.clearBrowserCache');await cdp.detach();
   await context.setOffline(true);
-  for (const uc of ['pevs','pedex','cf']) for(const mode of ['resumo','treino','simulador']) {
+  for (const uc of ['pevs','pedex','cf','psiex']) for(const mode of ['resumo','treino','simulador']) {
     await p.goto(`${origin}/centro_estudo/${uc}_${mode}.html`,{waitUntil:'networkidle'});
     check(`${uc}/${mode}: offline styling`,await p.evaluate(()=>typeof tailwind!=='undefined'&&getComputedStyle(document.querySelector('header')).position==='sticky'));
     if(mode==='treino'){

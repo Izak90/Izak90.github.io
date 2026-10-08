@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Simulações — Psicologia do Exercício</title>
+
+    <meta id="theme-color-meta" name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg:'#090d16',
+                        darkcard:'#111827',
+                        accent:'#3b82f6'
+                    },
+                    fontFamily: {
+                        sans:['Inter','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <link rel="stylesheet" href="../assets/simulator.css">
+</head>
+
+<body data-bank-file="./psicologia-do-exercicio_banco_80_perguntas.json" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
+    <div class="max-w-2xl mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <a href="../index.html#estudo" class="flex items-center gap-3 min-w-0" aria-label="Voltar ao Centro de Estudo">
+                <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm relative touch-active shrink-0">
+                    <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png"
+                         alt="Logo Grupo Academy"
+                         class="w-full h-full object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
+                </div>
+                <div class="min-w-0">
+                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none truncate">CET_TEF_LIS_60</h1>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Psicologia do Exercício</p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <button onclick="toggleDarkMode()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Alternar modo escuro ou claro">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                </button>
+                <button onclick="toggleSearch()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active" aria-label="Abrir pesquisa">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="relative">
+                <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                <input type="text" id="search-input" oninput="handleSimulationSearch()" placeholder="Pesquisar nesta página..." class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
+                <button onclick="clearSimulationSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1" aria-label="Limpar pesquisa">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="uc-local-nav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2.5">
+        <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <a href="psiex_resumo.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-book-open-reader mr-1"></i> Resumo
+            </a>
+            <a href="psiex_treino.html" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-brain mr-1"></i> Treino
+            </a>
+            <a href="psiex_simulador.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center shadow-sm shadow-blue-500/20">
+                <i class="fa-solid fa-vial-circle-check mr-1"></i> Simulações
+            </a>
+        </div>
+    </div>
+</div>
+
+<main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+<div id="loading" class="loading">A carregar banco de questões…</div>
+
+    <section id="home" class="hidden">
+        <div class="hero">
+            <div class="eyebrow"><i class="fa-solid fa-vial-circle-check"></i> Preparação para avaliação</div>
+            <h2>Simulações da UC</h2>
+            <p>Aqui tens a simulação baseada no Workbook da UC e dois exames de estudo de 40 perguntas, construídos a partir do banco desta unidade. Nos exames de estudo, a classificação é apresentada de 0 a 20 valores, com aprovação a partir de 9,5.</p>
+
+            <div class="info-grid">
+                <div class="info"><b>40</b><span>Questões</span></div>
+                <div class="info"><b>60 min</b><span>Duração</span></div>
+                <div class="info"><b>9,5</b><span>Aprovação</span></div>
+            </div>
+        </div>
+
+        <div class="section-title">Simulação da UC</div>
+
+        <article class="exam-card" style="border-color:rgba(59,130,246,.38)">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Simulação UC — Workbook</h3>
+                    <p>Questões baseadas no Workbook da formação. Simulação local das questões transcritas; não é um exame oficial.</p>
+                </div>
+                <span class="pill">Workbook</span>
+            </div>
+            <a href="../simuladores/uc04_psicologia_do_exercicio.html"
+               class="primary touch-active"
+               style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                Abrir Simulação UC
+            </a>
+        </article>
+
+        <div class="section-title">Exames de Estudo — Fácil</div>
+
+        <article class="exam-card" data-difficulty="easy">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Fácil 1</h3>
+                    <p>40 questões de revisão direta e consolidação dos conteúdos da UC.</p>
+                </div>
+                <span class="pill">Fácil · 1</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('easy','exam1')">Iniciar Exame Fácil 1</button>
+        </article>
+
+        <article class="exam-card" data-difficulty="easy">
+            <div class="exam-card-top">
+                <div>
+                    <h3>Exame Fácil 2</h3>
+                    <p>40 questões diferentes do primeiro exame, mantendo dificuldade de consolidação.</p>
+                </div>
+                <span class="pill">Fácil · 2</span>
+            </div>
+            <button class="primary touch-active" onclick="startExam('easy','exam2')">Iniciar Exame Fácil 2</button>
+        </article>
+
+        <div class="notice">
+            Se o tempo terminar, a simulação é submetida automaticamente com as respostas existentes. Podes submeter antes do fim; se houver perguntas por responder, será pedida confirmação.
+        </div>
+    </section>
+
+    <section id="exam" class="hidden">
+        <div class="exam-head">
+            <div class="exam-head-row">
+                <div>
+                    <div id="examLabel" class="exam-meta">Simulação</div>
+                    <div id="answeredLabel" class="text-xs font-black text-slate-900 dark:text-white mt-0.5">0/40 respondidas</div>
+                </div>
+                <div id="timer" class="timer">60:00</div>
+            </div>
+            <div class="progress"><div id="progressBar"></div></div>
+            <div id="qnav" class="qnav"></div>
+        </div>
+
+        <article class="question-card">
+            <div id="qCount" class="question-count"></div>
+            <div id="qTopic" class="topic"></div>
+            <h2 id="qText"></h2>
+            <div id="options" class="options"></div>
+
+            <div class="controls">
+                <button id="prevBtn" class="secondary touch-active" onclick="goPrev()">Anterior</button>
+                <button id="nextBtn" class="primary touch-active" style="margin-top:0" onclick="goNext()">Seguinte</button>
+            </div>
+
+            <button class="submit touch-active" onclick="submitExam(false)">Submeter simulação</button>
+        </article>
+    </section>
+
+    <section id="result" class="hidden"></section>
+</main>
+
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors">
+    <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+        <a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-calendar-days text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Agenda</span>
+        </a>
+        <a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+            <i class="fa-solid fa-book-open-reader text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Estudo</span>
+        </a>
+        <a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-graduation-cap text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Curso</span>
+        </a>
+    </div>
+</nav>
+
+
+    <script src="../assets/study.js" defer></script>
+    <script src="../assets/simulator.js" defer></script>
+</body>
+</html>

@@ -125,17 +125,23 @@
       "slug": "psicologia-do-exercicio",
       "title": "Psicologia do Exercício",
       "order": 5,
-      "summary": null,
-      "training": null,
-      "simulator": null,
+      "summary": "./centro_estudo/psiex_resumo.html",
+      "training": "./centro_estudo/psiex_treino.html",
+      "simulator": "./centro_estudo/psiex_simulador.html",
       "workbook": "./simuladores/uc04_psicologia_do_exercicio.html",
-      "difficulties": [],
-      "trainer": null,
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/psicologia-do-exercicio_banco_80_perguntas.json"
+        }
+      ],
+      "trainer": "Rui Branco",
       "driveUrl": "https://drive.google.com/drive/folders/1WXHNE-Z46JCiU7jt4RhR9K_BKdJ0_RXB",
-      "asynchronousClass": null,
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-6-2-4/",
       "sourceStatus": {
         "materials": "linked_not_imported",
-        "coverage": "not_audited",
+        "coverage": "source_reviewed",
         "workbook": "transcribed_unverified_key"
       }
     },

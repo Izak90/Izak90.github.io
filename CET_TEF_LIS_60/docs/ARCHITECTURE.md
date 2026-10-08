@@ -54,7 +54,7 @@ Example:
 
 localStorage keys must be namespaced by UC and difficulty.
 
-PWA: preserve network-first unless explicitly changed. Verify precache paths exist before shipping. SW v22 also precaches the explicitly listed CDN dependencies and caches requested Inter/Font Awesome fonts. Other external services are not intercepted. Cache cleanup is restricted to cet-tef caches.
+PWA: preserve network-first unless explicitly changed. Verify precache paths exist before shipping. SW v23 also precaches the explicitly listed CDN dependencies and caches requested Inter/Font Awesome fonts. Other external services are not intercepted. Cache cleanup is restricted to cet-tef caches.
 
 Exam timers use an absolute deadline and resynchronise on visibility/pageshow/focus and before interactions. Workbook simulators retain proportional duration and embedded data; their controls lock after submission.
 
@@ -70,3 +70,5 @@ Study shell heights are measured and observed with ResizeObserver. Topic observe
 PEDEx usa as três dificuldades nos atributos data-* e no registo. SW v21 adiciona os bancos PEDEx Médio/Difícil ao precache; configuração da estratégia permanece network-first.
 
 CF também usa três dificuldades nos mesmos motores/atributos. SW v22 inclui os dois novos bancos CF; existem nove bancos nativos e 51 ficheiros locais no precache.
+
+Psicologia usa um único banco Fácil com o slug completo no nome do JSON e prefixo psiex nas páginas/localStorage. SW v23 acrescenta as três páginas e o banco; total atual: dez bancos nativos e 55 ficheiros locais. Filtros de estado e avaliação no index são independentes e combinam-se com pesquisa.

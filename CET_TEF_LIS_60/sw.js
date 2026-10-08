@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v22';
+const CACHE_NAME = 'cet-tef-v23';
 
 const CORE_URLS = [
   './',
@@ -64,7 +64,13 @@ const OPTIONAL_URLS = [
   './centro_estudo/cf_simulador.html',
   './centro_estudo/cf_banco_80_perguntas.json',
   './centro_estudo/cf_banco_80_perguntas_medio.json',
-  './centro_estudo/cf_banco_80_perguntas_dificil.json'
+  './centro_estudo/cf_banco_80_perguntas_dificil.json',
+
+  // Centro de Estudo — Psicologia do Exercício
+  './centro_estudo/psiex_resumo.html',
+  './centro_estudo/psiex_treino.html',
+  './centro_estudo/psiex_simulador.html',
+  './centro_estudo/psicologia-do-exercicio_banco_80_perguntas.json'
 ];
 
 // Dependências visuais usadas pelas páginas estáticas; mantém Tailwind via CDN.

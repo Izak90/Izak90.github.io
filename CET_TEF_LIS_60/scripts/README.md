@@ -37,7 +37,7 @@ Para fluxos de browser/mobile/offline, usar `scripts/p0-smoke.cjs` (Playwright i
 ## Registo central (P2)
 O comando também valida `data/ucs.json` quando presente: schema partilhado, caminhos dos quatro fluxos, banco por UC/dificuldade, bancos não registados e inclusão do JSON no precache. O leitor é partilhado com o browser (`assets/uc-registry.js`).
 
-Regressões: `node --test scripts/validate.test.cjs scripts/uc-registry.test.cjs`. Browser: `node scripts/p2-smoke.cjs` com as mesmas variáveis Playwright/Chrome do P0. Cobre falha de carregamento/repetição, Agenda, cartões/filtros/pesquisa/metadata e overflow em quatro larguras. `node scripts/p0-smoke.cjs pwa` verifica atualização v21→v22 e offline sob o subdiretório de alojamento.
+Regressões: `node --test scripts/validate.test.cjs scripts/uc-registry.test.cjs`. Browser: `node scripts/p2-smoke.cjs` com as mesmas variáveis Playwright/Chrome do P0. Cobre falha de carregamento/repetição, Agenda, cartões/filtros/pesquisa/metadata e overflow em quatro larguras. `node scripts/p0-smoke.cjs pwa` verifica atualização v22→v23 e offline sob o subdiretório de alojamento.
 
 ## Conteúdo PEDEx
 `node --test scripts/pedex-content.test.cjs` compara os 71 subtópicos extraídos da Lista fornecida com a matriz de cobertura, verifica âncoras, IDs e fontes dos três bancos e os 11 temas nos seis exames. Integração completa: `node --test scripts/validate.test.cjs scripts/uc-registry.test.cjs scripts/pedex-content.test.cjs`. A revisão semântica de chaves/distratores permanece humana, apoiada nas fontes; os testes não a certificam.
@@ -47,3 +47,7 @@ Regressões: `node --test scripts/validate.test.cjs scripts/uc-registry.test.cjs
 
 ## Conteúdo PEVS
 `node --test scripts/pevs-content.test.cjs` compara os 31 itens finais/hierarquia da Lista extraída com a matriz, verifica 45 âncoras, três bancos e oito temas em cada exame, além de regressões de polarização, dados agregados e risco cardiovascular versus limiar de diabetes. Integração: `node --test scripts/*.test.cjs`. Referências são temáticas para entradas compostas; testes estruturais não certificam semântica de todos os componentes.
+
+## Psicologia do Exercício
+`node --test scripts/psiex-content.test.cjs` verifica 51 itens, referências de resumo/perguntas/fontes, invariantes 80/40/40, os 11 temas em ambos os exames e configuração dos motores. Matriz: `docs/PSIEX_COVERAGE.md`.
+Para focar os fluxos nativos no browser em PowerShell: `$env:P0_UCS="psiex"; node scripts/p0-smoke.cjs`. Sem P0_UCS, verifica as quatro UC nativas. A fase PWA confirma v22→v23 e todas as páginas offline.

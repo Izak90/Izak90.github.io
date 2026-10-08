@@ -1,0 +1,2144 @@
+{
+  "uc": "Psicologia do Exercício",
+  "version": "2026-10-08",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "id": "PSI001",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "O que estuda a Psicologia?",
+      "options": [
+        "Apenas padrões de movimento e gasto energético",
+        "Exclusivamente relações entre grupos desportivos",
+        "Processos mentais e comportamentos das pessoas",
+        "Apenas doenças e lesões musculoesqueléticas"
+      ],
+      "answer": 2,
+      "explanation": "A Psicologia inclui cognições, emoções, perceções e comportamentos; o movimento é estudado multidisciplinarmente pelas ciências do exercício.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 7.",
+      "saberes": [
+        "PSI-S01"
+      ]
+    },
+    {
+      "id": "PSI002",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "Explorar receios que dificultam iniciar um programa corresponde ao estudo de quê?",
+      "options": [
+        "Indicadores técnicos da execução de um exercício",
+        "Efeitos fisiológicos crónicos da carga de treino",
+        "Consequências psicológicas de uma sessão já realizada",
+        "Antecedentes psicológicos do comportamento de exercício"
+      ],
+      "answer": 3,
+      "explanation": "Os antecedentes influenciam começar e continuar; as consequências são os efeitos da prática sobre estados psicológicos.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 8.",
+      "saberes": [
+        "PSI-S02"
+      ]
+    },
+    {
+      "id": "PSI003",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "Segundo a aula, qual é a base da formação do psicólogo do exercício em Portugal?",
+      "options": [
+        "Formação em Psicologia seguida de especialização na área",
+        "Formação de instrutor de grupo sem formação em Psicologia",
+        "Licenciatura em nutrição seguida de treino de força",
+        "Formação TEEF seguida apenas de experiência em ginásio"
+      ],
+      "answer": 0,
+      "explanation": "A fonte descreve uma base em Psicologia e posterior mestrado, doutoramento ou pós-graduação na área do desporto, exercício e performance.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 9.",
+      "saberes": [
+        "PSI-S03"
+      ]
+    },
+    {
+      "id": "PSI004",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "Qual conjunto contém apenas áreas de exercício profissional apresentadas nos slides?",
+      "options": [
+        "Saúde pública, reabilitação e fitness/wellness",
+        "Educação, fitness/wellness e prescrição médica",
+        "Saúde pública, reabilitação e seleção de farmacoterapia",
+        "Ciência, reabilitação e tratamento cirúrgico"
+      ],
+      "answer": 0,
+      "explanation": "A fonte enumera estas três áreas, além de educação e ciência/tecnologia. As restantes opções incluem competências clínicas ou prescrições que não pertencem ao TEEF.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 9.",
+      "saberes": [
+        "PSI-S04"
+      ]
+    },
+    {
+      "id": "PSI005",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "A Psicologia do Exercício estuda a relação entre psicologia e exercício em que sentido?",
+      "options": [
+        "Só a influência da motivação antes da inscrição",
+        "Apenas os efeitos psicológicos em competição de alto rendimento",
+        "Fatores psicológicos que influenciam a prática e consequências psicológicas da prática",
+        "Só a influência da condição física sobre o humor"
+      ],
+      "answer": 2,
+      "explanation": "O campo integra os dois sentidos: adoção/manutenção do comportamento e consequências psicológicas agudas e crónicas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 7–8.",
+      "saberes": [
+        "PSI-S01",
+        "PSI-S02"
+      ]
+    },
+    {
+      "id": "PSI006",
+      "topic": "1. Psicologia do Exercício",
+      "type": "multiple_choice",
+      "question": "Perante sinais de sofrimento psicológico, qual é o papel do TEEF segundo a aula?",
+      "options": [
+        "Definir tratamento psicológico com base num questionário de exercício",
+        "Confirmar uma perturbação através do comportamento no treino",
+        "Observar, questionar, proteger e articular com profissionais competentes",
+        "Substituir o acompanhamento psicológico por aconselhamento técnico"
+      ],
+      "answer": 2,
+      "explanation": "A proximidade permite reconhecer sinais e referenciar; não confere competência para diagnóstico ou psicoterapia.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 10, 73.",
+      "saberes": [
+        "PSI-S04"
+      ]
+    },
+    {
+      "id": "PSI007",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Qual descrição corresponde à personalidade?",
+      "options": [
+        "Características cognitivas, emocionais e comportamentais que influenciam reações",
+        "Apenas o nível de condição física adquirido pelo treino",
+        "Estado emocional momentâneo antes de uma tarefa específica",
+        "Conjunto de preferências alimentares num único dia"
+      ],
+      "answer": 0,
+      "explanation": "Personalidade é mais abrangente e relativamente estável; não se reduz a um estado ou preferência isolada.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 12.",
+      "saberes": [
+        "PSI-S05"
+      ]
+    },
+    {
+      "id": "PSI008",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "No acrónimo OCEAN, o que representa C?",
+      "options": [
+        "Coesão social",
+        "Conscienciosidade",
+        "Confiança estado",
+        "Competência motora"
+      ],
+      "answer": 1,
+      "explanation": "OCEAN corresponde a abertura, conscienciosidade, extroversão, amabilidade e neuroticismo.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 13.",
+      "saberes": [
+        "PSI-S06"
+      ]
+    },
+    {
+      "id": "PSI009",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Quais traços são associados positivamente à entrada e continuidade no exercício nos slides?",
+      "options": [
+        "Apenas amabilidade elevada",
+        "Abertura, conscienciosidade e extroversão elevadas",
+        "Neuroticismo elevado e abertura baixa",
+        "Conscienciosidade baixa e neuroticismo elevado"
+      ],
+      "answer": 1,
+      "explanation": "A fonte apresenta associação positiva para os três primeiros traços e associação desfavorável para neuroticismo elevado, sem determinismo individual.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 14.",
+      "saberes": [
+        "PSI-S06"
+      ]
+    },
+    {
+      "id": "PSI010",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Para um praticante com elevada abertura à experiência, qual proposta corresponde à tabela da aula?",
+      "options": [
+        "Reduzir sistematicamente todas as interações sociais",
+        "Basear o plano apenas no controlo de presença",
+        "Oferecer variedade e autonomia na escolha de exercícios",
+        "Manter sempre o mesmo treino e evitar novas experiências"
+      ],
+      "answer": 2,
+      "explanation": "Variedade, escolha e atividades ao ar livre/de aventura são sugestões para abertura elevada; abordagens conhecidas são destacadas para o polo fechado.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 15.",
+      "saberes": [
+        "PSI-S07"
+      ]
+    },
+    {
+      "id": "PSI011",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Que estratégia é especialmente sugerida para o polo consciencioso?",
+      "options": [
+        "Evitar qualquer monitorização de progresso",
+        "Priorizar apenas novidades sem objetivos",
+        "Planear objetivos e registar presença e desempenho",
+        "Retirar objetivos de curto e longo prazo"
+      ],
+      "answer": 2,
+      "explanation": "A tabela liga conscienciosidade a planeamento e aceitação de métodos de controlo; estes podem ser menos motivadores no polo espontâneo.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 15.",
+      "saberes": [
+        "PSI-S07"
+      ]
+    },
+    {
+      "id": "PSI012",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Qual adaptação corresponde ao perfil introvertido apresentado nos slides?",
+      "options": [
+        "Aumentar estímulos sonoros para compensar menor sociabilidade",
+        "Aulas sempre muito movimentadas e intensas desde o início",
+        "Obrigatoriedade de competição pública com muitos participantes",
+        "Atividades calmas, intensidade inicial baixa a moderada e poucos estímulos"
+      ],
+      "answer": 3,
+      "explanation": "A tabela aponta preferências por contextos calmos e treino sozinho ou com amigo próximo, a confirmar com a pessoa.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 16.",
+      "saberes": [
+        "PSI-S07"
+      ]
+    },
+    {
+      "id": "PSI013",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Qual intervenção é sugerida para maior neuroticismo?",
+      "options": [
+        "Eliminar objetivos por considerar o abandono inevitável",
+        "Reforçar confiança e propor objetivos realistas de curto prazo",
+        "Ignorar receios e aumentar imediatamente a complexidade",
+        "Privilegiar comparação pública com os melhores praticantes"
+      ],
+      "answer": 1,
+      "explanation": "A tabela destaca confiança, benefícios psicológicos e objetivos realistas; associação com abandono não significa inevitabilidade.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 16.",
+      "saberes": [
+        "PSI-S07"
+      ]
+    },
+    {
+      "id": "PSI014",
+      "topic": "2. Personalidade e Big Five",
+      "type": "multiple_choice",
+      "question": "Como deve o TEEF utilizar as sugestões do Big Five?",
+      "options": [
+        "Como apoio à adaptação, verificando preferências e resposta individual",
+        "Como regra fixa que dispensa conversar com o praticante",
+        "Como diagnóstico clínico de qualquer pessoa introvertida",
+        "Como garantia de que determinado perfil nunca abandona"
+      ],
+      "answer": 0,
+      "explanation": "Os traços ajudam a individualizar, mas não substituem a observação da pessoa e do contexto nem constituem diagnóstico.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 12, 15–16.",
+      "saberes": [
+        "PSI-S05",
+        "PSI-S07"
+      ]
+    },
+    {
+      "id": "PSI015",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Qual abordagem à inatividade física é defendida nos slides?",
+      "options": [
+        "Atuar apenas sobre a vontade individual",
+        "Excluir fatores económicos por não afetarem a participação",
+        "Usar apenas campanhas sem adaptação ao praticante",
+        "Combinar mudanças sociais e ambientais com abordagens centradas na pessoa"
+      ],
+      "answer": 3,
+      "explanation": "A fonte defende uma resposta sistémica articulada com apoio individual; a adesão depende de vários níveis de fatores.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 17–20.",
+      "saberes": [
+        "PSI-S08"
+      ]
+    },
+    {
+      "id": "PSI016",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "O EMI-2p reduzido apresentado na aula tem quantos itens e que escala?",
+      "options": [
+        "17 itens, de 0 a 10",
+        "12 itens, de 1 a 5",
+        "14 itens, de 1 a 10",
+        "14 itens, de 0 a 5"
+      ],
+      "answer": 3,
+      "explanation": "O EMI-2p usa 14 itens e escala 0–5; 17 itens/0–10 corresponde ao questionário de barreiras, e 12 itens/1–5 à ELF.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 22.",
+      "saberes": [
+        "PSI-S09"
+      ]
+    },
+    {
+      "id": "PSI017",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Uma categoria com pontuação elevada no EMI-2p indica o quê?",
+      "options": [
+        "Uma menor preferência por esse motivo",
+        "Uma barreira mais forte à prática nas próximas semanas",
+        "Um diagnóstico de dependência de exercício",
+        "Um motivo mais importante para a prática de exercício"
+      ],
+      "answer": 3,
+      "explanation": "O instrumento avalia motivos; pontuações maiores significam maior importância, não diagnóstico ou intensidade de barreira.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 22.",
+      "saberes": [
+        "PSI-S09"
+      ]
+    },
+    {
+      "id": "PSI018",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Qual conjunto corresponde às categorias de barreiras do QABPEF?",
+      "options": [
+        "Imagem corporal, fadiga/preguiça, obrigações/falta de tempo e ambiente/instalações",
+        "Abertura, conscienciosidade, extroversão e amabilidade",
+        "Bem-estar, social e saúde",
+        "Relação pedagógica, suporte social e reforço"
+      ],
+      "answer": 0,
+      "explanation": "O QABPEF organiza barreiras em quatro categorias; os restantes conjuntos pertencem a outros instrumentos/modelos.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 23.",
+      "saberes": [
+        "PSI-S10"
+      ]
+    },
+    {
+      "id": "PSI019",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Perante falta de tempo, qual proposta está alinhada com a aula?",
+      "options": [
+        "Adiar a prática até existir uma hora livre todos os dias",
+        "Explorar a rotina e distribuir pequenas doses de atividade pelo dia",
+        "Aplicar o mesmo horário fixo independentemente das obrigações",
+        "Interpretar a barreira como ausência definitiva de interesse"
+      ],
+      "answer": 1,
+      "explanation": "As sugestões incluem deslocações ativas, pausas e exercise snacks, ajustando a prática à vida da pessoa.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 23–26.",
+      "saberes": [
+        "PSI-S10"
+      ]
+    },
+    {
+      "id": "PSI020",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Qual é a preocupação principal da TAD sobre a motivação?",
+      "options": [
+        "A frequência cardíaca máxima durante a sessão",
+        "Apenas a quantidade de esforço realizado",
+        "Apenas o número de sessões semanais",
+        "A qualidade das razões que levam a agir"
+      ],
+      "answer": 3,
+      "explanation": "A TAD distingue tipos de regulação e experiências/consequências diferentes, além da quantidade de motivação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 28.",
+      "saberes": [
+        "PSI-S11"
+      ]
+    },
+    {
+      "id": "PSI021",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Uma pessoa treina para evitar sentir culpa. Que regulação descreve melhor este motivo?",
+      "options": [
+        "Integrada",
+        "Amotivação",
+        "Intrínseca",
+        "Introjetada"
+      ],
+      "answer": 3,
+      "explanation": "A culpa traduz pressão interna, característica da regulação introjetada; prazer inerente é intrínseco e congruência com valores é integrada.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 29.",
+      "saberes": [
+        "PSI-S11"
+      ]
+    },
+    {
+      "id": "PSI022",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Treinar porque a atividade é congruente com os próprios valores corresponde a que regulação?",
+      "options": [
+        "Integrada, extrínseca mas mais autodeterminada",
+        "Amotivação, sem intenção de agir",
+        "Externa, por punição ou recompensa",
+        "Intrínseca, necessariamente por prazer na tarefa"
+      ],
+      "answer": 0,
+      "explanation": "Na figura, integrada pertence à motivação extrínseca e orienta-se por valores; não é sinónimo de prazer inerente.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 29.",
+      "saberes": [
+        "PSI-S11"
+      ]
+    },
+    {
+      "id": "PSI023",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Que necessidades psicológicas básicas são apresentadas na TAD?",
+      "options": [
+        "Relação, competência e autonomia",
+        "Intensidade, frequência e duração",
+        "Segurança financeira, aparência e competição",
+        "Atenção, memória e velocidade"
+      ],
+      "answer": 0,
+      "explanation": "Relação é ligação/aceitação; competência é eficácia percebida; autonomia é escolha e participação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 29–30.",
+      "saberes": [
+        "PSI-S11"
+      ]
+    },
+    {
+      "id": "PSI024",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Permitir escolher entre exercícios adequados e explicar a sua finalidade favorece sobretudo quê?",
+      "options": [
+        "Autonomia",
+        "Amotivação",
+        "Dependência do instrutor",
+        "Pressão externa"
+      ],
+      "answer": 0,
+      "explanation": "Escolha e explicação das tarefas apoiam autonomia; linguagem controladora e imposição aproximam-se do polo controlador.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 30.",
+      "saberes": [
+        "PSI-S11"
+      ]
+    },
+    {
+      "id": "PSI025",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "No modelo circumplexo, energia e vigor combinam que dimensões?",
+      "options": [
+        "Baixa ativação e prazer",
+        "Elevada ativação e desprazer",
+        "Elevada ativação e prazer",
+        "Baixa ativação e desprazer"
+      ],
+      "answer": 2,
+      "explanation": "O quadrante de energia/vigor tem ativação elevada e prazer; ativação elevada com desprazer corresponde a tensão/stress.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 30.",
+      "saberes": [
+        "PSI-S12"
+      ]
+    },
+    {
+      "id": "PSI026",
+      "topic": "3. Motivação, barreiras e afetos",
+      "type": "multiple_choice",
+      "question": "Uma experiência de calma e relaxamento corresponde a quê?",
+      "options": [
+        "Baixa ativação e prazer",
+        "Elevada ativação e prazer",
+        "Elevada ativação e desprazer",
+        "Baixa ativação e desprazer"
+      ],
+      "answer": 0,
+      "explanation": "A baixa ativação pode ser agradável; distingue-se do aborrecimento/cansaço pela valência afetiva.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 30.",
+      "saberes": [
+        "PSI-S12"
+      ]
+    },
+    {
+      "id": "PSI027",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "Qual conjunto caracteriza um grupo segundo os critérios apresentados?",
+      "options": [
+        "Duas ou mais pessoas, objetivo comum, interação e influência motivacional",
+        "Um instrutor a realizar uma tarefa sozinho",
+        "Pessoas no mesmo espaço sem interação nem objetivo comum",
+        "Pessoas com objetivos individuais sem comunicação"
+      ],
+      "answer": 0,
+      "explanation": "Os quatro critérios distinguem um grupo de um simples agregado de pessoas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 35.",
+      "saberes": [
+        "PSI-S13"
+      ]
+    },
+    {
+      "id": "PSI028",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "O que são dinâmicas de grupo?",
+      "options": [
+        "Uma medida exclusivamente individual de aptidão",
+        "Apenas o volume total de treino dos membros",
+        "Apenas a disposição dos equipamentos na sala",
+        "Processos estruturais, relacionais, motivacionais e emocionais da interação"
+      ],
+      "answer": 3,
+      "explanation": "As dinâmicas abrangem normas, papéis, comunicação, influência, motivação, emoções e coesão.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 36.",
+      "saberes": [
+        "PSI-S14"
+      ]
+    },
+    {
+      "id": "PSI029",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "A orientação para alcançar objetivos instrumentais comuns corresponde a quê?",
+      "options": [
+        "Ansiedade traço",
+        "Coesão de tarefa",
+        "Coesão social",
+        "Motivação introjetada"
+      ],
+      "answer": 1,
+      "explanation": "A coesão de tarefa centra-se no objetivo do grupo; a social centra-se no desenvolvimento e manutenção de relações.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 37.",
+      "saberes": [
+        "PSI-S15"
+      ]
+    },
+    {
+      "id": "PSI030",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "Qual relação entre coesão e exercício é apresentada nos slides?",
+      "options": [
+        "Garantia de que nenhum membro abandona",
+        "Associação positiva com adesão e desempenho",
+        "Independência completa da adesão",
+        "Associação exclusiva com redução da intensidade"
+      ],
+      "answer": 1,
+      "explanation": "A fonte apresenta uma associação, não uma garantia individual nem um efeito limitado à intensidade.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 37–38.",
+      "saberes": [
+        "PSI-S15"
+      ]
+    },
+    {
+      "id": "PSI031",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "Escolher um nome e símbolos comuns para a turma é uma estratégia de quê?",
+      "options": [
+        "Diagnóstico de ansiedade social",
+        "Distintividade no teambuilding",
+        "Regulação externa da motivação por punição",
+        "Delegação técnica individual"
+      ],
+      "answer": 1,
+      "explanation": "Nome e símbolos ajudam a criar identidade/distintividade, uma das estratégias de desenvolvimento da coesão.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 39.",
+      "saberes": [
+        "PSI-S16"
+      ]
+    },
+    {
+      "id": "PSI032",
+      "topic": "4. Dinâmicas, coesão e teambuilding",
+      "type": "multiple_choice",
+      "question": "Qual ação concretiza interação e comunicação no teambuilding?",
+      "options": [
+        "Eliminar objetivos partilhados",
+        "Manter todos os membros isolados durante as tarefas",
+        "Evitar contacto entre membros novos e experientes",
+        "Alternar funções de demonstrar, incentivar e reforçar em pequenos grupos"
+      ],
+      "answer": 3,
+      "explanation": "Trocar funções e trabalhar em pequenos grupos amplia interação e apoio; isolamento não concretiza essa estratégia.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 39.",
+      "saberes": [
+        "PSI-S16"
+      ]
+    },
+    {
+      "id": "PSI033",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Como é definida a liderança na aula?",
+      "options": [
+        "Processo de influência para objetivos comuns, ajustado ao contexto e preferências",
+        "Garantia de obediência independente da motivação",
+        "Capacidade de centralizar todas as decisões em qualquer situação",
+        "Aplicação de uma personalidade fixa sem adaptação"
+      ],
+      "answer": 0,
+      "explanation": "A liderança é dinâmica e multidimensional, envolvendo líder, liderados, objetivos e contexto.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 40.",
+      "saberes": [
+        "PSI-S17"
+      ]
+    },
+    {
+      "id": "PSI034",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Qual é uma qualidade interpessoal de líderes eficazes?",
+      "options": [
+        "Persistência",
+        "Motivação intrínseca",
+        "Empatia",
+        "Autocontrolo"
+      ],
+      "answer": 2,
+      "explanation": "A tabela coloca empatia entre as qualidades interpessoais; os outros elementos estão no conjunto intrapessoal.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 41.",
+      "saberes": [
+        "PSI-S18"
+      ]
+    },
+    {
+      "id": "PSI035",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Quais são os três tipos de comportamento relacionados no MMLD?",
+      "options": [
+        "Internos, externos e somáticos",
+        "Intrínsecos, introjetados e integrados",
+        "Agudos, crónicos e estáveis",
+        "Exigidos, atuais e preferidos"
+      ],
+      "answer": 3,
+      "explanation": "O modelo articula exigências da situação, comportamento efetivo do líder e preferências dos liderados.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 42.",
+      "saberes": [
+        "PSI-S19"
+      ]
+    },
+    {
+      "id": "PSI036",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Quais antecedentes são considerados no MMLD?",
+      "options": [
+        "Características da situação, do líder e dos liderados",
+        "Só os resultados finais do grupo",
+        "Apenas preferências dos liderados",
+        "Apenas idade e condição física do líder"
+      ],
+      "answer": 0,
+      "explanation": "O MMLD cruza os três grupos de antecedentes; desempenho e satisfação são consequências, não antecedentes.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 42.",
+      "saberes": [
+        "PSI-S19"
+      ]
+    },
+    {
+      "id": "PSI037",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Incentivar soluções criativas para resolver um problema exemplifica quê?",
+      "options": [
+        "Suporte social",
+        "Estimulação intelectual",
+        "Influência idealizada",
+        "Autocracia"
+      ],
+      "answer": 1,
+      "explanation": "Estimulação intelectual é um comportamento transformacional que promove pensamento criativo e resolução inovadora de problemas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 43.",
+      "saberes": [
+        "PSI-S17",
+        "PSI-S19"
+      ]
+    },
+    {
+      "id": "PSI038",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "O que significa uma pontuação elevada num fator da ELF?",
+      "options": [
+        "Maior diagnóstico de ansiedade no praticante",
+        "Menor importância desse comportamento",
+        "Maior competência técnica objetiva do instrutor",
+        "Maior preferência do praticante por esse comportamento do instrutor"
+      ],
+      "answer": 3,
+      "explanation": "A ELF é autorrelato de preferências em relação pedagógica, suporte social e reforço; não diagnostica nem mede diretamente técnica.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 44.",
+      "saberes": [
+        "PSI-S19"
+      ]
+    },
+    {
+      "id": "PSI039",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Um principiante com pouca competência e elevado compromisso corresponde a que combinação?",
+      "options": [
+        "D4 com S4: direção baixa e apoio baixo",
+        "D3 com S3: direção baixa e apoio alto",
+        "D1 com S1: direção alta e apoio baixo",
+        "D2 com S2: direção alta e apoio alto"
+      ],
+      "answer": 2,
+      "explanation": "O principiante entusiasta necessita de instrução e demonstração claras; no modelo esse perfil é D1/S1.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 46–47.",
+      "saberes": [
+        "PSI-S20"
+      ]
+    },
+    {
+      "id": "PSI040",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Pouca a alguma competência e baixo compromisso indicam que estilo na teoria situacional?",
+      "options": [
+        "S3 — Apoio, com direção baixa",
+        "S1 — Direção, com apoio baixo",
+        "S4 — Delegação, com direção e apoio baixos",
+        "S2 — Treino, com direção e apoio altos"
+      ],
+      "answer": 3,
+      "explanation": "D2 é o aprendiz desiludido; combina necessidade técnica de direção com necessidade de apoio e explicação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 46–47.",
+      "saberes": [
+        "PSI-S20"
+      ]
+    },
+    {
+      "id": "PSI041",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Para competência moderada a elevada e compromisso variável, qual combinação é indicada?",
+      "options": [
+        "S3 — Apoio, com direção baixa e apoio alto",
+        "S4 — Delegação, com direção e apoio baixos",
+        "S1 — Direção, com direção alta e apoio baixo",
+        "S2 — Treino, com direção e apoio altos"
+      ],
+      "answer": 0,
+      "explanation": "D3 é capaz mas cauteloso: estimular decisões, encorajar e apoiar é mais apropriado do que dirigir tudo.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 46–47.",
+      "saberes": [
+        "PSI-S20"
+      ]
+    },
+    {
+      "id": "PSI042",
+      "topic": "5. Liderança do TEEF",
+      "type": "multiple_choice",
+      "question": "Um praticante com competência e compromisso elevados corresponde a quê?",
+      "options": [
+        "D2/S2, com elevada direção por baixa competência",
+        "D4/S4, com delegação e recursos para atuação independente",
+        "D3/S3, com apoio alto por compromisso variável",
+        "D1/S1, com demonstração constante e decisão exclusiva do líder"
+      ],
+      "answer": 1,
+      "explanation": "D4 permite delegar; o líder continua a reconhecer desempenho e facilitar recursos, sem confundir autonomia com abandono.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 46–47.",
+      "saberes": [
+        "PSI-S20"
+      ]
+    },
+    {
+      "id": "PSI043",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Segundo a revisão apresentada na aula, a associação entre atividade física e saúde mental depende de quê?",
+      "options": [
+        "Do domínio em que a atividade acontece",
+        "Apenas do número de passos, independentemente do contexto",
+        "Exclusivamente da idade do instrutor",
+        "Só da presença de outras pessoas"
+      ],
+      "answer": 0,
+      "explanation": "A fonte distingue tempo livre, transporte, atividade doméstica, desporto escolar e trabalho, com associações diferentes.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 54.",
+      "saberes": [
+        "PSI-S21"
+      ]
+    },
+    {
+      "id": "PSI044",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual sinal aponta para necessidade de avaliação profissional, segundo a tabela da aula?",
+      "options": [
+        "Ativação ligeira e transitória antes da primeira aula",
+        "Ansiedade continuada, desproporcionada e com prejuízo no funcionamento",
+        "Excitação agradável durante um exercício preferido",
+        "Apreensão temporária que termina depois de um desafio"
+      ],
+      "answer": 1,
+      "explanation": "Persistência e prejuízo diferenciam sinais de preocupação clínica de ansiedade adaptativa; o TEEF identifica sinais e referencia, sem diagnosticar.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 55–56.",
+      "saberes": [
+        "PSI-S22"
+      ]
+    },
+    {
+      "id": "PSI045",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Apreensão transitória antes de uma tarefa específica descreve sobretudo quê?",
+      "options": [
+        "Personalidade estável",
+        "Ansiedade estado",
+        "Coesão de tarefa",
+        "Ansiedade traço"
+      ],
+      "answer": 1,
+      "explanation": "Estado é transitório e momentâneo; traço é a tendência relativamente estável para responder com ansiedade.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 55.",
+      "saberes": [
+        "PSI-S23"
+      ]
+    },
+    {
+      "id": "PSI046",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual é uma manifestação cognitiva de ansiedade?",
+      "options": [
+        "Tensão muscular",
+        "Transpiração",
+        "Aumento do ritmo respiratório",
+        "Pensamentos catastróficos"
+      ],
+      "answer": 3,
+      "explanation": "Pensamento catastrófico é cognitivo; as restantes manifestações são corporais ou somáticas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 55.",
+      "saberes": [
+        "PSI-S24"
+      ]
+    },
+    {
+      "id": "PSI047",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "O que refere a aula sobre a dose ótima de exercício para ansiedade?",
+      "options": [
+        "Exercício agudo não pode aliviar sintomas",
+        "Ainda não está esclarecida, devendo considerar intensidade e preferências",
+        "É igual para todos os diagnósticos e praticantes",
+        "Só exercício anaeróbio reduz sintomas"
+      ],
+      "answer": 1,
+      "explanation": "A fonte apresenta benefícios de exercício agudo/crónico e aeróbio/anaeróbio, mas não fixa uma dose ótima universal.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 57.",
+      "saberes": [
+        "PSI-S25"
+      ]
+    },
+    {
+      "id": "PSI048",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual distinção temporal entre depressão major e persistente é apresentada nos slides?",
+      "options": [
+        "Major: um dia; persistente: sete dias",
+        "Major: pelo menos duas semanas; persistente: pelo menos dois anos em adultos",
+        "Ambas exigem três meses com episódios semanais",
+        "Major: dois anos; persistente: duas semanas"
+      ],
+      "answer": 1,
+      "explanation": "Os períodos pertencem às descrições da aula; não bastam isoladamente para diagnóstico e não se confundem com critérios das perturbações alimentares.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 58.",
+      "saberes": [
+        "PSI-S26"
+      ]
+    },
+    {
+      "id": "PSI049",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual afirmação corresponde aos efeitos do exercício na depressão apresentados na aula?",
+      "options": [
+        "Existe uma dose semanal única e precisa para todos",
+        "Intensidade leve é sempre inútil",
+        "Só o treino de força tem efeitos, excluindo atividade aeróbia",
+        "Agudo pode ajudar no curto prazo; crónico aeróbio e de resistência reduz sintomas"
+      ],
+      "answer": 3,
+      "explanation": "A aula distingue efeitos temporais e modalidades, refere benefícios possíveis em intensidade leve e não estabelece dose semanal universal.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 59–60.",
+      "saberes": [
+        "PSI-S27"
+      ]
+    },
+    {
+      "id": "PSI050",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual é a diferença entre stressor e resposta ao stress?",
+      "options": [
+        "Stressor é a recuperação; resposta é o equilíbrio inicial",
+        "Stressor é apenas uma emoção; resposta é sempre uma doença",
+        "Stressor é a exigência; resposta são as alterações para lidar com ela",
+        "Os dois termos significam exclusivamente frequência cardíaca elevada"
+      ],
+      "answer": 2,
+      "explanation": "O stressor perturba homeostasia; a resposta envolve alterações mentais, emocionais e físicas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 60.",
+      "saberes": [
+        "PSI-S28"
+      ]
+    },
+    {
+      "id": "PSI051",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual sequência corresponde à Síndrome Geral de Adaptação?",
+      "options": [
+        "Resistência, exaustão e alarme",
+        "Alarme, delegação e recuperação",
+        "Alarme, resistência e exaustão",
+        "Exaustão, alarme e resistência"
+      ],
+      "answer": 2,
+      "explanation": "Alarme é reação imediata, resistência é tentativa de adaptação e exaustão traduz esgotamento perante stress persistente.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 61.",
+      "saberes": [
+        "PSI-S29"
+      ]
+    },
+    {
+      "id": "PSI052",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Qual descrição corresponde ao eustress?",
+      "options": [
+        "Stress crónico ocupacional com redução de eficácia",
+        "Stress desagradável que ultrapassa os limites da pessoa",
+        "Ausência completa de qualquer exigência",
+        "Stress vivido como desafio que favorece desempenho e saúde"
+      ],
+      "answer": 3,
+      "explanation": "Eustress pode ser positivo; distress é prejudicial e burnout pertence ao contexto de stress crónico no trabalho.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 61–62.",
+      "saberes": [
+        "PSI-S30"
+      ]
+    },
+    {
+      "id": "PSI053",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Que conjunto caracteriza burnout nos slides?",
+      "options": [
+        "Aumento de energia, prazer e eficácia no trabalho",
+        "Apenas preocupação pontual antes de uma avaliação",
+        "Apenas dor muscular depois de uma sessão intensa",
+        "Exaustão, distanciamento do trabalho e redução da eficácia profissional"
+      ],
+      "answer": 3,
+      "explanation": "Burnout resulta de stress crónico ocupacional não gerido com sucesso e envolve as três dimensões indicadas.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 62–63.",
+      "saberes": [
+        "PSI-S31"
+      ]
+    },
+    {
+      "id": "PSI054",
+      "topic": "6. Saúde mental, ansiedade, depressão e stress",
+      "type": "multiple_choice",
+      "question": "Que dose é apresentada na p. 64 para gestão de stress no enquadramento da revisão citada?",
+      "options": [
+        "90–150 minutos semanais de exercício moderado",
+        "30 minutos semanais, independentemente da intensidade",
+        "90–150 minutos diários obrigatórios de exercício vigoroso",
+        "Apenas uma sessão mensal de alta intensidade"
+      ],
+      "answer": 0,
+      "explanation": "Este é o valor apresentado na aula para esse contexto, não uma dose universal nem substituto das recomendações gerais de atividade física.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 64.",
+      "saberes": [
+        "PSI-S32"
+      ]
+    },
+    {
+      "id": "PSI055",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "Qual combinação caracteriza um episódio de compulsão alimentar?",
+      "options": [
+        "Baixo apetite e sensação de saciedade normal",
+        "Qualquer refeição maior após uma sessão de treino",
+        "Quantidade claramente elevada num período delimitado e perda de controlo",
+        "Seleção de alimentos saudáveis sem sofrimento"
+      ],
+      "answer": 2,
+      "explanation": "A quantidade deve ser claramente superior à esperada nas circunstâncias e acompanhar-se de perda de controlo; comer mais isoladamente não basta.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 67.",
+      "saberes": [
+        "PSI-S33"
+      ]
+    },
+    {
+      "id": "PSI056",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "Qual distinção é central entre bulimia e a perturbação de compulsão alimentar descritas?",
+      "options": [
+        "Na bulimia, os episódios não envolvem perda de controlo",
+        "Na bulimia existem comportamentos compensatórios inadequados recorrentes",
+        "A bulimia distingue-se apenas pela quantidade ingerida, sem considerar compensação",
+        "A compulsão alimentar exige sempre peso significativamente baixo"
+      ],
+      "answer": 1,
+      "explanation": "A aula distingue a recorrência de compensação, que pode incluir exercício excessivo; a compulsão alimentar descrita não tem essa compensação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 68–69.",
+      "saberes": [
+        "PSI-S34"
+      ]
+    },
+    {
+      "id": "PSI057",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "Qual conjunto corresponde à descrição de anorexia na aula?",
+      "options": [
+        "Apenas episódios semanais de compulsão sem compensação",
+        "Interesse por alimentos saudáveis sem prejuízo funcional",
+        "Apenas elevada frequência de treino e peso estável",
+        "Restrição com peso baixo, medo de engordar e perturbação da experiência corporal"
+      ],
+      "answer": 3,
+      "explanation": "A anorexia envolve restrição e peso significativamente baixo, medo/comportamentos contra ganho e perturbação na avaliação corporal; um elemento isolado não basta.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 69.",
+      "saberes": [
+        "PSI-S34"
+      ]
+    },
+    {
+      "id": "PSI058",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "O que distingue a ortorexia descrita nos slides de uma alimentação saudável equilibrada?",
+      "options": [
+        "Fixação rígida com sofrimento e prejuízo funcional",
+        "Ter interesse em aprender sobre alimentação",
+        "Preferir ocasionalmente vegetais",
+        "Planear refeições sem impacto social ou emocional"
+      ],
+      "answer": 0,
+      "explanation": "A problemática reside na obsessão, rigidez e prejuízo, não no simples interesse por saúde; a fonte assinala ausência de critérios formais reconhecidos.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 70.",
+      "saberes": [
+        "PSI-S35"
+      ]
+    },
+    {
+      "id": "PSI059",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "Na dependência de exercício, o que descreve tolerância?",
+      "options": [
+        "Precisar de aumentar quantidade, intensidade ou duração para obter o efeito desejado",
+        "Conseguir interromper o treino sem dificuldade",
+        "Reduzir o treino após uma lesão",
+        "Sentir-se confortável com uma rotina estável sem precisar de aumentar"
+      ],
+      "answer": 0,
+      "explanation": "Tolerância refere escalada para obter o efeito; não é sinónimo de adaptação técnica ou aceitação de descanso.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 71.",
+      "saberes": [
+        "PSI-S36"
+      ]
+    },
+    {
+      "id": "PSI060",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "O que caracteriza dependência secundária de exercício na aula?",
+      "options": [
+        "O exercício excessivo funciona como comportamento compensatório",
+        "O exercício em si é a fonte principal da dependência",
+        "Qualquer pessoa que usa treino em grupo",
+        "Qualquer praticante que treina duas modalidades"
+      ],
+      "answer": 0,
+      "explanation": "A primária centra-se no exercício como fonte da dependência; a secundária pode surgir como compensação, por exemplo na bulimia.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 71.",
+      "saberes": [
+        "PSI-S36"
+      ]
+    },
+    {
+      "id": "PSI061",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "A preocupação persistente de ser insuficientemente musculoso corresponde a que especificação estudada?",
+      "options": [
+        "Dismorfia muscular na perturbação dismórfica corporal",
+        "Ansiedade estado por uma tarefa nova",
+        "Coesão social de grupo",
+        "Regulação identificada da motivação"
+      ],
+      "answer": 0,
+      "explanation": "A dismorfia muscular centra-se na perceção de corpo demasiado pequeno ou pouco musculoso e pode acompanhar-se de sofrimento e prejuízo.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 72–73.",
+      "saberes": [
+        "PSI-S37"
+      ]
+    },
+    {
+      "id": "PSI062",
+      "topic": "7. Comportamentos aditivos e patológicos",
+      "type": "multiple_choice",
+      "question": "Perante treino com lesão, culpa ao descansar e prejuízo social, qual ação é adequada ao TEEF?",
+      "options": [
+        "Confirmar dependência com base apenas nos dias de treino",
+        "Reforçar o excesso como prova de compromisso",
+        "Reconhecer sinais de alerta, proteger recuperação e articular com profissionais",
+        "Prescrever psicoterapia durante a sessão de exercício"
+      ],
+      "answer": 2,
+      "explanation": "A aula orienta observação, conversa sensível, proteção e referenciação; não diagnosticar nem valorizar comportamentos que prejudicam saúde e vida pessoal.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 71–73.",
+      "saberes": [
+        "PSI-S36",
+        "PSI-S37"
+      ]
+    },
+    {
+      "id": "PSI063",
+      "topic": "8. Metas, objetivos e SMART",
+      "type": "multiple_choice",
+      "question": "Como distingue a aula meta de objetivos e ações?",
+      "options": [
+        "Meta indica o que alcançar; objetivos e ações organizam como alcançar",
+        "Metas dispensam ações específicas, enquanto objetivos dispensam monitorização",
+        "Meta indica como executar cada tarefa; objetivos indicam apenas o resultado final",
+        "Meta corresponde apenas ao prazo; objetivos são apenas as avaliações intermédias"
+      ],
+      "answer": 0,
+      "explanation": "A meta fornece direção e o plano de objetivos/ações apoia o percurso e a autorregulação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 76.",
+      "saberes": [
+        "PSI-S38"
+      ]
+    },
+    {
+      "id": "PSI064",
+      "topic": "8. Metas, objetivos e SMART",
+      "type": "multiple_choice",
+      "question": "O que significa SMART segundo os slides de Psicologia?",
+      "options": [
+        "Simples, mensurável, atingível, relevante e transitório",
+        "Específico, mensurável, atingível, relevante/realista e limitado no tempo",
+        "Específico, mensurável, automático, relevante e limitado no tempo",
+        "Específico, motivacional, atingível, realista e limitado no tempo"
+      ],
+      "answer": 1,
+      "explanation": "Os cinco critérios organizam a redação e avaliação das metas/objetivos; R mantém a formulação relevante/realista da fonte.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 76–79.",
+      "saberes": [
+        "PSI-S39"
+      ]
+    },
+    {
+      "id": "PSI065",
+      "topic": "8. Metas, objetivos e SMART",
+      "type": "multiple_choice",
+      "question": "Qual ação corresponde ao critério mensurável?",
+      "options": [
+        "Escolher um prazo sem observar resultados",
+        "Definir apenas uma intenção sem forma de verificar",
+        "Definir indicadores e realizar avaliações intermédias do progresso",
+        "Eliminar indicadores para reduzir pressão"
+      ],
+      "answer": 2,
+      "explanation": "Mensurável permite avaliar resultado e progresso para decidir se o plano necessita de ajuste.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 77.",
+      "saberes": [
+        "PSI-S39"
+      ]
+    },
+    {
+      "id": "PSI066",
+      "topic": "8. Metas, objetivos e SMART",
+      "type": "multiple_choice",
+      "question": "Um objetivo tem número e prazo, mas excede recursos e competências atuais. O que deve ser revisto?",
+      "options": [
+        "Apenas o prazo, mantendo tarefas que excedem as competências",
+        "Nada, porque número e prazo garantem todos os critérios SMART",
+        "Atingibilidade e realismo, reformulando com o praticante",
+        "Apenas a mensurabilidade, sem rever a viabilidade"
+      ],
+      "answer": 2,
+      "explanation": "SMART exige verificar recursos e viabilidade; números e prazo não compensam um objetivo inatingível.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 78–79.",
+      "saberes": [
+        "PSI-S38",
+        "PSI-S39"
+      ]
+    },
+    {
+      "id": "PSI067",
+      "topic": "9. Ativação e autocontrolo",
+      "type": "multiple_choice",
+      "question": "O que inclui a ativação psicofísica?",
+      "options": [
+        "Apenas temperatura do ambiente",
+        "Exclusivamente condição cardiorrespiratória de longo prazo",
+        "Apenas pensamentos negativos",
+        "Componentes fisiológicos e psicológicos de excitação do organismo"
+      ],
+      "answer": 3,
+      "explanation": "Ativação envolve frequência cardíaca/tensão e alerta/energia/foco, num continuum de baixa a alta excitação.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 80.",
+      "saberes": [
+        "PSI-S40"
+      ]
+    },
+    {
+      "id": "PSI068",
+      "topic": "9. Ativação e autocontrolo",
+      "type": "multiple_choice",
+      "question": "De que depende o nível ótimo de ativação?",
+      "options": [
+        "Das exigências da tarefa e características individuais",
+        "Só do nível de condição física, sem considerar a tarefa",
+        "De um valor fixo definido apenas pela idade",
+        "De um valor máximo igual para todas as tarefas"
+      ],
+      "answer": 0,
+      "explanation": "O objetivo é ajustar ativação ao praticante e tarefa, não maximizar indiscriminadamente.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 80.",
+      "saberes": [
+        "PSI-S41"
+      ]
+    },
+    {
+      "id": "PSI069",
+      "topic": "9. Ativação e autocontrolo",
+      "type": "multiple_choice",
+      "question": "Qual estratégia é apresentada para aumentar ativação?",
+      "options": [
+        "Visualização de um local calmo",
+        "Relaxamento muscular progressivo",
+        "Reduzir luz e som num local tranquilo",
+        "Música energética e palavras de ânimo"
+      ],
+      "answer": 3,
+      "explanation": "Música energética e palavras de ânimo procuram aumentar energia; as outras opções são estratégias de redução na aula.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 81.",
+      "saberes": [
+        "PSI-S42"
+      ]
+    },
+    {
+      "id": "PSI070",
+      "topic": "9. Ativação e autocontrolo",
+      "type": "multiple_choice",
+      "question": "Uma pessoa chega agitada e muito tensa para uma tarefa que requer controlo. Qual opção pode reduzir ativação?",
+      "options": [
+        "Exigir execução imediata sem avaliar o estado",
+        "Abrandar, reduzir estímulos e apoiar respiração diafragmática",
+        "Usar apenas visualizações de esforço máximo",
+        "Aumentar música energética e movimentos vigorosos"
+      ],
+      "answer": 1,
+      "explanation": "Quando a ativação é excessiva, a aula apresenta redução de estímulos, respiração e relaxamento, ajustados à tarefa e pessoa.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 81–82.",
+      "saberes": [
+        "PSI-S41",
+        "PSI-S42"
+      ]
+    },
+    {
+      "id": "PSI071",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "A que corresponde atenção?",
+      "options": [
+        "Selecionar recursos cognitivos para estímulos relevantes",
+        "Manter necessariamente o mesmo pensamento todo o dia",
+        "Eliminar toda a informação do ambiente",
+        "Ter confiança elevada em qualquer tarefa"
+      ],
+      "answer": 0,
+      "explanation": "Atenção envolve selecionar e direcionar; concentração acrescenta manter esse foco durante o tempo necessário.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 83.",
+      "saberes": [
+        "PSI-S43"
+      ]
+    },
+    {
+      "id": "PSI072",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "Recordar mentalmente uma instrução do agachamento é que estilo, no exemplo dos slides?",
+      "options": [
+        "Externo amplo",
+        "Interno amplo",
+        "Externo estreito",
+        "Interno estreito"
+      ],
+      "answer": 3,
+      "explanation": "A recordação é interna e focada numa instrução específica; observar a demonstração é externo amplo.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 83.",
+      "saberes": [
+        "PSI-S44"
+      ]
+    },
+    {
+      "id": "PSI073",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "O que acrescenta a concentração à seleção atencional?",
+      "options": [
+        "Manter o foco no estímulo relevante durante o tempo necessário",
+        "Garantir ausência de qualquer distrator",
+        "Escolher sempre muitos estímulos em simultâneo",
+        "Mudar de tarefa em cada segundo"
+      ],
+      "answer": 0,
+      "explanation": "Concentração implica manutenção apesar de distrações, não a impossibilidade de elas existirem.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 84.",
+      "saberes": [
+        "PSI-S45"
+      ]
+    },
+    {
+      "id": "PSI074",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "Qual é um distrator interno?",
+      "options": [
+        "Iluminação inadequada no local",
+        "Música irrelevante na sala",
+        "Movimento de outras pessoas",
+        "Pensamento autocrítico durante a série"
+      ],
+      "answer": 3,
+      "explanation": "Pensamentos, preocupações, dor e fadiga são exemplos internos; som, outras pessoas e condições ambientais são externos.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 84.",
+      "saberes": [
+        "PSI-S46"
+      ]
+    },
+    {
+      "id": "PSI075",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "Qual estratégia de instrução favorece o foco atencional?",
+      "options": [
+        "Acumular instruções extensas e irrelevantes",
+        "Mudar continuamente a pista sem explicar",
+        "Evitar definir objetivos da tarefa",
+        "Usar palavras-chave simples e específicas ligadas à tarefa"
+      ],
+      "answer": 3,
+      "explanation": "A aula sugere pistas simples, específicas e relevantes, praticadas antes da tarefa, com gestão prévia de distrações.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 85.",
+      "saberes": [
+        "PSI-S47"
+      ]
+    },
+    {
+      "id": "PSI076",
+      "topic": "10. Atenção e concentração",
+      "type": "multiple_choice",
+      "question": "Observar globalmente o TEEF a demonstrar um agachamento corresponde a quê?",
+      "options": [
+        "Atenção interna estreita",
+        "Atenção externa ampla",
+        "Atenção interna ampla",
+        "Ansiedade cognitiva"
+      ],
+      "answer": 1,
+      "explanation": "No exemplo da tabela, a demonstração é um estímulo externo observado globalmente; o estilo deve ajustar-se à tarefa.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 83–85.",
+      "saberes": [
+        "PSI-S44",
+        "PSI-S47"
+      ]
+    },
+    {
+      "id": "PSI077",
+      "topic": "11. Mentalização e autoconfiança",
+      "type": "multiple_choice",
+      "question": "O que caracteriza mentalização?",
+      "options": [
+        "Executar fisicamente a tarefa sem qualquer imaginação",
+        "Imaginar apenas imagens visuais sem outros componentes",
+        "Substituir todas as tarefas por análise verbal",
+        "Criar ou recriar experiências sensoriais por imagens mentais sem execução real"
+      ],
+      "answer": 3,
+      "explanation": "A mentalização pode envolver visão, sensações de movimento, sons, emoções e contexto; é complementar à prática.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 86–87.",
+      "saberes": [
+        "PSI-S48"
+      ]
+    },
+    {
+      "id": "PSI078",
+      "topic": "11. Mentalização e autoconfiança",
+      "type": "multiple_choice",
+      "question": "Qual afirmação distingue confiança traço de confiança estado?",
+      "options": [
+        "Traço só surge numa sessão; estado é sempre permanente",
+        "Traço mede aptidão física; estado mede carga de treino",
+        "Ambas significam competência técnica garantida",
+        "Traço é relativamente estável; estado é momentâneo numa tarefa"
+      ],
+      "answer": 3,
+      "explanation": "Confiança é crença de capacidade, não prova de competência; pode variar com a tarefa mesmo em alguém habitualmente confiante.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 87.",
+      "saberes": [
+        "PSI-S49"
+      ]
+    },
+    {
+      "id": "PSI079",
+      "topic": "11. Mentalização e autoconfiança",
+      "type": "multiple_choice",
+      "question": "Qual relação entre confiança e desempenho é apresentada na aula?",
+      "options": [
+        "Confiança dispensa preparação e atenção à tarefa",
+        "Quanto mais confiança, melhor, sem qualquer limite",
+        "Défice e excesso não favorecem desempenho; procura-se nível ótimo",
+        "Confiança baixa é sempre necessária à aprendizagem"
+      ],
+      "answer": 2,
+      "explanation": "Um nível ajustado apoia desafio, esforço e persistência; excesso pode ser tão inadequado como défice.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 87.",
+      "saberes": [
+        "PSI-S50"
+      ]
+    },
+    {
+      "id": "PSI080",
+      "topic": "11. Mentalização e autoconfiança",
+      "type": "multiple_choice",
+      "question": "Qual estratégia promove autoconfiança segundo os slides?",
+      "options": [
+        "Garantir sucesso antes de verificar competências",
+        "Metas de processo, tarefas progressivas e feedback sobre esforço e melhoria",
+        "Valorizar apenas o resultado final e ignorar progressos",
+        "Comparar publicamente o praticante com os melhores"
+      ],
+      "answer": 1,
+      "explanation": "A aula combina SMART, progressão, feedback informativo e mentalização, evitando comparações e reforçando conquistas pessoais.",
+      "source": "Slides Psicologia do Exercício (29/06/2026), pp. 87–88.",
+      "saberes": [
+        "PSI-S51"
+      ]
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "PSI067",
+      "PSI016",
+      "PSI020",
+      "PSI047",
+      "PSI068",
+      "PSI055",
+      "PSI043",
+      "PSI033",
+      "PSI058",
+      "PSI078",
+      "PSI010",
+      "PSI048",
+      "PSI044",
+      "PSI011",
+      "PSI009",
+      "PSI065",
+      "PSI053",
+      "PSI066",
+      "PSI019",
+      "PSI050",
+      "PSI057",
+      "PSI024",
+      "PSI042",
+      "PSI021",
+      "PSI037",
+      "PSI017",
+      "PSI039",
+      "PSI061",
+      "PSI027",
+      "PSI074",
+      "PSI072",
+      "PSI036",
+      "PSI075",
+      "PSI031",
+      "PSI003",
+      "PSI014",
+      "PSI029",
+      "PSI079",
+      "PSI004",
+      "PSI006"
+    ],
+    "exam2": [
+      "PSI059",
+      "PSI046",
+      "PSI040",
+      "PSI073",
+      "PSI025",
+      "PSI012",
+      "PSI002",
+      "PSI007",
+      "PSI026",
+      "PSI052",
+      "PSI060",
+      "PSI038",
+      "PSI008",
+      "PSI041",
+      "PSI069",
+      "PSI076",
+      "PSI080",
+      "PSI051",
+      "PSI015",
+      "PSI032",
+      "PSI034",
+      "PSI070",
+      "PSI035",
+      "PSI005",
+      "PSI018",
+      "PSI022",
+      "PSI030",
+      "PSI049",
+      "PSI028",
+      "PSI056",
+      "PSI054",
+      "PSI077",
+      "PSI023",
+      "PSI063",
+      "PSI062",
+      "PSI013",
+      "PSI045",
+      "PSI001",
+      "PSI071",
+      "PSI064"
+    ]
+  },
+  "coverage_audit": {
+    "status": "source_reviewed",
+    "scope": "51 itens específicos da Lista de Saberes; cobertura global do banco. Cada exame cobre os 11 temas, não necessariamente cada item isolado.",
+    "source": "Slides_Psicologia_do_Exercicio_Pos_Laboral.pdf (89 páginas, versão 29/06/2026) e Lista de Saberes.pdf (3 páginas).",
+    "items": [
+      {
+        "id": "PSI-S01",
+        "saber": "Psicologia",
+        "theme": "1. Psicologia do Exercício",
+        "summary_anchor": "psiex-detail-001",
+        "source_pages": "7",
+        "question_ids": [
+          "PSI001",
+          "PSI005"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S02",
+        "saber": "Objetivos de Estudo",
+        "theme": "1. Psicologia do Exercício",
+        "summary_anchor": "psiex-detail-002",
+        "source_pages": "7–8",
+        "question_ids": [
+          "PSI002",
+          "PSI005"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S03",
+        "saber": "Formação Académica do Psicólogo do Exercício",
+        "theme": "1. Psicologia do Exercício",
+        "summary_anchor": "psiex-detail-003",
+        "source_pages": "9",
+        "question_ids": [
+          "PSI003"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S04",
+        "saber": "Exercício Profissional",
+        "theme": "1. Psicologia do Exercício",
+        "summary_anchor": "psiex-detail-004",
+        "source_pages": "9–10, 73",
+        "question_ids": [
+          "PSI004",
+          "PSI006"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S05",
+        "saber": "Personalidade",
+        "theme": "2. Personalidade e Big Five",
+        "summary_anchor": "psiex-detail-005",
+        "source_pages": "12",
+        "question_ids": [
+          "PSI007",
+          "PSI014"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S06",
+        "saber": "Teoria do Big Five",
+        "theme": "2. Personalidade e Big Five",
+        "summary_anchor": "psiex-detail-006",
+        "source_pages": "13–14",
+        "question_ids": [
+          "PSI008",
+          "PSI009"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S07",
+        "saber": "Estratégias de aconselhamento de atividade física e prescrição de exercício considerando o Big Five",
+        "theme": "2. Personalidade e Big Five",
+        "summary_anchor": "psiex-detail-007",
+        "source_pages": "15–16",
+        "question_ids": [
+          "PSI010",
+          "PSI011",
+          "PSI012",
+          "PSI013",
+          "PSI014"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S08",
+        "saber": "Inatividade Física",
+        "theme": "3. Motivação, barreiras e afetos",
+        "summary_anchor": "psiex-detail-008",
+        "source_pages": "17–20, 27",
+        "question_ids": [
+          "PSI015"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S09",
+        "saber": "Motivos de Participação no Exercício",
+        "theme": "3. Motivação, barreiras e afetos",
+        "summary_anchor": "psiex-detail-009",
+        "source_pages": "21–22",
+        "question_ids": [
+          "PSI016",
+          "PSI017"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S10",
+        "saber": "Barreiras e Motivos de Abandono do Exercício + ações do TEEF",
+        "theme": "3. Motivação, barreiras e afetos",
+        "summary_anchor": "psiex-detail-010",
+        "source_pages": "22–27",
+        "question_ids": [
+          "PSI018",
+          "PSI019"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S11",
+        "saber": "Teoria da Autodeterminação",
+        "theme": "3. Motivação, barreiras e afetos",
+        "summary_anchor": "psiex-detail-011",
+        "source_pages": "28–30",
+        "question_ids": [
+          "PSI020",
+          "PSI021",
+          "PSI022",
+          "PSI023",
+          "PSI024"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S12",
+        "saber": "Modelo Circumplexo de Afetos",
+        "theme": "3. Motivação, barreiras e afetos",
+        "summary_anchor": "psiex-detail-012",
+        "source_pages": "30",
+        "question_ids": [
+          "PSI025",
+          "PSI026"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S13",
+        "saber": "Grupo",
+        "theme": "4. Dinâmicas, coesão e teambuilding",
+        "summary_anchor": "psiex-detail-013",
+        "source_pages": "35",
+        "question_ids": [
+          "PSI027"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S14",
+        "saber": "Dinâmicas de Grupo",
+        "theme": "4. Dinâmicas, coesão e teambuilding",
+        "summary_anchor": "psiex-detail-014",
+        "source_pages": "35–36",
+        "question_ids": [
+          "PSI028"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S15",
+        "saber": "Coesão de Grupo",
+        "theme": "4. Dinâmicas, coesão e teambuilding",
+        "summary_anchor": "psiex-detail-015",
+        "source_pages": "34, 37–38",
+        "question_ids": [
+          "PSI029",
+          "PSI030"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S16",
+        "saber": "Teambuilding",
+        "theme": "4. Dinâmicas, coesão e teambuilding",
+        "summary_anchor": "psiex-detail-016",
+        "source_pages": "38–39",
+        "question_ids": [
+          "PSI031",
+          "PSI032"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S17",
+        "saber": "Liderança",
+        "theme": "5. Liderança do TEEF",
+        "summary_anchor": "psiex-detail-017",
+        "source_pages": "40, 43",
+        "question_ids": [
+          "PSI033",
+          "PSI037"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S18",
+        "saber": "Características do Líder",
+        "theme": "5. Liderança do TEEF",
+        "summary_anchor": "psiex-detail-018",
+        "source_pages": "41",
+        "question_ids": [
+          "PSI034"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S19",
+        "saber": "Modelo Multidimensional de Liderança no Desporto",
+        "theme": "5. Liderança do TEEF",
+        "summary_anchor": "psiex-detail-019",
+        "source_pages": "42–45",
+        "question_ids": [
+          "PSI035",
+          "PSI036",
+          "PSI037",
+          "PSI038"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S20",
+        "saber": "Teoria Situacional de Liderança",
+        "theme": "5. Liderança do TEEF",
+        "summary_anchor": "psiex-detail-020",
+        "source_pages": "46–47",
+        "question_ids": [
+          "PSI039",
+          "PSI040",
+          "PSI041",
+          "PSI042"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S21",
+        "saber": "Saúde Mental",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-021",
+        "source_pages": "53–54",
+        "question_ids": [
+          "PSI043"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S22",
+        "saber": "Ansiedade",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-022",
+        "source_pages": "55–56",
+        "question_ids": [
+          "PSI044"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S23",
+        "saber": "Ansiedade Traço e Estado",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-023",
+        "source_pages": "55",
+        "question_ids": [
+          "PSI045"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S24",
+        "saber": "Ansiedade Somática e Cognitiva",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-024",
+        "source_pages": "55",
+        "question_ids": [
+          "PSI046"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S25",
+        "saber": "Prevenção e Tratamento da Ansiedade através do Exercício Físico",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-025",
+        "source_pages": "57",
+        "question_ids": [
+          "PSI047"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S26",
+        "saber": "Depressão",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-026",
+        "source_pages": "58",
+        "question_ids": [
+          "PSI048"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S27",
+        "saber": "Prevenção e Tratamento da Depressão através do Exercício Físico",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-027",
+        "source_pages": "59–60",
+        "question_ids": [
+          "PSI049"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S28",
+        "saber": "Stress e Stressores",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-028",
+        "source_pages": "60",
+        "question_ids": [
+          "PSI050"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S29",
+        "saber": "Síndrome Geral de Adaptação",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-029",
+        "source_pages": "61",
+        "question_ids": [
+          "PSI051"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S30",
+        "saber": "Eustress e Distress",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-030",
+        "source_pages": "61–62",
+        "question_ids": [
+          "PSI052"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S31",
+        "saber": "Síndrome de Burnout",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-031",
+        "source_pages": "62–63",
+        "question_ids": [
+          "PSI053"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S32",
+        "saber": "Gestão de Stress através do Exercício Físico",
+        "theme": "6. Saúde mental, ansiedade, depressão e stress",
+        "summary_anchor": "psiex-detail-032",
+        "source_pages": "63–64",
+        "question_ids": [
+          "PSI054"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S33",
+        "saber": "Compulsão Alimentar",
+        "theme": "7. Comportamentos aditivos e patológicos",
+        "summary_anchor": "psiex-detail-033",
+        "source_pages": "66–67",
+        "question_ids": [
+          "PSI055"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S34",
+        "saber": "Bulimia e Anorexia Nervosa",
+        "theme": "7. Comportamentos aditivos e patológicos",
+        "summary_anchor": "psiex-detail-034",
+        "source_pages": "68–69",
+        "question_ids": [
+          "PSI056",
+          "PSI057"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S35",
+        "saber": "Ortorexia Nervosa",
+        "theme": "7. Comportamentos aditivos e patológicos",
+        "summary_anchor": "psiex-detail-035",
+        "source_pages": "69–70",
+        "question_ids": [
+          "PSI058"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S36",
+        "saber": "Dependência de Exercício Físico",
+        "theme": "7. Comportamentos aditivos e patológicos",
+        "summary_anchor": "psiex-detail-036",
+        "source_pages": "70–71",
+        "question_ids": [
+          "PSI059",
+          "PSI060",
+          "PSI062"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S37",
+        "saber": "Perturbação Dismórfica Corporal com Dismorfia Muscular",
+        "theme": "7. Comportamentos aditivos e patológicos",
+        "summary_anchor": "psiex-detail-037",
+        "source_pages": "72–73",
+        "question_ids": [
+          "PSI061",
+          "PSI062"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S38",
+        "saber": "Metas e objetivos",
+        "theme": "8. Metas, objetivos e SMART",
+        "summary_anchor": "psiex-detail-038",
+        "source_pages": "76",
+        "question_ids": [
+          "PSI063",
+          "PSI066"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S39",
+        "saber": "SMART",
+        "theme": "8. Metas, objetivos e SMART",
+        "summary_anchor": "psiex-detail-039",
+        "source_pages": "76–79",
+        "question_ids": [
+          "PSI064",
+          "PSI065",
+          "PSI066"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S40",
+        "saber": "Ativação Psicofísica",
+        "theme": "9. Ativação e autocontrolo",
+        "summary_anchor": "psiex-detail-040",
+        "source_pages": "80",
+        "question_ids": [
+          "PSI067"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S41",
+        "saber": "Nível Ótimo de Ativação",
+        "theme": "9. Ativação e autocontrolo",
+        "summary_anchor": "psiex-detail-041",
+        "source_pages": "80, 82",
+        "question_ids": [
+          "PSI068",
+          "PSI070"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S42",
+        "saber": "Estratégias para Aumentar e Reduzir a Ativação",
+        "theme": "9. Ativação e autocontrolo",
+        "summary_anchor": "psiex-detail-042",
+        "source_pages": "81",
+        "question_ids": [
+          "PSI069",
+          "PSI070"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S43",
+        "saber": "Atenção",
+        "theme": "10. Atenção e concentração",
+        "summary_anchor": "psiex-detail-043",
+        "source_pages": "82–84",
+        "question_ids": [
+          "PSI071"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S44",
+        "saber": "Estilos Atencionais",
+        "theme": "10. Atenção e concentração",
+        "summary_anchor": "psiex-detail-044",
+        "source_pages": "83",
+        "question_ids": [
+          "PSI072",
+          "PSI076"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S45",
+        "saber": "Concentração",
+        "theme": "10. Atenção e concentração",
+        "summary_anchor": "psiex-detail-045",
+        "source_pages": "84",
+        "question_ids": [
+          "PSI073"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S46",
+        "saber": "Distratores Internos e Externos",
+        "theme": "10. Atenção e concentração",
+        "summary_anchor": "psiex-detail-046",
+        "source_pages": "84",
+        "question_ids": [
+          "PSI074"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S47",
+        "saber": "Estratégias de Atenção e Concentração",
+        "theme": "10. Atenção e concentração",
+        "summary_anchor": "psiex-detail-047",
+        "source_pages": "85",
+        "question_ids": [
+          "PSI075",
+          "PSI076"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S48",
+        "saber": "Mentalização",
+        "theme": "11. Mentalização e autoconfiança",
+        "summary_anchor": "psiex-detail-048",
+        "source_pages": "86–87",
+        "question_ids": [
+          "PSI077"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S49",
+        "saber": "Confiança Traço e Estado",
+        "theme": "11. Mentalização e autoconfiança",
+        "summary_anchor": "psiex-detail-049",
+        "source_pages": "87",
+        "question_ids": [
+          "PSI078"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S50",
+        "saber": "Nível Ótimo de Confiança",
+        "theme": "11. Mentalização e autoconfiança",
+        "summary_anchor": "psiex-detail-050",
+        "source_pages": "87",
+        "question_ids": [
+          "PSI079"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "PSI-S51",
+        "saber": "Estratégias de Mentalização e Autoconfiança",
+        "theme": "11. Mentalização e autoconfiança",
+        "summary_anchor": "psiex-detail-051",
+        "source_pages": "87–88",
+        "question_ids": [
+          "PSI080"
+        ],
+        "status": "explicit"
+      }
+    ]
+  }
+}

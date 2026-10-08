@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Treino Ativo — Psicologia do Exercício</title>
+
+    <meta id="theme-color-meta" name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg:'#090d16',
+                        darkcard:'#111827',
+                        accent:'#3b82f6'
+                    },
+                    fontFamily: {
+                        sans:['Inter','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <link rel="stylesheet" href="../assets/study.css">
+    <link rel="stylesheet" href="../assets/training.css">
+</head>
+
+<body data-bank-file="./psicologia-do-exercicio_banco_80_perguntas.json" data-storage-prefix="psiex" class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28 selection:bg-blue-500 selection:text-white">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors pt-safe">
+    <div class="max-w-2xl mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <a href="../index.html#estudo" class="flex items-center gap-3 min-w-0" aria-label="Voltar ao Centro de Estudo">
+                <div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shadow-sm shrink-0 touch-active">
+                    <img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png"
+                         alt="Logo Grupo Academy"
+                         class="w-full h-full object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e293b/ffffff?text=A';">
+                </div>
+                <div class="min-w-0">
+                    <h1 class="font-black text-base tracking-tight text-slate-900 dark:text-white leading-none truncate">CET_TEF_LIS_60</h1>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Psicologia do Exercício</p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <button onclick="toggleDarkMode()"
+                        class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active"
+                        aria-label="Alternar modo escuro ou claro">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xs"></i>
+                </button>
+
+                <button onclick="toggleSearch()"
+                        class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center hover:text-blue-600 dark:hover:text-white transition touch-active"
+                        aria-label="Abrir pesquisa">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="search-box" class="hidden mt-3 pt-2 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="relative">
+                <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+                <input type="text"
+                       id="search-input"
+                       oninput="applySearch()"
+                       placeholder="Pesquisar tema ou pergunta..."
+                       class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white pl-9 pr-9 py-2 rounded-xl text-xs focus:outline-none focus:border-blue-500 transition">
+                <button onclick="clearSearch()"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-white p-1"
+                        aria-label="Limpar pesquisa">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navegação local da UC -->
+<div id="uc-local-nav"
+     class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2.5">
+        <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <a href="psiex_resumo.html"
+               class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-book-open-reader mr-1"></i> Resumo
+            </a>
+            <a href="psiex_treino.html"
+               class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center shadow-sm shadow-blue-500/20">
+                <i class="fa-solid fa-brain mr-1"></i> Treino
+            </a>
+            <a href="psiex_simulador.html"
+               class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center hover:bg-white dark:hover:bg-slate-800 transition touch-active">
+                <i class="fa-solid fa-vial-circle-check mr-1"></i> Simulações
+            </a>
+        </div>
+    </div>
+</div>
+
+<main class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
+
+    <div id="loading" class="study-card text-center text-xs text-slate-500 dark:text-slate-400">
+        A carregar banco de questões…
+    </div>
+
+    <section id="setup" class="hidden space-y-3">
+        <section class="rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 border border-blue-500/30">
+                <i class="fa-solid fa-brain"></i>
+                Active recall
+            </div>
+
+            <h2 class="font-black text-xl text-slate-900 dark:text-white mt-3 leading-tight">Treino Ativo</h2>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Responde primeiro e só depois confirma. Recebes feedback imediato, explicação e a pergunta fica registada para revisão se errares.
+            </p>
+
+            <div class="grid grid-cols-3 gap-2 mt-4">
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="bankCount" class="font-black text-base text-slate-900 dark:text-white">80</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Perguntas</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="errorCount" class="font-black text-base text-slate-900 dark:text-white">0</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">A rever</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="bestRate" class="font-black text-base text-slate-900 dark:text-white">—</div>
+                    <div class="text-[9px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mt-0.5">Último treino</div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="study-card">
+            <div class="text-[11px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
+                Modo de treino
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="startRandom(10)"
+                        class="p-3 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white text-left touch-active">
+                    <div class="text-xs font-black"><i class="fa-solid fa-shuffle mr-1"></i> 10 aleatórias</div>
+                    <div class="text-[9px] text-blue-100 mt-1">Mistura todos os temas</div>
+                </button>
+
+                <button onclick="startRandom(20)"
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white text-left touch-active">
+                    <div class="text-xs font-black"><i class="fa-solid fa-layer-group mr-1"></i> 20 aleatórias</div>
+                    <div class="text-[9px] text-slate-500 dark:text-slate-400 mt-1">Sessão mais longa</div>
+                </button>
+
+                <button id="reviewErrorsBtn" onclick="startErrors()"
+                        class="p-3 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-left touch-active disabled:opacity-35">
+                    <div class="text-xs font-black"><i class="fa-solid fa-rotate-left mr-1"></i> Rever erros</div>
+                    <div class="text-[9px] mt-1 opacity-80">Só perguntas erradas anteriormente</div>
+                </button>
+
+                <button onclick="resetProgress()"
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-left touch-active">
+                    <div class="text-xs font-black"><i class="fa-solid fa-eraser mr-1"></i> Limpar progresso</div>
+                    <div class="text-[9px] text-slate-500 dark:text-slate-400 mt-1">Apaga erros guardados</div>
+                </button>
+            </div>
+        </section>
+
+        <section class="study-card">
+            <div class="flex items-center justify-between gap-3 mb-3">
+                <div>
+                    <div class="text-[11px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">Treinar por tema</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">10 perguntas por tema, salvo DNT.</div>
+                </div>
+            </div>
+
+            <div id="topicList" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+        </section>
+    </section>
+
+    <section id="session" class="hidden">
+        <div class="study-card training-session-head sticky z-20 mb-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+            <div class="flex items-center justify-between gap-3">
+                <div>
+                    <div id="sessionLabel" class="text-[9px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Treino</div>
+                    <div id="sessionStats" class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">0/0</div>
+                </div>
+                <button onclick="exitSession()"
+                        class="px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+                    Sair
+                </button>
+            </div>
+            <div class="progressbar mt-2"><div id="progressFill" style="width:0%"></div></div>
+        </div>
+
+        <article class="study-card">
+            <div class="flex items-start justify-between gap-3">
+                <div>
+                    <div id="questionIndex" class="text-[9px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400"></div>
+                    <div id="questionTopic" class="text-[10px] text-slate-500 dark:text-slate-400 mt-1"></div>
+                </div>
+                <div id="scoreNow" class="text-[10px] font-black text-slate-500 dark:text-slate-400 shrink-0"></div>
+            </div>
+
+            <h2 id="questionText" class="font-black text-base text-slate-900 dark:text-white leading-snug mt-4"></h2>
+
+            <div id="options" class="grid gap-2 mt-4"></div>
+
+            <button id="confirmBtn"
+                    onclick="confirmAnswer()"
+                    class="w-full mt-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-black touch-active disabled:opacity-35"
+                    disabled>
+                Confirmar resposta
+            </button>
+
+            <div id="feedback" class="hidden mt-4 rounded-2xl border p-4"></div>
+
+            <button id="nextBtn"
+                    onclick="nextQuestion()"
+                    class="hidden w-full mt-3 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-black touch-active">
+                Próxima pergunta
+            </button>
+        </article>
+    </section>
+
+    <section id="result" class="hidden space-y-3">
+        <section class="rounded-3xl p-5 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/80 border border-slate-200 dark:border-blue-500/30 shadow-sm">
+            <div class="text-[9px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Treino concluído</div>
+            <div id="resultScore" class="text-4xl font-black mt-3 text-slate-900 dark:text-white">0%</div>
+            <div id="resultText" class="text-xs text-slate-600 dark:text-slate-300 mt-2"></div>
+
+            <div class="grid grid-cols-3 gap-2 mt-4">
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="resultCorrect" class="font-black text-base">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-500">Corretas</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="resultWrong" class="font-black text-base">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-500">Erradas</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                    <div id="resultReview" class="font-black text-base">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-500">A rever</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-2 gap-2">
+            <button onclick="backToSetup()"
+                    class="py-2.5 rounded-xl bg-blue-600 text-white text-xs font-black touch-active">
+                Novo treino
+            </button>
+            <button onclick="startErrors()"
+                    class="py-2.5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-black touch-active">
+                Rever erros
+            </button>
+        </div>
+    </section>
+
+    <div id="errorBox" class="hidden study-card text-xs text-rose-600 dark:text-rose-400">
+        Não foi possível carregar o banco de questões. Confirma que <strong>psicologia-do-exercicio_banco_80_perguntas.json</strong> está na mesma pasta e abre a app por HTTP/HTTPS.
+    </div>
+</main>
+
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe transition-colors">
+    <div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+        <a href="../index.html#agenda"
+           class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-calendar-days text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Agenda</span>
+        </a>
+        <a href="../index.html#estudo"
+           class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-blue-600 dark:text-blue-400 transition touch-active">
+            <i class="fa-solid fa-book-open-reader text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Estudo</span>
+        </a>
+        <a href="../index.html#curso"
+           class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition touch-active">
+            <i class="fa-solid fa-graduation-cap text-base"></i>
+            <span class="font-bold text-[10px] leading-none">Curso</span>
+        </a>
+    </div>
+</nav>
+
+
+    <script src="../assets/study.js" defer></script>
+    <script src="../assets/training.js" defer></script>
+</body>
+</html>

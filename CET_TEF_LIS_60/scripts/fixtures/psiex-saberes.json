@@ -1,0 +1,624 @@
+{
+  "source_files": [
+    {
+      "name": "Slides_Psicologia_do_Exercicio_Pos_Laboral.pdf",
+      "sha256": "25d58463a59415ad9c99142b055e6afdeb52f1370cf0c356f86f5297f6557404"
+    },
+    {
+      "name": "Lista de Saberes.pdf",
+      "sha256": "df2057283c40b1c45ed574336c13dc2459a8c84df6bf42b63555edaef0bf39fe"
+    }
+  ],
+  "themes": [
+    "1. Psicologia do Exercício",
+    "2. Personalidade e Big Five",
+    "3. Motivação, barreiras e afetos",
+    "4. Dinâmicas, coesão e teambuilding",
+    "5. Liderança do TEEF",
+    "6. Saúde mental, ansiedade, depressão e stress",
+    "7. Comportamentos aditivos e patológicos",
+    "8. Metas, objetivos e SMART",
+    "9. Ativação e autocontrolo",
+    "10. Atenção e concentração",
+    "11. Mentalização e autoconfiança"
+  ],
+  "items": [
+    {
+      "id": "PSI-S01",
+      "saber": "Psicologia",
+      "theme": "1. Psicologia do Exercício",
+      "summary_anchor": "psiex-detail-001",
+      "source_pages": "7",
+      "question_ids": [
+        "PSI001",
+        "PSI005"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S02",
+      "saber": "Objetivos de Estudo",
+      "theme": "1. Psicologia do Exercício",
+      "summary_anchor": "psiex-detail-002",
+      "source_pages": "7–8",
+      "question_ids": [
+        "PSI002",
+        "PSI005"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S03",
+      "saber": "Formação Académica do Psicólogo do Exercício",
+      "theme": "1. Psicologia do Exercício",
+      "summary_anchor": "psiex-detail-003",
+      "source_pages": "9",
+      "question_ids": [
+        "PSI003"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S04",
+      "saber": "Exercício Profissional",
+      "theme": "1. Psicologia do Exercício",
+      "summary_anchor": "psiex-detail-004",
+      "source_pages": "9–10, 73",
+      "question_ids": [
+        "PSI004",
+        "PSI006"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S05",
+      "saber": "Personalidade",
+      "theme": "2. Personalidade e Big Five",
+      "summary_anchor": "psiex-detail-005",
+      "source_pages": "12",
+      "question_ids": [
+        "PSI007",
+        "PSI014"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S06",
+      "saber": "Teoria do Big Five",
+      "theme": "2. Personalidade e Big Five",
+      "summary_anchor": "psiex-detail-006",
+      "source_pages": "13–14",
+      "question_ids": [
+        "PSI008",
+        "PSI009"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S07",
+      "saber": "Estratégias de aconselhamento de atividade física e prescrição de exercício considerando o Big Five",
+      "theme": "2. Personalidade e Big Five",
+      "summary_anchor": "psiex-detail-007",
+      "source_pages": "15–16",
+      "question_ids": [
+        "PSI010",
+        "PSI011",
+        "PSI012",
+        "PSI013",
+        "PSI014"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S08",
+      "saber": "Inatividade Física",
+      "theme": "3. Motivação, barreiras e afetos",
+      "summary_anchor": "psiex-detail-008",
+      "source_pages": "17–20, 27",
+      "question_ids": [
+        "PSI015"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S09",
+      "saber": "Motivos de Participação no Exercício",
+      "theme": "3. Motivação, barreiras e afetos",
+      "summary_anchor": "psiex-detail-009",
+      "source_pages": "21–22",
+      "question_ids": [
+        "PSI016",
+        "PSI017"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S10",
+      "saber": "Barreiras e Motivos de Abandono do Exercício + ações do TEEF",
+      "theme": "3. Motivação, barreiras e afetos",
+      "summary_anchor": "psiex-detail-010",
+      "source_pages": "22–27",
+      "question_ids": [
+        "PSI018",
+        "PSI019"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S11",
+      "saber": "Teoria da Autodeterminação",
+      "theme": "3. Motivação, barreiras e afetos",
+      "summary_anchor": "psiex-detail-011",
+      "source_pages": "28–30",
+      "question_ids": [
+        "PSI020",
+        "PSI021",
+        "PSI022",
+        "PSI023",
+        "PSI024"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S12",
+      "saber": "Modelo Circumplexo de Afetos",
+      "theme": "3. Motivação, barreiras e afetos",
+      "summary_anchor": "psiex-detail-012",
+      "source_pages": "30",
+      "question_ids": [
+        "PSI025",
+        "PSI026"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S13",
+      "saber": "Grupo",
+      "theme": "4. Dinâmicas, coesão e teambuilding",
+      "summary_anchor": "psiex-detail-013",
+      "source_pages": "35",
+      "question_ids": [
+        "PSI027"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S14",
+      "saber": "Dinâmicas de Grupo",
+      "theme": "4. Dinâmicas, coesão e teambuilding",
+      "summary_anchor": "psiex-detail-014",
+      "source_pages": "35–36",
+      "question_ids": [
+        "PSI028"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S15",
+      "saber": "Coesão de Grupo",
+      "theme": "4. Dinâmicas, coesão e teambuilding",
+      "summary_anchor": "psiex-detail-015",
+      "source_pages": "34, 37–38",
+      "question_ids": [
+        "PSI029",
+        "PSI030"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S16",
+      "saber": "Teambuilding",
+      "theme": "4. Dinâmicas, coesão e teambuilding",
+      "summary_anchor": "psiex-detail-016",
+      "source_pages": "38–39",
+      "question_ids": [
+        "PSI031",
+        "PSI032"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S17",
+      "saber": "Liderança",
+      "theme": "5. Liderança do TEEF",
+      "summary_anchor": "psiex-detail-017",
+      "source_pages": "40, 43",
+      "question_ids": [
+        "PSI033",
+        "PSI037"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S18",
+      "saber": "Características do Líder",
+      "theme": "5. Liderança do TEEF",
+      "summary_anchor": "psiex-detail-018",
+      "source_pages": "41",
+      "question_ids": [
+        "PSI034"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S19",
+      "saber": "Modelo Multidimensional de Liderança no Desporto",
+      "theme": "5. Liderança do TEEF",
+      "summary_anchor": "psiex-detail-019",
+      "source_pages": "42–45",
+      "question_ids": [
+        "PSI035",
+        "PSI036",
+        "PSI037",
+        "PSI038"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S20",
+      "saber": "Teoria Situacional de Liderança",
+      "theme": "5. Liderança do TEEF",
+      "summary_anchor": "psiex-detail-020",
+      "source_pages": "46–47",
+      "question_ids": [
+        "PSI039",
+        "PSI040",
+        "PSI041",
+        "PSI042"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S21",
+      "saber": "Saúde Mental",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-021",
+      "source_pages": "53–54",
+      "question_ids": [
+        "PSI043"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S22",
+      "saber": "Ansiedade",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-022",
+      "source_pages": "55–56",
+      "question_ids": [
+        "PSI044"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S23",
+      "saber": "Ansiedade Traço e Estado",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-023",
+      "source_pages": "55",
+      "question_ids": [
+        "PSI045"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S24",
+      "saber": "Ansiedade Somática e Cognitiva",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-024",
+      "source_pages": "55",
+      "question_ids": [
+        "PSI046"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S25",
+      "saber": "Prevenção e Tratamento da Ansiedade através do Exercício Físico",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-025",
+      "source_pages": "57",
+      "question_ids": [
+        "PSI047"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S26",
+      "saber": "Depressão",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-026",
+      "source_pages": "58",
+      "question_ids": [
+        "PSI048"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S27",
+      "saber": "Prevenção e Tratamento da Depressão através do Exercício Físico",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-027",
+      "source_pages": "59–60",
+      "question_ids": [
+        "PSI049"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S28",
+      "saber": "Stress e Stressores",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-028",
+      "source_pages": "60",
+      "question_ids": [
+        "PSI050"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S29",
+      "saber": "Síndrome Geral de Adaptação",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-029",
+      "source_pages": "61",
+      "question_ids": [
+        "PSI051"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S30",
+      "saber": "Eustress e Distress",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-030",
+      "source_pages": "61–62",
+      "question_ids": [
+        "PSI052"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S31",
+      "saber": "Síndrome de Burnout",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-031",
+      "source_pages": "62–63",
+      "question_ids": [
+        "PSI053"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S32",
+      "saber": "Gestão de Stress através do Exercício Físico",
+      "theme": "6. Saúde mental, ansiedade, depressão e stress",
+      "summary_anchor": "psiex-detail-032",
+      "source_pages": "63–64",
+      "question_ids": [
+        "PSI054"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S33",
+      "saber": "Compulsão Alimentar",
+      "theme": "7. Comportamentos aditivos e patológicos",
+      "summary_anchor": "psiex-detail-033",
+      "source_pages": "66–67",
+      "question_ids": [
+        "PSI055"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S34",
+      "saber": "Bulimia e Anorexia Nervosa",
+      "theme": "7. Comportamentos aditivos e patológicos",
+      "summary_anchor": "psiex-detail-034",
+      "source_pages": "68–69",
+      "question_ids": [
+        "PSI056",
+        "PSI057"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S35",
+      "saber": "Ortorexia Nervosa",
+      "theme": "7. Comportamentos aditivos e patológicos",
+      "summary_anchor": "psiex-detail-035",
+      "source_pages": "69–70",
+      "question_ids": [
+        "PSI058"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S36",
+      "saber": "Dependência de Exercício Físico",
+      "theme": "7. Comportamentos aditivos e patológicos",
+      "summary_anchor": "psiex-detail-036",
+      "source_pages": "70–71",
+      "question_ids": [
+        "PSI059",
+        "PSI060",
+        "PSI062"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S37",
+      "saber": "Perturbação Dismórfica Corporal com Dismorfia Muscular",
+      "theme": "7. Comportamentos aditivos e patológicos",
+      "summary_anchor": "psiex-detail-037",
+      "source_pages": "72–73",
+      "question_ids": [
+        "PSI061",
+        "PSI062"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S38",
+      "saber": "Metas e objetivos",
+      "theme": "8. Metas, objetivos e SMART",
+      "summary_anchor": "psiex-detail-038",
+      "source_pages": "76",
+      "question_ids": [
+        "PSI063",
+        "PSI066"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S39",
+      "saber": "SMART",
+      "theme": "8. Metas, objetivos e SMART",
+      "summary_anchor": "psiex-detail-039",
+      "source_pages": "76–79",
+      "question_ids": [
+        "PSI064",
+        "PSI065",
+        "PSI066"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S40",
+      "saber": "Ativação Psicofísica",
+      "theme": "9. Ativação e autocontrolo",
+      "summary_anchor": "psiex-detail-040",
+      "source_pages": "80",
+      "question_ids": [
+        "PSI067"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S41",
+      "saber": "Nível Ótimo de Ativação",
+      "theme": "9. Ativação e autocontrolo",
+      "summary_anchor": "psiex-detail-041",
+      "source_pages": "80, 82",
+      "question_ids": [
+        "PSI068",
+        "PSI070"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S42",
+      "saber": "Estratégias para Aumentar e Reduzir a Ativação",
+      "theme": "9. Ativação e autocontrolo",
+      "summary_anchor": "psiex-detail-042",
+      "source_pages": "81",
+      "question_ids": [
+        "PSI069",
+        "PSI070"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S43",
+      "saber": "Atenção",
+      "theme": "10. Atenção e concentração",
+      "summary_anchor": "psiex-detail-043",
+      "source_pages": "82–84",
+      "question_ids": [
+        "PSI071"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S44",
+      "saber": "Estilos Atencionais",
+      "theme": "10. Atenção e concentração",
+      "summary_anchor": "psiex-detail-044",
+      "source_pages": "83",
+      "question_ids": [
+        "PSI072",
+        "PSI076"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S45",
+      "saber": "Concentração",
+      "theme": "10. Atenção e concentração",
+      "summary_anchor": "psiex-detail-045",
+      "source_pages": "84",
+      "question_ids": [
+        "PSI073"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S46",
+      "saber": "Distratores Internos e Externos",
+      "theme": "10. Atenção e concentração",
+      "summary_anchor": "psiex-detail-046",
+      "source_pages": "84",
+      "question_ids": [
+        "PSI074"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S47",
+      "saber": "Estratégias de Atenção e Concentração",
+      "theme": "10. Atenção e concentração",
+      "summary_anchor": "psiex-detail-047",
+      "source_pages": "85",
+      "question_ids": [
+        "PSI075",
+        "PSI076"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S48",
+      "saber": "Mentalização",
+      "theme": "11. Mentalização e autoconfiança",
+      "summary_anchor": "psiex-detail-048",
+      "source_pages": "86–87",
+      "question_ids": [
+        "PSI077"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S49",
+      "saber": "Confiança Traço e Estado",
+      "theme": "11. Mentalização e autoconfiança",
+      "summary_anchor": "psiex-detail-049",
+      "source_pages": "87",
+      "question_ids": [
+        "PSI078"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S50",
+      "saber": "Nível Ótimo de Confiança",
+      "theme": "11. Mentalização e autoconfiança",
+      "summary_anchor": "psiex-detail-050",
+      "source_pages": "87",
+      "question_ids": [
+        "PSI079"
+      ],
+      "status": "explicit"
+    },
+    {
+      "id": "PSI-S51",
+      "saber": "Estratégias de Mentalização e Autoconfiança",
+      "theme": "11. Mentalização e autoconfiança",
+      "summary_anchor": "psiex-detail-051",
+      "source_pages": "87–88",
+      "question_ids": [
+        "PSI080"
+      ],
+      "status": "explicit"
+    }
+  ]
+}
