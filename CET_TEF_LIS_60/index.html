@@ -166,7 +166,7 @@
     </header>
     <div id="uc-registry-status" role="status" aria-live="polite" class="hidden max-w-2xl mx-auto px-4 py-3 text-xs text-slate-700 dark:text-slate-300"></div>
 
-    <!-- Swipe Container para as Abas Principais -->
+    <!-- Conteúdo das abas principais -->
     <main id="swipe-container" class="max-w-2xl mx-auto px-4 pt-4 pb-safe">
 
         <!-- ABA 1: AGENDA -->
@@ -781,7 +781,7 @@
             }
         }
 
-        // Gestão de Abas Principais e Swipe Gestures
+        // Gestão de abas principais
         function switchMainTab(tabName, updateHash = true) {
             currentMainTab = tabName;
 
@@ -810,34 +810,6 @@
             syncGlobalSearchWithCurrentTab();
             renderApp();
             updateHeaderHeightVar();
-        }
-
-        function initSwipeNavigation() {
-            const container = document.getElementById('swipe-container');
-            if (!container) return;
-            let startX = 0;
-            let startY = 0;
-
-            container.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-            }, { passive: true });
-
-            container.addEventListener('touchend', (e) => {
-                const deltaX = e.changedTouches[0].clientX - startX;
-                const deltaY = e.changedTouches[0].clientY - startY;
-
-                if (Math.abs(deltaY) > Math.abs(deltaX)) return;
-
-                if (Math.abs(deltaX) > 75) {
-                    const currentIndex = mainTabsList.indexOf(currentMainTab);
-                    if (deltaX < 0 && currentIndex < mainTabsList.length - 1) {
-                        switchMainTab(mainTabsList[currentIndex + 1]);
-                    } else if (deltaX > 0 && currentIndex > 0) {
-                        switchMainTab(mainTabsList[currentIndex - 1]);
-                    }
-                }
-            }, { passive: true });
         }
 
         // Swipe to Dismiss para Modal (Bottom Sheet)
@@ -1001,7 +973,6 @@
             initTheme();
             checkIosInstallation();
             initSwipeToDismiss();
-            initSwipeNavigation();
             updateHeaderHeightVar();
             window.addEventListener('resize', updateHeaderHeightVar);
 
