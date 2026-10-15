@@ -319,7 +319,10 @@
             <!-- Filtros do Centro de Estudo -->
             <section>
                 <div class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-1 text-xs">
-                    <button onclick="setStudyFilter('all')" id="study-filter-all" class="study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0">
+                    <button onclick="setStudyFilter('unfinished')" id="study-filter-unfinished" aria-pressed="true" class="study-filter px-3.5 py-1.5 rounded-xl bg-blue-600 text-white font-bold transition shrink-0" title="UC ainda não concluídas pelo calendário, incluindo as que aguardam início">
+                        Por concluir
+                    </button>
+                    <button onclick="setStudyFilter('all')" id="study-filter-all" aria-pressed="false" class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
                         Todas
                     </button>
                     <button onclick="setStudyFilter('ready')" id="study-filter-ready" class="study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0">
@@ -707,12 +710,12 @@
             { id: 48, month: 'NOV', date: '2026-11-14', dateStr: '14/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
             { id: 49, month: 'NOV', date: '2026-11-14', dateStr: '14/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
             { id: 50, month: 'NOV', date: '2026-11-18', dateStr: '18/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
-            { id: 51, month: 'NOV', date: '2026-11-19', dateStr: '19/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 51, month: 'NOV', date: '2026-11-19', dateStr: '19/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '20:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
             { id: 52, month: 'NOV', date: '2026-11-20', dateStr: '20/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
             { id: 53, month: 'NOV', date: '2026-11-21', dateStr: '21/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
             { id: 54, month: 'NOV', date: '2026-11-21', dateStr: '21/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Aulas de Grupo', exam: '', reunion: '', obs: '', location: 'VivaGym Campo Pequeno', type: 'aula' },
             { id: 55, month: 'NOV', date: '2026-11-25', dateStr: '25/11/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
-            { id: 56, month: 'NOV', date: '2026-11-26', dateStr: '26/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Marketing no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 56, month: 'NOV', date: '2026-11-26', dateStr: '26/11/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
             { id: 57, month: 'NOV', date: '2026-11-27', dateStr: '27/11/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Aulas de Grupo', exam: 'Exame Prático', reunion: '', obs: 'Exame Prático no CRIAP', location: 'CRIAP', type: 'exame' },
             { id: 58, month: 'NOV', date: '2026-11-28', dateStr: '28/11/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
             { id: 59, month: 'NOV', date: '2026-11-28', dateStr: '28/11/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Ética e Deontologia no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
@@ -720,25 +723,25 @@
             // DEZEMBRO 2026
             { id: 60, month: 'DEC', date: '2026-12-02', dateStr: '02/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Ética e Deontologia no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
             { id: 61, month: 'DEC', date: '2026-12-03', dateStr: '03/12/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Fisiologia do Exercício', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
-            { id: 62, month: 'DEC', date: '2026-12-04', dateStr: '04/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:00', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
-            { id: 63, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
-            { id: 64, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
-            { id: 65, month: 'DEC', date: '2026-12-07', dateStr: '07/12/2026', dayWeek: 'seg', timeStart: '23:59', timeEnd: '', module: 'Data Limite Inscrição - Exames 2ª Época', exam: 'Prazo Limite', reunion: '', obs: 'Prazo oficial máximo', location: 'Online', type: 'exame' },
-            { id: 66, month: 'DEC', date: '2026-12-09', dateStr: '09/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
+            { id: 62, month: 'DEC', date: '2026-12-04', dateStr: '04/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Comunicação no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 63, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '14:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: 'Início do módulo', location: 'CRIAP', type: 'inicio' },
+            { id: 64, month: 'DEC', date: '2026-12-05', dateStr: '05/12/2026', dayWeek: 'sáb', timeStart: '15:00', timeEnd: '19:00', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'CRIAP', type: 'aula' },
+            { id: 65, month: 'DEC', date: '2026-12-07', dateStr: '07/12/2026', dayWeek: 'seg', timeStart: '', timeEnd: '', module: 'Data Limite Inscrição - Exames 2ª Época', exam: 'Prazo Limite', reunion: '', obs: 'Hora limite não indicada no horário oficial', location: 'N/A', type: 'exame' },
+            { id: 66, month: 'DEC', date: '2026-12-09', dateStr: '09/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Comunicação no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
             { id: 67, month: 'DEC', date: '2026-12-10', dateStr: '10/12/2026', dayWeek: 'qui', timeStart: '18:30', timeEnd: '22:30', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
-            { id: 68, month: 'DEC', date: '2026-12-11', dateStr: '11/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Furo / Sem Aula', exam: '', reunion: '', obs: '', location: 'N/A', type: 'furo' },
-            { id: 69, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '13:00', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: 'Grupo A', location: 'CRIAP', type: 'exame' },
-            { id: 70, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '13:30', timeEnd: '16:30', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: 'Grupo B', location: 'CRIAP', type: 'exame' },
-            { id: 71, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '16:30', timeEnd: '17:30', module: 'Reunião de Acompanhamento / Estágio', exam: '', reunion: 'Reunião CET', obs: 'Orientações estágio', location: 'CRIAP', type: 'reuniao' },
+            { id: 68, month: 'DEC', date: '2026-12-11', dateStr: '11/12/2026', dayWeek: 'sex', timeStart: '18:30', timeEnd: '22:30', module: 'Marketing no Fitness', exam: '', reunion: '', obs: '', location: 'Online', type: 'aula' },
+            { id: 69, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '10:00', timeEnd: '13:00', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: '', location: 'CRIAP', type: 'exame' },
+            { id: 70, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '13:30', timeEnd: '16:30', module: 'Fisiologia do Exercício', exam: 'Exame Prático', reunion: '', obs: '', location: 'CRIAP', type: 'exame' },
+            { id: 71, month: 'DEC', date: '2026-12-12', dateStr: '12/12/2026', dayWeek: 'sáb', timeStart: '16:30', timeEnd: '17:30', module: 'Reunião de Acompanhamento / Estágio', exam: '', reunion: 'Reunião de Estágio CET', obs: '', location: 'CRIAP', type: 'reuniao' },
             { id: 72, month: 'DEC', date: '2026-12-16', dateStr: '16/12/2026', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Marketing no Fitness', exam: 'Exame Teórico', reunion: '', obs: '', location: 'Online', type: 'exame' },
             { id: 73, month: 'DEC', date: '2026-12-19', dateStr: '19/12/2026', dayWeek: 'sáb', timeStart: '00:00', timeEnd: '23:59', module: 'Pausa Letiva de Natal / Festas', exam: '', reunion: '', obs: 'Até 05/01/2027', location: 'N/A', type: 'furo' },
 
             // JANEIRO 2027
-            { id: 74, month: 'JAN', date: '2027-01-08', dateStr: '08/01/2027', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Coaching no Fitness', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
-            { id: 75, month: 'JAN', date: '2027-01-11', dateStr: '11/01/2027', dayWeek: 'seg', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Pedagogia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
-            { id: 76, month: 'JAN', date: '2027-01-13', dateStr: '13/01/2027', dayWeek: 'qua', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Promoção Estilos Vida Saudável', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
-            { id: 77, month: 'JAN', date: '2027-01-15', dateStr: '15/01/2027', dayWeek: 'sex', timeStart: '18:30', timeEnd: '20:30', module: 'Exame 2ª Época - Psicologia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Recuperação', location: 'Online', type: 'exame' },
-            { id: 78, month: 'JAN', date: '2027-01-20', dateStr: '20/01/2027', dayWeek: 'qua', timeStart: '18:30', timeEnd: '22:30', module: 'Recomeço das Aulas - Novo Módulo', exam: '', reunion: '', obs: 'Retoma do plano letivo', location: 'CRIAP', type: 'inicio' }
+            { id: 74, month: 'JAN', dateEnd: '2027-01-16', pending: true, date: '2027-01-06', dateStr: '06/01/2027 – 16/01/2027', dayWeek: '', timeStart: '', timeEnd: '', module: 'Exame 2ª Época - Coaching no Fitness', exam: 'Exame 2ª Época', reunion: '', obs: 'Dia e hora a confirmar', location: 'Online', type: 'exame' },
+            { id: 75, month: 'JAN', dateEnd: '2027-01-16', pending: true, date: '2027-01-06', dateStr: '06/01/2027 – 16/01/2027', dayWeek: '', timeStart: '', timeEnd: '', module: 'Exame 2ª Época - Pedagogia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Dia e hora a confirmar', location: 'Online', type: 'exame' },
+            { id: 76, month: 'JAN', dateEnd: '2027-01-16', pending: true, date: '2027-01-06', dateStr: '06/01/2027 – 16/01/2027', dayWeek: '', timeStart: '', timeEnd: '', module: 'Exame 2ª Época - Promoção de Estilos de Vida Saudável', exam: 'Exame 2ª Época', reunion: '', obs: 'Dia e hora a confirmar', location: 'Online', type: 'exame' },
+            { id: 77, month: 'JAN', dateEnd: '2027-01-16', pending: true, date: '2027-01-06', dateStr: '06/01/2027 – 16/01/2027', dayWeek: '', timeStart: '', timeEnd: '', module: 'Exame 2ª Época - Psicologia do Exercício', exam: 'Exame 2ª Época', reunion: '', obs: 'Dia e hora a confirmar', location: 'Online', type: 'exame' },
+            { id: 78, month: 'JAN', pending: true, date: '2027-01-20', dateStr: '20/01/2027', dayWeek: 'qua', timeStart: '', timeEnd: '', module: 'Recomeço das Aulas - Novo Módulo', exam: '', reunion: '', obs: 'Por confirmar — sessão ausente do horário oficial', location: 'Por confirmar', type: 'inicio' }
         ];
 
         // State variables (with localStorage persistence)
@@ -752,7 +755,7 @@
         let deferredPwaPrompt = null;
         let searchDebounceTimeout = null;
         let activeUcFilter = null;
-        let activeStudyFilter = 'all';
+        let activeStudyFilter = 'unfinished';
         let activeAssessmentFilter = 'all';
 
         const mainTabsList = ['agenda', 'estudo', 'curso'];
@@ -1054,6 +1057,7 @@
             activeStudyFilter = filter;
 
             document.querySelectorAll('.study-filter').forEach(btn => {
+                btn.setAttribute('aria-pressed', String(btn.id === `study-filter-${filter}`));
                 btn.className = 'study-filter px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-medium transition shrink-0';
             });
 
@@ -1113,6 +1117,7 @@
                 .filter(item => {
                     const filterOk =
                         activeStudyFilter === 'all' ||
+                        (activeStudyFilter === 'unfinished' && !completedNames.has(item.name)) ||
                         (activeStudyFilter === 'ready' && item.ready) ||
                         (activeStudyFilter === 'progress' && !completedNames.has(item.name)) ||
                         (activeStudyFilter === 'soon' && !item.ready);
@@ -1371,8 +1376,17 @@
         /* ----------------------------------------------------
            NEXT EXAM COUNTDOWN BANNER
         ----------------------------------------------------- */
+        function scheduleTimeLabel(item) {
+            if (item.pending) return item.dateEnd ? 'Dia e hora a confirmar' : 'Por confirmar';
+            return item.timeStart ? `${item.timeStart}${item.timeEnd ? ' – ' + item.timeEnd : ''}` : 'Hora não indicada';
+        }
+
+        function isScheduleDay(item, date) {
+            return item.dateEnd ? item.date <= date && date <= item.dateEnd : item.date === date;
+        }
+
         function renderNextExamBanner() {
-            const nextExam = rawSchedule.find(e => e.type === 'exame' && e.date >= simulatedDateISO);
+            const nextExam = rawSchedule.find(e => e.type === 'exame' && (e.dateEnd || e.date) >= simulatedDateISO);
             const titleEl = document.getElementById('next-exam-title');
             const cdEl = document.getElementById('next-exam-countdown');
 
@@ -1383,6 +1397,11 @@
             }
 
             titleEl.innerText = `${nextExam.module} (${nextExam.dateStr})`;
+
+            if (nextExam.pending) {
+                cdEl.innerText = 'Dia e hora a confirmar';
+                return;
+            }
 
             const dCurrent = new Date(simulatedDateISO + 'T00:00:00');
             const dExam = new Date(nextExam.date + 'T00:00:00');
@@ -1405,7 +1424,7 @@
             const dmyDate = formatIsoToDMY(todayISO);
             document.getElementById('today-formatted-date').innerText = dmyDate;
 
-            const todayEvents = rawSchedule.filter(e => e.date === todayISO);
+            const todayEvents = rawSchedule.filter(e => isScheduleDay(e, todayISO));
             const container = document.getElementById('today-content-area');
             const statusTag = document.getElementById('today-status-tag');
 
@@ -1428,9 +1447,9 @@
             }
 
             const count = todayEvents.length;
-            const sessionLabel = count === 1 ? '1 Sessão Agendada' : `${count} Sessões Agendadas`;
+            const sessionLabel = todayEvents.every(e => e.pending) ? 'Por confirmar' : count === 1 ? '1 Sessão Agendada' : `${count} Sessões Agendadas`;
 
-            const hasExam = todayEvents.some(e => e.type === 'exame');
+            const hasExam = todayEvents.some(e => e.type === 'exame' && !e.pending);
             if (hasExam) {
                 statusTag.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40 animate-pulse';
                 statusTag.innerText = '⚠️ DIA DE EXAME';
@@ -1450,7 +1469,7 @@
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
                                 <span class="text-xs font-black text-blue-600 dark:text-blue-400 flex items-center gap-1">
-                                    <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}
+                                    <i class="fa-regular fa-clock text-[10px]"></i> ${scheduleTimeLabel(item)}
                                 </span>
                                 ${getLocationBadge(item.location)}
                                 ${getTypeBadge(item)}
@@ -1482,15 +1501,15 @@
         /* ----------------------------------------------------
            SCHEDULE LIST
         ----------------------------------------------------- */
-        function renderScheduleList() {
+        function renderScheduleList(scrollToNextExam = false) {
             const container = document.getElementById('schedule-list');
             const emptyState = document.getElementById('empty-state');
 
             let filtered = rawSchedule.filter(item => {
                 if (currentViewTab === 'hoje') {
-                    if (item.date !== simulatedDateISO) return false;
+                    if (!isScheduleDay(item, simulatedDateISO)) return false;
                 } else if (currentViewTab === 'proximas') {
-                    if (item.date <= simulatedDateISO) return false;
+                    if ((item.dateEnd || item.date) <= simulatedDateISO) return false;
                 } else if (currentViewTab === 'exames') {
                     if (item.type !== 'exame') return false;
                 }
@@ -1541,7 +1560,7 @@
                     `;
                 }
 
-                const isToday = item.date === simulatedDateISO;
+                const isToday = isScheduleDay(item, simulatedDateISO) && !item.pending;
                 const isExame = item.type === 'exame';
                 const stripeClass = getStripeClass(item);
                 const modInfo = moduleConfig[item.module] || {};
@@ -1553,17 +1572,17 @@
                         : 'border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60';
 
                 html += `
-                    <div onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
+                    <div data-schedule-id="${item.id}" onclick="openModal(${item.id})" class="${stripeClass} p-3.5 rounded-2xl ${todayStyleClasses} hover:border-blue-400 transition cursor-pointer touch-active relative overflow-hidden shadow-sm" role="button" tabindex="0" aria-label="${item.module} em ${item.dateStr}">
                         
                         ${isToday ? '<span class="absolute top-0 right-0 px-2.5 py-0.5 rounded-bl-xl bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider shadow-sm">Hoje</span>' : ''}
 
                         <div class="flex items-start justify-between gap-2 mb-2">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 flex-wrap min-w-0">
                                 <span class="px-2 py-0.5 rounded-lg ${isToday ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200'} font-bold text-xs">
                                     ${item.dateStr} <span class="${isToday ? 'text-blue-100' : 'text-slate-400 dark:text-slate-500'} text-[10px] uppercase font-semibold">${item.dayWeek}</span>
                                 </span>
                                 <span class="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
-                                    <i class="fa-regular fa-clock text-[10px]"></i> ${item.timeStart}
+                                    <i class="fa-regular fa-clock text-[10px]"></i> ${scheduleTimeLabel(item)}
                                 </span>
                             </div>
                             
@@ -1586,6 +1605,17 @@
             });
 
             container.innerHTML = html;
+
+            if (scrollToNextExam) {
+                const nextExam = filtered.find(item => item.type === 'exame' && (item.dateEnd || item.date) >= simulatedDateISO);
+                if (nextExam) requestAnimationFrame(() => {
+                    updateHeaderHeightVar();
+                    const card = container.querySelector(`[data-schedule-id="${nextExam.id}"]`);
+                    if (!card) return;
+                    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 0;
+                    window.scrollTo({ top: Math.max(0, window.scrollY + card.getBoundingClientRect().top - headerHeight), behavior: 'smooth' });
+                });
+            }
             setTimeout(updateHeaderHeightVar, 20);
         }
 
@@ -1610,6 +1640,9 @@
         }
 
         function getTypeBadge(item) {
+            if (item.pending) {
+                return '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/30">Por confirmar</span>';
+            }
             if (item.type === 'exame') {
                 return `<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-300 border border-rose-500/30">
                     <i class="fa-solid fa-graduation-cap mr-0.5 text-[9px]"></i> Exame
@@ -1642,7 +1675,7 @@
             if (activeBtn) {
                 activeBtn.className = 'view-tab px-3.5 py-1.5 rounded-xl bg-blue-600 text-white flex items-center gap-1.5 shadow-sm shadow-blue-500/30 font-bold transition';
             }
-            if (updateRender) renderScheduleList();
+            if (updateRender) renderScheduleList(tab === 'exames');
             setTimeout(updateHeaderHeightVar, 20);
         }
 
@@ -1784,8 +1817,8 @@
             const modInfo = moduleConfig[item.module] || {};
 
             document.getElementById('modal-title').innerText = item.module;
-            document.getElementById('modal-date').innerText = `${item.dateStr} (${getDayFullName(item.dayWeek)})`;
-            document.getElementById('modal-time').innerText = `${item.timeStart} ${item.timeEnd ? '- ' + item.timeEnd : ''}`;
+            document.getElementById('modal-date').innerText = `${item.dateStr}${item.dayWeek ? ' (' + getDayFullName(item.dayWeek) + ')' : ''}`;
+            document.getElementById('modal-time').innerText = `${scheduleTimeLabel(item)}`;
             document.getElementById('modal-location').innerText = item.location;
 
             const trainerBox = document.getElementById('modal-trainer-box');
@@ -1899,13 +1932,19 @@ END:VTIMEZONE
             if (modInfo.asynchronousClass) description += ` | Aula Assíncrona: ${modInfo.asynchronousClass}`;
             if (ev.location.includes('Online')) description += ` | Google Meet: https://meet.google.com/rei-odsd-hpq`;
 
+            let calendarDates = `DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
+DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}`;
+            if (!ev.timeStart) {
+                const end = new Date((ev.dateEnd || ev.date) + 'T00:00:00Z');
+                end.setUTCDate(end.getUTCDate() + 1);
+                calendarDates = `DTSTART;VALUE=DATE:${dateClean}\nDTEND;VALUE=DATE:${end.toISOString().slice(0, 10).replace(/-/g, '')}`;
+            }
             return `BEGIN:VEVENT
-SUMMARY:${ev.module}
+SUMMARY:${ev.pending ? '[Por confirmar] ' : ''}${ev.module}
 DESCRIPTION:${description}
 LOCATION:${ev.location}
-DTSTART;TZID=Europe/Lisbon:${dateClean}T${startTimeClean}
-DTEND;TZID=Europe/Lisbon:${dateClean}T${endTimeClean}
-STATUS:CONFIRMED
+${calendarDates}
+STATUS:${ev.pending ? 'TENTATIVE' : 'CONFIRMED'}
 END:VEVENT`;
         }
 
@@ -1928,9 +1967,9 @@ END:VEVENT`;
                 if (item.type === 'furo') return false;
 
                 if (currentViewTab === 'hoje') {
-                    if (item.date !== simulatedDateISO) return false;
+                    if (!isScheduleDay(item, simulatedDateISO)) return false;
                 } else if (currentViewTab === 'proximas') {
-                    if (item.date <= simulatedDateISO) return false;
+                    if ((item.dateEnd || item.date) <= simulatedDateISO) return false;
                 } else if (currentViewTab === 'exames') {
                     if (item.type !== 'exame') return false;
                 }
@@ -1982,7 +2021,7 @@ END:VEVENT`;
             if (!activeModalEvent) return;
             const ev = activeModalEvent;
             const modInfo = moduleConfig[ev.module] || {};
-            let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${ev.timeStart}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
+            let text = `Sessão CET_TEF_LIS_60\n📅 Data: ${ev.dateStr}\n⏰ Hora: ${scheduleTimeLabel(ev)}\n📍 Local: ${ev.location}\n📚 Módulo: ${ev.module}`;
             if (modInfo.trainer) text += `\n👤 Formador(a): ${modInfo.trainer}`;
             if (ev.location.includes('Online')) text += `\n🎥 Google Meet: https://meet.google.com/rei-odsd-hpq`;
             if (modInfo.driveUrl) text += `\n📁 Materiais: ${modInfo.driveUrl}`;
