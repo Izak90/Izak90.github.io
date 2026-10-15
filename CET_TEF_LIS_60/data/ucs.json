@@ -60,7 +60,7 @@
           "bank": "./centro_estudo/cf_banco_80_perguntas_dificil.json"
         }
       ],
-      "trainer": "Ricardo Costa",
+      "trainer": "Ricardo Costa e Hugo Zegre",
       "driveUrl": "https://drive.google.com/drive/folders/1wGJjtKQaki0lBI_GjmGjSovVq5i_QDrq",
       "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-9-2-4/",
       "sourceStatus": {
@@ -112,7 +112,7 @@
       "simulator": null,
       "workbook": null,
       "difficulties": [],
-      "trainer": null,
+      "trainer": "Gonçalo Vicente e João Martins",
       "driveUrl": "https://drive.google.com/drive/folders/15qUnni5C_Af4mQasM_Vx2sFgOWlviBUO",
       "asynchronousClass": null,
       "sourceStatus": {
