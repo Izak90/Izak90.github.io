@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Resumo — Fisiologia do Exercício</title>
+<meta id="theme-color-meta" name="theme-color" content="#090d16">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/study.css">
+</head>
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 pt-safe">
+<div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+<a href="../index.html#estudo" class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shrink-0">
+<img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" alt="Academy" class="w-full h-full object-contain">
+</div>
+<div class="min-w-0"><h1 class="font-black text-base leading-none truncate">CET_TEF_LIS_60</h1><p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Fisiologia do Exercício</p></div>
+</a>
+<button aria-label="Alternar modo escuro ou claro" onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><i id="theme-icon" class="fa-solid fa-sun text-amber-400 text-xs"></i></button>
+</div>
+</header>
+
+<div id="uc-local-nav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+<div class="max-w-2xl mx-auto px-4 py-2.5">
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<a href="fe_resumo.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center"><i class="fa-solid fa-book-open-reader mr-1"></i>Resumo</a>
+<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-brain mr-1"></i>Treino</span>
+<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-vial-circle-check mr-1"></i>Simulações</span>
+</div>
+</div>
+</div>
+
+
+<nav id="topic-nav" class="sticky z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2 flex items-center gap-1.5">
+        <button id="nav-scroll-left"
+                type="button"
+                onclick="scrollStudyNav(-1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a esquerda">
+            <i class="fa-solid fa-chevron-left text-[9px]"></i>
+        </button>
+
+        <div id="study-nav-scroll"
+             class="flex-1 min-w-0 flex gap-1.5 overflow-x-auto hide-scrollbar text-[10px] scroll-smooth"
+             ><a href="#s1" data-section="s1" title="1. Fisiologia, estímulo e adaptação" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Adaptação</a><a href="#s2" data-section="s2" title="2. Bioenergética, ATP e calorimetria" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. ATP e energia</a><a href="#s3" data-section="s3" title="3. Sistemas e vias energéticas" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Sistemas</a><a href="#s4" data-section="s4" title="4. Substratos, reservas e adaptações metabólicas" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Substratos</a><a href="#s5" data-section="s5" title="5. Consumo de oxigénio, MET e dispêndio energético" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. MET e kcal</a><a href="#s6" data-section="s6" title="6. Sistema respiratório e regulação da ventilação" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Respiração</a><a href="#s7" data-section="s7" title="7. VO₂ máximo, quociente respiratório e limiares" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. VO₂ e limiares</a><a href="#s8" data-section="s8" title="8. Coração, ciclo cardíaco e débito" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. Coração</a><a href="#s9" data-section="s9" title="9. Hemodinâmica, pressão arterial e retorno venoso" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">9. Hemodinâmica</a><a href="#s10" data-section="s10" title="10. Ergometria: avaliação, protocolos e segurança" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">10. Ergometria</a><a href="#s11" data-section="s11" title="11. Testes ergométricos e fórmulas das aulas" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">11. Testes</a><a href="#s12" data-section="s12" title="12. Frequência cardíaca e zonas de treino" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">12. FC e zonas</a><a href="#s13" data-section="s13" title="13. Organização neuromuscular e contração" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">13. Contração</a><a href="#s14" data-section="s14" title="14. Fibras, recrutamento e proprioceção" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">14. Fibras e recetores</a><a href="#s15" data-section="s15" title="15. Força, mecânica e ciclo alongamento–encurtamento" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">15. Força</a><a href="#s16" data-section="s16" title="16. Adaptações neurais, hipertrofia e princípios do treino" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">16. Hipertrofia</a><a href="#s17" data-section="s17" title="17. Fadiga, SRDM, sobretreino e recuperação" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">17. Fadiga</a><a href="#s18" data-section="s18" title="18. Regulação endócrina do esforço" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">18. Hormonas</a><a href="#s19" data-section="s19" title="19. Criança e jovem: respostas e adaptações" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">19. Criança e jovem</a><a href="#s20" data-section="s20" title="20. Adulto e idoso: envelhecimento e treino" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">20. Envelhecimento</a><a href="#s21" data-section="s21" title="21. Termorregulação, água e eletrólitos" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">21. Termorregulação</a><a href="#s22" data-section="s22" title="22. Aplicação integrada e avaliação da UC" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">22. Aplicação</a></div>
+
+        <button id="nav-scroll-right"
+                type="button"
+                onclick="scrollStudyNav(1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a direita">
+            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+        </button>
+    </div>
+</nav>
+
+<main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
+<section class="study-card mb-5"><span class="pill">Resumo detalhado · 22 temas</span><h2>Fisiologia do Exercício</h2><p>UC: Analisar as variáveis fisiológicas do esforço e adaptação física ao treino no desempenho desportivo.</p>
+<p>Resumo baseado nas sete aulas fornecidas, num total de 209 páginas. As referências identificam a aula e a página do PDF, que pode conter dois diapositivos. Não foi fornecida nem encontrada uma Lista de Saberes; a organização segue os conhecimentos e aptidões do programa apresentado nas aulas.</p>
+<p>Os valores dos slides são identificados como referências dos materiais. As explicações de apoio desenvolvem conceitos apenas enunciados e os exemplos numéricos servem para compreender os cálculos. Inconsistências das fontes são assinaladas junto do conteúdo, sem substituir silenciosamente a informação do formador. Este material é de estudo da UC, não um protocolo clínico.</p><p class="study-source">Fontes: Aula 1.pdf (85 p.), Aula 2.pdf (29 p.), Aula 3.pdf (29 p.), Aula 4.pdf (33 p.), Aula 5.pdf (10 p.), Aula 6.pdf (12 p.) e Aula 7.pdf (11 p.).</p></section>
+<section class="study-card mb-5"><h2>Pontos-chave que tens mesmo de saber</h2><p>Distinguir resposta aguda de adaptação crónica; relacionar ATP, substratos e sistemas energéticos; interpretar VO₂, frequência cardíaca, débito e pressão; compreender contração, força e fadiga; integrar regulação hormonal, maturação, envelhecimento e termorregulação na análise do treino.</p></section>
+<div class="space-y-6">
+<section id="s1" class="study-card study-section"><span class="pill">Tema 1</span><h2>1. Fisiologia, estímulo e adaptação</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>O exercício perturba o equilíbrio e, com recuperação adequada, pode gerar adaptação.</p></div><div class="study-subcard"><h3 id="fe-detail-01-01">1.1. O que estuda a fisiologia do exercício</h3>
+<p>A fisiologia estuda o funcionamento de tecidos, órgãos e sistemas. A fisiologia do exercício analisa como esse funcionamento responde a uma sessão de esforço e como se modifica com a repetição do treino. Inclui também a influência do ambiente, como altitude, calor e humidade.</p>
+<p>Na prática do TEF, permite compreender a resposta a uma aula de grupo ou sessão de treino, escolher uma carga ajustada e interpretar alterações de frequência cardíaca, ventilação, fadiga e rendimento.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-01-02">1.2. Estímulo, homeostasia e heterostasia</h3>
+<p><strong>Estímulo:</strong> fator interno ou externo que provoca uma resposta fisiológica específica. No treino, o estímulo global é a <strong>carga de treino</strong>, que resulta dos exercícios e da sua organização.</p>
+<p><strong>Homeostasia:</strong> manutenção dinâmica do equilíbrio interno em relação com o meio. Não significa que as variáveis estejam sempre imóveis: durante exercício, a frequência cardíaca e a ventilação alteram-se para responder às necessidades.</p>
+<p><strong>Adaptação:</strong> capacidade de responder às exigências e manter funcionamento perante alterações. Os slides usam <strong>heterostasia/heterostase</strong> para o novo nível crónico de funcionamento ou desempenho alcançado após adaptação ao estímulo repetido.</p>
+<p><strong>Carga externa — explicação de apoio:</strong> trabalho proposto ou realizado, como quilogramas, repetições, velocidade, distância e duração. <strong>Carga interna:</strong> resposta do organismo, como FC, perceção de esforço e alterações metabólicas. A mesma carga externa pode produzir respostas internas diferentes.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-01-03">1.3. Resposta aguda e adaptação crónica</h3>
+<table>
+<thead>
+<tr>
+<th>Aguda</th>
+<th>Crónica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ajuste imediato à sessão, que regride após o esforço</td>
+<td>Mudança que resulta de estímulos repetidos e persiste para além da sessão</td>
+</tr>
+<tr>
+<td>Aumento de FC, ventilação, temperatura e alterações da pressão arterial ou glicemia</td>
+<td>Alterações do miocárdio, hipertrofia muscular e aumento da capacidade mitocondrial</td>
+</tr>
+</tbody>
+</table>
+<p>Não confundir respirar mais depressa durante uma corrida com uma adaptação permanente ao treino. Para falar em adaptação crónica, é necessário considerar a continuidade do estímulo e a recuperação.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-01-04">1.4. Síndrome Geral de Adaptação e recuperação</h3>
+<p>O modelo apresentado tem três fases: <strong>choque/alarme</strong>, com perturbação da homeostasia e mobilização de respostas; <strong>resistência</strong>, com reorganização e adaptação; <strong>exaustão/fadiga</strong>, quando a exigência continuada excede a capacidade de reposição.</p>
+<p>A sequência de estudo é <strong>estímulo → perturbação → recuperação → adaptação</strong>. O modelo de supercompensação representa a possibilidade de recuperar para um nível superior ao inicial. O momento de aplicar nova carga depende do estímulo e do indivíduo; os slides não definem um intervalo universal.</p>
+<p><strong>Dose–resposta:</strong> alterar a dose de exercício altera a resposta, que pode ser favorável ou desfavorável. Mais treino não garante sempre mais benefício: uma carga que ultrapasse persistentemente a recuperação pode reduzir o rendimento.</p>
+<p class="study-source">Fonte: Aula 1, pp. 7–10, 22–36.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Homeostasia é equilíbrio dinâmico.</li><li>Resposta aguda difere de adaptação crónica.</li><li>Dose e recuperação condicionam o resultado.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque pode a mesma carga externa gerar respostas diferentes?</p><details><summary>Ver resposta de referência</summary><p>A carga interna depende da condição e resposta individual. O treino deve ajustar o estímulo e a recuperação, em vez de assumir que igual trabalho produz igual adaptação.</p></details></div></section>
+<section id="s2" class="study-card study-section"><span class="pill">Tema 2</span><h2>2. Bioenergética, ATP e calorimetria</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A energia dos nutrientes sustenta a ressíntese de ATP e a atividade celular.</p></div><div class="study-subcard"><h3 id="fe-detail-02-01">2.1. Transformação de energia</h3>
+<p>A bioenergética estuda as transformações energéticas nos sistemas biológicos. A energia química dos nutrientes permite ressintetizar ATP, usado nas tarefas celulares e na contração muscular. Parte da energia é libertada sob a forma de calor.</p>
+<p><strong>Catabolismo:</strong> degradação de moléculas maiores em menores, disponibilizando energia; exemplos: glicogénio em glicose, triglicéridos em ácidos gordos e proteínas em aminoácidos. <strong>Anabolismo:</strong> síntese de moléculas maiores com gasto energético; exemplos: síntese de glicogénio, triglicéridos e proteínas.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-02-02">2.2. ATP e enzimas</h3>
+<p>O <strong>ATP, adenosina trifosfato</strong>, contém três grupos fosfato. A sua hidrólise fornece energia: <strong>ATP → ADP + fosfato inorgânico + energia</strong>. Como as reservas imediatas são limitadas, a continuidade do exercício depende de ressíntese rápida.</p>
+<p>As <strong>enzimas</strong> catalisam e regulam reações, são específicas para os seus substratos e podem necessitar de cofatores. Temperatura e pH influenciam a atividade. A indicação dos slides «maior pH/temperatura = reação mais rápida» é uma simplificação: não deve ser extrapolada sem limites nem tomada como relação sempre crescente.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção às reservas:</strong> os materiais referem aproximadamente <strong>90 g</strong>, associam ATP a <strong>10–20 segundos all-out</strong> e descrevem o sistema ATP-CP com cerca de <strong>12 segundos</strong>. As passagens não distinguem consistentemente ATP armazenado de fosfagénios; não permitem concluir que o ATP isolado sustenta todo esse período sem ressíntese.</p></div>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-02-03">2.3. Calorimetria direta e indireta</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Princípio</th>
+<th>Aplicação e limitação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direta</td>
+<td>Medir o calor produzido</td>
+<td>Quantificar metabolismo; equipamento caro e pouco usado</td>
+</tr>
+<tr>
+<td>Indireta</td>
+<td>Estimar energia através de consumo de O₂ e produção de CO₂</td>
+<td>Avaliar metabolismo e utilização de substratos, respeitando as condições do método</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1 kcal = 1000 cal.</strong> Os materiais apresentam a caloria como a energia necessária para elevar a temperatura de 1 g de água em 1 °C.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-02-04">2.4. Metabolismo basal e de repouso</h3>
+<p>Nos slides, a avaliação basal implica posição deitada, imediatamente após acordar, ambiente controlado e <strong>12–18 horas pós-prandiais</strong>. Para repouso, referem cerca de <strong>4 horas após refeição ligeira</strong> e <strong>30–60 minutos de descanso</strong> em ambiente calmo.</p>
+<p>É necessário padronizar o estado em que se mede: uma avaliação após comer ou treinar não é diretamente comparável a uma avaliação basal. Composição corporal, dimensão corporal, idade e sexo são fatores enunciados para a taxa metabólica de repouso.</p>
+<p class="study-source">Fonte: Aula 1, pp. 39–49; Aula 3, pp. 4–8 e 23.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Catabolismo disponibiliza energia; anabolismo utiliza-a.</li><li>O ATP necessita de ressíntese contínua.</li><li>Calorimetria direta mede calor; indireta usa trocas gasosas.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não basta o ATP armazenado para uma sessão?</p><details><summary>Ver resposta de referência</summary><p>As reservas imediatas são limitadas. A continuidade depende das vias de ressíntese; os tempos dos slides não devem ser atribuídos ao ATP isolado.</p></details></div></section>
+<section id="s3" class="study-card study-section"><span class="pill">Tema 3</span><h2>3. Sistemas e vias energéticas</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Os três sistemas energéticos atuam em conjunto, com predominância variável.</p></div><div class="study-subcard"><h3 id="fe-detail-03-01">3.1. Comparar potência e capacidade</h3>
+<p><strong>Potência energética:</strong> rapidez de produção de ATP. <strong>Capacidade energética:</strong> quantidade de ATP que a via consegue disponibilizar ao longo do esforço. Um sistema pode ser muito rápido e ter reservas pequenas.</p>
+<table>
+<thead>
+<tr>
+<th>Sistema</th>
+<th>Local/princípio</th>
+<th>Rapidez e capacidade</th>
+<th>Situação de predominância</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anaeróbio alático, fosfagénios ou ATP-CP</td>
+<td>Sarcoplasma; fosfocreatina permite ressintetizar ATP a partir de ADP</td>
+<td>Muito rápido, capacidade reduzida; não utiliza diretamente O₂ nem forma lactato na reação</td>
+<td>Esforço muito breve e máximo</td>
+</tr>
+<tr>
+<td>Anaeróbio lático ou glicolítico</td>
+<td>Citosol; degradação de glúcidos, com formação de lactato</td>
+<td>Rápido, capacidade intermédia</td>
+<td>Esforços intensos que se prolongam além da fase inicial</td>
+</tr>
+<tr>
+<td>Aeróbio ou oxidativo</td>
+<td>Processos mitocondriais dependentes de O₂</td>
+<td>Menor rapidez, grande capacidade</td>
+<td>Esforço prolongado e recuperação entre esforços</td>
+</tr>
+</tbody>
+</table>
+<p>Os três funcionam <strong>simultaneamente e de forma complementar</strong>. A predominância depende de intensidade, duração, disponibilidade de substratos e condição física; não há interruptores que desliguem um sistema e liguem outro.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-03-02">3.2. Via glicolítica e lactato</h3>
+<p>Os slides apresentam glicose/glicogénio → piruvato e distinguem continuidade oxidativa de formação de lactato. O balanço mostrado para a glicose é <strong>4 ATP produzidos − 2 utilizados = 2 ATP líquidos</strong>. A tabela-resumo também refere <strong>2–3 ATP</strong>, sem separar detalhadamente os pontos de entrada do substrato.</p>
+<p>A apresentação relaciona esforço elevado, alterações do equilíbrio ácido-base e dificuldade em manter a intensidade. Distinguir <strong>lactato</strong>, <strong>H⁺</strong> e <strong>dor tardia</strong>: os próprios materiais dizem que o lactato não provoca as dores musculares e que o esforço pode continuar na sua presença se o equilíbrio interno for mantido. A explicação «ácido lático → lactato + H⁺» é o modelo simplificado usado nos slides, não uma descrição completa de toda a regulação ácido-base.</p>
+<p><strong>Ciclo de Cori:</strong> lactato produzido no músculo circula até ao fígado, onde participa na formação de glicose; esta pode voltar à circulação e ser utilizada pelo músculo. É uma cooperação entre órgãos, importante para a gestão dos substratos e da glicemia.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-03-03">3.3. Via oxidativa</h3>
+<p>Os materiais distinguem:</p>
+<ol>
+<li><strong>Beta-oxidação:</strong> degradação de ácidos gordos em unidades que originam acetil-CoA e transportadores reduzidos.</li>
+<li><strong>Ciclo de Krebs:</strong> utilização de acetil-CoA, com produção de CO₂ e transportadores de eletrões.</li>
+<li><strong>Cadeia transportadora e fosforilação oxidativa:</strong> na membrana mitocondrial interna; a energia dos eletrões permite estabelecer o gradiente de protões.</li>
+<li><strong>Quimiosmose:</strong> regresso de protões através da ATP sintase, associado a ADP + Pi → ATP. O O₂ é o aceitador final de eletrões, formando água.</li>
+</ol>
+<p>Os valores apresentados nas aulas são <strong>36 ATP</strong>, <strong>38 ATP no esquema global</strong>, <strong>36–39 ATP na tabela para glicose</strong> e <strong>129 ATP para ácido palmítico</strong>. São contabilizações dos materiais, não um valor único uniforme entre todos os diapositivos. Não se deve atribuir todo o ATP oxidativo apenas ao ciclo de Krebs: a própria aula separa cadeia transportadora e fosforilação oxidativa.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-03-04">3.4. Dinâmica ao longo do esforço</h3>
+<p>Referências temporais dos slides: ATP-CP com resposta muito rápida em <strong>menos de 15 s</strong>; contributo glicolítico crescente nos segundos seguintes, com pico referido entre <strong>40 e 60–80 s</strong>; predominância aeróbia aproximadamente após <strong>100–120 s</strong>. São referências ilustrativas, não limites absolutos.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção:</strong> numa frase da Aula 1, p. 62, repetida na Aula 3, p. 17, aparece «sistema glicolítico alático» para 15–30 s. A própria classificação das aulas distingue fosfagénios/alático de glicolítico/lático; a designação é inconsistente e deve ser esclarecida.</p></div>
+<p><strong>Exemplos de aplicação:</strong> um sprint muito curto solicita fortemente fosfagénios; uma sequência intensa prolongada aumenta a participação glicolítica; uma corrida contínua depende muito do metabolismo oxidativo. Num circuito, também é necessário analisar recuperações e sucessão dos exercícios, não apenas a duração de uma repetição.</p>
+<p class="study-source">Fonte: Aula 1, pp. 50–65; Aula 3, pp. 9–19.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Fosfagénios: grande rapidez e pequena capacidade.</li><li>Glicólise e metabolismo oxidativo complementam-se.</li><li>As referências temporais não são interruptores.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque é o sistema aeróbio importante entre esforços curtos?</p><details><summary>Ver resposta de referência</summary><p>Além de sustentar trabalho prolongado, contribui durante recuperações e períodos de menor intensidade; a sessão não se reduz ao sistema predominante numa repetição.</p></details></div></section>
+<section id="s4" class="study-card study-section"><span class="pill">Tema 4</span><h2>4. Substratos, reservas e adaptações metabólicas</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>O treino modifica a disponibilidade e a utilização de substratos e a capacidade oxidativa.</p></div><div class="study-subcard"><h3 id="fe-detail-04-01">4.1. Glúcidos, lípidos e proteínas</h3>
+<table>
+<thead>
+<tr>
+<th>Substrato</th>
+<th>Organização e função nos materiais</th>
+<th style="text-align: right;">Valor energético</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glúcidos/HCO/CHO</td>
+<td>Glicose e reservas de glicogénio, sobretudo musculares; importância crescente em esforços intensos</td>
+<td style="text-align: right;">4 kcal/g</td>
+</tr>
+<tr>
+<td>Lípidos</td>
+<td>Triglicéridos e ácidos gordos; a lipólise disponibiliza substratos; grande reserva energética</td>
+<td style="text-align: right;">9 kcal/g</td>
+</tr>
+<tr>
+<td>Proteínas</td>
+<td>Estruturas e funções celulares; aminoácidos podem contribuir para energia</td>
+<td style="text-align: right;">4 kcal/g</td>
+</tr>
+</tbody>
+</table>
+<p>Fosfolípidos das membranas e esteroides como colesterol são apresentados como lípidos com funções estruturais ou de síntese hormonal, não como os principais combustíveis do esforço.</p>
+<p>Os materiais referem maior participação <strong>relativa</strong> dos lípidos em intensidades baixas e dos glúcidos em intensidades elevadas. Não concluir que uma percentagem maior de energia proveniente de gordura implica necessariamente maior dispêndio energético total.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-04-02">4.2. Reservas e recuperação</h3>
+<p>O músculo contém uma importante reserva de glicogénio; a reposição deve acompanhar as necessidades do treino. Em esforços prolongados, glúcidos e triglicéridos intramusculares contribuem para manter a produção de ATP.</p>
+<p>Não existe um reservatório proteico dedicado equivalente ao glicogénio ou à gordura. Os slides referem proteínas no plasma, vísceras e músculos e indicam <strong>12–15% da massa corporal</strong>. Referem <strong>2–5% da energia diária</strong>, podendo atingir <strong>10% em atletas</strong>, como valores do material, dependentes do contexto.</p>
+<p>As aulas associam maior catabolismo proteico a reservas baixas de glicogénio e alertam para a combinação de exercício em jejum com restrição energética crónica. O ponto de aplicação é compreender a recuperação e reconhecer a necessidade de acompanhamento nutricional; não criar uma dieta individual a partir destas percentagens.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-04-03">4.3. Adaptações ao treino</h3>
+<ul>
+<li><strong>Capilarização:</strong> mais capilares junto às fibras facilitam trocas de gases e nutrientes; os slides citam diferenças de <strong>5–10%</strong> e aumento de <strong>15%</strong> em períodos prolongados.</li>
+<li><strong>Mioglobina:</strong> participa no transporte intracelular de O₂; os materiais citam aumento de <strong>75–80%</strong>.</li>
+<li><strong>Mitocôndrias:</strong> aumento do número, tamanho e capacidade oxidativa, conforme estímulo e volume de treino.</li>
+<li><strong>Enzimas oxidativas:</strong> aumento da atividade que sustenta ressíntese aeróbia de ATP.</li>
+<li><strong>Reservas e utilização de substratos:</strong> melhor capacidade de utilizar lípidos e poupar glicogénio em determinadas tarefas, atrasando a fadiga.</li>
+</ul>
+<p>São referências dos exemplos das aulas, sem garantia de igual mudança em todos os indivíduos. Os gráficos de complemento também comparam reservas e respostas de treinados e não treinados; ao comparar lactato ou ATP, distinguir sempre <strong>mesma carga absoluta</strong>, <strong>mesma intensidade relativa</strong> e <strong>esforço máximo</strong>.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção às fibras:</strong> as Aulas 1 e 3 falam em alterações de fenótipos e fibras híbridas, com valores de <strong>7–52%</strong>, e comparam estímulos lentos/rápidos acima de <strong>70% de 1RM</strong>. A Aula 4 simplifica a transformação a IIx → IIa e rejeita conversão geral I ↔ II. Não interpretar os números como promessa de transformar qualquer fibra num tipo diferente.</p></div>
+<p class="study-source">Fonte: Aula 1, pp. 66–73; Aula 3, pp. 19–27; Aula 4, pp. 22–24 e 30–32.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Glúcidos 4, lípidos 9 e proteínas 4 kcal/g.</li><li>Capilarização, mioglobina e mitocôndrias apoiam a função oxidativa.</li><li>Comparar a mesma carga não é comparar esforços máximos.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque pode o treino ajudar a atrasar o esgotamento de glicogénio?</p><details><summary>Ver resposta de referência</summary><p>As adaptações oxidativas e a utilização de substratos podem aumentar a contribuição dos lípidos em determinadas tarefas, poupando glicogénio e ajudando a manter a produção de ATP.</p></details></div></section>
+<section id="s5" class="study-card study-section"><span class="pill">Tema 5</span><h2>5. Consumo de oxigénio, MET e dispêndio energético</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>As estimativas energéticas exigem unidades e conversões coerentes.</p></div><div class="study-subcard"><h3 id="fe-detail-05-01">5.1. Unidades e conversões</h3>
+<p><strong>VO₂ absoluto:</strong> litros de O₂ por minuto, L/min. <strong>VO₂ relativo:</strong> mililitros por quilograma por minuto, mL/kg/min. O relativo considera a massa corporal e permite comparações que o absoluto, sozinho, não permite.</p>
+<p><strong>Relativo = absoluto × 1000 ÷ massa corporal.</strong></p>
+<p><strong>Absoluto = relativo × massa corporal ÷ 1000.</strong></p>
+<p>Exemplo de cálculo: 3 L/min numa pessoa de 75 kg correspondem a <strong>40 mL/kg/min</strong>. Duas pessoas com o mesmo consumo absoluto podem ter consumos relativos diferentes.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-05-02">5.2. MET e equivalente energético</h3>
+<p>Os slides usam <strong>1 MET = 3,5 mL/kg/min</strong> como equivalente metabólico de repouso e <strong>1 L de O₂ ≈ 5 kcal</strong> para estimar energia. Assim, uma atividade de 7 MET corresponde convencionalmente a <strong>24,5 mL/kg/min</strong>.</p>
+<p><strong>Dispêndio energético em kcal/min = MET × massa (kg) × 3,5 ÷ 200.</strong></p>
+<p>Para uma atividade de duração conhecida: multiplicar esse resultado pelos minutos. A estimativa usa o equivalente de O₂ adotado e não é uma medição individual direta.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-05-03">5.3. Exemplo das aulas e verificação aritmética</h3>
+<p>O exemplo usa <strong>7 MET e 70 kg</strong>. Pela fórmula: 7 × 70 × 3,5 ÷ 200 = <strong>8,575 kcal/min</strong>, aproximadamente <strong>8,6 kcal/min</strong>.</p>
+<p>Para um objetivo aritmético de 2000 kcal semanais através dessa atividade: 2000 ÷ 8,575 ≈ <strong>233 minutos/semana</strong>; em 3 sessões, aproximadamente <strong>78 minutos por sessão</strong>.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção à fonte:</strong> a Aula 3, p. 24, apresenta <strong>8,8 kcal/min</strong>, <strong>227 min/semana</strong> e <strong>76 min/sessão</strong>. Estes são os resultados inscritos no exemplo, mas o primeiro não coincide com os dados e a fórmula. A p. 23 também escreve «kcal = MET × kg × minutos ÷ 60», expressão que não é equivalente à fórmula anterior e omite a conversão energética. Confirmar a versão esperada pelo formador; não misturar as duas fórmulas.</p></div>
+<p>O exemplo serve para estudar unidades e coerência do cálculo, não para recomendar esse objetivo de exercício a uma pessoa.</p>
+<p class="study-source">Fonte: Aula 2, pp. 17 e 23; Aula 3, pp. 23–24.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>1 MET equivale convencionalmente a 3,5 mL/kg/min.</li><li>Converter VO₂ absoluto e relativo com a massa corporal.</li><li>O exemplo de kcal dos slides tem inconsistências identificadas.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como converter 3 L/min em consumo relativo numa pessoa de 75 kg?</p><details><summary>Ver resposta de referência</summary><p>Multiplicar por 1000 e dividir por 75: 40 mL/kg/min.</p></details></div></section>
+<section id="s6" class="study-card study-section"><span class="pill">Tema 6</span><h2>6. Sistema respiratório e regulação da ventilação</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Ventilar, trocar gases e perfundir são processos distintos e interdependentes.</p></div><div class="study-subcard"><h3 id="fe-detail-06-01">6.1. Interdependência respiratória e cardiovascular</h3>
+<p>O sistema respiratório realiza as trocas de O₂ e CO₂ com o exterior; o cardiovascular transporta gases, nutrientes e outros materiais entre pulmões e tecidos. Para produzir ATP oxidativamente, é necessário captar, transportar e utilizar O₂.</p>
+<p><strong>Explicação de apoio aos conceitos do programa:</strong> ventilação é o movimento de ar; difusão é a passagem de gases através da membrana; perfusão é o fluxo sanguíneo. A relação ventilação/perfusão descreve a correspondência entre ar que chega às regiões pulmonares e sangue que as atravessa.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-06-02">6.2. Volumes e capacidades pulmonares</h3>
+<p>O programa enuncia volumes e capacidades, mas os ficheiros não fornecem um desenvolvimento sistemático nem valores de referência. Para organizar esse tópico, as definições seguintes são <strong>apoio conceptual</strong>, não uma tabela transcrita do formador:</p>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume corrente</td>
+<td>Ar mobilizado numa respiração habitual</td>
+</tr>
+<tr>
+<td>Reserva inspiratória</td>
+<td>Ar adicional que pode ser inspirado após uma inspiração habitual</td>
+</tr>
+<tr>
+<td>Reserva expiratória</td>
+<td>Ar adicional que pode ser expirado após uma expiração habitual</td>
+</tr>
+<tr>
+<td>Volume residual</td>
+<td>Ar que permanece após uma expiração máxima</td>
+</tr>
+<tr>
+<td>Capacidade vital</td>
+<td>Volume corrente + reservas inspiratória e expiratória</td>
+</tr>
+<tr>
+<td>Capacidade pulmonar total</td>
+<td>Capacidade vital + volume residual</td>
+</tr>
+<tr>
+<td>Capacidade inspiratória</td>
+<td>Volume corrente + reserva inspiratória</td>
+</tr>
+<tr>
+<td>Capacidade residual funcional</td>
+<td>Reserva expiratória + volume residual</td>
+</tr>
+</tbody>
+</table>
+<p>Como relação de apoio, <strong>ventilação por minuto = frequência respiratória × volume corrente</strong>. Aumentar a ventilação pode envolver respirar mais depressa, mobilizar mais ar por respiração ou ambas as coisas.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-06-03">6.3. Resposta ventilatória ao exercício</h3>
+<p>O complemento da Aula 1 distingue três fases: aumento inicial associado ao comando central e músculos ativos; aumento progressivo com a continuidade do exercício e informação periférica; aproximação a um patamar em esforço estabilizado.</p>
+<p>Participam circuitos neurais, informação muscular, recetores de estiramento e quimiorrecetores centrais e periféricos sensíveis às condições químicas e gasosas. Os materiais referem aumento desproporcional da ventilação acima de aproximadamente <strong>50–60% do VO₂ pico</strong>, entre outros fatores associado às exigências ácido-base. É uma referência da aula e não um limiar fixo para todas as pessoas.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-06-04">6.4. Transporte de O₂ e significado das adaptações</h3>
+<p>Hemoglobina transporta O₂ no sangue e mioglobina participa no seu transporte/armazenamento muscular. O complemento associa maior conteúdo de mioglobina às fibras mais oxidativas e explica que redução importante da capacidade de transporte sanguíneo prejudica o esforço aeróbio.</p>
+<p>Os slides referem, como ilustração, pulmões adultos com <strong>4–6 L de volume</strong>, superfície de trocas de <strong>50–100 m²</strong> e passagem de eritrócitos pelos capilares pulmonares em cerca de <strong>0,5–1 s em repouso</strong>. Estes exemplos ajudam a compreender a escala das trocas, não substituem avaliação funcional individual.</p>
+<p class="study-source">Fonte: Aula 1, pp. 16 e 76–83; Aula 2, p. 4. As definições dos volumes são explicações de apoio a um tópico apenas enunciado.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>O cardiovascular transporta o O₂ captado nos pulmões.</li><li>Volumes e capacidades são conceitos diferentes.</li><li>A ventilação responde a informação neural e química.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como pode aumentar a ventilação por minuto?</p><details><summary>Ver resposta de referência</summary><p>Aumentando a frequência respiratória, o volume corrente ou ambos. A ventilação deve ser interpretada em conjunto com trocas gasosas e circulação.</p></details></div></section>
+<section id="s7" class="study-card study-section"><span class="pill">Tema 7</span><h2>7. VO₂ máximo, quociente respiratório e limiares</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>VO₂, trocas gasosas e limiares descrevem dimensões relacionadas do esforço.</p></div><div class="study-subcard"><h3 id="fe-detail-07-01">7.1. VO₂ máximo e VO₂ pico</h3>
+<p><strong>VO₂ máximo:</strong> maior capacidade de captar, transportar e utilizar oxigénio durante exercício. É uma variável integrada, dependente de vários sistemas, e não apenas do volume dos pulmões.</p>
+<p>O programa distingue VO₂ máximo e <strong>VO₂ pico</strong>, mas não desenvolve os critérios completos de identificação. Como apoio conceptual, pico é o maior valor observado no teste; máximo implica fundamentar que se atingiu a capacidade máxima. Não usar os termos como se todos os testes demonstrassem obrigatoriamente o mesmo fenómeno.</p>
+<p>A FC e o VO₂ apresentam relação positiva durante esforço progressivo, o que fundamenta o uso da FC para estimar e controlar intensidade. Não significa igualdade numérica entre percentagens de FC máxima, FC de reserva e VO₂.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-07-02">7.2. Quociente respiratório e RER</h3>
+<p>O programa enuncia o quociente respiratório e a figura utiliza <strong>RER</strong>. <strong>Explicação de apoio:</strong> a razão VCO₂/VO₂ expressa CO₂ produzido por O₂ consumido; na análise dos gases expirados é frequentemente designada razão de troca respiratória, RER. É necessário distinguir o nível celular da medição pulmonar.</p>
+<p>Como orientação de leitura, valores próximos de <strong>0,70</strong> relacionam-se com oxidação predominante de lípidos e <strong>1,00</strong> com glúcidos, em condições apropriadas à interpretação. A tabela ilustrativa da Aula 1, p. 77, apresenta valores mistos de <strong>0,85–0,90</strong> e valores de <strong>1,0 ou superiores</strong> em exercício intenso.</p>
+<p>Um RER superior a 1 não significa «mais de 100% de energia de glúcidos»: a medição também reflete CO₂ e ventilação associados às condições do esforço. A frase dos slides sobre os lípidos e a relação entre O₂ de entrada e CO₂ de saída é ambígua; não a usar para inverter o rácio.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-07-03">7.3. Equivalentes ventilatórios e limiares</h3>
+<p><strong>VE/VO₂:</strong> litros de ar ventilado por litro de O₂ consumido. <strong>VE/VCO₂:</strong> litros de ar ventilado por litro de CO₂ eliminado. Permitem analisar a ventilação em relação às trocas gasosas.</p>
+<p><strong>Limiar ventilatório — apoio conceptual:</strong> alteração no padrão de crescimento da ventilação relativamente às variáveis metabólicas. <strong>Limiar por lactatémia:</strong> identificado através da resposta do lactato sanguíneo ao aumento da carga.</p>
+<p>São formas diferentes de observar transições do esforço, relacionadas mas não automaticamente idênticas em qualquer protocolo. Os slides não fixam concentrações universais de lactato nem critérios completos de primeiro/segundo limiar. Não inventar um valor de corte a partir da palavra «anaeróbio».</p>
+<p><strong>Aplicação:</strong> acompanhar FC e lactato em diferentes intensidades ajuda a caracterizar a resposta individual e a mudança com o treino; um único valor sem carga, tempo e contexto não descreve essa adaptação.</p>
+<p class="study-source">Fonte: Aula 1, pp. 16, 41–42 e 77–80; Aula 2, pp. 9 e 17; Aula 7, p. 3. Definições adicionais estão identificadas como apoio.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>VO₂ pico é o maior valor observado no teste.</li><li>VE/VO₂ e VE/VCO₂ são equivalentes ventilatórios.</li><li>RER elevado não representa uma percentagem ilimitada de glúcidos.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não se devem tratar limiar ventilatório e lactato como medições idênticas?</p><details><summary>Ver resposta de referência</summary><p>Observam variáveis diferentes e dependem do protocolo e critérios de identificação; a relação entre elas não elimina a necessidade de avaliação específica.</p></details></div></section>
+<section id="s8" class="study-card study-section"><span class="pill">Tema 8</span><h2>8. Coração, ciclo cardíaco e débito</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>O débito depende da frequência e do volume ejetado em cada batimento.</p></div><div class="study-subcard"><h3 id="fe-detail-08-01">8.1. Circulação e controlo</h3>
+<p>O coração impulsiona sangue e permite transporte de gases, nutrientes e hormonas, remoção de metabolitos e participação na regulação térmica, ácido-base e defesa do organismo.</p>
+<p>Percurso de apoio aos esquemas: tecidos → veias cavas → aurícula direita → ventrículo direito → artérias pulmonares → pulmões → veias pulmonares → aurícula esquerda → ventrículo esquerdo → aorta → tecidos. Artérias e veias são definidas pelo sentido relativamente ao coração, não por transportarem sempre um determinado tipo de sangue.</p>
+<p><strong>Sístole ventricular:</strong> contração e ejeção. <strong>Diástole ventricular:</strong> relaxamento e enchimento; a contração auricular contribui para completar esse enchimento. As válvulas mantêm o sentido do fluxo.</p>
+<p>A ativação elétrica própria do coração coordena a contração. O sistema nervoso autónomo modula a resposta: simpático aumenta a atividade cardíaca e parassimpático reduz a FC. <strong>Aferente</strong> é informação que chega aos centros nervosos; <strong>eferente</strong> é a resposta enviada aos órgãos.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-08-02">8.2. Frequência e volume sistólico</h3>
+<p><strong>FC:</strong> batimentos por minuto. Os materiais citam cerca de <strong>60–80 bpm em repouso</strong>, valores muito baixos de <strong>28–40 bpm em atletas</strong> e 100 bpm no exemplo de taquicardia. São exemplos de estudo; a classificação de um indivíduo exige contexto, não apenas a associação «treinado/sedentário».</p>
+<p><strong>Volume sistólico, VS:</strong> sangue ejetado pelo ventrículo em cada contração. O treino de resistência pode aumentar o VS e permitir satisfazer uma exigência submáxima com menor FC.</p>
+<p><strong>Frank–Starling:</strong> maior enchimento ventricular, dentro da relação funcional apresentada, aumenta o estiramento prévio e a força de contração. O retorno venoso contribui para a pré-carga.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-08-03">8.3. Débito e volumes finais</h3>
+<p><strong>Q = FC × VS.</strong> Se FC está em bpm e VS em mL/batimento, Q resulta em mL/min; dividir por 1000 para L/min.</p>
+<p>Exemplos aproximados dos slides: repouso, 70 × 71 ≈ <strong>5 L/min</strong> no não treinado e 50 × 100 = <strong>5 L/min</strong> no treinado. Em máximo, apresentam cerca de <strong>22 L/min</strong> e <strong>35 L/min</strong>, respetivamente. A diferença mostra a importância do VS, sem significar que todos os treinados atinjam o mesmo débito.</p>
+<p>O programa também enuncia os volumes finais e a fração de ejeção. <strong>Explicação de apoio:</strong> volume telediastólico/VDF é o sangue antes da ejeção; volume telessistólico/VSF é o remanescente após a ejeção. <strong>VS = VDF − VSF</strong> e <strong>fração de ejeção = VS ÷ VDF × 100</strong>. Exemplo: VDF 120 mL e VSF 50 mL dão VS 70 mL e fração de ejeção de aproximadamente 58%.</p>
+<p class="study-source">Fonte: Aula 2, pp. 3–12 e 25. Fórmulas de volumes e fração de ejeção desenvolvem conceitos apenas enunciados.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Sístole ejeta; diástole permite enchimento.</li><li>Q = FC × VS.</li><li>Mais VS pode permitir menor FC numa exigência submáxima.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como podem treinado e não treinado ter igual débito em repouso?</p><details><summary>Ver resposta de referência</summary><p>Uma FC menor pode ser compensada por maior VS: 50 × 100 e aproximadamente 70 × 71 dão cerca de 5 L/min.</p></details></div></section>
+<section id="s9" class="study-card study-section"><span class="pill">Tema 9</span><h2>9. Hemodinâmica, pressão arterial e retorno venoso</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Pressão arterial, resistência e retorno venoso devem ser interpretados em conjunto.</p></div><div class="study-subcard"><h3 id="fe-detail-09-01">9.1. Pressão e resistência</h3>
+<p>A pressão arterial depende do sangue impulsionado e da resistência oferecida pela circulação. Os slides apresentam <strong>PA = Q × resistência periférica total</strong> como relação global; é uma simplificação hemodinâmica, não uma fórmula para calcular diretamente a PAS de cada batimento.</p>
+<ul>
+<li><strong>PAS:</strong> pressão mais elevada associada à sístole ventricular.</li>
+<li><strong>PAD:</strong> pressão durante a fase de relaxamento; relaciona-se com a resistência periférica.</li>
+<li><strong>Pressão diferencial/pulso — apoio:</strong> PAS − PAD.</li>
+<li><strong>PAM:</strong> PAD + ⅓ × (PAS − PAD), aproximação apresentada nas aulas.</li>
+</ul>
+<p>Exemplo: PA de 120/80 mmHg corresponde a pressão diferencial de <strong>40 mmHg</strong> e PAM de aproximadamente <strong>93,3 mmHg</strong>. A aula apresenta 93,2 usando 0,33.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-09-02">9.2. Resposta ao esforço e adaptação</h3>
+<p>No exercício aeróbio dinâmico, os slides descrevem aumento de PAS e PAM e PAD relativamente estável. No treino de força, PAS e PAD podem aumentar, sobretudo perto da falência. Também referem maior exigência cardiovascular em determinadas tarefas com membros superiores do que com membros inferiores.</p>
+<p>O treino regular pode reduzir a PA de repouso. Distinguir esta adaptação crónica do aumento agudo durante uma sessão.</p>
+<p><strong>Valores de estudo da Aula 2, p. 26:</strong> normotensos, PAS 120–130 e PAD 60–80 mmHg; «pré-hipertensos», 135/85; «hipertensos», &gt;140/90. A grelha não resolve todos os intervalos nem os casos-limite e é uma classificação do material, não uma atualização de critérios clínicos ou uma autorização para diagnosticar.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-09-03">9.3. Medição e retorno venoso</h3>
+<p>O procedimento dos slides usa esfigmomanómetro e estetoscópio, pessoa sentada em repouso e ambiente calmo, braço relaxado e apoiado, com referência à artéria braquial e à altura da aurícula direita. É necessário dominar o protocolo de medição, não apenas ler um valor.</p>
+<p>Os mecanismos de retorno venoso apresentados são:</p>
+<ol>
+<li><strong>Gradiente de pressão:</strong> aproximadamente 15 mmHg nas vénulas até perto de 0 mmHg na aurícula direita, nos exemplos.</li>
+<li><strong>Bomba respiratória:</strong> diferenças de pressão torácica e abdominal durante a respiração.</li>
+<li><strong>Bombas musculares e válvulas:</strong> contração comprime veias e válvulas orientam o fluxo para o coração.</li>
+<li><strong>Palmilha venosa de Lejars:</strong> compressão da rede venosa plantar pelo apoio.</li>
+</ol>
+<p><strong>Aplicação:</strong> o movimento dos membros inferiores participa no retorno venoso; compreender este mecanismo ajuda a justificar uma transição progressiva para o repouso.</p>
+<p class="study-source">Fonte: Aula 2, pp. 12–15 e 25–26.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>PAS e PAD respondem de forma diferente conforme o esforço.</li><li>PAM é uma aproximação da pressão média.</li><li>Bombas musculares, respiração e válvulas apoiam retorno venoso.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Qual a pressão diferencial e PAM aproximada de 120/80?</p><details><summary>Ver resposta de referência</summary><p>A diferencial é 40 mmHg e a PAM é 80 + 40/3, aproximadamente 93,3 mmHg.</p></details></div></section>
+<section id="s10" class="study-card study-section"><span class="pill">Tema 10</span><h2>10. Ergometria: avaliação, protocolos e segurança</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Um teste útil requer protocolo adequado, monitorização e interpretação contextualizada.</p></div><div class="study-subcard"><h3 id="fe-detail-10-01">10.1. Conceito e tipos de teste</h3>
+<p>Ergometria é a avaliação e controlo do trabalho em função da intensidade de esforço. Um ergómetro permite impor ou medir trabalho e observar a resposta, como passadeira ou cicloergómetro.</p>
+<table>
+<thead>
+<tr>
+<th>Distinção</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laboratorial / terreno</td>
+<td>Contexto e meios de realização</td>
+</tr>
+<tr>
+<td>Direto / indireto</td>
+<td>Medição da variável ou estimativa através de outras variáveis</td>
+</tr>
+<tr>
+<td>Máximo / submáximo</td>
+<td>Atingir capacidade máxima ou trabalhar abaixo dela segundo protocolo</td>
+</tr>
+</tbody>
+</table>
+<p>Estas distinções são independentes: um teste em passadeira pode estimar VO₂ pelo tempo sem medir diretamente gases. Teste máximo não significa, por si só, medição direta de VO₂.</p>
+<p>Os slides associam testes submáximos a menor custo e maior aplicabilidade e referem erro de estimativa na ordem de <strong>10%</strong>. O ergómetro deve ser adequado à pessoa e à modalidade; passadeira e bicicleta ou protocolos de durações diferentes podem gerar resultados diferentes.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-10-02">10.2. Organização do protocolo</h3>
+<p>São apresentados testes descontínuos em steady state, contínuos em steady state e contínuos em rampa. O exemplo genérico inclui <strong>5 minutos de aquecimento</strong>, patamares superiores a 5 minutos conforme o teste, registo no último minuto de cada etapa ou monitorização contínua em rampa. Cada protocolo específico prevalece sobre esta descrição geral.</p>
+<p>Antes: explicar o teste e a perceção subjetiva de esforço, verificar condições, equipamento e adequação. Os slides indicam não realizar exercício vigoroso nesse dia e evitar alimentos, tabaco, álcool e cafeína nas <strong>3 horas anteriores</strong>, conforme o protocolo. A gestão de medicação pertence ao responsável clínico; não inferir uma instrução para a suspender.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-10-03">10.3. Monitorização e interrupção</h3>
+<p>A <strong>PSE</strong> deve refletir o esforço global, não apenas uma sensação isolada. Recolher a perceção ao longo do teste, juntamente com os dados previstos, e explicar previamente a escala utilizada.</p>
+<p>O quadro de interrupção da Aula 2, p. 20, está explicitamente enquadrado em <strong>avaliações com supervisão médica</strong>. Inclui pedido do participante para parar, falha do equipamento, fadiga excessiva, sinais de má perfusão como tonturas, confusão, palidez ou náuseas, alterações anormais do ritmo e respostas inadequadas de FC ou PA.</p>
+<p>Para reconhecer o quadro da aula, nele constam angina moderadamente severa (3 numa escala 1–4), queda de PAS &gt;10 mmHg relativamente ao repouso ou ausência de subida com a carga; PAS &gt;250 mmHg ou aumento &gt;140 mmHg, e PAD &gt;115 mmHg. São critérios transcritos desse quadro clínico, <strong>não limites até aos quais um TEF deve insistir num teste</strong>. Não é necessário atingir um número extremo para interromper perante sinais de alarme.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-10-04">10.4. Interpretação</h3>
+<p>Registar protocolo, equipamento, carga, duração, FC, PSE, motivo de término e resultado. Comparações exigem condições semelhantes. Classificar aptidão com os valores de referência do protocolo, considerando idade e população; o Excel com protocolos e tabelas referido nas aulas não foi incluído nos ficheiros fornecidos.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-10-05">10.5. Segurança, saúde e âmbito profissional</h3>
+<p>O programa inclui normas de segurança e saúde no trabalho, sem apresentar um manual operacional completo. Como aplicação de apoio: verificar estabilidade, funcionamento e espaço de utilização do equipamento; preparar os registos sem perder a observação do participante; explicar o procedimento e como comunicar desconforto; conhecer o plano de resposta da instalação; respeitar os limites de atuação e a necessidade de supervisão apropriada.</p>
+<p>Aplicar uma estimativa de aptidão não equivale a diagnosticar doença, alterar medicação ou executar uma prova clínica por iniciativa própria. A prioridade é uma avaliação adequada à pessoa, com interrupção quando necessária e comunicação clara dos resultados e limitações.</p>
+<p class="study-source">Fonte: Aula 2, pp. 16–21 e 24; Aula 5, p. 7; Aula 6, p. 3. A segurança laboral é enunciada na Aula 1, p. 8; a sua aplicação foi desenvolvida como apoio.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Máximo não significa medição direta de VO₂.</li><li>Explicar e monitorizar a PSE.</li><li>O quadro clínico de interrupção não é uma meta de esforço.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque pode mudar o resultado ao mudar de ergómetro?</p><details><summary>Ver resposta de referência</summary><p>O modo de exercício, a especificidade da pessoa e a organização do protocolo influenciam a resposta. Comparações devem usar condições equivalentes.</p></details></div></section>
+<section id="s11" class="study-card study-section"><span class="pill">Tema 11</span><h2>11. Testes ergométricos e fórmulas das aulas</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Cada equação pertence a um protocolo e a uma população específicos.</p></div><div class="study-subcard"><h3 id="fe-detail-11-01">11.1. Exemplos aeróbios e anaeróbios</h3>
+<p>Máximos enunciados: Bruce em passadeira, milha a correr, Cooper e 2000 m no remo Concept. Submáximos: Åstrand em cicloergómetro ou banco, YMCA, McArdle/Queens College, Ebbeling, Balke &amp; Ware e milha a andar/Rockport.</p>
+<p>Para avaliação anaeróbia são citados Wingate, força–velocidade, plataforma de forças e sprints de 30/50 m. Os slides não desenvolvem o procedimento completo de cada um.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-11-02">11.2. Bruce</h3>
+<p>Tabela apresentada na Aula 2, p. 22:</p>
+<table>
+<thead>
+<tr>
+<th>Patamar</th>
+<th>Minutos</th>
+<th>Velocidade aproximada</th>
+<th>Inclinação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>1–3</td>
+<td>2,8 km/h</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>II</td>
+<td>4–6</td>
+<td>4,0 km/h</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>III</td>
+<td>7–9</td>
+<td>5,5 km/h</td>
+<td>14%</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>10–12</td>
+<td>6,8 km/h</td>
+<td>16%</td>
+</tr>
+<tr>
+<td>V</td>
+<td>13–15</td>
+<td>8,0 km/h</td>
+<td>18%</td>
+</tr>
+<tr>
+<td>VI</td>
+<td>16–18</td>
+<td>8,8 km/h</td>
+<td>20%</td>
+</tr>
+</tbody>
+</table>
+<p>A estimativa apresentada é <strong>VO₂máx = 14,8 − 1,379T + 0,451T² − 0,012T³</strong>, com T em minutos decimais. <strong>9 min 15 s = 9,25 min</strong>, não 9,15.</p>
+<p>Também aparecem equações lineares identificadas por H, M e jovens: <strong>2,94T + 7,65</strong>; <strong>2,94T + 3,74</strong>; <strong>3,62T + 3,91</strong>. Não são especificadas todas as condições de aplicação; confirmar a população/equação no ficheiro de apoio, sem escolher arbitrariamente entre resultados.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-11-03">11.3. Cooper e milha</h3>
+<p><strong>Cooper:</strong> distância em metros percorrida em <strong>12 minutos</strong>. Fórmula dos slides: <strong>VO₂máx = 0,02283 × distância − 11,3</strong>, em mL/kg/min. Exemplo aritmético: 2400 m dão aproximadamente <strong>43,5 mL/kg/min</strong>.</p>
+<p><strong>Milha:</strong> os slides descrevem 1600 m a correr no menor tempo e apresentam <strong>132,853 − 0,1692 × peso(kg) − 0,3887 × idade − 0,1565 × FC + 6,315 × género</strong>, codificando mulher 0 e homem 1, com registo da FC no último minuto.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção:</strong> a expressão da milha não contém tempo de prova e a apresentação separa depois a milha a andar/Rockport. Sem o Excel, não é possível resolver a correspondência protocolo–equação nem confirmar a fórmula completa. Mantém-se a expressão da fonte para identificação, sem a recomendar como cálculo validado.</p></div>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-11-04">11.4. McArdle/Queens College</h3>
+<p>O quadro da p. 23 indica <strong>3 minutos</strong>, banco de <strong>41,3 cm</strong>, cadência de <strong>24 passos/min para homens</strong> e <strong>22 para mulheres</strong>, e registo de FC de pé durante 15 segundos no final.</p>
+<p>Equações inscritas: homens, <strong>111,33 − 0,42 × FC</strong>; mulheres, <strong>65,81 − 0,1847 × FC</strong>. O resultado é relativo, em mL/kg/min. A FC entra em <strong>batimentos/min</strong>, não no número bruto contado durante 15 segundos.</p>
+<p>O quadro não esclarece todos os detalhes da janela de recuperação nem como designa o ciclo de passos; é necessário conferir a demonstração e o protocolo de apoio antes de o aplicar.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-11-05">11.5. Åstrand em cicloergómetro</h3>
+<p>Os slides referem patamar de <strong>6 minutos</strong>, objetivo de <strong>125–170 bpm no 6.º minuto</strong>, carga escolhida segundo sexo e condição e média da FC no final do 5.º e 6.º minutos, seguida de leitura no nomograma com correção etária.</p>
+<p>As páginas de complemento não são totalmente uniformes na descrição de como aplicar a correção de idade. É necessário o nomograma/Excel correto; não criar um fator nem corrigir duas vezes.</p>
+<p class="study-source">Fonte: Aula 2, pp. 18 e 21–27. Valores transcritos dos quadros e imagens do PDF.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Bruce é progressivo em passadeira.</li><li>Cooper mede distância em 12 minutos.</li><li>A milha e a correção de Åstrand exigem confirmação no apoio em falta.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque deve 9 min 15 s entrar como 9,25 numa equação?</p><details><summary>Ver resposta de referência</summary><p>Os segundos são uma fração de minuto: 15/60 = 0,25. Usar 9,15 altera o tempo e o resultado.</p></details></div></section>
+<section id="s12" class="study-card study-section"><span class="pill">Tema 12</span><h2>12. Frequência cardíaca e zonas de treino</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Karvonen utiliza a reserva cardíaca, não apenas uma percentagem da FC máxima.</p></div><div class="study-subcard"><h3 id="fe-detail-12-01">12.1. Estimar FC máxima e medir repouso</h3>
+<p>A equação de Tanaka apresentada é <strong>FCmáx = 208 − 0,70 × idade</strong>. É uma estimativa, não uma medição da FC máxima individual.</p>
+<p>A FC de repouso pode ser medida por palpação, conforme a prática indicada na aula. Registar as condições e usar uma janela de contagem conhecida; contagem em 15 s multiplicada por 4 converte para bpm, mas erros de contagem também são multiplicados.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-12-02">12.2. Karvonen</h3>
+<p><strong>FC de reserva = FCmáx − FCrepouso.</strong></p>
+<p><strong>FC-alvo = FC de reserva × intensidade + FCrepouso.</strong></p>
+<p>Usar a intensidade em decimal: 40% = 0,40. Os exercícios da aula pedem cálculos a 40, 50, 60, 70 e 80%.</p>
+<p><strong>Exemplo aritmético:</strong> adulto de 30 anos, FCrepouso 60. Tanaka: 208 − 21 = <strong>187 bpm</strong>. Reserva: 187 − 60 = <strong>127 bpm</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Percentagem da reserva</th>
+<th style="text-align: right;">FC-alvo aproximada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40%</td>
+<td style="text-align: right;">111 bpm</td>
+</tr>
+<tr>
+<td>50%</td>
+<td style="text-align: right;">124 bpm</td>
+</tr>
+<tr>
+<td>60%</td>
+<td style="text-align: right;">136 bpm</td>
+</tr>
+<tr>
+<td>70%</td>
+<td style="text-align: right;">149 bpm</td>
+</tr>
+<tr>
+<td>80%</td>
+<td style="text-align: right;">162 bpm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-12-03">12.3. Erros de interpretação</h3>
+<p><strong>70% da FCmáx não é 70% da FC de reserva.</strong> No exemplo, 0,70 × 187 = 131 bpm, enquanto Karvonen dá cerca de 149 bpm. É preciso identificar a base da percentagem.</p>
+<p>A relação FC–VO₂ sustenta o uso da FC, mas fatores individuais e condições do teste influenciam a resposta. Os materiais sublinham que <strong>não é apropriado aplicar automaticamente fórmulas de FC máxima às crianças</strong>, dadas as variações interindividuais.</p>
+<p>Uma zona calculada deve ser articulada com objetivo, avaliação, PSE e resposta real; o cálculo sozinho não demonstra que a sessão é adequada.</p>
+<p class="study-source">Fonte: Aula 2, pp. 8–9, 17 e 23; Aula 6, p. 6.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Tanaka: 208 − 0,70 × idade.</li><li>Reserva = FCmáx − FCrepouso.</li><li>FC-alvo = reserva × intensidade + repouso.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque diferem 70% da FC máxima e 70% por Karvonen?</p><details><summary>Ver resposta de referência</summary><p>Karvonen aplica a percentagem à diferença entre máxima e repouso e volta a somar o repouso; a base do cálculo é diferente.</p></details></div></section>
+<section id="s13" class="study-card study-section"><span class="pill">Tema 13</span><h2>13. Organização neuromuscular e contração</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A contração liga comando nervoso, cálcio, filamentos e ATP.</p></div><div class="study-subcard"><h3 id="fe-detail-13-01">13.1. Sistema nervoso e estrutura muscular</h3>
+<p>O <strong>SNC</strong> compreende encéfalo e medula; o <strong>SNP</strong> estabelece ligações sensitivas e motoras. Os esquemas distinguem componente somática e autónoma, e nesta última simpático e parassimpático.</p>
+<p>A organização contrátil segue músculo → fascículos → fibras → miofibrilhas → sarcómeros. <strong>Epimísio</strong> envolve o músculo; <strong>perimísio</strong>, o fascículo; <strong>endomísio</strong>, cada fibra. Sarcolema é a membrana da fibra; sarcoplasma é o seu conteúdo; túbulos T e retículo sarcoplasmático participam no acoplamento entre excitação e contração.</p>
+<p><strong>Unidade motora:</strong> motoneurónio e conjunto de fibras que inerva. Não confundir unidade motora com sarcómero: uma é uma unidade de controlo nervoso, o outro uma unidade contrátil das miofibrilhas.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-13-02">13.2. Do impulso ao deslizamento</h3>
+<ol>
+<li>Um comando nervoso chega pelo motoneurónio à junção neuromuscular.</li>
+<li>A acetilcolina liga-se a recetores da fibra e inicia a resposta elétrica.</li>
+<li>O potencial de ação propaga-se pelo sarcolema e túbulos T.</li>
+<li>O retículo sarcoplasmático liberta Ca²⁺.</li>
+<li>O cálcio liga-se à troponina; a alteração desloca a tropomiosina e expõe locais da actina.</li>
+<li>Cabeças de miosina formam pontes cruzadas com actina e o ciclo dependente de ATP permite o deslizamento.</li>
+<li>A remoção do Ca²⁺ para o retículo permite terminar a ativação e relaxar.</li>
+</ol>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção à redação do slide:</strong> na etapa 10 da Aula 4, p. 7, aparece «cabeças de actina», enquanto a etapa 9 identifica cabeças de miosina. A sequência acima explicita a coerência com a estrutura apresentada, assinalando a troca de termos.</p></div>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-13-03">13.3. ATP e relaxamento</h3>
+<p>A necessidade de ATP não se resume a «encurtar»: a contração envolve ciclos de pontes e mecanismos de reposição iónica. Como explicação de apoio, o ATP participa na separação das pontes e no bombeamento de cálcio. Por isso, controlo nervoso, cálcio e disponibilidade energética devem ser estudados em conjunto.</p>
+<p class="study-source">Fonte: Aula 1, p. 46; Aula 4, pp. 4–8.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Unidade motora é motoneurónio mais fibras inervadas.</li><li>Ca²⁺ liga-se à troponina.</li><li>As pontes entre miosina e actina participam no deslizamento.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como permite o cálcio iniciar a interação dos filamentos?</p><details><summary>Ver resposta de referência</summary><p>Ao ligar-se à troponina, modifica a posição da tropomiosina e expõe locais da actina para as cabeças de miosina.</p></details></div></section>
+<section id="s14" class="study-card study-section"><span class="pill">Tema 14</span><h2>14. Fibras, recrutamento e proprioceção</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A produção de força depende do recrutamento, frequência e informação sensorial.</p></div><div class="study-subcard"><h3 id="fe-detail-14-01">14.1. Tipos de fibras</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Tipo I</th>
+<th>Tipo IIa</th>
+<th>Tipo IIx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocidade</td>
+<td>Lenta</td>
+<td>Rápida</td>
+<td>Rápida</td>
+</tr>
+<tr>
+<td>Perfil relativo</td>
+<td>Mais oxidativo e resistente à fadiga</td>
+<td>Oxidativo-glicolítico</td>
+<td>Mais glicolítico e fatigável</td>
+</tr>
+<tr>
+<td>Mioglobina, capilares e mitocôndrias</td>
+<td>Elevados</td>
+<td>Intermédios em relação aos extremos</td>
+<td>Menores</td>
+</tr>
+<tr>
+<td>Solicitação ilustrativa</td>
+<td>Esforço continuado</td>
+<td>Tarefas intensas com repetição</td>
+<td>Esforços muito rápidos/intensos</td>
+</tr>
+</tbody>
+</table>
+<p>O quadro das aulas compara sobretudo I e II: maior força por área, ATPase e velocidade no grupo II; maior resistência, densidade capilar e mitocondrial no I. Não significa que uma atividade use exclusivamente um tipo.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-14-02">14.2. Princípio do tamanho e tudo ou nada</h3>
+<p>Pelo <strong>princípio do tamanho de Henneman</strong>, unidades com menor limiar são recrutadas antes das de maior limiar à medida que cresce a exigência. Mais força requer aumento do recrutamento e/ou da frequência de ativação.</p>
+<p>A <strong>lei do tudo ou nada</strong> aplica-se à ativação da unidade motora: atingido o limiar, as fibras dessa unidade são ativadas; abaixo dele, não. Não significa que todo o músculo só tenha dois níveis de força.</p>
+<p><strong>Somação temporal:</strong> aumentar a frequência de estimulação permite somação mecânica da força. <strong>Somação espacial/recrutamento — apoio:</strong> aumentar o número de unidades ativas.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-14-03">14.3. Propriocetores e recetores</h3>
+<table>
+<thead>
+<tr>
+<th>Estrutura</th>
+<th>Informação/resposta destacada nos slides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuso neuromuscular, FNM</td>
+<td>Em paralelo com fibras; responde ao alongamento, sobretudo rápido, e participa no reflexo miotático de contração</td>
+</tr>
+<tr>
+<td>Órgão tendinoso de Golgi, OTG</td>
+<td>Associado ao tendão; sensível à tensão; apresentado com resposta inibitória/protetora e facilitação do antagonista</td>
+</tr>
+<tr>
+<td>Corpúsculos de Pacini</td>
+<td>Sensíveis a alterações rápidas, pressão, aceleração e impacto</td>
+</tr>
+<tr>
+<td>Terminações de Ruffini</td>
+<td>Informação sustentada de posição e estiramento de tecidos e cápsulas</td>
+</tr>
+</tbody>
+</table>
+<p>Os reflexos são apresentados de forma simplificada. Importa saber distinguir <strong>alongamento/velocidade de mudança</strong> de <strong>tensão</strong> e compreender que o controlo do movimento integra informação aferente e resposta eferente.</p>
+<p class="study-source">Fonte: Aula 4, pp. 8–13 e 17; Aula 1, p. 83.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Tipo I é relativamente mais oxidativo e resistente.</li><li>O recrutamento segue o princípio do tamanho.</li><li>Tudo ou nada aplica-se à unidade motora, não ao músculo inteiro.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como pode um músculo graduar força se existe tudo ou nada?</p><details><summary>Ver resposta de referência</summary><p>Variando o número de unidades recrutadas e a frequência de ativação. Cada unidade tem um limiar, mas o músculo integra muitas unidades.</p></details></div></section>
+<section id="s15" class="study-card study-section"><span class="pill">Tema 15</span><h2>15. Força, mecânica e ciclo alongamento–encurtamento</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Força máxima, rapidez, resistência e potência são manifestações diferentes.</p></div><div class="study-subcard"><h3 id="fe-detail-15-01">15.1. Tipos de ação muscular</h3>
+<p><strong>Concêntrica:</strong> músculo ativo encurta. <strong>Excêntrica:</strong> músculo ativo alonga sob tensão. <strong>Isométrica:</strong> produção de força sem alteração observável do ângulo da tarefa. Estas definições de apoio tornam mais precisa a descrição dos slides por aproximação/afastamento dos segmentos.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-15-02">15.2. Manifestações da força</h3>
+<ul>
+<li><strong>Força máxima:</strong> maior força que o sistema neuromuscular consegue produzir; os slides descrevem-na contra resistência inamovível e como base de outras manifestações.</li>
+<li><strong>Força rápida:</strong> produzir elevado impulso num intervalo de tempo disponível.</li>
+<li><strong>Força resistente:</strong> manter produção de força e atrasar a fadiga em esforços repetidos ou prolongados.</li>
+<li><strong>Força explosiva/taxa de produção de força:</strong> rapidez com que a força aumenta; como clarificação de apoio, relaciona-se com ΔF/Δt.</li>
+<li><strong>Potência:</strong> trabalho por unidade de tempo, <strong>P = W/t</strong>, ou <strong>P = F × velocidade</strong>.</li>
+<li><strong>Força reativa:</strong> aproveitar uma fase excêntrica imediatamente anterior à concêntrica.</li>
+</ul>
+<p><strong>Não confundir:</strong> impulso relaciona força e tempo; potência relaciona trabalho e tempo ou força e velocidade; taxa de produção de força é a subida da força no tempo. A expressão da aula que define taxa de produção de força como «trabalho máximo no intervalo mais curto» sobrepõe conceitos e merece confirmação.</p>
+<p>Para uma força constante, <strong>impulso = força × intervalo de tempo</strong>; se a força varia, esta multiplicação simples não descreve toda a evolução. Esta distinção ajuda a perceber porque força rápida, força máxima e potência não são sinónimos.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-15-03">15.3. Relações força–comprimento e força–velocidade</h3>
+<p>A força ativa depende da relação entre os filamentos e do comprimento muscular. O gráfico separa <strong>tensão ativa</strong>, <strong>passiva</strong> e <strong>total</strong>. Com o alongamento, componentes passivos podem aumentar a tensão total mesmo quando a contribuição ativa deixa de ser máxima. Maior tensão total não significa automaticamente melhor posição para produzir força ativa.</p>
+<p>Na curva força–velocidade, aumentar a velocidade concêntrica associa-se a menor força disponível; a relação excêntrica é diferente e permite resistir a cargas superiores em certas condições. A potência resulta da combinação força–velocidade, não apenas de levantar mais peso ou mover mais depressa isoladamente.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-15-04">15.4. Ciclo muscular alongamento–encurtamento</h3>
+<p>O <strong>CMAE</strong> associa alongamento ativo/excêntrico a encurtamento concêntrico rápido. Os slides destacam energia elástica, pré-ativação e recrutamento/reflexos. A transição curta é importante para aproveitar a ação anterior.</p>
+<p>Exemplo de apoio: um salto com contramovimento integra descida e impulsão; uma pausa longa modifica o aproveitamento do ciclo. O exercício exige técnica, capacidade de suportar carga e progressão.</p>
+<p class="study-source">Fonte: Aula 4, pp. 13–20. As distinções entre potência e taxa de força são clarificações de apoio às definições dos slides.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Potência = trabalho/tempo ou força × velocidade.</li><li>Tensão total inclui componentes ativos e passivos.</li><li>CMAE liga uma fase excêntrica a uma concêntrica rápida.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não é potência o mesmo que força máxima?</p><details><summary>Ver resposta de referência</summary><p>Potência inclui a velocidade de realização do trabalho; uma grande força sem deslocamento rápido não representa automaticamente grande potência.</p></details></div></section>
+<section id="s16" class="study-card study-section"><span class="pill">Tema 16</span><h2>16. Adaptações neurais, hipertrofia e princípios do treino</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Ganhos de força incluem adaptações neurais e alterações estruturais.</p></div><div class="study-subcard"><h3 id="fe-detail-16-01">16.1. Fatores que determinam força</h3>
+<p>Os materiais organizam-nos em musculares, nervosos e biomecânicos. Incluem área de secção transversal, tipo de fibra, ângulo de penação, tipo de ação, relações força–comprimento/velocidade, unidades motoras recrutadas, frequência e sincronização, informação sensorial, alavancas e tipo de resistência externa.</p>
+<p><strong>Coordenação intramuscular:</strong> organização do recrutamento e frequência dentro do músculo. <strong>Intermuscular:</strong> articulação entre agonistas, antagonistas, sinergistas e estabilizadores, incluindo coativação e inibição recíproca.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-16-02">16.2. Especificidade e sobrecarga</h3>
+<p><strong>Especificidade:</strong> diferentes estímulos geram adaptações específicas. As variáveis do treino devem corresponder à capacidade e tarefa pretendidas.</p>
+<p><strong>Sobrecarga:</strong> aplicar exigência superior à habitual, com progressão adequada. Os slides destacam volume, como duração e repetições, e intensidade, como resistência externa ou velocidade no trabalho cardiorrespiratório.</p>
+<p>Não basta variar exercícios ao acaso. O estímulo deve ser suficiente para adaptar e compatível com a recuperação; aumentar volume e intensidade simultaneamente pode alterar muito a dose.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-16-03">16.3. Adaptações iniciais e remodelação</h3>
+<p>As primeiras melhorias de força são apresentadas como predominantemente neurais: recrutamento, frequência de disparo, sincronização e redução de sinais inibitórios. A Aula 4 refere alterações musculares mais evidentes <strong>após cerca de 8 semanas</strong>; é uma referência didática e não uma fronteira rígida sem sobreposição.</p>
+<p><strong>Hipertrofia:</strong> aumento da dimensão muscular e das fibras, com adição de proteínas miofibrilhares e miofibrilhas. Os slides referem participação de mionúcleos e maior expressão nas fibras II.</p>
+<p><strong>Hiperplasia:</strong> aumento do número de fibras; os próprios materiais dizem existir pouca evidência em humanos e mantêm a hipertrofia como principal explicação do aumento de dimensão.</p>
+<p>O balanço entre síntese e degradação proteica participa na remodelação. Um ganho inicial de força pode ocorrer sem grande aumento visível de massa; inversamente, dor intensa não demonstra que se está a produzir mais hipertrofia.</p>
+<p class="study-source">Fonte: Aula 4, pp. 10 e 16–24.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Especificidade relaciona estímulo e resultado.</li><li>Sobrecarga deve ser compatível com recuperação.</li><li>Hipertrofia aumenta dimensão; hiperplasia refere número de fibras.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque pode aumentar a força antes de grande mudança de massa?</p><details><summary>Ver resposta de referência</summary><p>As adaptações iniciais incluem melhor recrutamento, frequência e coordenação, pelo que a força não depende apenas da dimensão muscular.</p></details></div></section>
+<section id="s17" class="study-card study-section"><span class="pill">Tema 17</span><h2>17. Fadiga, SRDM, sobretreino e recuperação</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A fadiga é multifatorial e a recuperação participa na adaptação.</p></div><div class="study-subcard"><h3 id="fe-detail-17-01">17.1. Conceito e causas</h3>
+<p><strong>Fadiga:</strong> incapacidade de continuar uma tarefa à intensidade requerida ou diminuição do desempenho durante esforço continuado. É multifatorial: não pode ser reduzida a «ácido lático».</p>
+<p><strong>Central:</strong> relacionada com comando nervoso, frequência de ativação, potencial de ação, neurotransmissores e fatores psicológicos. <strong>Periférica:</strong> alterações locais metabólicas, excitabilidade da fibra, cálcio, troponina e interação actina–miosina. Os slides também incluem fatores cardiorrespiratórios, termorregulação e tolerância ao desconforto.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-17-02">17.2. Classificações da aula</h3>
+<table>
+<thead>
+<tr>
+<th>Perspetiva</th>
+<th>Categorias e exemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Momento/contexto</td>
+<td>Aguda na sessão; por sobrecarga acumulada entre sessões; muscular após esforço; crónica associada a desequilíbrio prolongado</td>
+</tr>
+<tr>
+<td>Local predominante</td>
+<td>Central e periférica</td>
+</tr>
+</tbody>
+</table>
+<p>As categorias podem coexistir: não são explicações mutuamente exclusivas nem diagnósticos obtidos por um único sintoma.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-17-03">17.3. Sensação retardada de dor/desconforto muscular</h3>
+<p><strong>SRDM/DOMS:</strong> desconforto tardio que pode tornar-se mais intenso nas <strong>12–72 horas após esforço</strong>, segundo os slides, especialmente perante estímulos novos e componente excêntrica.</p>
+<p>O modelo apresentado envolve stress mecânico, alterações miofibrilhares, resposta inflamatória local, edema e ativação de nociceptores. Distinguir esta resposta de desconforto imediato durante o exercício. Os materiais de bioenergética também esclarecem que lactato não explica a dor tardia.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção:</strong> a aula relaciona repetição excessiva de SRDM com sobretreino e lesão. Isso não torna cada episódio de dor um diagnóstico de sobretreino, nem demonstra que dor seja condição necessária para adaptação.</p></div>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-17-04">17.4. Sobretreino, sobreuso e prevenção</h3>
+<p><strong>Sobretreino:</strong> a apresentação associa-o a recuperação insuficiente, grandes volumes e redução persistente de rendimento. <strong>Sobreuso — apoio conceptual:</strong> sobrecarga repetida de estruturas sem tolerância/recuperação suficiente; não é sinónimo de fadiga numa sessão.</p>
+<p>Medidas referidas: avaliação inicial competente; individualidade e progressão; controlo de volume e ações excêntricas; planeamento da recuperação; mobilidade e alongamento adequados; reposição energética, hídrica e eletrolítica com apoio apropriado.</p>
+<p>Observar tendências de rendimento, resposta ao esforço e recuperação, sem diagnosticar a causa a partir de um sinal isolado. Se uma tarefa de Localizada leva precocemente à falência, analisar carga relativa, cadência, duração, pausas, experiência e recuperação antes de aumentar o estímulo.</p>
+<p class="study-source">Fonte: Aula 4, pp. 24–28; Aula 1, pp. 32–36 e 56; Aula 7, p. 3.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Distinguir central de periférica.</li><li>SRDM é desconforto tardio e não acumulação de lactato.</li><li>Dor isolada não diagnostica sobretreino.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não basta atribuir fadiga precoce ao lactato?</p><details><summary>Ver resposta de referência</summary><p>A tarefa pode ser limitada por fatores neurais, contráteis, energéticos, cardiovasculares, térmicos ou de organização da carga e recuperação.</p></details></div></section>
+<section id="s18" class="study-card study-section"><span class="pill">Tema 18</span><h2>18. Regulação endócrina do esforço</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>As hormonas coordenam disponibilidade energética, crescimento e equilíbrio interno.</p></div><div class="study-subcard"><h3 id="fe-detail-18-01">18.1. Comunicação e feedback</h3>
+<p>O sistema neuroendócrino integra glândulas e hormonas que modificam a atividade de órgãos e células-alvo. O exercício funciona como estímulo mecânico, nervoso e hormonal.</p>
+<ul>
+<li><strong>Endócrina:</strong> sinal transportado pela circulação.</li>
+<li><strong>Parácrina:</strong> ação sobre células próximas.</li>
+<li><strong>Autócrina:</strong> ação sobre a própria célula que libertou o sinal.</li>
+</ul>
+<p><strong>Feedback negativo:</strong> a resposta reduz a necessidade de continuar a secreção. <strong>Positivo:</strong> a resposta reforça a estimulação. Os slides também referem mecanismos múltiplos e redundantes.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-18-02">18.2. Glicemia e substratos</h3>
+<p>Durante esforço, a manutenção da glicemia exige coordenação entre utilização muscular e disponibilização de substratos. Os slides destacam glucagon, catecolaminas, glicogenólise e contribuição do lactato para produção de glicose.</p>
+<p>A ativação simpática pode reduzir a insulina circulante no modelo da aula, enquanto aumenta a mobilização energética. Catecolaminas, glucagon, hormona de crescimento e cortisol são relacionados com disponibilização/utilização de ácidos gordos. Não confundir redução aguda de insulina durante esforço com resistência crónica à insulina.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-18-03">18.3. Hormonas e força</h3>
+<table>
+<thead>
+<tr>
+<th>Hormona</th>
+<th>Origem/função destacada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Testosterona</td>
+<td>Gónadas; participação na regulação da massa muscular e resposta anabólica</td>
+</tr>
+<tr>
+<td>Hormona de crescimento, GH/HC</td>
+<td>Adeno-hipófise; crescimento e mobilização de lípidos</td>
+</tr>
+<tr>
+<td>IGF-1</td>
+<td>Fígado e músculo; participação na sinalização anabólica</td>
+</tr>
+<tr>
+<td>Cortisol</td>
+<td>Supra-renais; mobilização energética, catabolismo proteico e ação anti-inflamatória</td>
+</tr>
+<tr>
+<td>Catecolaminas</td>
+<td>Resposta simpática, mobilização de substratos e resposta ao esforço</td>
+</tr>
+</tbody>
+</table>
+<p>Os slides associam maior resposta de cortisol a sessões exigentes, volume elevado, grandes grupos musculares e pausas inferiores a 1 minuto. Um pico hormonal agudo não permite, sozinho, prever a hipertrofia ou diagnosticar sobretreino.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-18-04">18.4. Plasma e adaptações crónicas</h3>
+<p>O exercício e a sudorese alteram os compartimentos de fluidos. <strong>ADH/hormona antidiurética</strong> participa na conservação renal de água. A <strong>aldosterona</strong> é relacionada nos slides com retenção e manutenção circulatória; como clarificação de apoio, distinguir a sua ação na conservação de sódio/água da descrição genérica de «vasoconstritor» do diapositivo.</p>
+<p>Com treino, os materiais descrevem alterações nas catecolaminas, cortisol e aldosterona dependentes da carga e ambiente e melhoria da sensibilidade à insulina após exercício. Valores de cortisol de repouso elevados em contexto de grande carga são um possível sinal a contextualizar, não um diagnóstico autónomo.</p>
+<p>Menopausa, andropausa, diabetes, síndrome metabólica e anabolizantes são exemplos de relevância do sistema endócrino citados na abertura; as aulas não fornecem protocolos clínicos de intervenção nestas situações.</p>
+<p class="study-source">Fonte: Aula 5, pp. 2–6.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Distinguir ação endócrina, parácrina e autócrina.</li><li>Insulina e glucagon participam na gestão de substratos.</li><li>ADH e aldosterona participam na conservação de fluidos.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não demonstra um pico hormonal, sozinho, maior hipertrofia?</p><details><summary>Ver resposta de referência</summary><p>A adaptação depende da integração do treino e recuperação. Uma resposta aguda não substitui a observação das mudanças crónicas.</p></details></div></section>
+<section id="s19" class="study-card study-section"><span class="pill">Tema 19</span><h2>19. Criança e jovem: respostas e adaptações</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A criança requer adaptação à maturação e não uma redução automática do treino adulto.</p></div><div class="study-subcard"><h3 id="fe-detail-19-01">19.1. Crescimento e maturação</h3>
+<p>Crianças não são adultos em miniatura. As diferenças incluem dimensões corporais, maturação hormonal e osteoarticular, composição corporal, sistemas muscular e cardiorrespiratório e fatores psicológicos. Idade cronológica, por si só, não descreve toda a capacidade.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-19-02">19.2. Resposta cardiorrespiratória e metabólica</h3>
+<p>Os materiais apresentam menor consumo absoluto de O₂, em parte pela menor massa isenta de gordura, mas consumo relativo <strong>10–30% superior em determinadas tarefas submáximas</strong>. Relacionam menor economia com passada, eficiência ventilatória e proporção superfície/massa; não extrapolar a percentagem a todas as atividades.</p>
+<p>Corações e volumes sistólicos menores são compensados parcialmente por FC mais elevada. A aula destaca grande variabilidade e rejeita aplicar automaticamente fórmulas adultas de FCmáx. A recuperação é proposta como variável de observação da aptidão.</p>
+<p>Descreve-se menor capacidade glicolítica e desempenho anaeróbio diferente do adulto. <strong>Atenção:</strong> a Aula 6, p. 5, também afirma «maiores lactatémias para a mesma intensidade», sem esclarecer se a comparação é absoluta ou relativa. Não deduzir uma regra geral a partir desta formulação.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-19-03">19.3. Força e variedade motora</h3>
+<p>O treino de força é apresentado como importante quando ajustado à maturação e capacidade, com peso corporal ou outros meios adequados, cooperação e socialização. Antes da puberdade, os ganhos são relacionados sobretudo com adaptações neurais: recrutamento, frequência e sincronização.</p>
+<p>A referência de <strong>cerca de 30% de aumento de força em 8–12 semanas em não treinados</strong> é um exemplo dos slides, não uma meta universal. A programação deve oferecer variedade de atividades e evitar especialização precoce excessiva e sobreuso.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-19-04">19.4. Termorregulação</h3>
+<p>A maior relação superfície/massa influencia as trocas de calor. Em água mais fria que o corpo, podem ocorrer perdas relevantes, sobretudo nas pausas. Os materiais destacam menor reserva muscular de água e atenção à hidratação, roupa, temperatura, humidade e vento.</p>
+<p><strong>Aplicação:</strong> adequar linguagem, duração, exigência e observação à criança; não transpor diretamente um teste ou uma carga calculada para adultos.</p>
+<p class="study-source">Fonte: Aula 6, pp. 3–6; Aula 7, p. 10.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Dimensão corporal altera a interpretação do VO₂.</li><li>Ganhos de força iniciais têm forte componente neural.</li><li>Promover variedade e ajustar esforço e ambiente.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque não usar automaticamente fórmulas adultas de FCmáx?</p><details><summary>Ver resposta de referência</summary><p>Os materiais destacam variação interindividual e respostas próprias da criança; a transposição pode não caracterizar adequadamente a intensidade.</p></details></div></section>
+<section id="s20" class="study-card study-section"><span class="pill">Tema 20</span><h2>20. Adulto e idoso: envelhecimento e treino</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Envelhecimento e desuso interagem, com grande variabilidade entre pessoas.</p></div><div class="study-subcard"><h3 id="fe-detail-20-01">20.1. Variabilidade e sistema osteoarticular</h3>
+<p>O envelhecimento é heterogéneo: pessoas da mesma idade podem ter capacidades muito diferentes. Os materiais referem redução da densidade mineral óssea, agravamento após menopausa, osteopénia, osteoporose e osteoartrite, com consequências para autonomia e risco de fratura.</p>
+<p>A aula cita perda de DMO na ordem de <strong>1% a partir dos 40–50 anos</strong>, mas não esclarece nessa frase a unidade temporal. Também apresenta fraturas relacionadas com osteoporose em <strong>50% das mulheres e 12% dos homens acima de 50 anos</strong>, sem desenvolver o horizonte temporal. São números da fonte, não estimativas individualizadas.</p>
+<p>O treino com carga pode ajudar a preservar osso e músculo. A escolha de impacto, carga e movimentos depende da avaliação e condição; os exemplos de corrida ou saltos dos slides não são adequados automaticamente a todas as pessoas. Os materiais alertam para flexão excessiva da coluna associada a rotação em contextos de fragilidade e para adaptar atividades na osteoartrite.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-20-02">20.2. Sistema cardiorrespiratório</h3>
+<p>Os slides descrevem redução de capacidade aeróbia e FCmáx, alterações de débito e extração periférica, rigidez arterial e mudanças da mecânica ventilatória. O treino aeróbio é relacionado com melhoria de VO₂, VS, FC submáxima e rigidez arterial; o treino de força e aeróbio com melhor sensibilidade à insulina.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção aos números:</strong> a Aula 6, p. 8, escreve «VO₂máx reduz 30–40%/década» e «fração de ejeção desce 85% dos 30 aos 90 anos». São formulações que exigem confirmação do formador; não devem ser usadas como regras quantitativas de envelhecimento. A referência de melhoria de VO₂ em cerca de <strong>16%</strong> é também um exemplo, dependente do programa e da pessoa.</p></div>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-20-03">20.3. Músculo e termorregulação</h3>
+<p>Os materiais associam envelhecimento a perda de massa e força, redução de fibras sobretudo rápidas, alterações nervosas e menor síntese proteica. Citam <strong>1–3 kg de massa muscular por década após os 40 anos</strong>. Relacionam sarcopenia com prejuízo funcional e destacam o papel do desuso.</p>
+<p>O treino de força estimula síntese e manutenção muscular; o treino aeróbio e a atividade regular também apoiam função. É necessário ajustar carga e progressão, evitando tratar a idade como incapacidade absoluta.</p>
+<p>A redução de água corporal e alterações na sudorese aumentam a importância de observar condições ambientais e recuperação. O plano deve integrar força, capacidade aeróbia e controlo funcional com adaptações individuais.</p>
+<p class="study-source">Fonte: Aula 6, pp. 7–10.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Individualizar em vez de decidir apenas pela idade.</li><li>Força e exercício aeróbio podem apoiar a função.</li><li>Os números contraditórios do envelhecimento estão assinalados.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Porque é importante separar idade de capacidade funcional?</p><details><summary>Ver resposta de referência</summary><p>O envelhecimento é heterogéneo e o nível de atividade e condição modificam a resposta; pessoas da mesma idade podem necessitar de cargas e adaptações diferentes.</p></details></div></section>
+<section id="s21" class="study-card study-section"><span class="pill">Tema 21</span><h2>21. Termorregulação, água e eletrólitos</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Temperatura, água e circulação condicionam a capacidade de manter o esforço.</p></div><div class="study-subcard"><h3 id="fe-detail-21-01">21.1. Controlo térmico</h3>
+<p>Os humanos mantêm a temperatura central dentro de limites relativamente estáveis. Os slides apresentam <strong>36,1–37,8 °C</strong> como referência e o <strong>hipotálamo</strong> como centro regulador, com informação de recetores centrais e periféricos.</p>
+<p>Com calor: vasodilatação cutânea, maior sudorese e alterações de tónus/atividade. Com frio: vasoconstrição periférica, tremores e respostas hormonais que favorecem produção ou conservação de calor.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-21-02">21.2. Trocas com o ambiente</h3>
+<p>O esquema identifica <strong>radiação, condução, convecção e evaporação</strong>. Como explicação de apoio: radiação transfere energia sem contacto; condução envolve contacto; convecção envolve movimento de ar ou água; evaporação retira calor ao transformar suor em vapor.</p>
+<p>A aula destaca evaporação como principal mecanismo de perda de calor no exercício. Suar e evaporar não são a mesma coisa: a eficácia depende das condições ambientais. A roupa, vento, humidade e temperatura influenciam a resposta.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-21-03">21.3. Compartimentos e perdas</h3>
+<p>Referências dos materiais: água em cerca de <strong>60% da massa corporal</strong>, <strong>75% da massa isenta de gordura</strong> e <strong>menos de 25% da massa gorda</strong>. Eletrólitos como sódio e potássio participam na distribuição dos fluidos e função celular; o suor também contém eletrólitos.</p>
+<p>São referidas perdas diárias na ordem de <strong>2,5 L</strong> através de urina, fezes, pele e respiração. A redação mistura sudorese basal e perdas de esforço; este valor não constitui uma dose de reposição igual para todos.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-21-04">21.4. Desidratação e circulação</h3>
+<p>Os slides relacionam perdas de cerca de <strong>2% da massa corporal</strong> com prejuízo de desempenho e <strong>4–5%</strong> com comprometimento cardiovascular mais marcado. A redução de plasma pode prejudicar VS e termorregulação e aumentar a exigência para manter o esforço.</p>
+<p><strong>Exemplo de cálculo:</strong> 2% de 70 kg = <strong>1,4 kg</strong> de variação de massa. É uma relação aritmética, não prova de que toda a mudança de peso numa sessão seja água.</p>
+<div class="study-caution"><span class="study-label">Atenção às fontes</span><p><strong>Atenção:</strong> o exemplo da Aula 7, p. 9, associa 4–5% do peso a «2,5–3,5 L/h» num homem de 70 kg. Percentagem de perda acumulada e taxa por hora são grandezas diferentes e não podem ser equiparadas sem duração. O mesmo slide refere queda de volémia de <strong>7–10%</strong> por redistribuição, mesmo sem desidratação externa.</p></div>
+<p>Os materiais dizem que a sede pode surgir depois de iniciada a perda de água e que a reposição pode ser lenta, citando <strong>60–70% de reposição em 3 h</strong> num exemplo geral. Não apresentam um esquema individual em mL/kg ou por hora; não é possível derivá-lo desses números.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-21-05">21.5. Aclimatização e aplicação</h3>
+<p>Adaptações apresentadas: expansão plasmática, melhor conservação de líquidos, maior VS, menor FC para exigência comparável, início da sudorese a temperaturas inferiores e suor mais hipotónico, poupando sal.</p>
+<p>O planeamento deve considerar duração, ambiente, acesso a líquidos e pausas, com atenção acrescida às crianças e idosos. O exemplo da aula permite integrar os sistemas: ao perder água, não muda apenas a sede; alteram-se circulação, controlo térmico e capacidade de sustentar o trabalho.</p>
+<p class="study-source">Fonte: Aula 7, pp. 4–10; Aula 5, p. 5.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Hipotálamo coordena respostas ao calor e frio.</li><li>Evaporação é destacada no exercício.</li><li>Perda percentual e taxa de perda por hora são diferentes.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como relacionar desidratação com esforço cardiovascular?</p><details><summary>Ver resposta de referência</summary><p>Menor disponibilidade de plasma e necessidade de dissipar calor podem comprometer VS e manutenção do esforço; o fenómeno integra circulação e termorregulação.</p></details></div></section>
+<section id="s22" class="study-card study-section"><span class="pill">Tema 22</span><h2>22. Aplicação integrada e avaliação da UC</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>A avaliação exige explicar uma unidade de treino com os conceitos fisiológicos.</p></div><div class="study-subcard"><h3 id="fe-detail-22-01">22.1. Como analisar uma unidade de treino</h3>
+<p>O objetivo é relacionar fisiologia e tarefa real. Uma análise completa identifica o público, objetivos, duração, intensidade, organização e recuperações; explica os sistemas energéticos predominantes e as suas transições; prevê respostas agudas e adaptações crónicas; relaciona fibras, manifestações de força e fadiga; integra hormonas, calor e hidratação; e escolhe variáveis para monitorizar.</p>
+<p><strong>Exemplo de apoio — Cycling de 45 minutos:</strong> não basta escrever «é aeróbio». Importa analisar aquecimento, fases intensas, recuperações e retorno à calma. O aluno inexperiente pode trabalhar a maior intensidade relativa, ter menor eficiência e tolerância muscular e acumular fadiga mais cedo. FC, PSE, carga, cadência e qualidade de execução ajudam a ajustar o estímulo. Não é possível identificar uma causa única de fadiga sem observação.</p>
+<p><strong>Exemplo — evolução numa corrida:</strong> a melhoria após meses pode envolver aumento da capacidade oxidativa e capilarização, adaptações circulatórias, utilização de substratos e coordenação/economia. A conclusão deve apoiar-se na evolução das variáveis, não apenas no facto de terminar uma prova.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-22-02">22.2. Formato de avaliação indicado</h3>
+<p>A Aula 1, pp. 11–13, descreve <strong>trabalho em pares</strong>, sobre uma <strong>unidade de treino</strong>, e não um gesto motor isolado. Prevê desenvolvimento a partir da 4.ª aula, com 30 minutos finais de trabalho acompanhado.</p>
+<p>Entrega descrita: documento <strong>PDF com máximo de 2 páginas</strong>, enviado por um elemento ao docente <strong>até ao final do dia anterior à apresentação</strong>. Apresentação oral em pares de cerca de <strong>15–20 minutos</strong>, seguida de discussão/defesa.</p>
+<p>Devem integrar-se sistemas e vias energéticas, adaptações agudas/crónicas, manifestações de força, fadiga, fibras, termorregulação e funções endócrinas. O critério destacado é <strong>domínio dos conceitos aplicados à atividade</strong>; os slides dizem que trabalhos sem esse domínio não têm aproveitamento. Classificação mínima indicada: <strong>9,5 valores</strong>. Não é indicada nestas páginas uma ponderação percentual a acrescentar ao resumo.</p>
+<p>As referências a envio de email e trabalho de grupo descrevem a avaliação; não são ações executadas pela app.</p>
+</div>
+<div class="study-subcard"><h3 id="fe-detail-22-03">22.3. O que os ficheiros não permitem fechar</h3>
+<p>Não foi fornecida Lista de Saberes autónoma, o Excel de protocolos/nomogramas e tabelas de aptidão, nem os questionários citados. Há tópicos respiratórios apenas enunciados e fórmulas/valores inconsistentes que estão assinalados nos respetivos temas.</p>
+<p>Em particular, confirmar fórmula da milha, população das equações de Bruce, correção etária de Åstrand, alguns números do envelhecimento e contabilizações energéticas. O quadro de aminoácidos da Aula 4, p. 31, refere «8 essenciais» e o resumo não o utiliza como lista atualizada de nutrição.</p>
+<p>A revisão cobre os temas e exemplos dos sete PDF, sem certificar cobertura integral de uma Lista de Saberes ausente nem prever perguntas de avaliação.</p>
+<p class="study-source">Fonte: Aula 1, pp. 7–18; Aula 4, p. 29; Aula 5, pp. 7–8; Aula 6, pp. 3 e 10; Aula 7, pp. 3 e 7.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Trabalho em pares sobre unidade de treino.</li><li>Documento até 2 páginas e apresentação de 15–20 minutos.</li><li>Justificar relações e reconhecer limitações das fontes.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>O que falta numa análise que apenas chama aeróbia a uma aula?</p><details><summary>Ver resposta de referência</summary><p>Falta caracterizar variações de intensidade, recuperações, sistemas complementares, respostas agudas e crónicas, força, fadiga, hormonas e controlo térmico.</p></details></div></section>
+</div></main>
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe">
+<div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+<a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-calendar-days"></i><span class="font-bold text-[10px]">Agenda</span></a>
+<a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center text-blue-600 dark:text-blue-400"><i class="fa-solid fa-book-open-reader"></i><span class="font-bold text-[10px]">Estudo</span></a>
+<a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-graduation-cap"></i><span class="font-bold text-[10px]">Curso</span></a>
+</div>
+</nav>
+
+
+<script src="../assets/study.js" defer></script>
+</body></html>

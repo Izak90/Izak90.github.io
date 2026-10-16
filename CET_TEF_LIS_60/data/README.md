@@ -9,6 +9,7 @@ Cada UC contém:
 - `summary`, `training`, `simulator`, `workbook`: URLs relativos à raiz (`./...html`) ou null.
 - `difficulties`: lista de `{id, label, bank}`; id easy/medium/hard, rótulo pt-PT e URL do JSON. Lista vazia quando não há banco nativo.
 - `trainer`, `driveUrl`, `asynchronousClass`: metadata existente ou null.
+- `resultsPdf`: campo opcional com caminho local `./...pdf` da pauta final (ou null). Aparece na secção Curso, na lista geral e filtrada, como «Pauta final (PDF)», em novo separador. Preservar o PDF original e incluí-lo no precache.
 - `sourceStatus.materials`: linked_not_imported — referências dos materiais existem, mas os originais não estão neste checkout.
 - `sourceStatus.coverage`: declared_audit / not_audited / source_reviewed — declaração legada, ausência de auditoria ou revisão documentada dos originais. PEVS, PEDEx e CF usam source_reviewed com evidência em docs/PEVS_COVERAGE.md, docs/PEDEX_COVERAGE.md e docs/CF_COVERAGE.md; não significa certificação externa.
 - `sourceStatus.workbook`: transcribed_unverified_key / no_exercises_reported — questões transcritas com chave inferida ou ausência reportada de exercícios Workbook.

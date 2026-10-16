@@ -1,8 +1,25 @@
 const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 const api=require('../assets/uc-registry.js');const registry=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/ucs.json'),'utf8'));
-test('registo contém 27 UCs, 4 nativas, 17 Workbook e 10 bancos',()=>{assert.deepEqual(api.validate(registry),[]);assert.equal(registry.ucs.length,27);assert.equal(registry.ucs.filter(u=>u.summary).length,4);assert.equal(registry.ucs.filter(u=>u.workbook).length,17);assert.equal(registry.ucs.flatMap(u=>u.difficulties).length,10);});
+test('registo contém 27 UCs, 6 resumos, 17 Workbook e 10 bancos',()=>{assert.deepEqual(api.validate(registry),[]);assert.equal(registry.ucs.length,27);assert.equal(registry.ucs.filter(u=>u.summary).length,6);assert.equal(registry.ucs.filter(u=>u.workbook).length,17);assert.equal(registry.ucs.flatMap(u=>u.difficulties).length,10);});
 test('metadados anteriores preservados com estudo nativo de Psicologia',()=>{const old=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/p2-legacy-metadata.json'),'utf8'));// Atualizações já existentes no registo: formador e aula assíncrona de Psicologia.
-Object.assign(old.moduleConfig['Psicologia do Exercício'],{trainer:'Rui Branco',asynchronousClass:'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-6-2-4/'});for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Psicologia do Exercício']=`./centro_estudo/psiex_${suffix}.html`;assert.deepEqual(api.toMaps(registry),old);});
+Object.assign(old.moduleConfig['Psicologia do Exercício'],{trainer:'Rui Branco',asynchronousClass:'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-6-2-4/'});for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Psicologia do Exercício']=`./centro_estudo/psiex_${suffix}.html`;
+old.studyCenterUrls['Aulas de Grupo']='./centro_estudo/ag_resumo.html';
+old.studyCenterUrls['Fisiologia do Exercício']='./centro_estudo/fe_resumo.html';
+old.moduleConfig['Aulas de Grupo'].trainer='António Silva, Orlanda Máximo, David Brás, e Paulo Fischer';
+old.moduleConfig['Coaching no Fitness'].trainer='Ricardo Costa e Hugo Zegre';
+old.moduleConfig['Fisiologia do Exercício'].trainer='Gonçalo Vicente e João Martins';
+old.moduleConfig['Coaching no Fitness'].resultsPdf='./data/pautas/PautaFinal_CF_CET_LIS_60.pdf';
+old.moduleConfig['Promoção de Estilos de Vida Saudável'].resultsPdf='./data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf';
+assert.deepEqual(api.toMaps(registry),old);});
+
+test('pauta opcional aceita PDF local e rejeita URLs injetados, externos e caminhos fora da raiz',()=>{
+ for(const value of ['https://example.com/pauta.pdf','javascript:alert(1)','./data/../pauta.pdf','./data/pauta.html','./data/pauta.pdf" onclick="x','./data/pauta.pdf?x=1']){
+  const d=structuredClone(registry);d.ucs[0].resultsPdf=value;assert.ok(api.validate(d).some(e=>e.includes('resultsPdf')),value);
+ }
+ for(const value of [undefined,null,'./data/pautas/PautaFinal_CF_CET_LIS_60.pdf']){
+  const d=structuredClone(registry);d.ucs[0].resultsPdf=value;assert.deepEqual(api.validate(d),[]);
+ }
+});
 for(const [label,change] of [
  ['slug repetido',d=>d.ucs[1].slug=d.ucs[0].slug],['título repetido',d=>d.ucs[1].title=d.ucs[0].title],['ordem repetida',d=>d.ucs[1].order=d.ucs[0].order],['URL externo no resumo',d=>d.ucs[0].summary='https://example.com/file.html'],['JSON no resumo',d=>d.ucs[0].summary='./data/file.json'],['dificuldade repetida',d=>d.ucs[0].difficulties.push(d.ucs[0].difficulties[0])],['dificuldade desconhecida',d=>d.ucs[0].difficulties[0].id='very_hard'],['fontes desconhecidas',d=>d.ucs[0].sourceStatus.coverage='official'],['item inválido',d=>d.ucs[0]=null]
 ])test(label,()=>{const d=structuredClone(registry);change(d);assert.ok(api.validate(d).length);assert.throws(()=>api.toMaps(d));});
@@ -18,7 +35,8 @@ test('validador deteta caminhos, schema, bancos omitidos e registo fora do preca
  fs.writeFileSync(path.join(tmp,'data/ucs.json'),'null');assert.ok(validateRepository(tmp).errors.some(e=>e.code==='registry-schema'));
  const write=d=>fs.writeFileSync(path.join(tmp,'data/ucs.json'),JSON.stringify(d));
  let d=structuredClone(registry);d.ucs[0].summary='./centro_estudo/missing.html';write(d);assert.ok(validateRepository(tmp).errors.some(e=>e.code==='local-path'));
+ d=structuredClone(registry);d.ucs[0].resultsPdf='./data/pautas/missing.pdf';write(d);assert.ok(validateRepository(tmp).errors.some(e=>e.code==='local-path'));
  d=structuredClone(registry);d.ucs[1].slug=d.ucs[0].slug;write(d);assert.ok(validateRepository(tmp).errors.some(e=>e.code==='registry-schema'));
  d=structuredClone(registry);d.ucs[0].difficulties.pop();write(d);assert.ok(validateRepository(tmp).errors.some(e=>e.code==='registry-bank'));
- write(registry);fs.writeFileSync(path.join(tmp,'sw.js'),fs.readFileSync(path.join(tmp,'sw.js'),'utf8').replace("  './data/ucs.json',",''));assert.ok(validateRepository(tmp).errors.some(e=>e.code==='precache-coverage'&&e.message.includes('data/ucs.json')));
+ write(registry);fs.writeFileSync(path.join(tmp,'sw.js'),fs.readFileSync(path.join(tmp,'sw.js'),'utf8').replace("  './data/ucs.json',",'').replace("  './data/pautas/PautaFinal_CF_CET_LIS_60.pdf',",''));assert.ok(validateRepository(tmp).errors.some(e=>e.code==='precache-coverage'&&e.message.includes('data/ucs.json')));assert.ok(validateRepository(tmp).errors.some(e=>e.code==='precache-coverage'&&e.message.includes('PautaFinal_CF')));
 });

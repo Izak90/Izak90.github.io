@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v23';
+const CACHE_NAME = 'cet-tef-v26';
 
 const CORE_URLS = [
   './',
@@ -13,6 +13,8 @@ const OPTIONAL_URLS = [
 
   // Design partilhado do Centro de Estudo
   './data/ucs.json',
+  './data/pautas/PautaFinal_CF_CET_LIS_60.pdf',
+  './data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf',
   './assets/uc-registry.js',
   './assets/app.css',
   './assets/study.css',
@@ -65,6 +67,12 @@ const OPTIONAL_URLS = [
   './centro_estudo/cf_banco_80_perguntas.json',
   './centro_estudo/cf_banco_80_perguntas_medio.json',
   './centro_estudo/cf_banco_80_perguntas_dificil.json',
+
+  // Centro de Estudo — Fisiologia do Exercício
+  './centro_estudo/fe_resumo.html',
+
+  // Centro de Estudo — Aulas de Grupo
+  './centro_estudo/ag_resumo.html',
 
   // Centro de Estudo — Psicologia do Exercício
   './centro_estudo/psiex_resumo.html',

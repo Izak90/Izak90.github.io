@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Resumo — Aulas de Grupo</title>
+<meta id="theme-color-meta" name="theme-color" content="#090d16">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/study.css">
+</head>
+<body class="bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 min-h-screen pb-28">
+
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 pt-safe">
+<div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+<a href="../index.html#estudo" class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-1.5 shrink-0">
+<img src="https://www.grupo-academy.pt/wp-content/uploads/2022/11/Logo-Grupo-A.png" alt="Academy" class="w-full h-full object-contain">
+</div>
+<div class="min-w-0"><h1 class="font-black text-base leading-none truncate">CET_TEF_LIS_60</h1><p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 truncate">Aulas de Grupo</p></div>
+</a>
+<button aria-label="Alternar modo escuro ou claro" onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><i id="theme-icon" class="fa-solid fa-sun text-amber-400 text-xs"></i></button>
+</div>
+</header>
+
+<div id="uc-local-nav" class="sticky z-30 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+<div class="max-w-2xl mx-auto px-4 py-2.5">
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<a href="ag_resumo.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center"><i class="fa-solid fa-book-open-reader mr-1"></i>Resumo</a>
+<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-brain mr-1"></i>Treino</span>
+<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-vial-circle-check mr-1"></i>Simulações</span>
+</div>
+</div>
+</div>
+
+
+<nav id="topic-nav" class="sticky z-20 bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-2xl mx-auto px-4 py-2 flex items-center gap-1.5">
+        <button id="nav-scroll-left"
+                type="button"
+                onclick="scrollStudyNav(-1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a esquerda">
+            <i class="fa-solid fa-chevron-left text-[9px]"></i>
+        </button>
+
+        <div id="study-nav-scroll"
+             class="flex-1 min-w-0 flex gap-1.5 overflow-x-auto hide-scrollbar text-[10px] scroll-smooth"
+             ><a href="#s1" data-section="s1" title="1. Finalidade e princípios das aulas de grupo" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">1. Princípios</a><a href="#s2" data-section="s2" title="2. Planeamento e estrutura da aula" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">2. Estrutura</a><a href="#s3" data-section="s3" title="3. Música e ritmo" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">3. Música</a><a href="#s4" data-section="s4" title="4. Step" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">4. Step</a><a href="#s5" data-section="s5" title="5. Sequências e montagem coreográfica" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">5. Coreografia</a><a href="#s6" data-section="s6" title="6. Ginástica Aeróbica" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">6. Aeróbica</a><a href="#s7" data-section="s7" title="7. Intensidade, complexidade e controlo do esforço" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">7. Esforço</a><a href="#s8" data-section="s8" title="8. Instrução, comunicação e liderança" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">8. Comunicação</a><a href="#s9" data-section="s9" title="9. Ginástica Localizada" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">9. Localizada</a><a href="#s10" data-section="s10" title="10. Bases do movimento" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">10. Movimento</a><a href="#s11" data-section="s11" title="11. Indoor Cycling" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">11. Cycling</a><a href="#s12" data-section="s12" title="12. Competência digital" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">12. Digital</a><a href="#s13" data-section="s13" title="13. Avaliação prática, contínua e entre pares" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">13. Avaliação</a><a href="#s14" data-section="s14" title="14. Ética, atitudes e atuação profissional" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">14. Ética</a><a href="#s15" data-section="s15" title="15. Revisão prática integrada" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">15. Prática</a><a href="#s16" data-section="s16" title="16. Pontos que exigem confirmação nos materiais práticos" class="study-nav rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 whitespace-nowrap shrink-0">16. Fontes</a></div>
+
+        <button id="nav-scroll-right"
+                type="button"
+                onclick="scrollStudyNav(1)"
+                class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 touch-active disabled:opacity-30"
+                aria-label="Deslocar temas para a direita">
+            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+        </button>
+    </div>
+</nav>
+
+<main class="max-w-2xl mx-auto px-4 pt-3 pb-safe">
+<section class="study-card mb-5"><span class="pill">Resumo detalhado · 16 temas</span><h2>Aulas de Grupo</h2><p><strong>UC: Criar e desenvolver programas de exercício físico para atividades em grupo</strong></p><p>Base de estudo: <em>Slides_Aulas de Grupo.pdf</em> (97 páginas; data indicada: 11/03/2026) e <em>Lista de saberes — AG.pdf</em> (5 páginas). As referências «p.» remetem para as páginas do PDF dos slides, que contém habitualmente dois diapositivos por página.</p>
+<p>Este resumo organiza os conhecimentos, as aptidões e as atitudes da Lista de Saberes. Mantém a terminologia e os valores dos materiais. As passagens assinaladas como <strong>explicação de apoio</strong> desenvolvem conceitos apenas nomeados nos documentos; não são transcrições nem regras adicionais atribuídas ao formador. Quando falta informação necessária para conhecer o procedimento específico da UC, essa limitação é indicada.</p><p class="study-source">Fontes: Slides_Aulas de Grupo.pdf, 97 páginas; Lista de saberes - AG.pdf, 5 páginas.</p></section>
+<section class="study-card mb-5"><h2>Pontos-chave que tens mesmo de saber</h2><p>Dominar música e ritmo; construir sequências simétricas e fluidas; executar Step, Aeróbica, Localizada e Cycling com segurança; adaptar intensidade e complexidade; comunicar, observar e corrigir; conhecer os critérios da avaliação prática.</p></section>
+<div class="space-y-6">
+<section id="s1" class="study-card study-section"><span class="pill">Tema 1</span><h2>1. Finalidade e princípios das aulas de grupo</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Combinar segurança, eficácia e acessibilidade, respeitando simetria, perna pronta e fluidez.</p></div><div class="study-subcard"><p>Uma aula de grupo é uma sessão de exercício orientada por um instrutor, com objetivos, organização e progressão ajustados a vários participantes. A condução coletiva deve permitir adaptações individuais.</p>
+<p>No final da UC, é necessário saber elaborar propostas, organizar e executar os principais tipos de aula e avaliar as atividades realizadas. Isso implica planear para um público concreto, conduzir com segurança, comunicar e motivar, utilizar progressões e regressões e avaliar continuamente a sessão (p. 3–5).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-01-01">1.1. Segurança, eficácia e acessibilidade</h3>
+<p>Os slides apresentam três características essenciais (p. 13–14):</p>
+<ul>
+<li><strong>Segurança:</strong> respeitar as regras técnicas e de utilização do material e prevenir lesões. Os materiais relacionam menor ocorrência de lesões com maior retenção dos praticantes.</li>
+<li><strong>Eficácia:</strong> a aula deve produzir o estímulo correspondente aos seus objetivos. No Step e na Aeróbica, os slides destacam o trabalho na zona-alvo de treino.</li>
+<li><strong>Acessibilidade:</strong> adaptar a aula à turma para permitir sucesso. A adaptação deve conservar um estímulo eficaz.</li>
+</ul>
+<p>Uma sequência difícil que a maioria dos alunos não consegue acompanhar compromete a acessibilidade. Um exercício facilmente acompanhado, mas sem estímulo suficiente para o objetivo, compromete a eficácia. Em ambos os casos, o instrutor deve ajustar o planeamento.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-01-02">1.2. Princípios orientadores</h3>
+<p><strong>Simetria:</strong> realizar trabalho equivalente à direita e à esquerda. Verifica-se no conjunto da sequência e da aula, incluindo repetições, duração, deslocamentos e exigência dos movimentos (p. 23–24).</p>
+<p><strong>Sistema da perna pronta:</strong> respeitar o padrão motor e a essência do movimento. A ligação entre passos deve deixar disponível a perna necessária para iniciar o passo seguinte, sem introduzir apoios artificiais que alterem esse padrão (p. 24; última frase como explicação de apoio).</p>
+<p><strong>Fluidez:</strong> construir transições contínuas, reduzindo paragens desnecessárias. O grupo deve compreender o que vem a seguir e conseguir passar de um movimento para outro (p. 25).</p>
+<p><strong>Musicalidade:</strong> reconhecer a estrutura da música e relacioná-la com o movimento, os comandos e as mudanças de exercício. A segurança e a qualidade técnica devem continuar a orientar a escolha da velocidade e da dificuldade.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Adaptar ao público sem perder o objetivo.</li><li>Trabalhar ambos os lados.</li><li>Ligar movimentos com fluidez.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Adaptar ao público sem perder o objetivo. Trabalhar ambos os lados. Ligar movimentos com fluidez.</p></details></div></section>
+<section id="s2" class="study-card study-section"><span class="pill">Tema 2</span><h2>2. Planeamento e estrutura da aula</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Organizar apresentação, aquecimento, parte fundamental, retorno à calma e encerramento.</p></div><div class="study-subcard"><h3 id="ag-detail-02-01">2.1. O que planear</h3>
+<p>O planeamento deve articular público-alvo, objetivos, modalidade, duração, exercícios, música, material e estratégias de ensino. Deve prever alternativas para capacidades e limitações diferentes (p. 3–5 e Lista de Saberes).</p>
+<p><strong>Aplicação prática:</strong> antes da sessão, identificar novos participantes, experiência prévia, nível de aptidão e necessidades relevantes; verificar o espaço e o equipamento; escolher exercícios e transições; definir como demonstrar, observar e corrigir. Durante a aula, ajustar o plano à resposta real do grupo.</p>
+<p>Um plano útil regista:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>O que deve ficar definido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Público e objetivo</td>
+<td>Para quem é a aula e o que pretende desenvolver</td>
+</tr>
+<tr>
+<td>Fases e tempos</td>
+<td>Duração de cada fase, incluindo transições</td>
+</tr>
+<tr>
+<td>Exercícios e sequências</td>
+<td>Ordem, liderança, organização e progressão</td>
+</tr>
+<tr>
+<td>Dose de trabalho</td>
+<td>Repetições, séries, duração, carga e recuperação, conforme a modalidade</td>
+</tr>
+<tr>
+<td>Música</td>
+<td>BPM, frases, cadências e adequação ao público</td>
+</tr>
+<tr>
+<td>Ensino</td>
+<td>Método de montagem, comandos e pontos técnicos</td>
+</tr>
+<tr>
+<td>Adaptações</td>
+<td>Opções de menor e maior exigência</td>
+</tr>
+<tr>
+<td>Avaliação</td>
+<td>O que observar e como ajustar</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-02">2.2. Estrutura geral</h3>
+<p>Os slides distinguem cinco momentos (p. 15–21):</p>
+<ol>
+<li>Apresentação ou primeiro contacto.</li>
+<li>Aquecimento.</li>
+<li>Parte fundamental ou principal.</li>
+<li>Retorno à calma.</li>
+<li>Alongamentos e encerramento.</li>
+</ol>
+<p>Os tempos apresentados são referências dos materiais; devem ser articulados com a duração efetiva da sessão. Não se deve somar automaticamente todos os valores máximos e assumir uma duração universal.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-03">2.3. Apresentação — referência de 5 minutos</h3>
+<p>Apresentar o instrutor aos novos alunos, explicar a estratégia da aula e o material utilizado e promover a integração e o espírito de grupo. Este contacto também permite reconhecer participantes que necessitem de maior acompanhamento.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-04">2.4. Aquecimento — referência de 5 a 10 minutos</h3>
+<p>É a transição para o esforço da parte fundamental. Prepara os sistemas cardiovascular, neuromuscular e energético através de atividade de intensidade leve a moderada (p. 16–19).</p>
+<p>Os materiais atribuem-lhe os seguintes efeitos:</p>
+<ul>
+<li>Aumento da temperatura corporal e muscular.</li>
+<li>Subida gradual da frequência cardíaca, volume sistólico, débito cardíaco, fluxo sanguíneo e frequência respiratória.</li>
+<li>Maior distribuição de sangue e transporte de oxigénio para os músculos ativos.</li>
+<li>Aceleração do metabolismo da glicose e dos ácidos gordos.</li>
+<li>Melhoria da transmissão dos impulsos nervosos e da coordenação.</li>
+<li>Aumento da força e velocidade de contração e da extensibilidade dos tecidos.</li>
+<li>Diminuição da viscosidade dos tecidos e aumento da produção de líquido sinovial.</li>
+<li>Preparação articular, melhoria da amplitude e redução do risco de lesões agudas.</li>
+</ul>
+<p>O valor de <strong>cerca de 13% de aumento do metabolismo celular por cada grau de aumento da temperatura</strong> é apresentado na p. 17. Deve ser reconhecido como valor ensinado nos slides, sem o transformar numa regra de cálculo individual de esforço.</p>
+<p><strong>Como organizar:</strong> começar com movimentos simples, baixa complexidade, pequena amplitude, intensidade baixa e velocidade reduzida; aumentar gradualmente os parâmetros. Utilizar grandes grupos musculares, sobretudo dos membros inferiores.</p>
+<p><strong>Tipos de movimentos:</strong></p>
+<ul>
+<li>Globais: solicitam grandes massas musculares.</li>
+<li>De ensaio: antecipam exercícios da parte fundamental, com menor intensidade.</li>
+</ul>
+<p>Os exercícios podem ser apresentados livremente ou em coreografia; os slides referem os métodos Associativo e Pirâmide no aquecimento coreografado.</p>
+<p><strong>Alongamentos no aquecimento:</strong> os slides indicam que os alongamentos não são eficazes para elevar a temperatura e colocam-nos no final da aula. Esta indicação não elimina a mobilidade articular dinâmica: na Localizada, os próprios materiais incluem exercícios dinâmicos e mobilidade no aquecimento específico (p. 52).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-05">2.5. Parte fundamental — referência geral de 40 minutos</h3>
+<p>Desenvolve os objetivos da sessão. Exige escolha da ordem dos exercícios e controlo da intensidade, volume e complexidade. O instrutor deve observar se os participantes acompanham a proposta com qualidade e ajustar o estímulo (p. 19).</p>
+<p>Na p. 20, as orientações apresentadas para o trabalho aeróbio são:</p>
+<ul>
+<li>Intensidade: <strong>50% a 85%</strong>, com referência à fórmula de Karvonen.</li>
+<li>Frequência: <strong>3 a 5 vezes por semana</strong>.</li>
+<li>Duração: <strong>20 a 45 minutos</strong>.</li>
+</ul>
+<p>São valores de estudo destes materiais, não uma indicação de que todos os participantes devam realizar a mesma dose.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-06">2.6. Retorno à calma — referência de 5 minutos</h3>
+<p>Reduzir progressivamente a intensidade, a frequência cardíaca e a frequência respiratória, usando movimentos menos exigentes e técnicas de respiração. Os slides associam esta fase à facilitação do retorno venoso, remoção de produtos metabólicos e diminuição da tensão muscular (p. 20).</p>
+<p>A expressão dos slides «50% ou menos da FC esforço» não identifica claramente a base desse cálculo. Deve ser retida com essa limitação; não deve ser convertida automaticamente em 50% da FC máxima ou da reserva cardíaca.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-02-07">2.7. Alongamentos e encerramento — referência de 5 minutos</h3>
+<p>Os materiais associam esta fase à melhoria da postura, alívio de dor e prevenção de lesões. São objetivos enunciados nos slides, sem garantia de efeito em cada participante. Encerrar inclui agradecer o empenho, orientar a arrumação e divulgar outras modalidades ou eventos relevantes (p. 21).</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Preparar gradualmente para o esforço.</li><li>Planear exercícios e transições.</li><li>Reduzir progressivamente a intensidade no final.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Preparar gradualmente para o esforço. Planear exercícios e transições. Reduzir progressivamente a intensidade no final.</p></details></div></section>
+<section id="s3" class="study-card study-section"><span class="pill">Tema 3</span><h2>3. Música e ritmo</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Relacionar pulsação, compasso, oitos e frases com o movimento e os comandos.</p></div><div class="study-subcard"><h3 id="ag-detail-03-01">3.1. Conceitos fundamentais</h3>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Definição nos materiais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tempo musical</td>
+<td>Batida sentida na música; distinguem-se tempos fortes e fracos</td>
+</tr>
+<tr>
+<td>Compasso quaternário</td>
+<td>Quatro tempos: 1.º forte, 2.º fraco, 3.º meio forte e 4.º fraco</td>
+</tr>
+<tr>
+<td>Oito musical</td>
+<td>Dois compassos quaternários: 8 tempos</td>
+</tr>
+<tr>
+<td>Frase musical</td>
+<td>Quatro oitos: 32 tempos</td>
+</tr>
+<tr>
+<td>BPM</td>
+<td>Batidas por minuto; medida da velocidade musical</td>
+</tr>
+</tbody>
+</table>
+<p>A frase pode ser reconhecida por uma entrada forte, mudança de instrumento ou voz, melodia e complemento ou repetição de um refrão. É necessário ouvir e identificar estes sinais, além de contar (p. 10–12).</p>
+<p><strong>Contagem:</strong> 1–8 constitui um oito; quatro grupos de oito constituem uma frase de 32 tempos. Ao mudar de exercício na estrutura musical, preparar o comando antes do início da nova frase.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-03-02">3.2. Determinar BPM</h3>
+<p>O procedimento dos slides é contar as batidas durante <strong>15 segundos e multiplicar por 4</strong>. Exemplo: 32 batidas em 15 segundos correspondem a 128 BPM.</p>
+<table>
+<thead>
+<tr>
+<th>Modalidade</th>
+<th>Referência dos slides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step</td>
+<td>135 BPM</td>
+</tr>
+<tr>
+<td>Ginástica Localizada</td>
+<td>110–135 BPM; posteriormente recomenda-se 128 BPM para a organização temporal</td>
+</tr>
+<tr>
+<td>Ginástica Aeróbica</td>
+<td>140–150 BPM</td>
+</tr>
+</tbody>
+</table>
+<p>Estas referências devem ser relacionadas com a execução e a segurança. Uma música demasiado rápida pode dificultar a aprendizagem, reduzir a amplitude e prejudicar o controlo postural.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-03-03">3.3. Seleção musical e motivação</h3>
+<p>A Lista de Saberes pede identificação de estilos adequados. Os slides não estabelecem uma correspondência obrigatória entre géneros musicais e modalidades. A seleção deve considerar público-alvo, preferências, objetivo, velocidade, clareza da pulsação e estrutura da aula. No Cycling, deve acompanhar o perfil do treino e pode utilizar ou não a métrica musical (p. 79).</p>
+<p>A música ajuda a sincronizar o grupo, criar energia e motivação, controlar a velocidade, organizar repetições e pausas e encadear exercícios. Na Localizada, permite continuar a dar feedback sem perder a contagem (p. 63).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-03-04">3.4. Tempo musical e duração</h3>
+<p><strong>Relação aritmética de apoio:</strong> duração em segundos = número de tempos × 60 ÷ BPM.</p>
+<p>A <strong>128 BPM</strong>:</p>
+<ul>
+<li>8 tempos = 3,75 segundos.</li>
+<li>16 tempos = 7,5 segundos.</li>
+<li>32 tempos = 15 segundos.</li>
+<li>64 tempos = 30 segundos.</li>
+<li>4 frases = 128 tempos = 60 segundos.</li>
+</ul>
+<p>Estes tempos mudam se os BPM mudarem. Uma frase de 32 tempos só dura exatamente 15 segundos quando a música tem 128 BPM.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Um oito tem 8 tempos.</li><li>Uma frase tem 32 tempos.</li><li>A 128 BPM, uma frase dura 15 segundos.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Um oito tem 8 tempos. Uma frase tem 32 tempos. A 128 BPM, uma frase dura 15 segundos.</p></details></div></section>
+<section id="s4" class="study-card study-section"><span class="pill">Tema 4</span><h2>4. Step</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Dominar apoios, liderança e regras de segurança na plataforma.</p></div><div class="study-subcard"><h3 id="ag-detail-04-01">4.1. Caracterização e origem</h3>
+<p>O Step utiliza uma plataforma para sequências de subidas, descidas, toques e elevações coordenadas com a música. Nos slides, a sua origem é atribuída a <strong>Gin Miller, em 1989</strong>, a partir de uma experiência de recuperação articular; o desenvolvimento da plataforma é associado à Reebok (p. 25–26).</p>
+<p>A p. 26 apresenta plataformas com <strong>10, 15, 20 e 25 cm</strong>, incluindo valores inscritos na imagem. A altura deve ser escolhida em função do praticante e da regra técnica de flexão do joelho.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-04-02">4.2. Abordagens à plataforma</h3>
+<p>Reconhecer as designações apresentadas: <strong>Frente, Fim, Cavalo, Canto e Top</strong> (p. 27). Correspondem a diferentes relações espaciais com a plataforma; a identificação e execução exatas devem ser treinadas com o esquema e a demonstração das aulas.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-04-03">4.3. Técnica e segurança</h3>
+<p>As oito regras apresentadas nas p. 27–28 são:</p>
+<ol>
+<li>Subir para o centro da plataforma.</li>
+<li>Apoiar completamente o pé na subida; na descida, contactar com a parte anterior do pé e apoiar o calcanhar antes do passo seguinte.</li>
+<li>Escolher uma altura que não exija flexão do joelho superior a <strong>90°</strong> quando suporta o peso corporal.</li>
+<li>Manter os olhos na plataforma.</li>
+<li>Descer perto da plataforma: <strong>não realizar Step a mais de 30 cm</strong> dela.</li>
+<li>Acrescentar braços depois de dominar o trabalho dos pés.</li>
+<li>Não subir nem descer com as costas voltadas para a plataforma.</li>
+<li>Subir suavemente, sem bater com os pés.</li>
+</ol>
+<p>Nos indicadores de avaliação, surge a formulação «não sobe a plataforma de costas e não desce a plataforma de frente» (p. 7). Deve ser articulada com a regra de não ficar de costas para a plataforma: a descida habitual a partir da posição virada para ela faz-se recuando para o solo.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-04-04">4.4. Apoio, toque e liderança</h3>
+<p><strong>Explicação de apoio:</strong> um apoio recebe o peso corporal; um toque contacta a superfície sem uma transferência de peso equivalente. Esta diferença influencia qual a perna disponível para continuar.</p>
+<table>
+<thead>
+<tr>
+<th>Padrão no Step</th>
+<th>Liderança indicada</th>
+<th>Exemplos e duração</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sem toques, com apoios consecutivos alternados</td>
+<td>Simples</td>
+<td>Básico 4T; V 4T; Mambo 4T</td>
+</tr>
+<tr>
+<td>Com toques ou elevações</td>
+<td>Alternada</td>
+<td>Toque em cima 4T; elevação 4T; repetidor de 3 em 8T; repetidor de 7 em 16T</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Liderança simples:</strong> a repetição da unidade mantém a perna de início. <strong>Liderança alternada:</strong> a unidade permite que a repetição seguinte comece pela outra perna. É necessário verificar a liderança na sequência completa: combinar unidades pode voltar a alterar o resultado.</p>
+<p><strong>Descrição de apoio para os passos básicos:</strong> no Básico, subir um pé, subir o outro, descer o primeiro e descer o segundo; no V, os apoios superiores abrem em V e regressam ao solo. Nos movimentos de elevação, distinguir claramente a perna de apoio da que eleva. Os slides nomeiam os passos, mas não descrevem integralmente todas as suas variantes.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-04-05">4.5. Passos regulares e irregulares</h3>
+<p><strong>Regulares:</strong> encaixam no compasso quaternário; os exemplos dos slides têm 4, 8 ou 16 tempos. Incluem Básico, V, Mambo, uma elevação de joelho e repetidores de 3 ou 7.</p>
+<p><strong>Irregulares:</strong> resultam da desmultiplicação de passos regulares e não encaixam diretamente nessa estrutura. Exemplos no Step: <strong>2 elevações = 6T; 4 = 10T; 5 = 12T</strong> (p. 30–31).</p>
+<p>Não transferir automaticamente para o Step a duração de uma elevação realizada na Aeróbica: o padrão e os apoios são diferentes.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Apoiar completamente o pé na subida.</li><li>Respeitar o limite de 90° do joelho indicado nos slides.</li><li>Descer perto da plataforma.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Apoiar completamente o pé na subida. Respeitar o limite de 90° do joelho indicado nos slides. Descer perto da plataforma.</p></details></div></section>
+<section id="s5" class="study-card study-section"><span class="pill">Tema 5</span><h2>5. Sequências e montagem coreográfica</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Construir sequências com dimensão, liderança e transições verificadas.</p></div><div class="study-subcard"><h3 id="ag-detail-05-01">5.1. Dimensão das sequências</h3>
+<p>Na organização apresentada (p. 32):</p>
+<table>
+<thead>
+<tr>
+<th>Unidade</th>
+<th style="text-align: right;">Duração</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elemento</td>
+<td style="text-align: right;">8T</td>
+</tr>
+<tr>
+<td>Segmento</td>
+<td style="text-align: right;">16T</td>
+</tr>
+<tr>
+<td>Frase</td>
+<td style="text-align: right;">32T</td>
+</tr>
+<tr>
+<td>Bloco</td>
+<td style="text-align: right;">64T</td>
+</tr>
+</tbody>
+</table>
+<p>A sequência deve integrar movimentos com ligação lógica, respeitar a música, a simetria, a fluidez, a perna pronta e a capacidade do grupo. Além da liderança e dimensão, é necessário planear os deslocamentos (p. 33).</p>
+<p><strong>Exemplo de contagem, sem constituir uma coreografia obrigatória:</strong> quatro unidades de 8T totalizam uma frase de 32T; duas frases totalizam um bloco de 64T. Depois de contar, verificar a perna de saída e o espaço necessário.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-05-02">5.2. Métodos exigidos pela UC</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de liderança</th>
+<th>Métodos nomeados nos slides e na Lista</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simples</td>
+<td>Associativo; Pirâmide por pares; Pirâmide total</td>
+</tr>
+<tr>
+<td>Alternada</td>
+<td>Adição; Split Pares; Split Total; Split Trios; Espelho</td>
+</tr>
+</tbody>
+</table>
+<p>Os slides <strong>enumeram estes métodos, mas não apresentam os seus algoritmos nem exemplos completos de montagem</strong> (p. 33–35). As explicações seguintes são apoio conceptual; não certificam a sequência de operações ensinada nas aulas práticas.</p>
+<ul>
+<li><strong>Associativo:</strong> associar movimentos aprendidos, construindo uma sequência por ligações sucessivas.</li>
+<li><strong>Pirâmide:</strong> trabalhar com alteração progressiva do número de repetições; habitualmente, partir de mais repetições para menos, até à dimensão pretendida. As variantes «pares» e «total» distinguem a organização da redução por conjuntos ou pelo conjunto global; confirmar a aplicação exata da UC.</li>
+<li><strong>Adição:</strong> acrescentar uma nova unidade ao material já aprendido e voltar a praticar a combinação.</li>
+<li><strong>Split:</strong> dividir ou reduzir unidades previamente aprendidas e reorganizá-las numa sequência. As variantes por pares, total e por trios exigem conhecer quais as unidades agrupadas e a ordem em que são divididas.</li>
+<li><strong>Espelho, como método de montagem:</strong> designação específica incluída nos métodos de liderança alternada. O procedimento não é explicado nos documentos; é necessário recuperar a demonstração da aula. Não o confundir com a representação espelhada do instrutor perante os alunos.</li>
+</ul>
+<p>Para dominar cada método é preciso conseguir demonstrar: sequência inicial, etapas de ensino, número de repetições, ordem final, contagem musical e liderança em cada transição. A mera memorização dos nomes não substitui essa competência.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-05-03">5.3. Estratégias de ensino</h3>
+<p>Os documentos indicam <strong>Adição/Subtração, Insert e Progressões</strong> (p. 36). Como explicação de apoio:</p>
+<ul>
+<li>Adição/subtração: introduzir ou retirar componentes para chegar gradualmente à forma pretendida.</li>
+<li>Insert: inserir uma unidade numa sequência já conhecida; conferir o encaixe temporal e a liderança.</li>
+<li>Progressões: passar de uma versão simples para outra mais exigente, quando existe domínio da anterior.</li>
+</ul>
+<p>A mesma palavra «adição» surge como método de montagem e como estratégia. Deve ser interpretada no contexto usado na aula.</p>
+<p>Uma progressão pedagógica pode começar pelos pés, acrescentar braços e só depois introduzir deslocamento ou mudança de direção. Se o grupo perde o padrão, regressar a uma versão dominada.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Elemento 8T, segmento 16T, frase 32T e bloco 64T.</li><li>Distinguir métodos de liderança simples e alternada.</li><li>Confirmar na prática os algoritmos não descritos.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Elemento 8T, segmento 16T, frase 32T e bloco 64T. Distinguir métodos de liderança simples e alternada. Confirmar na prática os algoritmos não descritos.</p></details></div></section>
+<section id="s6" class="study-card study-section"><span class="pill">Tema 6</span><h2>6. Ginástica Aeróbica</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Executar e combinar os passos de Aeróbica respeitando liderança e estrutura musical.</p></div><div class="study-subcard"><h3 id="ag-detail-06-01">6.1. Caracterização e história</h3>
+<p>A Aeróbica organiza movimentos no solo em sequências ritmadas, com predominância do estímulo cardiorrespiratório. Os slides atribuem a sua criação a <strong>Jacki Sorensen, em 1969</strong>, destacam Jane Fonda nos anos 80 e associam a Aeróbica de baixo impacto a Candice Copeland nos anos 90 (p. 36).</p>
+<p><strong>Explicação de apoio:</strong> baixo impacto mantém pelo menos um pé em contacto com o solo; alto impacto inclui fases sem contacto, como nos saltos. Aumentar o impacto pode aumentar a exigência e requer adequação ao praticante.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-06-02">6.2. Passos e liderança</h3>
+<p><strong>Liderança simples, sem toques e com apoios consecutivos alternados:</strong> Marcha, V, A e Mambo, apresentados com <strong>4T</strong> (p. 37).</p>
+<p><strong>Com toques ou elevações, liderança alternada</strong> (p. 38–39):</p>
+<table>
+<thead>
+<tr>
+<th>Localização do toque/elevação</th>
+<th>Exemplos</th>
+<th style="text-align: right;">Tempos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.º tempo</td>
+<td>Toque à frente, lado ou atrás; joelho; abdução; chuto</td>
+<td style="text-align: right;">2T</td>
+</tr>
+<tr>
+<td>1.º tempo</td>
+<td>Dupla elevação de joelho</td>
+<td style="text-align: right;">4T</td>
+</tr>
+<tr>
+<td>1.º tempo</td>
+<td>Quatro elevações de joelho</td>
+<td style="text-align: right;">8T</td>
+</tr>
+<tr>
+<td>1.º tempo</td>
+<td>Chassé</td>
+<td style="text-align: right;">4T</td>
+</tr>
+<tr>
+<td>1.º tempo</td>
+<td>Balance com tempo 1 em cima</td>
+<td style="text-align: right;">2T</td>
+</tr>
+<tr>
+<td>2.º tempo</td>
+<td>Step-toca, step-joelho, step-cruza</td>
+<td style="text-align: right;">2T</td>
+</tr>
+<tr>
+<td>2.º tempo</td>
+<td>Step duplo joelho / step quatro joelhos</td>
+<td style="text-align: right;">4T / 8T</td>
+</tr>
+<tr>
+<td>2.º tempo</td>
+<td>Balance com tempo 1 em baixo</td>
+<td style="text-align: right;">2T</td>
+</tr>
+<tr>
+<td>4.º tempo</td>
+<td>Passo cruzado/Grapevine</td>
+<td style="text-align: right;">4T</td>
+</tr>
+<tr>
+<td>4.º tempo</td>
+<td>Três marchas em frente e toca</td>
+<td style="text-align: right;">4T</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Descrições de apoio:</strong> Step-toca combina um passo com transferência de peso e um toque do outro pé; o Grapevine combina deslocamento lateral, cruzamento, novo passo lateral e toque; nas três marchas e toque, o último contacto deve distinguir-se dos apoios anteriores.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-06-03">6.3. Regularidade temporal</h3>
+<p>Os slides classificam como regulares: V, A, Mambo, passo cruzado, três marchas e toque, duas elevações e quatro elevações. Como irregulares: Mambo 123, um passo e toca, três e cinco repetidores de joelho (p. 40).</p>
+<p><strong>Atenção:</strong> a classificação é relativa ao encaixe musical, não à dificuldade técnica. Um passo de 2T pode ser classificado como irregular face ao compasso de 4T e ser combinado com outro para completar esse compasso.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Distinguir apoio de toque.</li><li>Reconhecer o momento da elevação.</li><li>Não transpor automaticamente durações do Step.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Distinguir apoio de toque. Reconhecer o momento da elevação. Não transpor automaticamente durações do Step.</p></details></div></section>
+<section id="s7" class="study-card study-section"><span class="pill">Tema 7</span><h2>7. Intensidade, complexidade e controlo do esforço</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Distinguir exigência física de dificuldade coordenativa e ajustar ambas.</p></div><div class="study-subcard"><h3 id="ag-detail-07-01">7.1. Distinguir intensidade de complexidade</h3>
+<p><strong>Intensidade:</strong> exigência física do exercício. <strong>Complexidade:</strong> dificuldade de compreender, coordenar e executar o padrão.</p>
+<table>
+<thead>
+<tr>
+<th>Controlo da intensidade — p. 41</th>
+<th>Controlo da complexidade — p. 41</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seleção dos passos</td>
+<td>Giros</td>
+</tr>
+<tr>
+<td>Utilização dos braços</td>
+<td>Mudanças de direção</td>
+</tr>
+<tr>
+<td>Alto impacto</td>
+<td>Contratempo</td>
+</tr>
+<tr>
+<td>BPM e variações de velocidade</td>
+<td>Combinações coordenativas decorrentes destas alterações</td>
+</tr>
+<tr>
+<td>Contratempo</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O contratempo aparece nos dois domínios nos slides. Uma alteração pode afetar simultaneamente a exigência e a coordenação.</p>
+<p><strong>Aplicação:</strong> um aluno pode suportar o esforço, mas perder-se nas mudanças de direção; simplificar a coreografia. Outro pode executar os passos corretamente e revelar fadiga excessiva; reduzir a exigência física. Adaptar não significa necessariamente alterar tudo ao mesmo tempo.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-07-02">7.2. Fórmula de Karvonen</h3>
+<p>A fórmula da p. 13 organiza a intensidade a partir da reserva cardíaca:</p>
+<p><strong>FC de treino = (FC máxima − FC de repouso) × intensidade + FC de repouso.</strong></p>
+<p>A intensidade entra como fração decimal: 60% = 0,60. A diferença entre FC máxima e FC de repouso é a reserva cardíaca.</p>
+<p><strong>Exemplo aritmético de apoio:</strong> para FC máxima de 190 e FC de repouso de 60, a reserva é 130. A 60%: 130 × 0,60 + 60 = <strong>138 batimentos/minuto</strong>. É um exemplo de cálculo, sem atribuição a um participante real. Os slides não fixam aqui uma fórmula obrigatória para estimar a FC máxima.</p>
+<p>Não confundir <strong>percentagem da reserva cardíaca</strong>, utilizada por Karvonen, com <strong>percentagem da FC máxima</strong>, usada nas tabelas de Cycling. Produzem valores diferentes.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-07-03">7.3. Monitorizar e adaptar</h3>
+<p>Observar a técnica, o acompanhamento da sequência, a fadiga e a resposta ao esforço; recolher feedback e utilizar a frequência cardíaca quando prevista. No Cycling, os slides destacam o monitor de FC, as zonas individuais e a possibilidade de pausa (p. 94–96).</p>
+<p><strong>Aplicação pedagógica:</strong> se a qualidade se deteriora, reduzir carga, impacto, velocidade ou complexidade de acordo com a causa; aumentar a recuperação quando necessário. Os documentos não fornecem uma escala completa de perceção de esforço nem limiares individuais para todos os perfis.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Karvonen usa a reserva cardíaca.</li><li>Giros aumentam a complexidade.</li><li>Observar o esforço e a qualidade técnica.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Karvonen usa a reserva cardíaca. Giros aumentam a complexidade. Observar o esforço e a qualidade técnica.</p></details></div></section>
+<section id="s8" class="study-card study-section"><span class="pill">Tema 8</span><h2>8. Instrução, comunicação e liderança</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Demonstrar, antecipar, observar e corrigir com comunicação clara.</p></div><div class="study-subcard"><h3 id="ag-detail-08-01">8.1. Estilo de ensino por comando</h3>
+<p>O professor demonstra e comunica para que os alunos acompanhem as suas ações. Nos materiais, este é o estilo mais prevalente nas atividades de grupo. A informação verbal e gestual complementa-se; a proporção depende da turma, exercício, instrutor e condições do espaço (p. 53–57).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-08-02">8.2. Comunicação gestual</h3>
+<p>Utiliza braços, mãos, expressões faciais e demonstração para indicar passo, direção e sentido, tempos em falta, regresso ao início, finalização e perna de liderança (p. 42). Na Localizada também demonstra o exercício e reforça a execução correta.</p>
+<p>O gesto deve ser visível e coerente com a informação verbal. A disposição da sala deve permitir ver o instrutor e manter espaço suficiente para os movimentos.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-08-03">8.3. Comunicação verbal e vozes de comando</h3>
+<p>Serve para nomear o passo, explicar, chamar a atenção, contar, indicar direção, liderança e sequência. A voz deve ser <strong>clara, segura, audível e oportuna</strong>, articulada com a música.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de ordem</th>
+<th>Função e exemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Descritiva</td>
+<td>Explicar posição inicial, movimento e pontos críticos; por exemplo, indicar o alinhamento antes de começar</td>
+</tr>
+<tr>
+<td>De reforço</td>
+<td>Sustentar ritmo e execução; os slides incluem «faltam 4…3…2…» e «desce, desce, sobe, sobe»</td>
+</tr>
+<tr>
+<td>Antecipativa</td>
+<td>Anunciar a mudança imediatamente antes de acontecer; por exemplo, «agacha», «rápido», «lento»</td>
+</tr>
+</tbody>
+</table>
+<p>A classificação da contagem como reforço é a usada na p. 54. Na avaliação também se exige contagem decrescente para iniciar movimentos. Na prática, contar e anunciar antecipadamente devem permitir que o aluno entre no momento certo.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-08-04">8.4. Feedback e correção</h3>
+<ul>
+<li><strong>Corretivo:</strong> identifica uma componente técnica a melhorar e indica como a executar.</li>
+<li><strong>Positivo ou valorativo:</strong> reconhece o que foi bem realizado.</li>
+<li><strong>De incentivo:</strong> apoia a persistência e a motivação.</li>
+</ul>
+<p>O feedback deve ser preciso, compreensível e adequado ao que está a acontecer. Os slides recomendam valorizar o correto e, no Cycling, a sequência <strong>positivo → construtivo → positivo</strong> (p. 55–57 e 96).</p>
+<p><strong>Exemplo de apoio:</strong> «Estás a acompanhar bem a cadência; mantém agora os ombros descontraídos; continua com esse controlo.» Depois da indicação, observar se houve melhoria.</p>
+<p>A comunicação cinestésica é nomeada na p. 54, mas não é desenvolvido um procedimento de correção por contacto físico. A sua utilização exige respeito pelo participante e pelos limites profissionais.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-08-05">8.5. Representação espelhada e organização espacial</h3>
+<p>Trabalhar em espelho significa demonstrar de frente para os participantes de modo que possam acompanhar como num espelho. Se o grupo inicia com a direita, o instrutor pode demonstrar com a sua esquerda. É necessário manter coerência entre gesto, indicação verbal e lado do aluno.</p>
+<p>A Lista e a avaliação exigem esta competência. Também é preciso gerir distâncias, deslocamentos, visibilidade e circulação do professor. Não existe nos slides uma distância universal entre alunos para todas as modalidades.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-08-06">8.6. Postura e liderança do instrutor</h3>
+<p>O instrutor é um modelo técnico e comportamental. Deve transmitir empatia, segurança e motivação, manter contacto visual, ouvir o grupo e adaptar a sessão. A aula é treino dos participantes; o professor deve conservar disponibilidade para observar e corrigir, mesmo que isso implique deixar de executar momentaneamente (p. 57 e 94–96).</p>
+<p>Criar um ambiente inclusivo implica tratar os participantes com respeito, oferecer opções sem desvalorizar quem precisa de menor exigência, promover participação e reconhecer progressos.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Combinar gestos e voz.</li><li>Praticar representação espelhada.</li><li>Dar feedback específico e construtivo.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Combinar gestos e voz. Praticar representação espelhada. Dar feedback específico e construtivo.</p></details></div></section>
+<section id="s9" class="study-card study-section"><span class="pill">Tema 9</span><h2>9. Ginástica Localizada</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Planear resistência muscular com carga, postura, amplitude e cadência controladas.</p></div><div class="study-subcard"><h3 id="ag-detail-09-01">9.1. Finalidade, benefícios e variantes</h3>
+<p>É organizada em torno de exercícios de resistência muscular localizada. Os slides associam-lhe melhoria da aptidão funcional, combate à fadiga muscular, aumento da percentagem de massa magra, aceleração metabólica, aumento da densidade óssea e melhoria da absorção de glicose sanguínea (p. 45). Estes benefícios dependem da organização e continuidade do treino.</p>
+<p>Tipos apresentados (p. 47):</p>
+<ul>
+<li><strong>Localizada:</strong> resistência muscular localizada.</li>
+<li><strong>GAP:</strong> glúteos, abdominal e pernas.</li>
+<li><strong>Total condicionamento:</strong> resistência muscular localizada e cardiorrespiratória.</li>
+<li><strong>Circuito:</strong> organização dos exercícios por estações ou percurso.</li>
+<li><strong>HIIT/Tabata:</strong> treino intervalado de alta intensidade; os slides não fixam aqui um protocolo temporal.</li>
+</ul>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-02">9.2. Princípios do treino</h3>
+<p><strong>Sobrecarga:</strong> para melhorar o rendimento, aumentar progressivamente a exigência. Exemplos dos slides: aumentar repetições; aumentar carga mantendo repetições; reduzir descanso entre séries ou exercícios.</p>
+<p><strong>Especificidade:</strong> dirigir o treino para os objetivos, qualidades físicas, sistema energético predominante e técnicas da atividade (p. 46).</p>
+<p>A sobrecarga deve ser compatível com a execução. Aumentar a carga à custa de perder postura ou amplitude não assegura uma progressão adequada.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-03">9.3. Material</h3>
+<p>Step, deck, colchão, barra e anilhas, discos, halteres, elásticos/bandas e caneleiras. A escolha depende do professor, das condições do ginásio e da quantidade e nível dos alunos (p. 48–50).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-04">9.4. Estrutura específica</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th style="text-align: right;">Duração indicada</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apresentação/aquecimento</td>
+<td style="text-align: right;">5–10 min</td>
+<td>Preparação física e psicológica</td>
+</tr>
+<tr>
+<td>Parte específica/fundamental</td>
+<td style="text-align: right;">20–40 min</td>
+<td>Desenvolver os conteúdos planeados</td>
+</tr>
+<tr>
+<td>Retorno à calma</td>
+<td style="text-align: right;">5–10 min</td>
+<td>Reduzir tensões, relaxar e preparar o final</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aquecimento geral:</strong> grandes massas musculares, aumento da temperatura e preparação cardiovascular.</p>
+<p><strong>Aquecimento específico:</strong> mobilidade, exercícios dinâmicos e padrões de ensaio, com peso corporal ou cargas baixas. A amplitude deve ser controlada e adequada à preparação do participante.</p>
+<p><strong>Parte fundamental:</strong> grandes e pequenos grupos musculares; os slides recomendam dar ênfase aos grandes inicialmente e transitar depois para os mais pequenos. Utilizam-se diferentes amplitudes e velocidades (p. 51–53).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-05">9.5. Aprendizagem e motivação</h3>
+<p>A aprendizagem depende do ritmo individual, motivação, intensidade, pausas, capacidade de síntese e fase de aprendizagem. As fontes de motivação nomeadas são automotivação, instrutor, música e objetivos concretos (p. 47–48).</p>
+<p>Uma instrução excessiva num momento de fadiga pode ser pouco assimilada. Demonstrar os pontos críticos e permitir prática com uma dose adequada facilita o acompanhamento.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-06">9.6. Execução e segurança</h3>
+<p>Os quatro domínios fundamentais são <strong>controlo postural, ritmo respiratório, amplitude e velocidade</strong> (p. 58).</p>
+<p>Executar movimentos controlados, evitando balanço e impulso que alterem a postura ou reduzam a ação muscular pretendida. Adaptar a cadência à dificuldade e à amplitude. O excesso de velocidade dificulta a aprendizagem, compromete a finalização do gesto, reduz o controlo corporal e aumenta o risco de lesão (p. 59).</p>
+<p>Pontos posturais dos slides (p. 60):</p>
+<ul>
+<li>Cabeça neutra, no prolongamento do tronco.</li>
+<li>Ombros descontraídos e em ligeira rotação externa.</li>
+<li>Abdominal e glúteos ligeiramente contraídos; região lombar e bacia neutras.</li>
+<li>Joelhos desbloqueados.</li>
+<li>Evitar hiperextensão articular.</li>
+</ul>
+<p>Reconhecer e conseguir organizar as posições <strong>bípede, bípede com projeção do tronco, sentado, quatro apoios, decúbito lateral, dorsal e ventral</strong> (p. 60–61). A posição escolhida deve permitir executar e demonstrar o exercício com controlo.</p>
+<p><strong>Aplicação de apoio:</strong> em quatro apoios, organizar as bases e controlar o tronco; nos decúbitos, garantir apoios confortáveis e evitar compensações para completar repetições. Os slides apresentam imagens destas posições, sem um inventário completo de exercícios e correções para cada uma.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-09-07">9.7. Cadências: convenção específica dos slides</h3>
+<p>A notação dos materiais não equivale diretamente a «um número = uma batida». Os slides explicitam (p. 64–65):</p>
+<table>
+<thead>
+<tr>
+<th>Cadência</th>
+<th style="text-align: right;">Batidas na 1.ª fase</th>
+<th style="text-align: right;">Batidas na 2.ª fase</th>
+<th style="text-align: right;">Batidas/repetição</th>
+<th style="text-align: right;">Repetições/32T</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4/4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>2/2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>3/1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>1/3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>1/1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+<p>É necessário definir, em cada exercício, qual o movimento da primeira e da segunda fase. Não assumir que a primeira é sempre concêntrica.</p>
+<p><strong>Isometria:</strong> ausência de movimento; duração escolhida em função da intensidade pretendida.</p>
+<p>Com música a <strong>128 BPM</strong>, para exercícios não combinados:</p>
+<table>
+<thead>
+<tr>
+<th>Cadência</th>
+<th style="text-align: right;">1 frase/15 s</th>
+<th style="text-align: right;">2 frases/30 s</th>
+<th style="text-align: right;">3 frases/45 s</th>
+<th style="text-align: right;">4 frases/60 s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4/4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td>2/2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>3/1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>1/3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>1/1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">32</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo dos slides, p. 66:</strong> Chest Press em 2 frases/64T a 4/4 corresponde a 4 repetições e 30 segundos; a 2/2 corresponde a 8 repetições nos mesmos 30 segundos. O plano inclui 15 segundos para retirar a barra e preparar o Push Up: as transições também devem ser planeadas.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Aplicar sobrecarga e especificidade.</li><li>Usar a convenção de cadência dos slides.</li><li>Incluir o tempo das transições.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Aplicar sobrecarga e especificidade. Usar a convenção de cadência dos slides. Incluir o tempo das transições.</p></details></div></section>
+<section id="s10" class="study-card study-section"><span class="pill">Tema 10</span><h2>10. Bases do movimento</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Construir uma base de mobilidade, estabilidade, equilíbrio e controlo dos padrões.</p></div><div class="study-subcard"><h3 id="ag-detail-10-01">10.1. Posição anatómica, planos e eixos</h3>
+<p>A posição anatómica descritiva é a referência padronizada da anatomia. <strong>Explicação de apoio:</strong> corpo de pé, orientado para a frente, membros superiores ao lado do tronco e palmas para a frente.</p>
+<p>O plano descreve a orientação espacial do movimento; o eixo é a linha em torno da qual ocorre rotação e é perpendicular ao plano (p. 66–71).</p>
+<table>
+<thead>
+<tr>
+<th>Plano</th>
+<th>Divide o corpo em</th>
+<th>Eixo</th>
+<th>Movimentos principais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sagital</td>
+<td>Direita/esquerda</td>
+<td>Latero-medial</td>
+<td>Flexão/extensão</td>
+</tr>
+<tr>
+<td>Frontal</td>
+<td>Anterior/posterior</td>
+<td>Antero-posterior</td>
+<td>Abdução/adução</td>
+</tr>
+<tr>
+<td>Transverso ou horizontal</td>
+<td>Superior/inferior</td>
+<td>Superior-inferior</td>
+<td>Rotação</td>
+</tr>
+</tbody>
+</table>
+<p>Os slides alertam para casos articulares especiais. A tabela é uma referência geral e não dispensa analisar a articulação e o movimento concretos.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-10-02">10.2. Pilares do movimento humano</h3>
+<p>Segundo a organização de Santana (2000) citada nos slides:</p>
+<ol>
+<li>Manutenção da postura bípede e locomoção.</li>
+<li>Mudanças de nível do centro de massa.</li>
+<li>Puxar e empurrar.</li>
+<li>Rotações e mudanças de direção.</li>
+</ol>
+<p><strong>Exemplos de apoio:</strong> marcha e deslocamentos; agachamento; remada e press; rotações e mudanças de trajetória. Esta organização ajuda a pensar nos padrões solicitados pela aula.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-10-03">10.3. Mobilidade, estabilidade e equilíbrio</h3>
+<p><strong>Mobilidade — explicação de apoio:</strong> capacidade de alcançar e controlar a amplitude necessária ao movimento. <strong>Estabilidade:</strong> capacidade de controlar a posição e resistir a deslocamentos indesejados durante a tarefa.</p>
+<p>Os slides apresentam mobilidade e estabilidade como a base inicial da segurança e eficiência. Destacam equilíbrio muscular, amplitude, estabilidade do core, padrões básicos e domínio corporal (p. 73).</p>
+<p><strong>Equilíbrio:</strong> capacidade de compensar as forças que atuam no corpo e manter estabilidade em condições estáticas ou dinâmicas. Exemplos dos materiais: apoio unipedal, superfícies instáveis e levantamento de peso com controlo. São opções a ajustar ao nível; não é necessário tornar todos os exercícios instáveis.</p>
+<p>Os slides relacionam o treino do equilíbrio com a prevenção de quedas e com aspetos da fragilidade no envelhecimento: perda de massa muscular, força, velocidade de marcha e capacidade de manter o equilíbrio (p. 74).</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-10-04">10.4. Joint by Joint approach</h3>
+<p>O modelo apresenta necessidades predominantes de mobilidade e estabilidade em diferentes regiões. O esquema da p. 72 representa a alternância: tornozelo/mobilidade, joelho/estabilidade, anca/mobilidade, região lombar/estabilidade, região torácica/mobilidade e região escapular/estabilidade.</p>
+<p>Os exemplos da p. 73 relacionam perda de mobilidade na tibiotársica com dor no joelho, na anca com dor lombar e na coluna torácica com dor cervical. São relações apresentadas para compreender compensações; não constituem diagnóstico nem uma correspondência inevitável de causa e efeito.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-10-05">10.5. Leis do treino da força</h3>
+<p>Memorizar a sequência apresentada na p. 72:</p>
+<ol>
+<li>Desenvolver mobilidade articular.</li>
+<li>Desenvolver força nos ligamentos e tendões.</li>
+<li>Desenvolver força do core.</li>
+<li>Desenvolver os estabilizadores.</li>
+<li>Treinar movimentos e não apenas músculos isolados.</li>
+<li>Focar no necessário e não no que é novo.</li>
+<li>Periodizar a força a longo prazo.</li>
+</ol>
+<p>Na prática, a seleção deve responder às necessidades do grupo e a uma progressão, em vez de se orientar apenas pela novidade.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-10-06">10.6. Potência, agilidade e coordenação</h3>
+<p><strong>Potência — explicação de apoio:</strong> rapidez com que se realiza trabalho; relaciona força e velocidade. A Lista exige este conceito, mas os slides não o desenvolvem autonomamente. Não existe nos documentos um protocolo específico para o seu treino.</p>
+<p><strong>Agilidade:</strong> movimentação rápida com mudanças de velocidade e direção <strong>na presença de um estímulo</strong>. Os fatores citados são força, velocidade, flexibilidade e coordenação (p. 75).</p>
+<p><strong>Coordenação:</strong> capacidade de executar movimentos de diferentes graus de dificuldade com rapidez, precisão e eficiência, relacionada com velocidade, força, resistência e flexibilidade. Uma combinação de braços, pernas e deslocamento aumenta a exigência coordenativa.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Distinguir planos e eixos.</li><li>Relacionar força e velocidade na potência.</li><li>Agilidade implica resposta a um estímulo.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Distinguir planos e eixos. Relacionar força e velocidade na potência. Agilidade implica resposta a um estímulo.</p></details></div></section>
+<section id="s11" class="study-card study-section"><span class="pill">Tema 11</span><h2>11. Indoor Cycling</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Ajustar bicicleta, técnica e perfil de esforço ao participante.</p></div><div class="study-subcard"><h3 id="ag-detail-11-01">11.1. História e características</h3>
+<p>Nos slides, o programa inicial <strong>Spinning</strong> é atribuído ao ex-ciclista <strong>Johnny Goldberg, em 1987</strong>, na Califórnia. É descrito como uma atividade orientada por um instrutor, em bicicleta com roda de inércia, usando a música como fio condutor (p. 77–78).</p>
+<p>Os materiais referem sessões de <strong>30 a 60 minutos</strong> e um gasto médio de <strong>500 kcal/sessão</strong>. Este gasto é uma referência genérica dos slides, não um valor garantido: varia com a pessoa e a sessão.</p>
+<p>O Cycling é apresentado como predominantemente aeróbio, com benefícios cardiovasculares, circulatórios, na FC de repouso e na pressão arterial. A aprendizagem relativamente simples permite ajustar a intensidade à condição e objetivo de cada aluno.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-02">11.2. Estrutura e música</h3>
+<p>Mantém apresentação, aquecimento, parte principal, retorno à calma e alongamentos. O aquecimento prepara os sistemas cardiovascular, muscular e nervoso, mobiliza articulações e prepara mentalmente os participantes. A parte principal concretiza o perfil de carga e as técnicas planeadas. O final reduz progressivamente o esforço e promove relaxamento (p. 79–82).</p>
+<p>A música deve corresponder ao perfil de treino e ao público. Os refrões podem ajudar a marcar mudanças de carga ou técnica. A aula pode usar ou não a métrica musical; o controlo da técnica e da intensidade continua necessário.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-03">11.3. Tipos de aula e valores dos materiais</h3>
+<p>As percentagens seguintes são de <strong>FC máxima</strong>, conforme p. 83–85:</p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Intensidade</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baixa Endurance</td>
+<td>65–75% FCmáx</td>
+<td>Sessões simples de 30 min ou mais; plano com algumas subidas</td>
+</tr>
+<tr>
+<td>Alta Endurance</td>
+<td>75–85% FCmáx</td>
+<td>Trabalho prolongado na zona aeróbia mais alta; planos e/ou subidas</td>
+</tr>
+<tr>
+<td>Montanha</td>
+<td>75–85% FCmáx</td>
+<td>Etapa prolongada de subidas</td>
+</tr>
+<tr>
+<td>Intervalado extensivo</td>
+<td>65–85% FCmáx</td>
+<td>Alternância planeada; estímulo:recuperação de 2:1</td>
+</tr>
+<tr>
+<td>Intervalado intensivo</td>
+<td>65–95% FCmáx</td>
+<td>Alternância planeada; estímulo:recuperação de 1:2</td>
+</tr>
+<tr>
+<td>Fartlek</td>
+<td>65–85% FCmáx</td>
+<td>Variações constantes e aleatórias de cadência e carga; não estruturado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplos aritméticos:</strong> 2:1 pode corresponder a 2 minutos de estímulo e 1 de recuperação; 1:2, a 1 minuto de estímulo e 2 de recuperação. Os rácios não fixam por si só a duração de cada fase.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-04">11.4. RPM, BPM e técnicas</h3>
+<p><strong>RPM</strong> são rotações completas do pedal por minuto. <strong>BPM</strong> são batidas musicais por minuto. A relação pode ser direta ou utilizar metade do tempo musical, conforme a técnica.</p>
+<p>Tabela da p. 86, transcrita após verificação visual:</p>
+<table>
+<thead>
+<tr>
+<th>Técnica</th>
+<th style="text-align: right;">RPM mínimas</th>
+<th style="text-align: right;">RPM máximas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plano sentado</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">128</td>
+</tr>
+<tr>
+<td>Plano em pé</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>Subida sentado</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td>Subida em pé</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">90</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplos da mesma página:</p>
+<ul>
+<li>80 BPM: 80 RPM nas quatro técnicas indicadas.</li>
+<li>110 BPM: 110 RPM em plano sentado; as restantes estão marcadas «XXX».</li>
+<li>140 BPM: 70 RPM em subida sentada ou em pé; plano marcado «XXX».</li>
+<li>120 BPM: a tabela resumida apresenta 120 RPM em plano ou 60 RPM em subida.</li>
+<li>130 BPM: apresenta 65 RPM em subida.</li>
+<li>160 BPM: apresenta 80 RPM em plano ou subida.</li>
+</ul>
+<p><strong>Inconsistência interna a reter:</strong> a tabela resumida também apresenta 90 RPM em «subida», mas a tabela detalhada fixa 80 RPM como máximo de subida sentada e 90 em pé. Interpretar com a distinção de posição; não concluir que 90 RPM é a referência de subida sentada. «XXX» não corresponde a uma cadência proposta.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-05">11.5. Bicicleta e ajustes</h3>
+<p>Reconhecer selim, guiador, roda de inércia, pedais, ajuste de carga, ajustes verticais e horizontais, display, pés ajustáveis e rodas de transporte (p. 87).</p>
+<p><strong>Altura inicial do selim:</strong> de pé ao lado, a referência apresentada é o bordo superior da crista ilíaca <strong>três dedos acima do selim</strong> (p. 88).</p>
+<p><strong>Verificação individual:</strong> com o pedal no ponto mais baixo e o calcanhar apoiado, a perna fica em extensão, mantendo a bacia alinhada. Com o pé na posição de pedalar, os slides indicam <strong>25–35° de flexão do joelho</strong> no ponto inferior (p. 89).</p>
+<p><strong>Distância inicial selim/guiador:</strong> aproximadamente um antebraço, com cotovelo junto da extremidade do selim e dedos estendidos até ao início do guiador. Os materiais indicam tronco a cerca de <strong>45° em relação à horizontal</strong>, ajustando o guiador à experiência (p. 88).</p>
+<p><strong>Ajuste fino longitudinal:</strong> com pedais paralelos ao chão, verificar a rótula do joelho dianteiro sobre o eixo do pedal, na referência vertical apresentada (p. 89).</p>
+<p><strong>Altura do guiador:</strong> nos slides, ao nível do selim para aluno saudável; mais alto em determinadas patologias ou gravidez; eventualmente mais baixo para praticante de ciclismo. São referências iniciais que exigem individualização e respeito por limitações (p. 90).</p>
+<p><strong>Pés:</strong> terço anterior do pé sobre o pedal, com fixação adequada.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-06">11.6. Mãos e postura</h3>
+<p>A p. 91 apresenta imagens de quatro colocações: <strong>posição 1</strong>, central; <strong>posição 2</strong>, mais afastada; <strong>variante da posição 2</strong>; <strong>posição 3</strong>, nas extensões anteriores do guiador. A identificação espacial deve ser praticada com as imagens e a bicicleta.</p>
+<p>Pontos técnicos:</p>
+<ul>
+<li>Pulsos neutros e alinhados.</li>
+<li>Cotovelos orientados para baixo e ombros descontraídos.</li>
+<li>Na posição 2, mãos aproximadamente à largura dos ombros.</li>
+<li>Glúteos centrados no selim.</li>
+<li>Joelhos tão paralelos quanto a posição natural permita.</li>
+</ul>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-07">11.7. Pedalada e técnicas principais</h3>
+<p>Os slides descrevem uma fase de <strong>empurrar</strong>, simultânea à fase de <strong>puxar</strong> do outro membro, procurando continuidade e eficiência (p. 92–93).</p>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Músculos indicados nos slides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empurrar</td>
+<td>Glúteos, quadricípites, extensores da anca e gémeos</td>
+</tr>
+<tr>
+<td>Tração</td>
+<td>Isquiotibiais, flexores da anca e tibial anterior</td>
+</tr>
+</tbody>
+</table>
+<p>Técnicas apresentadas:</p>
+<ul>
+<li><strong>Plano sentado:</strong> posições 1 ou 2; trabalho de técnica e força.</li>
+<li><strong>Plano em pé:</strong> posição 2; resistência, estabilidade do core e trabalho cardiorrespiratório.</li>
+<li><strong>Saltos/Jumpings:</strong> posição 2; alternância cíclica da posição corporal em períodos curtos; controlo corporal e respiratório. Não significa saltar para fora dos pedais.</li>
+<li><strong>Subida sentada:</strong> posições 1 ou 2; carga progressiva, força e resistência cardiovascular/muscular.</li>
+<li><strong>Subida em pé:</strong> posição 3; carga elevada e solicitação dos membros inferiores.</li>
+</ul>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-11-08">11.8. Condução da aula</h3>
+<p><strong>Antes:</strong> chegar <strong>10–15 minutos mais cedo</strong>, preparar tudo, acolher individualmente, conhecer condição e experiência, acompanhar novos alunos, verificar equipamento e explicar duração, perfil, objetivos e zonas de trabalho/recuperação (p. 94).</p>
+<p><strong>Durante:</strong> demonstrar boa técnica, progredir de técnicas leves para mais intensas, indicar zonas de FC, observar, manter contacto visual, corrigir e motivar. Sair da bicicleta quando necessário para acompanhar os alunos. Prever momentos para beber e permitir ajustes ou pausas dentro das zonas individuais (p. 95–96).</p>
+<p><strong>No final:</strong> retorno à calma, alongamentos, relaxamento e respiração; perguntar como se sentem, reconhecer o esforço, orientar limpeza, retirar resistência conforme a indicação dos materiais e incentivar o regresso (p. 96).</p>
+<p>O professor deve aceitar críticas construtivas, continuar a formação e agir com responsabilidade e entusiasmo, tratando todos os participantes com igual consideração.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Distinguir BPM de RPM.</li><li>As zonas da tabela usam percentagens de FC máxima.</li><li>Individualizar os ajustes iniciais.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Distinguir BPM de RPM. As zonas da tabela usam percentagens de FC máxima. Individualizar os ajustes iniciais.</p></details></div></section>
+<section id="s12" class="study-card study-section"><span class="pill">Tema 12</span><h2>12. Competência digital</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Usar ferramentas digitais para planear, temporizar e analisar a prática.</p></div><div class="study-subcard"><p>A Lista de Saberes exige planeamento digital, recursos de música e temporização, partilha e gravação para autoavaliação. Os slides nomeiam ferramentas, mas não desenvolvem todos os procedimentos.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-12-01">12.1. Ferramentas e utilização</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Aplicação ao estudo e à aula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Sheets/Excel/apps de planeamento</td>
+<td>Organizar exercícios, tempos, séries, repetições, cadências, material e alternativas</td>
+</tr>
+<tr>
+<td>Tempobuddy/metrónomo</td>
+<td>Treinar pulsação, cadência e entrada no tempo</td>
+</tr>
+<tr>
+<td>MixMeister/BPM analyzer</td>
+<td>Identificar BPM e apoiar a seleção de faixas</td>
+</tr>
+<tr>
+<td>Spotify, Apple Music, YouTube Music</td>
+<td>Organizar e ouvir playlists; verificar a adequação de cada faixa</td>
+</tr>
+<tr>
+<td>Tabata Timer/Interval Timer</td>
+<td>Programar trabalho, recuperação e transições</td>
+</tr>
+<tr>
+<td>Plataformas online/portefólio</td>
+<td>Organizar planos, playlists, registos e vídeos</td>
+</tr>
+<tr>
+<td>Vídeo</td>
+<td>Rever técnica, música, comunicação e gestão da sessão</td>
+</tr>
+</tbody>
+</table>
+<p>No plano de Localizada, conferir a coerência entre BPM, frases, cadência, repetições e segundos. Num temporizador, confirmar as configurações antes de começar. O nome da aplicação não define, por si só, o método de treino.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-12-02">12.2. Gravação e análise</h3>
+<p><strong>Procedimento de apoio:</strong> escolher o segmento e os critérios a observar, gravar num ângulo que permita ver os movimentos, rever com uma grelha e registar uma melhoria concreta. Comparar depois uma nova execução.</p>
+<p>A autoavaliação deve incluir técnica e comunicação, e não apenas a aparência da coreografia: ouvir os comandos, verificar se são antecipados e se as mudanças coincidem com a música.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-12-03">12.3. Segurança e proteção de dados</h3>
+<p>Este tema é exigido pela Lista, mas não é desenvolvido nos slides. Como <strong>boas práticas de apoio</strong>, recolher apenas informação necessária, restringir acessos, proteger contas e equipamentos, evitar links públicos com informação pessoal e combinar previamente a finalidade e partilha de gravações. Respeitar a vontade de quem não pretende aparecer.</p>
+<p>Estas orientações são gerais; os documentos não fornecem procedimentos institucionais, prazos de conservação ou um regime jurídico detalhado. Deve ser seguido o procedimento aplicável na instituição. Este resumo não acrescenta legislação externa aos materiais.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Conferir BPM, tempos e repetições.</li><li>Gravar com critérios de observação.</li><li>Proteger dados e limitar a partilha.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Conferir BPM, tempos e repetições. Gravar com critérios de observação. Proteger dados e limitar a partilha.</p></details></div></section>
+<section id="s13" class="study-card study-section"><span class="pill">Tema 13</span><h2>13. Avaliação prática, contínua e entre pares</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Preparar a demonstração prática com especial atenção ao critério exclusivo de música.</p></div><div class="study-subcard"><h3 id="ag-detail-13-01">13.1. Formato do exame indicado nos slides</h3>
+<ul>
+<li><strong>Exame prático: 100% da classificação final.</strong></li>
+<li><strong>Duração: 5 a 10 minutos.</strong></li>
+<li><strong>Tarefa: pequena coreografia de Step ou Aeróbica.</strong></li>
+</ul>
+<p>São os elementos expressos na p. 6. Cycling e Localizada integram os conteúdos da UC, mas não são a tarefa descrita para este exame.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-13-02">13.2. Grelha de avaliação</h3>
+<p>Há quatro critérios, apresentados numa escala até <strong>5 valores cada</strong>, num total de <strong>20 valores</strong> (p. 7–8):</p>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Desempenho a demonstrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utilização da música — <strong>exclusivo</strong></td>
+<td>Identificar batidas fortes/fracas, oitos e frases; trabalhar na estrutura e aproveitar mudanças musicais</td>
+</tr>
+<tr>
+<td>Vozes de comando — cumulativo</td>
+<td>Feedback verbal/gestual, contagem decrescente, espelho e interação motivadora</td>
+</tr>
+<tr>
+<td>Técnica — cumulativo</td>
+<td>Segurança, apoios e distância à plataforma, amplitude e distinção entre toque e apoio</td>
+</tr>
+<tr>
+<td>Montagem coreográfica — cumulativo</td>
+<td>Simetria, liderança simples/alternada, abordagens, estratégias e métodos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regra decisiva:</strong> se não for demonstrado desempenho mínimo na utilização da música, a classificação final é negativa e os restantes critérios cumulativos não valorizam a nota. Os slides não especificam numericamente esse mínimo; não se deve inventar um limiar.</p>
+<p>O nível mais elevado da grelha corresponde a excelente sincronização, voz clara e segura, técnica correta e precisa e coreografia organizada e bem estruturada. Os níveis inferiores traduzem perda progressiva destas qualidades.</p>
+</div>
+<div class="study-subcard"><h3 id="ag-detail-13-03">13.3. Avaliação contínua</h3>
+<p>Avaliar continuamente significa observar durante o ensino e usar a informação para decidir: repetir, corrigir, simplificar, progredir ou alterar a organização. Mesmo com exame final a 100%, a avaliação formativa continua a orientar a aprendizagem.</p>
+<p><strong>Autoavaliação:</strong> analisar o próprio desempenho. <strong>Heteroavaliação:</strong> receber ou realizar avaliação por outra pessoa, como colega ou formador. Ambas devem usar critérios observáveis.</p>
+<p>Uma grelha de prática pode verificar: entrada na frase, manutenção da pulsação, contagem, liderança, simetria, transições, técnica, clareza do comando e capacidade de observar o grupo. Registar exemplos concretos torna o feedback mais útil do que classificações vagas como «bom» ou «confuso».</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Exame de Step ou Aeróbica: 5–10 minutos.</li><li>O exame prático vale 100% da nota indicada.</li><li>Música é um critério exclusivo.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Exame de Step ou Aeróbica: 5–10 minutos. O exame prático vale 100% da nota indicada. Música é um critério exclusivo.</p></details></div></section>
+<section id="s14" class="study-card study-section"><span class="pill">Tema 14</span><h2>14. Ética, atitudes e atuação profissional</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Conduzir com responsabilidade, empatia e respeito pelos limites profissionais.</p></div><div class="study-subcard"><p>Os materiais enquadram a atuação no exercício físico <strong>não terapêutico</strong>, respeitando segurança, prevenção de lesões e bem-estar (p. 2 e 8). O resumo não substitui as fontes legais nem acrescenta competências clínicas ao TEF.</p>
+<p>A Lista exige as seguintes atitudes, com aplicação prática:</p>
+<ul>
+<li><strong>Responsabilidade:</strong> preparar a sessão, verificar condições e responder pela segurança das escolhas.</li>
+<li><strong>Autonomia:</strong> conseguir planear, conduzir e avaliar, reconhecendo quando precisa de apoio.</li>
+<li><strong>Empatia e escuta ativa:</strong> ouvir dificuldades e adaptar a comunicação.</li>
+<li><strong>Liderança positiva e cooperação:</strong> orientar com respeito e trabalhar construtivamente com colegas.</li>
+<li><strong>Flexibilidade:</strong> ajustar exercícios, música, espaço e método ao grupo e às condições reais.</li>
+<li><strong>Criatividade:</strong> elaborar soluções coreográficas e estratégias de ensino adequadas.</li>
+<li><strong>Cumprimento ético, legal e de segurança:</strong> respeitar os participantes, a informação pessoal e os limites de atuação.</li>
+<li><strong>Motivação e persistência:</strong> praticar, aceitar correções e melhorar após dificuldades.</li>
+</ul>
+<p>O papel do instrutor inclui criar oportunidades de sucesso e acompanhar diferenças individuais. Não se deve interpretar um erro de coordenação como falta de empenho nem incentivar o grupo a ultrapassar limitações para manter a coreografia.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Ouvir e adaptar.</li><li>Cooperar e aceitar correções.</li><li>Respeitar segurança, ética e dados pessoais.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Ouvir e adaptar. Cooperar e aceitar correções. Respeitar segurança, ética e dados pessoais.</p></details></div></section>
+<section id="s15" class="study-card study-section"><span class="pill">Tema 15</span><h2>15. Revisão prática integrada</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Integrar planeamento, música, execução, comunicação e observação.</p></div><div class="study-subcard"><p>Para preparar uma aula ou a demonstração de avaliação, é necessário conseguir:</p>
+<ol>
+<li>Definir objetivo, público e duração.</li>
+<li>Escolher música e identificar BPM, tempos fortes, oitos e frases.</li>
+<li>Contar a sequência e conhecer a liderança no início e no fim.</li>
+<li>Assegurar simetria, perna pronta, fluidez e espaço.</li>
+<li>Selecionar um método de montagem que se saiba demonstrar por etapas.</li>
+<li>Preparar uma versão base e alternativas para diferentes capacidades.</li>
+<li>Executar os passos com técnica e segurança.</li>
+<li>Dar comandos claros antes das mudanças e trabalhar em espelho.</li>
+<li>Observar, corrigir e ajustar o esforço.</li>
+<li>Terminar de forma progressiva e avaliar o resultado.</li>
+</ol>
+<p>As recomendações finais da Lista são organizar um portefólio digital, gravar e rever sequências com grelhas, experimentar metrónomos e temporizadores, trabalhar coreografias entre pares e praticar a voz de comando com diferentes músicas.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Verificar contagem e liderança.</li><li>Ensaiar versões e comandos.</li><li>Avaliar o resultado da sessão.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Verificar contagem e liderança. Ensaiar versões e comandos. Avaliar o resultado da sessão.</p></details></div></section>
+<section id="s16" class="study-card study-section"><span class="pill">Tema 16</span><h2>16. Pontos que exigem confirmação nos materiais práticos</h2><div class="study-focus"><span class="study-label">Ideia principal</span><p>Distinguir o conteúdo documentado das lacunas a esclarecer com o formador.</p></div><div class="study-subcard"><p>O resumo abrange os temas da Lista, mas os dois documentos não permitem afirmar que todos os procedimentos estejam integralmente documentados. Para completar a preparação prática, faltam sobretudo:</p>
+<ul>
+<li>Algoritmos e exemplos completos de Associativo, Pirâmide por pares/total, Adição, Split Pares/Total/Trios e Espelho.</li>
+<li>Demonstrações das abordagens de Step e das variantes de passos, toques e elevações.</li>
+<li>Desenvolvimento específico de potência e procedimentos de proteção de dados.</li>
+<li>Detalhe do enquadramento legal e dos procedimentos institucionais.</li>
+<li>Valor mínimo numérico do critério exclusivo «Utilização da música».</li>
+<li>Esclarecimento da referência «50% ou menos da FC esforço» e da simplificação das tabelas de RPM de subida.</li>
+</ul>
+<p>Estas lacunas não alteram os valores e designações transcritos. Devem ser esclarecidas com as demonstrações, vídeos ou indicações do formador, sem substituir silenciosamente o conteúdo da UC por regras de outra fonte.</p></div><aside class="study-recap"><h3>O que recordar</h3><ul><li>Rever métodos em demonstração.</li><li>Confirmar os pontos ambíguos.</li><li>Não inventar limiares de avaliação.</li></ul></aside><div class="study-retrieval"><h3>Consegues explicar?</h3><p>Como aplicas estes pontos na preparação ou condução de uma aula?</p><details><summary>Ver resposta de referência</summary><p>Rever métodos em demonstração. Confirmar os pontos ambíguos. Não inventar limiares de avaliação.</p></details></div></section>
+</div></main>
+<nav class="app-bottom-nav fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/80 px-4 pb-safe">
+<div class="max-w-md mx-auto h-[56px] flex items-center justify-around text-center">
+<a href="../index.html#agenda" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-calendar-days"></i><span class="font-bold text-[10px]">Agenda</span></a>
+<a href="../index.html#estudo" class="flex-1 h-full flex flex-col items-center justify-center text-blue-600 dark:text-blue-400"><i class="fa-solid fa-book-open-reader"></i><span class="font-bold text-[10px]">Estudo</span></a>
+<a href="../index.html#curso" class="flex-1 h-full flex flex-col items-center justify-center text-slate-500 dark:text-slate-400"><i class="fa-solid fa-graduation-cap"></i><span class="font-bold text-[10px]">Curso</span></a>
+</div>
+</nav>
+
+
+<script src="../assets/study.js" defer></script>
+</body></html>

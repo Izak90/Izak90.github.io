@@ -20,6 +20,7 @@
       slugs.add(uc.slug); titles.add(uc.title); orders.add(uc.order);
       for (const key of ['summary','training','simulator','workbook']) if (uc[key] !== null && (!local(uc[key]) || !uc[key].endsWith('.html'))) errors.push(`${label}.${key}: URL local ou null obrigatório.`);
       for (const key of ['driveUrl','asynchronousClass']) if (!external(uc[key])) errors.push(`${label}.${key}: HTTPS ou null obrigatório.`);
+      if (uc.resultsPdf != null && !(text(uc.resultsPdf) && /^\.\/[a-zA-Z0-9_/-]+\.pdf$/.test(uc.resultsPdf) && !uc.resultsPdf.includes('/../'))) errors.push(`${label}.resultsPdf: PDF local ou null obrigatório.`);
       if (uc.trainer !== null && !text(uc.trainer)) errors.push(`${label}.trainer: texto ou null obrigatório.`);
       const seen = new Set();
       if (!Array.isArray(uc.difficulties)) errors.push(`${label}.difficulties: lista obrigatória.`);
@@ -41,7 +42,7 @@
       maps.all27UC.push(uc.title);
       for (const [field,map] of [['workbook','simulatorUrls'],['summary','studyCenterUrls'],['training','studyCenterTrainingUrls'],['simulator','studyCenterSimulatorUrls']]) if (uc[field]) maps[map][uc.title] = uc[field];
       const cfg = {};
-      for (const key of ['trainer','driveUrl','asynchronousClass']) if (uc[key]) cfg[key] = uc[key];
+      for (const key of ['trainer','driveUrl','asynchronousClass','resultsPdf']) if (uc[key]) cfg[key] = uc[key];
       maps.moduleConfig[uc.title] = cfg;
     }
     return maps;

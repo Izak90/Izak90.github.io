@@ -54,7 +54,7 @@ Example:
 
 localStorage keys must be namespaced by UC and difficulty.
 
-PWA: preserve network-first unless explicitly changed. Verify precache paths exist before shipping. SW v23 also precaches the explicitly listed CDN dependencies and caches requested Inter/Font Awesome fonts. Other external services are not intercepted. Cache cleanup is restricted to cet-tef caches.
+PWA: preserve network-first unless explicitly changed. Verify precache paths exist before shipping. SW v26 also precaches the explicitly listed CDN dependencies and caches requested Inter/Font Awesome fonts. Other external services are not intercepted. Cache cleanup is restricted to cet-tef caches.
 
 Exam timers use an absolute deadline and resynchronise on visibility/pageshow/focus and before interactions. Workbook simulators retain proportional duration and embedded data; their controls lock after submission.
 
@@ -72,3 +72,9 @@ PEDEx usa as três dificuldades nos atributos data-* e no registo. SW v21 adicio
 CF também usa três dificuldades nos mesmos motores/atributos. SW v22 inclui os dois novos bancos CF; existem nove bancos nativos e 51 ficheiros locais no precache.
 
 Psicologia usa um único banco Fácil com o slug completo no nome do JSON e prefixo psiex nas páginas/localStorage. SW v23 acrescenta as três páginas e o banco; total atual: dez bancos nativos e 55 ficheiros locais. Filtros de estado e avaliação no index são independentes e combinam-se com pesquisa.
+
+Aulas de Grupo disponibiliza apenas o resumo em `centro_estudo/ag_resumo.html`, ligado pelo registo e com os assets partilhados. Treino e Simulações permanecem indisponíveis. SW v24 acrescenta o resumo ao precache, totalizando 56 ficheiros locais; a estratégia network-first é preservada.
+
+Fisiologia do Exercício disponibiliza apenas `centro_estudo/fe_resumo.html`, com 22 temas baseados nas sete aulas fornecidas. A ligação é definida em `summary` no registo. A matriz e as limitações das fontes estão em `docs/FE_COVERAGE.md`. SW v25 acrescenta o HTML ao precache, totalizando 57 ficheiros locais; sem alteração dos motores ou da política de rede.
+
+Pautas finais: campo opcional `resultsPdf` no registo/adaptador, com caminho PDF local validado. A secção Curso apresenta «Pauta final (PDF)» junto da UC, na lista geral e filtrada. Os originais de CF e PEVS ficam em `data/pautas/`; SW v26 inclui ambos, totalizando 59 ficheiros locais.

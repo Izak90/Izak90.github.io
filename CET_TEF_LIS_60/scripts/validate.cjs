@@ -150,7 +150,7 @@ function validateRepository(root = ROOT) {
       for(const message of schema)issue(registryFile,'registry-schema',message);
       if(!schema.length) {
         for(const uc of registry.ucs) {
-          for(const key of ['summary','training','simulator','workbook'])if(uc[key])localRef(path.join(root,'index.html'),uc[key]);
+          for(const key of ['summary','training','simulator','workbook','resultsPdf'])if(uc[key])localRef(path.join(root,'index.html'),uc[key]);
           for(const d of uc.difficulties) {
             const bankPath=localRef(path.join(root,'index.html'),d.bank,false);
             const suffix=d.id==='medium'?'_medio':d.id==='hard'?'_dificil':'';
@@ -182,7 +182,7 @@ function validateRepository(root = ROOT) {
       }
     }
     result.counts.precache=precacheURLs.size;
-    const required=files.filter(f=>/^(?:data\/ucs\.json|assets\/.*\.(?:css|js)|centro_estudo\/.*\.(?:html|json)|simuladores\/.*\.html|(?:index|plano|plano_mj)\.html|manifest\.json|sw\.js)$/.test(relative(f)));
+    const required=files.filter(f=>/^(?:data\/ucs\.json|data\/pautas\/.*\.pdf|assets\/.*\.(?:css|js)|centro_estudo\/.*\.(?:html|json)|simuladores\/.*\.html|(?:index|plano|plano_mj)\.html|manifest\.json|sw\.js)$/.test(relative(f)));
     for(const file of required)if(!precache.has(file))issue(sw,'precache-coverage',`Ficheiro necessário offline não incluído: ${relative(file)}.`);
   }
   return result;
