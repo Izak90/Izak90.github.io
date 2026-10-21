@@ -100,7 +100,8 @@
 
     activeDifficulty = difficulty;
     BANK = BANKS[difficulty];
-    TOPICS = [...new Set(BANK.map(q => q.topic))];
+    TOPICS = [...new Set(BANK.map(q => q.topic))]
+      .sort((a, b) => a.localeCompare(b, 'pt-PT', {numeric: true, sensitivity: 'base'}));
 
     document.getElementById('bankCount').textContent = BANK.length;
     document.getElementById('difficultyBankCount')?.replaceChildren(document.createTextNode(`${BANK.length} perguntas`));

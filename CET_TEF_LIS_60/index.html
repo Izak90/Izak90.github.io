@@ -1060,6 +1060,12 @@
 
             const query = searchQuery.trim().toLocaleLowerCase('pt-PT');
             const completedNames = new Set(getCategorizedUCs().completed.map(uc => uc.name));
+            const examDates = new Map();
+            rawSchedule.forEach(event => {
+                if (event.type !== 'exame' || event.pending) return;
+                const previous = examDates.get(event.module);
+                if (!previous || event.date < previous) examDates.set(event.module, event.date);
+            });
 
             const readyCount = all27UC.filter(isStudyReady).length;
             const summaryCount = all27UC.filter(name => Boolean(studyCenterUrls[name])).length;
@@ -1083,7 +1089,8 @@
                     ready: isStudyReady(name),
                     summary: studyCenterUrls[name] || null,
                     training: studyCenterTrainingUrls[name] || null,
-                    simulator: studyCenterSimulatorUrls[name] || null
+                    simulator: studyCenterSimulatorUrls[name] || null,
+                    examDate: examDates.get(name) || '9999-12-31'
                 }))
                 .filter(item => {
                     const filterOk =
@@ -1099,7 +1106,8 @@
                         (activeAssessmentFilter === 'theoretical' && theoretical) ||
                         (activeAssessmentFilter === 'practical' && !theoretical);
                     return filterOk && assessmentOk && textOk;
-                });
+                })
+                .sort((a, b) => a.examDate.localeCompare(b.examDate) || a.n - b.n);
 
             listEl.innerHTML = filtered.map(item => {
                 const badge = item.ready
@@ -1474,6 +1482,16 @@
         /* ----------------------------------------------------
            SCHEDULE LIST
         ----------------------------------------------------- */
+        function normalizeScheduleSearch(value) {
+            return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-PT').trim();
+        }
+
+        function matchesScheduleSearch(item, query) {
+            const trainer = (moduleConfig[item.module] || {}).trainer || '';
+            const fullText = [item.module, trainer, item.location, item.exam, item.reunion, item.obs, item.dateStr, item.dayWeek, getDayFullName(item.dayWeek || '')].join(' ');
+            return normalizeScheduleSearch(fullText).includes(normalizeScheduleSearch(query));
+        }
+
         function renderScheduleList(scrollToNextExam = false) {
             const container = document.getElementById('schedule-list');
             const emptyState = document.getElementById('empty-state');
@@ -1496,10 +1514,7 @@
                 }
 
                 if (searchQuery.trim().length > 0) {
-                    const modInfo = moduleConfig[item.module] || {};
-                    const trainer = modInfo.trainer || '';
-                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
-                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                    if (!matchesScheduleSearch(item, searchQuery)) return false;
                 }
 
                 return true;
@@ -1684,7 +1699,7 @@
         function getCurrentTabSearchPlaceholder() {
             if (currentMainTab === 'estudo') return 'Pesquisar unidades de competência...';
             if (currentMainTab === 'curso') return 'Pesquisar UC, formadores e recursos...';
-            return 'Pesquisar exames, módulos, formadores, locais...';
+            return 'Pesquisar dias da semana, exames, módulos, formadores, locais...';
         }
 
         function syncGlobalSearchWithCurrentTab() {
@@ -1858,7 +1873,7 @@
         }
 
         function getDayFullName(shortDay) {
-            const days = { 'qua': 'Quarta-feira', 'qui': 'Quinta-feira', 'sex': 'Sexta-feira', 'sáb': 'Sábado', 'seg': 'Segunda-feira' };
+            const days = { 'qua': 'Quarta-feira', 'qui': 'Quinta-feira', 'sex': 'Sexta-feira', 'sáb': 'Sábado', 'seg': 'Segunda-feira', 'ter': 'Terça-feira', 'dom': 'Domingo' };
             return days[shortDay] || shortDay;
         }
 
@@ -1956,10 +1971,7 @@ END:VEVENT`;
                 }
 
                 if (searchQuery.trim().length > 0) {
-                    const modInfo = moduleConfig[item.module] || {};
-                    const trainer = modInfo.trainer || '';
-                    const fullText = `${item.module} ${trainer} ${item.location} ${item.exam} ${item.reunion} ${item.obs} ${item.dateStr}`.toLowerCase();
-                    if (!fullText.includes(searchQuery.toLowerCase())) return false;
+                    if (!matchesScheduleSearch(item, searchQuery)) return false;
                 }
 
                 return true;
