@@ -1,7 +1,9 @@
-const CACHE_NAME = 'isaac-treinos-pwa-v1';
+const CACHE_NAME = 'isaac-treinos-pwa-v2';
 const CACHE_ASSETS = [
   '/isaac_treinos_ar_livre/',
   '/isaac_treinos_ar_livre/index.html',
+  '/isaac_treinos_ar_livre/index_redirect_countdown.html',
+  '/isaac_treinos_ar_livre/redirect-control.js',
   '/isaac_treinos_ar_livre/comunidade.html',
   '/isaac_treinos_ar_livre/comecar.html',
   '/isaac_treinos_ar_livre/treino-experimental.html',

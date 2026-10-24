@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Isaac Treinos — Novo endereço</title>
+
+    <link rel="canonical" href="https://isaac.treinos.workers.dev/">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f7f8;
+            color: #1f2933;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        main {
+            width: min(100%, 560px);
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0 0 16px;
+        }
+
+        .countdown {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 24px 0;
+        }
+
+        .countdown strong {
+            font-size: 1.5rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #2a9d8f;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .button:hover,
+        .button:focus {
+            background: #23867a;
+        }
+
+        .url {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            color: #52606d;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Este endereço foi descontinuado</h1>
+
+        <p>
+            O site Isaac Treinos passou para um novo endereço.
+        </p>
+
+        <p class="countdown">
+            Serás redirecionado automaticamente em
+            <strong id="countdown">10</strong>
+            segundos.
+        </p>
+
+        <p>
+            <a class="button" href="https://isaac.treinos.workers.dev/">
+                Ir agora para o novo site
+            </a>
+        </p>
+
+        <p class="url">
+            Novo endereço: https://isaac.treinos.workers.dev/
+        </p>
+
+        <noscript>
+            <p>
+                O redirecionamento automático requer JavaScript.
+                Usa o botão acima para continuar.
+            </p>
+        </noscript>
+    </main>
+
+    <script>
+        const destination = "https://isaac.treinos.workers.dev/";
+        const countdownElement = document.getElementById("countdown");
+        let secondsRemaining = 10;
+
+        const interval = window.setInterval(() => {
+            secondsRemaining -= 1;
+            countdownElement.textContent = secondsRemaining;
+
+            if (secondsRemaining <= 0) {
+                window.clearInterval(interval);
+                window.location.replace(destination);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
