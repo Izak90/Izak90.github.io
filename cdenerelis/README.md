@@ -9,7 +9,7 @@ Site de apresentação da saga e biografia de Patrícia Costa, com montra de liv
 
 No editor, usa as secções Página inicial, A autora, Livros e edições, Packs, Preços e portes, Contactos, Fontes e cores e Google e domínio. Os textos, imagens, preços, ISBNs, packs, cores e fontes são configuráveis sem código. A pré-visualização é imediata.
 
-**Guardar neste navegador não publica para outros visitantes.** Para publicar, abre Publicar e cópias e transfere o site completo em ZIP, ou guarda-o numa pasta vazia através do navegador. O pacote contém as páginas e os recursos prontos a alojar. O editor não tem acesso ao alojamento remoto nem usa credenciais GitHub guardadas no site.
+**Guardar e aplicar atualiza a aplicação neste navegador**, incluindo os separadores já abertos e as próximas visitas. Os outros visitantes continuam a ver a versão alojada. Para publicar para todos, abre Exportar e cópias e transfere o site completo em ZIP, ou guarda-o numa pasta vazia através do navegador. O pacote contém as páginas e os recursos prontos a alojar. O editor não tem acesso ao alojamento remoto nem usa credenciais GitHub guardadas no site.
 
 O ZIP pode ser entregue à pessoa que gere o alojamento, ou carregado e extraído no painel do alojamento do domínio existente. Não é necessário comprar outro domínio. O nome do domínio ainda não foi indicado; quando for conhecido, deve ser configurado em Google e domínio antes de gerar a versão final e associado ao alojamento no respetivo fornecedor.
 
@@ -27,7 +27,7 @@ A página inicial, a coleção e cada livro são gerados com conteúdo HTML comp
 
 ## Limites da POC
 
-Alterações no editor e cópias ficam locais ao navegador até serem exportadas e publicadas. Não há autenticação de administradora, base de dados partilhada nem publicação remota automática. A edição visual e a exportação funcionam; um CMS remoto autenticado deve ser escolhido conforme o alojamento da autora, se for necessário publicar diretamente pelo navegador.
+As alterações guardadas são aplicadas à aplicação neste navegador. As cópias e a personalização permanecem locais até serem exportadas e publicadas. Não há autenticação de administradora, base de dados partilhada nem publicação remota automática. A edição visual e a exportação funcionam; um CMS remoto autenticado deve ser escolhido conforme o alojamento da autora, se for necessário publicar diretamente pelo navegador.
 
 O código-fonte da configuração está em content.js. O editor gera esse ficheiro e as páginas automaticamente na exportação. Configurações antigas da POC ficam intocadas no armazenamento do navegador, mas não são utilizadas nesta versão de livros.
 
@@ -42,3 +42,10 @@ A página inicial orienta novos leitores para o primeiro volume. Cada livro tem 
 O editor permite alterar as perguntas frequentes e adicionar dimensões e até oito imagens de amostra com legenda por livro. A exportação inclui as imagens e o cache offline. As amostras públicas permanecem ocultas enquanto não forem fornecidas páginas interiores. Não foram inventados ISBNs nem dimensões.
 
 Nesta fase de PoC mantém-se o editor local com exportação. Autenticação e publicação direta pela autora ficam dependentes da futura solução de alojamento.
+
+
+## Personalização do PoC
+
+Edita uma secção, confirma o resultado na pré-visualização e usa **Guardar e aplicar**. **Ver aplicação** abre o site com as definições guardadas, sem precisar de um endereço de pré-visualização. A pré-visualização pode mostrar alterações ainda por guardar.
+
+**Repor definições iniciais** restaura todos os conteúdos e a aparência da versão fornecida e atualiza a aplicação neste navegador. Pede confirmação e pode ser cancelado. Recomenda-se transferir uma cópia antes de repor. As combinações de cores são sugestões editáveis; também é possível escolher cada cor e fonte individualmente.

@@ -51,3 +51,9 @@ As verificações automáticas não constituem certificação de acessibilidade 
 Implementados: entrada pelo primeiro volume, apresentação breve sem spoilers, sinopse expansível, FAQ configurável, lista persistente para WhatsApp e poupança de packs calculada com preços válidos. Suporte a amostras de até oito páginas com ampliação acessível e campos opcionais de dimensões. Sem páginas ou ISBNs confirmados, não se inventam dados. O PoC mantém exportação local, sem simular autenticação ou publicação direta.
 
 Verificação executada: regressão a 320/390/768/1440 px, pesquisa, validação, backup/ZIP, pré-visualização e offline. Testes adicionais a 390/1440 px: lista entre páginas, WhatsApp, FAQ, upload e diálogo de amostras, teclado/foco, configurações anteriores e exportação/cache das imagens. Zero violações nas análises axe WCAG A/AA executadas, incluindo diálogo. Não substitui verificação com leitores de ecrã e equipamentos iOS reais.
+
+## Personalização aplicada no PoC — 30/10/2026
+
+Guardar e aplicar atualiza a aplicação no navegador, as próximas visitas e outros separadores abertos. As alterações em edição ficam na pré-visualização até serem guardadas. A reposição das definições iniciais está disponível junto ao início do editor, pede confirmação e atualiza também a aplicação. Incluídas três combinações de cores, mantendo ajuste individual de fontes e cores. Livros criados localmente abrem através da página da coleção até à exportação das páginas definitivas.
+
+Testes executados a 320/390/1440 px: aplicação após guardar, persistência após recarregar, atualização entre separadores, combinações de cores, novos livros, reposição/cancelamento, validação e axe sem violações. Regressão geral a 320/390/768/1440 px e testes de descoberta, amostras, WhatsApp e offline também passaram. O botão Ver guardado abre a configuração aplicada, sem guardar alterações pendentes implicitamente. Não existe publicação remota a partir do editor neste PoC.
