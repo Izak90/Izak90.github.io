@@ -1,34 +1,4 @@
-const CACHE = 'enerelis-shell-v3';
-const SHELL = ['./', './index.html', './style.css', './app.js', './catalog.js', './events.js', './art.js', './style.css?v=3', './app.js?v=3', './catalog.js?v=3', './events.js?v=3', './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './assets/volume-1.jpg', './assets/volume-2.jpg', './assets/volume-3.jpg', './assets/volume-4.jpg', './assets/volume-5.jpg', './assets/volume-6.jpg', './assets/volume-7.jpg', './assets/mascaras.jpg', './assets/enerelis-exposicao.png', './assets/ambiente.jpg', './assets/personagens.jpg', './assets/cenarios.jpg', './assets/autora.jpg'];
-
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL).then(() => self.skipWaiting())));
-});
-
-self.addEventListener('activate', event => {
-  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('enerelis-shell-') && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
-});
-
-self.addEventListener('fetch', event => {
-  const request = event.request;
-  const url = new URL(request.url);
-  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
-  if (request.mode === 'navigate') {
-    event.respondWith(fetch(request).then(response => {
-      if (response.ok) {
-        const copy = response.clone();
-        event.waitUntil(caches.open(CACHE).then(cache => cache.put('./index.html', copy)));
-      }
-      return response;
-    }).catch(() => caches.match('./index.html')));
-    return;
-  }
-  if (!SHELL.some(path => new URL(path, self.registration.scope).href === url.href)) return;
-  event.respondWith(caches.match(request).then(cached => cached || fetch(request).then(response => {
-    if (response.ok) {
-      const copy = response.clone();
-      event.waitUntil(caches.open(CACHE).then(cache => cache.put(request, copy)));
-    }
-    return response;
-  })));
-});
+const CACHE='enerelis-books-v4-1793386716980';const SHELL=["./style.css","./fonts.css","./runtime-v4.js","./model.js","./render.js","./admin.html","./editor.css","./editor.js","./exporter.js","./zip.js","./resources.js","./assets/ambiente.jpg","./assets/autora.jpg","./assets/book-placeholder.svg","./assets/cenarios.jpg","./assets/enerelis-exposicao.png","./assets/font-1.ttf","./assets/font-2.ttf","./assets/font-3.ttf","./assets/font-4.ttf","./assets/mascaras.jpg","./assets/personagens.jpg","./assets/volume-1.jpg","./assets/volume-2.jpg","./assets/volume-3.jpg","./assets/volume-4.jpg","./assets/volume-5.jpg","./assets/volume-6.jpg","./assets/volume-7.jpg","./icons/icon-192.png","./icons/icon-512.png","./icons/icon.svg","./content.js","./index.html","./livros.html","./livro-preludio.html","./livro-sangue.html","./livro-sombras.html","./livro-cicatrizes.html","./livro-ilusoes.html","./livro-asas.html","./livro-monstros.html","./livro-mascaras.html","./manifest.webmanifest","./","./style.css?v=4","./runtime-v4.js?v=4"];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('enerelis-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{const r=e.request,u=new URL(r.url);if(r.method!=='GET'||u.origin!==self.location.origin||!u.href.startsWith(self.registration.scope))return;const known=SHELL.some(p=>new URL(p,self.registration.scope).href===u.href);if(!known&&r.mode!=='navigate')return;e.respondWith(fetch(r).then(response=>{if(response.ok){const copy=response.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(r,copy)))}return response}).catch(async()=>{const cached=await caches.match(r);if(cached)return cached;if(r.mode==='navigate')return caches.match(new URL('./index.html',self.registration.scope));return Response.error()}))});
