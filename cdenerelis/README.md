@@ -34,3 +34,11 @@ O código-fonte da configuração está em content.js. O editor gera esse fichei
 ## Revisão UI/UX
 
 A revisão de 30-10-2026 e as verificações executadas estão documentadas em `UI-UX-REVIEW.md`. Para regenerar as páginas estáticas e o service worker depois de alterar os módulos: `node build.mjs`, na pasta do projeto. A configuração editorial mantém-se em `content.js`; o editor visual continua a permitir exportar o site sem editar código.
+
+## Descoberta e pedidos de informação
+
+A página inicial orienta novos leitores para o primeiro volume. Cada livro tem apresentação breve e sinopse detalhada expansível. A lista de volumes prepara uma mensagem por WhatsApp, sem concluir compras: a autora confirma disponibilidade, packs, portes e total final. A poupança dos packs só aparece enquanto os preços comparados estiverem válidos.
+
+O editor permite alterar as perguntas frequentes e adicionar dimensões e até oito imagens de amostra com legenda por livro. A exportação inclui as imagens e o cache offline. As amostras públicas permanecem ocultas enquanto não forem fornecidas páginas interiores. Não foram inventados ISBNs nem dimensões.
+
+Nesta fase de PoC mantém-se o editor local com exportação. Autenticação e publicação direta pela autora ficam dependentes da futura solução de alojamento.

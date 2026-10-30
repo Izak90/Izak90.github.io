@@ -35,8 +35,11 @@ export function validateConfig(config) {
     if (!['split','centered','minimal'].includes(config.theme.layout) || !Object.hasOwn(fonts,config.theme.headingFont) || !Object.hasOwn(fonts,config.theme.bodyFont)) return 'Escolhe uma apresentação e fontes disponíveis no editor.';
     for (const field of ['primary','accent','background','text','muted']) if(!/^#[0-9a-f]{6}$/i.test(config.theme[field])) return 'Há uma cor inválida.';
     if (!Array.isArray(config.books)||config.books.length>50||!Array.isArray(config.packs)||config.packs.length>30) return 'Limite: 50 livros e 30 packs.';
+    if(config.faq!==undefined&&(!Array.isArray(config.faq)||config.faq.length>20||config.faq.some(item=>!textOK(item.question,250)||!item.question.trim()||!textOK(item.answer,2500)||!item.answer.trim())))return 'Revê as perguntas e respostas (máximo de 20).';
     const ids = new Set();
     for (const book of config.books) {
+      if(book.intro!==undefined&&!textOK(book.intro,1500)||book.dimensions!==undefined&&!textOK(book.dimensions,150))return 'Revê a apresentação e as dimensões do livro.';
+      if(book.samples!==undefined&&(!Array.isArray(book.samples)||book.samples.length>8||book.samples.some(s=>s.image==='assets/book-placeholder.svg'||!imageOK(s.image)||!textOK(s.caption,250))))return 'A amostra aceita até 8 imagens com legenda.';
       if (!idOK(book.id)||ids.has(book.id)) return 'Cada livro precisa de um identificador único.'; ids.add(book.id);
       if (!Number.isInteger(book.volume)||book.volume<1||book.volume>999||!textOK(book.title,150)||!book.title.trim()||!textOK(book.synopsis,12000)||!book.synopsis.trim()) return 'Preenche o título, volume e sinopse de cada livro.';
       if (!priceOK(book.price)||!textOK(book.priceNote,400)||!textOK(book.availability,150)||!imageOK(book.image)||!textOK(book.imageAlt,250)) return 'Verifica o preço, a disponibilidade ou a imagem do livro.';
@@ -59,4 +62,11 @@ export function validateConfig(config) {
 export function contactHref(config, subject='') {
   if (config.contacts.whatsapp) return `https://wa.me/${config.contacts.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(subject || config.contacts.whatsappMessage)}`;
   return config.contacts.instagram;
+}
+
+export function packSaving(config,pack,date=today()) {
+  const price=activePrice(pack,date),books=pack.bookIds.map(id=>config.books.find(b=>b.id===id));
+  if(price===null||!books.length||books.some(b=>!b||activePrice(b,date)===null))return null;
+  const total=books.reduce((sum,b)=>sum+activePrice(b,date),0);
+  return total>price?Math.round((total-price)*100)/100:null;
 }

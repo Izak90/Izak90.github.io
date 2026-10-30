@@ -1,12 +1,13 @@
-import {siteConfig} from './content.js?v=5';
-import {STORAGE_KEY,validateConfig} from './model.js?v=5';
-import {renderBody,renderDocument,themeCSS} from './render.js?v=5';
+import {siteConfig} from './content.js?v=6';
+import {STORAGE_KEY,validateConfig,esc,activePrice,money,contactHref} from './model.js?v=6';
+import {renderBody,renderDocument,themeCSS} from './render.js?v=6';
 const params=new URLSearchParams(location.search);
 const page=params.has('preview')&&params.has('book')?'book':document.body.dataset.page||'home',id=params.has('preview')?params.get('book')||document.body.dataset.book||'':document.body.dataset.book||'';
 let current=siteConfig;
 const preview=new URLSearchParams(location.search).has('preview');
 try{if(preview){const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved&&!validateConfig(saved))current=saved}}catch{}
 function bind(){
+  bindDiscovery();
   const search=document.querySelector('#book-search');
   if(search){
     const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt').trim();
@@ -34,3 +35,30 @@ window.addEventListener('online',()=>{const el=document.querySelector('#connecti
 window.addEventListener('offline',()=>{const el=document.querySelector('#connection');if(el)el.textContent='Disponível offline'});
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 if(preview&&parent!==window)parent.postMessage({type:'enerelis-preview-ready'},location.origin);
+
+function bindDiscovery(){
+  const key=preview?'enerelis.enquiry.preview':'enerelis.enquiry';let selected=[];
+  try{const value=JSON.parse(localStorage.getItem(key));if(Array.isArray(value))selected=[...new Set(value.filter(id=>current.books.some(b=>b.id===id)))];}catch{}
+  const buttons=[...document.querySelectorAll('[data-select-book]')];
+  if(buttons.length&&current.contacts.whatsapp){
+    const panel=document.createElement('section');panel.className='section enquiry';panel.setAttribute('aria-labelledby','enquiry-title');panel.id='lista';document.querySelector('main').append(panel);
+    function update(){
+      try{localStorage.setItem(key,JSON.stringify(selected))}catch{}
+      buttons.forEach(button=>{const on=selected.includes(button.dataset.selectBook);button.hidden=false;button.setAttribute('aria-pressed',String(on));button.textContent=on?'✓ Na lista · remover':'Adicionar à lista de informações'});
+      const books=selected.map(id=>current.books.find(b=>b.id===id));const prices=books.map(b=>activePrice(b));const total=prices.every(p=>p!==null)?prices.reduce((sum,p)=>sum+p,0):null;
+      const message='Olá Patrícia! Gostava de saber mais sobre estes livros de Crónicas de Enerelis:\n'+books.map(b=>'• Volume '+String(b.volume).padStart(2,'0')+' — '+b.title).join('\n')+(total!==null?'\nSoma dos preços individuais apresentados: '+money(total)+' (sem portes).':'')+'\nPodes confirmar a disponibilidade, os packs aplicáveis e o valor final com portes?';
+      panel.innerHTML='<h2 id="enquiry-title">A tua lista de informações</h2><p id="enquiry-count" role="status" aria-live="polite">'+books.length+' '+(books.length===1?'livro selecionado':'livros selecionados')+'</p>'+(books.length?'<ul>'+books.map(b=>'<li><span>Vol. '+b.volume+' · '+esc(b.title)+'</span><button type="button" data-remove-book="'+esc(b.id)+'" aria-label="Remover '+esc(b.title)+'">Remover</button></li>').join('')+'</ul><p>'+(total===null?'Há preços por confirmar.':'Soma dos preços individuais: <strong>'+money(total)+'</strong> + portes.')+'</p><p class="small-note">A autora confirma disponibilidade, packs e total final por mensagem.</p><a class="button" target="_blank" rel="noopener noreferrer" href="'+esc(contactHref(current,message))+'">Pedir informações por WhatsApp ↗</a>':'<p>Adiciona os volumes que te interessam. Depois, envia a lista à autora por WhatsApp.</p>');
+      panel.querySelectorAll('[data-remove-book]').forEach(button=>button.onclick=()=>{const removed=button.dataset.removeBook;selected=selected.filter(id=>id!==removed);update();const next=panel.querySelector('[data-remove-book]')||document.querySelector('[data-select-book="'+removed+'"]');next?.focus()});
+    }
+    buttons.forEach(button=>button.onclick=()=>{const id=button.dataset.selectBook;selected=selected.includes(id)?selected.filter(value=>value!==id):[...selected,id];update()});update();
+    const tools=document.querySelector('.books-tools');if(tools){const link=document.createElement('a');link.className='inline-link';link.href='#lista';link.textContent='A minha lista ↓';tools.prepend(link)}
+  }
+  const dialog=document.querySelector('#sample-dialog'),book=current.books.find(b=>b.id===id);let sampleIndex=0,opener;
+  if(dialog&&book?.samples?.length){
+    const show=index=>{sampleIndex=index;const sample=book.samples[index];dialog.querySelector('img').src=sample.image;dialog.querySelector('img').alt=sample.caption||'Página '+(index+1);dialog.querySelector('#sample-caption').textContent=(index+1)+' / '+book.samples.length+(sample.caption?' · '+sample.caption:'');dialog.querySelector('[data-sample-step="-1"]').disabled=index===0;dialog.querySelector('[data-sample-step="1"]').disabled=index===book.samples.length-1;};
+    document.querySelectorAll('[data-sample]').forEach(link=>link.onclick=event=>{event.preventDefault();opener=link;show(Number(link.dataset.sample));dialog.showModal()});
+    dialog.querySelector('[data-close-sample]').onclick=()=>dialog.close();dialog.addEventListener('close',()=>opener?.focus());
+    dialog.querySelectorAll('[data-sample-step]').forEach(button=>button.onclick=()=>{show(sampleIndex+Number(button.dataset.sampleStep));dialog.querySelector('[data-close-sample]').focus()});
+    dialog.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();show(Math.max(0,Math.min(book.samples.length-1,sampleIndex+(event.key==='ArrowLeft'?-1:1))))}});
+  }
+}

@@ -16,7 +16,9 @@ export const siteConfig = {
     "storyTitle": "Um universo que cresce\npágina a página.",
     "storyText": "Enerelis é um dos três mundos paralelos à Terra. As forças de Nox e Aether dão origem a povos, criaturas e capacidades extraordinárias. É neste cenário que Eyren inicia uma jornada de descoberta, crescimento e escolhas difíceis.\n\nCrónicas de Enerelis é uma série de fantasia épica de edição independente, inspirada na linguagem visual do manga. Uma história para descobrir ao ritmo de cada volume.",
     "storyImage": "assets/ambiente.jpg",
-    "authorHeading": "Patrícia Costa.\nA criar mundos."
+    "authorHeading": "Patrícia Costa.\nA criar mundos.",
+    "startTitle": "Primeira visita a Enerelis?",
+    "startText": "Começa por Prelúdio, o primeiro volume da coleção, e acompanha a história pela ordem dos livros."
   },
   "author": {
     "name": "Patrícia Costa",
@@ -29,7 +31,8 @@ export const siteConfig = {
     "intro": "Descobre os volumes de Crónicas de Enerelis pela ordem de leitura. Cada livro abre um novo capítulo da jornada de Eyren e dos seus companheiros.",
     "packHeading": "Mais capítulos.\nUma só viagem.",
     "packIntro": "Combina os volumes que queres descobrir. Confirma diretamente com a autora os preços, a disponibilidade e os portes.",
-    "contactTitle": "Continua a história\ncom a autora."
+    "contactTitle": "Continua a história\ncom a autora.",
+    "faqTitle": "Antes de começares a ler"
   },
   "contacts": {
     "title": "Falamos pelo Instagram?",
@@ -73,7 +76,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Prelúdio — Crónicas de Enerelis, volume 1",
       "featured": true,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "O primeiro passo na jornada de Eyren Caeli. Descobre o universo de Enerelis desde o início.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "sangue",
@@ -91,7 +97,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Sangue — Crónicas de Enerelis, volume 2",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "Continua a jornada de Eyren no segundo volume de Crónicas de Enerelis.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "sombras",
@@ -109,7 +118,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Sombras — Crónicas de Enerelis, volume 3",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "O terceiro capítulo da coleção convida-te a continuar a explorar Enerelis.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "cicatrizes",
@@ -127,7 +139,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Cicatrizes — Crónicas de Enerelis, volume 4",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "Prossegue a história no quarto volume de Crónicas de Enerelis.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "ilusoes",
@@ -145,7 +160,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Ilusões — Crónicas de Enerelis, volume 5",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "Regressa ao universo de Enerelis no quinto volume da coleção.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "asas",
@@ -163,7 +181,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Asas — Crónicas de Enerelis, volume 6",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "A jornada continua em Asas, o sexto volume, dividido em dois tomos.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "monstros",
@@ -181,7 +202,10 @@ export const siteConfig = {
       "imageAlt": "Capa de Monstros — Crónicas de Enerelis, volume 7",
       "featured": false,
       "priceUntil": "2026-12-31",
-      "editions": []
+      "editions": [],
+      "intro": "Descobre Monstros, o sétimo volume da história, dividido em dois tomos.",
+      "dimensions": "",
+      "samples": []
     },
     {
       "id": "mascaras",
@@ -206,7 +230,10 @@ export const siteConfig = {
           "status": "Esgotada",
           "description": "30 exemplares numerados, introdução e 3 páginas do capítulo 76 a cores, contracapa diferenciada e extras anunciados pela autora."
         }
-      ]
+      ],
+      "intro": "Máscaras abre o oitavo capítulo da coleção, dividido em dois tomos.",
+      "dimensions": "",
+      "samples": []
     }
   ],
   "packs": [
@@ -340,5 +367,27 @@ export const siteConfig = {
     "shippingNote": "Os valores da primeira coluna aplicam-se aos volumes 01 a 04; a segunda, aos volumes 05 a 07. Envios com 4 livros ou mais e combinações de formatos: sob consulta. Inclui número de tracking.",
     "paymentText": "Pagamento por MB WAY ou transferência bancária. Confirma os dados e o total da encomenda diretamente com a autora.",
     "preorderText": "Volume 08: previsão de entrega e envio no início de novembro de 2026. Os portes indicados para a pré-venda aplicam-se apenas ao envio deste volume."
-  }
+  },
+  "faq": [
+    {
+      "question": "Por onde começo a ler?",
+      "answer": "Começa pelo Volume 01, Prelúdio. A coleção é apresentada pela ordem de leitura, do primeiro ao oitavo volume."
+    },
+    {
+      "question": "O que significa um volume ter dois tomos?",
+      "answer": "Alguns volumes estão divididos em dois livros físicos. Confirma com a autora os tomos incluídos e a edição disponível ao fazer o pedido."
+    },
+    {
+      "question": "Como faço uma encomenda?",
+      "answer": "Escolhe um livro ou pack e contacta a autora pelo Instagram ou WhatsApp. Podes também reunir volumes numa lista e enviar um pedido de informações por WhatsApp. A disponibilidade, os portes e o pagamento são confirmados por mensagem."
+    },
+    {
+      "question": "Os preços incluem os portes?",
+      "answer": "Não. Os portes são acrescentados ao preço dos livros e variam com a quantidade e os volumes. Consulta a tabela nesta página e confirma o valor final com a autora."
+    },
+    {
+      "question": "A edição especial do Volume 08 ainda está disponível?",
+      "answer": "A edição especial limitada de Máscaras encontra-se esgotada. Contacta a autora para confirmar a disponibilidade da edição normal."
+    }
+  ]
 };

@@ -45,3 +45,9 @@ Revisão do site público e do editor visual: início, coleção, ficha de livro
 ## Limites da avaliação
 
 As verificações automáticas não constituem certificação de acessibilidade nem substituem testes com utilizadores ou leitores de ecrã. A análise de contraste incidiu no tema publicado; outras combinações escolhidas no editor precisam de revisão própria. O editor continua a guardar localmente e a exportar o site, sem publicação remota autenticada.
+
+## Descoberta e contacto — 30/10/2026
+
+Implementados: entrada pelo primeiro volume, apresentação breve sem spoilers, sinopse expansível, FAQ configurável, lista persistente para WhatsApp e poupança de packs calculada com preços válidos. Suporte a amostras de até oito páginas com ampliação acessível e campos opcionais de dimensões. Sem páginas ou ISBNs confirmados, não se inventam dados. O PoC mantém exportação local, sem simular autenticação ou publicação direta.
+
+Verificação executada: regressão a 320/390/768/1440 px, pesquisa, validação, backup/ZIP, pré-visualização e offline. Testes adicionais a 390/1440 px: lista entre páginas, WhatsApp, FAQ, upload e diálogo de amostras, teclado/foco, configurações anteriores e exportação/cache das imagens. Zero violações nas análises axe WCAG A/AA executadas, incluindo diálogo. Não substitui verificação com leitores de ecrã e equipamentos iOS reais.
