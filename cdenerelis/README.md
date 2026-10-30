@@ -30,3 +30,7 @@ A página inicial, a coleção e cada livro são gerados com conteúdo HTML comp
 Alterações no editor e cópias ficam locais ao navegador até serem exportadas e publicadas. Não há autenticação de administradora, base de dados partilhada nem publicação remota automática. A edição visual e a exportação funcionam; um CMS remoto autenticado deve ser escolhido conforme o alojamento da autora, se for necessário publicar diretamente pelo navegador.
 
 O código-fonte da configuração está em content.js. O editor gera esse ficheiro e as páginas automaticamente na exportação. Configurações antigas da POC ficam intocadas no armazenamento do navegador, mas não são utilizadas nesta versão de livros.
+
+## Revisão UI/UX
+
+A revisão de 30-10-2026 e as verificações executadas estão documentadas em `UI-UX-REVIEW.md`. Para regenerar as páginas estáticas e o service worker depois de alterar os módulos: `node build.mjs`, na pasta do projeto. A configuração editorial mantém-se em `content.js`; o editor visual continua a permitir exportar o site sem editar código.

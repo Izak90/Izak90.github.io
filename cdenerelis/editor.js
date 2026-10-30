@@ -1,20 +1,36 @@
-import {siteConfig} from './content.js';
-import {STORAGE_KEY,esc,validateConfig,bookFile} from './model.js';
-import {collectResources,buildSite} from './exporter.js';
-import {zipFiles} from './zip.js';
+import {siteConfig} from './content.js?v=5';
+import {STORAGE_KEY,esc,validateConfig,bookFile,validISBN} from './model.js?v=5';
+import {collectResources,buildSite} from './exporter.js?v=5';
+import {zipFiles} from './zip.js?v=5';
 const $=selector=>document.querySelector(selector);
 let config=structuredClone(siteConfig),tab='home',bookId=config.books[0]?.id,packId=config.packs[0]?.id;
 try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved&&!validateConfig(saved))config=saved}catch{}
 bookId=config.books[0]?.id;packId=config.packs[0]?.id;
+let unsavedChanges=false;
 const get=path=>path.split('.').reduce((o,key)=>o?.[key],config);
 function set(path,value){const parts=path.split('.');let object=config;for(const key of parts.slice(0,-1)){if(['__proto__','constructor','prototype'].includes(key))return;object=object[key]}object[parts.at(-1)]=value;}
-function message(text){$('#editor-message').textContent=text;$('#editor-message').style.display='block';}
-function dirty(){$('#save-state').textContent='Alterações por guardar';}
+function message(text,kind='status'){const el=$('#editor-message');el.textContent=text;el.dataset.kind=kind;el.setAttribute('role',kind==='error'?'alert':'status');el.hidden=false;el.style.display='block';if(kind==='error')el.focus();}
+function dirty(){unsavedChanges=true;$('#save-state').textContent='Alterações por guardar';}
+window.addEventListener('beforeunload',event=>{if(unsavedChanges){event.preventDefault();event.returnValue='';}});
 function sendPreview(){if(!validateConfig(config))$('#preview-frame').contentWindow?.postMessage({type:'enerelis-preview',config},location.origin);}
-function persist(){const error=validateConfig(config);if(error){message(error);return false}try{localStorage.setItem(STORAGE_KEY,JSON.stringify(config));$('#save-state').textContent='Guardado neste navegador · ainda não publicado';sendPreview();message('Pré-visualização guardada. Para a partilhar com todos, transfere o site no separador Publicar.');return true}catch{message('O armazenamento do navegador está cheio ou indisponível. Usa imagens menores ou exporta uma cópia antes de continuar.');return false}}
-function field(path,label,type='text',options=[]){const value=get(path),id='field-'+path.replaceAll('.','-');if(type==='check')return `<label class="check"><input type="checkbox" id="${id}" data-path="${path}" ${value?'checked':''}>${esc(label)}</label>`;if(type==='image')return `<label for="${id}">${esc(label)}<img class="image-preview" src="${esc(value)}" alt="Imagem atual"><input id="${id}" type="file" accept="image/png,image/jpeg,image/webp" data-image="${path}"><small>PNG, JPEG ou WebP, até 1,5 MB. A imagem fica incluída na exportação.</small></label>`;if(type==='textarea')return `<label for="${id}">${esc(label)}<textarea id="${id}" data-path="${path}" rows="6" maxlength="12000">${esc(value)}</textarea></label>`;if(type==='select')return `<label for="${id}">${esc(label)}<select id="${id}" data-path="${path}">${options.map(([key,name])=>`<option value="${key}" ${value===key?'selected':''}>${esc(name)}</option>`).join('')}</select></label>`;return `<label for="${id}">${esc(label)}<input id="${id}" type="${type==='phone'?'tel':type}" data-path="${path}" value="${esc(value)}" ${type==='number'?'min="0" step="0.01"':type==='text'?'maxlength="500"':''}></label>`;}
+function persist(){const form=$('#settings');form.querySelectorAll('[data-path]').forEach(checkField);if(!form.checkValidity()){message('Revê o campo assinalado antes de guardar.','error');const invalid=form.querySelector('input:invalid,textarea:invalid,select:invalid');invalid?.focus();invalid?.reportValidity();return false}const error=validateConfig(config);if(error){showValidationError(error);return false}try{localStorage.setItem(STORAGE_KEY,JSON.stringify(config));unsavedChanges=false;$('#save-state').textContent='Guardado neste navegador · ainda não publicado';sendPreview();message('Pré-visualização guardada. Para a partilhar com todos, transfere o site no separador Publicar.');return true}catch{message('O armazenamento do navegador está cheio ou indisponível. Usa imagens menores ou exporta uma cópia antes de continuar.');return false}}
+
+function checkField(input){
+  if(!input.setCustomValidity)return;input.setCustomValidity('');
+  const path=input.dataset.path;
+  if(/\.isbn\.\d+\.value$/.test(path)&&!validISBN(input.value))input.setCustomValidity('Indica um ISBN-10 ou ISBN-13 válido, ou remove esta linha enquanto estiver por confirmar.');
+  if(input.required&&!String(input.value).trim())input.setCustomValidity('Preenche este campo antes de guardar.');
+  input.setAttribute('aria-invalid',String(!input.validity.valid));
+}
+function showValidationError(error){
+  const invalid=config.books.flatMap((book,index)=>book.isbn.map((isbn,j)=>({book,index,j,isbn}))).find(item=>!validISBN(item.isbn.value));
+  if(invalid){tab='books';bookId=invalid.book.id;render();const input=document.querySelector('[data-path="books.'+invalid.index+'.isbn.'+invalid.j+'.value"]');checkField(input);message('No livro '+invalid.book.title+', confirma o ISBN assinalado.','error');input.focus();input.reportValidity();return}
+  message(error,'error');
+}
+
+function field(path,label,type='text',options=[]){const value=get(path),id='field-'+path.replaceAll('.','-'),integer=/(?:^|\.)(volume|year|pages|tomes)$/.test(path),required=['brand.title','home.title','author.name'].includes(path)||/^books\.\d+\.(title|synopsis|volume)$/.test(path);if(type==='check')return `<label class="check"><input type="checkbox" id="${id}" data-path="${path}" ${value?'checked':''}>${esc(label)}</label>`;if(type==='image')return `<label for="${id}">${esc(label)}<img class="image-preview" src="${esc(value)}" alt="Imagem atual"><input id="${id}" type="file" accept="image/png,image/jpeg,image/webp" data-image="${path}"><small>PNG, JPEG ou WebP, até 1,5 MB. A imagem fica incluída na exportação.</small></label>`;if(type==='textarea')return `<label for="${id}">${esc(label)}<textarea id="${id}" data-path="${path}" rows="6" maxlength="12000" ${required?'required':''}>${esc(value)}</textarea></label>`;if(type==='select')return `<label for="${id}">${esc(label)}<select id="${id}" data-path="${path}">${options.map(([key,name])=>`<option value="${key}" ${value===key?'selected':''}>${esc(name)}</option>`).join('')}</select></label>`;return `<label for="${id}">${esc(label)}<input id="${id}" type="${type==='phone'?'tel':type}" data-path="${path}" value="${esc(value)}" ${type==='number'?`min="${integer?1:0}" step="${integer?1:'0.01'}"`:type==='text'?'maxlength="500"':''} ${required?'required':''}></label>`;}
 const row=(...fields)=>`<div class="row">${fields.join('')}</div>`;
-const heading=(title,help='')=>`<h2>${esc(title)}</h2>${help?`<p class="help">${esc(help)}</p>`:''}`;
+const heading=(title,help='')=>`<h2 id="editor-section-title" tabindex="-1">${esc(title)}</h2>${help?`<p class="help">${esc(help)}</p>`:''}`;
 function fieldsForTab(){
   if(tab==='home')return heading('A primeira impressão','Muda os textos, a imagem de abertura e a apresentação das Crónicas. As quebras de linha dos títulos são respeitadas.')+field('brand.title','Nome do site')+field('brand.tagline','Assinatura do cabeçalho')+field('home.eyebrow','Frase acima do título')+field('home.title','Título principal','textarea')+field('home.lead','Apresentação inicial','textarea')+row(field('home.primaryLabel','Botão dos livros'),field('home.secondaryLabel','Botão de contacto'))+field('home.image','Imagem de abertura','image')+field('home.imageAlt','Descrição da imagem para acessibilidade')+field('home.imageCaption','Legenda da imagem')+'<h3>Apresentação das Crónicas</h3>'+field('home.storyTitle','Título da apresentação','textarea')+field('home.storyText','Texto sobre o universo','textarea')+field('home.storyImage','Imagem do universo','image');
   if(tab==='author')return heading('A autora')+field('author.name','Nome da autora')+field('home.authorHeading','Título da biografia','textarea')+field('author.bio','Biografia','textarea')+field('author.image','Fotografia','image')+field('author.imageAlt','Descrição da fotografia');
@@ -44,7 +60,7 @@ $('#settings').addEventListener('submit',event=>{event.preventDefault();persist(
 $('#save-config').onclick=persist;
 $('#settings').addEventListener('input',event=>{
   const input=event.target;
-  if(input.dataset.path){const value=input.type==='checkbox'?input.checked:input.type==='number'?(input.value===''?null:Number(input.value)):input.value;set(input.dataset.path,value);dirty();sendPreview()}
+  if(input.dataset.path){const value=input.type==='checkbox'?input.checked:input.type==='number'?(input.value===''?null:Number(input.value)):input.value;set(input.dataset.path,input.dataset.path==='contacts.whatsapp'?String(value).replace(/[\s()-]/g,''):value);checkField(input);dirty();sendPreview()}
   if(input.dataset.packBook){const pack=config.packs.find(p=>p.id===packId);pack.bookIds=input.checked?[...pack.bookIds,input.dataset.packBook]:pack.bookIds.filter(id=>id!==input.dataset.packBook);dirty();sendPreview()}
 });
 $('#settings').addEventListener('change',async event=>{
@@ -54,7 +70,7 @@ $('#settings').addEventListener('change',async event=>{
   if(input.dataset.image){const file=input.files[0];if(!file)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>1500000){message('Escolhe uma imagem PNG, JPEG ou WebP até 1,5 MB.');input.value='';return}try{const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file)});set(input.dataset.image,data);dirty();render();sendPreview()}catch{message('Não foi possível abrir a imagem.')}}
   if(input.id==='import-config'){const file=input.files[0];if(!file)return;try{if(file.size>8000000)throw Error('A cópia excede 8 MB.');const next=JSON.parse(await file.text()),error=validateConfig(next);if(error)throw Error(error);if(confirm('Substituir a pré-visualização e os dados guardados neste navegador?')){config=next;bookId=config.books[0]?.id;packId=config.packs[0]?.id;render();persist();setPreview('index.html')}}catch(error){message(error.message||'Ficheiro inválido.')}}
 });
-document.querySelectorAll('[data-tab]').forEach(button=>button.onclick=()=>{tab=button.dataset.tab;render();if(tab==='home'||tab==='author')setPreview(tab==='author'?'index.html#autora':'index.html');if(['books','packs','pricing'].includes(tab))setPreview(tab==='books'&&bookId?'livros.html?book='+bookId:tab==='packs'?'livros.html#packs':'livros.html#condicoes')});
+document.querySelectorAll('[data-tab]').forEach(button=>button.onclick=()=>{tab=button.dataset.tab;render();$('#editor-section-title').focus({preventScroll:true});if(tab==='home'||tab==='author')setPreview(tab==='author'?'index.html#autora':'index.html');if(['books','packs','pricing'].includes(tab))setPreview(tab==='books'&&bookId?'livros.html?book='+bookId:tab==='packs'?'livros.html#packs':'livros.html#condicoes')});
 $('#preview-page').onchange=event=>setPreview(event.target.value);
 $('#wide-preview').onclick=()=>{$('#preview-device').classList.remove('mobile');$('#wide-preview').setAttribute('aria-pressed','true');$('#mobile-preview').setAttribute('aria-pressed','false')};
 $('#mobile-preview').onclick=()=>{$('#preview-device').classList.add('mobile');$('#wide-preview').setAttribute('aria-pressed','false');$('#mobile-preview').setAttribute('aria-pressed','true')};
@@ -71,7 +87,7 @@ $('#settings').addEventListener('click',async event=>{
   if(action==='remove-edition'&&book){book.editions.splice(Number(button.dataset.index),1);render();dirty();sendPreview();return}
   if(action==='new-pack'){if(!config.books.length){message('Adiciona primeiro um livro.');return}packId='novo-pack-'+crypto.randomUUID().slice(0,8);config.packs.push({id:packId,title:'Novo pack',bookIds:[config.books[0].id],description:'Escreve a apresentação deste conjunto.',price:null,priceUntil:'',enabled:true});render();dirty();sendPreview();return}
   if(action==='delete-pack'&&pack&&confirm('Eliminar este pack da pré-visualização?')){config.packs=config.packs.filter(p=>p.id!==packId);packId=config.packs[0]?.id;render();dirty();sendPreview();return}
-  if(action==='reset'&&confirm('Repor os conteúdos publicados e remover as alterações locais?')){config=structuredClone(siteConfig);localStorage.removeItem(STORAGE_KEY);bookId=config.books[0]?.id;packId=config.packs[0]?.id;render();$('#save-state').textContent='Configuração publicada reposta';setPreview('index.html');return}
+  if(action==='reset'&&confirm('Repor os conteúdos publicados e remover as alterações locais?')){config=structuredClone(siteConfig);localStorage.removeItem(STORAGE_KEY);bookId=config.books[0]?.id;packId=config.packs[0]?.id;render();unsavedChanges=false;$('#save-state').textContent='Configuração publicada reposta';setPreview('index.html');return}
   if(action==='backup'){const error=validateConfig(config);if(error){message(error);return}download(JSON.stringify(config,null,2),'enerelis-configuracao.json','application/json');message('Cópia de segurança transferida.');return}
   if(action==='zip'||action==='folder'){
     const error=validateConfig(config);if(error){message(error);return}if(action==='folder'&&!window.showDirectoryPicker){message('Este navegador não permite escolher uma pasta. Usa a opção ZIP.');return}
