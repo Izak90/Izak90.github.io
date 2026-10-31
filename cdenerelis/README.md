@@ -49,3 +49,9 @@ Nesta fase de PoC mantém-se o editor local com exportação. Autenticação e p
 Edita uma secção, confirma o resultado na pré-visualização e usa **Guardar e aplicar**. **Ver aplicação** abre o site com as definições guardadas, sem precisar de um endereço de pré-visualização. A pré-visualização pode mostrar alterações ainda por guardar.
 
 **Repor definições iniciais** restaura todos os conteúdos e a aparência da versão fornecida e atualiza a aplicação neste navegador. Pede confirmação e pode ser cancelado. Recomenda-se transferir uma cópia antes de repor. As combinações de cores são sugestões editáveis; também é possível escolher cada cor e fonte individualmente.
+
+## Identidade e alojamento — 31/10/2026
+
+Domínio indicado pela autora: https://enerelis.pt, alojamento OVH. O domínio está configurado no editor, metadados canónicos e sitemap. Isto não altera DNS nem publica automaticamente na OVH: é necessário acesso ao painel para instalar a versão exportada na pasta associada ao domínio e confirmar HTTPS.
+
+O cabeçalho usa o logótipo oficial fornecido. Em Página inicial, o campo Logótipo do site permite substituí-lo e editar a descrição. O logótipo carregado é incluído no ZIP e no cache offline. A imagem de abertura mantém-se direita, sem rotação.

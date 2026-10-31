@@ -2,7 +2,9 @@ export const siteConfig = {
   "version": 4,
   "brand": {
     "title": "Crónicas de Enerelis",
-    "tagline": "O universo de Patrícia Costa"
+    "tagline": "O universo de Patrícia Costa",
+    "logo": "assets/enerelis-logo.jpg",
+    "logoAlt": "Logótipo oficial de Crónicas de Enerelis"
   },
   "home": {
     "eyebrow": "BANDA DESENHADA PORTUGUESA · FANTASIA ÉPICA",
@@ -57,7 +59,7 @@ export const siteConfig = {
     "siteName": "Crónicas de Enerelis · Patrícia Costa",
     "title": "Crónicas de Enerelis — banda desenhada de Patrícia Costa",
     "description": "Descobre Crónicas de Enerelis, a saga de fantasia épica de Patrícia Costa. Conhece a autora, os livros e a jornada de Eyren Caeli.",
-    "domain": ""
+    "domain": "https://enerelis.pt"
   },
   "books": [
     {

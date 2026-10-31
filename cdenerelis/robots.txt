@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /cdenerelis/admin.html
-Sitemap: https://izak90.github.io/cdenerelis/sitemap.xml
+Disallow: /admin.html
+Sitemap: https://enerelis.pt/sitemap.xml

@@ -26,3 +26,8 @@ body{font-size:16px}.site-header nav{font-size:13px}.site-header nav a{min-heigh
 
 /* Preserva a composição completa das imagens do universo e da autora. */
 .story figure img,.author figure img{height:auto;max-height:none;aspect-ratio:auto;object-fit:contain}
+
+/* Identidade oficial e imagem de abertura direita. */
+.hero-figure{transform:none}
+.brand-logo{display:block;width:56px;height:56px;flex-shrink:0;object-fit:contain;border-radius:50%}
+@media(max-width:700px){.brand-logo{width:46px;height:46px}}

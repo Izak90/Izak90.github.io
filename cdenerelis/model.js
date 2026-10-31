@@ -14,7 +14,7 @@ export function validISBN(value) {
 }
 export function imageOK(value) { return typeof value==='string' && (/^assets\/[a-zA-Z0-9_.-]+\.(?:png|jpe?g|webp|svg)$/.test(value) || /^data:image\/(?:png|jpeg|webp);base64,[a-zA-Z0-9+/=]+$/.test(value) && value.length<2200000); }
 export function instagramOK(value) { try {const url=new URL(value);return url.protocol==='https:'&&['instagram.com','www.instagram.com'].includes(url.hostname)&&!url.username&&!url.password;} catch{return false;} }
-export function normalizeBase(config, fallback='https://izak90.github.io/cdenerelis/') { return config.seo.domain ? new URL(config.seo.domain.endsWith('/')?config.seo.domain:config.seo.domain+'/').href : fallback; }
+export function normalizeBase(config, fallback='https://enerelis.pt/') { return config.seo.domain ? new URL(config.seo.domain.endsWith('/')?config.seo.domain:config.seo.domain+'/').href : fallback; }
 const priceOK = n => n===null || Number.isFinite(n) && n>=0 && n<=100000;
 const textOK = (s,max=1000) => typeof s==='string' && s.length<=max;
 const idOK = s => typeof s==='string' && /^[a-z0-9][a-z0-9-]{0,79}$/.test(s);
@@ -24,9 +24,11 @@ export function validateConfig(config) {
     for (const group of ['brand','home','author','booksPage','contacts','seo']) {
       if (!config[group] || Array.isArray(config[group])) return `Falta a secção ${group}.`;
       for (const [key,value] of Object.entries(config[group])) {
-        if (!textOK(value,key.toLowerCase().includes('image')?2200000:15000)) return 'Há campos de texto inválidos.';
+        if (!textOK(value,(key.toLowerCase().includes('image')||key==='logo')?2200000:15000)) return 'Há campos de texto inválidos.';
       }
     }
+    if(config.brand.logo!==undefined&&!imageOK(config.brand.logo))return 'Escolhe um logótipo válido no editor.';
+    if(config.brand.logoAlt!==undefined&&!textOK(config.brand.logoAlt,250))return 'A descrição do logótipo deve ter até 250 caracteres.';
     if (!config.brand.title.trim() || !config.home.title.trim() || !config.author.name.trim()) return 'Preenche o nome do site, o título inicial e o nome da autora.';
     for (const image of [config.home.image,config.home.storyImage,config.author.image]) if (!imageOK(image)) return 'Imagem inválida. Usa uma imagem carregada no editor.';
     if (!instagramOK(config.contacts.instagram)) return 'A ligação do Instagram deve começar por https://www.instagram.com/.';

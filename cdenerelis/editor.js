@@ -1,12 +1,12 @@
-import {siteConfig} from './content.js?v=7';
-import {STORAGE_KEY,esc,validateConfig,bookFile,validISBN} from './model.js?v=7';
-import {collectResources,buildSite} from './exporter.js?v=7';
-import {zipFiles} from './zip.js?v=7';
+import {siteConfig} from './content.js?v=8';
+import {STORAGE_KEY,esc,validateConfig,bookFile,validISBN} from './model.js?v=8';
+import {collectResources,buildSite} from './exporter.js?v=8';
+import {zipFiles} from './zip.js?v=8';
 const $=selector=>document.querySelector(selector);
 let config=structuredClone(siteConfig),tab='home',bookId=config.books[0]?.id,packId=config.packs[0]?.id;
 try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved&&!validateConfig(saved))config=saved}catch{}
 bookId=config.books[0]?.id;packId=config.packs[0]?.id;
-function defaults(){config.faq??=[];config.books.forEach(b=>{b.intro??='';b.dimensions??='';b.samples??=[]})}defaults();
+function defaults(){config.brand.logo??=siteConfig.brand.logo;config.brand.logoAlt??=siteConfig.brand.logoAlt;config.faq??=[];config.books.forEach(b=>{b.intro??='';b.dimensions??='';b.samples??=[]})}defaults();
 let unsavedChanges=false;
 const get=path=>path.split('.').reduce((o,key)=>o?.[key],config);
 function set(path,value){const parts=path.split('.');let object=config;for(const key of parts.slice(0,-1)){if(['__proto__','constructor','prototype'].includes(key))return;object=object[key]}object[parts.at(-1)]=value;}
@@ -33,7 +33,7 @@ function field(path,label,type='text',options=[]){const value=get(path),id='fiel
 const row=(...fields)=>`<div class="row">${fields.join('')}</div>`;
 const heading=(title,help='')=>`<h2 id="editor-section-title" tabindex="-1">${esc(title)}</h2>${help?`<p class="help">${esc(help)}</p>`:''}`;
 function fieldsForTab(){
-  if(tab==='home')return heading('A primeira impressão','Muda os textos, a imagem de abertura e a apresentação das Crónicas. As quebras de linha dos títulos são respeitadas.')+field('brand.title','Nome do site')+field('brand.tagline','Assinatura do cabeçalho')+field('home.eyebrow','Frase acima do título')+field('home.title','Título principal','textarea')+field('home.lead','Apresentação inicial','textarea')+row(field('home.primaryLabel','Botão dos livros'),field('home.secondaryLabel','Botão de contacto'))+field('home.image','Imagem de abertura','image')+field('home.imageAlt','Descrição da imagem para acessibilidade')+field('home.imageCaption','Legenda da imagem')+'<h3>Apresentação das Crónicas</h3>'+field('home.storyTitle','Título da apresentação','textarea')+field('home.storyText','Texto sobre o universo','textarea')+field('home.storyImage','Imagem do universo','image')+field('home.startTitle','Título para novos leitores')+field('home.startText','Apresentação do primeiro volume','textarea');
+  if(tab==='home')return heading('A primeira impressão','Muda os textos, a imagem de abertura e a apresentação das Crónicas. As quebras de linha dos títulos são respeitadas.')+field('brand.title','Nome do site')+field('brand.tagline','Assinatura do cabeçalho')+field('brand.logo','Logótipo do site','image')+field('brand.logoAlt','Descrição do logótipo')+field('home.eyebrow','Frase acima do título')+field('home.title','Título principal','textarea')+field('home.lead','Apresentação inicial','textarea')+row(field('home.primaryLabel','Botão dos livros'),field('home.secondaryLabel','Botão de contacto'))+field('home.image','Imagem de abertura','image')+field('home.imageAlt','Descrição da imagem para acessibilidade')+field('home.imageCaption','Legenda da imagem')+'<h3>Apresentação das Crónicas</h3>'+field('home.storyTitle','Título da apresentação','textarea')+field('home.storyText','Texto sobre o universo','textarea')+field('home.storyImage','Imagem do universo','image')+field('home.startTitle','Título para novos leitores')+field('home.startText','Apresentação do primeiro volume','textarea');
   if(tab==='author')return heading('A autora')+field('author.name','Nome da autora')+field('home.authorHeading','Título da biografia','textarea')+field('author.bio','Biografia','textarea')+field('author.image','Fotografia','image')+field('author.imageAlt','Descrição da fotografia');
   if(tab==='faq')return heading('Perguntas frequentes','Respostas curtas sobre leitura e encomendas. Máximo: 20 perguntas.')+field('booksPage.faqTitle','Título da secção')+config.faq.map((item,j)=>'<fieldset><legend>Pergunta '+(j+1)+'</legend>'+field('faq.'+j+'.question','Pergunta')+field('faq.'+j+'.answer','Resposta','textarea')+'<button type="button" data-action="remove-faq" data-index="'+j+'">Remover pergunta</button></fieldset>').join('')+'<button type="button" data-action="add-faq">+ Adicionar pergunta</button>';
   if(tab==='contacts')return heading('Conversas que continuam','O Instagram permanece o canal principal. O WhatsApp só aparece no site quando o número estiver preenchido.')+field('contacts.title','Título dos contactos','textarea')+field('contacts.text','Texto de apresentação','textarea')+field('contacts.instagram','Endereço do Instagram','url')+field('contacts.instagramLabel','Texto do botão do Instagram')+field('contacts.whatsapp','WhatsApp, com indicativo','phone')+field('contacts.whatsappLabel','Texto do botão do WhatsApp')+field('contacts.whatsappMessage','Mensagem inicial no WhatsApp','textarea');

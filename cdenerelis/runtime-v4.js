@@ -1,6 +1,6 @@
-import {siteConfig} from './content.js?v=7';
-import {STORAGE_KEY,validateConfig,esc,activePrice,money,contactHref} from './model.js?v=7';
-import {renderBody,renderDocument,themeCSS} from './render.js?v=7';
+import {siteConfig} from './content.js?v=8';
+import {STORAGE_KEY,validateConfig,esc,activePrice,money,contactHref} from './model.js?v=8';
+import {renderBody,renderDocument,themeCSS} from './render.js?v=8';
 const params=new URLSearchParams(location.search);
 const page=params.has('book')?'book':document.body.dataset.page||'home',id=params.get('book')||document.body.dataset.book||'';
 let current=siteConfig;
