@@ -174,9 +174,9 @@
       "simulator": null,
       "workbook": "./simuladores/uc05_comunicacao_no_fitness.html",
       "difficulties": [],
-      "trainer": null,
+      "trainer": "Catarina Olim",
       "driveUrl": "https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa",
-      "asynchronousClass": null,
+      "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-16-2-4/",
       "sourceStatus": {
         "materials": "linked_not_imported",
         "coverage": "not_audited",
