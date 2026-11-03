@@ -24,15 +24,17 @@ export function validateConfig(config) {
     for (const group of ['brand','home','author','booksPage','contacts','seo']) {
       if (!config[group] || Array.isArray(config[group])) return `Falta a secção ${group}.`;
       for (const [key,value] of Object.entries(config[group])) {
-        if (!textOK(value,(key.toLowerCase().includes('image')||key==='logo')?2200000:15000)) return 'Há campos de texto inválidos.';
+        if (!textOK(value,(key.toLowerCase().includes('image')||key==='logo'||key==='wordmark')?2200000:15000)) return 'Há campos de texto inválidos.';
       }
     }
     if(config.brand.logo!==undefined&&!imageOK(config.brand.logo))return 'Escolhe um logótipo válido no editor.';
+    if(config.brand.wordmark!==undefined&&!imageOK(config.brand.wordmark))return 'Escolhe uma imagem válida para o nome do site.';
     if(config.brand.logoAlt!==undefined&&!textOK(config.brand.logoAlt,250))return 'A descrição do logótipo deve ter até 250 caracteres.';
     if (!config.brand.title.trim() || !config.home.title.trim() || !config.author.name.trim()) return 'Preenche o nome do site, o título inicial e o nome da autora.';
     for (const image of [config.home.image,config.home.storyImage,config.author.image]) if (!imageOK(image)) return 'Imagem inválida. Usa uma imagem carregada no editor.';
     if (!instagramOK(config.contacts.instagram)) return 'A ligação do Instagram deve começar por https://www.instagram.com/.';
     if (config.contacts.whatsapp && !/^\+?\d{8,15}$/.test(config.contacts.whatsapp)) return 'WhatsApp: indica apenas o indicativo e o número (8–15 algarismos).';
+    if (config.contacts.email && !/^[^\s@<>?&#]+@[^\s@<>?&#]+\.[^\s@<>?&#]+$/.test(config.contacts.email)) return 'Indica um endereço de email válido.';
     if (config.seo.domain) {const url=new URL(config.seo.domain);if(url.protocol!=='https:'||url.username||url.password||url.search||url.hash) return 'O domínio deve ser um endereço HTTPS sem parâmetros.';}
     if (!['split','centered','minimal'].includes(config.theme.layout) || !Object.hasOwn(fonts,config.theme.headingFont) || !Object.hasOwn(fonts,config.theme.bodyFont)) return 'Escolhe uma apresentação e fontes disponíveis no editor.';
     for (const field of ['primary','accent','background','text','muted']) if(!/^#[0-9a-f]{6}$/i.test(config.theme[field])) return 'Há uma cor inválida.';

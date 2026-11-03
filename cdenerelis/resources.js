@@ -1,6 +1,8 @@
 export const resourceFiles = [
   "style.css",
-  "assets/enerelis-logo.jpg",
+  "assets/enerelis-logo.png",
+  "assets/logo-azulverde.png",
+  "assets/logo-preto.png",
   "fonts.css",
   "runtime-v4.js",
   "model.js",

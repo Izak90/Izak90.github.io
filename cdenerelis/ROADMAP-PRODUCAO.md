@@ -1,145 +1,90 @@
-# Roadmap de produção — Crónicas de Enerelis
+﻿# Roadmap de produção — Crónicas de Enerelis
 
-Data: 31 de outubro de 2026  
-Domínio pretendido: **https://enerelis.pt**  
-Alojamento indicado: **OVHcloud**; plano e configuração por confirmar.
+Atualizado em **3 de novembro de 2026**. PoC aprovado. Contas GitHub e Cloudflare criadas pela titular; repositório [Enerelis/Enerelis](https://github.com/Enerelis/Enerelis) na sua conta e responsável técnico como colaborador. Estes dados não comprovam uma ligação Cloudflare ativa ou uma publicação.
 
-## Objetivo e âmbito
+## Arquitetura e decisão proposta
 
-Publicar uma montra rápida, acessível e pesquisável no Google, que apresente a saga, a autora e os livros e encaminhe os interessados para o Instagram ou WhatsApp. A autora deve conseguir manter conteúdos e aparência sem editar código.
+Manter a montra estática atual: HTML completo para início, coleção e livros; CSS/JavaScript sem dependências de execução; conteúdos em `content.js`; geração por `exporter.js`. Cloudflare Pages ligado ao GitHub é o destino proposto. O domínio é `enerelis.pt`; a referência anterior à OVH passa a contexto do registo/alojamento existente, cujo estado deve ser inventariado antes de qualquer migração.
 
-Mantêm-se as páginas de início, coleção e detalhes de cada livro, preços e packs, FAQ, contactos e amostras autorizadas. Não se incluem eventos, catálogo de stickers/prints, checkout ou ligações públicas ao Goodreads. Os detalhes dos livros continuam em páginas próprias; a ampliação das amostras usa um diálogo.
+O lançamento inicial pode usar publicação assistida por Git: alterações revistas numa pull request, preview, aprovação e merge em `main`. O editor atual continua local: **Guardar e aplicar não publica na Internet**. Retirar o acesso do rodapé não cria autenticação. Se a autonomia editorial for requisito para o primeiro lançamento, a fase de CMS abaixo torna-se bloqueante.
 
-## Ponto de partida
+Não há checkout: disponibilidade e total final são confirmados por contacto. Instagram, WhatsApp e email são os canais previstos.
 
-O PoC tem HTML, CSS e JavaScript, páginas estáticas geradas, metadados, sitemap, manifesto, service worker, editor visual e exportação. Não é necessário mudar de framework para publicar esta montra.
+## Fases e critérios de aceitação
 
-**A principal diferença para produção é a publicação dos conteúdos.** Atualmente, “Guardar e aplicar” altera apenas a aplicação nesse navegador. Não existe autenticação de administradora, armazenamento partilhado nem publicação remota pelo editor. Um botão de guardar local não satisfaz o requisito de a autora publicar para todos os visitantes.
-
-O domínio já está na configuração do projeto. Isso não demonstra que o site esteja instalado na OVH nem que DNS, certificado e redirecionamentos estejam corretos. Os ISBNs continuam por confirmar. As amostras dependem de páginas fornecidas pela autora.
-
-## Sequência e marcos
-
-| Fase | Resultado | Responsável principal | Dependência |
+| Prioridade / fase | Entrega | Aceitação | Responsável |
 | --- | --- | --- | --- |
-| 1. Acessos e inventário | Conhecer o alojamento e preservar o que existe | Autora + responsável técnico | Nenhuma |
-| 2. Conteúdo aprovado | Catálogo e identidade prontos a publicar | Autora | Pode decorrer em paralelo com 1 |
-| 3. Publicação e gestão | Escolher e implementar o fluxo editorial | Responsável técnico + autora | 1 |
-| 4. Pré-produção na OVH | Versão completa testável sem substituir o site atual | Responsável técnico | 1 e 3 |
-| 5. Validação final | Aprovação funcional, editorial e operacional | Autora + responsável técnico | 2 e 4 |
-| 6. Lançamento | Site público em enerelis.pt, com recuperação preparada | Responsável técnico | 5 + autorização de lançamento |
-| 7. Acompanhamento | Corrigir problemas reais e manter conteúdos atuais | Autora + responsável técnico | 6 |
+| P0 · Conteúdo e UI | Correções do TODO, identidade, preços e contactos | Revisão no telemóvel e aprovação editorial dos dados finais | Técnica + titular |
+| P0 · Integração | GitHub da titular ligado ao Cloudflare Pages e preview | Build limpo, apenas `dist` publicado, preview associado a commit | Técnica + titular |
+| P0 · Qualidade | Verificação funcional, acessibilidade, SEO e cache | Sem falhas bloqueantes nos critérios abaixo | Técnica |
+| P0 · Domínio e lançamento | DNS, HTTPS, redirecionamentos e recuperação | `enerelis.pt` serve versão aprovada; rollback ensaiado | Técnica + titular |
+| P1 · Autonomia | Publicação autenticada no editor/CMS | Rascunho privado e publicação visível noutro dispositivo | Técnica + titular |
+| P2 · Operação | Revisões, backups e evolução | Responsáveis e rotina registados, manutenção sustentável | Técnica + titular |
 
-Os prazos devem ser estimados depois de confirmar o plano OVH e a opção de gestão. Não há uma data de lançamento fechada.
+Não existe data de lançamento acordada. A primeira previsão depende da revisão editorial, acessos Cloudflare/DNS e decisão entre publicação assistida e autónoma.
 
-## 1. Confirmar acessos e estado do alojamento
+## 1. Preparar o projeto Cloudflare Pages
 
-- [ ] Identificar a conta titular, plano OVH, acesso delegado, pasta associada ao domínio, espaço disponível e versões de execução suportadas.
-- [ ] Confirmar se existem site, base de dados, caixas de correio ou outros serviços em utilização.
-- [ ] Inventariar DNS de `enerelis.pt` e `www.enerelis.pt`, incluindo registos de email. Não substituir a zona DNS integralmente.
-- [ ] Confirmar acessos seguros a ficheiros e disponibilidade de base de dados, backups e ambiente de testes conforme o plano.
-- [ ] Criar uma cópia do site e das configurações existentes antes de qualquer substituição.
-- [ ] Definir quem gere o domínio, as renovações, o alojamento e a recuperação da conta. Não colocar palavras-passe no repositório ou no site.
+1. A titular instala/autoriza a integração Cloudflare com acesso apenas a este repositório. Conceder acesso delegado ao responsável técnico; ativar autenticação de dois fatores e recuperação nas contas. Não guardar tokens no código.
+2. Criar um projeto **Pages com integração Git**, escolher `Enerelis/Enerelis`, branch de produção `main`, preset sem framework, diretório raiz do repositório, comando `npm run build`, saída `dist`. Definir Node 22 ou superior suportado pelo ambiente de build; registar a versão utilizada.
+3. O comando gera HTML e recursos numa pasta isolada. Não publicar a raiz: contém documentação e ficheiros de trabalho. O build não instala dependências de terceiros.
+4. Configurar previews de branches/pull requests e testar uma alteração antes de merge. Proteger `main` com revisão e verificações conforme as funcionalidades disponíveis na conta. Restringir previews com Cloudflare Access se contiverem informação não pública; `noindex` não controla acesso.
+5. Confirmar `_headers` nas respostas HTTP reais: cache revalidável, prevenção de MIME sniffing e editor sem indexação. O iframe do editor exige `SAMEORIGIN`.
+6. Registar nome do projeto, URL Pages, commit publicado e pessoas com acesso. Não ativar integração ou deploy usando credenciais embutidas no editor.
 
-**Critério de conclusão:** inventário registado e acesso técnico suficiente para preparar uma versão de testes, sem afetar o serviço existente.
+**Aceitação:** clone limpo → `npm run build` → preview funcional; `README.md`, `TODO.md`, ficheiros Git e pastas de revisão não são servidos. A publicação de produção mantém a versão anterior recuperável.
 
-## 2. Aprovar conteúdos e condições comerciais
+Referências oficiais verificadas em 03/11/2026: [integração Git](https://developers.cloudflare.com/pages/get-started/git-integration/), [headers](https://developers.cloudflare.com/pages/configuration/headers/) e [previews](https://developers.cloudflare.com/pages/configuration/preview-deployments/).
 
-- [ ] A autora aprova biografia, apresentação da saga, sinopses e textos sem spoilers. A pesquisa bibliográfica serve de apoio; o texto final deve ser aprovado para publicação.
-- [ ] Confirmar títulos, ordem, anos, páginas, número de tomos e ISBN por edição/tomo na ficha editorial. Não atribuir um ISBN a vários tomos sem confirmação.
-- [ ] Confirmar dimensões quando se pretenda apresentá-las; omitir dados opcionais desconhecidos.
-- [ ] Confirmar autorização para logótipo, capas, fotografia e imagens; fornecer páginas interiores autorizadas para amostras.
-- [ ] Rever disponibilidade, edições esgotadas, preços individuais, packs, portes e meios de pagamento.
-- [ ] Confirmar o que sucede ao Volume 08 após **31/10/2026**: o prazo de pré-venda termina nessa data. Não publicar previsões de envio como informação atual sem confirmação.
-- [ ] Preparar a atualização das promoções que terminam em **31/12/2026** e a respetiva revisão do HTML gerado.
-- [ ] Confirmar Instagram e autorização para publicar o WhatsApp fornecido.
+## 2. Aprovar e validar a versão de lançamento
 
-**Critério de conclusão:** aprovação escrita da versão editorial e da tabela comercial, com data de revisão. Se um ISBN não puder ser confirmado, decidir expressamente com a autora se o livro avança sem esse dado.
+- [ ] Aprovar biografia, sinopses, imagens e direitos de publicação. Confirmar os ISBNs; omitir os desconhecidos. Amostras interiores só com autorização.
+- [ ] Confirmar preços, packs (incluindo 01–08 a 169 €), Máscaras a 26 €, portes 05–08 e disponibilidade. Rever a situação real do volume 08 após 31/10/2026 sem reintroduzir mensagens vencidas.
+- [ ] Definir a atualização das promoções até 31/12/2026: uma nova publicação deve atualizar também HTML, dados estruturados e cache. Um preço expirado não pode depender apenas de JavaScript para desaparecer da página estática.
+- [ ] Testar início, coleção e todos os livros com e sem JavaScript; links, pesquisa, packs, lista de informações, email, WhatsApp e Instagram.
+- [ ] Testar teclado, foco, diálogos, zoom 200%, contraste e largura de 320 px. Validar em Safari/iOS, Chrome/Android e desktop, incluindo os logótipos sem distorção.
+- [ ] Verificar títulos, descrições, canónicos, sitemap, robots e partilhas. Previews não devem competir na pesquisa com o domínio oficial.
+- [ ] Testar PWA existente: atualização de versão, cache antigo, modo offline e regresso da rede. A informação comercial offline deve pedir confirmação.
+- [ ] Rever ausência de dados privados no artefacto, uploads e comportamento do editor. O editor local acessível por URL não deve sugerir que está autenticado ou que publica remotamente.
+- [ ] Rever a informação de privacidade conforme os serviços realmente usados. Analytics, formulários ou widgets adicionais exigem nova avaliação antes de ativar.
+- [ ] Preparar página 404 real e verificar resposta de URLs inexistentes em Pages; confirmar caminhos sem extensão e com `.html`.
 
-## 3. Definir como a autora publica alterações
+**Aceitação:** aprovação editorial registada e nenhuma falha bloqueante de navegação, contacto, preços, segurança ou perda de dados. Os testes locais não substituem os testes no preview final.
 
-### Opções compatíveis com o projeto existente
+## 3. Associar enerelis.pt e lançar
 
-| Opção | Vantagens | Limitações e manutenção | Utilização |
-| --- | --- | --- | --- |
-| A. Site estático + exportação e publicação por responsável técnico | Reutiliza o PoC; pouca infraestrutura; páginas completas para pesquisa | A autora depende de outra pessoa para publicar; transferência e recuperação de versões têm de ser organizadas | Lançamento inicial assistido, se aceite pela autora |
-| B. Site estático + serviço de publicação autenticado | Preserva a montra e o editor; permite guardar/publicar para todos; mantém páginas estáticas | Exige autenticação, uploads, armazenamento, histórico, publicação e manutenção do serviço; depende do plano OVH | Alvo para gestão autónoma sem código |
+1. Inventariar DNS e serviços existentes, incluindo MX, SPF, DKIM, DMARC, subdomínios, DNSSEC e eventual site OVH. Guardar configuração e versão atual. Confirmar acesso ao registo e renovações.
+2. Adicionar `enerelis.pt` como domínio personalizado do projeto Pages antes de apontar DNS. Para domínio raiz em Pages, a zona tem de estar na mesma conta Cloudflare; confirmar a migração de nameservers e a coordenação DNSSEC no registo. Preservar email e outros serviços. [Domínios personalizados](https://developers.cloudflare.com/pages/configuration/custom-domains/).
+3. Associar também `www.enerelis.pt` e definir redirecionamento permanente para `https://enerelis.pt/`, preservando caminhos e parâmetros. Validar HTTPS e ausência de ciclos. Preparar redirecionamento da versão Pages de produção quando apropriado, preservando previews.
+4. Aprovar a versão/commit e janela de lançamento com a titular. Efetuar a alteração e verificar resolução DNS, certificado, páginas, imagens, contactos, cache e 404 a partir de outra rede.
+5. Confirmar Google Search Console, enviar sitemap e atualizar o link Instagram. Não prometer posição na pesquisa.
+6. Ensaiar recuperação da versão anterior em Pages. Alterações DNS têm reversão separada e podem ficar em cache; manter o serviço anterior disponível durante a transição.
 
-**Recomendação:** preservar o site estático. Para satisfazer a autonomia da autora, acrescentar apenas o serviço editorial necessário, depois de confirmar a compatibilidade do alojamento. A opção A só é uma alternativa de lançamento se a dependência de um responsável técnico for explicitamente aceite; não equivale a gestão autónoma.
+**Aceitação:** domínio principal por HTTPS, redirecionamentos corretos, email preservado, versão aprovada identificável e rollback documentado. Não cancelar o alojamento anterior antes da estabilização e do inventário dos serviços.
 
-Não adotar um novo framework ou CMS por defeito. Se o alojamento ou os requisitos exigirem outra solução, documentar a justificação, custos, migração dos conteúdos, impacto no editor e manutenção antes de a escolher.
+## 4. Publicação autónoma e autenticação
 
-### Trabalho necessário para a opção B
+Antes de desenvolver, validar o fluxo com a titular: editar → guardar rascunho → preview → publicar → restaurar. Escolher uma única solução após um pequeno protótipo:
 
-- [ ] Acesso reservado, validado no servidor, com recuperação de acesso e proteção contra tentativas abusivas. Esconder o link do editor não é autenticação.
-- [ ] Guardar rascunhos no servidor, com imagens persistentes e cópias de segurança.
-- [ ] Separar **Guardar rascunho**, **Pré-visualizar** e **Publicar**, com estados e erros claros.
-- [ ] Ao publicar, validar conteúdos e gerar HTML, metadados, sitemap e cache PWA a partir da mesma versão.
-- [ ] Publicar a versão completa de forma consistente, evitando mistura de páginas antigas e novas. Manter a versão anterior recuperável.
-- [ ] Validar uploads no servidor: formato real, tamanho, nomes seguros e destino sem execução de ficheiros enviados.
-- [ ] Impedir alterações anónimas, validar entradas e proteger sessões e pedidos de alteração; não expor credenciais de alojamento no JavaScript.
-- [ ] Tratar falhas de rede e alterações concorrentes sem perder conteúdo ou comunicar publicação quando esta falhou.
-- [ ] Definir **Repor definições iniciais** separadamente de **Restaurar versão anterior**. A reposição em produção deve poder ser pré-visualizada, confirmada e recuperada; não deve apagar a única cópia dos conteúdos.
-- [ ] Retirar a personalização pública por `localStorage` como fonte do conteúdo oficial. O visitante deve receber a versão publicada, e o editor deve trabalhar com rascunhos autenticados.
+- **CMS ligado ao Git:** conteúdos estruturados num formato de dados, autenticação GitHub e serviço OAuth seguro quando necessário; alterações versionadas e build Pages. Adaptar o editor atual ou adotar um CMS após comparar esforço, acessibilidade, custos e manutenção.
+- **Editor atual com backend editorial:** Pages Functions/Worker com identidade validada no servidor, autorização da titular, armazenamento persistente e publicação através de credenciais restritas mantidas no servidor. Cloudflare Access pode controlar acesso, mas não substitui autorização nem o backend de gravação.
 
-**Critério de conclusão:** uma alteração publicada pela autora é visível noutro dispositivo sem a conta autenticada; uma alteração não publicada não aparece aos visitantes; existe recuperação testada.
+Em ambas as opções: validar conteúdo e uploads no servidor, limitar tamanho/formato, evitar execução de ficheiros enviados, tratar concorrência e falhas de rede, proteger sessões/pedidos e manter histórico recuperável. Separar conteúdo oficial de personalização local e nunca expor token GitHub/Cloudflare no JavaScript. Não descrever o editor local como CMS de produção.
 
-## 4. Preparar pré-produção na OVH
+**Aceitação:** edição não publicada invisível a visitantes; publicação confirmada noutro dispositivo sem sessão; utilizador não autorizado impedido de gravar; restauração de conteúdo e imagens testada. A titular consegue executar o fluxo sem ajuda técnica.
 
-- [ ] Criar pasta e endereço de testes separados da produção; restringir acesso e impedir indexação. `noindex` não substitui proteção de acesso.
-- [ ] Associar o endereço de testes à pasta correta e configurar HTTPS conforme os recursos do plano.
-- [ ] Enviar apenas os ficheiros necessários à aplicação; excluir segredos, ficheiros Git, documentação interna e backups.
-- [ ] Validar funcionamento na raiz do domínio, em vez do subdiretório `/cdenerelis/` usado no GitHub Pages.
-- [ ] Preparar configuração de produção com `https://enerelis.pt/` como endereço principal, sitemap e URLs de partilha coerentes.
-- [ ] Definir redirecionamento permanente de HTTP para HTTPS e de `www` para o domínio principal, sem ciclos.
-- [ ] Configurar página 404, cache e tipos de ficheiro. O service worker e os ficheiros que coordenam atualizações devem permitir receber novas versões.
-- [ ] Atualizar ícones de instalação/PWA para a identidade oficial e confirmar que não subsistem ícones provisórios com o “E”.
-- [ ] Rever previews públicos no GitHub: redirecionar ou desindexar a cópia de demonstração, conforme o controlo disponível, para concentrar a presença oficial no domínio.
+## 5. Operação e evolução
 
-A OVH documenta a publicação de ficheiros e a associação entre domínio e pasta em [Publicar um site](https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/hosting-how-to-get-my-website-online) e [Configurar multisite](https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/multisites-configure-multisite). Confirmar sempre as opções efetivamente disponíveis na conta.
+- Primeiras 48 horas: verificar erros, contactos, imagens, HTTPS e atualização de cache; corrigir bloqueantes.
+- Quinzenalmente no primeiro mês: recolher dificuldades reais de leitura e edição, rever pesquisa e partilhas.
+- Mensalmente: confirmar preços, disponibilidade, portes, backups, acessos e recuperabilidade do repositório e recursos.
+- Antes de cada prazo promocional: aprovar novas condições e publicar páginas regeneradas. Considerar geração agendada apenas depois de existir CI com falhas notificadas e responsável definido.
+- Periodicamente: testar rollback, rever permissões e recuperação de contas, domínio e faturação. Medir primeiro erros e facilidade de chegar aos contactos; analítica adicional é opcional.
 
-## 5. Validar antes de lançar
+## Próximas ações concretas
 
-- [ ] Testar em telemóvel real e desktop, incluindo Safari/iOS, Chrome/Android e um navegador desktop.
-- [ ] Verificar menu, pesquisa, páginas dos livros, ordem de leitura, sinopses, packs, amostras e mensagens de contacto.
-- [ ] Verificar logótipo e imagens sem deformação, texto legível, navegação por teclado, foco dos diálogos e acessibilidade das cores editáveis.
-- [ ] Pedir à autora para alterar uma capa, uma sinopse, um preço e uma cor, publicar, confirmar noutro dispositivo e restaurar uma versão. Registar dificuldades e ajustar o editor.
-- [ ] Testar ausência de rede, regresso da ligação e atualização de uma PWA já instalada. Informação comercial em cache deve pedir confirmação e não parecer atualizada sem o ser.
-- [ ] Testar expiração de preços, páginas sem JavaScript e dados estruturados. Programar regeneração/publicação quando uma promoção termina: o HTML estático também tem de deixar de anunciar preços expirados.
-- [ ] Verificar títulos, descrições, canónicos, sitemap, robots, partilhas e ausência de bloqueios de indexação na versão final.
-- [ ] Rever logs, contactos do responsável e informação de privacidade adequada ao funcionamento real. Não acrescentar formulários, tracking ou widgets sem rever o tratamento de dados.
-- [ ] Se forem usados cookies/armazenamento ou serviços de analítica não essenciais, avaliar informação e consentimento antes de os ativar. A [nota da CNPD sobre cookies](https://www.cnpd.pt/media/x2zdus50/nota-informativa-cnpd_cookies_20210625.pdf) é uma referência para esta revisão, não uma certificação de conformidade do projeto.
-- [ ] Executar e registar uma restauração de ficheiros, conteúdos e imagens; definir tempo aceitável de recuperação e perda de dados.
+1. Técnica: concluir correções, gerar artefacto e entregar preview para revisão editorial.
+2. Titular + técnica: ligar este repositório ao projeto Pages e escolher lançamento assistido ou CMS obrigatório na estreia.
+3. Técnica + responsável pelo domínio: inventariar zona DNS/OVH, preparar domínio e plano de reversão.
 
-**Critério de conclusão:** sem problemas críticos de publicação, acesso, navegação ou perda de dados; conteúdos aprovados e recuperação demonstrada. Os testes já feitos no PoC não substituem estes testes no alojamento final.
-
-## 6. Lançar enerelis.pt
-
-1. Obter aprovação da autora para a versão final e autorização para a janela de lançamento.
-2. Guardar cópia do serviço atual e registar os valores DNS antes das alterações.
-3. Instalar a versão aprovada na pasta de produção e ajustar apenas os registos necessários, preservando email e outros serviços.
-4. Confirmar certificado, HTTPS, domínio principal, páginas dos livros, contactos, publicação editorial e tratamento de erros.
-5. Confirmar atualização da PWA e ausência de dados de demonstração ou conteúdos privados.
-6. Verificar a propriedade do domínio no Google Search Console e enviar o sitemap. A inclusão e posição na pesquisa não são garantidas.
-7. Atualizar a ligação na biografia do Instagram para `https://enerelis.pt/`.
-8. Se houver falha crítica, restaurar a versão anterior e reverter apenas as alterações necessárias. Considerar que DNS pode manter valores em cache.
-
-**Critério de conclusão:** domínio a servir a versão aprovada por HTTPS, contactos operacionais e fluxo editorial escolhido a funcionar, com cópia recuperável.
-
-## 7. Operar e melhorar
-
-- **Primeiras 48 horas:** verificar erros, contactos, imagens, certificado, publicação e cache; corrigir problemas bloqueantes.
-- **Primeiras duas semanas:** confirmar rastreio no Search Console, testar utilização com a autora e recolher dúvidas reais dos leitores.
-- **Mensalmente:** rever preços, disponibilidade, portes, contactos, backups e atualizações do serviço editorial e dependências, se existirem.
-- **Antes de cada promoção terminar:** confirmar novas condições e agendar a atualização das páginas estáticas e da PWA.
-- **Periodicamente:** testar restauração e rever acessos; acompanhar renovação do domínio, alojamento e certificado conforme o regime contratado.
-
-Medir inicialmente páginas indexadas, erros e facilidade de chegar aos contactos. Analítica adicional é opcional; não é requisito de lançamento.
-
-## Próximas três ações
-
-1. **Autora:** fornecer acesso delegado ou inventário do plano OVH e aprovar os conteúdos e condições comerciais atuais.
-2. **Autora + responsável técnico:** escolher entre lançamento assistido e publicação autónoma, com custos e manutenção definidos.
-3. **Responsável técnico:** preparar pré-produção na OVH e implementar o fluxo editorial escolhido, preservando o site existente.
-
-Este documento é um plano de execução. Não confirma alterações na conta OVH, no DNS ou uma publicação em produção.
+Este documento não confirma alterações nas contas, no DNS ou publicação. A configuração Cloudflare, o CMS e a migração do domínio continuam pendentes.

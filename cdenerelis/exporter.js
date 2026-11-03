@@ -6,6 +6,7 @@ export function buildSite(config, resources=[], {base='https://enerelis.pt/',sta
   const copy=structuredClone(config),files=resources.map(file=>({...file}));let imageIndex=0;
   function flatten(owner,key){if(!owner[key].startsWith('data:'))return;const match=owner[key].match(/^data:image\/(png|jpeg|webp);base64,(.*)$/);let file;do{file=`assets/custom-image-${++imageIndex}.${match[1]==='jpeg'?'jpg':match[1]}`}while(files.some(existing=>existing.path===file));const data=Uint8Array.from(atob(match[2]),c=>c.charCodeAt(0));files.push({path:file,data});owner[key]=file;}
   if(copy.brand.logo)flatten(copy.brand,'logo');
+  if(copy.brand.wordmark)flatten(copy.brand,'wordmark');
   flatten(copy.home,'image');flatten(copy.home,'storyImage');flatten(copy.author,'image');copy.books.forEach(b=>{flatten(b,'image');b.samples?.forEach(s=>flatten(s,'image'))});
   const add=(path,data)=>{const index=files.findIndex(f=>f.path===path);if(index>=0)files[index]={path,data};else files.push({path,data});};
   add('resources.js','export const resourceFiles = '+JSON.stringify([...new Set([...files.map(f=>f.path),'resources.js'])],null,2)+';\n');

@@ -1,5 +1,26 @@
 # Revisão UI/UX — Crónicas de Enerelis
 
+## Atualização de 3 de novembro de 2026
+
+Complementos após indicação concreta do utilizador: título e imagem de abertura alinhados pelo topo, assinatura do cabeçalho retirada, menu aumentado e validade de Máscaras corrigida para 31/12/2026. A lista passou para uma barra fixa com contador e confirmação de cada ação; abre num diálogo para rever/remover sem deslocar a página e permite enviar diretamente por WhatsApp. A seleção permanece entre páginas. Verificado no Edge a 320, 390, 768 e 1440 px: contador, adicionar/remover, reabertura, persistência, navegação entre coleção e ficha, fecho por Escape e botão, retorno do foco e ausência de overflow horizontal. Em desktop/tablet, verificado também o alinhamento dos elementos da abertura.
+
+Correção após nova revisão: a configuração antiga em `localStorage` podia substituir os conteúdos publicados. As páginas públicas passaram a usar a versão publicada; os rascunhos permanecem no editor e em `?preview=1`. A gravação foi identificada como **Guardar rascunho**. Testado no Edge com conteúdos antigos simulados: logótipos, preço de Máscaras e email atuais no site público; rascunho anterior preservado, editável e isolado depois de guardar. A validação inicial abaixo não tinha coberto este cenário.
+
+As dez correções do TODO foram implementadas: identidade no cabeçalho, rodapé simplificado, telefone omitido como texto, remoção da frase de abertura indicada, packs e preços atualizados, remoção de edições especiais, portes 05–08, remoção do aviso de pré-venda expirado, contactos alinhados com email e textos de contacto revistos. O número permanece necessário na ligação WhatsApp; não aparece como texto de contacto.
+
+O editor permite configurar o logótipo textual e o email. A exportação inclui os novos PNG e converte ambos os logótipos carregados em recursos próprios. O build de produção publica apenas os recursos da aplicação em `dist`, com cabeçalhos para Cloudflare Pages.
+
+Verificações desta atualização:
+
+- `npm.cmd test`: três testes passaram, cobrindo condições comerciais, HTML público, dados estruturados, recursos locais e exportação de logótipos.
+- `npm.cmd run build`: 53 ficheiros gerados para produção.
+- Edge sem interface, através de Playwright: início, coleção, Máscaras e editor em 320, 390, 768 e 1440 px; 16 combinações sem overflow horizontal, imagens em falta, respostas HTTP de erro ou erros JavaScript.
+- Pesquisa sem acentos, limpeza da pesquisa e adição à lista verificadas nas quatro larguras; capturas desktop e móvel inspecionadas.
+
+Não foram testados nesta atualização Safari/iOS, dispositivo móvel real, autenticação ou publicação remota. O editor continua local; a gestão autónoma autenticada e o lançamento estão descritos no roadmap. A validação local não confirma DNS ou funcionamento na Cloudflare.
+
+As secções seguintes são o registo histórico da revisão anterior.
+
 Data: 30 de outubro de 2026.
 
 ## Âmbito
