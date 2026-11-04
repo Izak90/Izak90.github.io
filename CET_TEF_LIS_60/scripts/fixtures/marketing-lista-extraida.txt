@@ -1,0 +1,37 @@
+
+=== Página 1 ===
+Lista de saberes 
+UC - Estratégia de Marketing e Conteúdos no Fitness 
+1. Conceitos base (definições) 
+• Marketing (definição) e criação de valor.
+• Estratégia vs tática (saber distinguir).
+• STP: segmentação, público-alvo e posicionamento.
+• Proposta de valor (promessa + prova). 
+2. Modelos de negócio no fitness 
+• Low-cost vs Boutique vs PT premium vs Online coaching.
+• ARPU e implicação na estratégia. 
+3. Métricas que caem sempre 
+• CAC, LTV, churn e payback.
+• Relação CAC vs LTV (sustentabilidade). 
+4. Diagnóstico e concorrência 
+• SWOT (o que é e para que serve).
+• Concorrentes diretos, substitutos e ‘opção zero’.
+• Problem statement + hipótese testável (X → Y medido por Z). 
+5. Funil e jornada 
+• Funil: atrair → envolver → converter → reter.
+• Customer journey: emoções, fricções e pontos de contacto.
+• Microconversões: lead → marcação → show → inscrição. 
+6. Email marketing 
+• Definição + objetivos (nutrir, converter, reter, reativar).
+• Tipos de emails: boas-vindas, nutrição, promoção, reativação, transacionais.
+• Sequência (follow-up) + CTA + métrica por email. 
+7. Estratégia de conteúdos 
+• Pilares de conteúdo (3–5) alinhados com aquisição e retenção.
+• Literal vs lateral (educação vs ângulos/storytelling).
+• Canais por função: descoberta, confiança, conversão, retenção.
+• Plano editorial: cadência, formatos, objetivo e KPI. 
+8. Integração final (pergunta típica de exame) 
+
+=== Página 2 ===
+• Ligar: posicionamento → oferta → funil → conteúdos/creaƟvos → CRM/email → retenção.
+• Escolher 3 KPIs e justificar (por etapa do funil). 

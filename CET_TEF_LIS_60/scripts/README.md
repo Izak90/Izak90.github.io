@@ -1,5 +1,11 @@
 # Validação da ACADEMY
 
+Marketing: `node --test scripts/marketing-content.test.cjs` confere os oito grupos/23 marcadores originais, 80 perguntas, exames 40/40 com cinco perguntas de cada tema em ambos, chaves após baralhamento e distinções de métricas/causalidade. Matriz: `docs/MARKETING_COVERAGE.md`. Browser: definir `$env:P0_UCS="marketing-no-fitness"` e executar `node scripts/p0-smoke.cjs core`. Regeneração editorial opcional: `node scripts/build-marketing.cjs`; volta a baralhar opções e exames, sem constituir um passo necessário à execução da aplicação.
+
+Ética e Deontologia: `node --test scripts/etica-content.test.cjs` confere os 40 itens originais da Lista, 80 perguntas/16 temas, as chaves após baralhamento e distinções críticas (DT/TEF, títulos, documentos, regiões, piscinas e seguros). Matriz: `docs/ETICA_COVERAGE.md`. Browser: definir `$env:P0_UCS="etica-e-deontologia-no-fitness"` e executar `node scripts/p0-smoke.cjs core`. Regeneração editorial opcional: `node scripts/build-etica.cjs`; volta a baralhar opções e partições, não é um passo necessário para executar a aplicação.
+
+Comunicação no Fitness: `node --test scripts/comunicacao-content.test.cjs` verifica o banco 80/40/40, os 16 temas e a matriz dos 108 marcadores da Lista original, incluindo repetições e entradas-mãe. Verifica também as distinções e ressalvas críticas das fontes. Matriz: `docs/COMUNICACAO_COVERAGE.md`. Para os fluxos no navegador: `P0_UCS=comunicacao-no-fitness` com `node scripts/p0-smoke.cjs core` (PowerShell: definir `$env:P0_UCS`). A ferramenta editorial opcional `node scripts/build-comunicacao.cjs` regenera os quatro ficheiros de estudo e a matriz a partir de `scripts/fixtures/comunicacao-content.cjs`, baralhando novamente opções e partições; a aplicação não requer este passo.
+
 Executar a partir da raiz (Node.js 18+; sem instalar pacotes):
 
 ```powershell

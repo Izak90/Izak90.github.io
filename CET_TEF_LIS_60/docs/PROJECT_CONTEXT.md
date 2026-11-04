@@ -50,6 +50,24 @@ Do not add a redundant Centro de Estudo tool card.
 - psicologia-do-exercicio_banco_80_perguntas.json = Fácil
 80 perguntas / dois exames; 11 temas e 51 itens específicos da Lista. Fontes fornecidas: slides (89 páginas, versão 29/06/2026) e Lista (3 páginas). Matriz e limites: [cobertura Psicologia](PSIEX_COVERAGE.md). Workbook anterior preservado.
 
+### Comunicação no Fitness
+- `centro_estudo/comunicacao-no-fitness_resumo.html`, `comunicacao-no-fitness_treino.html`, `comunicacao-no-fitness_simulador.html`.
+- `comunicacao-no-fitness_banco_80_perguntas.json`: um banco Fácil, 80 perguntas e dois exames de 40, com 16 temas nos dois exames.
+- Quatro aulas e Lista fornecidas em ZIP; 108 marcadores transcritos (incluindo entradas-mãe, subentradas e competências repetidas), ligados a conteúdo explícito no resumo. Perguntas têm associação temática, sem alegar avaliação isolada de cada componente. [Cobertura e ressalvas](COMUNICACAO_COVERAGE.md).
+- Registo e precache integrados; motores partilhados e Workbook preservados. Cache atual: v27, 64 entradas locais.
+
+### Ética e Deontologia no Fitness
+- `centro_estudo/etica-e-deontologia-no-fitness_{resumo,treino,simulador}.html` e banco único Fácil `etica-e-deontologia-no-fitness_banco_80_perguntas.json`.
+- 40 itens principais da Lista (9 valores, 31 legislação), 16 temas, 80 perguntas e dois exames de 40 sem sobreposição. [Cobertura e limites das fontes](ETICA_COVERAGE.md).
+- Aulas de José Júlio Vale Castro, março de 2026; Lista de fevereiro de 2026. Imagens do checklist e funções do DT revistas visualmente. Conferência jurídica pontual em fontes oficiais separada do conteúdo base.
+- Workbook UC15 preservado; armazenamento isolado por UC/dificuldade; precache v28 acrescenta as quatro páginas/banco.
+
+### Marketing no Fitness
+- `centro_estudo/marketing-no-fitness_{resumo,treino,simulador}.html` e banco único Fácil `marketing-no-fitness_banco_80_perguntas.json`.
+- Oito temas correspondentes aos oito grupos da Lista, 23 marcadores com cobertura explícita no resumo e 80 perguntas. Dois exames disjuntos, cada um com cinco perguntas de cada tema (40 no total).
+- Fontes: quatro aulas de 08/04/2026 e Lista intitulada «Estratégia de Marketing e Conteúdos no Fitness». [Matriz e limites](MARKETING_COVERAGE.md). Cálculos de estudo têm pressupostos explícitos; LTV simplificado não é lucro e métricas não provam causa.
+- Workbook UC11 preservado; motores partilhados e armazenamento isolado. SW v29 adiciona três páginas e banco.
+
 ## Workbook simulators
 simuladores/ contains UC01–UC17 local Workbook-based simulators:
 Coaching, Pedagogia, PEVS, Psicologia, Comunicação, Inglês, Biomecânica, Aplicações Digitais, Primeiros Socorros, Nutrição, Marketing, Gestão de Clientes, Satisfação de Clientes, Fitness Online, Ética, Gestão, Empreendedorismo.
@@ -66,7 +84,7 @@ Learning structure applied to all 41 summary themes (8 PEVS, 12 CF, 10 PEDEx inc
 40 questions; 60 min; 90 s/question equivalent; score 0–20; pass 9.5; no negative marking; timeout auto-submit.
 
 ## PWA
-Current implemented SW cache version: v23 (Psicologia do Exercício, 2026-10-08; 55 ficheiros locais).
+Current implemented SW cache version: v29 (Marketing no Fitness, 2026-11-04; 72 entradas locais).
 Strategy: network-first, same-origin runtime cache plus an explicit allowlist of visual CDN dependencies (Tailwind, Font Awesome, Inter and logo), offline cache fallback, app-shell navigation fallback, cleanup of old cet-tef caches. Fonts are cached when requested by a controlled page.
 Offline use requires an initial online installation. P0 evidence and remaining device checks: ../plans/p0-stabilisation.md.
 

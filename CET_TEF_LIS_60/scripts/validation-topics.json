@@ -48,5 +48,51 @@
     "9. Ativação e autocontrolo",
     "10. Atenção e concentração",
     "11. Mentalização e autoconfiança"
+  ],
+  "comunicacao-no-fitness": [
+    "1. Fundamentos e dimensões da comunicação",
+    "2. Storytelling e mecanismos narrativos",
+    "3. Emoção, cérebro e tomada de decisão",
+    "4. Memória narrativa e rigor da comunicação",
+    "5. Ética e responsabilidade comunicacional",
+    "6. Intenção comunicativa e pragmática",
+    "7. Atos de fala e intenções pedagógicas",
+    "8. Arco narrativo e modelo ABT",
+    "9. Funções da linguagem na narrativa",
+    "10. Adaptação ao público e ao contexto",
+    "11. Storytelling no treino, adesão e liderança",
+    "12. Identidade profissional: modelo das cinco pétalas",
+    "13. Narrativa profissional e marca pessoal",
+    "14. Oralidade e estilos comunicacionais",
+    "15. Voz e construção de climas emocionais",
+    "16. Comunicação não verbal e presença"
+  ],
+  "etica-e-deontologia-no-fitness": [
+    "1. Direitos humanos, ética, moral e deontologia",
+    "2. Ética desportiva, fair play e conflitos de interesses",
+    "3. Código APTEF na prática profissional",
+    "4. Enquadramento legislativo e Lei de Bases",
+    "5. Qualificação, títulos e formação contínua",
+    "6. Historial e instalações desportivas",
+    "7. Lei dos ginásios: âmbito e funções técnicas",
+    "8. Identificação, seguros e documentos internos",
+    "9. Fiscalização, contraordenações e validade nacional",
+    "10. Açores e Madeira: diferenças regionais",
+    "11. Treinadores e antidopagem",
+    "12. Checklist, nutrição e direitos de utilização",
+    "13. Piscinas e nadadores-salvadores",
+    "14. RGPD, sigilo e proteção de dados",
+    "15. Relações laborais e prestação de serviços",
+    "16. Seguros do TEF e decisões profissionais"
+  ],
+  "marketing-no-fitness": [
+    "1. Conceitos base, STP e proposta de valor",
+    "2. Modelos de negócio e ARPU",
+    "3. CAC, LTV, churn e payback",
+    "4. Diagnóstico, concorrência e hipóteses",
+    "5. Funil, jornada e microconversões",
+    "6. Email marketing, sequências e medição",
+    "7. Pilares, canais e plano editorial",
+    "8. Integração: oferta, conteúdos, CRM e retenção"
   ]
 }

@@ -1,15 +1,21 @@
 const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 const api=require('../assets/uc-registry.js');const registry=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/ucs.json'),'utf8'));
-test('registo contém 27 UCs, 6 resumos, 17 Workbook e 10 bancos',()=>{assert.deepEqual(api.validate(registry),[]);assert.equal(registry.ucs.length,27);assert.equal(registry.ucs.filter(u=>u.summary).length,6);assert.equal(registry.ucs.filter(u=>u.workbook).length,17);assert.equal(registry.ucs.flatMap(u=>u.difficulties).length,10);});
+test('registo contém 27 UCs, 9 resumos, 17 Workbook e 13 bancos',()=>{assert.deepEqual(api.validate(registry),[]);assert.equal(registry.ucs.length,27);assert.equal(registry.ucs.filter(u=>u.summary).length,9);assert.equal(registry.ucs.filter(u=>u.workbook).length,17);assert.equal(registry.ucs.flatMap(u=>u.difficulties).length,13);});
 test('metadados anteriores preservados com estudo nativo de Psicologia',()=>{const old=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/p2-legacy-metadata.json'),'utf8'));// Atualizações já existentes no registo: formador e aula assíncrona de Psicologia.
 Object.assign(old.moduleConfig['Psicologia do Exercício'],{trainer:'Rui Branco',asynchronousClass:'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-6-2-4/'});for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Psicologia do Exercício']=`./centro_estudo/psiex_${suffix}.html`;
 old.studyCenterUrls['Aulas de Grupo']='./centro_estudo/ag_resumo.html';
 old.studyCenterUrls['Fisiologia do Exercício']='./centro_estudo/fe_resumo.html';
+for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Comunicação no Fitness']=`./centro_estudo/comunicacao-no-fitness_${suffix}.html`;
+for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Ética e Deontologia no Fitness']=`./centro_estudo/etica-e-deontologia-no-fitness_${suffix}.html`;
+old.moduleConfig['Ética e Deontologia no Fitness'].trainer='José Júlio Vale Castro';
+for(const [map,suffix] of [['studyCenterUrls','resumo'],['studyCenterTrainingUrls','treino'],['studyCenterSimulatorUrls','simulador']])old[map]['Marketing no Fitness']=`./centro_estudo/marketing-no-fitness_${suffix}.html`;
 old.moduleConfig['Aulas de Grupo'].trainer='António Silva, Orlanda Máximo, David Brás, e Paulo Fischer';
 old.moduleConfig['Coaching no Fitness'].trainer='Ricardo Costa e Hugo Zegre';
 old.moduleConfig['Fisiologia do Exercício'].trainer='Gonçalo Vicente e João Martins';
+Object.assign(old.moduleConfig['Comunicação no Fitness'],{trainer:'Catarina Olim',asynchronousClass:'https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-16-2-4/'});
 old.moduleConfig['Coaching no Fitness'].resultsPdf='./data/pautas/PautaFinal_CF_CET_LIS_60.pdf';
 old.moduleConfig['Promoção de Estilos de Vida Saudável'].resultsPdf='./data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf';
+old.moduleConfig['Psicologia do Exercício'].resultsPdf='./data/pautas/PautaFinal_PSIEX_CET_LIS_60.pdf';
 assert.deepEqual(api.toMaps(registry),old);});
 
 test('pauta opcional aceita PDF local e rejeita URLs injetados, externos e caminhos fora da raiz',()=>{

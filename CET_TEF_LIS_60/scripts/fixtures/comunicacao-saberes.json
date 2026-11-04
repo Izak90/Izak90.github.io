@@ -1,0 +1,1796 @@
+{
+  "source": "Lista de saberes.pdf, 6 páginas",
+  "counting": "108 marcadores, incluindo entradas-mãe, subentradas e competências repetidas; não são 108 saberes únicos.",
+  "themes": [
+    "1. Fundamentos e dimensões da comunicação",
+    "2. Storytelling e mecanismos narrativos",
+    "3. Emoção, cérebro e tomada de decisão",
+    "4. Memória narrativa e rigor da comunicação",
+    "5. Ética e responsabilidade comunicacional",
+    "6. Intenção comunicativa e pragmática",
+    "7. Atos de fala e intenções pedagógicas",
+    "8. Arco narrativo e modelo ABT",
+    "9. Funções da linguagem na narrativa",
+    "10. Adaptação ao público e ao contexto",
+    "11. Storytelling no treino, adesão e liderança",
+    "12. Identidade profissional: modelo das cinco pétalas",
+    "13. Narrativa profissional e marca pessoal",
+    "14. Oralidade e estilos comunicacionais",
+    "15. Voz e construção de climas emocionais",
+    "16. Comunicação não verbal e presença"
+  ],
+  "items": [
+    {
+      "id": "COM-L001",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Compreender a comunicação como atividade social e suas quatro dimensões :",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-001",
+        "com-detail-002",
+        "com-detail-003",
+        "com-detail-004",
+        "com-detail-005"
+      ],
+      "question_ids": [
+        "COM001",
+        "COM002",
+        "COM003",
+        "COM004",
+        "COM005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L002",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Cognitiva – Ensinar, transmitir conhecimento técnico.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-001"
+      ],
+      "question_ids": [
+        "COM001"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L003",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Afetiva – Criar vínculos emocionais, gerar empatia.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-002"
+      ],
+      "question_ids": [
+        "COM002"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L004",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Comportamental – Influenciar ações e hábitos.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-003"
+      ],
+      "question_ids": [
+        "COM003"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L005",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Social – Construir identidade e sentido de pertença.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-004"
+      ],
+      "question_ids": [
+        "COM004"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L006",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Reconhecer a importância da comunicação intencional no contexto profissional.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-005"
+      ],
+      "question_ids": [
+        "COM005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L007",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Aplicar estratégias para compreender, sentir, agir e pertencer na interação com clientes.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-005"
+      ],
+      "question_ids": [
+        "COM005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L008",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Definir storytelling como ferramenta estratégica de comunicação.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-006"
+      ],
+      "question_ids": [
+        "COM006"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L009",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Entender como histórias transformam instruções técnicas em narrativas de mudança .",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-006"
+      ],
+      "question_ids": [
+        "COM006"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L010",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Identificar os mecanismos que tornam histórias eficazes:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-007",
+        "com-detail-008",
+        "com-detail-009",
+        "com-detail-010"
+      ],
+      "question_ids": [
+        "COM007",
+        "COM008",
+        "COM009",
+        "COM010"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L011",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Ativação neural completa (linguagem + emoção + ação).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-007"
+      ],
+      "question_ids": [
+        "COM007"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L012",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Transporte narrativo (imersão na história).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-008"
+      ],
+      "question_ids": [
+        "COM008"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L013",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Segmentação de eventos (estrutura início → conflito → resolução).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-009"
+      ],
+      "question_ids": [
+        "COM009"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L014",
+      "module": 1,
+      "list_page": 1,
+      "level": "subitem",
+      "text": "Esquemas mentais (conexão com experiências familiares).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-010"
+      ],
+      "question_ids": [
+        "COM010"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L015",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Reconhecer que histórias são mais memoráveis que dados isolados.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-018"
+      ],
+      "question_ids": [
+        "COM018"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L016",
+      "module": 1,
+      "list_page": 1,
+      "level": "item",
+      "text": "Compreender a Hipótese do Marcador Somático (Damásio): emoções guiam decisões.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-011"
+      ],
+      "question_ids": [
+        "COM011"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L017",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Diferenciar Sistema Límbico (rápido, emocional) vs. Córtex Pré-frontal (lento, racional).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-012"
+      ],
+      "question_ids": [
+        "COM012"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L018",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Entender que emoção precede razão na tomada de decisão.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-013"
+      ],
+      "question_ids": [
+        "COM013"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L019",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Aplicar estratégias para criar experiências emocionais positivas antes de argumentos racionais.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-014"
+      ],
+      "question_ids": [
+        "COM014"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L020",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Explicar por que narrativas ativam redes neurais mais amplas (hipocampo, DMN).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-016"
+      ],
+      "question_ids": [
+        "COM016"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L021",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Reconhecer o papel da emoção na memória (histórias emocionais são mais “pegajosas”).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-017"
+      ],
+      "question_ids": [
+        "COM017"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L022",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Entender o conceito de transporte narrativo e sua relação com retenção.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-008",
+        "com-detail-018"
+      ],
+      "question_ids": [
+        "COM008",
+        "COM018"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L023",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Diferenciar ciência rigorosa vs. divulgação científica popular .",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-019"
+      ],
+      "question_ids": [
+        "COM019"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L024",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Aplicar os quatro princípios éticos no uso de storytelling:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-021",
+        "com-detail-022",
+        "com-detail-023",
+        "com-detail-024"
+      ],
+      "question_ids": [
+        "COM021",
+        "COM022",
+        "COM023",
+        "COM024"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L025",
+      "module": 1,
+      "list_page": 2,
+      "level": "subitem",
+      "text": "Verdade e autenticidade – evitar exageros e promessas falsas.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-021"
+      ],
+      "question_ids": [
+        "COM021"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L026",
+      "module": 1,
+      "list_page": 2,
+      "level": "subitem",
+      "text": "Respeito e vulnerabilidade – proteger dignidade e intimidade.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-022"
+      ],
+      "question_ids": [
+        "COM022"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L027",
+      "module": 1,
+      "list_page": 2,
+      "level": "subitem",
+      "text": "Influência consciente – usar emoção de forma ética, sem manipulação.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-023"
+      ],
+      "question_ids": [
+        "COM023"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L028",
+      "module": 1,
+      "list_page": 2,
+      "level": "subitem",
+      "text": "Impacto social – evitar estereótipos, promover inclusão e bem-estar.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-024"
+      ],
+      "question_ids": [
+        "COM024"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L029",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Reconhecer riscos éticos e boas práticas na comunicação profissional.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-025"
+      ],
+      "question_ids": [
+        "COM025"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L030",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Comunicação intencional e estratégica.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-005"
+      ],
+      "question_ids": [
+        "COM005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L031",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Uso do storytelling para motivar, ensinar e inspirar.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-006",
+        "com-detail-051"
+      ],
+      "question_ids": [
+        "COM006",
+        "COM051"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L032",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Criação de narrativas éticas e responsáveis.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-025"
+      ],
+      "question_ids": [
+        "COM025"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L033",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Aplicação da neurociência da emoção na persuasão positiva.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-014"
+      ],
+      "question_ids": [
+        "COM014"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L034",
+      "module": 1,
+      "list_page": 2,
+      "level": "item",
+      "text": "Diferenciação entre linguagem técnica e linguagem acessível.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-001",
+        "com-detail-048"
+      ],
+      "question_ids": [
+        "COM001",
+        "COM048"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L035",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Compreender a intenção narrativa como o propósito central da comunicação.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-026"
+      ],
+      "question_ids": [
+        "COM026"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L036",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Identificar o que quero provocar no outro : acolher, desafiar, inspirar, informar ou mobilizar.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-026",
+        "com-detail-030"
+      ],
+      "question_ids": [
+        "COM026",
+        "COM030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L037",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Entender a pragmática da comunicação : falar é agir (Austin, Searle).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-027"
+      ],
+      "question_ids": [
+        "COM027"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L038",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Diferenciar:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-028"
+      ],
+      "question_ids": [
+        "COM028"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L039",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Locução (conteúdo literal),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-028"
+      ],
+      "question_ids": [
+        "COM028"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L040",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Ilocução (intenção do falante),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-028"
+      ],
+      "question_ids": [
+        "COM028"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L041",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Perlocução (efeito no ouvinte).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-028"
+      ],
+      "question_ids": [
+        "COM028"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L042",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Reconhecer que cada intenção gera impactos distintos:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-029",
+        "com-detail-030"
+      ],
+      "question_ids": [
+        "COM029",
+        "COM030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L043",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Emocional (acolher),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-029"
+      ],
+      "question_ids": [
+        "COM029"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L044",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Cognitivo (desafiar),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-029"
+      ],
+      "question_ids": [
+        "COM029"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L045",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Motivacional (inspirar).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-030"
+      ],
+      "question_ids": [
+        "COM030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L046",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Conhecer as cinco famílias de atos de fala :",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-031",
+        "com-detail-032",
+        "com-detail-033",
+        "com-detail-034",
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM031",
+        "COM032",
+        "COM033",
+        "COM034",
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L047",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Assertivos (afirmar),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-031"
+      ],
+      "question_ids": [
+        "COM031"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L048",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Diretivos (pedir, sugerir),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-032"
+      ],
+      "question_ids": [
+        "COM032"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L049",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Compromissivos (prometer),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-033"
+      ],
+      "question_ids": [
+        "COM033"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L050",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Expressivos (partilhar emoções),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-034"
+      ],
+      "question_ids": [
+        "COM034"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L051",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Declarativos (criar realidade).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L052",
+      "module": 2,
+      "list_page": 3,
+      "level": "item",
+      "text": "Relacionar atos de fala com intenções pedagógicas:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L053",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Acolher → expressivos, assertivos suaves.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-034",
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM034",
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L054",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Desafiar → diretivos interrogativos, declarativos situacionais.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-032",
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM032",
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L055",
+      "module": 2,
+      "list_page": 3,
+      "level": "subitem",
+      "text": "Inspirar → assertivos positivos, compromissivos, declarativos capacitadores.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L056",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Entender que atos de fala são ferramentas práticas da intenção .",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L057",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Dominar o arco narrativo universal :",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-036",
+        "com-detail-037",
+        "com-detail-038",
+        "com-detail-039"
+      ],
+      "question_ids": [
+        "COM036",
+        "COM037",
+        "COM038",
+        "COM039"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L058",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Contexto (staging) – criar ancoragem emocional.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-036"
+      ],
+      "question_ids": [
+        "COM036"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L059",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Conflito – apresentar desafio interno ou externo.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-037"
+      ],
+      "question_ids": [
+        "COM037"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L060",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Transformação – mostrar mudança possível.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-038"
+      ],
+      "question_ids": [
+        "COM038"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L061",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Mensagem final – clara, memorável, conectada à ação desejada.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-039"
+      ],
+      "question_ids": [
+        "COM039"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L062",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Compreender por que o arco narrativo aumenta retenção, persuasão e tomada de decisão.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-039"
+      ],
+      "question_ids": [
+        "COM039"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L063",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Aplicar o modelo ABT (And–But–Therefore) para narrativas curtas e eficazes.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-040"
+      ],
+      "question_ids": [
+        "COM040"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L064",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Conhecer as seis funções da linguagem (Jakobson):",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-041",
+        "com-detail-042",
+        "com-detail-043",
+        "com-detail-044",
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM041",
+        "COM042",
+        "COM043",
+        "COM044",
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L065",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Emotiva – expressar sentimentos, criar empatia.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-041"
+      ],
+      "question_ids": [
+        "COM041"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L066",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Conativa – direcionar ação (call to action).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-042"
+      ],
+      "question_ids": [
+        "COM042"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L067",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Referencial – transmitir informação objetiva.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-043"
+      ],
+      "question_ids": [
+        "COM043"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L068",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Poética – tornar a mensagem memorável (metáforas, ritmo).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-044"
+      ],
+      "question_ids": [
+        "COM044"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L069",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Fática – manter o canal de comunicação.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-041"
+      ],
+      "question_ids": [
+        "COM041"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L070",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Metalinguística – explicar termos e garantir entendimento.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L071",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Saber combinar funções conforme objetivo e perfil do público:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L072",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Contexto → referencial + metalinguística.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L073",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Conexão emocional → emotiva + fática.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-041",
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM041",
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L074",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Direção para ação → conativa.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-042"
+      ],
+      "question_ids": [
+        "COM042"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L075",
+      "module": 2,
+      "list_page": 4,
+      "level": "subitem",
+      "text": "Memorabilidade → poética.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-044"
+      ],
+      "question_ids": [
+        "COM044"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L076",
+      "module": 2,
+      "list_page": 4,
+      "level": "item",
+      "text": "Reconhecer que a mesma narrativa não serve para todos .",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-046",
+        "com-detail-047",
+        "com-detail-048",
+        "com-detail-049",
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM046",
+        "COM047",
+        "COM048",
+        "COM049",
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L077",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Identificar fatores de adaptação:",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-046",
+        "com-detail-047",
+        "com-detail-048",
+        "com-detail-049",
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM046",
+        "COM047",
+        "COM048",
+        "COM049",
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L078",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Idade,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-046"
+      ],
+      "question_ids": [
+        "COM046"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L079",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Objetivos (estética vs saúde),",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-046"
+      ],
+      "question_ids": [
+        "COM046"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L080",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Nível de motivação,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-047"
+      ],
+      "question_ids": [
+        "COM047"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L081",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Histórico do aluno,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-047"
+      ],
+      "question_ids": [
+        "COM047"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L082",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Estilo cognitivo,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-048"
+      ],
+      "question_ids": [
+        "COM048"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L083",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Literacia,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-048"
+      ],
+      "question_ids": [
+        "COM048"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L084",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Cultura e valores socioculturais,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-049"
+      ],
+      "question_ids": [
+        "COM049"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L085",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Estado emocional,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-049"
+      ],
+      "question_ids": [
+        "COM049"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L086",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Preferências de canal e formato,",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L087",
+      "module": 2,
+      "list_page": 5,
+      "level": "subitem",
+      "text": "Tempo disponível.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L088",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Aplicar estratégias para personalizar narrativa e aumentar engajamento, retenção e adesão.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L089",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Definição clara de intenção comunicativa.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-026"
+      ],
+      "question_ids": [
+        "COM026"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L090",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Uso estratégico de atos de fala.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-031",
+        "com-detail-032",
+        "com-detail-033",
+        "com-detail-034",
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM031",
+        "COM032",
+        "COM033",
+        "COM034",
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L091",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Estruturação de narrativas eficazes.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-039",
+        "com-detail-040"
+      ],
+      "question_ids": [
+        "COM039",
+        "COM040"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L092",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Aplicação das funções da linguagem para impacto.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L093",
+      "module": 2,
+      "list_page": 5,
+      "level": "item",
+      "text": "Adaptação da narrativa ao perfil do público.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-046",
+        "com-detail-047",
+        "com-detail-048",
+        "com-detail-049",
+        "com-detail-050"
+      ],
+      "question_ids": [
+        "COM046",
+        "COM047",
+        "COM048",
+        "COM049",
+        "COM050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L094",
+      "module": 3,
+      "list_page": 5,
+      "level": "item",
+      "text": "O que é storytelling? Uso estratégico de narrativas para transmitir mensagens com significado, emoção e propósito.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-006"
+      ],
+      "question_ids": [
+        "COM006"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L095",
+      "module": 3,
+      "list_page": 5,
+      "level": "item",
+      "text": "Aplicações: Motivação no treino, adesão à prática, liderança, construção de identidade profissional.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-051",
+        "com-detail-052",
+        "com-detail-053",
+        "com-detail-056",
+        "com-detail-057",
+        "com-detail-058",
+        "com-detail-059",
+        "com-detail-060"
+      ],
+      "question_ids": [
+        "COM051",
+        "COM052",
+        "COM053",
+        "COM056",
+        "COM057",
+        "COM058",
+        "COM059",
+        "COM060"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L096",
+      "module": 3,
+      "list_page": 5,
+      "level": "item",
+      "text": "Elementos da narrativa (Modelo das 5 pétalas): Origem, Propósito, Valores, Impacto, Visão.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-056",
+        "com-detail-057",
+        "com-detail-058",
+        "com-detail-059",
+        "com-detail-060"
+      ],
+      "question_ids": [
+        "COM056",
+        "COM057",
+        "COM058",
+        "COM059",
+        "COM060"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L097",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Arco narrativo: Contexto → Conflito → Transformação → Mensagem final.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-039"
+      ],
+      "question_ids": [
+        "COM039"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L098",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Funções da linguagem: Emotiva, Conativa, Metalinguística, Referencial, Poética.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-041",
+        "com-detail-042",
+        "com-detail-043",
+        "com-detail-044",
+        "com-detail-045"
+      ],
+      "question_ids": [
+        "COM041",
+        "COM042",
+        "COM043",
+        "COM044",
+        "COM045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L099",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Atos de fala: Assertivo, Diretivo, Compromissivo, Expressivo, Declarativo.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-031",
+        "com-detail-032",
+        "com-detail-033",
+        "com-detail-034",
+        "com-detail-035"
+      ],
+      "question_ids": [
+        "COM031",
+        "COM032",
+        "COM033",
+        "COM034",
+        "COM035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L100",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Princípios: Autenticidade, coerência, adaptabilidade.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-062",
+        "com-detail-063"
+      ],
+      "question_ids": [
+        "COM062",
+        "COM063"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L101",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Aplicações: práticas: CV, pitch, redes sociais, entrevistas.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-064"
+      ],
+      "question_ids": [
+        "COM064"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L102",
+      "module": 3,
+      "list_page": 6,
+      "level": "item",
+      "text": "Benefícios: Confiança, diferenciação, oportunidades.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-065"
+      ],
+      "question_ids": [
+        "COM065"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L103",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Oralidade espontânea vs escrita oralizada: Comunicação viva, autêntica, adaptável, que cria conexão emocional.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-066"
+      ],
+      "question_ids": [
+        "COM066"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L104",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Estilos comunicacionais: Passivo, Agressivo, Manipulador, Assertivo (modelo ideal para líderes).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-067",
+        "com-detail-068",
+        "com-detail-069",
+        "com-detail-070"
+      ],
+      "question_ids": [
+        "COM067",
+        "COM068",
+        "COM069",
+        "COM070"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L105",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Voz como instrumento de impacto: Elementos vocais: Ritmo, Intensidade, Pausa, Silêncio.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-071",
+        "com-detail-072",
+        "com-detail-073"
+      ],
+      "question_ids": [
+        "COM071",
+        "COM072",
+        "COM073"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L106",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Construção de climas emocionais: Calma e Reflexão, Energia e Motivação, Seriedade e Foco. Clima deve ser criado nos primeiros 30 segundos.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-074",
+        "com-detail-075"
+      ],
+      "question_ids": [
+        "COM074",
+        "COM075"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L107",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Comunicação não verbal: Postura, Gestos, Olhar, Proximidade (mais de 50% do impacto comunicativo).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-076",
+        "com-detail-077",
+        "com-detail-078",
+        "com-detail-079",
+        "com-detail-080"
+      ],
+      "question_ids": [
+        "COM076",
+        "COM077",
+        "COM078",
+        "COM079",
+        "COM080"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "COM-L108",
+      "module": 4,
+      "list_page": 6,
+      "level": "item",
+      "text": "Princípios-chave: Presença autêntica, voz funcional, estilo assertivo, comunicação não verbal eficaz.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "com-detail-080"
+      ],
+      "question_ids": [
+        "COM080"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    }
+  ]
+}

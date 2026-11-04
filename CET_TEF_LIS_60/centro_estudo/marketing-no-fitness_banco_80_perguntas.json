@@ -1,0 +1,2799 @@
+{
+  "uc": "Marketing no Fitness",
+  "version": "2026-11-04",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "id": "MKT001",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual definição corresponde ao marketing apresentado na Aula 2?",
+      "options": [
+        "Vender rapidamente independentemente da experiência",
+        "Criar, comunicar e entregar valor e gerir relações com clientes",
+        "Publicar anúncios para substituir a entrega do serviço",
+        "Produzir apenas conteúdos para redes sociais"
+      ],
+      "answer": 1,
+      "explanation": "A definição abrange criação de valor e relações, para além de ações de comunicação.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C001"
+      ]
+    },
+    {
+      "id": "MKT002",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "O que deve ser analisado antes de aumentar a comunicação de um serviço?",
+      "options": [
+        "Apenas a quantidade de posts dos concorrentes",
+        "Valor entregue, custo, experiência e prova",
+        "Só o formato que está a receber mais gostos",
+        "O número de anúncios, sem avaliar a oferta"
+      ],
+      "answer": 1,
+      "explanation": "A comunicação depende de um sistema capaz de concretizar a proposta.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C002"
+      ]
+    },
+    {
+      "id": "MKT003",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual decisão é predominantemente estratégica?",
+      "options": [
+        "Trocar a imagem de um anúncio",
+        "Enviar um email de lembrete às 18 horas",
+        "Publicar amanhã um vídeo com determinado formato",
+        "Escolher o público, a diferença relevante e os critérios de sucesso"
+      ],
+      "answer": 3,
+      "explanation": "A estratégia define escolhas e direção; os restantes exemplos são meios de execução.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C003"
+      ]
+    },
+    {
+      "id": "MKT004",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual exemplo é predominantemente uma tática?",
+      "options": [
+        "Determinar o posicionamento económico do negócio",
+        "Escolher o segmento que a marca vai servir",
+        "Criar uma sequência de emails para executar a estratégia definida",
+        "Definir por que razão o cliente escolherá o serviço"
+      ],
+      "answer": 2,
+      "explanation": "Uma sequência de emails implementa escolhas; não substitui a definição de público e posicionamento.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C004"
+      ]
+    },
+    {
+      "id": "MKT005",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "No STP, o que significa segmentar?",
+      "options": [
+        "Distinguir grupos relevantes do mercado",
+        "Definir o custo de um anúncio individual",
+        "Escolher o horário de uma publicação",
+        "Calcular o tempo de recuperação do CAC"
+      ],
+      "answer": 0,
+      "explanation": "Segmentação identifica grupos; selecionar um deles como foco pertence à escolha do público-alvo.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C005"
+      ]
+    },
+    {
+      "id": "MKT006",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual ação corresponde à escolha do público-alvo?",
+      "options": [
+        "Medir cancelamentos mensais",
+        "Selecionar o grupo que a oferta e a comunicação irão priorizar",
+        "Listar todos os grupos possíveis sem escolher nenhum",
+        "Decidir apenas o tipo de letra da marca"
+      ],
+      "answer": 1,
+      "explanation": "Público-alvo implica escolha e prioridade, depois de identificar segmentos.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C006"
+      ]
+    },
+    {
+      "id": "MKT007",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual pergunta ajuda a definir posicionamento?",
+      "options": [
+        "Porque deve este público escolher-nos em vez de outra alternativa?",
+        "Quantas vezes vamos publicar esta semana?",
+        "Qual foi o número total de seguidores ontem?",
+        "Que dia do mês se emite a fatura?"
+      ],
+      "answer": 0,
+      "explanation": "A questão central é a razão de preferência na mente do público, apoiada por uma oferta credível.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C007"
+      ]
+    },
+    {
+      "id": "MKT008",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual sequência corresponde ao STP pedido na Lista?",
+      "options": [
+        "Serviço, tempo e pagamento",
+        "Seguidores, tráfego e promoções",
+        "Sistema, tática e publicidade",
+        "Segmentação, público-alvo e posicionamento"
+      ],
+      "answer": 3,
+      "explanation": "STP liga análise de grupos a uma escolha de foco e a uma diferença relevante.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C008"
+      ]
+    },
+    {
+      "id": "MKT009",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual proposta está melhor estruturada segundo a Lista?",
+      "options": [
+        "Uma frase vaga sobre ser o melhor, sem evidência",
+        "Um desconto permanente sem explicar o serviço",
+        "Uma promessa relevante para um público, acompanhada de prova credível",
+        "Uma garantia de resultado igual para todas as pessoas"
+      ],
+      "answer": 2,
+      "explanation": "A promessa deve ser compreensível e sustentada; o benefício precisa de ligação à entrega.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C009"
+      ]
+    },
+    {
+      "id": "MKT010",
+      "topic": "1. Conceitos base, STP e proposta de valor",
+      "type": "multiple_choice",
+      "question": "Qual decisão respeita a coerência entre promessa e sistema?",
+      "options": [
+        "Prometer apenas o acompanhamento que os recursos e processos conseguem sustentar",
+        "Aumentar anúncios antes de corrigir falhas de entrega",
+        "Prometer acompanhamento diário individual sem equipa disponível",
+        "Copiar a proposta de um PT premium para qualquer low-cost"
+      ],
+      "answer": 0,
+      "explanation": "Marketing amplifica a experiência existente; promessas incompatíveis podem aumentar fricção e abandono.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34.",
+      "saberes": [
+        "MKT-C010"
+      ]
+    },
+    {
+      "id": "MKT011",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Qual combinação caracteriza o low-cost apresentado?",
+      "options": [
+        "Conveniência e preço com volume e eficiência operacional",
+        "Entrega remota como única forma possível de serviço",
+        "Especialização exclusiva com preço sempre mais elevado",
+        "Acompanhamento individual intensivo e escala muito reduzida"
+      ],
+      "answer": 0,
+      "explanation": "Os slides ligam o low-cost a acesso e eficiência; acompanhamento intensivo é mais característico de outros modelos.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C011"
+      ]
+    },
+    {
+      "id": "MKT012",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Qual conjunto está mais associado à boutique nos slides?",
+      "options": [
+        "Exclusivamente venda de conteúdos sem contacto",
+        "Especialização, experiência, acompanhamento e comunidade",
+        "Volume máximo e ausência de diferenciação de experiência",
+        "Apenas redução de preços como proposta central"
+      ],
+      "answer": 1,
+      "explanation": "O valor percebido da boutique assenta na experiência e diferenciação, e não só no preço.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C012"
+      ]
+    },
+    {
+      "id": "MKT013",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Qual combinação é apresentada para PT premium?",
+      "options": [
+        "Ausência de relação com o cliente e escala ilimitada",
+        "Valor percebido elevado, accountability e baixa escala",
+        "Preço mínimo e acompanhamento indiferenciado de massa",
+        "Apenas conteúdos gratuitos como produto"
+      ],
+      "answer": 1,
+      "explanation": "A proximidade e o acompanhamento consomem capacidade e condicionam a escala do modelo.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C013"
+      ]
+    },
+    {
+      "id": "MKT014",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Que característica é destacada para online coaching?",
+      "options": [
+        "Apenas vendas pontuais sem acompanhamento",
+        "Escala sempre ilimitada sem custos de entrega",
+        "Dispensa de relação porque o serviço é digital",
+        "Entrega sistematizada e suporte remoto, com retenção e comunidade"
+      ],
+      "answer": 3,
+      "explanation": "A sistematização pode apoiar escala, mas retenção e capacidade de suporte continuam relevantes.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C014"
+      ]
+    },
+    {
+      "id": "MKT015",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Ao comparar modelos de fitness, que perguntas são mais úteis?",
+      "options": [
+        "Apenas qual publica mais vídeos por dia",
+        "Exclusivamente qual cobra o menor preço inicial",
+        "Como entregam valor, geram receita e sustentam retenção",
+        "Só qual tem o maior logótipo na fachada"
+      ],
+      "answer": 2,
+      "explanation": "A comparação integra estrutura de serviço e receita, além da comunicação.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C015"
+      ]
+    },
+    {
+      "id": "MKT016",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "O que mede o ARPU?",
+      "options": [
+        "Lucro líquido total de toda a empresa",
+        "Percentagem de clientes que cancelam",
+        "Custo de aquisição de um novo cliente",
+        "Receita média por utilizador num período definido"
+      ],
+      "answer": 3,
+      "explanation": "A sigla refere receita média; distinguir receita, custo e lucro evita interpretações erradas.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C016"
+      ]
+    },
+    {
+      "id": "MKT017",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Num exemplo com 4900 € de receita mensal e 100 utilizadores, qual é o ARPU mensal?",
+      "options": [
+        "490 €",
+        "49 €",
+        "4,90 €",
+        "4900 €"
+      ],
+      "answer": 1,
+      "explanation": "A média do exemplo é 4900 ÷ 100 = 49; trata-se de receita mensal por utilizador.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C017"
+      ]
+    },
+    {
+      "id": "MKT018",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Qual interpretação do ARPU é mais adequada?",
+      "options": [
+        "Quanto maior for, maior é necessariamente o lucro",
+        "É equivalente à taxa de conversão de visitas",
+        "Deve ser lido com custos, entrega e retenção para avaliar o modelo",
+        "Dispensa conhecer quanto custa adquirir clientes"
+      ],
+      "answer": 2,
+      "explanation": "Uma métrica isolada não descreve toda a sustentabilidade do negócio.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C018"
+      ]
+    },
+    {
+      "id": "MKT019",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "Que mecanismos de retenção são destacados na Aula 2?",
+      "options": [
+        "Exclusivamente localização e sinalética",
+        "Apenas anúncios e descontos de entrada",
+        "Só número de seguidores e alcance",
+        "Rotina, progressão e comunidade"
+      ],
+      "answer": 3,
+      "explanation": "A continuidade depende da experiência de prática e pertença, não apenas da aquisição.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C019"
+      ]
+    },
+    {
+      "id": "MKT020",
+      "topic": "2. Modelos de negócio e ARPU",
+      "type": "multiple_choice",
+      "question": "O que significa dizer que marketing amplifica o sistema existente?",
+      "options": [
+        "Mais anúncios corrigem automaticamente qualquer serviço",
+        "A comunicação não tem relação com a experiência do cliente",
+        "Um bom criativo elimina todos os problemas de capacidade",
+        "Mais comunicação pode tornar mais visíveis tanto o valor como as falhas de entrega"
+      ],
+      "answer": 3,
+      "explanation": "A aula alerta para a coerência do sistema antes de aumentar a sua exposição.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14.",
+      "saberes": [
+        "MKT-C020"
+      ]
+    },
+    {
+      "id": "MKT021",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Qual é a distinção correta entre CAC e custo por lead?",
+      "options": [
+        "CAC mede apenas receita mensal",
+        "CAC refere aquisição de cliente; custo por lead refere um contacto ainda não necessariamente convertido",
+        "CAC mede cancelamentos e custo por lead mede retenção",
+        "São sempre o mesmo valor"
+      ],
+      "answer": 1,
+      "explanation": "Um lead ainda pode não se tornar cliente; a conversão altera o custo por aquisição efetiva.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C021"
+      ]
+    },
+    {
+      "id": "MKT022",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Uma ação custa 600 € e gera 20 novos clientes atribuídos. Pelo cálculo definido, qual é o CAC?",
+      "options": [
+        "120 €",
+        "30 €",
+        "600 €",
+        "3 €"
+      ],
+      "answer": 1,
+      "explanation": "600 ÷ 20 = 30; o cálculo refere os custos e clientes indicados no enunciado.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C022"
+      ]
+    },
+    {
+      "id": "MKT023",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Como deve ser interpretado o exemplo simplificado de LTV dos slides?",
+      "options": [
+        "Como prova de que não existem custos de entrega",
+        "Como margem garantida para qualquer serviço",
+        "Como estimativa ilustrativa, sem o confundir com lucro líquido demonstrado",
+        "Como receita total de todos os clientes da empresa"
+      ],
+      "answer": 2,
+      "explanation": "A definição e o exemplo têm níveis de detalhe diferentes; sem custos não se demonstra lucro.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C023"
+      ]
+    },
+    {
+      "id": "MKT024",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Qual valor resulta do exemplo dos slides com 49 €/mês e 4 meses?",
+      "options": [
+        "490 €",
+        "12,25 €",
+        "53 €",
+        "196 €"
+      ],
+      "answer": 3,
+      "explanation": "49 × 4 = 196, preservando as unidades mensais e o caráter simplificado do exemplo.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C024"
+      ]
+    },
+    {
+      "id": "MKT025",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Porque é necessário indicar período e população ao falar de churn?",
+      "options": [
+        "Porque abandono de uma coorte aos 60 dias não equivale a churn mensal de toda a base",
+        "Porque a taxa mede apenas a quantidade de anúncios",
+        "Porque churn não envolve cancelamentos",
+        "Porque todas as taxas são diretamente comparáveis sem contexto"
+      ],
+      "answer": 0,
+      "explanation": "O denominador e a janela temporal determinam o significado da percentagem.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C025"
+      ]
+    },
+    {
+      "id": "MKT026",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Numa coorte inicial de 100 inscritos, 22 abandonam até aos 60 dias. Qual é a proporção de abandono dessa coorte?",
+      "options": [
+        "22%",
+        "78%",
+        "122%",
+        "4,5%"
+      ],
+      "answer": 0,
+      "explanation": "22 ÷ 100 × 100 = 22%; 78% é a proporção que não abandonou nesse exemplo.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C026"
+      ]
+    },
+    {
+      "id": "MKT027",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "O que representa payback no contexto das métricas da UC?",
+      "options": [
+        "Taxa de abandono no primeiro mês",
+        "Tempo necessário para recuperar o custo de aquisição",
+        "Receita média por utilizador",
+        "Número total de leads recebidos"
+      ],
+      "answer": 1,
+      "explanation": "Payback é uma medida temporal e deve ser interpretado com as condições de recuperação.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C027"
+      ]
+    },
+    {
+      "id": "MKT028",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Com CAC de 120 € e contribuição constante de 30 €/mês para a sua recuperação, qual é o payback do exemplo?",
+      "options": [
+        "4 meses",
+        "0,25 meses",
+        "90 meses",
+        "30 meses"
+      ],
+      "answer": 0,
+      "explanation": "A divisão usa uma contribuição mensal expressamente dada; 120 ÷ 30 = 4 meses.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C028"
+      ]
+    },
+    {
+      "id": "MKT029",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Qual leitura da relação CAC–LTV respeita os slides?",
+      "options": [
+        "Aplicar obrigatoriamente o rácio 1:3 como lei da UC",
+        "Considerar sustentabilidade garantida sempre que ARPU aumenta",
+        "Avaliar se a aquisição é sustentável face ao valor esperado e aos custos, sem impor um rácio universal não fornecido",
+        "Ignorar CAC quando o número de seguidores cresce"
+      ],
+      "answer": 2,
+      "explanation": "Os slides pedem coerência económica e retenção, mas não definem um rácio obrigatório universal.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C029"
+      ]
+    },
+    {
+      "id": "MKT030",
+      "topic": "3. CAC, LTV, churn e payback",
+      "type": "multiple_choice",
+      "question": "Uma campanha aumenta inscrições, mas também CAC e abandono precoce. Qual conclusão é mais adequada?",
+      "options": [
+        "Avaliar aquisição e retenção em conjunto antes de concluir que houve melhoria sustentável",
+        "Declarar sucesso apenas porque houve mais inscrições",
+        "Concluir que qualquer aumento de CAC é sempre aceitável",
+        "Ignorar abandono porque ocorre depois da venda"
+      ],
+      "answer": 0,
+      "explanation": "Volume de vendas isolado não demonstra viabilidade da relação económica.",
+      "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30.",
+      "saberes": [
+        "MKT-C030"
+      ]
+    },
+    {
+      "id": "MKT031",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual par pertence à análise interna da SWOT?",
+      "options": [
+        "Forças e fraquezas",
+        "Descoberta e retenção",
+        "Oportunidades e ameaças",
+        "CAC e payback"
+      ],
+      "answer": 0,
+      "explanation": "A origem interna ou externa é o critério, não apenas se o fator é positivo ou negativo.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C031"
+      ]
+    },
+    {
+      "id": "MKT032",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual situação é mais claramente uma ameaça externa numa SWOT?",
+      "options": [
+        "Entrada de um concorrente relevante na área do público-alvo",
+        "Erros no formulário mantido pelo próprio clube",
+        "Falta de resposta da própria equipa às marcações",
+        "Ausência de formação interna em atendimento"
+      ],
+      "answer": 0,
+      "explanation": "A entrada de um concorrente é externa; os outros exemplos são fragilidades do próprio sistema.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C032"
+      ]
+    },
+    {
+      "id": "MKT033",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Para que serve uma SWOT no diagnóstico de marketing?",
+      "options": [
+        "Escolher apenas a cor das publicações",
+        "Substituir todas as métricas por opiniões",
+        "Prever automaticamente a receita do ano seguinte",
+        "Relacionar fatores internos e externos para apoiar escolhas e prioridades"
+      ],
+      "answer": 3,
+      "explanation": "A utilidade está nas decisões que a análise ajuda a fundamentar, não na grelha por si só.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C033"
+      ]
+    },
+    {
+      "id": "MKT034",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual é um exemplo de concorrência direta?",
+      "options": [
+        "A opção de não iniciar qualquer prática",
+        "Outro clube com proposta semelhante para o mesmo público",
+        "Uma rotina autónoma de corrida em alternativa ao ginásio",
+        "Um lembrete enviado pelo próprio clube"
+      ],
+      "answer": 1,
+      "explanation": "A semelhança de categoria e proposta distingue concorrente direto das restantes alternativas.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C034"
+      ]
+    },
+    {
+      "id": "MKT035",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Uma pessoa escolhe treino em casa em vez de se inscrever no clube. Que alternativa exemplifica?",
+      "options": [
+        "Um custo de aquisição",
+        "Obrigatoriamente um concorrente direto da mesma categoria",
+        "Substituto",
+        "Uma microconversão já concluída"
+      ],
+      "answer": 2,
+      "explanation": "A solução responde à necessidade por uma via diferente da oferta do clube.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C035"
+      ]
+    },
+    {
+      "id": "MKT036",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "O que significa opção zero na análise de concorrência?",
+      "options": [
+        "Comprar imediatamente a oferta mais barata",
+        "Escolher o ginásio com mensalidade zero",
+        "Concluir todas as etapas do funil",
+        "Não agir ou adiar a decisão"
+      ],
+      "answer": 3,
+      "explanation": "A ausência de ação compete com as propostas, mesmo sem existir outra marca escolhida.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C036"
+      ]
+    },
+    {
+      "id": "MKT037",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "O que se pode concluir diretamente de observar muitos seguidores num concorrente?",
+      "options": [
+        "Que o seu CAC é sempre menor",
+        "Que todos os seguidores são clientes ativos",
+        "É um indicador observável de audiência, sem provar receita ou retenção",
+        "Que o concorrente tem necessariamente maior lucro"
+      ],
+      "answer": 2,
+      "explanation": "Proxies ajudam a formular hipóteses, mas não revelam automaticamente os dados internos.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C037"
+      ]
+    },
+    {
+      "id": "MKT038",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual enunciado é um problem statement mais útil?",
+      "options": [
+        "O concorrente parece melhor",
+        "O show rate das avaliações está em 42%, com impacto nas adesões, apesar das marcações existentes",
+        "Devemos publicar muito mais",
+        "A marca precisa de ser mais moderna"
+      ],
+      "answer": 1,
+      "explanation": "O enunciado identifica uma métrica, uma etapa e uma consequência, permitindo formular e testar explicações.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C038"
+      ]
+    },
+    {
+      "id": "MKT039",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual hipótese é efetivamente testável?",
+      "options": [
+        "Melhorar a marca para toda a gente sem data",
+        "Prometer que o público vai gostar mais do clube",
+        "Alterar o CTA para o segmento definido e testar show rate de 42% para 60% em quatro semanas, medido no CRM, sem aumentar custo por adesão",
+        "Fazer mais conteúdos porque parece uma boa ideia"
+      ],
+      "answer": 2,
+      "explanation": "A hipótese explicita ação, resultado, medição, prazo e uma condição económica de sucesso.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C039"
+      ]
+    },
+    {
+      "id": "MKT040",
+      "topic": "4. Diagnóstico, concorrência e hipóteses",
+      "type": "multiple_choice",
+      "question": "Qual critério ajuda a escolher a primeira hipótese a testar?",
+      "options": [
+        "Apenas o número de ideias numa reunião",
+        "Preferir sempre a ação de maior orçamento",
+        "Só a novidade do formato",
+        "Impacto no KPI do problema, esforço, risco e capacidade de entrega"
+      ],
+      "answer": 3,
+      "explanation": "A priorização procura um teste viável e relevante, em vez de acumular ações sem foco.",
+      "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29.",
+      "saberes": [
+        "MKT-C040"
+      ]
+    },
+    {
+      "id": "MKT041",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Qual é a principal utilidade do funil apresentado?",
+      "options": [
+        "Eliminar a necessidade de observar o cliente",
+        "Organizar etapas e medir perdas na progressão do potencial cliente",
+        "Substituir a experiência do serviço por anúncios",
+        "Garantir que todos os contactos acabam por comprar"
+      ],
+      "answer": 1,
+      "explanation": "O funil orienta ações e medição ao longo de uma progressão com possíveis perdas.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C041"
+      ]
+    },
+    {
+      "id": "MKT042",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Qual sequência corresponde às quatro etapas da Lista?",
+      "options": [
+        "Atrair, vender e terminar a relação",
+        "Converter, atrair, reter e envolver",
+        "Reter, cancelar, divulgar e converter",
+        "Atrair, envolver, converter e reter"
+      ],
+      "answer": 3,
+      "explanation": "A ordem articula aquisição e continuidade, incluindo a experiência após inscrição.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C042"
+      ]
+    },
+    {
+      "id": "MKT043",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Qual exemplo representa arquitetura de conversão coerente?",
+      "options": [
+        "Uma página com muitos botões contraditórios",
+        "Anúncio, página e agendamento com mensagem e próximo passo ligados",
+        "Vários posts sem ligação a qualquer ação ou oferta",
+        "Uma campanha que promete algo ausente na visita"
+      ],
+      "answer": 1,
+      "explanation": "A ligação entre mensagens e passos concretiza a progressão e reduz obstáculos.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C043"
+      ]
+    },
+    {
+      "id": "MKT044",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "O que acrescenta customer journey à leitura do funil?",
+      "options": [
+        "Emoções, dúvidas e fricções vividas nos pontos de contacto",
+        "Exclusivamente o orçamento dos anúncios",
+        "Uma garantia de comportamento igual entre todos",
+        "Apenas o número final de vendas"
+      ],
+      "answer": 0,
+      "explanation": "A jornada procura o ponto de vista do cliente e a qualidade da experiência.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C044"
+      ]
+    },
+    {
+      "id": "MKT045",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Qual situação mostra fricção na jornada?",
+      "options": [
+        "A página explica claramente o mesmo serviço apresentado na visita",
+        "A equipa acompanha o cliente conforme a oferta",
+        "O anúncio promete uma visita acolhedora, mas a pessoa chega sem orientação e espera sem informação",
+        "O lembrete confirma horário e localização combinados"
+      ],
+      "answer": 2,
+      "explanation": "A contradição entre promessa e vivência pode reduzir confiança e continuidade.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C045"
+      ]
+    },
+    {
+      "id": "MKT046",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Qual diferença entre marcação e show é importante?",
+      "options": [
+        "Marcação é agendamento; show é presença efetiva",
+        "Marcação só existe depois de inscrição",
+        "Marcação e show são sempre o mesmo acontecimento",
+        "Show é cancelamento; marcação é retenção"
+      ],
+      "answer": 0,
+      "explanation": "A ausência à visita marcada é uma perda distinta da falta de marcação.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C046"
+      ]
+    },
+    {
+      "id": "MKT047",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Com 180 leads e 70 marcações, qual é a taxa lead→marcação aproximada?",
+      "options": [
+        "55,6%",
+        "13,9%",
+        "64,3%",
+        "38,9%"
+      ],
+      "answer": 3,
+      "explanation": "A proporção pedida é 70 ÷ 180 × 100; as outras taxas podem corresponder a etapas diferentes.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C047"
+      ]
+    },
+    {
+      "id": "MKT048",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Com 70 visitas marcadas e 45 presenças, qual é o show rate aproximado?",
+      "options": [
+        "38,9%",
+        "25%",
+        "64,3%",
+        "55,6%"
+      ],
+      "answer": 2,
+      "explanation": "O denominador do show rate é o número de marcações, não o total de leads.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C048"
+      ]
+    },
+    {
+      "id": "MKT049",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "No caso dos slides, 18 adesões de 90 leads do Google correspondem a quê?",
+      "options": [
+        "Um CAC de 20 €",
+        "20 meses de payback",
+        "20% de conversão lead→adesão",
+        "20% de margem líquida comprovada"
+      ],
+      "answer": 2,
+      "explanation": "A fração mede conversão; o caso não fornece o custo necessário para calcular CAC por canal.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C049"
+      ]
+    },
+    {
+      "id": "MKT050",
+      "topic": "5. Funil, jornada e microconversões",
+      "type": "multiple_choice",
+      "question": "Um show rate baixo prova, por si só, que o preço é demasiado alto?",
+      "options": [
+        "Sim; basta reduzir preço sem investigar",
+        "Não; localiza uma perda e exige hipóteses e teste de causas",
+        "Sim; é a única causa possível",
+        "Não há qualquer utilidade em medir show rate"
+      ],
+      "answer": 1,
+      "explanation": "A distinção entre sinal e causa é explícita na Aula 2 e evita decisões precipitadas.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23.",
+      "saberes": [
+        "MKT-C050"
+      ]
+    },
+    {
+      "id": "MKT051",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual definição corresponde a email marketing nos materiais?",
+      "options": [
+        "Publicação de conteúdos exclusivamente numa rede social",
+        "Uma ferramenta que dispensa conhecer o público",
+        "Comunicação por email com contactos, orientada a objetivos definidos e valor para o destinatário",
+        "Envio indistinto de mensagens sem qualquer objetivo"
+      ],
+      "answer": 2,
+      "explanation": "O canal deve apoiar uma estratégia de relação e progressão, não apenas volume de envios.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C051"
+      ]
+    },
+    {
+      "id": "MKT052",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual conjunto de objetivos é pedido na Lista para email marketing?",
+      "options": [
+        "Só aumentar o número bruto de envios",
+        "Nutrir, converter, reter e reativar",
+        "Substituir todas as interações no clube",
+        "Apenas divulgar descontos e terminar a relação"
+      ],
+      "answer": 1,
+      "explanation": "Os objetivos dependem do estado da relação e da etapa em que o destinatário se encontra.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C052"
+      ]
+    },
+    {
+      "id": "MKT053",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual objetivo é mais adequado a um email de boas-vindas?",
+      "options": [
+        "Acolher o novo contacto, orientar expectativas e indicar um próximo passo",
+        "Enviar apenas uma lista de preços sem contexto",
+        "Tratar um pedido de recuperação de palavra-passe como campanha comercial",
+        "Pressupor que a pessoa já conhece todos os procedimentos"
+      ],
+      "answer": 0,
+      "explanation": "O tipo de mensagem deve corresponder ao momento inicial da relação.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C053"
+      ]
+    },
+    {
+      "id": "MKT054",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual email é mais claramente de nutrição?",
+      "options": [
+        "Um email exclusivamente com confirmação de palavra-passe",
+        "Um conteúdo que esclarece uma dúvida relevante e prepara o próximo passo",
+        "Um recibo automático de uma compra",
+        "Uma mensagem sem conteúdo útil enviada só para aumentar frequência"
+      ],
+      "answer": 1,
+      "explanation": "Nutrição desenvolve relação e conhecimento; transacionais respondem a uma ação esperada.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C054"
+      ]
+    },
+    {
+      "id": "MKT055",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "O que significa a ressalva dos slides sobre promoção?",
+      "options": [
+        "Um email promocional não pode ter próximo passo",
+        "Pode ser apresentar ou divulgar um serviço, sem implicar desconto",
+        "Promoção significa apenas enviar faturas",
+        "Qualquer promoção exige baixar o preço"
+      ],
+      "answer": 1,
+      "explanation": "A função de divulgar ou apresentar não se confunde necessariamente com redução de preço.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C055"
+      ]
+    },
+    {
+      "id": "MKT056",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Que objetivo caracteriza um email de reativação?",
+      "options": [
+        "Confirmar automaticamente uma compra acabada de fazer",
+        "Receber um novo contacto como se nunca tivesse existido relação",
+        "Garantir que todos os destinatários voltam a comprar",
+        "Retomar contacto e facilitar uma ação de quem ficou inativo"
+      ],
+      "answer": 3,
+      "explanation": "Reativação trata de uma relação interrompida ou sem atividade, sem garantir resultado.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C056"
+      ]
+    },
+    {
+      "id": "MKT057",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual exemplo é transacional?",
+      "options": [
+        "Uma mensagem de apresentação de uma nova oferta",
+        "Confirmação enviada depois de uma marcação",
+        "Uma sequência educativa semanal para potenciais clientes",
+        "Uma campanha para regressar após inatividade"
+      ],
+      "answer": 1,
+      "explanation": "A mensagem responde a uma ação específica e esperada pelo destinatário.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C057"
+      ]
+    },
+    {
+      "id": "MKT058",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual sequência é mais coerente com o princípio de follow-up?",
+      "options": [
+        "Entregar o recurso pedido, esclarecer uma dúvida, apresentar prova e convidar para um passo adequado",
+        "Enviar repetidamente o mesmo desconto sem considerar respostas",
+        "Misturar confirmações e campanhas sem objetivo definido",
+        "Parar qualquer contacto assim que o lead é registado"
+      ],
+      "answer": 0,
+      "explanation": "A sequência liga valor, confiança e ação conforme a progressão do contacto.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C058"
+      ]
+    },
+    {
+      "id": "MKT059",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual CTA é mais claro num email cujo objetivo é marcar uma avaliação?",
+      "options": [
+        "Conhece tudo sobre tudo o que fazemos",
+        "Segue-nos, compra, responde e lê quatro páginas ao mesmo tempo",
+        "Escolhe um horário para a avaliação",
+        "Clica aqui sem indicar o que acontece depois"
+      ],
+      "answer": 2,
+      "explanation": "O CTA liga o conteúdo a uma ação identificável e adequada ao objetivo.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C059"
+      ]
+    },
+    {
+      "id": "MKT060",
+      "topic": "6. Email marketing, sequências e medição",
+      "type": "multiple_choice",
+      "question": "Qual métrica se liga mais diretamente a um email de confirmação/lembrete de avaliação?",
+      "options": [
+        "Presenças nas avaliações marcadas, no contexto da sequência",
+        "Só o número de cores do layout",
+        "Apenas total de seguidores da marca",
+        "Sempre lucro líquido por mensagem, sem dados de custos"
+      ],
+      "answer": 0,
+      "explanation": "Se o objetivo é reduzir faltas, a presença e o show rate são mais próximos do resultado do que métricas de audiência.",
+      "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23.",
+      "saberes": [
+        "MKT-C060"
+      ]
+    },
+    {
+      "id": "MKT061",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Como interpretar os 3–5 pilares pedidos na Lista?",
+      "options": [
+        "Mudar de público em cada publicação para criar variedade",
+        "Escolher categorias recorrentes alinhadas com público e objetivos, sem ter de usar todos os exemplos dos slides",
+        "Publicar obrigatoriamente todos os temas possíveis em cada semana",
+        "Definir apenas três formatos técnicos como se fossem temas"
+      ],
+      "answer": 1,
+      "explanation": "Pilar é uma categoria temática estável; os conteúdos concretos variam dentro dela.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C061"
+      ]
+    },
+    {
+      "id": "MKT062",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Que conjunto de pilares pode apoiar aquisição e retenção?",
+      "options": [
+        "Só mensagens de inscrição sem apoio pós-venda",
+        "Apenas descontos repetidos para novos clientes",
+        "Temas sem relação com as necessidades do público",
+        "Educação, prova de progresso e comunidade, ligados a objetivos claros"
+      ],
+      "answer": 3,
+      "explanation": "O equilíbrio liga descoberta, prova e relação contínua; não exige uma função única e rígida por tema.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C062"
+      ]
+    },
+    {
+      "id": "MKT063",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual peça é predominantemente literal?",
+      "options": [
+        "Uma explicação direta dos passos para marcar a primeira avaliação",
+        "Um contraste humorístico sem instrução direta",
+        "Uma metáfora inesperada sobre a rotina de treino",
+        "Uma história que muda o enquadramento do problema"
+      ],
+      "answer": 0,
+      "explanation": "A abordagem literal privilegia explicação explícita e sequência clara.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C063"
+      ]
+    },
+    {
+      "id": "MKT064",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual elemento caracteriza melhor uma abordagem lateral?",
+      "options": [
+        "Usar uma analogia para reenquadrar uma dificuldade de forma memorável",
+        "Eliminar toda a ligação ao problema do público",
+        "Repetir literalmente uma ficha de instruções",
+        "Apresentar apenas uma lista técnica de procedimentos"
+      ],
+      "answer": 0,
+      "explanation": "A mudança de enquadramento pode abrir interesse, mas deve continuar relevante.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C064"
+      ]
+    },
+    {
+      "id": "MKT065",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual é a função principal de um canal de descoberta?",
+      "options": [
+        "Emitir confirmações de pagamento",
+        "Garantir sozinho a retenção de todos os inscritos",
+        "Substituir qualquer prova antes da decisão",
+        "Fazer a marca ser encontrada pelo público relevante"
+      ],
+      "answer": 3,
+      "explanation": "A função no topo do funil é descoberta; depois é necessário apoiar confiança e progressão.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C065"
+      ]
+    },
+    {
+      "id": "MKT066",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual utilização de canal está mais orientada para confiança?",
+      "options": [
+        "Enviar um recibo sem qualquer relação com dúvidas prévias",
+        "Explicar o método e responder a dúvidas relevantes com prova",
+        "Mostrar apenas um botão de pagamento sem contexto",
+        "Publicar uma promessa sem suporte"
+      ],
+      "answer": 1,
+      "explanation": "Confiança envolve compreensão, evidência e relação, não apenas visibilidade.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C066"
+      ]
+    },
+    {
+      "id": "MKT067",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "O que caracteriza um uso do canal orientado para conversão?",
+      "options": [
+        "Facilitar uma marcação ou decisão com próximo passo claro",
+        "Medir apenas o número de seguidores",
+        "Aumentar apenas o alcance sem ligação à oferta",
+        "Criar entretenimento desligado do serviço"
+      ],
+      "answer": 0,
+      "explanation": "A conversão pede uma ação coerente com a oferta e reduzida fricção para a concretizar.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C067"
+      ]
+    },
+    {
+      "id": "MKT068",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual ação está mais ligada a um canal de retenção?",
+      "options": [
+        "Apenas anúncios de descoberta para desconhecidos",
+        "Mudar o preço diariamente sem acompanhamento",
+        "Check-ins e recursos de apoio aos clientes já inscritos",
+        "Terminar toda a comunicação no momento da compra"
+      ],
+      "answer": 2,
+      "explanation": "O objetivo é sustentar experiência, relação e hábito após conversão.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C068"
+      ]
+    },
+    {
+      "id": "MKT069",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Que combinação define melhor um plano editorial útil?",
+      "options": [
+        "Apenas uma lista de datas sem propósito",
+        "Cadência, formatos, objetivos e KPIs ligados aos pilares e canais",
+        "Só as cores e tipos de letra da marca",
+        "Um número fixo de publicações igual para qualquer negócio"
+      ],
+      "answer": 1,
+      "explanation": "O plano coordena execução e avaliação; não se resume a calendário ou estética.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C069"
+      ]
+    },
+    {
+      "id": "MKT070",
+      "topic": "7. Pilares, canais e plano editorial",
+      "type": "multiple_choice",
+      "question": "Qual critério é adequado para escolher canais?",
+      "options": [
+        "Escolher só pelo número global de utilizadores da plataforma",
+        "Apenas a vontade de copiar todos os concorrentes",
+        "Onde está o público, como compra e o que a equipa consegue manter",
+        "Estar em todos os canais, mesmo sem tempo para responder"
+      ],
+      "answer": 2,
+      "explanation": "A viabilidade e a função no percurso do cliente orientam a escolha.",
+      "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46.",
+      "saberes": [
+        "MKT-C070"
+      ]
+    },
+    {
+      "id": "MKT071",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual cadeia corresponde à integração final pedida na Lista?",
+      "options": [
+        "Descontos e publicações sem medição ou acompanhamento",
+        "Posicionamento, oferta, funil, conteúdos/criativos, CRM/email e retenção",
+        "Retenção sem oferta nem público definido",
+        "Anúncios, gostos e término da relação"
+      ],
+      "answer": 1,
+      "explanation": "A integração une decisões estratégicas, execução, relação e continuidade.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C071"
+      ]
+    },
+    {
+      "id": "MKT072",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual trio é mais coerente para acompanhar marcação, comparência e continuidade?",
+      "options": [
+        "Aberturas, seguidores e total de posts como prova de retenção",
+        "Preço, número de máquinas e cor do logótipo",
+        "Taxa lead→marcação, show rate e churn da coorte aos 60 dias",
+        "Seguidores, impressões e gostos, sem ligação à operação"
+      ],
+      "answer": 2,
+      "explanation": "O trio cobre etapas diferentes; as definições de população e período continuam necessárias.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C072"
+      ]
+    },
+    {
+      "id": "MKT073",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual uso do CRM apoia a integração da estratégia?",
+      "options": [
+        "Provar automaticamente que a causa do abandono é preço",
+        "Substituir a experiência de atendimento por um ficheiro",
+        "Guardar nomes sem qualquer ligação às ações",
+        "Registar estados e próximos passos para medir e orientar follow-up"
+      ],
+      "answer": 3,
+      "explanation": "O registo apoia medição e execução; a interpretação causal continua a exigir investigação.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C073"
+      ]
+    },
+    {
+      "id": "MKT074",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "O que deve orientar um criativo antes de escolher a imagem?",
+      "options": [
+        "Apenas a preferência estética do profissional",
+        "A vontade de usar todas as funções da plataforma",
+        "Público, problema, objetivo, proposta e respetiva prova",
+        "Só o formato mais recente visto num concorrente"
+      ],
+      "answer": 2,
+      "explanation": "A execução deve servir o briefing e o objetivo, em vez de determinar sozinha a estratégia.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C074"
+      ]
+    },
+    {
+      "id": "MKT075",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual correspondência está correta?",
+      "options": [
+        "FGC: marca; UGC: utilizadores; EGC: colaboradores",
+        "Os três termos designam exclusivamente anúncios pagos",
+        "FGC: seguidores; UGC: gestores; EGC: algoritmos",
+        "FGC: pagamentos; UGC: receitas; EGC: despesas"
+      ],
+      "answer": 0,
+      "explanation": "As siglas distinguem a origem da criação e ajudam a compreender prova e envolvimento.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C075"
+      ]
+    },
+    {
+      "id": "MKT076",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual interpretação respeita as distinções e limites dos slides?",
+      "options": [
+        "Earned é sempre escrito e controlado pela marca",
+        "Owned nunca exige tempo ou recursos de produção",
+        "Paid paga distribuição; owned é gerido pela marca; earned vem de terceiros e não é totalmente controlado",
+        "Paid garante retenção independentemente da experiência"
+      ],
+      "answer": 2,
+      "explanation": "A ausência de compra de distribuição não significa ausência de custos de conteúdo.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C076"
+      ]
+    },
+    {
+      "id": "MKT077",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual prática é coerente com os princípios de copy dos slides?",
+      "options": [
+        "Publicar o primeiro rascunho sem verificar a oferta",
+        "Pesquisar o briefing, estruturar, ler em voz alta e rever para clareza e ação",
+        "Acumular jargão para parecer mais competente",
+        "Trocar a proposta por uma promessa impossível para chamar atenção"
+      ],
+      "answer": 1,
+      "explanation": "O processo melhora adequação e compreensão; criatividade não substitui preparação ou rigor.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C077"
+      ]
+    },
+    {
+      "id": "MKT078",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual abordagem é predominantemente relacional?",
+      "options": [
+        "Encerrar o contacto depois de receber o pagamento",
+        "Medir sucesso unicamente pelo número de campanhas lançadas",
+        "Focar apenas uma venda rápida sem acompanhar a experiência",
+        "Conhecer clientes e melhorar experiência e retenção ao longo do tempo"
+      ],
+      "answer": 3,
+      "explanation": "A relação e as interações pós-venda apoiam continuidade e distinguem o foco de longo prazo.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C078"
+      ]
+    },
+    {
+      "id": "MKT079",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Porque incluir uma condição como não aumentar o custo por adesão num teste de show rate?",
+      "options": [
+        "Para substituir o prazo do teste por uma opinião",
+        "Para verificar que a melhoria da etapa não prejudica o objetivo económico definido",
+        "Para garantir antecipadamente que a hipótese será verdadeira",
+        "Para dispensar a medição das presenças"
+      ],
+      "answer": 1,
+      "explanation": "Uma salvaguarda ajuda a avaliar efeitos conjuntos em vez de otimizar uma taxa isolada.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C079"
+      ]
+    },
+    {
+      "id": "MKT080",
+      "topic": "8. Integração: oferta, conteúdos, CRM e retenção",
+      "type": "multiple_choice",
+      "question": "Qual plano integra melhor os componentes da Lista?",
+      "options": [
+        "Aumentar publicações sem alterar a oferta nem acompanhar contactos",
+        "Baixar preço sem investigar a etapa onde se perdem pessoas",
+        "Medir gostos e assumir que representam inscrições e retenção",
+        "Alinhar público e promessa com oferta/prova, conteúdos, marcação, follow-up e onboarding, medindo etapas distintas"
+      ],
+      "answer": 3,
+      "explanation": "O plano liga posicionamento, entrega, comunicação, acompanhamento e medição, em vez de ações soltas.",
+      "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27.",
+      "saberes": [
+        "MKT-C080"
+      ]
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "MKT021",
+      "MKT041",
+      "MKT060",
+      "MKT075",
+      "MKT056",
+      "MKT038",
+      "MKT067",
+      "MKT037",
+      "MKT018",
+      "MKT029",
+      "MKT039",
+      "MKT051",
+      "MKT073",
+      "MKT010",
+      "MKT003",
+      "MKT036",
+      "MKT049",
+      "MKT066",
+      "MKT052",
+      "MKT020",
+      "MKT015",
+      "MKT014",
+      "MKT078",
+      "MKT050",
+      "MKT026",
+      "MKT031",
+      "MKT053",
+      "MKT016",
+      "MKT063",
+      "MKT007",
+      "MKT064",
+      "MKT080",
+      "MKT028",
+      "MKT074",
+      "MKT045",
+      "MKT005",
+      "MKT043",
+      "MKT069",
+      "MKT006",
+      "MKT027"
+    ],
+    "exam2": [
+      "MKT008",
+      "MKT054",
+      "MKT058",
+      "MKT001",
+      "MKT065",
+      "MKT024",
+      "MKT059",
+      "MKT061",
+      "MKT035",
+      "MKT057",
+      "MKT023",
+      "MKT046",
+      "MKT070",
+      "MKT044",
+      "MKT040",
+      "MKT071",
+      "MKT002",
+      "MKT012",
+      "MKT009",
+      "MKT072",
+      "MKT047",
+      "MKT048",
+      "MKT077",
+      "MKT055",
+      "MKT030",
+      "MKT004",
+      "MKT033",
+      "MKT042",
+      "MKT022",
+      "MKT025",
+      "MKT011",
+      "MKT019",
+      "MKT079",
+      "MKT076",
+      "MKT032",
+      "MKT068",
+      "MKT062",
+      "MKT013",
+      "MKT034",
+      "MKT017"
+    ]
+  },
+  "coverage_audit": {
+    "status": "source_reviewed",
+    "date": "2026-11-04",
+    "sources": [
+      "Aula 1.pdf (33 páginas)",
+      "Aula 2.pdf (30 páginas)",
+      "Aula 3.pdf (47 páginas)",
+      "Aula 4.pdf (28 páginas)",
+      "Lista de Saberes.pdf (2 páginas)"
+    ],
+    "summary": "23 marcadores em oito grupos da Lista, ligados explicitamente ao resumo de oito temas/80 conceitos. Cinco perguntas de cada tema por exame.",
+    "limits": [
+      "Referências temáticas não significam avaliação isolada de cada componente em cada exame.",
+      "Exemplos de cálculo autorais indicam âmbito e pressupostos; não são fórmulas adicionais atribuídas aos slides.",
+      "LTV simplificado de 196 € não demonstra lucro; métricas e proxies não demonstram causalidade.",
+      "Exemplos de ferramentas, plataformas e percentagens históricas não são recomendações atuais ou garantias."
+    ],
+    "items": [
+      {
+        "id": "MKT-C001",
+        "concept": "Marketing",
+        "summary_anchor": "mkt-detail-001",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT001"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C002",
+        "concept": "Criação de valor",
+        "summary_anchor": "mkt-detail-002",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT002"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C003",
+        "concept": "Estratégia",
+        "summary_anchor": "mkt-detail-003",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT003"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C004",
+        "concept": "Tática",
+        "summary_anchor": "mkt-detail-004",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT004"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C005",
+        "concept": "Segmentação",
+        "summary_anchor": "mkt-detail-005",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT005"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C006",
+        "concept": "Público-alvo",
+        "summary_anchor": "mkt-detail-006",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT006"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C007",
+        "concept": "Posicionamento",
+        "summary_anchor": "mkt-detail-007",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT007"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C008",
+        "concept": "STP articulado",
+        "summary_anchor": "mkt-detail-008",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT008"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C009",
+        "concept": "Proposta de valor: promessa e prova",
+        "summary_anchor": "mkt-detail-009",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT009"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C010",
+        "concept": "Coerência e trade-offs",
+        "summary_anchor": "mkt-detail-010",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–7, 10–11; Aula 3, pp. 13–16, 33–34",
+        "question_ids": [
+          "MKT010"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C011",
+        "concept": "Low-cost",
+        "summary_anchor": "mkt-detail-011",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT011"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C012",
+        "concept": "Boutique",
+        "summary_anchor": "mkt-detail-012",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT012"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C013",
+        "concept": "PT premium",
+        "summary_anchor": "mkt-detail-013",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT013"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C014",
+        "concept": "Online coaching",
+        "summary_anchor": "mkt-detail-014",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT014"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C015",
+        "concept": "Comparar modelos",
+        "summary_anchor": "mkt-detail-015",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT015"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C016",
+        "concept": "ARPU",
+        "summary_anchor": "mkt-detail-016",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT016"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C017",
+        "concept": "ARPU: exemplo de cálculo",
+        "summary_anchor": "mkt-detail-017",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT017"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C018",
+        "concept": "ARPU e estratégia",
+        "summary_anchor": "mkt-detail-018",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT018"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C019",
+        "concept": "Rotina, progressão e comunidade",
+        "summary_anchor": "mkt-detail-019",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT019"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C020",
+        "concept": "Sistema antes da amplificação",
+        "summary_anchor": "mkt-detail-020",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 3–4, 9–14",
+        "question_ids": [
+          "MKT020"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C021",
+        "concept": "CAC: definição",
+        "summary_anchor": "mkt-detail-021",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT021"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C022",
+        "concept": "CAC: cálculo com âmbito definido",
+        "summary_anchor": "mkt-detail-022",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT022"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C023",
+        "concept": "LTV: definição e limites",
+        "summary_anchor": "mkt-detail-023",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT023"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C024",
+        "concept": "LTV: exemplo 49 € × 4 meses",
+        "summary_anchor": "mkt-detail-024",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT024"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C025",
+        "concept": "Churn: definição",
+        "summary_anchor": "mkt-detail-025",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT025"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C026",
+        "concept": "Churn: cálculo de uma coorte definida",
+        "summary_anchor": "mkt-detail-026",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT026"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C027",
+        "concept": "Payback: definição",
+        "summary_anchor": "mkt-detail-027",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT027"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C028",
+        "concept": "Payback: exemplo condicionado",
+        "summary_anchor": "mkt-detail-028",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT028"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C029",
+        "concept": "CAC versus LTV",
+        "summary_anchor": "mkt-detail-029",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT029"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C030",
+        "concept": "Interpretar métricas em conjunto",
+        "summary_anchor": "mkt-detail-030",
+        "source": "Lista de Saberes, p. 1; Aula 2, pp. 4, 7, 12, 22–23, 27–30",
+        "question_ids": [
+          "MKT030"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C031",
+        "concept": "SWOT: fatores internos",
+        "summary_anchor": "mkt-detail-031",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT031"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C032",
+        "concept": "SWOT: fatores externos",
+        "summary_anchor": "mkt-detail-032",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT032"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C033",
+        "concept": "SWOT para decidir",
+        "summary_anchor": "mkt-detail-033",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT033"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C034",
+        "concept": "Concorrentes diretos",
+        "summary_anchor": "mkt-detail-034",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT034"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C035",
+        "concept": "Substitutos",
+        "summary_anchor": "mkt-detail-035",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT035"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C036",
+        "concept": "Opção zero",
+        "summary_anchor": "mkt-detail-036",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT036"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C037",
+        "concept": "Proxies e observação da concorrência",
+        "summary_anchor": "mkt-detail-037",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT037"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C038",
+        "concept": "Problem statement",
+        "summary_anchor": "mkt-detail-038",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT038"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C039",
+        "concept": "Hipótese testável",
+        "summary_anchor": "mkt-detail-039",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT039"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C040",
+        "concept": "Oportunidade e prioridade",
+        "summary_anchor": "mkt-detail-040",
+        "source": "Lista de Saberes, p. 1; Aula 1, p. 3; Aula 2, pp. 15–29",
+        "question_ids": [
+          "MKT040"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C041",
+        "concept": "Funil de marketing",
+        "summary_anchor": "mkt-detail-041",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT041"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C042",
+        "concept": "Atrair, envolver, converter e reter",
+        "summary_anchor": "mkt-detail-042",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT042"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C043",
+        "concept": "Arquitetura de conversão",
+        "summary_anchor": "mkt-detail-043",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT043"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C044",
+        "concept": "Customer journey",
+        "summary_anchor": "mkt-detail-044",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT044"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C045",
+        "concept": "Consistência entre pontos de contacto",
+        "summary_anchor": "mkt-detail-045",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT045"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C046",
+        "concept": "Microconversões",
+        "summary_anchor": "mkt-detail-046",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT046"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C047",
+        "concept": "Lead para marcação",
+        "summary_anchor": "mkt-detail-047",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT047"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C048",
+        "concept": "Show rate",
+        "summary_anchor": "mkt-detail-048",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT048"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C049",
+        "concept": "Comparação de canais",
+        "summary_anchor": "mkt-detail-049",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT049"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C050",
+        "concept": "Métrica não prova causa",
+        "summary_anchor": "mkt-detail-050",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 7–18, 32; Aula 2, pp. 12, 21–23",
+        "question_ids": [
+          "MKT050"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C051",
+        "concept": "Definição de email marketing",
+        "summary_anchor": "mkt-detail-051",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT051"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C052",
+        "concept": "Objetivos: nutrir, converter, reter e reativar",
+        "summary_anchor": "mkt-detail-052",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT052"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C053",
+        "concept": "Boas-vindas",
+        "summary_anchor": "mkt-detail-053",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT053"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C054",
+        "concept": "Nutrição",
+        "summary_anchor": "mkt-detail-054",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT054"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C055",
+        "concept": "Promoção não é sempre desconto",
+        "summary_anchor": "mkt-detail-055",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT055"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C056",
+        "concept": "Reativação",
+        "summary_anchor": "mkt-detail-056",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT056"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C057",
+        "concept": "Transacionais",
+        "summary_anchor": "mkt-detail-057",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT057"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C058",
+        "concept": "Sequência e follow-up",
+        "summary_anchor": "mkt-detail-058",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT058"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C059",
+        "concept": "CTA",
+        "summary_anchor": "mkt-detail-059",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT059"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C060",
+        "concept": "Métrica por email",
+        "summary_anchor": "mkt-detail-060",
+        "source": "Lista de Saberes, p. 1; Aula 1, pp. 20–32; Aula 2, pp. 22–23",
+        "question_ids": [
+          "MKT060"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C061",
+        "concept": "Pilares de conteúdo: 3–5",
+        "summary_anchor": "mkt-detail-061",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT061"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C062",
+        "concept": "Aquisição e retenção nos pilares",
+        "summary_anchor": "mkt-detail-062",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT062"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C063",
+        "concept": "Abordagem literal",
+        "summary_anchor": "mkt-detail-063",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT063"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C064",
+        "concept": "Abordagem lateral",
+        "summary_anchor": "mkt-detail-064",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT064"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C065",
+        "concept": "Canais de descoberta",
+        "summary_anchor": "mkt-detail-065",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT065"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C066",
+        "concept": "Canais de confiança",
+        "summary_anchor": "mkt-detail-066",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT066"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C067",
+        "concept": "Canais de conversão",
+        "summary_anchor": "mkt-detail-067",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT067"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C068",
+        "concept": "Canais de retenção",
+        "summary_anchor": "mkt-detail-068",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT068"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C069",
+        "concept": "Plano editorial",
+        "summary_anchor": "mkt-detail-069",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT069"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C070",
+        "concept": "Seleção de canais e capacidade",
+        "summary_anchor": "mkt-detail-070",
+        "source": "Lista de Saberes, p. 1; Aula 3, pp. 12–16, 33–46",
+        "question_ids": [
+          "MKT070"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C071",
+        "concept": "Cadeia integrada",
+        "summary_anchor": "mkt-detail-071",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT071"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C072",
+        "concept": "Escolher três KPIs por etapa",
+        "summary_anchor": "mkt-detail-072",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT072"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C073",
+        "concept": "CRM e próximo passo",
+        "summary_anchor": "mkt-detail-073",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT073"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C074",
+        "concept": "Briefing do criativo",
+        "summary_anchor": "mkt-detail-074",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT074"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C075",
+        "concept": "FGC, UGC e EGC",
+        "summary_anchor": "mkt-detail-075",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT075"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C076",
+        "concept": "Paid, owned e earned",
+        "summary_anchor": "mkt-detail-076",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT076"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C077",
+        "concept": "Copywriting ao serviço do objetivo",
+        "summary_anchor": "mkt-detail-077",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT077"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C078",
+        "concept": "Transacional, relacional e engagement",
+        "summary_anchor": "mkt-detail-078",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT078"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C079",
+        "concept": "Testar com condição de sucesso",
+        "summary_anchor": "mkt-detail-079",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT079"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "MKT-C080",
+        "concept": "Plano final aplicado",
+        "summary_anchor": "mkt-detail-080",
+        "source": "Lista de Saberes, p. 2; Aula 1, p. 32; Aula 2, pp. 23–30; Aula 3, pp. 43–46; Aula 4, pp. 3–9, 12–16, 21–27",
+        "question_ids": [
+          "MKT080"
+        ],
+        "status": "explicit"
+      }
+    ],
+    "lista_items": [
+      {
+        "id": "MKT-L001",
+        "group": 1,
+        "list_page": 1,
+        "saber": "Marketing (definição) e criação de valor.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-001",
+          "mkt-detail-002"
+        ],
+        "question_ids": [
+          "MKT001",
+          "MKT002"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L002",
+        "group": 1,
+        "list_page": 1,
+        "saber": "Estratégia vs tática (saber distinguir).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-003",
+          "mkt-detail-004"
+        ],
+        "question_ids": [
+          "MKT003",
+          "MKT004"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L003",
+        "group": 1,
+        "list_page": 1,
+        "saber": "STP: segmentação, público-alvo e posicionamento.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-005",
+          "mkt-detail-006",
+          "mkt-detail-007",
+          "mkt-detail-008"
+        ],
+        "question_ids": [
+          "MKT005",
+          "MKT006",
+          "MKT007",
+          "MKT008"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L004",
+        "group": 1,
+        "list_page": 1,
+        "saber": "Proposta de valor (promessa + prova).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-009",
+          "mkt-detail-010"
+        ],
+        "question_ids": [
+          "MKT009",
+          "MKT010"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L005",
+        "group": 2,
+        "list_page": 1,
+        "saber": "Low-cost vs Boutique vs PT premium vs Online coaching.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-011",
+          "mkt-detail-012",
+          "mkt-detail-013",
+          "mkt-detail-014",
+          "mkt-detail-015",
+          "mkt-detail-019",
+          "mkt-detail-020"
+        ],
+        "question_ids": [
+          "MKT011",
+          "MKT012",
+          "MKT013",
+          "MKT014",
+          "MKT015",
+          "MKT019",
+          "MKT020"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L006",
+        "group": 2,
+        "list_page": 1,
+        "saber": "ARPU e implicação na estratégia.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-016",
+          "mkt-detail-017",
+          "mkt-detail-018"
+        ],
+        "question_ids": [
+          "MKT016",
+          "MKT017",
+          "MKT018"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L007",
+        "group": 3,
+        "list_page": 1,
+        "saber": "CAC, LTV, churn e payback.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-021",
+          "mkt-detail-022",
+          "mkt-detail-023",
+          "mkt-detail-024",
+          "mkt-detail-025",
+          "mkt-detail-026",
+          "mkt-detail-027",
+          "mkt-detail-028",
+          "mkt-detail-030"
+        ],
+        "question_ids": [
+          "MKT021",
+          "MKT022",
+          "MKT023",
+          "MKT024",
+          "MKT025",
+          "MKT026",
+          "MKT027",
+          "MKT028",
+          "MKT030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L008",
+        "group": 3,
+        "list_page": 1,
+        "saber": "Relação CAC vs LTV (sustentabilidade).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-029",
+          "mkt-detail-030"
+        ],
+        "question_ids": [
+          "MKT029",
+          "MKT030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L009",
+        "group": 4,
+        "list_page": 1,
+        "saber": "SWOT (o que é e para que serve).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-031",
+          "mkt-detail-032",
+          "mkt-detail-033"
+        ],
+        "question_ids": [
+          "MKT031",
+          "MKT032",
+          "MKT033"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L010",
+        "group": 4,
+        "list_page": 1,
+        "saber": "Concorrentes diretos, substitutos e ‘opção zero’.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-034",
+          "mkt-detail-035",
+          "mkt-detail-036",
+          "mkt-detail-037"
+        ],
+        "question_ids": [
+          "MKT034",
+          "MKT035",
+          "MKT036",
+          "MKT037"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L011",
+        "group": 4,
+        "list_page": 1,
+        "saber": "Problem statement + hipótese testável (X → Y medido por Z).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-038",
+          "mkt-detail-039",
+          "mkt-detail-040"
+        ],
+        "question_ids": [
+          "MKT038",
+          "MKT039",
+          "MKT040"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L012",
+        "group": 5,
+        "list_page": 1,
+        "saber": "Funil: atrair → envolver → converter → reter.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-041",
+          "mkt-detail-042",
+          "mkt-detail-043"
+        ],
+        "question_ids": [
+          "MKT041",
+          "MKT042",
+          "MKT043"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L013",
+        "group": 5,
+        "list_page": 1,
+        "saber": "Customer journey: emoções, fricções e pontos de contacto.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-044",
+          "mkt-detail-045",
+          "mkt-detail-050"
+        ],
+        "question_ids": [
+          "MKT044",
+          "MKT045",
+          "MKT050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L014",
+        "group": 5,
+        "list_page": 1,
+        "saber": "Microconversões: lead → marcação → show → inscrição.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-046",
+          "mkt-detail-047",
+          "mkt-detail-048",
+          "mkt-detail-049"
+        ],
+        "question_ids": [
+          "MKT046",
+          "MKT047",
+          "MKT048",
+          "MKT049"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L015",
+        "group": 6,
+        "list_page": 1,
+        "saber": "Definição + objetivos (nutrir, converter, reter, reativar).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-051",
+          "mkt-detail-052"
+        ],
+        "question_ids": [
+          "MKT051",
+          "MKT052"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L016",
+        "group": 6,
+        "list_page": 1,
+        "saber": "Tipos de emails: boas-vindas, nutrição, promoção, reativação, transacionais.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-053",
+          "mkt-detail-054",
+          "mkt-detail-055",
+          "mkt-detail-056",
+          "mkt-detail-057"
+        ],
+        "question_ids": [
+          "MKT053",
+          "MKT054",
+          "MKT055",
+          "MKT056",
+          "MKT057"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L017",
+        "group": 6,
+        "list_page": 1,
+        "saber": "Sequência (follow-up) + CTA + métrica por email.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-058",
+          "mkt-detail-059",
+          "mkt-detail-060"
+        ],
+        "question_ids": [
+          "MKT058",
+          "MKT059",
+          "MKT060"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L018",
+        "group": 7,
+        "list_page": 1,
+        "saber": "Pilares de conteúdo (3–5) alinhados com aquisição e retenção.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-061",
+          "mkt-detail-062"
+        ],
+        "question_ids": [
+          "MKT061",
+          "MKT062"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L019",
+        "group": 7,
+        "list_page": 1,
+        "saber": "Literal vs lateral (educação vs ângulos/storytelling).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-063",
+          "mkt-detail-064"
+        ],
+        "question_ids": [
+          "MKT063",
+          "MKT064"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L020",
+        "group": 7,
+        "list_page": 1,
+        "saber": "Canais por função: descoberta, confiança, conversão, retenção.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-065",
+          "mkt-detail-066",
+          "mkt-detail-067",
+          "mkt-detail-068",
+          "mkt-detail-070"
+        ],
+        "question_ids": [
+          "MKT065",
+          "MKT066",
+          "MKT067",
+          "MKT068",
+          "MKT070"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L021",
+        "group": 7,
+        "list_page": 1,
+        "saber": "Plano editorial: cadência, formatos, objetivo e KPI.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-069",
+          "mkt-detail-074"
+        ],
+        "question_ids": [
+          "MKT069",
+          "MKT074"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L022",
+        "group": 8,
+        "list_page": 2,
+        "saber": "Ligar: posicionamento → oferta → funil → conteúdos/creaƟvos → CRM/email → retenção.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-071",
+          "mkt-detail-073",
+          "mkt-detail-074",
+          "mkt-detail-075",
+          "mkt-detail-076",
+          "mkt-detail-077",
+          "mkt-detail-078",
+          "mkt-detail-079",
+          "mkt-detail-080"
+        ],
+        "question_ids": [
+          "MKT071",
+          "MKT073",
+          "MKT074",
+          "MKT075",
+          "MKT076",
+          "MKT077",
+          "MKT078",
+          "MKT079",
+          "MKT080"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "MKT-L023",
+        "group": 8,
+        "list_page": 2,
+        "saber": "Escolher 3 KPIs e justificar (por etapa do funil).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "mkt-detail-072",
+          "mkt-detail-079",
+          "mkt-detail-080"
+        ],
+        "question_ids": [
+          "MKT072",
+          "MKT079",
+          "MKT080"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      }
+    ]
+  }
+}

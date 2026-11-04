@@ -430,3 +430,22 @@
 .dark .study-card .study-focus p { color: #dbeafe; }
 .dark .study-card .study-recap h3,
 .dark .study-card .study-retrieval h3 { color: #f1f5f9; }
+.study-unavailable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .2rem;
+  padding: .5rem .25rem;
+  border: 1px dashed #94a3b8;
+  border-radius: .75rem;
+  color: #475569;
+  font-size: .625rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  cursor: not-allowed;
+}
+.study-unavailable-label { font-size: .5625rem; font-weight: 600; }
+.study-availability-note { margin: .5rem .25rem 0; color: #475569; font-size: .6875rem; line-height: 1.5; }
+.dark .study-unavailable { color: #cbd5e1; border-color: #64748b; }
+.dark .study-availability-note { color: #94a3b8; }

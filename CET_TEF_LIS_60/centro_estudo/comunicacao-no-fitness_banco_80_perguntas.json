@@ -1,0 +1,4206 @@
+{
+  "uc": "Comunicação no Fitness",
+  "version": "2026-11-04",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "id": "COM001",
+      "topic": "1. Fundamentos e dimensões da comunicação",
+      "type": "multiple_choice",
+      "question": "Explicar a finalidade de um exercício e verificar a compreensão trabalha sobretudo que dimensão?",
+      "options": [
+        "Comportamental",
+        "Afetiva",
+        "Cognitiva",
+        "Social"
+      ],
+      "answer": 2,
+      "explanation": "A dimensão cognitiva centra-se no conhecimento e na compreensão; a afetiva trata dos vínculos, a comportamental das ações e a social da pertença.",
+      "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+      "saberes": [
+        "COM-C001"
+      ]
+    },
+    {
+      "id": "COM002",
+      "topic": "1. Fundamentos e dimensões da comunicação",
+      "type": "multiple_choice",
+      "question": "Um TEF reconhece o receio inicial do cliente e mostra disponibilidade para o apoiar. Qual é a dimensão predominante?",
+      "options": [
+        "Afetiva",
+        "Social",
+        "Comportamental",
+        "Cognitiva"
+      ],
+      "answer": 0,
+      "explanation": "O foco está em sentir apoio e ligação emocional; a mesma conversa pode também ter outras dimensões.",
+      "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+      "saberes": [
+        "COM-C002"
+      ]
+    },
+    {
+      "id": "COM003",
+      "topic": "1. Fundamentos e dimensões da comunicação",
+      "type": "multiple_choice",
+      "question": "Ajudar o cliente a combinar um próximo passo concreto para manter a rotina corresponde sobretudo a quê?",
+      "options": [
+        "Dimensão comportamental: agir e criar hábitos",
+        "Dimensão social: construir identidade de grupo",
+        "Dimensão cognitiva: transmitir conceitos",
+        "Dimensão afetiva: criar vínculos"
+      ],
+      "answer": 0,
+      "explanation": "A dimensão comportamental liga a mensagem à ação e à continuidade dos hábitos.",
+      "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+      "saberes": [
+        "COM-C003"
+      ]
+    },
+    {
+      "id": "COM004",
+      "topic": "1. Fundamentos e dimensões da comunicação",
+      "type": "multiple_choice",
+      "question": "Integrar um novo praticante no grupo e reforçar a sua pertença mobiliza principalmente que dimensão?",
+      "options": [
+        "Comportamental",
+        "Cognitiva",
+        "Social",
+        "Afetiva"
+      ],
+      "answer": 2,
+      "explanation": "A pertença e a identidade são o núcleo da dimensão social; o acolhimento emocional pode apoiá-las.",
+      "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+      "saberes": [
+        "COM-C004"
+      ]
+    },
+    {
+      "id": "COM005",
+      "topic": "1. Fundamentos e dimensões da comunicação",
+      "type": "multiple_choice",
+      "question": "Qual plano integra as quatro dimensões da comunicação de forma intencional?",
+      "options": [
+        "Integrar no grupo e deixar toda a compreensão técnica para depois",
+        "Validar receios e evitar qualquer orientação para a ação",
+        "Explicar a tarefa, validar receios, acordar uma ação e integrar a pessoa no grupo",
+        "Explicar a tarefa, repetir dados e confirmar apenas o vocabulário técnico"
+      ],
+      "answer": 2,
+      "explanation": "O plano associa compreensão, vínculo emocional, ação e pertença a um propósito profissional.",
+      "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+      "saberes": [
+        "COM-C005"
+      ]
+    },
+    {
+      "id": "COM006",
+      "topic": "2. Storytelling e mecanismos narrativos",
+      "type": "multiple_choice",
+      "question": "O que distingue storytelling profissional de uma simples sequência de factos?",
+      "options": [
+        "Substitui os factos técnicos por uma opinião emocional",
+        "Exige que o profissional seja sempre o herói da história",
+        "Organiza uma narrativa com significado, emoção e propósito comunicativo",
+        "Consiste em alongar qualquer explicação com detalhes pessoais"
+      ],
+      "answer": 2,
+      "explanation": "A narrativa dá sentido aos factos e à transformação do cliente; não dispensa rigor nem exige protagonismo do TEF.",
+      "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C006"
+      ]
+    },
+    {
+      "id": "COM007",
+      "topic": "2. Storytelling e mecanismos narrativos",
+      "type": "multiple_choice",
+      "question": "Segundo a formulação da Lista, a ativação neural completa nas histórias articula sobretudo o quê?",
+      "options": [
+        "Emoção sem qualquer processamento de linguagem",
+        "Exclusivamente linguagem, sem experiência emocional",
+        "Apenas leitura e cálculo numérico",
+        "Linguagem, emoção e ação"
+      ],
+      "answer": 3,
+      "explanation": "A Lista associa o mecanismo a linguagem, emoção e ação; o termo não significa atividade uniforme de todo o cérebro.",
+      "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C007"
+      ]
+    },
+    {
+      "id": "COM008",
+      "topic": "2. Storytelling e mecanismos narrativos",
+      "type": "multiple_choice",
+      "question": "Um cliente envolve-se tanto numa narrativa que acompanha mentalmente a experiência da personagem. Que conceito descreve isto?",
+      "options": [
+        "Função metalinguística",
+        "Locução",
+        "Dimensão exclusivamente cognitiva",
+        "Transporte narrativo"
+      ],
+      "answer": 3,
+      "explanation": "O transporte corresponde à imersão; pode favorecer retenção e influência, sem provar a verdade do conteúdo.",
+      "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C008"
+      ]
+    },
+    {
+      "id": "COM009",
+      "topic": "2. Storytelling e mecanismos narrativos",
+      "type": "multiple_choice",
+      "question": "Qual organização exemplifica a segmentação de eventos referida na Lista?",
+      "options": [
+        "Repetição da mensagem final sem contexto",
+        "Lista de números sem ligação entre si",
+        "Descrição de personagens sem sequência temporal",
+        "Início da situação, conflito e resolução"
+      ],
+      "answer": 3,
+      "explanation": "Uma sequência reconhecível organiza eventos e facilita a recordação da mudança.",
+      "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C009"
+      ]
+    },
+    {
+      "id": "COM010",
+      "topic": "2. Storytelling e mecanismos narrativos",
+      "type": "multiple_choice",
+      "question": "Porque pode ajudar comparar a regularidade do treino com uma rotina familiar ao cliente?",
+      "options": [
+        "Transforma automaticamente uma metáfora em prova científica",
+        "Liga a nova mensagem a esquemas mentais e experiências conhecidas",
+        "Dispensa verificar se a analogia foi compreendida",
+        "Garante a mesma interpretação por todos os públicos"
+      ],
+      "answer": 1,
+      "explanation": "A familiaridade apoia a compreensão, mas não garante interpretação universal nem validade científica.",
+      "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C010"
+      ]
+    },
+    {
+      "id": "COM011",
+      "topic": "3. Emoção, cérebro e tomada de decisão",
+      "type": "multiple_choice",
+      "question": "Segundo a Hipótese do Marcador Somático, como podem experiências anteriores de vergonha no treino influenciar uma decisão?",
+      "options": [
+        "São apagadas quando se apresenta um argumento técnico",
+        "Criam associações emocionais que podem orientar decisões futuras",
+        "Determinam de forma inevitável uma desistência definitiva",
+        "Influenciam apenas a memória, sem relação com decisões"
+      ],
+      "answer": 1,
+      "explanation": "Marcadores emocionais influenciam escolhas; não são um destino inevitável nem desaparecem por mera informação.",
+      "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C011"
+      ]
+    },
+    {
+      "id": "COM012",
+      "topic": "3. Emoção, cérebro e tomada de decisão",
+      "type": "multiple_choice",
+      "question": "Qual comparação corresponde ao modelo didático apresentado na UC?",
+      "options": [
+        "Resposta límbica rápida e emocional; processamento pré-frontal mais deliberado",
+        "O córtex pré-frontal impede sempre qualquer resposta emocional inicial",
+        "Resposta límbica exclusivamente lógica; processamento pré-frontal apenas emocional",
+        "Os dois sistemas desempenham funções idênticas e isoladas"
+      ],
+      "answer": 0,
+      "explanation": "Os slides contrastam respostas automáticas e processamento deliberado; a formulação é uma simplificação funcional.",
+      "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C012"
+      ]
+    },
+    {
+      "id": "COM013",
+      "topic": "3. Emoção, cérebro e tomada de decisão",
+      "type": "multiple_choice",
+      "question": "Um cliente receoso não adere apesar de ouvir muitos benefícios técnicos. Que leitura se ajusta à UC?",
+      "options": [
+        "A resistência prova que a pessoa não compreende palavras técnicas",
+        "A informação técnica é sempre inútil em qualquer decisão",
+        "O estado emocional pode condicionar a receção dos argumentos racionais",
+        "Só a quantidade de dados determina a adesão"
+      ],
+      "answer": 2,
+      "explanation": "A UC destaca a influência emocional, sem excluir a utilidade de informação rigorosa e bem situada.",
+      "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C013"
+      ]
+    },
+    {
+      "id": "COM014",
+      "topic": "3. Emoção, cérebro e tomada de decisão",
+      "type": "multiple_choice",
+      "question": "Qual sequência é mais adequada perante um iniciante que associa o ginásio a fracasso?",
+      "options": [
+        "Acolher o receio, criar segurança e depois explicar uma progressão possível",
+        "Começar por comparar o cliente com praticantes mais avançados",
+        "Repetir argumentos técnicos até o cliente deixar de expressar receios",
+        "Garantir resultados para eliminar imediatamente a dúvida"
+      ],
+      "answer": 0,
+      "explanation": "A experiência de segurança favorece a disponibilidade para ouvir; comparação e garantias podem agravar a pressão.",
+      "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C014"
+      ]
+    },
+    {
+      "id": "COM015",
+      "topic": "3. Emoção, cérebro e tomada de decisão",
+      "type": "multiple_choice",
+      "question": "Que formulação respeita a ressalva dos slides sobre oxitocina?",
+      "options": [
+        "A presença de emoção demonstra por si só um mecanismo hormonal específico",
+        "Relaciona-se com ligação social, mas os efeitos variam com a pessoa e o contexto",
+        "A oxitocina garante adesão independentemente da relação criada",
+        "Toda a história produz confiança pela mesma libertação de oxitocina"
+      ],
+      "answer": 1,
+      "explanation": "A Aula 1, p. 21, limita a simplificação hormonal apresentada anteriormente.",
+      "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+      "saberes": [
+        "COM-C015"
+      ]
+    },
+    {
+      "id": "COM016",
+      "topic": "4. Memória narrativa e rigor da comunicação",
+      "type": "multiple_choice",
+      "question": "Que associação entre narrativa e memória é apresentada nos materiais?",
+      "options": [
+        "Uma história memorável utiliza apenas o sistema de linguagem",
+        "Emoção e estrutura envolvem redes de memória, com referência ao hipocampo e à DMN",
+        "O hipocampo é apresentado como irrelevante para memórias episódicas",
+        "A DMN é uma percentagem fixa de retenção de histórias"
+      ],
+      "answer": 1,
+      "explanation": "As referências da Lista e dos slides ligam narrativa, redes cerebrais e organização da memória; DMN designa uma rede.",
+      "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C016"
+      ]
+    },
+    {
+      "id": "COM017",
+      "topic": "4. Memória narrativa e rigor da comunicação",
+      "type": "multiple_choice",
+      "question": "Porque são descritas como mais pegajosas as histórias emocionais?",
+      "options": [
+        "A retenção depende exclusivamente de medo ou vergonha",
+        "A emoção pode aumentar atenção e favorecer codificação e recuperação",
+        "A emoção torna desnecessária uma estrutura narrativa clara",
+        "A intensidade emocional garante memória exata de todos os detalhes"
+      ],
+      "answer": 1,
+      "explanation": "A emoção favorece processos de memória, mas não elimina distorções nem dispensa estrutura.",
+      "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C017"
+      ]
+    },
+    {
+      "id": "COM018",
+      "topic": "4. Memória narrativa e rigor da comunicação",
+      "type": "multiple_choice",
+      "question": "Qual estratégia combina rigor técnico e memorabilidade?",
+      "options": [
+        "Apresentar dados sem ligação à experiência do público",
+        "Preferir a história mais intensa mesmo quando contradiz os dados",
+        "Integrar dados corretos numa história clara e relevante para o cliente",
+        "Eliminar números e factos porque as histórias dispensam evidência"
+      ],
+      "answer": 2,
+      "explanation": "A narrativa estrutura informação válida; a sua força persuasiva não é licença para alterar factos.",
+      "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C018"
+      ]
+    },
+    {
+      "id": "COM019",
+      "topic": "4. Memória narrativa e rigor da comunicação",
+      "type": "multiple_choice",
+      "question": "Como devem ser tratados os números 22×, 65% e 5% apresentados na Aula 1?",
+      "options": [
+        "Como números de divulgação popular, sem os transformar em garantias universais",
+        "Como prova de que informação numérica nunca deve ser usada",
+        "Como taxas obrigatórias de retenção em todos os públicos",
+        "Como resultados individuais garantidos para qualquer história"
+      ],
+      "answer": 0,
+      "explanation": "Os slides assinalam explicitamente a origem popular desses números e abrem a discussão sobre rigor.",
+      "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C019"
+      ]
+    },
+    {
+      "id": "COM020",
+      "topic": "4. Memória narrativa e rigor da comunicação",
+      "type": "multiple_choice",
+      "question": "Qual risco acompanha a repetição de uma narrativa?",
+      "options": [
+        "Pode aumentar a familiaridade de uma afirmação falsa e favorecer desinformação",
+        "Impede a formação de qualquer hábito ou memória",
+        "Elimina a necessidade de confirmar fontes e valores",
+        "Torna sempre o conteúdo mais verdadeiro por aumentar a recordação"
+      ],
+      "answer": 0,
+      "explanation": "Recordar e acreditar não são sinónimos de comprovar; os slides alertam para a repetição de desinformação.",
+      "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C020"
+      ]
+    },
+    {
+      "id": "COM021",
+      "topic": "5. Ética e responsabilidade comunicacional",
+      "type": "multiple_choice",
+      "question": "Qual publicação cumpre melhor o princípio da verdade e autenticidade?",
+      "options": [
+        "Aumentar os resultados relatados para tornar a história inspiradora",
+        "Omitir dificuldades relevantes para transmitir uma imagem de sucesso total",
+        "Prometer a mesma transformação em três meses a qualquer pessoa",
+        "Relatar progresso real com contexto, sem garantir o mesmo resultado a todos"
+      ],
+      "answer": 3,
+      "explanation": "A fidelidade aos factos protege o cliente e a credibilidade do profissional.",
+      "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C021"
+      ]
+    },
+    {
+      "id": "COM022",
+      "topic": "5. Ética e responsabilidade comunicacional",
+      "type": "multiple_choice",
+      "question": "Antes de publicar a história pessoal de um cliente sobre autoestima, o TEF deve fazer o quê?",
+      "options": [
+        "Obter consentimento explícito e proteger dignidade e intimidade",
+        "Presumir autorização porque o cliente frequenta o ginásio",
+        "Trocar o nome e considerar automaticamente resolvida toda a exposição",
+        "Publicar se a intenção for positiva, mesmo sem autorização"
+      ],
+      "answer": 0,
+      "explanation": "Consentimento e sensibilidade são complementares; uma intenção positiva ou a troca do nome não bastam.",
+      "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C022"
+      ]
+    },
+    {
+      "id": "COM023",
+      "topic": "5. Ética e responsabilidade comunicacional",
+      "type": "multiple_choice",
+      "question": "Que mensagem traduz melhor influência consciente?",
+      "options": [
+        "Sugerir que desistir prova falta de valor pessoal",
+        "Usar vergonha corporal para aumentar a urgência da inscrição",
+        "Esconder limitações da proposta para facilitar a decisão",
+        "Explorar uma ação possível com o cliente, respeitando a sua escolha"
+      ],
+      "answer": 3,
+      "explanation": "A influência ética procura benefício e autonomia; culpa e exploração de inseguranças são riscos assinalados nos slides.",
+      "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C023"
+      ]
+    },
+    {
+      "id": "COM024",
+      "topic": "5. Ética e responsabilidade comunicacional",
+      "type": "multiple_choice",
+      "question": "Uma campanha associa valor pessoal apenas a corpos jovens e magros. Que princípio evidencia mais diretamente o problema coletivo?",
+      "options": [
+        "Segmentação de eventos",
+        "Impacto social",
+        "Locução",
+        "Função fática"
+      ],
+      "answer": 1,
+      "explanation": "A campanha pode reforçar estereótipos coletivos sobre corpo e sucesso, contrariando inclusão e bem-estar.",
+      "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C024"
+      ]
+    },
+    {
+      "id": "COM025",
+      "topic": "5. Ética e responsabilidade comunicacional",
+      "type": "multiple_choice",
+      "question": "Qual revisão reúne os quatro princípios éticos do storytelling?",
+      "options": [
+        "Confirmar apenas se a emoção produz uma ação imediata",
+        "Verificar factos, consentimento e dignidade, influência e efeito coletivo",
+        "Verificar apenas se a publicação tem autorização e bom alcance",
+        "Garantir que a história é curta, visual e termina com um pedido"
+      ],
+      "answer": 1,
+      "explanation": "Os quatro princípios são verdade/autenticidade, respeito/vulnerabilidade, influência consciente e impacto social.",
+      "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+      "saberes": [
+        "COM-C025"
+      ]
+    },
+    {
+      "id": "COM026",
+      "topic": "6. Intenção comunicativa e pragmática",
+      "type": "multiple_choice",
+      "question": "Qual pergunta ajuda primeiro a definir a intenção narrativa?",
+      "options": [
+        "O que quero provocar no interlocutor com esta mensagem?",
+        "Qual história me coloca no centro da conversa?",
+        "Quantas metáforas consigo inserir nesta mensagem?",
+        "Como posso usar o mesmo texto com todos os clientes?"
+      ],
+      "answer": 0,
+      "explanation": "A intenção define o efeito pretendido e orienta conteúdo, forma e adaptação.",
+      "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+      "saberes": [
+        "COM-C026"
+      ]
+    },
+    {
+      "id": "COM027",
+      "topic": "6. Intenção comunicativa e pragmática",
+      "type": "multiple_choice",
+      "question": "O que significa falar é agir na pragmática da comunicação?",
+      "options": [
+        "A comunicação limita-se ao conteúdo literal da frase",
+        "Só os movimentos corporais produzem efeitos na relação",
+        "As palavras têm sempre o mesmo efeito em qualquer contexto",
+        "Um enunciado pode realizar ações como afirmar, pedir ou comprometer-se"
+      ],
+      "answer": 3,
+      "explanation": "Os atos de fala tratam a linguagem como ação situada e intencional.",
+      "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+      "saberes": [
+        "COM-C027"
+      ]
+    },
+    {
+      "id": "COM028",
+      "topic": "6. Intenção comunicativa e pragmática",
+      "type": "multiple_choice",
+      "question": "O TEF diz «Já completaste três sessões», pretende inspirar e o cliente sente confiança. Qual correspondência está correta?",
+      "options": [
+        "Locução: inspirar; ilocução: confiança; perlocução: conteúdo dito",
+        "Locução: confiança; ilocução: três sessões; perlocução: inspirar",
+        "Locução e perlocução são sempre a intenção do TEF",
+        "Locução: conteúdo dito; ilocução: inspirar; perlocução: confiança sentida"
+      ],
+      "answer": 3,
+      "explanation": "A distinção separa palavras, intenção e efeito; o efeito deve ser observado e não presumido.",
+      "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+      "saberes": [
+        "COM-C028"
+      ]
+    },
+    {
+      "id": "COM029",
+      "topic": "6. Intenção comunicativa e pragmática",
+      "type": "multiple_choice",
+      "question": "Qual associação entre intenção e impacto segue a Aula 2?",
+      "options": [
+        "Acolher: cognitivo; desafiar: exclusivamente físico",
+        "Acolher e desafiar: o mesmo efeito em qualquer interlocutor",
+        "Acolher: motivacional; desafiar: sempre intimidatório",
+        "Acolher: emocional; desafiar: cognitivo"
+      ],
+      "answer": 3,
+      "explanation": "Acolher valida o estado interno; desafiar convida a refletir e assumir responsabilidade.",
+      "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+      "saberes": [
+        "COM-C029"
+      ]
+    },
+    {
+      "id": "COM030",
+      "topic": "6. Intenção comunicativa e pragmática",
+      "type": "multiple_choice",
+      "question": "Qual mensagem inspira sem prometer um resultado garantido?",
+      "options": [
+        "Garanto que em três meses terás a transformação que imaginas",
+        "Já conseguiste manter duas sessões; podemos construir o próximo passo a partir desse progresso",
+        "Se não mudares depressa, estás a desperdiçar o nosso trabalho",
+        "Os resultados são iguais para todos os que seguirem esta história"
+      ],
+      "answer": 1,
+      "explanation": "A mensagem valoriza progresso real e mudança possível; promessas universais contrariariam a ética da Aula 1.",
+      "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+      "saberes": [
+        "COM-C030"
+      ]
+    },
+    {
+      "id": "COM031",
+      "topic": "7. Atos de fala e intenções pedagógicas",
+      "type": "multiple_choice",
+      "question": "«Hoje completaste as duas sessões combinadas» é predominantemente que ato de fala?",
+      "options": [
+        "Diretivo",
+        "Compromissivo",
+        "Expressivo",
+        "Assertivo"
+      ],
+      "answer": 3,
+      "explanation": "A frase afirma um facto; não pede uma ação, não promete nem exprime diretamente um sentimento.",
+      "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+      "saberes": [
+        "COM-C031"
+      ]
+    },
+    {
+      "id": "COM032",
+      "topic": "7. Atos de fala e intenções pedagógicas",
+      "type": "multiple_choice",
+      "question": "«Que pequeno passo podes dar esta semana?» exemplifica sobretudo que ato?",
+      "options": [
+        "Declarativo, porque altera um estatuto formal",
+        "Compromissivo, porque o TEF promete uma ação própria",
+        "Assertivo, porque relata um facto concluído",
+        "Diretivo interrogativo, para desafiar e orientar reflexão"
+      ],
+      "answer": 3,
+      "explanation": "A pergunta procura levar o interlocutor a refletir e escolher uma ação.",
+      "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+      "saberes": [
+        "COM-C032"
+      ]
+    },
+    {
+      "id": "COM033",
+      "topic": "7. Atos de fala e intenções pedagógicas",
+      "type": "multiple_choice",
+      "question": "Qual frase é um compromissivo adequado?",
+      "options": [
+        "Hoje realizaste o treino previsto",
+        "Fico contente com o teu empenho",
+        "Comprometo-me a rever contigo o plano na próxima sessão",
+        "Como te sentiste durante a sessão?"
+      ],
+      "answer": 2,
+      "explanation": "O TEF assume uma ação futura sob a sua responsabilidade, sem garantir resultados do cliente.",
+      "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+      "saberes": [
+        "COM-C033"
+      ]
+    },
+    {
+      "id": "COM034",
+      "topic": "7. Atos de fala e intenções pedagógicas",
+      "type": "multiple_choice",
+      "question": "Qual frase exemplifica mais claramente um ato expressivo?",
+      "options": [
+        "Escolhe o horário que te convém",
+        "Na próxima semana revemos o plano",
+        "Fico contente com o teu empenho nesta sessão",
+        "Concluíste três sessões esta semana"
+      ],
+      "answer": 2,
+      "explanation": "A expressão direta de um sentimento distingue o expressivo de uma afirmação factual, pedido ou compromisso.",
+      "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+      "saberes": [
+        "COM-C034"
+      ]
+    },
+    {
+      "id": "COM035",
+      "topic": "7. Atos de fala e intenções pedagógicas",
+      "type": "multiple_choice",
+      "question": "Qual conjunto corresponde à associação da Lista para inspirar?",
+      "options": [
+        "Apenas afirmações neutras sem relação com mudança",
+        "Apenas diretivos interrogativos e correções intimidatórias",
+        "Assertivos positivos, compromissivos e declarativos capacitadores",
+        "Exclusivamente expressivos de frustração"
+      ],
+      "answer": 2,
+      "explanation": "A Lista combina essas três famílias para reforçar progresso, compromisso e uma possibilidade de mudança.",
+      "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+      "saberes": [
+        "COM-C035"
+      ]
+    },
+    {
+      "id": "COM036",
+      "topic": "8. Arco narrativo e modelo ABT",
+      "type": "multiple_choice",
+      "question": "Qual é a função principal do contexto no arco narrativo?",
+      "options": [
+        "Garantir que a história termina com uma venda",
+        "Substituir o conflito por uma lista de benefícios",
+        "Apresentar logo a solução sem descrever a situação",
+        "Situar a pessoa e criar ancoragem emocional"
+      ],
+      "answer": 3,
+      "explanation": "O contexto torna a situação reconhecível e relevante para o interlocutor.",
+      "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+      "saberes": [
+        "COM-C036"
+      ]
+    },
+    {
+      "id": "COM037",
+      "topic": "8. Arco narrativo e modelo ABT",
+      "type": "multiple_choice",
+      "question": "Qual par distingue corretamente conflito interno e externo?",
+      "options": [
+        "Medo de falhar: interno; falta de tempo por turnos: externo",
+        "Medo de falhar: externo; falta de tempo por turnos: interno",
+        "Frustração: externo; obstáculos no ambiente: interno",
+        "Dúvida e falta de tempo são sempre conflitos exclusivamente internos"
+      ],
+      "answer": 0,
+      "explanation": "A UC distingue estados internos de obstáculos da situação ou do ambiente.",
+      "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+      "saberes": [
+        "COM-C037"
+      ]
+    },
+    {
+      "id": "COM038",
+      "topic": "8. Arco narrativo e modelo ABT",
+      "type": "multiple_choice",
+      "question": "«Ao ajustar os horários, conseguiu manter uma rotina que antes parecia impossível» corresponde sobretudo a quê?",
+      "options": [
+        "Função fática",
+        "Contexto inicial",
+        "Apresentação do conflito",
+        "Transformação"
+      ],
+      "answer": 3,
+      "explanation": "O trecho mostra a mudança conseguida em resposta ao obstáculo; a mensagem final retirará daí uma ideia para agir.",
+      "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+      "saberes": [
+        "COM-C038"
+      ]
+    },
+    {
+      "id": "COM039",
+      "topic": "8. Arco narrativo e modelo ABT",
+      "type": "multiple_choice",
+      "question": "Qual sequência e fecho respeitam o arco narrativo da UC?",
+      "options": [
+        "Conflito, mensagem final, contexto e transformação sem fecho",
+        "Contexto, conflito, transformação e mensagem final ligada à ação",
+        "Mensagem final, transformação e lista de factos sem contexto",
+        "Contexto, transformação e repetição do problema sem orientação"
+      ],
+      "answer": 1,
+      "explanation": "A sequência liga situação, desafio e mudança a uma mensagem que o ouvinte pode levar para a prática.",
+      "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+      "saberes": [
+        "COM-C039"
+      ]
+    },
+    {
+      "id": "COM040",
+      "topic": "8. Arco narrativo e modelo ABT",
+      "type": "multiple_choice",
+      "question": "Qual micronarrativa segue o modelo ABT?",
+      "options": [
+        "Queres manter o treino e tens um objetivo; mas os turnos dificultam; por isso vamos escolher horários viáveis",
+        "Queres manter o treino; por isso os turnos dificultam; mas já tens uma solução",
+        "Por isso vamos treinar; mas vamos treinar; e vamos treinar",
+        "Tens um objetivo; e tens turnos; e tens horários, sem qualquer consequência"
+      ],
+      "answer": 0,
+      "explanation": "ABT articula contexto, contraste/desafio e consequência ou resposta, em vez de apenas acumular factos.",
+      "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+      "saberes": [
+        "COM-C040"
+      ]
+    },
+    {
+      "id": "COM041",
+      "topic": "9. Funções da linguagem na narrativa",
+      "type": "multiple_choice",
+      "question": "Qual par distingue corretamente função emotiva e fática?",
+      "options": [
+        "Fico contente com o teu progresso: referencial; estás a ouvir-me bem?: poética",
+        "Fico contente com o teu progresso: emotiva; estás a ouvir-me bem?: fática",
+        "Fico contente com o teu progresso: metalinguística; estás a ouvir-me bem?: conativa",
+        "As duas frases são exclusivamente explicações de termos técnicos"
+      ],
+      "answer": 1,
+      "explanation": "A primeira exprime sentimento; a segunda mantém ou verifica o canal comunicativo.",
+      "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+      "saberes": [
+        "COM-C041"
+      ]
+    },
+    {
+      "id": "COM042",
+      "topic": "9. Funções da linguagem na narrativa",
+      "type": "multiple_choice",
+      "question": "«Escolhe agora o horário da próxima sessão» tem predominantemente que função?",
+      "options": [
+        "Referencial",
+        "Metalinguística",
+        "Poética",
+        "Conativa"
+      ],
+      "answer": 3,
+      "explanation": "A frase dirige uma ação ao recetor, em vez de descrever um facto ou explicar um termo.",
+      "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+      "saberes": [
+        "COM-C042"
+      ]
+    },
+    {
+      "id": "COM043",
+      "topic": "9. Funções da linguagem na narrativa",
+      "type": "multiple_choice",
+      "question": "«Esta semana realizaste duas sessões de treino» usa predominantemente que função?",
+      "options": [
+        "Fática",
+        "Referencial",
+        "Metalinguística",
+        "Poética"
+      ],
+      "answer": 1,
+      "explanation": "A frase transmite informação factual sobre a situação; pode ter efeitos motivacionais sem mudar o seu foco predominante.",
+      "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+      "saberes": [
+        "COM-C043"
+      ]
+    },
+    {
+      "id": "COM044",
+      "topic": "9. Funções da linguagem na narrativa",
+      "type": "multiple_choice",
+      "question": "«Cada treino é uma semente para a tua rotina» exemplifica principalmente quê?",
+      "options": [
+        "Função metalinguística, por definir um termo técnico",
+        "Função fática, por testar o canal de comunicação",
+        "Função referencial, por relatar uma medição objetiva",
+        "Função poética, pela metáfora e pela forma memorável"
+      ],
+      "answer": 3,
+      "explanation": "A metáfora e a forma da mensagem são marcas da função poética.",
+      "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+      "saberes": [
+        "COM-C044"
+      ]
+    },
+    {
+      "id": "COM045",
+      "topic": "9. Funções da linguagem na narrativa",
+      "type": "multiple_choice",
+      "question": "Qual combinação corresponde à orientação da Lista?",
+      "options": [
+        "Contexto: referencial e metalinguística; conexão: emotiva e fática; ação: conativa; memorabilidade: poética",
+        "Todas as finalidades exigem apenas a função referencial",
+        "Contexto: fática; conexão: conativa; ação: metalinguística; memorabilidade: referencial",
+        "Contexto: poética; conexão: só referencial; ação: fática; memorabilidade: metalinguística"
+      ],
+      "answer": 0,
+      "explanation": "As funções podem combinar-se; a escolha depende do objetivo e do perfil do público.",
+      "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+      "saberes": [
+        "COM-C045"
+      ]
+    },
+    {
+      "id": "COM046",
+      "topic": "10. Adaptação ao público e ao contexto",
+      "type": "multiple_choice",
+      "question": "Um cliente procura segurança e saúde, mas recebe uma história centrada apenas em aparência. O que deve mudar primeiro?",
+      "options": [
+        "Alinhar a narrativa com os objetivos e características reais do cliente",
+        "Usar apenas termos técnicos para evitar falar de objetivos",
+        "Aumentar o volume para tornar a mensagem mais convincente",
+        "Manter a história porque todas as pessoas valorizam estética"
+      ],
+      "answer": 0,
+      "explanation": "A relevância depende de conhecer idade, objetivos e valores, em vez de presumir uma motivação universal.",
+      "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+      "saberes": [
+        "COM-C046"
+      ]
+    },
+    {
+      "id": "COM047",
+      "topic": "10. Adaptação ao público e ao contexto",
+      "type": "multiple_choice",
+      "question": "Qual adaptação se ajusta a um iniciante desmotivado com desistências anteriores?",
+      "options": [
+        "Comparações com os clientes mais avançados",
+        "Uma promessa fixa de transformação para ultrapassar o receio",
+        "Apoio progressivo, segurança e conquistas possíveis",
+        "Exigência máxima imediata para testar compromisso"
+      ],
+      "answer": 2,
+      "explanation": "Motivação e histórico orientam a dose de desafio e o apoio, sem culpa nem promessas.",
+      "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+      "saberes": [
+        "COM-C047"
+      ]
+    },
+    {
+      "id": "COM048",
+      "topic": "10. Adaptação ao público e ao contexto",
+      "type": "multiple_choice",
+      "question": "Como adaptar uma narrativa a baixa literacia técnica?",
+      "options": [
+        "Aumentar a quantidade de jargão para ensinar por exposição",
+        "Presumir baixa motivação e reduzir o apoio",
+        "Usar linguagem simples, analogias e exemplos concretos, verificando entendimento",
+        "Retirar todo o conteúdo técnico, mesmo o necessário à segurança"
+      ],
+      "answer": 2,
+      "explanation": "A acessibilidade facilita compreensão e pode manter o significado técnico essencial.",
+      "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+      "saberes": [
+        "COM-C048"
+      ]
+    },
+    {
+      "id": "COM049",
+      "topic": "10. Adaptação ao público e ao contexto",
+      "type": "multiple_choice",
+      "question": "Porque convém adaptar a narrativa mesmo a um cliente já conhecido?",
+      "options": [
+        "O estado emocional do dia e os valores pessoais podem alterar o que é relevante e acolhedor",
+        "A idade torna desnecessário perguntar pelo estado emocional",
+        "A confiança prévia permite ignorar qualquer sinal de desconforto",
+        "A cultura determina de forma fixa todas as respostas de uma pessoa"
+      ],
+      "answer": 0,
+      "explanation": "Adaptar exige observar o momento e a pessoa, evitando estereótipos culturais.",
+      "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+      "saberes": [
+        "COM-C049"
+      ]
+    },
+    {
+      "id": "COM050",
+      "topic": "10. Adaptação ao público e ao contexto",
+      "type": "multiple_choice",
+      "question": "Há pouco tempo, o cliente prefere áudio e a relação é nova. Qual escolha é mais adequada?",
+      "options": [
+        "Vídeo complexo sem perguntar se o formato é adequado",
+        "Mensagem oral breve em ABT, clara e segura, ajustada à preferência do cliente",
+        "A mesma apresentação extensa usada com clientes antigos",
+        "Texto longo com linguagem ousada porque narrativas completas são sempre melhores"
+      ],
+      "answer": 1,
+      "explanation": "Tempo, canal e confiança prévia condicionam forma e extensão, além do conteúdo.",
+      "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+      "saberes": [
+        "COM-C050"
+      ]
+    },
+    {
+      "id": "COM051",
+      "topic": "11. Storytelling no treino, adesão e liderança",
+      "type": "multiple_choice",
+      "question": "Qual narrativa apoia melhor a motivação no treino?",
+      "options": [
+        "Substitui os objetivos do cliente pelos do profissional",
+        "Centra-se na superioridade do TEF em relação aos clientes",
+        "Liga o progresso real a um objetivo com significado para o cliente",
+        "Usa uma comparação humilhante para aumentar esforço"
+      ],
+      "answer": 2,
+      "explanation": "A narrativa relevante aproxima ação e significado sem retirar protagonismo ou dignidade ao cliente.",
+      "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C051"
+      ]
+    },
+    {
+      "id": "COM052",
+      "topic": "11. Storytelling no treino, adesão e liderança",
+      "type": "multiple_choice",
+      "question": "Um aluno pensa desistir após um mês. Qual abordagem aplica melhor a Aula 3?",
+      "options": [
+        "Afirmar que desistir revela falta de força de vontade",
+        "Relatar apenas resultados de atletas avançados",
+        "Repetir a mesma história a todos os alunos que pensam desistir",
+        "Explorar o obstáculo, reconhecer progresso e construir uma ação viável ajustada ao perfil"
+      ],
+      "answer": 3,
+      "explanation": "Os exercícios da Aula 3 pedem adaptar micronarrativas ao perfil e justificar o fator usado.",
+      "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C052"
+      ]
+    },
+    {
+      "id": "COM053",
+      "topic": "11. Storytelling no treino, adesão e liderança",
+      "type": "multiple_choice",
+      "question": "Qual uso de storytelling é coerente com liderança responsável?",
+      "options": [
+        "Criar sentido partilhado e mobilizar com coerência e respeito",
+        "Impor uma narrativa única para impedir discordância",
+        "Substituir toda a escuta por discursos motivacionais",
+        "Usar histórias para esconder decisões e compromissos"
+      ],
+      "answer": 0,
+      "explanation": "A narrativa apoia orientação e relação; não dispensa escuta nem justifica imposição.",
+      "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C053"
+      ]
+    },
+    {
+      "id": "COM054",
+      "topic": "11. Storytelling no treino, adesão e liderança",
+      "type": "multiple_choice",
+      "question": "Que trio de necessidades psicológicas aparece na Aula 3?",
+      "options": [
+        "Intensidade, velocidade e competição",
+        "Autonomia, competência e relacionamento",
+        "Locução, ilocução e perlocução",
+        "Origem, impacto e visão"
+      ],
+      "answer": 1,
+      "explanation": "Os outros trios pertencem a dimensões diferentes; a Aula 3 liga estas necessidades a propósito e envolvimento.",
+      "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C054"
+      ]
+    },
+    {
+      "id": "COM055",
+      "topic": "11. Storytelling no treino, adesão e liderança",
+      "type": "multiple_choice",
+      "question": "Depois de contar uma história para inspirar, o cliente mostra desconforto. Qual é o passo adequado?",
+      "options": [
+        "Aumentar a intensidade emocional sem ouvir o cliente",
+        "Insistir porque a intenção positiva garante um efeito positivo",
+        "Concluir que a história foi eficaz porque estava bem estruturada",
+        "Explorar a reação, verificar entendimento e ajustar a narrativa"
+      ],
+      "answer": 3,
+      "explanation": "Avaliar impacto permite distinguir intenção e efeito e manter conexão com o público.",
+      "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C055"
+      ]
+    },
+    {
+      "id": "COM056",
+      "topic": "12. Identidade profissional: modelo das cinco pétalas",
+      "type": "multiple_choice",
+      "question": "No modelo das cinco pétalas, que pergunta corresponde à origem?",
+      "options": [
+        "De onde vim e o que moldou a minha visão?",
+        "Que transformação gero nas pessoas?",
+        "Que futuro quero construir?",
+        "O que defendo e não negoceio?"
+      ],
+      "answer": 0,
+      "explanation": "Origem situa as experiências que moldaram a identidade; futuro é visão, transformação é impacto e princípios são valores.",
+      "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C056"
+      ]
+    },
+    {
+      "id": "COM057",
+      "topic": "12. Identidade profissional: modelo das cinco pétalas",
+      "type": "multiple_choice",
+      "question": "«Escolhi esta área porque quero ajudar pessoas a recuperar confiança no movimento» exprime principalmente que pétala?",
+      "options": [
+        "Origem cronológica",
+        "Propósito",
+        "Visão de futuro",
+        "Impacto já demonstrado"
+      ],
+      "answer": 1,
+      "explanation": "A frase explica o porquê da escolha; não comprova ainda um impacto efetivo.",
+      "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C057"
+      ]
+    },
+    {
+      "id": "COM058",
+      "topic": "12. Identidade profissional: modelo das cinco pétalas",
+      "type": "multiple_choice",
+      "question": "Como tornar credível a pétala valores?",
+      "options": [
+        "Confundir valores com resultados técnicos já alcançados",
+        "Listar qualidades desejáveis sem relação com a prática",
+        "Usar valores diferentes em cada canal para agradar a todos",
+        "Mostrar princípios defendidos e decisões coerentes com eles"
+      ],
+      "answer": 3,
+      "explanation": "Valores ganham significado quando orientam escolhas e se refletem no comportamento.",
+      "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C058"
+      ]
+    },
+    {
+      "id": "COM059",
+      "topic": "12. Identidade profissional: modelo das cinco pétalas",
+      "type": "multiple_choice",
+      "question": "Qual descrição corresponde à pétala impacto?",
+      "options": [
+        "A mudança real na confiança e nos hábitos das pessoas acompanhadas",
+        "O futuro que gostaria de construir sem evidência atual",
+        "O local onde o profissional nasceu",
+        "Os princípios que o profissional não negoceia"
+      ],
+      "answer": 0,
+      "explanation": "Impacto descreve a marca gerada na vida das pessoas e distingue-se de origem, valores e visão.",
+      "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C059"
+      ]
+    },
+    {
+      "id": "COM060",
+      "topic": "12. Identidade profissional: modelo das cinco pétalas",
+      "type": "multiple_choice",
+      "question": "Qual conjunto contém exatamente as cinco pétalas?",
+      "options": [
+        "Contexto, conflito, transformação, mensagem e visão",
+        "Origem, propósito, valores, impacto e visão",
+        "Locução, ilocução, perlocução, impacto e origem",
+        "Emotiva, conativa, referencial, poética e fática"
+      ],
+      "answer": 1,
+      "explanation": "O modelo da identidade profissional tem cinco pétalas; o arco e as funções da linguagem são modelos diferentes.",
+      "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+      "saberes": [
+        "COM-C060"
+      ]
+    },
+    {
+      "id": "COM061",
+      "topic": "13. Narrativa profissional e marca pessoal",
+      "type": "multiple_choice",
+      "question": "Qual é a diferença central entre currículo e narrativa profissional?",
+      "options": [
+        "A narrativa permite inventar experiência para mostrar potencial",
+        "O currículo contém apenas emoções e a narrativa apenas datas",
+        "A narrativa liga experiências e escolhas num fio de significado; o currículo organiza dados do percurso",
+        "A narrativa dispensa formação e experiência verificáveis"
+      ],
+      "answer": 2,
+      "explanation": "A história viva acrescenta sentido aos factos, preservando a sua veracidade.",
+      "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C061"
+      ]
+    },
+    {
+      "id": "COM062",
+      "topic": "13. Narrativa profissional e marca pessoal",
+      "type": "multiple_choice",
+      "question": "Um TEF defende inclusão nas redes, mas ridiculariza iniciantes nas sessões. Que princípio falha mais diretamente?",
+      "options": [
+        "Preferência por formato visual",
+        "Função metalinguística",
+        "Segmentação de eventos",
+        "Coerência entre discurso e ação"
+      ],
+      "answer": 3,
+      "explanation": "A contradição compromete confiança e autenticidade da identidade apresentada.",
+      "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C062"
+      ]
+    },
+    {
+      "id": "COM063",
+      "topic": "13. Narrativa profissional e marca pessoal",
+      "type": "multiple_choice",
+      "question": "Como aplicar adaptabilidade à identidade profissional?",
+      "options": [
+        "Repetir sempre o mesmo texto com a mesma extensão",
+        "Ajustar linguagem e exemplos ao contexto, mantendo factos e valores coerentes",
+        "Abandonar os valores pessoais quando o público muda",
+        "Criar uma experiência diferente para cada oportunidade"
+      ],
+      "answer": 1,
+      "explanation": "A forma pode variar; a fidelidade ao percurso e aos princípios mantém a confiança.",
+      "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C063"
+      ]
+    },
+    {
+      "id": "COM064",
+      "topic": "13. Narrativa profissional e marca pessoal",
+      "type": "multiple_choice",
+      "question": "Qual aplicação mantém identidade e adaptação nos quatro contextos da Lista?",
+      "options": [
+        "Tratar as percentagens de vendas dos slides como garantia para qualquer clube",
+        "Copiar o mesmo texto longo para CV, pitch, redes e entrevista",
+        "Usar nas redes resultados exagerados para compensar um CV curto",
+        "Usar factos coerentes, ajustando síntese no CV/pitch, exemplos na entrevista e formato nas redes"
+      ],
+      "answer": 3,
+      "explanation": "A Lista pede aplicação em diferentes contextos; os slides não sustentam garantias de vendas por plataforma.",
+      "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C064"
+      ]
+    },
+    {
+      "id": "COM065",
+      "topic": "13. Narrativa profissional e marca pessoal",
+      "type": "multiple_choice",
+      "question": "Quais benefícios da narrativa profissional são destacados na Lista?",
+      "options": [
+        "Contratação garantida, fama e vendas fixas",
+        "Eliminação da concorrência e de qualquer avaliação",
+        "Autoridade automática independentemente da prática",
+        "Confiança, diferenciação e oportunidades"
+      ],
+      "answer": 3,
+      "explanation": "A narrativa pode reforçar perceção e oportunidades; o resultado depende também da atuação e do contexto.",
+      "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C065"
+      ]
+    },
+    {
+      "id": "COM066",
+      "topic": "14. Oralidade e estilos comunicacionais",
+      "type": "multiple_choice",
+      "question": "Qual prática caracteriza oralidade espontânea preparada?",
+      "options": [
+        "Dominar o conteúdo e explicá-lo por palavras próprias, ajustando-o à reação do público",
+        "Dispensar preparação para parecer natural",
+        "Ler um texto fixo sem olhar para o interlocutor",
+        "Eliminar todas as reformulações para soar sempre perfeito"
+      ],
+      "answer": 0,
+      "explanation": "Os slides associam naturalidade a preparação e flexibilidade, não a ausência de planeamento.",
+      "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C066"
+      ]
+    },
+    {
+      "id": "COM067",
+      "topic": "14. Oralidade e estilos comunicacionais",
+      "type": "multiple_choice",
+      "question": "Um TEF evita expressar uma orientação necessária e cede sempre para não desagradar. Que estilo predomina?",
+      "options": [
+        "Passivo",
+        "Manipulador",
+        "Agressivo",
+        "Assertivo"
+      ],
+      "answer": 0,
+      "explanation": "Evitar conflito à custa de não orientar caracteriza passividade; assertividade combina respeito e firmeza.",
+      "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C067"
+      ]
+    },
+    {
+      "id": "COM068",
+      "topic": "14. Oralidade e estilos comunicacionais",
+      "type": "multiple_choice",
+      "question": "Interromper repetidamente o cliente e desvalorizar a sua opinião com tom intimidador corresponde a quê?",
+      "options": [
+        "Função fática",
+        "Estilo assertivo",
+        "Estilo agressivo",
+        "Estilo passivo"
+      ],
+      "answer": 2,
+      "explanation": "Imposição e intimidação são marcas do estilo agressivo, com efeitos negativos na colaboração.",
+      "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C068"
+      ]
+    },
+    {
+      "id": "COM069",
+      "topic": "14. Oralidade e estilos comunicacionais",
+      "type": "multiple_choice",
+      "question": "Um profissional usa indiretas ambíguas para levar o cliente a sentir-se em dívida e comprar. Que estilo descreve melhor a situação?",
+      "options": [
+        "Referencial",
+        "Assertivo",
+        "Passivo",
+        "Manipulador"
+      ],
+      "answer": 3,
+      "explanation": "O benefício procurado por subterfúgios e pressão indireta caracteriza manipulação.",
+      "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C069"
+      ]
+    },
+    {
+      "id": "COM070",
+      "topic": "14. Oralidade e estilos comunicacionais",
+      "type": "multiple_choice",
+      "question": "Qual resposta é mais assertiva perante uma discordância?",
+      "options": [
+        "Ouvir a preocupação, explicar claramente a orientação e procurar uma solução respeitosa",
+        "Usar ironia para a pessoa aceitar sem discussão",
+        "Ceder sempre sem expressar a própria avaliação",
+        "Impor a orientação interrompendo qualquer pergunta"
+      ],
+      "answer": 0,
+      "explanation": "Assertividade envolve clareza, escuta e respeito por ambas as partes; não se confunde com um ato de fala assertivo.",
+      "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C070"
+      ]
+    },
+    {
+      "id": "COM071",
+      "topic": "15. Voz e construção de climas emocionais",
+      "type": "multiple_choice",
+      "question": "Qual uso do ritmo segue a Aula 4?",
+      "options": [
+        "Usar sempre um ritmo lento independentemente do contexto",
+        "Manter a máxima velocidade para transmitir autoridade",
+        "Evitar variações porque reduzem necessariamente a clareza",
+        "Variar estrategicamente a velocidade para ajustar clima e destacar ideias"
+      ],
+      "answer": 3,
+      "explanation": "O ritmo é uma ferramenta de intenção e atenção; a escolha depende do momento.",
+      "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C071"
+      ]
+    },
+    {
+      "id": "COM072",
+      "topic": "15. Voz e construção de climas emocionais",
+      "type": "multiple_choice",
+      "question": "Que afirmação sobre intensidade vocal é mais adequada?",
+      "options": [
+        "O volume deve ajustar-se ao contexto e à intenção, podendo diminuir para criar atenção e proximidade",
+        "A mesma intensidade é ideal para qualquer mensagem",
+        "Volume elevado é sempre sinal de assertividade",
+        "Falar baixo é sempre sinal de insegurança"
+      ],
+      "answer": 0,
+      "explanation": "Os slides apresentam variações de intensidade como recurso comunicativo dependente do contexto.",
+      "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C072"
+      ]
+    },
+    {
+      "id": "COM073",
+      "topic": "15. Voz e construção de climas emocionais",
+      "type": "multiple_choice",
+      "question": "Depois de uma ideia importante, uma pausa deliberada pode servir para quê?",
+      "options": [
+        "Demonstrar necessariamente esquecimento do conteúdo",
+        "Substituir a necessidade de uma mensagem clara",
+        "Permitir assimilação e reflexão e reforçar a mensagem",
+        "Impedir o público de interpretar a informação"
+      ],
+      "answer": 2,
+      "explanation": "O significado depende do uso e do contexto; pausa não é sinónimo de falha.",
+      "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C073"
+      ]
+    },
+    {
+      "id": "COM074",
+      "topic": "15. Voz e construção de climas emocionais",
+      "type": "multiple_choice",
+      "question": "Qual correspondência entre clima e recursos segue os slides?",
+      "options": [
+        "Calma: máxima intensidade e pressa; energia: imobilidade e monotonia",
+        "Calma: voz suave e pausas longas; energia: projeção e movimento",
+        "Calma e energia exigem exatamente os mesmos recursos",
+        "Energia exige intimidação; calma exige ausência de contacto"
+      ],
+      "answer": 1,
+      "explanation": "A combinação de voz e corpo cria climas distintos; a adequação depende do contexto.",
+      "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C074"
+      ]
+    },
+    {
+      "id": "COM075",
+      "topic": "15. Voz e construção de climas emocionais",
+      "type": "multiple_choice",
+      "question": "Segundo a Lista, quando deve começar a construir-se o clima emocional, e que recursos apoiam seriedade e foco?",
+      "options": [
+        "Só no final; gestos dispersos e voz monótona",
+        "Nos primeiros 30 segundos; articulação precisa, contacto visual e postura firme",
+        "Nos primeiros 30 segundos; qualquer clima exige sempre voz suave",
+        "Depois de cinco minutos; o clima independe da abertura"
+      ],
+      "answer": 1,
+      "explanation": "A indicação temporal está na Lista; os recursos para seriedade/foco aparecem na Aula 4, p. 17.",
+      "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C075"
+      ]
+    },
+    {
+      "id": "COM076",
+      "topic": "16. Comunicação não verbal e presença",
+      "type": "multiple_choice",
+      "question": "Que postura corresponde à recomendação dos slides?",
+      "options": [
+        "Braços cruzados como regra para aumentar abertura",
+        "Apoio permanente nos móveis para transmitir autoridade",
+        "Ereta, firme e natural, com ombros abertos e pés apoiados",
+        "Rigidez máxima para impor superioridade"
+      ],
+      "answer": 2,
+      "explanation": "A recomendação procura confiança e naturalidade, sem transformar posturas em diagnósticos.",
+      "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C076"
+      ]
+    },
+    {
+      "id": "COM077",
+      "topic": "16. Comunicação não verbal e presença",
+      "type": "multiple_choice",
+      "question": "Qual uso de gestos é mais adequado à narrativa oral?",
+      "options": [
+        "Usar sempre mãos nos bolsos para impedir distrações",
+        "Movimentos repetitivos sem relação com as palavras",
+        "Eliminar qualquer gesto para garantir autenticidade",
+        "Gestos naturais que reforçam a mensagem sem repetição distrativa"
+      ],
+      "answer": 3,
+      "explanation": "Os gestos devem apoiar o significado e a conexão, não competir com a mensagem.",
+      "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C077"
+      ]
+    },
+    {
+      "id": "COM078",
+      "topic": "16. Comunicação não verbal e presença",
+      "type": "multiple_choice",
+      "question": "Qual orientação sobre contacto visual é dada na Aula 4?",
+      "options": [
+        "Distribuir o olhar e manter ligações de 2–3 segundos, evitando fixação intimidatória",
+        "Evitar contacto visual para não influenciar o público",
+        "Fixar uma única pessoa durante toda a explicação",
+        "Olhar apenas para o texto enquanto se fala"
+      ],
+      "answer": 0,
+      "explanation": "A indicação de 2–3 segundos serve conexão individual e distribuição de atenção na sala.",
+      "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C078"
+      ]
+    },
+    {
+      "id": "COM079",
+      "topic": "16. Comunicação não verbal e presença",
+      "type": "multiple_choice",
+      "question": "Qual correspondência entre componentes está correta?",
+      "options": [
+        "Proxémica: distância; cinésica: gestos/postura; paralinguística: voz/pausas",
+        "As três designam apenas o significado literal das palavras",
+        "Proxémica: vocabulário; cinésica: intenção; paralinguística: efeito",
+        "Proxémica: volume; cinésica: distância; paralinguística: conteúdo técnico"
+      ],
+      "answer": 0,
+      "explanation": "A Aula 1, p. 3, distingue estes componentes; a Aula 4 desenvolve a sua aplicação.",
+      "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6; Aula 1, p. 3.",
+      "saberes": [
+        "COM-C079"
+      ]
+    },
+    {
+      "id": "COM080",
+      "topic": "16. Comunicação não verbal e presença",
+      "type": "multiple_choice",
+      "question": "Como interpretar a referência a mais de 50% de impacto não verbal?",
+      "options": [
+        "Permite calcular exatamente a eficácia de qualquer discurso",
+        "É uma formulação da Lista; os slides destacam influência robusta sem estabelecer uma percentagem universal",
+        "É uma lei universal demonstrada para qualquer mensagem na Aula 4",
+        "Significa que as palavras deixam de ter importância"
+      ],
+      "answer": 1,
+      "explanation": "A distinção preserva a indicação de estudo e o limite de suporte nos slides; congruência continua essencial.",
+      "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+      "saberes": [
+        "COM-C080"
+      ]
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "COM043",
+      "COM057",
+      "COM015",
+      "COM032",
+      "COM016",
+      "COM007",
+      "COM063",
+      "COM009",
+      "COM027",
+      "COM020",
+      "COM011",
+      "COM021",
+      "COM076",
+      "COM054",
+      "COM074",
+      "COM066",
+      "COM048",
+      "COM061",
+      "COM078",
+      "COM073",
+      "COM038",
+      "COM002",
+      "COM024",
+      "COM047",
+      "COM069",
+      "COM033",
+      "COM003",
+      "COM053",
+      "COM042",
+      "COM056",
+      "COM072",
+      "COM064",
+      "COM022",
+      "COM051",
+      "COM035",
+      "COM045",
+      "COM005",
+      "COM039",
+      "COM012",
+      "COM030"
+    ],
+    "exam2": [
+      "COM067",
+      "COM001",
+      "COM052",
+      "COM080",
+      "COM071",
+      "COM055",
+      "COM037",
+      "COM062",
+      "COM034",
+      "COM006",
+      "COM049",
+      "COM059",
+      "COM046",
+      "COM044",
+      "COM018",
+      "COM041",
+      "COM058",
+      "COM026",
+      "COM031",
+      "COM077",
+      "COM023",
+      "COM036",
+      "COM070",
+      "COM075",
+      "COM025",
+      "COM068",
+      "COM079",
+      "COM065",
+      "COM060",
+      "COM040",
+      "COM004",
+      "COM019",
+      "COM050",
+      "COM013",
+      "COM029",
+      "COM010",
+      "COM028",
+      "COM014",
+      "COM008",
+      "COM017"
+    ]
+  },
+  "coverage_audit": {
+    "status": "source_reviewed",
+    "date": "2026-11-04",
+    "sources": [
+      "Aula 1.pdf (34 páginas)",
+      "Aula 2.pdf (36 páginas)",
+      "Aula 3.pdf (24 páginas)",
+      "Aula 4.pdf (23 páginas)",
+      "Lista de saberes.pdf (6 páginas)"
+    ],
+    "summary": "80 conceitos editoriais em 16 temas. A matriz da Lista distingue cobertura explícita no resumo de associação temática às perguntas.",
+    "limits": [
+      "80 conceitos não equivalem ao número de itens da Lista original.",
+      "Os dois exames cobrem todos os temas; não avaliam isoladamente todos os componentes da Lista em cada exame.",
+      "Formulações e valores didáticos dos materiais são identificados como tal; não constituem verificação científica externa."
+    ],
+    "items": [
+      {
+        "id": "COM-C001",
+        "module": 1,
+        "concept": "Dimensão cognitiva",
+        "summary_anchor": "com-detail-001",
+        "question_ids": [
+          "COM001"
+        ],
+        "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C002",
+        "module": 1,
+        "concept": "Dimensão afetiva",
+        "summary_anchor": "com-detail-002",
+        "question_ids": [
+          "COM002"
+        ],
+        "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C003",
+        "module": 1,
+        "concept": "Dimensão comportamental",
+        "summary_anchor": "com-detail-003",
+        "question_ids": [
+          "COM003"
+        ],
+        "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C004",
+        "module": 1,
+        "concept": "Dimensão social",
+        "summary_anchor": "com-detail-004",
+        "question_ids": [
+          "COM004"
+        ],
+        "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C005",
+        "module": 1,
+        "concept": "Comunicação intencional e estratégica",
+        "summary_anchor": "com-detail-005",
+        "question_ids": [
+          "COM005"
+        ],
+        "source": "Aula 1, pp. 9–13; Lista de Saberes, p. 1.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C006",
+        "module": 1,
+        "concept": "Conceito e narrativa de mudança",
+        "summary_anchor": "com-detail-006",
+        "question_ids": [
+          "COM006"
+        ],
+        "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C007",
+        "module": 1,
+        "concept": "Ativação neural completa",
+        "summary_anchor": "com-detail-007",
+        "question_ids": [
+          "COM007"
+        ],
+        "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C008",
+        "module": 1,
+        "concept": "Transporte narrativo",
+        "summary_anchor": "com-detail-008",
+        "question_ids": [
+          "COM008"
+        ],
+        "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C009",
+        "module": 1,
+        "concept": "Segmentação de eventos",
+        "summary_anchor": "com-detail-009",
+        "question_ids": [
+          "COM009"
+        ],
+        "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C010",
+        "module": 1,
+        "concept": "Esquemas mentais",
+        "summary_anchor": "com-detail-010",
+        "question_ids": [
+          "COM010"
+        ],
+        "source": "Aula 1, pp. 14–16, 23–24; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C011",
+        "module": 1,
+        "concept": "Hipótese do Marcador Somático",
+        "summary_anchor": "com-detail-011",
+        "question_ids": [
+          "COM011"
+        ],
+        "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C012",
+        "module": 1,
+        "concept": "Sistema límbico e córtex pré-frontal",
+        "summary_anchor": "com-detail-012",
+        "question_ids": [
+          "COM012"
+        ],
+        "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C013",
+        "module": 1,
+        "concept": "Emoção precede razão",
+        "summary_anchor": "com-detail-013",
+        "question_ids": [
+          "COM013"
+        ],
+        "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C014",
+        "module": 1,
+        "concept": "Experiência emocional positiva antes da argumentação",
+        "summary_anchor": "com-detail-014",
+        "question_ids": [
+          "COM014"
+        ],
+        "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C015",
+        "module": 1,
+        "concept": "Química social e limites das generalizações",
+        "summary_anchor": "com-detail-015",
+        "question_ids": [
+          "COM015"
+        ],
+        "source": "Aula 1, pp. 17–22; Lista de Saberes, pp. 1–2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C016",
+        "module": 1,
+        "concept": "Redes neurais, hipocampo e DMN",
+        "summary_anchor": "com-detail-016",
+        "question_ids": [
+          "COM016"
+        ],
+        "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C017",
+        "module": 1,
+        "concept": "Emoção e retenção",
+        "summary_anchor": "com-detail-017",
+        "question_ids": [
+          "COM017"
+        ],
+        "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C018",
+        "module": 1,
+        "concept": "Histórias e dados isolados",
+        "summary_anchor": "com-detail-018",
+        "question_ids": [
+          "COM018"
+        ],
+        "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C019",
+        "module": 1,
+        "concept": "Ciência rigorosa e divulgação popular",
+        "summary_anchor": "com-detail-019",
+        "question_ids": [
+          "COM019"
+        ],
+        "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C020",
+        "module": 1,
+        "concept": "Repetição, contexto e validação",
+        "summary_anchor": "com-detail-020",
+        "question_ids": [
+          "COM020"
+        ],
+        "source": "Aula 1, pp. 16, 19–28; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C021",
+        "module": 1,
+        "concept": "Verdade e autenticidade",
+        "summary_anchor": "com-detail-021",
+        "question_ids": [
+          "COM021"
+        ],
+        "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C022",
+        "module": 1,
+        "concept": "Respeito e vulnerabilidade",
+        "summary_anchor": "com-detail-022",
+        "question_ids": [
+          "COM022"
+        ],
+        "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C023",
+        "module": 1,
+        "concept": "Influência consciente",
+        "summary_anchor": "com-detail-023",
+        "question_ids": [
+          "COM023"
+        ],
+        "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C024",
+        "module": 1,
+        "concept": "Impacto social",
+        "summary_anchor": "com-detail-024",
+        "question_ids": [
+          "COM024"
+        ],
+        "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C025",
+        "module": 1,
+        "concept": "Decisão ética integrada",
+        "summary_anchor": "com-detail-025",
+        "question_ids": [
+          "COM025"
+        ],
+        "source": "Aula 1, pp. 29–33; Lista de Saberes, p. 2.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C026",
+        "module": 2,
+        "concept": "Intenção narrativa",
+        "summary_anchor": "com-detail-026",
+        "question_ids": [
+          "COM026"
+        ],
+        "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C027",
+        "module": 2,
+        "concept": "Falar é agir",
+        "summary_anchor": "com-detail-027",
+        "question_ids": [
+          "COM027"
+        ],
+        "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C028",
+        "module": 2,
+        "concept": "Locução, ilocução e perlocução",
+        "summary_anchor": "com-detail-028",
+        "question_ids": [
+          "COM028"
+        ],
+        "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C029",
+        "module": 2,
+        "concept": "Acolher e desafiar",
+        "summary_anchor": "com-detail-029",
+        "question_ids": [
+          "COM029"
+        ],
+        "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C030",
+        "module": 2,
+        "concept": "Inspirar, informar e mobilizar",
+        "summary_anchor": "com-detail-030",
+        "question_ids": [
+          "COM030"
+        ],
+        "source": "Aula 2, pp. 10–14, 35; Lista de Saberes, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C031",
+        "module": 2,
+        "concept": "Assertivos",
+        "summary_anchor": "com-detail-031",
+        "question_ids": [
+          "COM031"
+        ],
+        "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C032",
+        "module": 2,
+        "concept": "Diretivos",
+        "summary_anchor": "com-detail-032",
+        "question_ids": [
+          "COM032"
+        ],
+        "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C033",
+        "module": 2,
+        "concept": "Compromissivos",
+        "summary_anchor": "com-detail-033",
+        "question_ids": [
+          "COM033"
+        ],
+        "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C034",
+        "module": 2,
+        "concept": "Expressivos",
+        "summary_anchor": "com-detail-034",
+        "question_ids": [
+          "COM034"
+        ],
+        "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C035",
+        "module": 2,
+        "concept": "Declarativos e combinação pedagógica",
+        "summary_anchor": "com-detail-035",
+        "question_ids": [
+          "COM035"
+        ],
+        "source": "Aula 2, pp. 11–15; Aula 3, pp. 5, 8–9; Lista de Saberes, pp. 3–4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C036",
+        "module": 2,
+        "concept": "Contexto: staging",
+        "summary_anchor": "com-detail-036",
+        "question_ids": [
+          "COM036"
+        ],
+        "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C037",
+        "module": 2,
+        "concept": "Conflito interno e externo",
+        "summary_anchor": "com-detail-037",
+        "question_ids": [
+          "COM037"
+        ],
+        "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C038",
+        "module": 2,
+        "concept": "Transformação",
+        "summary_anchor": "com-detail-038",
+        "question_ids": [
+          "COM038"
+        ],
+        "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C039",
+        "module": 2,
+        "concept": "Mensagem final e arco completo",
+        "summary_anchor": "com-detail-039",
+        "question_ids": [
+          "COM039"
+        ],
+        "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C040",
+        "module": 2,
+        "concept": "ABT: And–But–Therefore",
+        "summary_anchor": "com-detail-040",
+        "question_ids": [
+          "COM040"
+        ],
+        "source": "Aula 2, pp. 17–20, 32, 35; Lista de Saberes, p. 4.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C041",
+        "module": 2,
+        "concept": "Emotiva e fática",
+        "summary_anchor": "com-detail-041",
+        "question_ids": [
+          "COM041"
+        ],
+        "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C042",
+        "module": 2,
+        "concept": "Conativa: direção para a ação",
+        "summary_anchor": "com-detail-042",
+        "question_ids": [
+          "COM042"
+        ],
+        "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C043",
+        "module": 2,
+        "concept": "Referencial: informação objetiva",
+        "summary_anchor": "com-detail-043",
+        "question_ids": [
+          "COM043"
+        ],
+        "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C044",
+        "module": 2,
+        "concept": "Poética: forma memorável",
+        "summary_anchor": "com-detail-044",
+        "question_ids": [
+          "COM044"
+        ],
+        "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C045",
+        "module": 2,
+        "concept": "Metalinguística e combinação de funções",
+        "summary_anchor": "com-detail-045",
+        "question_ids": [
+          "COM045"
+        ],
+        "source": "Aula 2, pp. 21–25; Aula 3, pp. 7–8; Lista de Saberes, pp. 4, 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C046",
+        "module": 2,
+        "concept": "Idade e objetivos",
+        "summary_anchor": "com-detail-046",
+        "question_ids": [
+          "COM046"
+        ],
+        "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C047",
+        "module": 2,
+        "concept": "Motivação e histórico",
+        "summary_anchor": "com-detail-047",
+        "question_ids": [
+          "COM047"
+        ],
+        "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C048",
+        "module": 2,
+        "concept": "Estilo cognitivo e literacia",
+        "summary_anchor": "com-detail-048",
+        "question_ids": [
+          "COM048"
+        ],
+        "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C049",
+        "module": 2,
+        "concept": "Cultura, valores e estado emocional",
+        "summary_anchor": "com-detail-049",
+        "question_ids": [
+          "COM049"
+        ],
+        "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C050",
+        "module": 2,
+        "concept": "Canal, formato, tempo e relação",
+        "summary_anchor": "com-detail-050",
+        "question_ids": [
+          "COM050"
+        ],
+        "source": "Aula 2, pp. 26–35; Aula 3, pp. 5–6; Lista de Saberes, pp. 4–5.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C051",
+        "module": 3,
+        "concept": "Motivação no treino",
+        "summary_anchor": "com-detail-051",
+        "question_ids": [
+          "COM051"
+        ],
+        "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C052",
+        "module": 3,
+        "concept": "Adesão à prática",
+        "summary_anchor": "com-detail-052",
+        "question_ids": [
+          "COM052"
+        ],
+        "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C053",
+        "module": 3,
+        "concept": "Liderança comunicacional",
+        "summary_anchor": "com-detail-053",
+        "question_ids": [
+          "COM053"
+        ],
+        "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C054",
+        "module": 3,
+        "concept": "Autonomia, competência e relacionamento",
+        "summary_anchor": "com-detail-054",
+        "question_ids": [
+          "COM054"
+        ],
+        "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C055",
+        "module": 3,
+        "concept": "Avaliar impacto e ajustar",
+        "summary_anchor": "com-detail-055",
+        "question_ids": [
+          "COM055"
+        ],
+        "source": "Aula 3, pp. 2–9, 17–19; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C056",
+        "module": 3,
+        "concept": "Origem",
+        "summary_anchor": "com-detail-056",
+        "question_ids": [
+          "COM056"
+        ],
+        "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C057",
+        "module": 3,
+        "concept": "Propósito",
+        "summary_anchor": "com-detail-057",
+        "question_ids": [
+          "COM057"
+        ],
+        "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C058",
+        "module": 3,
+        "concept": "Valores",
+        "summary_anchor": "com-detail-058",
+        "question_ids": [
+          "COM058"
+        ],
+        "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C059",
+        "module": 3,
+        "concept": "Impacto",
+        "summary_anchor": "com-detail-059",
+        "question_ids": [
+          "COM059"
+        ],
+        "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C060",
+        "module": 3,
+        "concept": "Visão e articulação das pétalas",
+        "summary_anchor": "com-detail-060",
+        "question_ids": [
+          "COM060"
+        ],
+        "source": "Aula 3, pp. 17–23; Lista de Saberes, pp. 5–6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C061",
+        "module": 3,
+        "concept": "Currículo e história viva",
+        "summary_anchor": "com-detail-061",
+        "question_ids": [
+          "COM061"
+        ],
+        "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C062",
+        "module": 3,
+        "concept": "Autenticidade e coerência",
+        "summary_anchor": "com-detail-062",
+        "question_ids": [
+          "COM062"
+        ],
+        "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C063",
+        "module": 3,
+        "concept": "Adaptabilidade sem perda de identidade",
+        "summary_anchor": "com-detail-063",
+        "question_ids": [
+          "COM063"
+        ],
+        "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C064",
+        "module": 3,
+        "concept": "CV, pitch, redes sociais e entrevistas",
+        "summary_anchor": "com-detail-064",
+        "question_ids": [
+          "COM064"
+        ],
+        "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C065",
+        "module": 3,
+        "concept": "Confiança, diferenciação e oportunidades",
+        "summary_anchor": "com-detail-065",
+        "question_ids": [
+          "COM065"
+        ],
+        "source": "Aula 3, pp. 10–20; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C066",
+        "module": 4,
+        "concept": "Oralidade espontânea e escrita oralizada",
+        "summary_anchor": "com-detail-066",
+        "question_ids": [
+          "COM066"
+        ],
+        "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C067",
+        "module": 4,
+        "concept": "Estilo passivo",
+        "summary_anchor": "com-detail-067",
+        "question_ids": [
+          "COM067"
+        ],
+        "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C068",
+        "module": 4,
+        "concept": "Estilo agressivo",
+        "summary_anchor": "com-detail-068",
+        "question_ids": [
+          "COM068"
+        ],
+        "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C069",
+        "module": 4,
+        "concept": "Estilo manipulador",
+        "summary_anchor": "com-detail-069",
+        "question_ids": [
+          "COM069"
+        ],
+        "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C070",
+        "module": 4,
+        "concept": "Estilo assertivo",
+        "summary_anchor": "com-detail-070",
+        "question_ids": [
+          "COM070"
+        ],
+        "source": "Aula 4, pp. 4–10; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C071",
+        "module": 4,
+        "concept": "Ritmo",
+        "summary_anchor": "com-detail-071",
+        "question_ids": [
+          "COM071"
+        ],
+        "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C072",
+        "module": 4,
+        "concept": "Intensidade",
+        "summary_anchor": "com-detail-072",
+        "question_ids": [
+          "COM072"
+        ],
+        "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C073",
+        "module": 4,
+        "concept": "Pausa e silêncio",
+        "summary_anchor": "com-detail-073",
+        "question_ids": [
+          "COM073"
+        ],
+        "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C074",
+        "module": 4,
+        "concept": "Calma e reflexão; energia e motivação",
+        "summary_anchor": "com-detail-074",
+        "question_ids": [
+          "COM074"
+        ],
+        "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C075",
+        "module": 4,
+        "concept": "Seriedade e foco; primeiros 30 segundos",
+        "summary_anchor": "com-detail-075",
+        "question_ids": [
+          "COM075"
+        ],
+        "source": "Aula 4, pp. 12–17; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C076",
+        "module": 4,
+        "concept": "Postura",
+        "summary_anchor": "com-detail-076",
+        "question_ids": [
+          "COM076"
+        ],
+        "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C077",
+        "module": 4,
+        "concept": "Gestos",
+        "summary_anchor": "com-detail-077",
+        "question_ids": [
+          "COM077"
+        ],
+        "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C078",
+        "module": 4,
+        "concept": "Olhar",
+        "summary_anchor": "com-detail-078",
+        "question_ids": [
+          "COM078"
+        ],
+        "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C079",
+        "module": 4,
+        "concept": "Proximidade e espaço",
+        "summary_anchor": "com-detail-079",
+        "question_ids": [
+          "COM079"
+        ],
+        "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6; Aula 1, p. 3.",
+        "status": "explicit"
+      },
+      {
+        "id": "COM-C080",
+        "module": 4,
+        "concept": "Presença autêntica e congruência",
+        "summary_anchor": "com-detail-080",
+        "question_ids": [
+          "COM080"
+        ],
+        "source": "Aula 4, pp. 18–22; Lista de Saberes, p. 6.",
+        "status": "explicit"
+      }
+    ],
+    "lista_items": [
+      {
+        "id": "COM-L001",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Compreender a comunicação como atividade social e suas quatro dimensões :",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-001",
+          "com-detail-002",
+          "com-detail-003",
+          "com-detail-004",
+          "com-detail-005"
+        ],
+        "question_ids": [
+          "COM001",
+          "COM002",
+          "COM003",
+          "COM004",
+          "COM005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L002",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Cognitiva – Ensinar, transmitir conhecimento técnico.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-001"
+        ],
+        "question_ids": [
+          "COM001"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L003",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Afetiva – Criar vínculos emocionais, gerar empatia.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-002"
+        ],
+        "question_ids": [
+          "COM002"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L004",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Comportamental – Influenciar ações e hábitos.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-003"
+        ],
+        "question_ids": [
+          "COM003"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L005",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Social – Construir identidade e sentido de pertença.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-004"
+        ],
+        "question_ids": [
+          "COM004"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L006",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Reconhecer a importância da comunicação intencional no contexto profissional.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-005"
+        ],
+        "question_ids": [
+          "COM005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L007",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Aplicar estratégias para compreender, sentir, agir e pertencer na interação com clientes.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-005"
+        ],
+        "question_ids": [
+          "COM005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L008",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Definir storytelling como ferramenta estratégica de comunicação.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-006"
+        ],
+        "question_ids": [
+          "COM006"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L009",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Entender como histórias transformam instruções técnicas em narrativas de mudança .",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-006"
+        ],
+        "question_ids": [
+          "COM006"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L010",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Identificar os mecanismos que tornam histórias eficazes:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-007",
+          "com-detail-008",
+          "com-detail-009",
+          "com-detail-010"
+        ],
+        "question_ids": [
+          "COM007",
+          "COM008",
+          "COM009",
+          "COM010"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L011",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Ativação neural completa (linguagem + emoção + ação).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-007"
+        ],
+        "question_ids": [
+          "COM007"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L012",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Transporte narrativo (imersão na história).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-008"
+        ],
+        "question_ids": [
+          "COM008"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L013",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Segmentação de eventos (estrutura início → conflito → resolução).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-009"
+        ],
+        "question_ids": [
+          "COM009"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L014",
+        "module": 1,
+        "list_page": 1,
+        "level": "subitem",
+        "text": "Esquemas mentais (conexão com experiências familiares).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-010"
+        ],
+        "question_ids": [
+          "COM010"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L015",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Reconhecer que histórias são mais memoráveis que dados isolados.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-018"
+        ],
+        "question_ids": [
+          "COM018"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L016",
+        "module": 1,
+        "list_page": 1,
+        "level": "item",
+        "text": "Compreender a Hipótese do Marcador Somático (Damásio): emoções guiam decisões.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-011"
+        ],
+        "question_ids": [
+          "COM011"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L017",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Diferenciar Sistema Límbico (rápido, emocional) vs. Córtex Pré-frontal (lento, racional).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-012"
+        ],
+        "question_ids": [
+          "COM012"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L018",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Entender que emoção precede razão na tomada de decisão.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-013"
+        ],
+        "question_ids": [
+          "COM013"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L019",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Aplicar estratégias para criar experiências emocionais positivas antes de argumentos racionais.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-014"
+        ],
+        "question_ids": [
+          "COM014"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L020",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Explicar por que narrativas ativam redes neurais mais amplas (hipocampo, DMN).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-016"
+        ],
+        "question_ids": [
+          "COM016"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L021",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Reconhecer o papel da emoção na memória (histórias emocionais são mais “pegajosas”).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-017"
+        ],
+        "question_ids": [
+          "COM017"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L022",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Entender o conceito de transporte narrativo e sua relação com retenção.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-008",
+          "com-detail-018"
+        ],
+        "question_ids": [
+          "COM008",
+          "COM018"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L023",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Diferenciar ciência rigorosa vs. divulgação científica popular .",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-019"
+        ],
+        "question_ids": [
+          "COM019"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L024",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Aplicar os quatro princípios éticos no uso de storytelling:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-021",
+          "com-detail-022",
+          "com-detail-023",
+          "com-detail-024"
+        ],
+        "question_ids": [
+          "COM021",
+          "COM022",
+          "COM023",
+          "COM024"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L025",
+        "module": 1,
+        "list_page": 2,
+        "level": "subitem",
+        "text": "Verdade e autenticidade – evitar exageros e promessas falsas.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-021"
+        ],
+        "question_ids": [
+          "COM021"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L026",
+        "module": 1,
+        "list_page": 2,
+        "level": "subitem",
+        "text": "Respeito e vulnerabilidade – proteger dignidade e intimidade.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-022"
+        ],
+        "question_ids": [
+          "COM022"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L027",
+        "module": 1,
+        "list_page": 2,
+        "level": "subitem",
+        "text": "Influência consciente – usar emoção de forma ética, sem manipulação.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-023"
+        ],
+        "question_ids": [
+          "COM023"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L028",
+        "module": 1,
+        "list_page": 2,
+        "level": "subitem",
+        "text": "Impacto social – evitar estereótipos, promover inclusão e bem-estar.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-024"
+        ],
+        "question_ids": [
+          "COM024"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L029",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Reconhecer riscos éticos e boas práticas na comunicação profissional.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-025"
+        ],
+        "question_ids": [
+          "COM025"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L030",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Comunicação intencional e estratégica.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-005"
+        ],
+        "question_ids": [
+          "COM005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L031",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Uso do storytelling para motivar, ensinar e inspirar.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-006",
+          "com-detail-051"
+        ],
+        "question_ids": [
+          "COM006",
+          "COM051"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L032",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Criação de narrativas éticas e responsáveis.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-025"
+        ],
+        "question_ids": [
+          "COM025"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L033",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Aplicação da neurociência da emoção na persuasão positiva.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-014"
+        ],
+        "question_ids": [
+          "COM014"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L034",
+        "module": 1,
+        "list_page": 2,
+        "level": "item",
+        "text": "Diferenciação entre linguagem técnica e linguagem acessível.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-001",
+          "com-detail-048"
+        ],
+        "question_ids": [
+          "COM001",
+          "COM048"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L035",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Compreender a intenção narrativa como o propósito central da comunicação.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-026"
+        ],
+        "question_ids": [
+          "COM026"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L036",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Identificar o que quero provocar no outro : acolher, desafiar, inspirar, informar ou mobilizar.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-026",
+          "com-detail-030"
+        ],
+        "question_ids": [
+          "COM026",
+          "COM030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L037",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Entender a pragmática da comunicação : falar é agir (Austin, Searle).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-027"
+        ],
+        "question_ids": [
+          "COM027"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L038",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Diferenciar:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-028"
+        ],
+        "question_ids": [
+          "COM028"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L039",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Locução (conteúdo literal),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-028"
+        ],
+        "question_ids": [
+          "COM028"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L040",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Ilocução (intenção do falante),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-028"
+        ],
+        "question_ids": [
+          "COM028"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L041",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Perlocução (efeito no ouvinte).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-028"
+        ],
+        "question_ids": [
+          "COM028"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L042",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Reconhecer que cada intenção gera impactos distintos:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-029",
+          "com-detail-030"
+        ],
+        "question_ids": [
+          "COM029",
+          "COM030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L043",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Emocional (acolher),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-029"
+        ],
+        "question_ids": [
+          "COM029"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L044",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Cognitivo (desafiar),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-029"
+        ],
+        "question_ids": [
+          "COM029"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L045",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Motivacional (inspirar).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-030"
+        ],
+        "question_ids": [
+          "COM030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L046",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Conhecer as cinco famílias de atos de fala :",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-031",
+          "com-detail-032",
+          "com-detail-033",
+          "com-detail-034",
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM031",
+          "COM032",
+          "COM033",
+          "COM034",
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L047",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Assertivos (afirmar),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-031"
+        ],
+        "question_ids": [
+          "COM031"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L048",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Diretivos (pedir, sugerir),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-032"
+        ],
+        "question_ids": [
+          "COM032"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L049",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Compromissivos (prometer),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-033"
+        ],
+        "question_ids": [
+          "COM033"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L050",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Expressivos (partilhar emoções),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-034"
+        ],
+        "question_ids": [
+          "COM034"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L051",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Declarativos (criar realidade).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L052",
+        "module": 2,
+        "list_page": 3,
+        "level": "item",
+        "text": "Relacionar atos de fala com intenções pedagógicas:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L053",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Acolher → expressivos, assertivos suaves.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-034",
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM034",
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L054",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Desafiar → diretivos interrogativos, declarativos situacionais.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-032",
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM032",
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L055",
+        "module": 2,
+        "list_page": 3,
+        "level": "subitem",
+        "text": "Inspirar → assertivos positivos, compromissivos, declarativos capacitadores.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L056",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Entender que atos de fala são ferramentas práticas da intenção .",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L057",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Dominar o arco narrativo universal :",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-036",
+          "com-detail-037",
+          "com-detail-038",
+          "com-detail-039"
+        ],
+        "question_ids": [
+          "COM036",
+          "COM037",
+          "COM038",
+          "COM039"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L058",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Contexto (staging) – criar ancoragem emocional.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-036"
+        ],
+        "question_ids": [
+          "COM036"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L059",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Conflito – apresentar desafio interno ou externo.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-037"
+        ],
+        "question_ids": [
+          "COM037"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L060",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Transformação – mostrar mudança possível.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-038"
+        ],
+        "question_ids": [
+          "COM038"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L061",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Mensagem final – clara, memorável, conectada à ação desejada.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-039"
+        ],
+        "question_ids": [
+          "COM039"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L062",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Compreender por que o arco narrativo aumenta retenção, persuasão e tomada de decisão.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-039"
+        ],
+        "question_ids": [
+          "COM039"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L063",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Aplicar o modelo ABT (And–But–Therefore) para narrativas curtas e eficazes.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-040"
+        ],
+        "question_ids": [
+          "COM040"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L064",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Conhecer as seis funções da linguagem (Jakobson):",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-041",
+          "com-detail-042",
+          "com-detail-043",
+          "com-detail-044",
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM041",
+          "COM042",
+          "COM043",
+          "COM044",
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L065",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Emotiva – expressar sentimentos, criar empatia.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-041"
+        ],
+        "question_ids": [
+          "COM041"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L066",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Conativa – direcionar ação (call to action).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-042"
+        ],
+        "question_ids": [
+          "COM042"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L067",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Referencial – transmitir informação objetiva.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-043"
+        ],
+        "question_ids": [
+          "COM043"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L068",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Poética – tornar a mensagem memorável (metáforas, ritmo).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-044"
+        ],
+        "question_ids": [
+          "COM044"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L069",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Fática – manter o canal de comunicação.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-041"
+        ],
+        "question_ids": [
+          "COM041"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L070",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Metalinguística – explicar termos e garantir entendimento.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L071",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Saber combinar funções conforme objetivo e perfil do público:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L072",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Contexto → referencial + metalinguística.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L073",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Conexão emocional → emotiva + fática.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-041",
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM041",
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L074",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Direção para ação → conativa.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-042"
+        ],
+        "question_ids": [
+          "COM042"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L075",
+        "module": 2,
+        "list_page": 4,
+        "level": "subitem",
+        "text": "Memorabilidade → poética.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-044"
+        ],
+        "question_ids": [
+          "COM044"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L076",
+        "module": 2,
+        "list_page": 4,
+        "level": "item",
+        "text": "Reconhecer que a mesma narrativa não serve para todos .",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-046",
+          "com-detail-047",
+          "com-detail-048",
+          "com-detail-049",
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM046",
+          "COM047",
+          "COM048",
+          "COM049",
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L077",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Identificar fatores de adaptação:",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-046",
+          "com-detail-047",
+          "com-detail-048",
+          "com-detail-049",
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM046",
+          "COM047",
+          "COM048",
+          "COM049",
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L078",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Idade,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-046"
+        ],
+        "question_ids": [
+          "COM046"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L079",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Objetivos (estética vs saúde),",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-046"
+        ],
+        "question_ids": [
+          "COM046"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L080",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Nível de motivação,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-047"
+        ],
+        "question_ids": [
+          "COM047"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L081",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Histórico do aluno,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-047"
+        ],
+        "question_ids": [
+          "COM047"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L082",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Estilo cognitivo,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-048"
+        ],
+        "question_ids": [
+          "COM048"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L083",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Literacia,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-048"
+        ],
+        "question_ids": [
+          "COM048"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L084",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Cultura e valores socioculturais,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-049"
+        ],
+        "question_ids": [
+          "COM049"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L085",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Estado emocional,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-049"
+        ],
+        "question_ids": [
+          "COM049"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L086",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Preferências de canal e formato,",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L087",
+        "module": 2,
+        "list_page": 5,
+        "level": "subitem",
+        "text": "Tempo disponível.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L088",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Aplicar estratégias para personalizar narrativa e aumentar engajamento, retenção e adesão.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L089",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Definição clara de intenção comunicativa.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-026"
+        ],
+        "question_ids": [
+          "COM026"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L090",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Uso estratégico de atos de fala.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-031",
+          "com-detail-032",
+          "com-detail-033",
+          "com-detail-034",
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM031",
+          "COM032",
+          "COM033",
+          "COM034",
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L091",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Estruturação de narrativas eficazes.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-039",
+          "com-detail-040"
+        ],
+        "question_ids": [
+          "COM039",
+          "COM040"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L092",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Aplicação das funções da linguagem para impacto.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L093",
+        "module": 2,
+        "list_page": 5,
+        "level": "item",
+        "text": "Adaptação da narrativa ao perfil do público.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-046",
+          "com-detail-047",
+          "com-detail-048",
+          "com-detail-049",
+          "com-detail-050"
+        ],
+        "question_ids": [
+          "COM046",
+          "COM047",
+          "COM048",
+          "COM049",
+          "COM050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L094",
+        "module": 3,
+        "list_page": 5,
+        "level": "item",
+        "text": "O que é storytelling? Uso estratégico de narrativas para transmitir mensagens com significado, emoção e propósito.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-006"
+        ],
+        "question_ids": [
+          "COM006"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L095",
+        "module": 3,
+        "list_page": 5,
+        "level": "item",
+        "text": "Aplicações: Motivação no treino, adesão à prática, liderança, construção de identidade profissional.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-051",
+          "com-detail-052",
+          "com-detail-053",
+          "com-detail-056",
+          "com-detail-057",
+          "com-detail-058",
+          "com-detail-059",
+          "com-detail-060"
+        ],
+        "question_ids": [
+          "COM051",
+          "COM052",
+          "COM053",
+          "COM056",
+          "COM057",
+          "COM058",
+          "COM059",
+          "COM060"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L096",
+        "module": 3,
+        "list_page": 5,
+        "level": "item",
+        "text": "Elementos da narrativa (Modelo das 5 pétalas): Origem, Propósito, Valores, Impacto, Visão.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-056",
+          "com-detail-057",
+          "com-detail-058",
+          "com-detail-059",
+          "com-detail-060"
+        ],
+        "question_ids": [
+          "COM056",
+          "COM057",
+          "COM058",
+          "COM059",
+          "COM060"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L097",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Arco narrativo: Contexto → Conflito → Transformação → Mensagem final.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-039"
+        ],
+        "question_ids": [
+          "COM039"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L098",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Funções da linguagem: Emotiva, Conativa, Metalinguística, Referencial, Poética.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-041",
+          "com-detail-042",
+          "com-detail-043",
+          "com-detail-044",
+          "com-detail-045"
+        ],
+        "question_ids": [
+          "COM041",
+          "COM042",
+          "COM043",
+          "COM044",
+          "COM045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L099",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Atos de fala: Assertivo, Diretivo, Compromissivo, Expressivo, Declarativo.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-031",
+          "com-detail-032",
+          "com-detail-033",
+          "com-detail-034",
+          "com-detail-035"
+        ],
+        "question_ids": [
+          "COM031",
+          "COM032",
+          "COM033",
+          "COM034",
+          "COM035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L100",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Princípios: Autenticidade, coerência, adaptabilidade.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-062",
+          "com-detail-063"
+        ],
+        "question_ids": [
+          "COM062",
+          "COM063"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L101",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Aplicações: práticas: CV, pitch, redes sociais, entrevistas.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-064"
+        ],
+        "question_ids": [
+          "COM064"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L102",
+        "module": 3,
+        "list_page": 6,
+        "level": "item",
+        "text": "Benefícios: Confiança, diferenciação, oportunidades.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-065"
+        ],
+        "question_ids": [
+          "COM065"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L103",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Oralidade espontânea vs escrita oralizada: Comunicação viva, autêntica, adaptável, que cria conexão emocional.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-066"
+        ],
+        "question_ids": [
+          "COM066"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L104",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Estilos comunicacionais: Passivo, Agressivo, Manipulador, Assertivo (modelo ideal para líderes).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-067",
+          "com-detail-068",
+          "com-detail-069",
+          "com-detail-070"
+        ],
+        "question_ids": [
+          "COM067",
+          "COM068",
+          "COM069",
+          "COM070"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L105",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Voz como instrumento de impacto: Elementos vocais: Ritmo, Intensidade, Pausa, Silêncio.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-071",
+          "com-detail-072",
+          "com-detail-073"
+        ],
+        "question_ids": [
+          "COM071",
+          "COM072",
+          "COM073"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L106",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Construção de climas emocionais: Calma e Reflexão, Energia e Motivação, Seriedade e Foco. Clima deve ser criado nos primeiros 30 segundos.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-074",
+          "com-detail-075"
+        ],
+        "question_ids": [
+          "COM074",
+          "COM075"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L107",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Comunicação não verbal: Postura, Gestos, Olhar, Proximidade (mais de 50% do impacto comunicativo).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-076",
+          "com-detail-077",
+          "com-detail-078",
+          "com-detail-079",
+          "com-detail-080"
+        ],
+        "question_ids": [
+          "COM076",
+          "COM077",
+          "COM078",
+          "COM079",
+          "COM080"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "COM-L108",
+        "module": 4,
+        "list_page": 6,
+        "level": "item",
+        "text": "Princípios-chave: Presença autêntica, voz funcional, estilo assertivo, comunicação não verbal eficaz.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "com-detail-080"
+        ],
+        "question_ids": [
+          "COM080"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      }
+    ]
+  }
+}

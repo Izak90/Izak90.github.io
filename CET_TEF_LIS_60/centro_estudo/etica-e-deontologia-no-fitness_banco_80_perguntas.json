@@ -1,0 +1,3034 @@
+{
+  "uc": "Ética e Deontologia no Fitness",
+  "version": "2026-11-04",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "id": "ETI001",
+      "topic": "1. Direitos humanos, ética, moral e deontologia",
+      "type": "multiple_choice",
+      "question": "Qual conjunto corresponde aos direitos humanos enumerados na Aula 1?",
+      "options": [
+        "Competição, vitória, exclusividade, rendimento e estatuto",
+        "Apenas saúde e segurança durante o exercício",
+        "Vida, liberdade, igualdade, dignidade, saúde, educação e segurança",
+        "Apenas direitos de quem tem contrato de trabalho"
+      ],
+      "answer": 2,
+      "explanation": "A universalidade ultrapassa profissão, estatuto e desempenho; os sete direitos orientam o tratamento de todas as pessoas.",
+      "source": "Aula 1, pp. 6–11.",
+      "saberes": [
+        "ETI-C001"
+      ]
+    },
+    {
+      "id": "ETI002",
+      "topic": "1. Direitos humanos, ética, moral e deontologia",
+      "type": "multiple_choice",
+      "question": "Qual descrição traduz a dimensão reflexiva da ética?",
+      "options": [
+        "Estudar e fundamentar criticamente as regras e escolhas de conduta",
+        "Preferir sempre o interesse económico do profissional",
+        "Cumprir apenas as regras escritas de uma profissão",
+        "Aplicar automaticamente qualquer costume do grupo"
+      ],
+      "answer": 0,
+      "explanation": "A ética interroga os fundamentos da conduta; não se reduz a hábito, lucro ou cumprimento formal.",
+      "source": "Aula 1, pp. 6–11.",
+      "saberes": [
+        "ETI-C002"
+      ]
+    },
+    {
+      "id": "ETI003",
+      "topic": "1. Direitos humanos, ética, moral e deontologia",
+      "type": "multiple_choice",
+      "question": "Qual distinção segue o núcleo da comparação entre moral e ética nos slides?",
+      "options": [
+        "Moral: fiscalização; ética: aplicação de coimas",
+        "Moral: regras e costumes de um grupo; ética: reflexão sobre essas regras",
+        "Moral e ética são sempre sinónimos sem diferenças",
+        "Moral: título profissional; ética: regulamento interno"
+      ],
+      "answer": 1,
+      "explanation": "A distinção central separa regras socialmente aplicadas da reflexão sobre o seu fundamento.",
+      "source": "Aula 1, pp. 6–11.",
+      "saberes": [
+        "ETI-C003"
+      ]
+    },
+    {
+      "id": "ETI004",
+      "topic": "1. Direitos humanos, ética, moral e deontologia",
+      "type": "multiple_choice",
+      "question": "Qual exemplo pertence sobretudo à ética profissional?",
+      "options": [
+        "Consultar apenas a lotação numérica de uma sala",
+        "Confundir uma obrigação do ginásio com a vontade do cliente",
+        "Refletir sobre honestidade, justiça e responsabilidade numa decisão profissional",
+        "Registar uma fatura sem considerar a conduta profissional"
+      ],
+      "answer": 2,
+      "explanation": "A ética profissional orienta a conduta através de princípios e valores, para além de procedimentos administrativos.",
+      "source": "Aula 1, pp. 6–11.",
+      "saberes": [
+        "ETI-C004"
+      ]
+    },
+    {
+      "id": "ETI005",
+      "topic": "1. Direitos humanos, ética, moral e deontologia",
+      "type": "multiple_choice",
+      "question": "O que distingue deontologia profissional de ética profissional?",
+      "options": [
+        "Substitui todas as leis por costumes informais",
+        "É apenas a opinião pessoal do técnico",
+        "Concretiza deveres específicos e codificados da profissão",
+        "Aplica-se exclusivamente às relações familiares"
+      ],
+      "answer": 2,
+      "explanation": "A deontologia traduz princípios em deveres profissionais; a existência e o tipo de sanção dependem do enquadramento aplicável.",
+      "source": "Aula 1, pp. 6–11.",
+      "saberes": [
+        "ETI-C005"
+      ]
+    },
+    {
+      "id": "ETI006",
+      "topic": "2. Ética desportiva, fair play e conflitos de interesses",
+      "type": "multiple_choice",
+      "question": "Qual princípio é destacado no artigo 3.º da LBAFD estudado na UC?",
+      "options": [
+        "Ética, verdade desportiva, formação integral e combate a manifestações antidesportivas",
+        "Aplicação de princípios éticos apenas ao desporto profissional",
+        "Prioridade absoluta da vitória sobre a integridade",
+        "Substituição da segurança pela liberdade de exploração"
+      ],
+      "answer": 0,
+      "explanation": "A ética integra a prática desportiva e a responsabilidade pública; não se limita à vitória nem ao profissionalismo.",
+      "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10.",
+      "saberes": [
+        "ETI-C006"
+      ]
+    },
+    {
+      "id": "ETI007",
+      "topic": "2. Ética desportiva, fair play e conflitos de interesses",
+      "type": "multiple_choice",
+      "question": "Qual situação respeita melhor o sentido de fair play apresentado?",
+      "options": [
+        "Explorar uma fragilidade do outro desde que não exista proibição expressa",
+        "Considerar ética apenas a decisão do árbitro",
+        "Cumprir as regras e agir com respeito e espírito desportivo",
+        "Procurar vantagem com humilhação verbal sem violar a pontuação"
+      ],
+      "answer": 2,
+      "explanation": "O Código ultrapassa o cumprimento literal e inclui a maneira de tratar os outros.",
+      "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10.",
+      "saberes": [
+        "ETI-C007"
+      ]
+    },
+    {
+      "id": "ETI008",
+      "topic": "2. Ética desportiva, fair play e conflitos de interesses",
+      "type": "multiple_choice",
+      "question": "Quais são os três valores associativos indicados nos slides?",
+      "options": [
+        "Prescrição, avaliação e comercialização",
+        "Autonomia, competição e exclusividade",
+        "Força, velocidade e resistência",
+        "Legalidade, responsabilidade e integridade"
+      ],
+      "answer": 3,
+      "explanation": "A lista dos valores é distinta dos pilares de ação e das funções técnicas.",
+      "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10.",
+      "saberes": [
+        "ETI-C008"
+      ]
+    },
+    {
+      "id": "ETI009",
+      "topic": "2. Ética desportiva, fair play e conflitos de interesses",
+      "type": "multiple_choice",
+      "question": "Como deve ser entendido o código da APTEF apresentado na aula?",
+      "options": [
+        "Como substituto da Lei 39/2012 em todas as instalações",
+        "Como regulamento municipal de utilização de piscinas",
+        "Como referência associativa de deveres profissionais, com âmbito próprio",
+        "Como título emitido automaticamente a qualquer praticante"
+      ],
+      "answer": 2,
+      "explanation": "O código orienta conduta no seu âmbito associativo; não substitui requisitos legais ou títulos.",
+      "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10.",
+      "saberes": [
+        "ETI-C009"
+      ]
+    },
+    {
+      "id": "ETI010",
+      "topic": "2. Ética desportiva, fair play e conflitos de interesses",
+      "type": "multiple_choice",
+      "question": "Um TEF recebe uma comissão para recomendar um produto não essencial. Qual conduta segue a aula?",
+      "options": [
+        "Usar dados privados do cliente para aumentar a venda",
+        "Ocultar a comissão porque a recomendação é uma decisão pessoal",
+        "Recomendar o produto sempre que a margem for elevada",
+        "Evitar que a vantagem determine a recomendação, declarar o conflito e priorizar o cliente"
+      ],
+      "answer": 3,
+      "explanation": "A transparência e a independência protegem o cliente e a credibilidade profissional.",
+      "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10.",
+      "saberes": [
+        "ETI-C010"
+      ]
+    },
+    {
+      "id": "ETI011",
+      "topic": "3. Código APTEF na prática profissional",
+      "type": "multiple_choice",
+      "question": "Qual conduta respeita o artigo 6.º do código apresentado?",
+      "options": [
+        "Substituir formação profissional por experiência pessoal de treino",
+        "Prescrever medicamentos quando se conhece bem o praticante",
+        "Atuar dentro das competências e encaminhar necessidades fora da habilitação",
+        "Aceitar qualquer intervenção solicitada pelo cliente"
+      ],
+      "answer": 2,
+      "explanation": "Conhecer a pessoa não alarga a habilitação profissional; o código exige competência para a intervenção.",
+      "source": "Aula 2, pp. 7–11.",
+      "saberes": [
+        "ETI-C011"
+      ]
+    },
+    {
+      "id": "ETI012",
+      "topic": "3. Código APTEF na prática profissional",
+      "type": "multiple_choice",
+      "question": "Uma pessoa refere patologia cardíaca. Segundo o código, o TEF deve fazer o quê?",
+      "options": [
+        "Conhecer a situação e articular com profissional competente para orientar uma prática segura",
+        "Ignorar a informação se não for apresentado atestado",
+        "Diagnosticar a gravidade a partir do aspeto físico",
+        "Alterar a medicação para facilitar o treino"
+      ],
+      "answer": 0,
+      "explanation": "O encaminhamento e a articulação respeitam limites e ajudam a adequar o exercício.",
+      "source": "Aula 2, pp. 7–11.",
+      "saberes": [
+        "ETI-C012"
+      ]
+    },
+    {
+      "id": "ETI013",
+      "topic": "3. Código APTEF na prática profissional",
+      "type": "multiple_choice",
+      "question": "Qual comportamento corresponde ao princípio de integridade?",
+      "options": [
+        "Prometer uma competência que ainda não se adquiriu",
+        "Divulgar uma história privada para provar experiência",
+        "Omitir limitações para captar um cliente",
+        "Apresentar qualificações e resultados com honestidade e correção"
+      ],
+      "answer": 3,
+      "explanation": "Integridade exige correspondência entre o que se afirma e a realidade do serviço prestado.",
+      "source": "Aula 2, pp. 7–11.",
+      "saberes": [
+        "ETI-C013"
+      ]
+    },
+    {
+      "id": "ETI014",
+      "topic": "3. Código APTEF na prática profissional",
+      "type": "multiple_choice",
+      "question": "O que significa solidariedade profissional no código apresentado?",
+      "options": [
+        "Evitar partilhar conhecimento para manter vantagem",
+        "Encobrir qualquer comportamento por lealdade à equipa",
+        "Transferir para os colegas toda a responsabilidade pelo serviço",
+        "Apoiar e cooperar com colegas que respeitem os valores legais e éticos"
+      ],
+      "answer": 3,
+      "explanation": "A cooperação é condicionada pelo respeito pela ética e pela legalidade.",
+      "source": "Aula 2, pp. 7–11.",
+      "saberes": [
+        "ETI-C014"
+      ]
+    },
+    {
+      "id": "ETI015",
+      "topic": "3. Código APTEF na prática profissional",
+      "type": "multiple_choice",
+      "question": "Como agir perante uma conduta profissional eticamente indevida de um colega?",
+      "options": [
+        "Publicar acusações humilhantes nas redes sociais",
+        "Ignorar sempre o caso em nome da cooperação",
+        "Abordar o problema com respeito e recorrer ao local competente, sem difamação",
+        "Aliciar os seus clientes para resolver o problema"
+      ],
+      "answer": 2,
+      "explanation": "É possível intervir sem difamar ou usar o conflito para concorrência desleal.",
+      "source": "Aula 2, pp. 7–11.",
+      "saberes": [
+        "ETI-C015"
+      ]
+    },
+    {
+      "id": "ETI016",
+      "topic": "4. Enquadramento legislativo e Lei de Bases",
+      "type": "multiple_choice",
+      "question": "Qual associação de diplomas está correta no âmbito estudado?",
+      "options": [
+        "As Leis 39/2012 e 40/2012 regulam exatamente o mesmo título",
+        "Lei 5/2007: exclusivamente direitos musicais; Lei 39/2012: proteção de dados",
+        "Lei 39/2012: apenas treinadores federativos; Lei 40/2012: apenas regulamentos internos",
+        "Lei 39/2012: responsabilidade técnica no fitness; Lei 40/2012 alterada pela 106/2019: treinador de desporto"
+      ],
+      "answer": 3,
+      "explanation": "Os regimes têm objetos e títulos distintos; o âmbito do treinador não se reduz à remuneração ou a um único local.",
+      "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4.",
+      "saberes": [
+        "ETI-C016"
+      ]
+    },
+    {
+      "id": "ETI017",
+      "topic": "4. Enquadramento legislativo e Lei de Bases",
+      "type": "multiple_choice",
+      "question": "Qual é a função da Lei 5/2007 apresentada na UC?",
+      "options": [
+        "Definir as bases das políticas de desenvolvimento da atividade física e do desporto",
+        "Regular exclusivamente competições de alto rendimento",
+        "Substituir todos os regulamentos de instalações",
+        "Estabelecer apenas o preço dos títulos profissionais"
+      ],
+      "answer": 0,
+      "explanation": "Uma lei de bases estabelece o quadro de princípios que orienta os regimes específicos.",
+      "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4.",
+      "saberes": [
+        "ETI-C017"
+      ]
+    },
+    {
+      "id": "ETI018",
+      "topic": "4. Enquadramento legislativo e Lei de Bases",
+      "type": "multiple_choice",
+      "question": "Segundo a orientação do artigo 35.º estudado, a exigência de formação pode abranger que atividade?",
+      "options": [
+        "Apenas atividade principal com contrato sem termo",
+        "Só atividade em competições internacionais",
+        "Também atividade secundária, sazonal ou ocasional nos casos previstos",
+        "Nenhuma atividade prestada sem remuneração"
+      ],
+      "answer": 2,
+      "explanation": "O enquadramento depende das funções e dos casos previstos, não apenas da duração do trabalho.",
+      "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4.",
+      "saberes": [
+        "ETI-C018"
+      ]
+    },
+    {
+      "id": "ETI019",
+      "topic": "4. Enquadramento legislativo e Lei de Bases",
+      "type": "multiple_choice",
+      "question": "Qual distinção sobre exame médico corresponde à Aula 2?",
+      "options": [
+        "Qualquer entrada num ginásio exige sempre o mesmo exame federativo",
+        "No âmbito federativo exige-se certificação; no ginásio não se apresenta uma obrigação geral de atestado, mantendo-se a preocupação com contraindicações",
+        "O TEF pode substituir o médico e certificar aptidão clínica",
+        "A ausência de obrigação geral elimina qualquer avaliação de segurança"
+      ],
+      "answer": 1,
+      "explanation": "A distinção não elimina responsabilidade de segurança nem alarga competências clínicas do TEF.",
+      "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4.",
+      "saberes": [
+        "ETI-C019"
+      ]
+    },
+    {
+      "id": "ETI020",
+      "topic": "4. Enquadramento legislativo e Lei de Bases",
+      "type": "multiple_choice",
+      "question": "Que conjunto de preocupações é associado ao artigo 43.º nas aulas?",
+      "options": [
+        "Só remuneração dos técnicos e horários de férias",
+        "Requisitos das instalações, formação do pessoal e seguros dos participantes",
+        "Apenas seguros dos veículos usados na deslocação",
+        "Apenas campanhas de promoção e preços"
+      ],
+      "answer": 1,
+      "explanation": "O objetivo é proteger a saúde e segurança dos participantes nas atividades e instalações.",
+      "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4.",
+      "saberes": [
+        "ETI-C020"
+      ]
+    },
+    {
+      "id": "ETI021",
+      "topic": "5. Qualificação, títulos e formação contínua",
+      "type": "multiple_choice",
+      "question": "Que nível do QNQ é conferido pelos CET apresentados?",
+      "options": [
+        "Nível 3",
+        "Nível 8, equivalente a doutoramento",
+        "Nível 6, equivalente a licenciatura",
+        "Nível 5"
+      ],
+      "answer": 3,
+      "explanation": "CET e licenciatura são vias formativas diferentes; o nível indicado para o CET é 5.",
+      "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8.",
+      "saberes": [
+        "ETI-C021"
+      ]
+    },
+    {
+      "id": "ETI022",
+      "topic": "5. Qualificação, títulos e formação contínua",
+      "type": "multiple_choice",
+      "question": "Qual via aparece no acesso ao título profissional de TEF?",
+      "options": [
+        "Apenas experiência pessoal de praticante sem reconhecimento",
+        "Exclusivamente um curso de gestão comercial de ginásios",
+        "Qualquer certificado de participação numa aula de grupo",
+        "Qualificação em fitness no Sistema Nacional de Qualificações, além das outras vias previstas"
+      ],
+      "answer": 3,
+      "explanation": "A formação ou competência profissional deve estar enquadrada e reconhecida; praticar exercício não basta.",
+      "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8.",
+      "saberes": [
+        "ETI-C022"
+      ]
+    },
+    {
+      "id": "ETI023",
+      "topic": "5. Qualificação, títulos e formação contínua",
+      "type": "multiple_choice",
+      "question": "Um CET de TEF, por si só, deve ser apresentado como acesso automático ao título de DT?",
+      "options": [
+        "Sim; TEF e DT têm sempre a mesma via de acesso",
+        "Sim; o cargo de club manager substitui o título de DT",
+        "Não; o acesso ao DT tem requisitos próprios, distintos da via CET de TEF",
+        "Sim; basta gerir a receção do clube"
+      ],
+      "answer": 2,
+      "explanation": "A aula distingue requisitos do título e gestão comercial da instalação.",
+      "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8.",
+      "saberes": [
+        "ETI-C023"
+      ]
+    },
+    {
+      "id": "ETI024",
+      "topic": "5. Qualificação, títulos e formação contínua",
+      "type": "multiple_choice",
+      "question": "Qual par de validade/créditos é estudado para TEF e DT?",
+      "options": [
+        "3 anos e 5 UC",
+        "5 anos e 5 UC",
+        "3 anos e 3 UC",
+        "5 anos e 3 UC"
+      ],
+      "answer": 1,
+      "explanation": "O par 3 anos/3 UC pertence à revalidação do treinador descrita noutra aula.",
+      "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8.",
+      "saberes": [
+        "ETI-C024"
+      ]
+    },
+    {
+      "id": "ETI025",
+      "topic": "5. Qualificação, títulos e formação contínua",
+      "type": "multiple_choice",
+      "question": "Segundo a equivalência apresentada, quantas horas presenciais correspondem a 5 UC?",
+      "options": [
+        "5 horas",
+        "10 horas",
+        "50 horas",
+        "25 horas"
+      ],
+      "answer": 3,
+      "explanation": "Nos slides, cada UC corresponde a 5 horas presenciais; 5 × 5 = 25. Não confundir com a equivalência à distância.",
+      "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8.",
+      "saberes": [
+        "ETI-C025"
+      ]
+    },
+    {
+      "id": "ETI026",
+      "topic": "6. Historial e instalações desportivas",
+      "type": "multiple_choice",
+      "question": "Qual diploma é destacado como primeiro a estabelecer responsabilidade técnica nos ginásios?",
+      "options": [
+        "Decreto-Lei 385/1999",
+        "Lei 106/2019",
+        "Lei 39/2012",
+        "Portaria 454/2023"
+      ],
+      "answer": 0,
+      "explanation": "O destaque da Lista recai no diploma de 1999, e não na lei que o sucedeu.",
+      "source": "Aula 2, pp. 23–34.",
+      "saberes": [
+        "ETI-C026"
+      ]
+    },
+    {
+      "id": "ETI027",
+      "topic": "6. Historial e instalações desportivas",
+      "type": "multiple_choice",
+      "question": "Que distinção histórica está correta?",
+      "options": [
+        "DL 141/2009: instalações; DL 271/2009: responsabilidade técnica, depois revogado pela Lei 39/2012",
+        "Os diplomas de 2009 têm sempre o mesmo objeto",
+        "Lei 39/2012: revogação do RGPD",
+        "DL 141/2009: exclusivamente treinadores; DL 271/2009: apenas música"
+      ],
+      "answer": 0,
+      "explanation": "A cronologia combina dois planos diferentes: instalações e responsabilidade pelas atividades.",
+      "source": "Aula 2, pp. 23–34.",
+      "saberes": [
+        "ETI-C027"
+      ]
+    },
+    {
+      "id": "ETI028",
+      "topic": "6. Historial e instalações desportivas",
+      "type": "multiple_choice",
+      "question": "Como se subdividem as instalações desportivas de base?",
+      "options": [
+        "Municipais e privadas, exclusivamente",
+        "Apenas olímpicas e profissionais",
+        "Recreativas e formativas",
+        "Apenas competitivas e comerciais"
+      ],
+      "answer": 2,
+      "explanation": "A subdivisão é funcional; propriedade pública/privada é outro critério.",
+      "source": "Aula 2, pp. 23–34.",
+      "saberes": [
+        "ETI-C028"
+      ]
+    },
+    {
+      "id": "ETI029",
+      "topic": "6. Historial e instalações desportivas",
+      "type": "multiple_choice",
+      "question": "A autorização de utilização para atividades desportivas diz respeito principalmente a quê?",
+      "options": [
+        "Ao pagamento de direitos musicais",
+        "À renovação das UC pessoais de cada TEF",
+        "À emissão de uma licença de treinador por federação",
+        "Ao enquadramento de utilização da instalação, sob responsabilidade autárquica"
+      ],
+      "answer": 3,
+      "explanation": "Instalação e habilitação de profissionais são planos diferentes de conformidade.",
+      "source": "Aula 2, pp. 23–34.",
+      "saberes": [
+        "ETI-C029"
+      ]
+    },
+    {
+      "id": "ETI030",
+      "topic": "6. Historial e instalações desportivas",
+      "type": "multiple_choice",
+      "question": "Segundo os critérios transcritos, uma instalação com exatamente 200 m² enquadra-se em que artigo específico?",
+      "options": [
+        "Nenhum artigo, porque só se aplicam a áreas superiores a 200 m²",
+        "Apenas no artigo dos direitos musicais",
+        "Artigo 20.º por ser sempre considerada pequena",
+        "Artigo 19.º, e não no regime de área inferior a 200 m² do artigo 20.º"
+      ],
+      "answer": 3,
+      "explanation": "A fonte usa igual ou superior no artigo 19.º e inferior no artigo 20.º; piscinas também alteram o enquadramento.",
+      "source": "Aula 2, pp. 23–34.",
+      "saberes": [
+        "ETI-C030"
+      ]
+    },
+    {
+      "id": "ETI031",
+      "topic": "7. Lei dos ginásios: âmbito e funções técnicas",
+      "type": "multiple_choice",
+      "question": "O objeto central da Lei 39/2012 estudada é qual?",
+      "options": [
+        "Apenas o funcionamento de federações competitivas",
+        "Exclusivamente o acesso à profissão de nutricionista",
+        "Responsabilidade técnica pelas atividades de fitness e determinadas regras de funcionamento",
+        "Apenas o preço de mensalidades dos clubes"
+      ],
+      "answer": 2,
+      "explanation": "O artigo 1.º foca instalações prestadoras de serviços de fitness, com exceções no artigo 2.º.",
+      "source": "Aula 3, pp. 3–7.",
+      "saberes": [
+        "ETI-C031"
+      ]
+    },
+    {
+      "id": "ETI032",
+      "topic": "7. Lei dos ginásios: âmbito e funções técnicas",
+      "type": "multiple_choice",
+      "question": "Qual condição fundamenta a exceção dos ginásios de hotéis apresentada?",
+      "options": [
+        "Não cobrar mensalidade separada, independentemente de quem utiliza",
+        "Frequência reservada exclusivamente aos utentes da unidade",
+        "Ter menos de dez máquinas",
+        "Estar num hotel, mesmo aberto indistintamente ao público"
+      ],
+      "answer": 1,
+      "explanation": "A exclusividade dos utentes é a condição destacada, não o tamanho ou a forma de pagamento.",
+      "source": "Aula 3, pp. 3–7.",
+      "saberes": [
+        "ETI-C032"
+      ]
+    },
+    {
+      "id": "ETI033",
+      "topic": "7. Lei dos ginásios: âmbito e funções técnicas",
+      "type": "multiple_choice",
+      "question": "Qual composição técnica é indicada no artigo 4.º?",
+      "options": [
+        "Pelo menos um DT e TEFs responsáveis pela orientação e condução",
+        "Apenas o proprietário, independentemente de qualificação",
+        "Só um treinador de qualquer modalidade, sem título de fitness",
+        "Apenas pessoal de receção com formação comercial"
+      ],
+      "answer": 0,
+      "explanation": "A instalação deve dispor de direção técnica e de técnicos responsáveis pelo exercício.",
+      "source": "Aula 3, pp. 3–7.",
+      "saberes": [
+        "ETI-C033"
+      ]
+    },
+    {
+      "id": "ETI034",
+      "topic": "7. Lei dos ginásios: âmbito e funções técnicas",
+      "type": "multiple_choice",
+      "question": "Qual tarefa é atribuída ao DT nos slides?",
+      "options": [
+        "Coordenar e supervisionar os programas e elaborar o manual de operações",
+        "Substituir o médico no diagnóstico de patologias",
+        "Emitir as licenças musicais do estabelecimento",
+        "Garantir resultados físicos iguais para todos os clientes"
+      ],
+      "answer": 0,
+      "explanation": "O DT coordena e supervisiona tecnicamente, além de elaborar o manual; não assume competências clínicas ou licenciadoras.",
+      "source": "Aula 3, pp. 3–7.",
+      "saberes": [
+        "ETI-C034"
+      ]
+    },
+    {
+      "id": "ETI035",
+      "topic": "7. Lei dos ginásios: âmbito e funções técnicas",
+      "type": "multiple_choice",
+      "question": "Qual frase descreve corretamente o planeamento e prescrição pelo TEF?",
+      "options": [
+        "São exclusivos do proprietário do clube",
+        "São sempre independentes de qualquer direção técnica",
+        "Só são permitidos ao TEF se tiver também formação médica",
+        "São realizados sob coordenação e supervisão do DT"
+      ],
+      "answer": 3,
+      "explanation": "A supervisão do DT não elimina a função de planeamento e prescrição do TEF; enquadra-a.",
+      "source": "Aula 3, pp. 3–7.",
+      "saberes": [
+        "ETI-C035"
+      ]
+    },
+    {
+      "id": "ETI036",
+      "topic": "8. Identificação, seguros e documentos internos",
+      "type": "multiple_choice",
+      "question": "O que exige o artigo 16.º estudado para o continente?",
+      "options": [
+        "Fixar sempre presença em metade do horário diário, por este artigo",
+        "Afixar apenas o nome do proprietário",
+        "Afixar a identificação do DT e o seu horário de permanência",
+        "Dispensar identificação se o DT também for gestor"
+      ],
+      "answer": 2,
+      "explanation": "A obrigação transcrita é de identificação e informação do horário; a quota de presença dos Açores é distinta.",
+      "source": "Aula 3, pp. 9–10, 13.",
+      "saberes": [
+        "ETI-C036"
+      ]
+    },
+    {
+      "id": "ETI037",
+      "topic": "8. Identificação, seguros e documentos internos",
+      "type": "multiple_choice",
+      "question": "Qual situação cumpre as duas obrigações apresentadas sobre o seguro dos utentes?",
+      "options": [
+        "Dispor do seguro exigido e afixar informação da sua existência",
+        "Ter apenas o seguro de acidentes de trabalho de um funcionário",
+        "Contratar seguro e considerar sempre dispensada a informação",
+        "Afixar uma informação sem contratar seguro"
+      ],
+      "answer": 0,
+      "explanation": "Seguro dos utentes e informação visível são exigências complementares.",
+      "source": "Aula 3, pp. 9–10, 13.",
+      "saberes": [
+        "ETI-C037"
+      ]
+    },
+    {
+      "id": "ETI038",
+      "topic": "8. Identificação, seguros e documentos internos",
+      "type": "multiple_choice",
+      "question": "Que condutas são expressamente vedadas na formulação continental transcrita?",
+      "options": [
+        "Consultar a lista de substâncias proibidas",
+        "Recomendar qualquer alimento normal",
+        "Utilizar qualquer material de treino de força",
+        "Recomendar ou comercializar substâncias ou métodos da lista de proibidos"
+      ],
+      "answer": 3,
+      "explanation": "O âmbito é a lista antidopagem; a redação sobre posse é salientada no regime dos Açores.",
+      "source": "Aula 3, pp. 9–10, 13.",
+      "saberes": [
+        "ETI-C038"
+      ]
+    },
+    {
+      "id": "ETI039",
+      "topic": "8. Identificação, seguros e documentos internos",
+      "type": "multiple_choice",
+      "question": "Quem elabora o regulamento interno segundo os slides?",
+      "options": [
+        "A ASAE em cada inspeção",
+        "O proprietário ou a entidade exploradora",
+        "Cada utente no ato de inscrição",
+        "Exclusivamente o DT, por ser autor de todos os documentos"
+      ],
+      "answer": 1,
+      "explanation": "A autoria é do proprietário/explorador; o manual de operações tem autoria do DT.",
+      "source": "Aula 3, pp. 9–10, 13.",
+      "saberes": [
+        "ETI-C039"
+      ]
+    },
+    {
+      "id": "ETI040",
+      "topic": "8. Identificação, seguros e documentos internos",
+      "type": "multiple_choice",
+      "question": "Qual associação está correta?",
+      "options": [
+        "Manual e regulamento: sempre o mesmo documento do proprietário",
+        "Manual: ASAE, coimas; regulamento: clientes, avaliações clínicas",
+        "Manual: DT, procedimentos e protocolos; regulamento: proprietário/explorador, normas de utilização e segurança",
+        "Manual: entidade musical; regulamento: IPDJ para todos os clubes"
+      ],
+      "answer": 2,
+      "explanation": "A distinção entre autoria e conteúdo é central nos dois artigos apresentados.",
+      "source": "Aula 3, pp. 9–10, 13.",
+      "saberes": [
+        "ETI-C040"
+      ]
+    },
+    {
+      "id": "ETI041",
+      "topic": "9. Fiscalização, contraordenações e validade nacional",
+      "type": "multiple_choice",
+      "question": "Qual entidade é indicada como competente para fiscalizar a Lei 39/2012 no continente?",
+      "options": [
+        "APTEF",
+        "SPA",
+        "ASAE",
+        "ERS para toda a atividade de fitness"
+      ],
+      "answer": 2,
+      "explanation": "ASAE é a entidade destacada; ERS aparece ligada aos serviços de saúde, como nutrição.",
+      "source": "Aula 3, pp. 14–19.",
+      "saberes": [
+        "ETI-C041"
+      ]
+    },
+    {
+      "id": "ETI042",
+      "topic": "9. Fiscalização, contraordenações e validade nacional",
+      "type": "multiple_choice",
+      "question": "Segundo a classificação transcrita na aula, qual distinção é correta?",
+      "options": [
+        "Falta de seguro: muito grave; falta de informação visível sobre o seguro: leve",
+        "Todas as infrações são necessariamente leves",
+        "Falta de título é apenas uma observação sem enquadramento",
+        "Falta de seguro e falta de informação são sempre a mesma infração"
+      ],
+      "answer": 0,
+      "explanation": "Distinguir inexistência de proteção da falta de afixação ajuda a compreender os tipos da fonte.",
+      "source": "Aula 3, pp. 14–19.",
+      "saberes": [
+        "ETI-C042"
+      ]
+    },
+    {
+      "id": "ETI043",
+      "topic": "9. Fiscalização, contraordenações e validade nacional",
+      "type": "multiple_choice",
+      "question": "Qual é um exemplo de sanção acessória indicado nos slides?",
+      "options": [
+        "Emissão automática de novo título",
+        "Interdição de exercício de funções ou encerramento da instalação",
+        "Atribuição de unidades de crédito adicionais",
+        "Substituição do regulamento por um contrato comercial"
+      ],
+      "answer": 1,
+      "explanation": "A sanção acessória incide sobre atividade ou funcionamento, além da coima.",
+      "source": "Aula 3, pp. 14–19.",
+      "saberes": [
+        "ETI-C043"
+      ]
+    },
+    {
+      "id": "ETI044",
+      "topic": "9. Fiscalização, contraordenações e validade nacional",
+      "type": "multiple_choice",
+      "question": "Qual situação corresponde à preocupação do artigo 26.º estudado?",
+      "options": [
+        "Alteração do nome comercial sem qualquer relação com segurança",
+        "Risco grave para segurança ou integridade dos utentes, podendo justificar suspensão",
+        "Escolha de uma lista musical diferente",
+        "Mudança da cor do logótipo do clube"
+      ],
+      "answer": 1,
+      "explanation": "A medida é apresentada no contexto de proteção perante situações graves e incumprimento.",
+      "source": "Aula 3, pp. 14–19.",
+      "saberes": [
+        "ETI-C044"
+      ]
+    },
+    {
+      "id": "ETI045",
+      "topic": "9. Fiscalização, contraordenações e validade nacional",
+      "type": "multiple_choice",
+      "question": "Qual afirmação distingue corretamente validade e adaptação regional?",
+      "options": [
+        "Um título açoriano só é válido nos Açores",
+        "Os títulos têm validade nacional, existindo adaptações e execução administrativa regional",
+        "A validade nacional elimina qualquer diploma regional",
+        "A emissão regional dispensa qualificação profissional"
+      ],
+      "answer": 1,
+      "explanation": "As diferenças regionais de funcionamento coexistem com a validade nacional dos títulos.",
+      "source": "Aula 3, pp. 14–19.",
+      "saberes": [
+        "ETI-C045"
+      ]
+    },
+    {
+      "id": "ETI046",
+      "topic": "10. Açores e Madeira: diferenças regionais",
+      "type": "multiple_choice",
+      "question": "Que diploma regional dos Açores aparece na Lista e nas aulas?",
+      "options": [
+        "Portaria 454/2023 como diploma exclusivamente açoriano",
+        "Decreto Legislativo Regional 12/2022/M",
+        "Lei 106/2019 como regulamento regional de ginásios",
+        "Decreto Legislativo Regional 24/2016/A"
+      ],
+      "answer": 3,
+      "explanation": "A terminação A distingue o diploma açoriano do diploma M da Madeira.",
+      "source": "Aula 3, pp. 20–23.",
+      "saberes": [
+        "ETI-C046"
+      ]
+    },
+    {
+      "id": "ETI047",
+      "topic": "10. Açores e Madeira: diferenças regionais",
+      "type": "multiple_choice",
+      "question": "Segundo os slides dos Açores, qual regra de presença se aplica ao DT?",
+      "options": [
+        "Metade do período de funcionamento diário e no mínimo uma hora",
+        "Apenas uma visita mensal, independentemente do horário",
+        "Sempre 100% do período, sem qualquer outra possibilidade",
+        "Nenhuma presença, bastando o título afixado"
+      ],
+      "answer": 0,
+      "explanation": "A regra combina proporção diária e mínimo; a orientação por DT/TEF mantém-se exigida nas atividades.",
+      "source": "Aula 3, pp. 20–23.",
+      "saberes": [
+        "ETI-C047"
+      ]
+    },
+    {
+      "id": "ETI048",
+      "topic": "10. Açores e Madeira: diferenças regionais",
+      "type": "multiple_choice",
+      "question": "Qual palavra é destacada como diferença na proibição açoriana face à redação continental apresentada?",
+      "options": [
+        "Possuir",
+        "Orientar",
+        "Avaliar",
+        "Planear"
+      ],
+      "answer": 0,
+      "explanation": "Os slides contrastam possuir/recomendar/comercializar nos Açores com recomendar/comercializar no continente.",
+      "source": "Aula 3, pp. 20–23.",
+      "saberes": [
+        "ETI-C048"
+      ]
+    },
+    {
+      "id": "ETI049",
+      "topic": "10. Açores e Madeira: diferenças regionais",
+      "type": "multiple_choice",
+      "question": "Segundo a Aula 3, que cumulação é admitida para o DT na Madeira?",
+      "options": [
+        "Dois ginásios de quaisquer entidades sem condição adicional",
+        "Apenas um ginásio, sem qualquer exceção",
+        "Até dois ginásios da mesma entidade proprietária ou exploradora",
+        "Número ilimitado de ginásios de entidades diferentes"
+      ],
+      "answer": 2,
+      "explanation": "A condição de mesma entidade e o limite de dois são cumulativos na descrição apresentada.",
+      "source": "Aula 3, pp. 20–23.",
+      "saberes": [
+        "ETI-C049"
+      ]
+    },
+    {
+      "id": "ETI050",
+      "topic": "10. Açores e Madeira: diferenças regionais",
+      "type": "multiple_choice",
+      "question": "Qual associação regional segue os slides?",
+      "options": [
+        "Madeira: ARAE e remessa dos autos em 15 dias úteis",
+        "Continente: ARAE e ausência de ASAE",
+        "Açores: Audiogest como fiscalizador",
+        "Madeira: SPA e remessa em 48 horas"
+      ],
+      "answer": 0,
+      "explanation": "Entidade e prazo dependem do regime; a aula continental refere ASAE e 48 horas.",
+      "source": "Aula 3, pp. 20–23.",
+      "saberes": [
+        "ETI-C050"
+      ]
+    },
+    {
+      "id": "ETI051",
+      "topic": "11. Treinadores e antidopagem",
+      "type": "multiple_choice",
+      "question": "Qual par é apresentado para a revalidação do TPTD?",
+      "options": [
+        "5 anos e 5 UC",
+        "3 anos e 3 UC",
+        "5 anos e 3 UC",
+        "3 anos e 5 UC"
+      ],
+      "answer": 1,
+      "explanation": "A diferença dos pares é uma distinção explícita entre regimes de títulos nos materiais.",
+      "source": "Aula 4, pp. 3–8; Aula 3, p. 10.",
+      "saberes": [
+        "ETI-C051"
+      ]
+    },
+    {
+      "id": "ETI052",
+      "topic": "11. Treinadores e antidopagem",
+      "type": "multiple_choice",
+      "question": "Qual diploma é identificado na Lista como Lei Antidopagem?",
+      "options": [
+        "Lei 106/2019 como lei de proteção de dados",
+        "Lei 5/2007 como lista anual de substâncias",
+        "Lei 39/2012 como único diploma antidopagem",
+        "Lei 81/2021"
+      ],
+      "answer": 3,
+      "explanation": "A LBAFD e a lei dos ginásios articulam-se com antidopagem, mas a Lista identifica a Lei 81/2021.",
+      "source": "Aula 4, pp. 3–8; Aula 3, p. 10.",
+      "saberes": [
+        "ETI-C052"
+      ]
+    },
+    {
+      "id": "ETI053",
+      "topic": "11. Treinadores e antidopagem",
+      "type": "multiple_choice",
+      "question": "Onde encontrar a lista formal de substâncias e métodos proibidos segundo o artigo 10.º estudado?",
+      "options": [
+        "Na portaria competente publicada no Diário da República, divulgada pela ADoP",
+        "Apenas num cartaz comercial do ginásio",
+        "No currículo de qualquer treinador",
+        "Numa lista imutável anexada ao contrato do cliente"
+      ],
+      "answer": 0,
+      "explanation": "A publicação formal e a revisão periódica impedem tratar uma versão antiga como definitiva.",
+      "source": "Aula 4, pp. 3–8; Aula 3, p. 10.",
+      "saberes": [
+        "ETI-C053"
+      ]
+    },
+    {
+      "id": "ETI054",
+      "topic": "11. Treinadores e antidopagem",
+      "type": "multiple_choice",
+      "question": "Qual é a função da ADoP destacada nas aulas?",
+      "options": [
+        "Cobrança de direitos de execução pública musical",
+        "Regulação exclusiva dos contratos de trabalho",
+        "Controlo e luta contra a dopagem e proteção da integridade e saúde",
+        "Emissão de todas as autorizações municipais de utilização"
+      ],
+      "answer": 2,
+      "explanation": "As diferentes entidades têm competências distintas; a sigla refere-se à antidopagem.",
+      "source": "Aula 4, pp. 3–8; Aula 3, p. 10.",
+      "saberes": [
+        "ETI-C054"
+      ]
+    },
+    {
+      "id": "ETI055",
+      "topic": "11. Treinadores e antidopagem",
+      "type": "multiple_choice",
+      "question": "Um cliente pede que o TEF venda uma substância da lista de proibidos. Que resposta respeita o conteúdo estudado?",
+      "options": [
+        "Vender se não houver competição prevista",
+        "Vender apenas se o cliente assinar uma declaração",
+        "Ocultar o produto na faturação",
+        "Recusar a venda/recomendação e orientar para informação competente"
+      ],
+      "answer": 3,
+      "explanation": "Consentimento ou ausência de competição não afastam a proibição descrita para a instalação.",
+      "source": "Aula 4, pp. 3–8; Aula 3, p. 10.",
+      "saberes": [
+        "ETI-C055"
+      ]
+    },
+    {
+      "id": "ETI056",
+      "topic": "12. Checklist, nutrição e direitos de utilização",
+      "type": "multiple_choice",
+      "question": "Qual é a utilidade do checklist mostrado nas aulas?",
+      "options": [
+        "Dispensar seguros quando todos os campos forem preenchidos",
+        "Organizar a verificação de várias obrigações da instalação e dos serviços",
+        "Servir apenas para verificar a limpeza de equipamentos",
+        "Substituir toda a legislação por uma certificação automática"
+      ],
+      "answer": 1,
+      "explanation": "O checklist apoia verificação; não cria por si só uma dispensa nem comprova conformidade integral.",
+      "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem).",
+      "saberes": [
+        "ETI-C056"
+      ]
+    },
+    {
+      "id": "ETI057",
+      "topic": "12. Checklist, nutrição e direitos de utilização",
+      "type": "multiple_choice",
+      "question": "Que entidade é associada ao serviço de nutrição no ginásio?",
+      "options": [
+        "SPA, como regulador clínico",
+        "ASAE como substituta da Ordem dos Nutricionistas",
+        "ERS, no enquadramento dos serviços de saúde",
+        "ADoP, como entidade licenciadora de consultas"
+      ],
+      "answer": 2,
+      "explanation": "A aula distingue fitness e prestação de cuidados de saúde, com competências e registos próprios.",
+      "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem).",
+      "saberes": [
+        "ETI-C057"
+      ]
+    },
+    {
+      "id": "ETI058",
+      "topic": "12. Checklist, nutrição e direitos de utilização",
+      "type": "multiple_choice",
+      "question": "Que distinção sobre reclamações está presente no checklist?",
+      "options": [
+        "Só pode haver reclamações em formato eletrónico",
+        "O livro existe apenas quando há uma infração confirmada",
+        "Fitness e cuidados de saúde têm enquadramentos e entidades de referência distintos",
+        "Um livro de fitness dispensa sempre qualquer obrigação de serviços de saúde"
+      ],
+      "answer": 2,
+      "explanation": "O checklist pede atenção à atividade prestada e à entidade competente, não apenas ao espaço físico comum.",
+      "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem).",
+      "saberes": [
+        "ETI-C058"
+      ]
+    },
+    {
+      "id": "ETI059",
+      "topic": "12. Checklist, nutrição e direitos de utilização",
+      "type": "multiple_choice",
+      "question": "Qual obrigação é expressamente salientada na Lista e no checklist?",
+      "options": [
+        "Afixação do dístico de proibição de fumar",
+        "Apenas afixação de uma mensagem comercial de bem-estar",
+        "Dispensa de informação se o estabelecimento for privado",
+        "Utilização do logótipo do ginásio em lugar do dístico"
+      ],
+      "answer": 0,
+      "explanation": "O item é uma obrigação informativa específica, diferente das outras afixações.",
+      "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem).",
+      "saberes": [
+        "ETI-C059"
+      ]
+    },
+    {
+      "id": "ETI060",
+      "topic": "12. Checklist, nutrição e direitos de utilização",
+      "type": "multiple_choice",
+      "question": "Qual associação segue as entidades indicadas na aula?",
+      "options": [
+        "SPA: direitos de autor musical; Audiogest: produtores musicais; Gedipe: videogramas/televisão",
+        "SPA: consultas clínicas; Audiogest: treino; Gedipe: piscinas",
+        "SPA: seguros; Audiogest: dados pessoais; Gedipe: títulos",
+        "As três entidades fiscalizam apenas a revalidação de títulos"
+      ],
+      "answer": 0,
+      "explanation": "A Lista separa música e emissões televisivas; a aula distingue as entidades de cobrança.",
+      "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem).",
+      "saberes": [
+        "ETI-C060"
+      ]
+    },
+    {
+      "id": "ETI061",
+      "topic": "13. Piscinas e nadadores-salvadores",
+      "type": "multiple_choice",
+      "question": "Qual afirmação distingue propriedade de uso?",
+      "options": [
+        "Todas as piscinas privadas estão fora de qualquer regra de uso público",
+        "Uma piscina privada pode integrar uma instalação de uso público",
+        "Uso público significa sempre propriedade municipal",
+        "Cobrar entrada torna a instalação exclusivamente privada para todos os efeitos"
+      ],
+      "answer": 1,
+      "explanation": "As regras não dependem apenas de quem é o proprietário.",
+      "source": "Aula 4, pp. 9, 11–12.",
+      "saberes": [
+        "ETI-C061"
+      ]
+    },
+    {
+      "id": "ETI062",
+      "topic": "13. Piscinas e nadadores-salvadores",
+      "type": "multiple_choice",
+      "question": "Como estudar a referência inicial a dois nadadores-salvadores?",
+      "options": [
+        "Em conjunto com as portarias e exceções apresentadas, sem a isolar como regra sem condições",
+        "Como regra exclusiva de praias marítimas",
+        "Como dispensa de equipamentos de salvamento",
+        "Como número obrigatório sem qualquer exceção em todas as piscinas"
+      ],
+      "answer": 0,
+      "explanation": "Os próprios slides acrescentam regras de dimensão, lotação e atividades específicas.",
+      "source": "Aula 4, pp. 9, 11–12.",
+      "saberes": [
+        "ETI-C062"
+      ]
+    },
+    {
+      "id": "ETI063",
+      "topic": "13. Piscinas e nadadores-salvadores",
+      "type": "multiple_choice",
+      "question": "Qual par de referências numéricas aparece na síntese da Portaria 311/2015 nos slides?",
+      "options": [
+        "Plano de água inferior a 100 m² e lotação instantânea até 400 banhistas",
+        "Área inferior a 200 m² e 5 UC",
+        "Plano de água de 3 m² e 40 banhistas",
+        "Área de 1000 m² e 3 anos de validade"
+      ],
+      "answer": 0,
+      "explanation": "A pergunta reconhece os números da fonte, sem transformar a síntese numa decisão de licenciamento.",
+      "source": "Aula 4, pp. 9, 11–12.",
+      "saberes": [
+        "ETI-C063"
+      ]
+    },
+    {
+      "id": "ETI064",
+      "topic": "13. Piscinas e nadadores-salvadores",
+      "type": "multiple_choice",
+      "question": "Que conjunto de condições acompanha a presença facultativa nos casos da Lei 61/2017 transcrita?",
+      "options": [
+        "Ter qualquer TEF no edifício, sem formação ou vigilância definida",
+        "Só afixar um aviso de utilização por conta e risco",
+        "Vigilância permanente por técnico identificado com SBV e material/equipamento de informação e salvamento, além do caso de utilização previsto",
+        "Apenas limitar a entrada a maiores de idade"
+      ],
+      "answer": 2,
+      "explanation": "As condições de vigilância, habilitação e material são cumulativas com o enquadramento da utilização.",
+      "source": "Aula 4, pp. 9, 11–12.",
+      "saberes": [
+        "ETI-C064"
+      ]
+    },
+    {
+      "id": "ETI065",
+      "topic": "13. Piscinas e nadadores-salvadores",
+      "type": "multiple_choice",
+      "question": "É correto aplicar automaticamente a exceção de formação/competição a natação livre de manutenção?",
+      "options": [
+        "Sim; o projeto de lei substitui sempre a redação final",
+        "Sim; basta que exista uma lista de presenças",
+        "Não; o texto transcrito exige o contexto e período exclusivo previstos",
+        "Sim; qualquer exercício na água é juridicamente competição"
+      ],
+      "answer": 2,
+      "explanation": "A diferença entre proposta e texto final e entre atividades é essencial nesta matéria.",
+      "source": "Aula 4, pp. 9, 11–12.",
+      "saberes": [
+        "ETI-C065"
+      ]
+    },
+    {
+      "id": "ETI066",
+      "topic": "14. RGPD, sigilo e proteção de dados",
+      "type": "multiple_choice",
+      "question": "Qual informação pode constituir dado pessoal segundo a definição apresentada?",
+      "options": [
+        "Apenas o nome completo escrito por extenso",
+        "Um número de cliente que permita identificar a pessoa",
+        "Apenas informação publicada nas redes sociais",
+        "Exclusivamente dados médicos assinados por um médico"
+      ],
+      "answer": 1,
+      "explanation": "A possibilidade de identificar direta ou indiretamente é o critério, não o formato ou a publicidade.",
+      "source": "Aula 4, pp. 13–16.",
+      "saberes": [
+        "ETI-C066"
+      ]
+    },
+    {
+      "id": "ETI067",
+      "topic": "14. RGPD, sigilo e proteção de dados",
+      "type": "multiple_choice",
+      "question": "O que significa a lógica de autorregulação apresentada para o RGPD?",
+      "options": [
+        "O cliente perde o direito de saber como os dados são tratados",
+        "Cada profissional pode usar dados sem regras",
+        "A empresa responsabiliza-se pela conformidade, sujeita à fiscalização e aos direitos dos titulares",
+        "A CNPD deixa de fiscalizar"
+      ],
+      "answer": 2,
+      "explanation": "A empresa deve demonstrar medidas; a responsabilização reforça deveres, não dispensa controlo.",
+      "source": "Aula 4, pp. 13–16.",
+      "saberes": [
+        "ETI-C067"
+      ]
+    },
+    {
+      "id": "ETI068",
+      "topic": "14. RGPD, sigilo e proteção de dados",
+      "type": "multiple_choice",
+      "question": "Qual prática respeita o sigilo descrito nos materiais?",
+      "options": [
+        "Disponibilizar os dados de saúde a toda a equipa por conveniência",
+        "Limitar o acesso aos profissionais que necessitam dos dados para o seu trabalho",
+        "Partilhar os dados com familiares do cliente sem verificar legitimidade",
+        "Enviar fichas clínicas para um grupo pessoal de mensagens"
+      ],
+      "answer": 1,
+      "explanation": "Necessidade de acesso e segurança são critérios centrais, mesmo dentro da mesma organização.",
+      "source": "Aula 4, pp. 13–16.",
+      "saberes": [
+        "ETI-C068"
+      ]
+    },
+    {
+      "id": "ETI069",
+      "topic": "14. RGPD, sigilo e proteção de dados",
+      "type": "multiple_choice",
+      "question": "Que elementos devem constar do modelo de consentimento informado apresentado?",
+      "options": [
+        "Apenas assinatura e número de inscrição",
+        "Só o nome do técnico que recolheu a ficha",
+        "Apenas autorização para qualquer uso futuro não especificado",
+        "Responsável, dados, finalidade, destinatários, conservação e direitos"
+      ],
+      "answer": 3,
+      "explanation": "A informação permite compreender para que fins os dados são usados e como exercer direitos.",
+      "source": "Aula 4, pp. 13–16.",
+      "saberes": [
+        "ETI-C069"
+      ]
+    },
+    {
+      "id": "ETI070",
+      "topic": "14. RGPD, sigilo e proteção de dados",
+      "type": "multiple_choice",
+      "question": "Qual associação corresponde à distinção de papéis apresentada?",
+      "options": [
+        "DPO: proprietário obrigatório de todos os dados",
+        "Empresa: responsável pelo tratamento; DPO: aconselhamento no enquadramento aplicável",
+        "CNPD: substituta da empresa na gestão diária de todas as fichas",
+        "Cliente: único responsável por qualquer divulgação pela empresa"
+      ],
+      "answer": 1,
+      "explanation": "A responsabilização da empresa mantém-se; funções de aconselhamento não substituem a conformidade.",
+      "source": "Aula 4, pp. 13–16.",
+      "saberes": [
+        "ETI-C070"
+      ]
+    },
+    {
+      "id": "ETI071",
+      "topic": "15. Relações laborais e prestação de serviços",
+      "type": "multiple_choice",
+      "question": "Qual conjunto integra as cláusulas de contrato de trabalho destacadas?",
+      "options": [
+        "Só o número de seguidores do técnico",
+        "Apenas o logótipo e a lista musical do clube",
+        "Identificação das partes, local, funções e data de início",
+        "Apenas uma promessa verbal de rendimento"
+      ],
+      "answer": 2,
+      "explanation": "A clareza das partes e das funções é uma preocupação expressa no material.",
+      "source": "Aula 2, p. 11; Aula 4, pp. 17–18.",
+      "saberes": [
+        "ETI-C071"
+      ]
+    },
+    {
+      "id": "ETI072",
+      "topic": "15. Relações laborais e prestação de serviços",
+      "type": "multiple_choice",
+      "question": "Antes de assinar, que condições devem ser analisadas segundo a aula?",
+      "options": [
+        "Somente o número de equipamentos disponíveis",
+        "Apenas a possibilidade de usar o ginásio gratuitamente",
+        "Apenas o preço da mensalidade dos clientes",
+        "Duração, período experimental, aviso prévio, remuneração e horário"
+      ],
+      "answer": 3,
+      "explanation": "As condições do vínculo têm consequências práticas e não devem ficar implícitas.",
+      "source": "Aula 2, p. 11; Aula 4, pp. 17–18.",
+      "saberes": [
+        "ETI-C072"
+      ]
+    },
+    {
+      "id": "ETI073",
+      "topic": "15. Relações laborais e prestação de serviços",
+      "type": "multiple_choice",
+      "question": "Que característica é associada à prestação de serviços nos slides?",
+      "options": [
+        "Dispensa de habilitação profissional por trabalhar a recibo verde",
+        "Substituição automática de todos os deveres fiscais pela entidade cliente",
+        "Independência na execução dos serviços contratados",
+        "Ausência de qualquer contrato ou responsabilidade"
+      ],
+      "answer": 2,
+      "explanation": "Autonomia de execução não elimina deveres profissionais, fiscais e de proteção.",
+      "source": "Aula 2, p. 11; Aula 4, pp. 17–18.",
+      "saberes": [
+        "ETI-C073"
+      ]
+    },
+    {
+      "id": "ETI074",
+      "topic": "15. Relações laborais e prestação de serviços",
+      "type": "multiple_choice",
+      "question": "Qual preocupação deve ter o TEF prestador de serviços segundo os materiais?",
+      "options": [
+        "Considerar que trabalhar num ginásio dispensa obrigações fiscais",
+        "Substituir os recibos por registo de presenças",
+        "Verificar início de atividade, recibos, fiscalidade, Segurança Social e limites aplicáveis",
+        "Aplicar sempre o mesmo código e limite sem analisar o caso"
+      ],
+      "answer": 2,
+      "explanation": "As obrigações dependem do enquadramento; a aula não dá uma solução fiscal única para todos.",
+      "source": "Aula 2, p. 11; Aula 4, pp. 17–18.",
+      "saberes": [
+        "ETI-C074"
+      ]
+    },
+    {
+      "id": "ETI075",
+      "topic": "15. Relações laborais e prestação de serviços",
+      "type": "multiple_choice",
+      "question": "Qual conduta é coerente com as preocupações éticas laborais apresentadas?",
+      "options": [
+        "Divulgar informação privada de trabalhadores para os motivar",
+        "Usar humilhação como método normal de liderança",
+        "Respeitar privacidade, não discriminar e proteger integridade física e moral",
+        "Evitar contratos claros para manter flexibilidade"
+      ],
+      "answer": 2,
+      "explanation": "Ética e deontologia também abrangem a relação laboral e a maneira de gerir pessoas.",
+      "source": "Aula 2, p. 11; Aula 4, pp. 17–18.",
+      "saberes": [
+        "ETI-C075"
+      ]
+    },
+    {
+      "id": "ETI076",
+      "topic": "16. Seguros do TEF e decisões profissionais",
+      "type": "multiple_choice",
+      "question": "Segundo os slides, quem subscreve o seguro de acidentes de trabalho do TEF contratado por uma instalação?",
+      "options": [
+        "A SPA",
+        "O IPDJ ao emitir o título",
+        "A entidade patronal",
+        "Sempre o cliente do TEF"
+      ],
+      "answer": 2,
+      "explanation": "A aula distingue o contratado do prestador independente, que deve subscrever a sua proteção.",
+      "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9.",
+      "saberes": [
+        "ETI-C076"
+      ]
+    },
+    {
+      "id": "ETI077",
+      "topic": "16. Seguros do TEF e decisões profissionais",
+      "type": "multiple_choice",
+      "question": "Qual é a finalidade do seguro de responsabilidade civil profissional descrito?",
+      "options": [
+        "Garantir ausência de qualquer responsabilidade do técnico",
+        "Cobrir apenas férias e remunerações em atraso",
+        "Proteger perante prejuízos de terceiros decorrentes de falhas, ações ou omissões profissionais",
+        "Substituir a formação e o título profissional"
+      ],
+      "answer": 2,
+      "explanation": "Seguro de RC incide sobre consequências da responsabilidade; não elimina deveres nem todas as exclusões.",
+      "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9.",
+      "saberes": [
+        "ETI-C077"
+      ]
+    },
+    {
+      "id": "ETI078",
+      "topic": "16. Seguros do TEF e decisões profissionais",
+      "type": "multiple_choice",
+      "question": "Qual conclusão é correta sobre os três seguros estudados?",
+      "options": [
+        "Têm objetos distintos; não se deve presumir que um substitui os outros",
+        "O seguro dos utentes substitui sempre os acidentes de trabalho do TEF",
+        "Todos têm necessariamente coberturas e exclusões iguais",
+        "A RC profissional substitui o título e a supervisão do DT"
+      ],
+      "answer": 0,
+      "explanation": "A proteção deve ser analisada pelo risco e pelas pessoas abrangidas em cada contrato.",
+      "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9.",
+      "saberes": [
+        "ETI-C078"
+      ]
+    },
+    {
+      "id": "ETI079",
+      "topic": "16. Seguros do TEF e decisões profissionais",
+      "type": "multiple_choice",
+      "question": "O certificado de conclusão do CET deve ser confundido com título profissional já emitido?",
+      "options": [
+        "Sim; o seguro dos utentes converte o certificado em título",
+        "Sim; basta começar a dar aulas e pedir depois",
+        "Sim; qualquer certificado dispensa sempre o pedido",
+        "Não; o pedido e emissão do título são etapas próprias na plataforma competente"
+      ],
+      "answer": 3,
+      "explanation": "Qualificação e título são relacionados, mas o procedimento de emissão deve ser concluído.",
+      "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9.",
+      "saberes": [
+        "ETI-C079"
+      ]
+    },
+    {
+      "id": "ETI080",
+      "topic": "16. Seguros do TEF e decisões profissionais",
+      "type": "multiple_choice",
+      "question": "Qual resposta integra melhor os deveres estudados perante cliente com patologia?",
+      "options": [
+        "Partilhar os dados com toda a equipa e escolher um tratamento",
+        "Recusar automaticamente qualquer pessoa com patologia sem conhecer o caso",
+        "Garantir resultados porque existe seguro",
+        "Respeitar sigilo, limites de competência, articulação adequada e supervisão do DT"
+      ],
+      "answer": 3,
+      "explanation": "A decisão articula dignidade, competência, segurança e proteção de dados, sem diagnóstico ou exclusão automática.",
+      "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9.",
+      "saberes": [
+        "ETI-C080"
+      ]
+    }
+  ],
+  "exams": {
+    "exam1": [
+      "ETI049",
+      "ETI011",
+      "ETI042",
+      "ETI035",
+      "ETI068",
+      "ETI073",
+      "ETI002",
+      "ETI017",
+      "ETI051",
+      "ETI071",
+      "ETI078",
+      "ETI055",
+      "ETI024",
+      "ETI044",
+      "ETI080",
+      "ETI012",
+      "ETI041",
+      "ETI025",
+      "ETI006",
+      "ETI040",
+      "ETI016",
+      "ETI052",
+      "ETI061",
+      "ETI023",
+      "ETI030",
+      "ETI034",
+      "ETI062",
+      "ETI033",
+      "ETI026",
+      "ETI075",
+      "ETI015",
+      "ETI037",
+      "ETI067",
+      "ETI048",
+      "ETI009",
+      "ETI058",
+      "ETI064",
+      "ETI004",
+      "ETI056",
+      "ETI003"
+    ],
+    "exam2": [
+      "ETI028",
+      "ETI072",
+      "ETI005",
+      "ETI074",
+      "ETI018",
+      "ETI007",
+      "ETI022",
+      "ETI019",
+      "ETI065",
+      "ETI010",
+      "ETI008",
+      "ETI060",
+      "ETI066",
+      "ETI038",
+      "ETI050",
+      "ETI029",
+      "ETI027",
+      "ETI013",
+      "ETI031",
+      "ETI020",
+      "ETI054",
+      "ETI043",
+      "ETI046",
+      "ETI047",
+      "ETI053",
+      "ETI059",
+      "ETI057",
+      "ETI076",
+      "ETI070",
+      "ETI045",
+      "ETI036",
+      "ETI069",
+      "ETI021",
+      "ETI063",
+      "ETI014",
+      "ETI039",
+      "ETI079",
+      "ETI001",
+      "ETI077",
+      "ETI032"
+    ]
+  },
+  "coverage_audit": {
+    "status": "source_reviewed",
+    "date": "2026-11-04",
+    "sources": [
+      "Aula 1.pdf (17 páginas, 12/03/2026)",
+      "Aula 2.pdf (34 páginas, 15/03/2026)",
+      "Aula 3.pdf (24 páginas, 12/03/2026)",
+      "Aula 4.pdf (21 páginas, 12/03/2026)",
+      "Lista de saberes.pdf (3 páginas, Fev 2026)"
+    ],
+    "summary": "40 itens principais da Lista (9 valores e 31 legislação) com cobertura explícita no resumo; 80 conceitos editoriais em 16 temas.",
+    "limits": [
+      "As referências de perguntas são temáticas; entradas compostas não são avaliadas componente a componente em cada exame.",
+      "Conteúdo de preparação baseado nos diplomas e formulações transcritos nas aulas; não constitui análise jurídica exaustiva de vigência.",
+      "Verificação externa pontual documentada separadamente em docs/ETICA_COVERAGE.md."
+    ],
+    "items": [
+      {
+        "id": "ETI-C001",
+        "concept": "Direitos da pessoa humana",
+        "summary_anchor": "eti-detail-001",
+        "source": "Aula 1, pp. 6–11",
+        "question_ids": [
+          "ETI001"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C002",
+        "concept": "Ética",
+        "summary_anchor": "eti-detail-002",
+        "source": "Aula 1, pp. 6–11",
+        "question_ids": [
+          "ETI002"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C003",
+        "concept": "Moral e diferença face à ética",
+        "summary_anchor": "eti-detail-003",
+        "source": "Aula 1, pp. 6–11",
+        "question_ids": [
+          "ETI003"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C004",
+        "concept": "Ética profissional",
+        "summary_anchor": "eti-detail-004",
+        "source": "Aula 1, pp. 6–11",
+        "question_ids": [
+          "ETI004"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C005",
+        "concept": "Deontologia profissional",
+        "summary_anchor": "eti-detail-005",
+        "source": "Aula 1, pp. 6–11",
+        "question_ids": [
+          "ETI005"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C006",
+        "concept": "Ética na LBAFD",
+        "summary_anchor": "eti-detail-006",
+        "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10",
+        "question_ids": [
+          "ETI006"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C007",
+        "concept": "Código de Ética Desportiva e fair play",
+        "summary_anchor": "eti-detail-007",
+        "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10",
+        "question_ids": [
+          "ETI007"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C008",
+        "concept": "Valores e pilares da Portugal Activo",
+        "summary_anchor": "eti-detail-008",
+        "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10",
+        "question_ids": [
+          "ETI008"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C009",
+        "concept": "Código deontológico e âmbito associativo",
+        "summary_anchor": "eti-detail-009",
+        "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10",
+        "question_ids": [
+          "ETI009"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C010",
+        "concept": "Conflitos de interesses",
+        "summary_anchor": "eti-detail-010",
+        "source": "Aula 1, pp. 12–16; Aula 2, pp. 5–10",
+        "question_ids": [
+          "ETI010"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C011",
+        "concept": "Competência e limites profissionais",
+        "summary_anchor": "eti-detail-011",
+        "source": "Aula 2, pp. 7–11",
+        "question_ids": [
+          "ETI011"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C012",
+        "concept": "Pessoas com patologias",
+        "summary_anchor": "eti-detail-012",
+        "source": "Aula 2, pp. 7–11",
+        "question_ids": [
+          "ETI012"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C013",
+        "concept": "Integridade",
+        "summary_anchor": "eti-detail-013",
+        "source": "Aula 2, pp. 7–11",
+        "question_ids": [
+          "ETI013"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C014",
+        "concept": "Solidariedade e cooperação",
+        "summary_anchor": "eti-detail-014",
+        "source": "Aula 2, pp. 7–11",
+        "question_ids": [
+          "ETI014"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C015",
+        "concept": "Concorrência e litígios",
+        "summary_anchor": "eti-detail-015",
+        "source": "Aula 2, pp. 7–11",
+        "question_ids": [
+          "ETI015"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C016",
+        "concept": "Fitness e treino desportivo",
+        "summary_anchor": "eti-detail-016",
+        "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4",
+        "question_ids": [
+          "ETI016"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C017",
+        "concept": "Lei 5/2007: grandes princípios",
+        "summary_anchor": "eti-detail-017",
+        "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4",
+        "question_ids": [
+          "ETI017"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C018",
+        "concept": "Formação dos técnicos: artigo 35.º",
+        "summary_anchor": "eti-detail-018",
+        "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4",
+        "question_ids": [
+          "ETI018"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C019",
+        "concept": "Exame médico: artigo 40.º",
+        "summary_anchor": "eti-detail-019",
+        "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4",
+        "question_ids": [
+          "ETI019"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C020",
+        "concept": "Seguros e prestadores: artigos 42.º e 43.º",
+        "summary_anchor": "eti-detail-020",
+        "source": "Aula 2, pp. 13–17; Aula 3, p. 3; Aula 4, pp. 3–4",
+        "question_ids": [
+          "ETI020"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C021",
+        "concept": "CET e nível 5 do QNQ",
+        "summary_anchor": "eti-detail-021",
+        "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8",
+        "question_ids": [
+          "ETI021"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C022",
+        "concept": "Acesso ao título de TEF",
+        "summary_anchor": "eti-detail-022",
+        "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8",
+        "question_ids": [
+          "ETI022"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C023",
+        "concept": "Acesso ao título de DT",
+        "summary_anchor": "eti-detail-023",
+        "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8",
+        "question_ids": [
+          "ETI023"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C024",
+        "concept": "Validade e revalidação de TEF/DT",
+        "summary_anchor": "eti-detail-024",
+        "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8",
+        "question_ids": [
+          "ETI024"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C025",
+        "concept": "Unidades de crédito e certificação",
+        "summary_anchor": "eti-detail-025",
+        "source": "Aula 2, pp. 19–21; Aula 3, pp. 6–8",
+        "question_ids": [
+          "ETI025"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C026",
+        "concept": "Responsabilidade técnica desde 1999",
+        "summary_anchor": "eti-detail-026",
+        "source": "Aula 2, pp. 23–34",
+        "question_ids": [
+          "ETI026"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C027",
+        "concept": "Evolução dos regimes",
+        "summary_anchor": "eti-detail-027",
+        "source": "Aula 2, pp. 23–34",
+        "question_ids": [
+          "ETI027"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C028",
+        "concept": "Tipologias do DL 141/2009",
+        "summary_anchor": "eti-detail-028",
+        "source": "Aula 2, pp. 23–34",
+        "question_ids": [
+          "ETI028"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C029",
+        "concept": "Autorização de utilização",
+        "summary_anchor": "eti-detail-029",
+        "source": "Aula 2, pp. 23–34",
+        "question_ids": [
+          "ETI029"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C030",
+        "concept": "Portaria 454/2023: requisitos e áreas",
+        "summary_anchor": "eti-detail-030",
+        "source": "Aula 2, pp. 23–34",
+        "question_ids": [
+          "ETI030"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C031",
+        "concept": "Objeto e exceções",
+        "summary_anchor": "eti-detail-031",
+        "source": "Aula 3, pp. 3–7",
+        "question_ids": [
+          "ETI031"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C032",
+        "concept": "Ginásios de hotéis",
+        "summary_anchor": "eti-detail-032",
+        "source": "Aula 3, pp. 3–7",
+        "question_ids": [
+          "ETI032"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C033",
+        "concept": "DT e TEF na instalação",
+        "summary_anchor": "eti-detail-033",
+        "source": "Aula 3, pp. 3–7",
+        "question_ids": [
+          "ETI033"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C034",
+        "concept": "Funções do DT",
+        "summary_anchor": "eti-detail-034",
+        "source": "Aula 3, pp. 3–7",
+        "question_ids": [
+          "ETI034"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C035",
+        "concept": "Funções dos TEF",
+        "summary_anchor": "eti-detail-035",
+        "source": "Aula 3, pp. 3–7",
+        "question_ids": [
+          "ETI035"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C036",
+        "concept": "Identificação e horário do DT",
+        "summary_anchor": "eti-detail-036",
+        "source": "Aula 3, pp. 9–10, 13",
+        "question_ids": [
+          "ETI036"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C037",
+        "concept": "Seguro dos utentes e informação",
+        "summary_anchor": "eti-detail-037",
+        "source": "Aula 3, pp. 9–10, 13",
+        "question_ids": [
+          "ETI037"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C038",
+        "concept": "Atividades interditas",
+        "summary_anchor": "eti-detail-038",
+        "source": "Aula 3, pp. 9–10, 13",
+        "question_ids": [
+          "ETI038"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C039",
+        "concept": "Regulamento interno",
+        "summary_anchor": "eti-detail-039",
+        "source": "Aula 3, pp. 9–10, 13",
+        "question_ids": [
+          "ETI039"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C040",
+        "concept": "Manual de operações",
+        "summary_anchor": "eti-detail-040",
+        "source": "Aula 3, pp. 9–10, 13",
+        "question_ids": [
+          "ETI040"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C041",
+        "concept": "Fiscalização e ASAE",
+        "summary_anchor": "eti-detail-041",
+        "source": "Aula 3, pp. 14–19",
+        "question_ids": [
+          "ETI041"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C042",
+        "concept": "Leves, graves e muito graves",
+        "summary_anchor": "eti-detail-042",
+        "source": "Aula 3, pp. 14–19",
+        "question_ids": [
+          "ETI042"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C043",
+        "concept": "Sanções acessórias",
+        "summary_anchor": "eti-detail-043",
+        "source": "Aula 3, pp. 14–19",
+        "question_ids": [
+          "ETI043"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C044",
+        "concept": "Suspensão por risco",
+        "summary_anchor": "eti-detail-044",
+        "source": "Aula 3, pp. 14–19",
+        "question_ids": [
+          "ETI044"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C045",
+        "concept": "Regiões e validade dos títulos",
+        "summary_anchor": "eti-detail-045",
+        "source": "Aula 3, pp. 14–19",
+        "question_ids": [
+          "ETI045"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C046",
+        "concept": "Açores: âmbito e exclusões",
+        "summary_anchor": "eti-detail-046",
+        "source": "Aula 3, pp. 20–23",
+        "question_ids": [
+          "ETI046"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C047",
+        "concept": "Açores: presença do DT e orientação",
+        "summary_anchor": "eti-detail-047",
+        "source": "Aula 3, pp. 20–23",
+        "question_ids": [
+          "ETI047"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C048",
+        "concept": "Açores: seguros, posse e fiscalização",
+        "summary_anchor": "eti-detail-048",
+        "source": "Aula 3, pp. 20–23",
+        "question_ids": [
+          "ETI048"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C049",
+        "concept": "Madeira: cumulação e atividades fora do ginásio",
+        "summary_anchor": "eti-detail-049",
+        "source": "Aula 3, pp. 20–23",
+        "question_ids": [
+          "ETI049"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C050",
+        "concept": "Comparação e fiscalização regional",
+        "summary_anchor": "eti-detail-050",
+        "source": "Aula 3, pp. 20–23",
+        "question_ids": [
+          "ETI050"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C051",
+        "concept": "Lei dos Treinadores e TPTD",
+        "summary_anchor": "eti-detail-051",
+        "source": "Aula 4, pp. 3–8; Aula 3, p. 10",
+        "question_ids": [
+          "ETI051"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C052",
+        "concept": "Lei Antidopagem",
+        "summary_anchor": "eti-detail-052",
+        "source": "Aula 4, pp. 3–8; Aula 3, p. 10",
+        "question_ids": [
+          "ETI052"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C053",
+        "concept": "Artigo 10.º e lista de proibidos",
+        "summary_anchor": "eti-detail-053",
+        "source": "Aula 4, pp. 3–8; Aula 3, p. 10",
+        "question_ids": [
+          "ETI053"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C054",
+        "concept": "ADoP",
+        "summary_anchor": "eti-detail-054",
+        "source": "Aula 4, pp. 3–8; Aula 3, p. 10",
+        "question_ids": [
+          "ETI054"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C055",
+        "concept": "Responsabilidade do TEF e do DT",
+        "summary_anchor": "eti-detail-055",
+        "source": "Aula 4, pp. 3–8; Aula 3, p. 10",
+        "question_ids": [
+          "ETI055"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C056",
+        "concept": "Checklist Portugal Activo",
+        "summary_anchor": "eti-detail-056",
+        "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem)",
+        "question_ids": [
+          "ETI056"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C057",
+        "concept": "Nutrição e ERS",
+        "summary_anchor": "eti-detail-057",
+        "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem)",
+        "question_ids": [
+          "ETI057"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C058",
+        "concept": "Livros de reclamações",
+        "summary_anchor": "eti-detail-058",
+        "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem)",
+        "question_ids": [
+          "ETI058"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C059",
+        "concept": "Dístico de proibição de fumar",
+        "summary_anchor": "eti-detail-059",
+        "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem)",
+        "question_ids": [
+          "ETI059"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C060",
+        "concept": "SPA, Audiogest e Gedipe",
+        "summary_anchor": "eti-detail-060",
+        "source": "Aula 4, pp. 8–10, 16 (inclui checklist em imagem)",
+        "question_ids": [
+          "ETI060"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C061",
+        "concept": "Instalação pública e de uso público",
+        "summary_anchor": "eti-detail-061",
+        "source": "Aula 4, pp. 9, 11–12",
+        "question_ids": [
+          "ETI061"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C062",
+        "concept": "Regra geral apresentada",
+        "summary_anchor": "eti-detail-062",
+        "source": "Aula 4, pp. 9, 11–12",
+        "question_ids": [
+          "ETI062"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C063",
+        "concept": "Área e lotação na síntese dos slides",
+        "summary_anchor": "eti-detail-063",
+        "source": "Aula 4, pp. 9, 11–12",
+        "question_ids": [
+          "ETI063"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C064",
+        "concept": "Condições para presença facultativa",
+        "summary_anchor": "eti-detail-064",
+        "source": "Aula 4, pp. 9, 11–12",
+        "question_ids": [
+          "ETI064"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C065",
+        "concept": "Formação e competição não são manutenção livre",
+        "summary_anchor": "eti-detail-065",
+        "source": "Aula 4, pp. 9, 11–12",
+        "question_ids": [
+          "ETI065"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C066",
+        "concept": "Dados pessoais",
+        "summary_anchor": "eti-detail-066",
+        "source": "Aula 4, pp. 13–16",
+        "question_ids": [
+          "ETI066"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C067",
+        "concept": "Autorregulação e direitos",
+        "summary_anchor": "eti-detail-067",
+        "source": "Aula 4, pp. 13–16",
+        "question_ids": [
+          "ETI067"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C068",
+        "concept": "Sigilo, necessidade e segurança",
+        "summary_anchor": "eti-detail-068",
+        "source": "Aula 4, pp. 13–16",
+        "question_ids": [
+          "ETI068"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C069",
+        "concept": "Consentimento informado e finalidade",
+        "summary_anchor": "eti-detail-069",
+        "source": "Aula 4, pp. 13–16",
+        "question_ids": [
+          "ETI069"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C070",
+        "concept": "Responsável, DPO e medidas organizativas",
+        "summary_anchor": "eti-detail-070",
+        "source": "Aula 4, pp. 13–16",
+        "question_ids": [
+          "ETI070"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C071",
+        "concept": "Contrato: partes, local e funções",
+        "summary_anchor": "eti-detail-071",
+        "source": "Aula 2, p. 11; Aula 4, pp. 17–18",
+        "question_ids": [
+          "ETI071"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C072",
+        "concept": "Contrato: tempo, remuneração e cessação",
+        "summary_anchor": "eti-detail-072",
+        "source": "Aula 2, p. 11; Aula 4, pp. 17–18",
+        "question_ids": [
+          "ETI072"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C073",
+        "concept": "Prestação de serviços e independência",
+        "summary_anchor": "eti-detail-073",
+        "source": "Aula 2, p. 11; Aula 4, pp. 17–18",
+        "question_ids": [
+          "ETI073"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C074",
+        "concept": "Obrigações fiscais e Segurança Social",
+        "summary_anchor": "eti-detail-074",
+        "source": "Aula 2, p. 11; Aula 4, pp. 17–18",
+        "question_ids": [
+          "ETI074"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C075",
+        "concept": "Ética nas relações de trabalho",
+        "summary_anchor": "eti-detail-075",
+        "source": "Aula 2, p. 11; Aula 4, pp. 17–18",
+        "question_ids": [
+          "ETI075"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C076",
+        "concept": "Acidentes de trabalho",
+        "summary_anchor": "eti-detail-076",
+        "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9",
+        "question_ids": [
+          "ETI076"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C077",
+        "concept": "Responsabilidade civil profissional",
+        "summary_anchor": "eti-detail-077",
+        "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9",
+        "question_ids": [
+          "ETI077"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C078",
+        "concept": "Três proteções diferentes",
+        "summary_anchor": "eti-detail-078",
+        "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9",
+        "question_ids": [
+          "ETI078"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C079",
+        "concept": "Requisição do título e início de atividade",
+        "summary_anchor": "eti-detail-079",
+        "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9",
+        "question_ids": [
+          "ETI079"
+        ],
+        "status": "explicit"
+      },
+      {
+        "id": "ETI-C080",
+        "concept": "Caso integrado: cliente, sigilo e competência",
+        "summary_anchor": "eti-detail-080",
+        "source": "Aula 4, pp. 19–20; Aula 2, pp. 8–10; Aula 3, p. 9",
+        "question_ids": [
+          "ETI080"
+        ],
+        "status": "explicit"
+      }
+    ],
+    "lista_items": [
+      {
+        "id": "ETI-V01",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 1,
+        "list_page": 1,
+        "text": "Os direitos da pessoa humana.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-001"
+        ],
+        "question_ids": [
+          "ETI001"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V02",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 2,
+        "list_page": 1,
+        "text": "Definição de Ética, Moral e Deontologia.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-002",
+          "eti-detail-003",
+          "eti-detail-005"
+        ],
+        "question_ids": [
+          "ETI002",
+          "ETI003",
+          "ETI005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V03",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 3,
+        "list_page": 1,
+        "text": "Diferenças entre Moral e Ética.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-003"
+        ],
+        "question_ids": [
+          "ETI003"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V04",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 4,
+        "list_page": 1,
+        "text": "Diferenças entre Ética Profissional e Deontologia Profissional",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-004",
+          "eti-detail-005"
+        ],
+        "question_ids": [
+          "ETI004",
+          "ETI005"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V05",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 5,
+        "list_page": 1,
+        "text": "Ética na Lei de Bases da Atividade Física e do Desporto.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-006"
+        ],
+        "question_ids": [
+          "ETI006"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V06",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 6,
+        "list_page": 1,
+        "text": "Código de Ética Desportiva e o Fairplay",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-007"
+        ],
+        "question_ids": [
+          "ETI007"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V07",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 7,
+        "list_page": 1,
+        "text": "Valores da Associação de Clubes de Fitness e Saúde – Portugal Activo",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-008"
+        ],
+        "question_ids": [
+          "ETI008"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V08",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 8,
+        "list_page": 1,
+        "text": "O que é um Código Deontológico. Conflitos de interesses.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-009",
+          "eti-detail-010"
+        ],
+        "question_ids": [
+          "ETI009",
+          "ETI010"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-V09",
+        "area": "MOVE-TE POR VALORES",
+        "list_number": 9,
+        "list_page": 1,
+        "text": "O Código da APTEF – principais orientações",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-011",
+          "eti-detail-012",
+          "eti-detail-013",
+          "eti-detail-014",
+          "eti-detail-015"
+        ],
+        "question_ids": [
+          "ETI011",
+          "ETI012",
+          "ETI013",
+          "ETI014",
+          "ETI015"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L01",
+        "area": "LEGISLAÇÃO",
+        "list_number": 1,
+        "list_page": 1,
+        "text": "Distinção entre o enquadramento legislativo das atividades das federações e afins e o trabalho nas instalações de fitness. Lei 40/2012 alterada na Lei 106/2019 e Lei 39/2012.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-016"
+        ],
+        "question_ids": [
+          "ETI016"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L02",
+        "area": "LEGISLAÇÃO",
+        "list_number": 2,
+        "list_page": 1,
+        "text": "A Lei 5/2007 – Lei de Bases da Atividade Física e do Desporto, como Lei que define as bases (linhas mestras) das políticas de desenvolvimento da atividade física e do desporto. Principais orientações da LBAFD no que diz respeito aos seguros obrigatórios, formação dos técnicos e exame médico dos praticantes.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-017",
+          "eti-detail-018",
+          "eti-detail-019",
+          "eti-detail-020"
+        ],
+        "question_ids": [
+          "ETI017",
+          "ETI018",
+          "ETI019",
+          "ETI020"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L03",
+        "area": "LEGISLAÇÃO",
+        "list_number": 3,
+        "list_page": 1,
+        "text": "Os CET (Cursos de Especialização tecnológica) como cursos de formação profissional que conferem o nível 5 no QNQ.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-021"
+        ],
+        "question_ids": [
+          "ETI021"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L04",
+        "area": "LEGISLAÇÃO",
+        "list_number": 4,
+        "list_page": 1,
+        "text": "Formação contínua necessária para a revalidação do título. Períodos de validade e UC (unidades de crédito) necessárias.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-024",
+          "eti-detail-025"
+        ],
+        "question_ids": [
+          "ETI024",
+          "ETI025"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L05",
+        "area": "LEGISLAÇÃO",
+        "list_number": 5,
+        "list_page": 1,
+        "text": "Historial da produção legislativa para os ginásios. Especial atenção ao primeiro Decreto-Lei (de 1999) que estabeleceu a necessidade de responsabilidade técnica nas instalações de fitness.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-026",
+          "eti-detail-027"
+        ],
+        "question_ids": [
+          "ETI026",
+          "ETI027"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L06",
+        "area": "LEGISLAÇÃO",
+        "list_number": 6,
+        "list_page": 1,
+        "text": "O Regime jurídico das Instalações desportivas. Tipologia de instalações desportivas (Decreto-Lei 141/2009). A Autorização de Utilização para atividades desportivas. Requisitos técnicos e de funcionamento das instalações desportivas (Portaria 454/2023).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-028",
+          "eti-detail-029",
+          "eti-detail-030"
+        ],
+        "question_ids": [
+          "ETI028",
+          "ETI029",
+          "ETI030"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L07",
+        "area": "LEGISLAÇÃO",
+        "list_number": 7,
+        "list_page": 1,
+        "text": "A “Lei dos ginásios” no continente – Lei 39/2012. O seu objeto (art.1º) e exceções (art.2º). A situação de exceção dos ginásios dos hotéis.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-031",
+          "eti-detail-032"
+        ],
+        "question_ids": [
+          "ETI031",
+          "ETI032"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L08",
+        "area": "LEGISLAÇÃO",
+        "list_number": 8,
+        "list_page": 1,
+        "text": "Técnicos nas instalações de fitness: pelo menos um DT (Diretor Técnico) e TEFs (Técnicos de Exercício Físico).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-033"
+        ],
+        "question_ids": [
+          "ETI033"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L09",
+        "area": "LEGISLAÇÃO",
+        "list_number": 9,
+        "list_page": 1,
+        "text": "Funções do DT: coordenação e supervisão, entre outras.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-034"
+        ],
+        "question_ids": [
+          "ETI034"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L10",
+        "area": "LEGISLAÇÃO",
+        "list_number": 10,
+        "list_page": 2,
+        "text": "Funções dos TEF: planeamento e prescrição, entre outras.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-035"
+        ],
+        "question_ids": [
+          "ETI035"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L11",
+        "area": "LEGISLAÇÃO",
+        "list_number": 11,
+        "list_page": 2,
+        "text": "Requisitos para obtenção do título profissional de DT e do título profissional de TEF.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-022",
+          "eti-detail-023"
+        ],
+        "question_ids": [
+          "ETI022",
+          "ETI023"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L12",
+        "area": "LEGISLAÇÃO",
+        "list_number": 12,
+        "list_page": 2,
+        "text": "Horário de permanência do DT nas instalações.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-036"
+        ],
+        "question_ids": [
+          "ETI036"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L13",
+        "area": "LEGISLAÇÃO",
+        "list_number": 13,
+        "list_page": 2,
+        "text": "Seguro obrigatório para os utentes. Informação sobre a existência do seguro.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-037"
+        ],
+        "question_ids": [
+          "ETI037"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L14",
+        "area": "LEGISLAÇÃO",
+        "list_number": 14,
+        "list_page": 2,
+        "text": "Atividades interditas (vedado recomendar ou comercializar)",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-038"
+        ],
+        "question_ids": [
+          "ETI038"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L15",
+        "area": "LEGISLAÇÃO",
+        "list_number": 15,
+        "list_page": 2,
+        "text": "O Regulamento. Quem elabora e o que deve conter.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-039"
+        ],
+        "question_ids": [
+          "ETI039"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L16",
+        "area": "LEGISLAÇÃO",
+        "list_number": 16,
+        "list_page": 2,
+        "text": "O Manual de Operações. Quem elabora e o que deve conter.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-040"
+        ],
+        "question_ids": [
+          "ETI040"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L17",
+        "area": "LEGISLAÇÃO",
+        "list_number": 17,
+        "list_page": 2,
+        "text": "Competência para a fiscalização desta Lei 39/2012 (a ASAE).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-041"
+        ],
+        "question_ids": [
+          "ETI041"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L18",
+        "area": "LEGISLAÇÃO",
+        "list_number": 18,
+        "list_page": 2,
+        "text": "Tipos de contraordenações (não obriga a conhecimento detalhado) e sanções acessórias (exemplos).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-042",
+          "eti-detail-043",
+          "eti-detail-044"
+        ],
+        "question_ids": [
+          "ETI042",
+          "ETI043",
+          "ETI044"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L19",
+        "area": "LEGISLAÇÃO",
+        "list_number": 19,
+        "list_page": 2,
+        "text": "A validade nacional da Lei e dos títulos profissionais.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-045"
+        ],
+        "question_ids": [
+          "ETI045"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L20",
+        "area": "LEGISLAÇÃO",
+        "list_number": 20,
+        "list_page": 2,
+        "text": "As várias diferenças entre a Lei do continente (Lei 39/2012) e a legislação na RAA – Região Autónoma dos Açores (DLR 24/2016/A).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-046",
+          "eti-detail-047",
+          "eti-detail-048"
+        ],
+        "question_ids": [
+          "ETI046",
+          "ETI047",
+          "ETI048"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L21",
+        "area": "LEGISLAÇÃO",
+        "list_number": 21,
+        "list_page": 2,
+        "text": "As várias diferenças entre a Lei do continente (Lei 39/2012) e a legislação na RAM – Região Autónoma da Madeira (DLR 12/2022/M).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-049",
+          "eti-detail-050"
+        ],
+        "question_ids": [
+          "ETI049",
+          "ETI050"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L22",
+        "area": "LEGISLAÇÃO",
+        "list_number": 22,
+        "list_page": 2,
+        "text": "A Lei dos Treinadores (Lei 40/2012 alterada na Lei 106/2019), e revalidação do Título Profissional (TPTD)",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-051"
+        ],
+        "question_ids": [
+          "ETI051"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L23",
+        "area": "LEGISLAÇÃO",
+        "list_number": 23,
+        "list_page": 2,
+        "text": "A Lei Antidopagem, Lei 81/2021 e o seu art.10º - Lista de substâncias e métodos proibidos. Onde encontrar esta listagem (Portaria do membro do Governo responsável pela área do desporto).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-052",
+          "eti-detail-053"
+        ],
+        "question_ids": [
+          "ETI052",
+          "ETI053"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L24",
+        "area": "LEGISLAÇÃO",
+        "list_number": 24,
+        "list_page": 2,
+        "text": "A ADOP – Autoridade Antidopagem de Portugal",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-054"
+        ],
+        "question_ids": [
+          "ETI054"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L25",
+        "area": "LEGISLAÇÃO",
+        "list_number": 25,
+        "list_page": 2,
+        "text": "As obrigatoriedades legais constantes do Check List da Portugal Activo. Referência à nutrição e entidade reguladora (ERS), livros de reclamações e ao dístico de proibição de fumar.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-056",
+          "eti-detail-057",
+          "eti-detail-058",
+          "eti-detail-059"
+        ],
+        "question_ids": [
+          "ETI056",
+          "ETI057",
+          "ETI058",
+          "ETI059"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L26",
+        "area": "LEGISLAÇÃO",
+        "list_number": 26,
+        "list_page": 2,
+        "text": "Direitos musicais (execução pública) - Entidades de Cobrança: SPA (Sociedade Portuguesa de Autores) e Audiogest.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-060"
+        ],
+        "question_ids": [
+          "ETI060"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L27",
+        "area": "LEGISLAÇÃO",
+        "list_number": 27,
+        "list_page": 2,
+        "text": "Emissões televisivas – Entidade de Cobrança: Gedipe.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-060"
+        ],
+        "question_ids": [
+          "ETI060"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L28",
+        "area": "LEGISLAÇÃO",
+        "list_number": 28,
+        "list_page": 2,
+        "text": "O regulamento da atividade do nadador-salvador e sua necessidade nas piscinas de uso público. O que é uma instalação de uso público. Quais os casos e condições para ser facultativa a presença do nadador-salvador.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-061",
+          "eti-detail-062",
+          "eti-detail-063",
+          "eti-detail-064",
+          "eti-detail-065"
+        ],
+        "question_ids": [
+          "ETI061",
+          "ETI062",
+          "ETI063",
+          "ETI064",
+          "ETI065"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L29",
+        "area": "LEGISLAÇÃO",
+        "list_number": 29,
+        "list_page": 2,
+        "text": "O RGPD, autoregulação e o reforço dos direitos dos portadores dos dados. O que são dados pessoais. As preocupações com o sigilo e proteção. Consentimento do titular.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-066",
+          "eti-detail-067",
+          "eti-detail-068",
+          "eti-detail-069",
+          "eti-detail-070"
+        ],
+        "question_ids": [
+          "ETI066",
+          "ETI067",
+          "ETI068",
+          "ETI069",
+          "ETI070"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L30",
+        "area": "LEGISLAÇÃO",
+        "list_number": 30,
+        "list_page": 2,
+        "text": "Preocupações com a atividade dos prestadores de serviços. Preocupações com a análise das cláusulas do contrato de trabalho.",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-071",
+          "eti-detail-072",
+          "eti-detail-073",
+          "eti-detail-074",
+          "eti-detail-075"
+        ],
+        "question_ids": [
+          "ETI071",
+          "ETI072",
+          "ETI073",
+          "ETI074",
+          "ETI075"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      },
+      {
+        "id": "ETI-L31",
+        "area": "LEGISLAÇÃO",
+        "list_number": 31,
+        "list_page": 2,
+        "text": "Seguros que o TEF deve subscrever ou possuir (acidentes de trabalho e de responsabilidade civil profissional).",
+        "status": "explicit_in_summary",
+        "summary_anchors": [
+          "eti-detail-076",
+          "eti-detail-077",
+          "eti-detail-078"
+        ],
+        "question_ids": [
+          "ETI076",
+          "ETI077",
+          "ETI078"
+        ],
+        "question_coverage": "thematic_reference_not_each_component"
+      }
+    ]
+  }
+}

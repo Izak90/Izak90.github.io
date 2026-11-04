@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v26';
+const CACHE_NAME = 'cet-tef-v29';
 
 const CORE_URLS = [
   './',
@@ -15,6 +15,7 @@ const OPTIONAL_URLS = [
   './data/ucs.json',
   './data/pautas/PautaFinal_CF_CET_LIS_60.pdf',
   './data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf',
+  './data/pautas/PautaFinal_PSIEX_CET_LIS_60.pdf',
   './assets/uc-registry.js',
   './assets/app.css',
   './assets/study.css',
@@ -78,7 +79,25 @@ const OPTIONAL_URLS = [
   './centro_estudo/psiex_resumo.html',
   './centro_estudo/psiex_treino.html',
   './centro_estudo/psiex_simulador.html',
-  './centro_estudo/psicologia-do-exercicio_banco_80_perguntas.json'
+  './centro_estudo/psicologia-do-exercicio_banco_80_perguntas.json',
+
+  // Centro de Estudo — Comunicação no Fitness
+  './centro_estudo/comunicacao-no-fitness_resumo.html',
+  './centro_estudo/comunicacao-no-fitness_treino.html',
+  './centro_estudo/comunicacao-no-fitness_simulador.html',
+  './centro_estudo/comunicacao-no-fitness_banco_80_perguntas.json',
+
+  // Centro de Estudo — Ética e Deontologia no Fitness
+  './centro_estudo/etica-e-deontologia-no-fitness_resumo.html',
+  './centro_estudo/etica-e-deontologia-no-fitness_treino.html',
+  './centro_estudo/etica-e-deontologia-no-fitness_simulador.html',
+  './centro_estudo/etica-e-deontologia-no-fitness_banco_80_perguntas.json',
+
+  // Centro de Estudo — Marketing no Fitness
+  './centro_estudo/marketing-no-fitness_resumo.html',
+  './centro_estudo/marketing-no-fitness_treino.html',
+  './centro_estudo/marketing-no-fitness_simulador.html',
+  './centro_estudo/marketing-no-fitness_banco_80_perguntas.json'
 ];
 
 // Dependências visuais usadas pelas páginas estáticas; mantém Tailwind via CDN.

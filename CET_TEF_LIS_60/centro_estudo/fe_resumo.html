@@ -32,9 +32,10 @@ tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans
 <div class="max-w-2xl mx-auto px-4 py-2.5">
 <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
 <a href="fe_resumo.html" class="px-2 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-black text-center"><i class="fa-solid fa-book-open-reader mr-1"></i>Resumo</a>
-<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-brain mr-1"></i>Treino</span>
-<span aria-disabled="true" title="Ainda indisponível" class="px-2 py-2 rounded-xl text-slate-600 dark:text-slate-400 text-[10px] font-black text-center opacity-50"><i class="fa-solid fa-vial-circle-check mr-1"></i>Simulações</span>
+<span aria-disabled="true" aria-describedby="summary-only-note" class="study-unavailable"><span><i class="fa-solid fa-brain mr-1" aria-hidden="true"></i>Treino</span><span class="study-unavailable-label"><i class="fa-solid fa-lock" aria-hidden="true"></i> Indisponível</span></span>
+<span aria-disabled="true" aria-describedby="summary-only-note" class="study-unavailable"><span><i class="fa-solid fa-vial-circle-check mr-1" aria-hidden="true"></i>Simulações</span><span class="study-unavailable-label"><i class="fa-solid fa-lock" aria-hidden="true"></i> Indisponível</span></span>
 </div>
+<p id="summary-only-note" class="study-availability-note">Esta UC disponibiliza apenas o Resumo. Treino e Simulações não estão disponíveis.</p>
 </div>
 </div>
 

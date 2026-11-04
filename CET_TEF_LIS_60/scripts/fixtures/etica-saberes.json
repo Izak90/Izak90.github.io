@@ -1,0 +1,703 @@
+{
+  "source": "Lista de saberes.pdf (3 páginas, Fev 2026)",
+  "themes": [
+    "1. Direitos humanos, ética, moral e deontologia",
+    "2. Ética desportiva, fair play e conflitos de interesses",
+    "3. Código APTEF na prática profissional",
+    "4. Enquadramento legislativo e Lei de Bases",
+    "5. Qualificação, títulos e formação contínua",
+    "6. Historial e instalações desportivas",
+    "7. Lei dos ginásios: âmbito e funções técnicas",
+    "8. Identificação, seguros e documentos internos",
+    "9. Fiscalização, contraordenações e validade nacional",
+    "10. Açores e Madeira: diferenças regionais",
+    "11. Treinadores e antidopagem",
+    "12. Checklist, nutrição e direitos de utilização",
+    "13. Piscinas e nadadores-salvadores",
+    "14. RGPD, sigilo e proteção de dados",
+    "15. Relações laborais e prestação de serviços",
+    "16. Seguros do TEF e decisões profissionais"
+  ],
+  "items": [
+    {
+      "id": "ETI-V01",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 1,
+      "list_page": 1,
+      "text": "Os direitos da pessoa humana.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-001"
+      ],
+      "question_ids": [
+        "ETI001"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V02",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 2,
+      "list_page": 1,
+      "text": "Definição de Ética, Moral e Deontologia.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-002",
+        "eti-detail-003",
+        "eti-detail-005"
+      ],
+      "question_ids": [
+        "ETI002",
+        "ETI003",
+        "ETI005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V03",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 3,
+      "list_page": 1,
+      "text": "Diferenças entre Moral e Ética.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-003"
+      ],
+      "question_ids": [
+        "ETI003"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V04",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 4,
+      "list_page": 1,
+      "text": "Diferenças entre Ética Profissional e Deontologia Profissional",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-004",
+        "eti-detail-005"
+      ],
+      "question_ids": [
+        "ETI004",
+        "ETI005"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V05",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 5,
+      "list_page": 1,
+      "text": "Ética na Lei de Bases da Atividade Física e do Desporto.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-006"
+      ],
+      "question_ids": [
+        "ETI006"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V06",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 6,
+      "list_page": 1,
+      "text": "Código de Ética Desportiva e o Fairplay",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-007"
+      ],
+      "question_ids": [
+        "ETI007"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V07",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 7,
+      "list_page": 1,
+      "text": "Valores da Associação de Clubes de Fitness e Saúde – Portugal Activo",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-008"
+      ],
+      "question_ids": [
+        "ETI008"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V08",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 8,
+      "list_page": 1,
+      "text": "O que é um Código Deontológico. Conflitos de interesses.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-009",
+        "eti-detail-010"
+      ],
+      "question_ids": [
+        "ETI009",
+        "ETI010"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-V09",
+      "area": "MOVE-TE POR VALORES",
+      "list_number": 9,
+      "list_page": 1,
+      "text": "O Código da APTEF – principais orientações",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-011",
+        "eti-detail-012",
+        "eti-detail-013",
+        "eti-detail-014",
+        "eti-detail-015"
+      ],
+      "question_ids": [
+        "ETI011",
+        "ETI012",
+        "ETI013",
+        "ETI014",
+        "ETI015"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L01",
+      "area": "LEGISLAÇÃO",
+      "list_number": 1,
+      "list_page": 1,
+      "text": "Distinção entre o enquadramento legislativo das atividades das federações e afins e o trabalho nas instalações de fitness. Lei 40/2012 alterada na Lei 106/2019 e Lei 39/2012.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-016"
+      ],
+      "question_ids": [
+        "ETI016"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L02",
+      "area": "LEGISLAÇÃO",
+      "list_number": 2,
+      "list_page": 1,
+      "text": "A Lei 5/2007 – Lei de Bases da Atividade Física e do Desporto, como Lei que define as bases (linhas mestras) das políticas de desenvolvimento da atividade física e do desporto. Principais orientações da LBAFD no que diz respeito aos seguros obrigatórios, formação dos técnicos e exame médico dos praticantes.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-017",
+        "eti-detail-018",
+        "eti-detail-019",
+        "eti-detail-020"
+      ],
+      "question_ids": [
+        "ETI017",
+        "ETI018",
+        "ETI019",
+        "ETI020"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L03",
+      "area": "LEGISLAÇÃO",
+      "list_number": 3,
+      "list_page": 1,
+      "text": "Os CET (Cursos de Especialização tecnológica) como cursos de formação profissional que conferem o nível 5 no QNQ.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-021"
+      ],
+      "question_ids": [
+        "ETI021"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L04",
+      "area": "LEGISLAÇÃO",
+      "list_number": 4,
+      "list_page": 1,
+      "text": "Formação contínua necessária para a revalidação do título. Períodos de validade e UC (unidades de crédito) necessárias.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-024",
+        "eti-detail-025"
+      ],
+      "question_ids": [
+        "ETI024",
+        "ETI025"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L05",
+      "area": "LEGISLAÇÃO",
+      "list_number": 5,
+      "list_page": 1,
+      "text": "Historial da produção legislativa para os ginásios. Especial atenção ao primeiro Decreto-Lei (de 1999) que estabeleceu a necessidade de responsabilidade técnica nas instalações de fitness.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-026",
+        "eti-detail-027"
+      ],
+      "question_ids": [
+        "ETI026",
+        "ETI027"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L06",
+      "area": "LEGISLAÇÃO",
+      "list_number": 6,
+      "list_page": 1,
+      "text": "O Regime jurídico das Instalações desportivas. Tipologia de instalações desportivas (Decreto-Lei 141/2009). A Autorização de Utilização para atividades desportivas. Requisitos técnicos e de funcionamento das instalações desportivas (Portaria 454/2023).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-028",
+        "eti-detail-029",
+        "eti-detail-030"
+      ],
+      "question_ids": [
+        "ETI028",
+        "ETI029",
+        "ETI030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L07",
+      "area": "LEGISLAÇÃO",
+      "list_number": 7,
+      "list_page": 1,
+      "text": "A “Lei dos ginásios” no continente – Lei 39/2012. O seu objeto (art.1º) e exceções (art.2º). A situação de exceção dos ginásios dos hotéis.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-031",
+        "eti-detail-032"
+      ],
+      "question_ids": [
+        "ETI031",
+        "ETI032"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L08",
+      "area": "LEGISLAÇÃO",
+      "list_number": 8,
+      "list_page": 1,
+      "text": "Técnicos nas instalações de fitness: pelo menos um DT (Diretor Técnico) e TEFs (Técnicos de Exercício Físico).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-033"
+      ],
+      "question_ids": [
+        "ETI033"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L09",
+      "area": "LEGISLAÇÃO",
+      "list_number": 9,
+      "list_page": 1,
+      "text": "Funções do DT: coordenação e supervisão, entre outras.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-034"
+      ],
+      "question_ids": [
+        "ETI034"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L10",
+      "area": "LEGISLAÇÃO",
+      "list_number": 10,
+      "list_page": 2,
+      "text": "Funções dos TEF: planeamento e prescrição, entre outras.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-035"
+      ],
+      "question_ids": [
+        "ETI035"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L11",
+      "area": "LEGISLAÇÃO",
+      "list_number": 11,
+      "list_page": 2,
+      "text": "Requisitos para obtenção do título profissional de DT e do título profissional de TEF.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-022",
+        "eti-detail-023"
+      ],
+      "question_ids": [
+        "ETI022",
+        "ETI023"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L12",
+      "area": "LEGISLAÇÃO",
+      "list_number": 12,
+      "list_page": 2,
+      "text": "Horário de permanência do DT nas instalações.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-036"
+      ],
+      "question_ids": [
+        "ETI036"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L13",
+      "area": "LEGISLAÇÃO",
+      "list_number": 13,
+      "list_page": 2,
+      "text": "Seguro obrigatório para os utentes. Informação sobre a existência do seguro.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-037"
+      ],
+      "question_ids": [
+        "ETI037"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L14",
+      "area": "LEGISLAÇÃO",
+      "list_number": 14,
+      "list_page": 2,
+      "text": "Atividades interditas (vedado recomendar ou comercializar)",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-038"
+      ],
+      "question_ids": [
+        "ETI038"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L15",
+      "area": "LEGISLAÇÃO",
+      "list_number": 15,
+      "list_page": 2,
+      "text": "O Regulamento. Quem elabora e o que deve conter.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-039"
+      ],
+      "question_ids": [
+        "ETI039"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L16",
+      "area": "LEGISLAÇÃO",
+      "list_number": 16,
+      "list_page": 2,
+      "text": "O Manual de Operações. Quem elabora e o que deve conter.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-040"
+      ],
+      "question_ids": [
+        "ETI040"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L17",
+      "area": "LEGISLAÇÃO",
+      "list_number": 17,
+      "list_page": 2,
+      "text": "Competência para a fiscalização desta Lei 39/2012 (a ASAE).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-041"
+      ],
+      "question_ids": [
+        "ETI041"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L18",
+      "area": "LEGISLAÇÃO",
+      "list_number": 18,
+      "list_page": 2,
+      "text": "Tipos de contraordenações (não obriga a conhecimento detalhado) e sanções acessórias (exemplos).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-042",
+        "eti-detail-043",
+        "eti-detail-044"
+      ],
+      "question_ids": [
+        "ETI042",
+        "ETI043",
+        "ETI044"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L19",
+      "area": "LEGISLAÇÃO",
+      "list_number": 19,
+      "list_page": 2,
+      "text": "A validade nacional da Lei e dos títulos profissionais.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-045"
+      ],
+      "question_ids": [
+        "ETI045"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L20",
+      "area": "LEGISLAÇÃO",
+      "list_number": 20,
+      "list_page": 2,
+      "text": "As várias diferenças entre a Lei do continente (Lei 39/2012) e a legislação na RAA – Região Autónoma dos Açores (DLR 24/2016/A).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-046",
+        "eti-detail-047",
+        "eti-detail-048"
+      ],
+      "question_ids": [
+        "ETI046",
+        "ETI047",
+        "ETI048"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L21",
+      "area": "LEGISLAÇÃO",
+      "list_number": 21,
+      "list_page": 2,
+      "text": "As várias diferenças entre a Lei do continente (Lei 39/2012) e a legislação na RAM – Região Autónoma da Madeira (DLR 12/2022/M).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-049",
+        "eti-detail-050"
+      ],
+      "question_ids": [
+        "ETI049",
+        "ETI050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L22",
+      "area": "LEGISLAÇÃO",
+      "list_number": 22,
+      "list_page": 2,
+      "text": "A Lei dos Treinadores (Lei 40/2012 alterada na Lei 106/2019), e revalidação do Título Profissional (TPTD)",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-051"
+      ],
+      "question_ids": [
+        "ETI051"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L23",
+      "area": "LEGISLAÇÃO",
+      "list_number": 23,
+      "list_page": 2,
+      "text": "A Lei Antidopagem, Lei 81/2021 e o seu art.10º - Lista de substâncias e métodos proibidos. Onde encontrar esta listagem (Portaria do membro do Governo responsável pela área do desporto).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-052",
+        "eti-detail-053"
+      ],
+      "question_ids": [
+        "ETI052",
+        "ETI053"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L24",
+      "area": "LEGISLAÇÃO",
+      "list_number": 24,
+      "list_page": 2,
+      "text": "A ADOP – Autoridade Antidopagem de Portugal",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-054"
+      ],
+      "question_ids": [
+        "ETI054"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L25",
+      "area": "LEGISLAÇÃO",
+      "list_number": 25,
+      "list_page": 2,
+      "text": "As obrigatoriedades legais constantes do Check List da Portugal Activo. Referência à nutrição e entidade reguladora (ERS), livros de reclamações e ao dístico de proibição de fumar.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-056",
+        "eti-detail-057",
+        "eti-detail-058",
+        "eti-detail-059"
+      ],
+      "question_ids": [
+        "ETI056",
+        "ETI057",
+        "ETI058",
+        "ETI059"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L26",
+      "area": "LEGISLAÇÃO",
+      "list_number": 26,
+      "list_page": 2,
+      "text": "Direitos musicais (execução pública) - Entidades de Cobrança: SPA (Sociedade Portuguesa de Autores) e Audiogest.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-060"
+      ],
+      "question_ids": [
+        "ETI060"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L27",
+      "area": "LEGISLAÇÃO",
+      "list_number": 27,
+      "list_page": 2,
+      "text": "Emissões televisivas – Entidade de Cobrança: Gedipe.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-060"
+      ],
+      "question_ids": [
+        "ETI060"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L28",
+      "area": "LEGISLAÇÃO",
+      "list_number": 28,
+      "list_page": 2,
+      "text": "O regulamento da atividade do nadador-salvador e sua necessidade nas piscinas de uso público. O que é uma instalação de uso público. Quais os casos e condições para ser facultativa a presença do nadador-salvador.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-061",
+        "eti-detail-062",
+        "eti-detail-063",
+        "eti-detail-064",
+        "eti-detail-065"
+      ],
+      "question_ids": [
+        "ETI061",
+        "ETI062",
+        "ETI063",
+        "ETI064",
+        "ETI065"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L29",
+      "area": "LEGISLAÇÃO",
+      "list_number": 29,
+      "list_page": 2,
+      "text": "O RGPD, autoregulação e o reforço dos direitos dos portadores dos dados. O que são dados pessoais. As preocupações com o sigilo e proteção. Consentimento do titular.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-066",
+        "eti-detail-067",
+        "eti-detail-068",
+        "eti-detail-069",
+        "eti-detail-070"
+      ],
+      "question_ids": [
+        "ETI066",
+        "ETI067",
+        "ETI068",
+        "ETI069",
+        "ETI070"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L30",
+      "area": "LEGISLAÇÃO",
+      "list_number": 30,
+      "list_page": 2,
+      "text": "Preocupações com a atividade dos prestadores de serviços. Preocupações com a análise das cláusulas do contrato de trabalho.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-071",
+        "eti-detail-072",
+        "eti-detail-073",
+        "eti-detail-074",
+        "eti-detail-075"
+      ],
+      "question_ids": [
+        "ETI071",
+        "ETI072",
+        "ETI073",
+        "ETI074",
+        "ETI075"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "ETI-L31",
+      "area": "LEGISLAÇÃO",
+      "list_number": 31,
+      "list_page": 2,
+      "text": "Seguros que o TEF deve subscrever ou possuir (acidentes de trabalho e de responsabilidade civil profissional).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "eti-detail-076",
+        "eti-detail-077",
+        "eti-detail-078"
+      ],
+      "question_ids": [
+        "ETI076",
+        "ETI077",
+        "ETI078"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    }
+  ]
+}

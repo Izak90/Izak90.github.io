@@ -126,6 +126,7 @@
     {
       "slug": "psicologia-do-exercicio",
       "title": "Psicologia do Exercício",
+      "resultsPdf": "./data/pautas/PautaFinal_PSIEX_CET_LIS_60.pdf",
       "order": 5,
       "summary": "./centro_estudo/psiex_resumo.html",
       "training": "./centro_estudo/psiex_treino.html",
@@ -169,17 +170,23 @@
       "slug": "comunicacao-no-fitness",
       "title": "Comunicação no Fitness",
       "order": 7,
-      "summary": null,
-      "training": null,
-      "simulator": null,
+      "summary": "./centro_estudo/comunicacao-no-fitness_resumo.html",
+      "training": "./centro_estudo/comunicacao-no-fitness_treino.html",
+      "simulator": "./centro_estudo/comunicacao-no-fitness_simulador.html",
       "workbook": "./simuladores/uc05_comunicacao_no_fitness.html",
-      "difficulties": [],
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/comunicacao-no-fitness_banco_80_perguntas.json"
+        }
+      ],
       "trainer": "Catarina Olim",
       "driveUrl": "https://drive.google.com/drive/folders/1biKbQyJvK3zYZK-nKKl5il9fz5sBdNTa",
       "asynchronousClass": "https://campus.fitnessacademy.pt/topic/aula-n-2-online-assincrona-16-2-4/",
       "sourceStatus": {
         "materials": "linked_not_imported",
-        "coverage": "not_audited",
+        "coverage": "source_reviewed",
         "workbook": "transcribed_unverified_key"
       }
     },
@@ -187,17 +194,23 @@
       "slug": "etica-e-deontologia-no-fitness",
       "title": "Ética e Deontologia no Fitness",
       "order": 8,
-      "summary": null,
-      "training": null,
-      "simulator": null,
+      "summary": "./centro_estudo/etica-e-deontologia-no-fitness_resumo.html",
+      "training": "./centro_estudo/etica-e-deontologia-no-fitness_treino.html",
+      "simulator": "./centro_estudo/etica-e-deontologia-no-fitness_simulador.html",
       "workbook": "./simuladores/uc15_etica_e_deontologia_no_fitness.html",
-      "difficulties": [],
-      "trainer": null,
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/etica-e-deontologia-no-fitness_banco_80_perguntas.json"
+        }
+      ],
+      "trainer": "José Júlio Vale Castro",
       "driveUrl": "https://drive.google.com/drive/folders/1bSB1j8L9-zVVOnnwXpfCN3Il_p3Gd8-c",
       "asynchronousClass": null,
       "sourceStatus": {
         "materials": "linked_not_imported",
-        "coverage": "not_audited",
+        "coverage": "source_reviewed",
         "workbook": "transcribed_unverified_key"
       }
     },
@@ -205,17 +218,23 @@
       "slug": "marketing-no-fitness",
       "title": "Marketing no Fitness",
       "order": 9,
-      "summary": null,
-      "training": null,
-      "simulator": null,
+      "summary": "./centro_estudo/marketing-no-fitness_resumo.html",
+      "training": "./centro_estudo/marketing-no-fitness_treino.html",
+      "simulator": "./centro_estudo/marketing-no-fitness_simulador.html",
       "workbook": "./simuladores/uc11_marketing_no_fitness.html",
-      "difficulties": [],
+      "difficulties": [
+        {
+          "id": "easy",
+          "label": "Fácil",
+          "bank": "./centro_estudo/marketing-no-fitness_banco_80_perguntas.json"
+        }
+      ],
       "trainer": null,
       "driveUrl": "https://drive.google.com/drive/folders/1I4LjclxO9EeRhEMGG5UvUaQUDej56dqE",
       "asynchronousClass": null,
       "sourceStatus": {
         "materials": "linked_not_imported",
-        "coverage": "not_audited",
+        "coverage": "source_reviewed",
         "workbook": "transcribed_unverified_key"
       }
     },

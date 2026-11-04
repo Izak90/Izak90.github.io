@@ -1,0 +1,502 @@
+{
+  "source": "Lista de Saberes.pdf (2 páginas)",
+  "source_title": "UC - Estratégia de Marketing e Conteúdos no Fitness",
+  "groups": [
+    {
+      "number": 1,
+      "title": "Conceitos base (definições)",
+      "list_page": 1
+    },
+    {
+      "number": 2,
+      "title": "Modelos de negócio no fitness",
+      "list_page": 1
+    },
+    {
+      "number": 3,
+      "title": "Métricas que caem sempre",
+      "list_page": 1
+    },
+    {
+      "number": 4,
+      "title": "Diagnóstico e concorrência",
+      "list_page": 1
+    },
+    {
+      "number": 5,
+      "title": "Funil e jornada",
+      "list_page": 1
+    },
+    {
+      "number": 6,
+      "title": "Email marketing",
+      "list_page": 1
+    },
+    {
+      "number": 7,
+      "title": "Estratégia de conteúdos",
+      "list_page": 1
+    },
+    {
+      "number": 8,
+      "title": "Integração final (pergunta típica de exame)",
+      "list_page": 1
+    }
+  ],
+  "themes": [
+    "1. Conceitos base, STP e proposta de valor",
+    "2. Modelos de negócio e ARPU",
+    "3. CAC, LTV, churn e payback",
+    "4. Diagnóstico, concorrência e hipóteses",
+    "5. Funil, jornada e microconversões",
+    "6. Email marketing, sequências e medição",
+    "7. Pilares, canais e plano editorial",
+    "8. Integração: oferta, conteúdos, CRM e retenção"
+  ],
+  "items": [
+    {
+      "id": "MKT-L001",
+      "group": 1,
+      "list_page": 1,
+      "saber": "Marketing (definição) e criação de valor.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-001",
+        "mkt-detail-002"
+      ],
+      "question_ids": [
+        "MKT001",
+        "MKT002"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L002",
+      "group": 1,
+      "list_page": 1,
+      "saber": "Estratégia vs tática (saber distinguir).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-003",
+        "mkt-detail-004"
+      ],
+      "question_ids": [
+        "MKT003",
+        "MKT004"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L003",
+      "group": 1,
+      "list_page": 1,
+      "saber": "STP: segmentação, público-alvo e posicionamento.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-005",
+        "mkt-detail-006",
+        "mkt-detail-007",
+        "mkt-detail-008"
+      ],
+      "question_ids": [
+        "MKT005",
+        "MKT006",
+        "MKT007",
+        "MKT008"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L004",
+      "group": 1,
+      "list_page": 1,
+      "saber": "Proposta de valor (promessa + prova).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-009",
+        "mkt-detail-010"
+      ],
+      "question_ids": [
+        "MKT009",
+        "MKT010"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L005",
+      "group": 2,
+      "list_page": 1,
+      "saber": "Low-cost vs Boutique vs PT premium vs Online coaching.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-011",
+        "mkt-detail-012",
+        "mkt-detail-013",
+        "mkt-detail-014",
+        "mkt-detail-015",
+        "mkt-detail-019",
+        "mkt-detail-020"
+      ],
+      "question_ids": [
+        "MKT011",
+        "MKT012",
+        "MKT013",
+        "MKT014",
+        "MKT015",
+        "MKT019",
+        "MKT020"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L006",
+      "group": 2,
+      "list_page": 1,
+      "saber": "ARPU e implicação na estratégia.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-016",
+        "mkt-detail-017",
+        "mkt-detail-018"
+      ],
+      "question_ids": [
+        "MKT016",
+        "MKT017",
+        "MKT018"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L007",
+      "group": 3,
+      "list_page": 1,
+      "saber": "CAC, LTV, churn e payback.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-021",
+        "mkt-detail-022",
+        "mkt-detail-023",
+        "mkt-detail-024",
+        "mkt-detail-025",
+        "mkt-detail-026",
+        "mkt-detail-027",
+        "mkt-detail-028",
+        "mkt-detail-030"
+      ],
+      "question_ids": [
+        "MKT021",
+        "MKT022",
+        "MKT023",
+        "MKT024",
+        "MKT025",
+        "MKT026",
+        "MKT027",
+        "MKT028",
+        "MKT030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L008",
+      "group": 3,
+      "list_page": 1,
+      "saber": "Relação CAC vs LTV (sustentabilidade).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-029",
+        "mkt-detail-030"
+      ],
+      "question_ids": [
+        "MKT029",
+        "MKT030"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L009",
+      "group": 4,
+      "list_page": 1,
+      "saber": "SWOT (o que é e para que serve).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-031",
+        "mkt-detail-032",
+        "mkt-detail-033"
+      ],
+      "question_ids": [
+        "MKT031",
+        "MKT032",
+        "MKT033"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L010",
+      "group": 4,
+      "list_page": 1,
+      "saber": "Concorrentes diretos, substitutos e ‘opção zero’.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-034",
+        "mkt-detail-035",
+        "mkt-detail-036",
+        "mkt-detail-037"
+      ],
+      "question_ids": [
+        "MKT034",
+        "MKT035",
+        "MKT036",
+        "MKT037"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L011",
+      "group": 4,
+      "list_page": 1,
+      "saber": "Problem statement + hipótese testável (X → Y medido por Z).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-038",
+        "mkt-detail-039",
+        "mkt-detail-040"
+      ],
+      "question_ids": [
+        "MKT038",
+        "MKT039",
+        "MKT040"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L012",
+      "group": 5,
+      "list_page": 1,
+      "saber": "Funil: atrair → envolver → converter → reter.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-041",
+        "mkt-detail-042",
+        "mkt-detail-043"
+      ],
+      "question_ids": [
+        "MKT041",
+        "MKT042",
+        "MKT043"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L013",
+      "group": 5,
+      "list_page": 1,
+      "saber": "Customer journey: emoções, fricções e pontos de contacto.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-044",
+        "mkt-detail-045",
+        "mkt-detail-050"
+      ],
+      "question_ids": [
+        "MKT044",
+        "MKT045",
+        "MKT050"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L014",
+      "group": 5,
+      "list_page": 1,
+      "saber": "Microconversões: lead → marcação → show → inscrição.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-046",
+        "mkt-detail-047",
+        "mkt-detail-048",
+        "mkt-detail-049"
+      ],
+      "question_ids": [
+        "MKT046",
+        "MKT047",
+        "MKT048",
+        "MKT049"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L015",
+      "group": 6,
+      "list_page": 1,
+      "saber": "Definição + objetivos (nutrir, converter, reter, reativar).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-051",
+        "mkt-detail-052"
+      ],
+      "question_ids": [
+        "MKT051",
+        "MKT052"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L016",
+      "group": 6,
+      "list_page": 1,
+      "saber": "Tipos de emails: boas-vindas, nutrição, promoção, reativação, transacionais.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-053",
+        "mkt-detail-054",
+        "mkt-detail-055",
+        "mkt-detail-056",
+        "mkt-detail-057"
+      ],
+      "question_ids": [
+        "MKT053",
+        "MKT054",
+        "MKT055",
+        "MKT056",
+        "MKT057"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L017",
+      "group": 6,
+      "list_page": 1,
+      "saber": "Sequência (follow-up) + CTA + métrica por email.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-058",
+        "mkt-detail-059",
+        "mkt-detail-060"
+      ],
+      "question_ids": [
+        "MKT058",
+        "MKT059",
+        "MKT060"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L018",
+      "group": 7,
+      "list_page": 1,
+      "saber": "Pilares de conteúdo (3–5) alinhados com aquisição e retenção.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-061",
+        "mkt-detail-062"
+      ],
+      "question_ids": [
+        "MKT061",
+        "MKT062"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L019",
+      "group": 7,
+      "list_page": 1,
+      "saber": "Literal vs lateral (educação vs ângulos/storytelling).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-063",
+        "mkt-detail-064"
+      ],
+      "question_ids": [
+        "MKT063",
+        "MKT064"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L020",
+      "group": 7,
+      "list_page": 1,
+      "saber": "Canais por função: descoberta, confiança, conversão, retenção.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-065",
+        "mkt-detail-066",
+        "mkt-detail-067",
+        "mkt-detail-068",
+        "mkt-detail-070"
+      ],
+      "question_ids": [
+        "MKT065",
+        "MKT066",
+        "MKT067",
+        "MKT068",
+        "MKT070"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L021",
+      "group": 7,
+      "list_page": 1,
+      "saber": "Plano editorial: cadência, formatos, objetivo e KPI.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-069",
+        "mkt-detail-074"
+      ],
+      "question_ids": [
+        "MKT069",
+        "MKT074"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L022",
+      "group": 8,
+      "list_page": 2,
+      "saber": "Ligar: posicionamento → oferta → funil → conteúdos/creaƟvos → CRM/email → retenção.",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-071",
+        "mkt-detail-073",
+        "mkt-detail-074",
+        "mkt-detail-075",
+        "mkt-detail-076",
+        "mkt-detail-077",
+        "mkt-detail-078",
+        "mkt-detail-079",
+        "mkt-detail-080"
+      ],
+      "question_ids": [
+        "MKT071",
+        "MKT073",
+        "MKT074",
+        "MKT075",
+        "MKT076",
+        "MKT077",
+        "MKT078",
+        "MKT079",
+        "MKT080"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    },
+    {
+      "id": "MKT-L023",
+      "group": 8,
+      "list_page": 2,
+      "saber": "Escolher 3 KPIs e justificar (por etapa do funil).",
+      "status": "explicit_in_summary",
+      "summary_anchors": [
+        "mkt-detail-072",
+        "mkt-detail-079",
+        "mkt-detail-080"
+      ],
+      "question_ids": [
+        "MKT072",
+        "MKT079",
+        "MKT080"
+      ],
+      "question_coverage": "thematic_reference_not_each_component"
+    }
+  ]
+}
