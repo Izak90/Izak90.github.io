@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet-tef-v29';
+const CACHE_NAME = 'cet-tef-v30';
 
 const CORE_URLS = [
   './',
@@ -207,4 +207,28 @@ self.addEventListener('fetch', event => {
       }
     })()
   );
+});
+
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  const notificationUrl = new URL(
+    event.notification.data && event.notification.data.url || './#agenda',
+    self.registration.scope
+  ).href;
+
+  event.waitUntil((async () => {
+    const windowClients = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
+    for (const client of windowClients) {
+      if (new URL(client.url).origin !== self.location.origin) continue;
+      try {
+        if (typeof client.navigate === 'function') await client.navigate(notificationUrl);
+        await client.focus();
+        return;
+      } catch (error) {
+        console.warn('Não foi possível abrir a Agenda na janela existente:', error);
+      }
+    }
+
+    await self.clients.openWindow(notificationUrl);
+  })());
 });

@@ -56,6 +56,8 @@ localStorage keys must be namespaced by UC and difficulty.
 
 PWA: preserve network-first unless explicitly changed. Verify precache paths exist before shipping. SW v26 also precaches the explicitly listed CDN dependencies and caches requested Inter/Font Awesome fonts. Other external services are not intercepted. Cache cleanup is restricted to cet-tef caches.
 
+Agenda: daily class notifications are opt-in and use the browser Notification API at/after 07:00 Europe/Lisbon while the app is open, or when it is opened later that day. They summarize that day's scheduled events (excluding `furo`) once per Lisbon date. This is best-effort only: without a push backend, the app cannot wake while closed, and browsers may throttle background pages. The service worker displays the notification and opens `#agenda` when it is clicked.
+
 Exam timers use an absolute deadline and resynchronise on visibility/pageshow/focus and before interactions. Workbook simulators retain proportional duration and embedded data; their controls lock after submission.
 
 Study shell heights are measured and observed with ResizeObserver. Topic observer margins and CSS scroll margins follow those measurements.

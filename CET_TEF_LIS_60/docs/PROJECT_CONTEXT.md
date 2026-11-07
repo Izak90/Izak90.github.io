@@ -84,8 +84,8 @@ Learning structure applied to all 41 summary themes (8 PEVS, 12 CF, 10 PEDEx inc
 40 questions; 60 min; 90 s/question equivalent; score 0–20; pass 9.5; no negative marking; timeout auto-submit.
 
 ## PWA
-Current implemented SW cache version: v29 (Marketing no Fitness, 2026-11-04; 72 entradas locais).
-Strategy: network-first, same-origin runtime cache plus an explicit allowlist of visual CDN dependencies (Tailwind, Font Awesome, Inter and logo), offline cache fallback, app-shell navigation fallback, cleanup of old cet-tef caches. Fonts are cached when requested by a controlled page.
+Current implemented SW cache version: v30 (notificações locais diárias às 07:00, Europe/Lisbon; 72 entradas locais).
+Strategy: network-first, same-origin runtime cache plus an explicit allowlist of visual CDN dependencies (Tailwind, Font Awesome, Inter and logo), offline cache fallback, app-shell navigation fallback, cleanup of old cet-tef caches. Fonts are cached when requested by a controlled page. The opt-in daily Agenda notification is best-effort while the app is open or reopened that day; it cannot wake the static PWA while closed.
 Offline use requires an initial online installation. P0 evidence and remaining device checks: ../plans/p0-stabilisation.md.
 
 ## Central UC registry (P2)

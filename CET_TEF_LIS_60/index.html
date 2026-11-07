@@ -207,6 +207,15 @@
                 </div>
 
                 <div id="today-content-area"></div>
+                <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800">
+                    <button id="daily-notification-toggle" type="button" onclick="toggleDailyClassNotifications()" aria-pressed="false" class="px-3 py-2 rounded-xl bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 text-blue-700 dark:text-blue-300 text-xs font-bold transition flex items-center gap-2">
+                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                        <span id="daily-notification-button-label">Ativar aviso às 7h</span>
+                    </button>
+                    <p id="daily-notification-status" class="mt-2 text-[10px] leading-relaxed text-slate-500 dark:text-slate-400" role="status" aria-live="polite">
+                        O resumo usa os eventos do dia. A app tem de estar aberta ou ser reaberta nesse dia.
+                    </p>
+                </div>
             </section>
 
             <!-- Quick Filters -->
@@ -888,6 +897,136 @@
             return `${year}-${month}-${day}`;
         }
 
+        const DAILY_NOTIFICATION_ENABLED_KEY = 'cet_daily_class_notification_enabled';
+        const DAILY_NOTIFICATION_SENT_DATE_KEY = 'cet_daily_class_notification_sent_date';
+        let dailyNotificationCheckInterval = null;
+
+        function getLisbonHour(date = new Date()) {
+            const hour = new Intl.DateTimeFormat('en-GB', {
+                timeZone: 'Europe/Lisbon',
+                hour: '2-digit',
+                hourCycle: 'h23'
+            }).format(date);
+            return Number(hour);
+        }
+
+        function getDailyNotificationEvents(dateISO) {
+            return rawSchedule.filter(item => item.type !== 'furo' && isScheduleDay(item, dateISO));
+        }
+
+        function updateDailyClassNotificationControls(message) {
+            const button = document.getElementById('daily-notification-toggle');
+            const label = document.getElementById('daily-notification-button-label');
+            const status = document.getElementById('daily-notification-status');
+            if (!button || !label || !status) return;
+
+            if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+                button.disabled = true;
+                button.setAttribute('aria-pressed', 'false');
+                label.innerText = 'Notificações indisponíveis';
+                status.innerText = 'Este navegador não suporta notificações da app.';
+                return;
+            }
+
+            const enabled = localStorage.getItem(DAILY_NOTIFICATION_ENABLED_KEY) === 'true';
+            const permission = Notification.permission;
+            button.disabled = permission === 'denied';
+            button.setAttribute('aria-pressed', String(enabled));
+            label.innerText = permission === 'denied'
+                ? 'Permissão bloqueada'
+                : enabled ? 'Desativar aviso às 7h' : 'Ativar aviso às 7h';
+
+            if (message) {
+                status.innerText = message;
+            } else if (permission === 'denied') {
+                status.innerText = 'As notificações estão bloqueadas nas definições do navegador para este site.';
+            } else if (enabled) {
+                status.innerText = 'Ativo. A app tem de estar aberta às 7h ou ser reaberta nesse dia; o navegador pode atrasar avisos em segundo plano.';
+            } else {
+                status.innerText = 'Resumo dos eventos do dia às 7h. A app tem de estar aberta ou ser reaberta nesse dia.';
+            }
+        }
+
+        async function checkAndShowDailyClassNotification() {
+            updateDailyClassNotificationControls();
+            if (localStorage.getItem(DAILY_NOTIFICATION_ENABLED_KEY) !== 'true') return;
+            if (!('Notification' in window) || Notification.permission !== 'granted') return;
+            if (getLisbonHour() < 7) return;
+
+            const today = getTodayLisbonISO();
+            if (localStorage.getItem(DAILY_NOTIFICATION_SENT_DATE_KEY) === today) return;
+
+            const events = getDailyNotificationEvents(today);
+            if (events.length === 0) return;
+
+            const body = events.map(item => {
+                const eventType = item.type === 'exame' ? 'Exame: ' : item.type === 'reuniao' ? 'Reunião: ' : '';
+                const location = item.location && item.location !== 'N/A' ? ` · ${item.location}` : '';
+                return `${scheduleTimeLabel(item)} — ${eventType}${item.module}${location}`;
+            }).join('\n');
+
+            const registration = await navigator.serviceWorker.ready;
+            await registration.showNotification('Agenda de hoje', {
+                body,
+                tag: `cet-tef-agenda-${today}`,
+                renotify: false,
+                data: { url: './#agenda' }
+            });
+            localStorage.setItem(DAILY_NOTIFICATION_SENT_DATE_KEY, today);
+        }
+
+        async function runDailyClassNotificationCheck() {
+            try {
+                await checkAndShowDailyClassNotification();
+            } catch (error) {
+                console.error('Não foi possível apresentar a notificação da aula do dia:', error);
+                updateDailyClassNotificationControls('Não foi possível apresentar a notificação. Verifica as permissões e tenta novamente.');
+            }
+        }
+
+        async function toggleDailyClassNotifications() {
+            if (localStorage.getItem(DAILY_NOTIFICATION_ENABLED_KEY) === 'true') {
+                localStorage.removeItem(DAILY_NOTIFICATION_ENABLED_KEY);
+                updateDailyClassNotificationControls();
+                return;
+            }
+
+            if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+                updateDailyClassNotificationControls();
+                return;
+            }
+
+            try {
+                const permission = await Notification.requestPermission();
+                if (permission !== 'granted') {
+                    updateDailyClassNotificationControls(permission === 'denied'
+                        ? 'As notificações foram recusadas. Altera a permissão nas definições do navegador para este site.'
+                        : 'A permissão para notificações não foi concedida.');
+                    return;
+                }
+
+                localStorage.setItem(DAILY_NOTIFICATION_ENABLED_KEY, 'true');
+                updateDailyClassNotificationControls();
+                await runDailyClassNotificationCheck();
+            } catch (error) {
+                console.error('Não foi possível ativar as notificações da aula do dia:', error);
+                updateDailyClassNotificationControls('Não foi possível ativar as notificações. Verifica as permissões do navegador.');
+            }
+        }
+
+        function initDailyClassNotifications() {
+            updateDailyClassNotificationControls();
+            runDailyClassNotificationCheck();
+            if (dailyNotificationCheckInterval === null) {
+                dailyNotificationCheckInterval = window.setInterval(runDailyClassNotificationCheck, 30000);
+            }
+            window.addEventListener('focus', runDailyClassNotificationCheck);
+            window.addEventListener('pageshow', runDailyClassNotificationCheck);
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') runDailyClassNotificationCheck();
+            });
+        }
+
         function formatIsoToDMY(isoStr) {
             if (!isoStr || !isoStr.includes('-')) return isoStr;
             const parts = isoStr.split('-');
@@ -985,6 +1124,7 @@
             setViewTab(currentViewTab, false);
             setMonthFilter(currentMonthFilter, false);
             setLocationFilter(currentLocationFilter, false);
+            initDailyClassNotifications();
 
             switchMainTab(currentMainTab, false);
             syncGlobalSearchWithCurrentTab();
