@@ -16,6 +16,7 @@ const OPTIONAL_URLS = [
   './data/pautas/PautaFinal_CF_CET_LIS_60.pdf',
   './data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf',
   './data/pautas/PautaFinal_PSIEX_CET_LIS_60.pdf',
+  './data/pautas/PautaFinal_PedEx_CET_LIS_60.pdf',
   './assets/uc-registry.js',
   './assets/app.css',
   './assets/study.css',

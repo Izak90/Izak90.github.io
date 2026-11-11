@@ -74,6 +74,7 @@
     {
       "slug": "pedex",
       "title": "Pedagogia do Exercício",
+      "resultsPdf": "./data/pautas/PautaFinal_PedEx_CET_LIS_60.pdf",
       "order": 3,
       "summary": "./centro_estudo/pedex_resumo.html",
       "training": "./centro_estudo/pedex_treino.html",

@@ -16,6 +16,7 @@ Object.assign(old.moduleConfig['Comunicação no Fitness'],{trainer:'Catarina Ol
 old.moduleConfig['Coaching no Fitness'].resultsPdf='./data/pautas/PautaFinal_CF_CET_LIS_60.pdf';
 old.moduleConfig['Promoção de Estilos de Vida Saudável'].resultsPdf='./data/pautas/PautaFinal_PEVS_CET_LIS_60.pdf';
 old.moduleConfig['Psicologia do Exercício'].resultsPdf='./data/pautas/PautaFinal_PSIEX_CET_LIS_60.pdf';
+old.moduleConfig['Pedagogia do Exercício'].resultsPdf='./data/pautas/PautaFinal_PedEx_CET_LIS_60.pdf';
 assert.deepEqual(api.toMaps(registry),old);});
 
 test('pauta opcional aceita PDF local e rejeita URLs injetados, externos e caminhos fora da raiz',()=>{
